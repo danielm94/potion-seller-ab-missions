@@ -5,7 +5,7 @@ wallachian_voivodate = {
 	lock_level_when_selected = yes
 	legacy_equivalent = feudal_monarchy
 	potential = {
-		is_wallachia = yes
+		tag = WAL
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
