@@ -1,0 +1,18 @@
+wallachian_voivodate = {
+	icon = "assyriareform"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	potential = {
+		is_wallachia = yes
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		nobles_influence_modifier = 0.15
+		nobles_loyalty_modifier = 0.05
+		global_tax_modifier = -0.1
+		global_autonomy = -0.1
+	}
+}
