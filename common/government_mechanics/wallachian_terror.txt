@@ -1,0 +1,126 @@
+wallachian_terror_mechanic = {
+	alert_icon_gfx = GFX_wallachian_terror_alert_icon
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Domination"
+		tag = WAL
+	}
+	powers = {
+		terror_power = {
+			gui = wallachian_terror_gov_mech
+			show_before_interactions = yes
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					improve_relation_modifier = -0.2
+					ae_impact = 0.2
+					monthly_terror_power = -0.1
+					all_estate_influence_modifier = -0.15
+					morale_damage = 0.35
+					shock_damage = 0.35
+					global_unrest = -2
+				}
+			}
+		}
+	}
+	interactions = {
+		impale_the_privileged = {
+			gui = wallachian_terror_gov_interaction
+			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			cost_type = terror_power
+			trigger = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 30
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = -30
+					scaled_with_gain_modifier = no
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 0
+				modifier = {
+					factor = 10
+					years_of_income = 3
+				}
+			}
+		}
+		brutalize_the_enemy = {
+			gui = wallachian_terror_gov_interaction
+			icon = GFX_wallachian_terror_brutalize_the_enemy_button
+			cost_type = terror_power
+			trigger = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 20
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = -20
+					scaled_with_gain_modifier = no
+				}
+				add_country_modifier = {
+					name = wallachian_terror_brutalize_the_enemy
+					duration = 3650
+				}
+				hidden_effect = {
+					add_government_reform = wallachian_voivodate_with_raze #Unfortunately you can only enable razing through gov reforms...
+					country_event = { #Restore goverment reform to non raze version after 10 years.
+						id = AB_wallachia_events.2
+						days = 3650
+					}
+				}
+			}
+			cooldown_years = 10
+		}
+		awaken_the_butcher = {
+			gui = wallachian_terror_gov_interaction
+			icon = GFX_wallachian_terror_awaken_the_butcher_button
+			trigger = {
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = -30
+					scaled_with_gain_modifier = no
+				}
+				if = {
+					limit = {
+						ruler_has_personality = impaler_personality
+					}
+					custom_tooltip = awaken_the_butcher_bank_personality_tooltip
+					hidden_effect = {
+						change_variable = {
+							which = impaler_ruler_count
+							value = 1
+						}
+					}
+				}
+				else = {
+					change_dip = -2
+					change_mil = 1
+					custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
+					hidden_effect = {
+						country_event = {
+							id = AB_wallachia_events.1
+						}
+					}
+				}
+			}
+			cooldown_years = 0
+		}
+	}
+}

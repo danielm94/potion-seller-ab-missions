@@ -1,0 +1,26 @@
+impaler_personality = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	}
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	}
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	}
+	leader_land_shock = 2
+	max_general_shock = 1
+	global_unrest = -2
+	terror_power_gain_modifier = 0.25
+	improve_relation_modifier = -0.25
+	wants_betray_allies = yes
+	razing = yes
+	lower_autonomy = yes
+	nation_designer_cost = 10
+}
