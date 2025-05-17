@@ -1,0 +1,4 @@
+﻿l_english:
+ impaler_personality: "Impaler"
+ desc_impaler_personality: "Our ruler is a sadistic tyrant who responds to even the smallest slight with unspeakable cruelty. While such fearsome brutality can crush rebellions and terrorize our enemies, it also isolates us diplomatically and risks tearing our own court apart. Those who displease the Impaler rarely get a second chance... or a headstone."
+ impaler_personality_die_desc: "[Root.Monarch.GetSheHeCap] was the spawn of Satan. Thank God they have returned to their creator in the fiery pits of Hell. May God forgive [Root.GetName] for the things our state has done..."

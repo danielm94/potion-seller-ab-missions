@@ -1,5 +1,5 @@
 wallachian_voivodate = {
-	icon = "assyriareform"
+	icon = "assyriareform"	#TODO
 	allow_convert = no
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -14,5 +14,34 @@ wallachian_voivodate = {
 		nobles_loyalty_modifier = 0.05
 		global_tax_modifier = -0.1
 		global_autonomy = -0.1
+	}
+	government_abilities = {
+		wallachian_terror_mechanic
+	}
+}
+
+wallachian_voivodate_with_raze = {
+	icon = "assyriareform"	#TODO
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	raze_province = yes
+	potential = {
+		tag = WAL
+	}
+	trigger ={
+		has_country_modifier = wallachian_terror_brutalize_the_enemy
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		nobles_influence_modifier = 0.15
+		nobles_loyalty_modifier = 0.05
+		global_tax_modifier = -0.1
+		global_autonomy = -0.1
+	}
+	government_abilities = {
+		wallachian_terror_mechanic
 	}
 }

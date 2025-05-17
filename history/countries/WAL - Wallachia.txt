@@ -1,0 +1,48 @@
+government = monarchy
+government_rank = 1
+primary_culture = Wallachian
+religion = orthodox
+technology_group = eastern
+capital = 161# Tîrgoviste
+add_government_reform = wallachian_voivodate
+set_variable = {
+	which = impaler_ruler_count
+	value = 0
+}
+
+1436.12.1 = {
+	monarch = {
+		name = "Vlad II"
+		dynasty = "Draculesti"
+		birth_date = 1390.1.1
+		adm = 2
+		dip = 2
+		mil = 5
+		leader = {
+			name = "Vlad II"
+			type = general
+			fire = 3
+			shock = 3
+			manuever = 3
+			siege = 0
+		}
+	}
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = bold_fighter_personality
+}
+
+1436.12.1 = {
+	heir = {
+		name = "Vlad"
+		monarch_name = "Vlad III"
+		dynasty = "Draculesti"
+		birth_date = 1434.5.5
+		death_date = 1470.8.8
+		claim = 95
+		adm = 4
+		dip = 0
+		mil = 6
+	}
+	add_heir_personality = cruel_personality
+}
+

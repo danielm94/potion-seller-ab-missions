@@ -1,0 +1,36 @@
+namespace = AB_wallachia_events
+country_event = {
+	id = AB_wallachia_events.1
+	title = AB_wallachia_events.1.t
+	desc = AB_wallachia_events.1.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = blank
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.2
+	title = AB_wallachia_events.2.t
+	desc = AB_wallachia_events.2.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				has_reform = wallachian_voivodate_with_raze
+			}
+			remove_government_reform = wallachian_voivodate_with_raze
+			add_government_reform = wallachian_voivodate
+		}
+	}
+	option = {
+		name = blank
+	}
+}
