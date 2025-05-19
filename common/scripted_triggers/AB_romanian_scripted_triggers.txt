@@ -20,3 +20,7 @@ is_moldavia ={
 		tag = MOL
 	}
 }
+
+is_wallachian_terror_dynamic_country_color_enabled = {
+	has_country_flag = wallachian_terror_dynamic_country_color
+}
