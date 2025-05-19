@@ -1,0 +1,66 @@
+on_battle_won_country = {
+	if = {
+		limit = {
+			has_government_mechanic = wallachian_terror_mechanic
+			has_country_modifier = wallachian_terror_brutalize_the_enemy
+		}
+		set_variable = {
+			which = land_units_killed_var
+			which = land_units_killed
+		}
+		divide_variable = {
+			which = land_units_killed_var
+			value = 6666.666			#that's not on purpose lol
+		}
+		variable_government_power_effect = {
+			var = land_units_killed_var
+			mechanic_type = wallachian_terror_mechanic
+			power_type = terror_power
+			scaled_with_gain_modifier = yes
+		}
+		if = {
+			limit = {
+				is_wallachian_terror_dynamic_country_color_enabled = yes
+			}
+			change_color_based_on_terror = yes
+		}
+	}
+}
+
+on_battle_lost_province = {
+	FROM = {
+		save_global_event_target_as = battle_winner
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_government_mechanic = wallachian_terror_mechanic
+				has_country_modifier = wallachian_terror_brutalize_the_enemy
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					war_with = event_target:battle_winner
+				}
+			}
+			apply_wallachian_terror_battle_won_enemy_province_modifier = yes
+			set_province_flag = wallachian_terror_recapture_penalty
+		}
+		else_if = {
+			limit = {
+				owned_by = event_target:battle_winner
+			}
+			apply_wallachian_terror_battle_won_own_province_modifier = yes
+		}
+	}
+}
+
+on_bi_yearly_pulse = {
+	every_country = {
+		limit = {
+			is_wallachian_terror_dynamic_country_color_enabled = yes
+		}
+		change_color_based_on_terror = yes
+	}
+}
