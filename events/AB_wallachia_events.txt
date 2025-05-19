@@ -14,6 +14,7 @@ country_event = {
 	}
 }
 
+#Disable razing
 country_event = {
 	id = AB_wallachia_events.2
 	title = AB_wallachia_events.2.t
@@ -22,13 +23,23 @@ country_event = {
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		if = {
-			limit = {
-				has_reform = wallachian_voivodate_with_raze
-			}
-			remove_government_reform = wallachian_voivodate_with_raze
-			add_government_reform = wallachian_voivodate
-		}
+		disable_razing = yes
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Disable terror gain from battles.
+country_event = {
+	id = AB_wallachia_events.3
+	title = AB_wallachia_events.3.t
+	desc = AB_wallachia_events.3.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		clr_country_flag = wallachian_terror_gain_terror_from_dead_enemies
 	}
 	option = {
 		name = blank
