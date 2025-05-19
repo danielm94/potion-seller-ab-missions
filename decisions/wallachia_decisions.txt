@@ -1,0 +1,42 @@
+country_decisions = {
+	toggle_wallachian_terror_dynamic_country_color = {
+		major = yes
+		color = {
+			120
+			0
+			0
+		}
+		potential = {
+			has_government_mechanic = wallachian_terror_mechanic
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			if = {
+				limit = {
+					is_wallachian_terror_dynamic_country_color_enabled = yes
+				}
+				custom_tooltip = disable_wallachian_terror_dynamic_country_color
+				hidden_effect = {
+					clr_country_flag = wallachian_terror_dynamic_country_color
+					change_country_color = {
+						#TODO: add logic for handling other tags with this mechanic (should be few)
+						color = {
+							68
+							122
+							174
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = enable_wallachian_terror_dynamic_country_color
+				hidden_effect = {
+					set_country_flag = wallachian_terror_dynamic_country_color
+					change_color_based_on_terror = yes
+				}
+			}
+		}
+	}
+}

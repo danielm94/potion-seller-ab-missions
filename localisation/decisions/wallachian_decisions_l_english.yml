@@ -1,0 +1,5 @@
+﻿l_english:
+ toggle_wallachian_terror_dynamic_country_color_title: "Toggle Dynamic Recoloring of Country Color"
+ toggle_wallachian_terror_dynamic_country_color_desc: "When enabled, our country's color will change depending on how much §YTerror§! we have. At §Y0 Terror§!, we will have our default color and as we gain more §YTerror§!, our country's color will become more §Rblood red§!."
+ enable_wallachian_terror_dynamic_country_color: "Enable dynamic recoloring of country color"
+ disable_wallachian_terror_dynamic_country_color: "Disable dynamic recoloring of country color"
