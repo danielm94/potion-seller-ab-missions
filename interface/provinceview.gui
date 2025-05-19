@@ -1125,16 +1125,62 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="raze_button"
+				scripted = yes
 				position = { x= 450 y = 60 }
-				quadTextureSprite ="GFX_development_button_raze"
+				quadTextureSprite ="GFX_raze_button_new"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = ""
 				buttonFont = "vic_18"
 				Orientation = "UPPER_LEFT"
+				shortcut =  "shift+r"
 			}
-
+			guiButtonType =
+			{
+				name ="scripted_raze_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite ="GFX_raze_button_new"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				clicksound = burncolony
+				shortcut = "shift+r"
+			}
+			guiButtonType =
+			{
+				name ="raze_all_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite = "GFX_autonomy_macro_empty_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				no_clicksound = yes
+				shortcut = "CTRL+shift+r"
+			}
+			guiButtonType =
+			{
+				name ="whitelist_raze_province_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite = "GFX_autonomy_macro_empty_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				no_clicksound = yes
+				shortcut = "shift+w"
+			}
 
 
 			### INCOME
