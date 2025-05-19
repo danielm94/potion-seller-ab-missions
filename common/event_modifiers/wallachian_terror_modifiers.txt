@@ -1,5 +1,26 @@
 wallachian_terror_brutalize_the_enemy = {
-	infantry_shock = 0.15
-	years_of_nationalism = -5
+	infantry_shock = 0.3
+	siege_ability = 0.1
 	ae_impact = 0.05
+}
+
+wallachian_terror_warning_for_the_rest = {
+	local_defensiveness = 0.1
+	local_defender_dice_roll_bonus = 1
+	local_monthly_devastation = 0.01
+	development_cost = 0.1
+}
+
+wallachian_terror_garden_of_the_defeated = {
+	war_exhaustion = 0.02
+	local_monthly_devastation = 0.01
+	development_cost = 0.1
+}
+
+wallachian_terror_raze_mod = {
+	local_development_cost = 0.2
+	local_tax_modifier = -0.3
+	local_manpower = -0.3
+	local_production_efficiency = -0.3
+	improve_relation_modifier = -0.005
 }
