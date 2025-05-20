@@ -42,8 +42,45 @@ wallachian_terror_mechanic = {
 					value = -30
 					scaled_with_gain_modifier = no
 				}
+				custom_tooltip = wallachian_terror_purged_estates_rebellion_tooltip
+				hidden_effect = {
+					wallachian_terror_spawn_rebels_from_purge = yes
+				}
+				custom_tooltip = wallachian_terror_purged_estates_loyalty_loss_tooltip
+				hidden_effect = {
+					add_estate_loyalty = {
+						estate = all
+						loyalty = -40
+					}
+				}
+				add_legitimacy = -30
+				custom_tooltip = wallachian_terror_purged_estates_effect_tooltip
+				hidden_effect = {
+					set_country_flag = wallachian_terror_purged_estates
+					set_ruler_flag = wallachian_terror_ruler_purged_estates
+					change_variable = {
+						which = estate_purges_amount
+						value = 1
+					}
+				}
+				change_estate_land_share = {
+					estate = all
+					share = -10
+				}
+				add_country_modifier = {
+					name = wallachian_terror_purging_the_estate_elites
+					duration = 7300
+				}
+				custom_tooltip = wallachian_terror_purged_estates_no_rebels_from_seizing_tooltip
+				custom_tooltip = wallachian_terror_purged_estates_can_seize_during_war_tooltip
+				sell_crownland_modified_by_purges = yes
+				hidden_effect = {
+					every_owned_province = {
+						add_devastation = 5
+					}
+				}
 			}
-			cooldown_years = 0
+			cooldown_years = 20
 			ai_chance = {
 				factor = 0
 				modifier = {
