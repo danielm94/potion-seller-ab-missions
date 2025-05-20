@@ -160,11 +160,106 @@ apply_wallachian_terror_battle_won_own_province_modifier = {
 	}
 }
 
+apply_wallachian_terror_battle_won_owner_penalty = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 0
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 25
+					}
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 0.25
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 25
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 50
+					}
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 0.5
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 75
+					}
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 0.75
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 75
+				}
+			}
+		}
+		owner = {
+			add_war_exhaustion = 1
+		}
+	}
+}
+
 change_terror = {
 	add_government_power = {
 		mechanic_type = wallachian_terror_mechanic
 		power_type = terror_power
 		value = $value$
+		scaled_with_gain_modifier = $scaled_with_gain_modifier$
+	}
+	if = {
+		limit = {
+			is_wallachian_terror_dynamic_country_color_enabled = yes
+		}
+		change_color_based_on_terror = yes
+	}
+}
+
+change_terror_var = {
+	variable_government_power_effect = {
+		var = $var$
+		mechanic_type = wallachian_terror_mechanic
+		power_type = terror_power
 		scaled_with_gain_modifier = $scaled_with_gain_modifier$
 	}
 	if = {
@@ -220,7 +315,7 @@ change_color_based_on_terror = {
 				110
 				159
 			}
-		}	
+		}
 	}
 	else_if = {
 		limit = {
@@ -243,7 +338,7 @@ change_color_based_on_terror = {
 				98
 				143
 			}
-		}	
+		}
 	}
 	else_if = {
 		limit = {
@@ -266,7 +361,7 @@ change_color_based_on_terror = {
 				86
 				128
 			}
-		}	
+		}
 	}
 	else_if = {
 		limit = {
@@ -289,7 +384,7 @@ change_color_based_on_terror = {
 				73
 				113
 			}
-		}	
+		}
 	}
 	else_if = {
 		limit = {
@@ -312,7 +407,7 @@ change_color_based_on_terror = {
 				61
 				98
 			}
-		}	
+		}
 	}
 	else_if = {
 		limit = {
@@ -335,7 +430,7 @@ change_color_based_on_terror = {
 				49
 				83
 			}
-		}	
+		}
 	}
 	else_if = {
 		limit = {
@@ -358,7 +453,7 @@ change_color_based_on_terror = {
 				37
 				67
 			}
-		}		
+		}
 	}
 	else_if = {
 		limit = {
@@ -381,7 +476,7 @@ change_color_based_on_terror = {
 				24
 				52
 			}
-		}		
+		}
 	}
 	else_if = {
 		limit = {
@@ -397,6 +492,40 @@ change_color_based_on_terror = {
 				0
 				0
 			}
-		}		
+		}
+	}
+}
+
+wallachian_terror_on_raze_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_government_mechanic = wallachian_terror_mechanic
+				has_country_modifier = wallachian_terror_brutalize_the_enemy
+			}
+		}
+		add_province_modifier = {
+			name = wallachian_terror_raze_mod
+			duration = 5475
+		}
+		add_nationalism = 15
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		divide_variable = {
+			which = dev
+			value = 40
+		}
+		owner = {
+			set_variable = {
+				which = dev
+				which = PREV
+			}
+			change_terror_var = {
+				var = dev
+				scaled_with_gain_modifier = yes
+			}
+		}
 	}
 }

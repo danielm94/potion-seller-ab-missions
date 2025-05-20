@@ -12,17 +12,9 @@ on_battle_won_country = {
 			which = land_units_killed_var
 			value = 6666.666			#that's not on purpose lol
 		}
-		variable_government_power_effect = {
+		change_terror_var = {
 			var = land_units_killed_var
-			mechanic_type = wallachian_terror_mechanic
-			power_type = terror_power
 			scaled_with_gain_modifier = yes
-		}
-		if = {
-			limit = {
-				is_wallachian_terror_dynamic_country_color_enabled = yes
-			}
-			change_color_based_on_terror = yes
 		}
 	}
 }
@@ -45,7 +37,7 @@ on_battle_lost_province = {
 				}
 			}
 			apply_wallachian_terror_battle_won_enemy_province_modifier = yes
-			set_province_flag = wallachian_terror_recapture_penalty
+			apply_wallachian_terror_battle_won_owner_penalty = yes
 		}
 		else_if = {
 			limit = {

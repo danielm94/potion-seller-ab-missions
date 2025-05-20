@@ -13,13 +13,14 @@ wallachian_terror_mechanic = {
 			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
-					improve_relation_modifier = -0.2
-					ae_impact = 0.2
+					improve_relation_modifier = -0.1
+					ae_impact = 0.05
+					diplomatic_reputation = -1
 					monthly_terror_power = -0.1
 					all_estate_influence_modifier = -0.15
-					morale_damage = 0.35
-					shock_damage = 0.35
-					global_unrest = -2
+					morale_damage = 0.1
+					shock_damage = 0.1
+					global_unrest = -4
 				}
 			}
 		}
@@ -37,9 +38,7 @@ wallachian_terror_mechanic = {
 				}
 			}
 			effect = {
-				add_government_power = {
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
+				change_terror = {
 					value = -30
 					scaled_with_gain_modifier = no
 				}
@@ -75,10 +74,39 @@ wallachian_terror_mechanic = {
 					name = wallachian_terror_brutalize_the_enemy
 					duration = 3650
 				}
+				custom_tooltip = brutalize_the_enemy_razing_tooltip
+				tooltip = {
+					add_nationalism = 15
+					add_province_modifier = {
+						name = wallachian_terror_raze_mod
+						duration = 5475
+					}
+				}
 				hidden_effect = {
-					add_government_reform = wallachian_voivodate_with_raze #Unfortunately you can only enable razing through gov reforms...
-					country_event = { #Restore goverment reform to non raze version after 10 years.
+					enable_razing = yes
+					country_event = {
 						id = AB_wallachia_events.2
+						days = 3650
+					}
+				}
+				custom_tooltip = brutalize_the_enemy_dead_enemies_gives_terror_tooltip
+				tooltip = {
+					add_province_modifier = {
+						name = wallachian_terror_garden_of_the_defeated
+						duration = 180
+					}
+				}
+				custom_tooltip = brutalize_the_enemy_friendly_territory_win_battle_tooltip
+				tooltip = {
+					add_province_modifier = {
+						name = wallachian_terror_warning_for_the_rest
+						duration = 180
+					}
+				}
+				hidden_effect = {
+					enable_terror_gain_from_battles = yes
+					country_event = {
+						id = AB_wallachia_events.3
 						days = 3650
 					}
 				}
@@ -89,11 +117,14 @@ wallachian_terror_mechanic = {
 			gui = wallachian_terror_gov_interaction
 			icon = GFX_wallachian_terror_awaken_the_butcher_button
 			trigger = {
-			}
-			effect = {
-				add_government_power = {
+				has_government_power = {
 					mechanic_type = wallachian_terror_mechanic
 					power_type = terror_power
+					value = 30
+				}
+			}
+			effect = {
+				change_terror = {
 					value = -30
 					scaled_with_gain_modifier = no
 				}
@@ -114,6 +145,7 @@ wallachian_terror_mechanic = {
 					change_mil = 1
 					custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
 					hidden_effect = {
+						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
 						country_event = {
 							id = AB_wallachia_events.1
 						}
