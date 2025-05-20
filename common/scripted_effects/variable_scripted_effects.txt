@@ -538,3 +538,169 @@ decimal_decomposition_integers_government_power_effect = {
 		}
 	}
 }
+
+variable_add_agressive_expansion = {
+	set_variable = {
+		which = num
+		which = $var$
+	}
+	set_variable = {
+		which = is_negative
+		value = 0
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = num
+					value = 0
+				}
+			}
+		}
+		set_variable = {
+			which = is_negative
+			value = 1
+		}
+		multiply_variable = {
+			which = num
+			value = -1
+		}
+	}
+	#-1 rounds down, effectively truncating the decimal
+	round_variable = {
+		which = num
+		value = -1
+	}
+	decimal_decomposition_integers_add_agressive_expansion_effect = {
+		var = num
+		who = $who$
+		apply_calc = $apply_calc$
+		increment = 1
+	}
+	decimal_decomposition_integers_add_agressive_expansion_effect = {
+		var = num
+		who = $who$
+		apply_calc = $apply_calc$
+		increment = 10
+	}
+	decimal_decomposition_integers_add_agressive_expansion_effect = {
+		var = num
+		who = $who$
+		apply_calc = $apply_calc$
+		increment = 100
+	}
+	decimal_decomposition_integers_add_agressive_expansion_effect = {
+		var = num
+		who = $who$
+		apply_calc = $apply_calc$
+		increment = 1000
+	}
+	decimal_decomposition_integers_add_agressive_expansion_effect = {
+		var = num
+		who = $who$
+		apply_calc = $apply_calc$
+		increment = 10000
+	}
+	decimal_decomposition_integers_add_agressive_expansion_effect = {
+		var = num
+		who = $who$
+		apply_calc = $apply_calc$
+		increment = 100000
+	}
+}
+
+decimal_decomposition_integers_add_agressive_expansion_effect = {
+	if = {
+		limit = {
+			var_greater_than_0 = {
+				var = $var$
+			}
+		}
+		set_variable = {
+			which = modulo
+			which = $var$
+		}
+		modulo_variable = {
+			which = modulo
+			value = 10
+		}
+		divide_variable = {
+			which = $var$
+			value = 10
+		}
+		#-1 rounds down, effectively truncating the decimal
+		round_variable = {
+			which = $var$
+			value = -1
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = modulo
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = is_negative
+						value = 1
+					}
+				}
+				add_aggressive_expansion = {
+					who = $who$
+					value = -$increment$
+					apply_calc = $apply_calc$
+				}
+			}
+			else = {
+				add_aggressive_expansion = {
+					who = $who$
+					value = $increment$
+					apply_calc = $apply_calc$
+				}
+			}
+			subtract_variable = {
+				which = modulo
+				value = 1
+			}
+		}
+	}
+}
+
+#Note: It's highly recommended that you use an opinion modifier with an opinion value of +/- 1
+variable_add_opinion = {
+	set_variable = {
+		which = count
+		which = $var$
+	}
+	round_variable = {
+		which = countr
+		value = 1
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = count
+				value = 1
+			}
+		}
+		add_opinion = {
+			who = $who$
+			modifier = $modifier$
+			[[years]
+			years = $years$
+			]
+			[[months]
+			months = $months$
+			]
+			[[multiplier]
+			multiplier = $multiplier$
+			]
+		}
+		subtract_variable = {
+			which = count
+			value = 1
+		}
+	}
+}
