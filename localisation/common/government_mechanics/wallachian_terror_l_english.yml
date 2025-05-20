@@ -15,3 +15,11 @@
  brutalize_the_enemy_razing_tooltip: "We will be able to §Graze provinces§! for the duration of this effect. Provinces that we raze will experience unimaginable cruelty, and as a result will have the following effect:\nGain §G+0.025§! §YTerror§! for §Y1§! development in the province before razing."
  brutalize_the_enemy_dead_enemies_gives_terror_tooltip: "Winning a battle while at war will grant §G+0.15§! §YTerror§! for every §Y1000§! enemy units killed by you. If the battle happened on an enemy province, the owner will gain §R+0.25 - +1.00§! war exhaustion depending on how much §YTerror§! we have and the province gains the following modifier for §Y6 - 24 months§!, depending on how much §YTerror§! we have after the battle:"
  brutalize_the_enemy_friendly_territory_win_battle_tooltip: "If we win a battle on one of our own provinces, it will receive the following modifier for §Y6 - 24 months§!, depending on how much §YTerror§! we have after the battle:"
+ wallachian_terror_purged_estates_trigger_tooltip: "We haven't purged our estates in the last §Y50 years§!."
+ wallachian_terror_purged_estates_effect_tooltip: "Our ruthless purge of the estates has left a permanent scar on the landed class. No one will dare purchase titles while our current ruler remains, fearing they’ll be next. Even after their reign ends, it will take §R50 years§! before land ownership becomes attractive again. Each purge permanently §Rreduces income from selling titles§! due to the lasting stigma and danger of owning land in [Root.GetName]."
+
+ wallachian_terror_purged_estates_ruler_died_tooltip: "Our ruler hasn't purged the estates."
+ wallachian_terror_purged_estates_no_rebels_from_seizing_tooltip: "Seizing land will not spawn estate rebels for the entire duration of this modifier."
+ wallachian_terror_purged_estates_can_seize_during_war_tooltip: "We will be able to seize land while we are at war for the entire duration of this modifier."
+ wallachian_terror_purged_estates_rebellion_tooltip: "Our estates will not take this lying down — §Rthey will rebel!§!"
+ wallachian_terror_purged_estates_loyalty_loss_tooltip: "All of our estates will lose §R40§! loyalty."
