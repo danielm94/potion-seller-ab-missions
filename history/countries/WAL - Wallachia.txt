@@ -10,6 +10,11 @@ set_variable = {
 	value = 0
 }
 
+set_variable = {
+	which = estate_purges_amount
+	value = 0
+}
+
 1436.12.1 = {
 	monarch = {
 		name = "Vlad II"
@@ -45,4 +50,3 @@ set_variable = {
 	}
 	add_heir_personality = cruel_personality
 }
-
