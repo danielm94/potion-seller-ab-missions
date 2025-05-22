@@ -57,3 +57,9 @@ variable_disgusted_by_impalement_opinion = {
 	min = -200
 	yearly_decay = 3
 }
+
+wallachian_terror_humiliated_us_opinion = {
+	opinion = -50
+	min = -200
+	yearly_decay = 1
+}
