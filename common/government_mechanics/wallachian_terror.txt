@@ -38,10 +38,6 @@ wallachian_terror_mechanic = {
 				}
 			}
 			effect = {
-				change_terror = {
-					value = -30
-					scaled_with_gain_modifier = no
-				}
 				custom_tooltip = wallachian_terror_purged_estates_rebellion_tooltip
 				hidden_effect = {
 					wallachian_terror_spawn_rebels_from_purge = yes
@@ -79,15 +75,12 @@ wallachian_terror_mechanic = {
 						add_devastation = 5
 					}
 				}
-			}
-			cooldown_years = 20
-			ai_chance = {
-				factor = 0
-				modifier = {
-					factor = 10
-					years_of_income = 3
+				change_terror = {
+					value = -40
+					scaled_with_gain_modifier = no
 				}
 			}
+			cooldown_years = 20
 		}
 		brutalize_the_enemy = {
 			gui = wallachian_terror_gov_interaction
@@ -101,12 +94,6 @@ wallachian_terror_mechanic = {
 				}
 			}
 			effect = {
-				add_government_power = {
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
-					value = -20
-					scaled_with_gain_modifier = no
-				}
 				add_country_modifier = {
 					name = wallachian_terror_brutalize_the_enemy
 					duration = 3650
@@ -147,6 +134,10 @@ wallachian_terror_mechanic = {
 						days = 3650
 					}
 				}
+				change_terror = {
+					value = -30
+					scaled_with_gain_modifier = no
+				}
 			}
 			cooldown_years = 10
 		}
@@ -161,10 +152,6 @@ wallachian_terror_mechanic = {
 				}
 			}
 			effect = {
-				change_terror = {
-					value = -30
-					scaled_with_gain_modifier = no
-				}
 				if = {
 					limit = {
 						ruler_has_personality = impaler_personality
@@ -181,6 +168,10 @@ wallachian_terror_mechanic = {
 					change_dip = -2
 					change_mil = 1
 					custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
+					change_terror = {
+						value = -30
+						scaled_with_gain_modifier = no
+					} 
 					hidden_effect = {
 						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
 						country_event = {
