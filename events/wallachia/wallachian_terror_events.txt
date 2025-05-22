@@ -107,7 +107,6 @@ country_event = {
 					}
 					country_event = {
 						id = wallachian_terror_events.4
-						days = 1
 					}
 				}
 				90 = {
@@ -173,7 +172,6 @@ country_event = {
 		}
 		country_event = {
 			id = wallachian_terror_events.6
-			days = 1
 		}
 		ai_chance = {
 			factor = 10000
@@ -338,11 +336,29 @@ country_event = {
 		add_stability = -1
 		add_war_exhaustion = 3
 		add_prestige = 15
-		event_target:impaler_country = {
-			change_terror = {
-				value = 2
-				scaled_with_gain_modifier = no
+		hidden_effect = {
+			event_target:impaler_country = {
+				country_event = {
+					id = wallachian_terror_events.51
+				}
 			}
+		}
+	}
+}
+
+#Fight to the death - Impaled Event
+country_event = {
+	id = wallachian_terror_events.51
+	title = wallachian_terror_events.51.t
+	desc = wallachian_terror_events.51.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_fight_to_the_death_impaler_option
+		add_prestige = 5
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = no
 		}
 	}
 }
