@@ -1,0 +1,104 @@
+defined_text = {
+	name = wallachian_terror_legitimacy_or_equivalent_gain
+	random = no
+	text = {
+		localisation_key = wallachian_terror_non_rival_monarchy
+		trigger = {
+			NOT = {
+				event_target:impaled_country = {
+					is_rival = PREV
+				}
+			}
+			government = monarchy
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_rival_monarchy
+		trigger = {
+			event_target:impaled_country = {
+				is_rival = PREV
+			}
+			government = monarchy
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_non_rival_republic
+		trigger = {
+			NOT = {
+				event_target:impaled_country = {
+					is_rival = PREV
+				}
+			}
+			government = republic
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_rival_republic
+		trigger = {
+			event_target:impaled_country = {
+				is_rival = PREV
+			}
+			government = republic
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_non_rival_theocracy
+		trigger = {
+			NOT = {
+				event_target:impaled_country = {
+					is_rival = PREV
+				}
+			}
+			government = theocracy
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_rival_theocracy
+		trigger = {
+			event_target:impaled_country = {
+				is_rival = PREV
+			}
+			government = theocracy
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_non_rival_horde
+		trigger = {
+			NOT = {
+				event_target:impaled_country = {
+					is_rival = PREV
+				}
+			}
+			uses_horde_unity = yes
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_rival_horde
+		trigger = {
+			event_target:impaled_country = {
+				is_rival = PREV
+			}
+			uses_horde_unity = yes
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_non_rival_meritocracy
+		trigger = {
+			NOT = {
+				event_target:impaled_country = {
+					is_rival = PREV
+				}
+			}
+			uses_meritocracy = yes
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_rival_meritocracy
+		trigger = {
+			event_target:impaled_country = {
+				is_rival = PREV
+			}
+			uses_meritocracy = yes
+		}
+	}
+}
