@@ -70,6 +70,7 @@ wallachian_terror_mechanic = {
 				custom_tooltip = wallachian_terror_purged_estates_no_rebels_from_seizing_tooltip
 				custom_tooltip = wallachian_terror_purged_estates_can_seize_during_war_tooltip
 				sell_crownland_modified_by_purges = yes
+				custom_tooltip = wallachian_terror_purges_devastation_tooltip
 				hidden_effect = {
 					every_owned_province = {
 						add_devastation = 5
