@@ -1,0 +1,59 @@
+hre_emperor_failed_to_prevent_impalement_opinion = {
+	opinion = -25
+	min = -200
+	yearly_decay = 2
+}
+
+hre_prince_outraged_at_impalement_opinion = {
+	opinion = -25
+	min = -200
+	yearly_decay = 1
+}
+
+hre_emperor_outraged_at_impalement_opinion = {
+	opinion = -50
+	min = -200
+	yearly_decay = 1
+}
+
+impaled_our_ruler_opinion = {
+	opinion = -200
+	min = -999
+	yearly_decay = 1
+}
+
+impaled_our_relative_opinion = {
+	opinion = -100
+	min = -999
+	yearly_decay = 1
+}
+
+impaled_our_subject_opinion = {
+	opinion = -50
+	min = -200
+	yearly_decay = 1
+}
+
+impaled_our_ally_opinion = {
+	opinion = -50
+	min = -200
+	yearly_decay = 1
+}
+
+impaled_our_enemy_opinion = {
+	opinion = 25
+	max = 200
+	yearly_decay = 2
+}
+
+impaled_our_rival_opinion = {
+	opinion = 50
+	max = 200
+	yearly_decay = 1
+}
+
+variable_disgusted_by_impalement_opinion = {
+	opinion = -1
+	min = -200
+	yearly_decay = 3
+}
