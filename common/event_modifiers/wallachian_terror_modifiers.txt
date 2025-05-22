@@ -62,14 +62,32 @@ wallachian_terror_senseless_killing_of_our_men = {
 	manpower_recovery_speed = -0.15
 	recover_army_morale_speed = -0.15
 }
-wallachian_terror_advisors_avoid_us ={
+
+wallachian_terror_advisors_avoid_us = {
 	advisor_pool = -2
 	advisor_cost = 0.3
 }
+
 wallachian_terror_decapitated_monarchy = {
 	global_tax_modifier = -0.1
 	diplomatic_reputation = -1
 	global_unrest = 3
 	advisor_cost = 0.15
 	yearly_corruption = 0.2
+}
+
+wallachian_terror_humiliated_ruler = {
+	legitimacy = -1
+	devotion = -1
+	republican_tradition = -0.3
+	meritocracy = -1
+	horde_unity = -1
+	diplomatic_reputation = -1
+}
+
+wallachian_terror_failed_the_empire = {
+	diplomatic_reputation = -1
+	legitimacy = -1
+	reasons_to_elect = -15
+	prestige = -0.5
 }
