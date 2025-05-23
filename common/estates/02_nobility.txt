@@ -646,6 +646,8 @@ estate_nobles = {
 		estate_nobles_frankish_unity
 		estate_nobles_germano_italic_unity
 		# ]]]
+		#Potion Seller's mission pack
+		estate_nobles_dominance_of_the_boierime
 	}
 	agendas = {
 		estate_nobles_develop_x
