@@ -1,0 +1,140 @@
+namespace = wallachian_civil_war_events
+country_event = {
+	id = wallachian_civil_war_events.0
+	title = wallachian_civil_war_events.0.t
+	desc = wallachian_civil_war_events.0.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_accept_the_ultimatum
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+	}
+	option = {
+		name = wallachian_civil_war_reject_the_ultimatum
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		hidden_effect = {
+			set_country_flag = wallachia_refused_nobility_ultimatum
+		}
+	}
+	option = {
+		name = wallachian_civil_war_trick_them
+		highlight = yes
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
+		country_event = {
+			id = wallachian_civil_war_events.1
+			days = 1
+		}
+	}
+}
+
+#The Banquet of Blood - Via Terror Interaction
+country_event = {
+	id = wallachian_civil_war_events.1
+	title = wallachian_civil_war_events.1.t
+	desc = wallachian_civil_war_events.1.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = wallachian_civil_war_events_banquet_of_blood
+		hidden_effect = {
+			set_country_flag = wallachia_slaughtered_guests_in_your_own_home
+		}
+		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_trust_tooltip
+		hidden_effect = {
+			every_known_country = {
+				add_opinion = {
+					who = PREV
+					modifier = banquet_of_blood_opinion
+				}
+				add_trust = {
+					who = PREV
+					value = -20
+				}
+			}
+		}
+		add_prestige = -100
+		add_legitimacy = -20
+		add_stability = -2
+		add_ruler_modifier = {
+			name = banquet_of_blood_ruler_modifier
+			duration = -1
+		}
+		add_country_modifier = {
+			name = banquet_of_blood_permanent_modifier
+			duration = -1
+		}
+		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_privilege_abs_tooltip
+		hidden_effect = {
+			set_country_flag = has_halved_absolutism_reduction
+		}
+		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_remove_privilege_tooltip
+		hidden_effect = {
+			remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+		}
+		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_civil_war_tooltip
+	}
+}
+
+country_event = {
+	id = wallachian_civil_war_events.2
+	title = wallachian_civil_war_events.2.t
+	desc = {
+		trigger = {
+			has_country_flag = wallachia_refused_nobility_ultimatum
+		}
+		desc = wallachian_civil_war_events.2.d_refused
+	}
+	desc = {
+		trigger = {
+			has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+		}
+		desc = wallachian_civil_war_events.2.d_banquet
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = THIS
+	}
+	option = {
+		name = wallachian_civil_war_start_refused_option
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = wallachia_refused_nobility_ultimatum
+			}
+		}
+		reduce_stability = {
+			amount = 4
+		}
+		capital_scope = {
+			spawn_large_scaled_rebels = {
+				type = noble_rebels
+				leader = yes
+				leader = "Logofat Radu"
+				leader_dynasty = "Brancoveanu"
+			}
+		}
+	}
+	option = {
+		name = wallachian_civil_war_start_banquet_option
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+			}
+		}
+		reduce_stability = {
+			amount = 3
+		}
+	}
+}
