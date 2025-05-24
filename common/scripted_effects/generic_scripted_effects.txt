@@ -1,0 +1,12 @@
+reduce_stability = {
+	tooltip = {
+		add_stability = -$amount$
+	}
+	custom_tooltip = reduce_stability_less_than_neg_3_tooltip
+	hidden_effect = {
+		for = {
+			amount = $amount$
+			effect = "reduce_stability_or_adm_power = yes"
+		}
+	}
+}
