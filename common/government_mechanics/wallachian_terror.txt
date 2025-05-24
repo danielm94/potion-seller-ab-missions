@@ -80,6 +80,16 @@ wallachian_terror_mechanic = {
 					value = -40
 					scaled_with_gain_modifier = no
 				}
+				if = {
+					limit = {
+						has_estate_privilege = estate_nobles_dominance_of_the_boierime
+					}
+					custom_tooltip = wallachian_terror_purging_the_elites_civil_war_tooltip
+					country_event = {
+						id = wallachian_civil_war_events.0
+						days = 1
+					}
+				}
 			}
 			cooldown_years = 20
 		}
@@ -172,7 +182,7 @@ wallachian_terror_mechanic = {
 					change_terror = {
 						value = -30
 						scaled_with_gain_modifier = no
-					} 
+					}
 					hidden_effect = {
 						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
 						country_event = {
