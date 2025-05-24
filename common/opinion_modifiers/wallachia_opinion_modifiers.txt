@@ -1,0 +1,5 @@
+banquet_of_blood_opinion = {
+	opinion = -25
+	min = -200
+	yearly_decay =1
+}
