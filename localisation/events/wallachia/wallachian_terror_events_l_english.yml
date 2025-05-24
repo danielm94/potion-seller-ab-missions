@@ -56,5 +56,3 @@
  wallachian_terror_events.9.t: "We Have Failed the Empire"
  wallachian_terror_events.9.d: "News of the [impaler_country.GetAdjective] atrocity spreads like wildfire. The ruler of [impaled_country.GetName], a prince of the Empire, has been impaled, their royal family butchered before the eyes of the world. Whispers echo throughout : Where was the Emperor? The princes speak of oaths broken, of blood spilled with no response. Trust erodes. Influence wanes. The authority of the Empire weakens with every rumor, every sneer. We must answer for our inaction."
  wallachian_terror_emperor_failed_to_protect_prince: "That bastard [impaler_country.Monarch.GetName] shall pay!"
-
-
