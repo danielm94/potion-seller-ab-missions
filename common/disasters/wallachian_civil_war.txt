@@ -1,0 +1,37 @@
+wallachian_civil_war = {
+	potential = {
+		#	is_year = 1494
+	}
+	can_start = {
+		is_wallachia = yes
+	}
+	can_stop = {
+		has_any_disaster = yes
+	}
+	can_end = {
+		stability = 3
+		legitimacy = 90
+		NOT = {
+			num_of_rebel_controlled_provinces = 1
+		}
+		NOT = {
+			num_of_rebel_armies = 1
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 34
+			has_country_flag = wallachia_refused_nobility_ultimatum
+		}
+		modifier = {
+			factor = 50
+			has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+		}
+	}
+	modifier = {
+		global_unrest = 10
+		stability_cost_modifier = 0.25
+		manpower_recovery_speed = -0.25
+	}
+	on_start = wallachian_civil_war_events.2
+}
