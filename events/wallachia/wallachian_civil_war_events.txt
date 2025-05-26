@@ -1,8 +1,8 @@
 namespace = wallachian_civil_war_events
 country_event = {
-	id = wallachian_civil_war_events.0
-	title = wallachian_civil_war_events.0.t
-	desc = wallachian_civil_war_events.0.d
+	id = wallachian_civil_war_events.1
+	title = wallachian_civil_war_events.1.t
+	desc = wallachian_civil_war_events.1.d
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	option = {
@@ -31,73 +31,25 @@ country_event = {
 			ruler_has_personality = impaler_personality
 		}
 		country_event = {
-			id = wallachian_civil_war_events.1
+			id = AB_wallachia_events.4
 			days = 1
 		}
 	}
 }
 
-#The Banquet of Blood - Via Terror Interaction
-country_event = {
-	id = wallachian_civil_war_events.1
-	title = wallachian_civil_war_events.1.t
-	desc = wallachian_civil_war_events.1.d
-	picture = AB_LOTHAIR_eventPicture
-	is_triggered_only = yes
-	major = yes
-	option = {
-		name = wallachian_civil_war_events_banquet_of_blood
-		hidden_effect = {
-			set_country_flag = wallachia_slaughtered_guests_in_your_own_home
-		}
-		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_trust_tooltip
-		hidden_effect = {
-			every_known_country = {
-				add_opinion = {
-					who = PREV
-					modifier = banquet_of_blood_opinion
-				}
-				add_trust = {
-					who = PREV
-					value = -20
-				}
-			}
-		}
-		add_prestige = -100
-		add_legitimacy = -20
-		add_stability = -2
-		add_ruler_modifier = {
-			name = banquet_of_blood_ruler_modifier
-			duration = -1
-		}
-		add_country_modifier = {
-			name = banquet_of_blood_permanent_modifier
-			duration = -1
-		}
-		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_privilege_abs_tooltip
-		hidden_effect = {
-			set_country_flag = has_halved_absolutism_reduction
-		}
-		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_remove_privilege_tooltip
-		hidden_effect = {
-			remove_estate_privilege = estate_nobles_dominance_of_the_boierime
-		}
-		custom_tooltip = wallachian_civil_war_events_banquet_of_blood_civil_war_tooltip
-	}
-}
-
+#Civil War Start
 country_event = {
 	id = wallachian_civil_war_events.2
 	title = wallachian_civil_war_events.2.t
 	desc = {
 		trigger = {
-			has_country_flag = wallachia_refused_nobility_ultimatum
+			has_refused_boiermiea_ultimatum = yes
 		}
 		desc = wallachian_civil_war_events.2.d_refused
 	}
 	desc = {
 		trigger = {
-			has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+			has_butchered_the_boiermiea = yes
 		}
 		desc = wallachian_civil_war_events.2.d_banquet
 	}
@@ -107,11 +59,16 @@ country_event = {
 	major_trigger = {
 		knows_country = THIS
 	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_war_of_the_ten_houses
+		}
+	}
 	option = {
 		name = wallachian_civil_war_start_refused_option
 		trigger = {
 			hidden_trigger = {
-				has_country_flag = wallachia_refused_nobility_ultimatum
+				has_refused_boiermiea_ultimatum = yes
 			}
 		}
 		reduce_stability = {
@@ -119,22 +76,1116 @@ country_event = {
 		}
 		capital_scope = {
 			spawn_large_scaled_rebels = {
-				type = noble_rebels
-				leader = yes
+				type = wallachia_civil_war_brancoveanu_refused_ultimatum_rebels
 				leader = "Logofat Radu"
 				leader_dynasty = "Brancoveanu"
 			}
 		}
+		set_country_flag = wallachian_civil_war_brancoveanu_rebels_spawned
 	}
 	option = {
 		name = wallachian_civil_war_start_banquet_option
 		trigger = {
 			hidden_trigger = {
-				has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+				has_butchered_the_boiermiea = yes
 			}
 		}
 		reduce_stability = {
 			amount = 3
 		}
+		capital_scope = {
+			spawn_large_scaled_rebels = {
+				type = wallachia_civil_war_brancoveanu_butchered_rebels
+				leader = "Grigore"
+				leader_dynasty = "Brancoveanu"
+			}
+		}
+		set_country_flag = wallachian_civil_war_brancoveanu_rebels_spawned
+	}
+}
+
+#Civil War In Progress Event Dispatcher
+country_event = {
+	id = wallachian_civil_war_events.3
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		random_list = {
+			30 = {
+				#Spawn rebels
+				country_event = {
+					id = wallachian_civil_war_events.4
+				}
+			}
+			15 = {
+				#Money for loyalty
+				country_event = {
+					id = wallachian_civil_war_events.5
+				}
+				modifier = {
+					factor = 0
+					has_butchered_the_boiermiea = yes
+				}
+			}
+			15 = {
+				#Paranoia event
+				country_event = {
+					id = wallachian_civil_war_events.6
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_refused_boiermiea_ultimatum = yes
+						ruler_has_personality = calm_personality
+					}
+				}
+			}
+			5 = {
+				#Peasants demand concessions
+				country_event = {
+					id = wallachian_civil_war_events.7
+				}
+			}
+			5 = {
+				#Rivals fund rebels
+				random_rival_country = {
+					country_event = {
+						id = wallachian_civil_war_events.8
+					}
+				}
+			}
+			40 = {
+				#Nothing
+			}
+		}
+	}
+	option = {
+		name = blank
+	}
+}
+
+#House Rebel Dispatcher
+country_event = {
+	id = wallachian_civil_war_events.4
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		random_list = {
+			11 = {
+				# Racovita
+				country_event = {
+					id = wallachian_civil_war_events.9
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_racovita = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Movilesti
+				country_event = {
+					id = wallachian_civil_war_events.10
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_movilesti = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Mavrocordatos
+				country_event = {
+					id = wallachian_civil_war_events.11
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_mavrocordatos = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Ghica
+				country_event = {
+					id = wallachian_civil_war_events.12
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_ghica = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Cantacuzino
+				country_event = {
+					id = wallachian_civil_war_events.13
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_cantacuzino = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Craiovesti
+				country_event = {
+					id = wallachian_civil_war_events.14
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_craiovesti = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Draculesti
+				country_event = {
+					id = wallachian_civil_war_events.15
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_draculesti = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Danesti
+				country_event = {
+					id = wallachian_civil_war_events.16
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_danesti = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+			11 = {
+				# Basarab
+				country_event = {
+					id = wallachian_civil_war_events.17
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_defeated_house_basarab = yes
+						has_any_house_spawned_rebels = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = blank
+	}
+}
+
+#House Rebel Loyalty For Sale Dispatcher
+country_event = {
+	id = wallachian_civil_war_events.5
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		random_list = {
+			11 = {
+				# Racovita
+				country_event = {
+					id = wallachian_civil_war_events.19					# Bribe event for Racovita
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_racovita = yes
+				}
+			}
+			11 = {
+				# Movilesti
+				country_event = {
+					id = wallachian_civil_war_events.20					# Bribe event for Movilesti
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_movilesti = yes
+				}
+			}
+			11 = {
+				# Mavrocordatos
+				country_event = {
+					id = wallachian_civil_war_events.21					# Bribe event for Mavrocordatos
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_mavrocordatos = yes
+				}
+			}
+			11 = {
+				# Ghica
+				country_event = {
+					id = wallachian_civil_war_events.22					# Bribe event for Ghica
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_ghica = yes
+				}
+			}
+			11 = {
+				# Cantacuzino
+				country_event = {
+					id = wallachian_civil_war_events.23					# Bribe event for Cantacuzino
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_cantacuzino = yes
+				}
+			}
+			11 = {
+				# Craiovesti
+				country_event = {
+					id = wallachian_civil_war_events.24					# Bribe event for Craiovesti
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_craiovesti = yes
+				}
+			}
+			11 = {
+				# Draculesti
+				country_event = {
+					id = wallachian_civil_war_events.25					# Bribe event for Draculesti
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_draculesti = yes
+				}
+			}
+			11 = {
+				# Danesti
+				country_event = {
+					id = wallachian_civil_war_events.26					# Bribe event for Danesti
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_danesti = yes
+				}
+			}
+			11 = {
+				# Basarab
+				country_event = {
+					id = wallachian_civil_war_events.27					# Bribe event for Basarab
+				}
+				modifier = {
+					factor = 0
+					has_defeated_house_basarab = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Paranoia event dispatcher
+country_event = {
+	id = wallachian_civil_war_events.6
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = a
+			}
+		}
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Peasants demand concessions
+country_event = {
+	id = wallachian_civil_war_events.7
+	title = wallachian_civil_war_events.7.t
+	desc = wallachian_civil_war_events.7.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Rival supports rebels event
+country_event = {
+	id = wallachian_civil_war_events.8
+	title = wallachian_civil_war_events.8.t
+	desc = wallachian_civil_war_events.8.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Racovita Revolts
+country_event = {
+	id = wallachian_civil_war_events.9
+	title = wallachian_civil_war_events.9.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.9.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.9.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_racovita_refused_ultimatum_rebels
+						leader = "Mihai"
+						leader_dynasty = "Racovita"
+					}
+				}
+				set_country_flag = wallachian_civil_war_racovita_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_racovita_butchered_rebels
+						leader = "Ion"
+						leader_dynasty = "Racovita"
+					}
+				}
+				set_country_flag = wallachian_civil_war_racovita_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.9_option
+	}
+}
+
+#Movilesti Revolts
+country_event = {
+	id = wallachian_civil_war_events.10
+	title = wallachian_civil_war_events.10.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.10.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.10.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_movilesti_refused_ultimatum_rebels
+						leader = "Vasile"
+						leader_dynasty = "Movilesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_movilesti_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_movilesti_butchered_rebels
+						leader = "Stefan"
+						leader_dynasty = "Movilesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_movilesti_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.10_option
+	}
+}
+
+#Mavrocordatos Revolts
+country_event = {
+	id = wallachian_civil_war_events.11
+	title = wallachian_civil_war_events.11.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.11.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.11.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_mavrocordatos_refused_ultimatum_rebels
+						leader = "Constantin"
+						leader_dynasty = "Mavrocordatos"
+					}
+				}
+				set_country_flag = wallachian_civil_war_mavrocordatos_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_mavrocordatos_butchered_rebels
+						leader = "Alexandru"
+						leader_dynasty = "Mavrocordatos"
+					}
+				}
+				set_country_flag = wallachian_civil_war_mavrocordatos_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.11_option
+	}
+}
+
+#Ghica Revolts
+country_event = {
+	id = wallachian_civil_war_events.12
+	title = wallachian_civil_war_events.12.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.12.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.12.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_ghica_refused_ultimatum_rebels
+						leader = "Radu"
+						leader_dynasty = "Ghica"
+					}
+				}
+				set_country_flag = wallachian_civil_war_ghica_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_ghica_butchered_rebels
+						leader = "Andrei"
+						leader_dynasty = "Ghica"
+					}
+				}
+				set_country_flag = wallachian_civil_war_ghica_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.12_option
+	}
+}
+
+#Cantacuzino Revolts
+country_event = {
+	id = wallachian_civil_war_events.13
+	title = wallachian_civil_war_events.13.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.13.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.13.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_cantacuzino_refused_ultimatum_rebels
+						leader = "Petru"
+						leader_dynasty = "Cantacuzino"
+					}
+				}
+				set_country_flag = wallachian_civil_war_cantacuzino_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_cantacuzino_butchered_rebels
+						leader = "Gheorghe"
+						leader_dynasty = "Cantacuzino"
+					}
+				}
+				set_country_flag = wallachian_civil_war_cantacuzino_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.13_option
+	}
+}
+
+#Craiovesti Revolts
+country_event = {
+	id = wallachian_civil_war_events.14
+	title = wallachian_civil_war_events.14.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.14.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.14.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_craiovesti_refused_ultimatum_rebels
+						leader = "Dumitru"
+						leader_dynasty = "Craiovesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_craiovesti_butchered_rebels
+						leader = "Florin"
+						leader_dynasty = "Craiovesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.14_option
+	}
+}
+
+#Draculesti Revolts
+country_event = {
+	id = wallachian_civil_war_events.15
+	title = wallachian_civil_war_events.15.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.15.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.15.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_draculesti_refused_ultimatum_rebels
+						leader = "Sorin"
+						leader_dynasty = "Draculesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_draculesti_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_draculesti_butchered_rebels
+						leader = "Vlad"
+						leader_dynasty = "Draculesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_draculesti_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.15_option
+	}
+}
+
+#Danesti Revolts
+country_event = {
+	id = wallachian_civil_war_events.16
+	title = wallachian_civil_war_events.16.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.16.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.16.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_danesti_refused_ultimatum_rebels
+						leader = "Mircea"
+						leader_dynasty = "Danesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_danesti_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_danesti_butchered_rebels
+						leader = "Barbu"
+						leader_dynasty = "Danesti"
+					}
+				}
+				set_country_flag = wallachian_civil_war_danesti_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.16_option
+	}
+}
+
+#Basarab Revolts
+country_event = {
+	id = wallachian_civil_war_events.17
+	title = wallachian_civil_war_events.17.t
+	desc = {
+		desc = wallachian_civil_war_events_refused.17.d
+		trigger = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+	}
+	desc = {
+		desc = wallachian_civil_war_events_butchered.17.d
+		trigger = {
+			has_butchered_the_boiermiea = yes
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_refused_boiermiea_ultimatum = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_basarab_refused_ultimatum_rebels
+						leader = "Tudor"
+						leader_dynasty = "Basarab"
+					}
+				}
+				set_country_flag = wallachian_civil_war_basarab_rebels_spawned
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_owned_province = {
+					spawn_large_scaled_rebels = {
+						type = wallachia_civil_war_basarab_butchered_rebels
+						leader = "Neagoe"
+						leader_dynasty = "Basarab"
+					}
+				}
+				set_country_flag = wallachian_civil_war_basarab_rebels_spawned
+			}
+		}
+	}
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.17_option
+	}
+}
+
+#Check for defeated rebel event.
+country_event = {
+	id = wallachian_civil_war_events.18
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		wallachian_civil_war_check_for_defeated_houses_effect = yes
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Racovita Bribe Event (Your example, for reference - Event ID .19)
+country_event = {
+	id = wallachian_civil_war_events.19
+	title = wallachian_civil_war_events.19.t
+	desc = wallachian_civil_war_events.19.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty		# Generic option name
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_racovita_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_racovita
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty		# Generic option name
+		add_manpower = -0.001		# Small negative impact to represent displeasure/consequence
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Movilesti Bribe Event (Event ID .20)
+country_event = {
+	id = wallachian_civil_war_events.20
+	title = wallachian_civil_war_events.20.t
+	desc = wallachian_civil_war_events.20.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_movilesti_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_movilesti
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Mavrocordatos Bribe Event (Event ID .21)
+country_event = {
+	id = wallachian_civil_war_events.21
+	title = wallachian_civil_war_events.21.t
+	desc = wallachian_civil_war_events.21.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_mavrocordatos_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_mavrocordatos
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Ghica Bribe Event (Event ID .22)
+country_event = {
+	id = wallachian_civil_war_events.22
+	title = wallachian_civil_war_events.22.t
+	desc = wallachian_civil_war_events.22.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_ghica_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_ghica
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Cantacuzino Bribe Event (Event ID .23)
+country_event = {
+	id = wallachian_civil_war_events.23
+	title = wallachian_civil_war_events.23.t
+	desc = wallachian_civil_war_events.23.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_cantacuzino_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_cantacuzino
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Craiovesti Bribe Event (Event ID .24)
+country_event = {
+	id = wallachian_civil_war_events.24
+	title = wallachian_civil_war_events.24.t
+	desc = wallachian_civil_war_events.24.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_craiovesti_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_craiovesti
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Draculesti Bribe Event (Event ID .25)
+country_event = {
+	id = wallachian_civil_war_events.25
+	title = wallachian_civil_war_events.25.t
+	desc = wallachian_civil_war_events.25.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_draculesti_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_draculesti
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Danesti Bribe Event (Event ID .26)
+country_event = {
+	id = wallachian_civil_war_events.26
+	title = wallachian_civil_war_events.26.t
+	desc = wallachian_civil_war_events.26.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_danesti_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_danesti
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Basarab Bribe Event (Event ID .27)
+country_event = {
+	id = wallachian_civil_war_events.27
+	title = wallachian_civil_war_events.27.t
+	desc = wallachian_civil_war_events.27.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_give_bribe_for_loyalty
+		add_years_of_income = -0.5
+		add_legitimacy = 5
+		custom_tooltip = wallachian_civil_war_basarab_loyalty_tooltip
+		hidden_effect = {
+			set_country_flag = wallachian_civil_war_defeated_basarab
+		}
+	}
+	option = {
+		name = wallachian_civil_war_refuse_loyalty
+		add_manpower = -0.001
+		add_legitimacy = -5
+		add_prestige = -5
+	}
+}
+
+#Civil War Ending Event Dispatcher
+country_event = {
+	id = wallachian_civil_war_events.99
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		clr_country_flag = partial_end_of_wallachian_civil_war
+		set_country_flag = complete_end_of_wallachian_civil_war
+		clr_country_flag = in_war_of_the_ten_houses
+		if = {
+			limit = {
+				has_country_flag = wallachian_civil_war_voivode_was_captured_in_capital
+			}
+			#Clean up rebels effect
+			#Captured and executed event
+		}
+		else_if = {
+			limit = {
+				has_country_flag = wallachian_civil_war_voivode_surrendered
+			}
+			#surrendered event
+		}
+		else = {
+			#voivode won, I guess?
+		}
+	}
+	option = {
+		name = blank
 	}
 }
