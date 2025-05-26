@@ -1,0 +1,155 @@
+wallachian_civil_war_rebels_enforce_demands_effect = {
+	if = {
+		limit = {
+			has_refused_boiermiea_ultimatum = yes
+		}
+		custom_tooltip = wallachian_civil_war_refused_ultimatum_rebels_enforced_effect_tooltip
+	}
+	else_if = {
+		limit = {
+			has_butchered_the_boiermiea = yes
+		}
+		custom_tooltip = wallachian_civil_war_slaughtered_rebels_enforced_effect_tooltip
+	}
+	set_country_flag = wallachian_civil_war_voivode_surrendered
+	set_country_flag = wallachian_civil_war_$victorious_house$_victory
+	set_country_flag = partial_end_of_wallachian_civil_war
+}
+
+wallachian_civil_war_banquet_of_blood_effect = {
+	hidden_effect = {
+		set_country_flag = wallachia_slaughtered_guests_in_your_own_home
+	}
+	custom_tooltip = AB_wallachia_events_banquet_of_blood_trust_tooltip
+	hidden_effect = {
+		every_known_country = {
+			add_opinion = {
+				who = PREV
+				modifier = banquet_of_blood_opinion
+			}
+			add_trust = {
+				who = PREV
+				value = -20
+			}
+		}
+	}
+	add_prestige = -100
+	add_legitimacy = -20
+	add_stability = -2
+	add_ruler_modifier = {
+		name = banquet_of_blood_ruler_modifier
+		duration = -1
+	}
+	add_country_modifier = {
+		name = banquet_of_blood_permanent_modifier
+		duration = -1
+	}
+	custom_tooltip = AB_wallachia_events_banquet_of_blood_privilege_abs_tooltip
+	hidden_effect = {
+		set_country_flag = has_halved_absolutism_reduction
+	}
+	custom_tooltip = AB_wallachia_events_banquet_of_blood_remove_privilege_tooltip
+	hidden_effect = {
+		remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+	}
+	custom_tooltip = AB_wallachia_events_banquet_of_blood_civil_war_tooltip
+}
+
+wallachian_civil_war_check_for_defeated_houses_effect = {
+	if = {
+		limit = {
+			has_country_flag = in_war_of_the_ten_houses
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+		}
+		if = {
+			limit = {
+				has_spawned_racovita_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_racovita_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_racovita
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_movilesti_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_movilesti_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_movilesti
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_mavrocordatos_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_mavrocordatos_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_mavrocordatos
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_brancoveanu_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_brancoveanu_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_brancoveanu
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_ghica_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_ghica_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_ghica
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_cantacuzino_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_cantacuzino_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_cantacuzino
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_craiovesti_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_craiovesti
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_draculesti_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_draculesti_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_draculesti
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_danesti_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_danesti_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_danesti
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+		else_if = {
+			limit = {
+				has_spawned_basarab_rebels = yes
+			}
+			clr_country_flag = wallachian_civil_war_basarab_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_basarab
+			wallachian_civil_war_defeated_house_bonus = yes
+		}
+	}
+}
+
+wallachian_civil_war_defeated_house_bonus = {
+	add_legitimacy = 2.5
+	change_terror = {
+		amount = 2.5
+		scaled_with_gain_modifier = yes
+	}
+}
