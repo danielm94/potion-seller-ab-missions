@@ -86,7 +86,7 @@ wallachian_terror_mechanic = {
 					}
 					custom_tooltip = wallachian_terror_purging_the_elites_civil_war_tooltip
 					country_event = {
-						id = wallachian_civil_war_events.0
+						id = wallachian_civil_war_events.1
 						days = 1
 					}
 				}

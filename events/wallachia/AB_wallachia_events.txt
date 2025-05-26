@@ -45,3 +45,132 @@ country_event = {
 		name = blank
 	}
 }
+
+#The Banquet of Blood - Via Terror Interaction
+country_event = {
+	id = AB_wallachia_events.4
+	title = AB_wallachia_banquet_of_blood_title
+	desc = AB_wallachia_events.4.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = THIS
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.5
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.5
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.5.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.4
+		}
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.6
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page2_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.6
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.6.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.5
+		}
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.7
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page3_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.7
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.7.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.6
+		}
+	}
+	option = {
+		name = AB_ACHIEVEMENT_NEXT_PAGE
+		country_event = {
+			id = AB_wallachia_events.8
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page4_tldr
+		highlight = yes
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
+
+#The Banquet of Blood (Contd)
+country_event = {
+	id = AB_wallachia_events.8
+	title = AB_wallachia_banquet_of_blood_contd_title
+	desc = AB_wallachia_events.8.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_ACHIEVEMENT_PREVIOUS_PAGE
+		country_event = {
+			id = AB_wallachia_events.7
+		}
+	}
+	option = {
+		name = AB_wallachia_events_banquet_of_blood_page5_tldr
+		highlight = yes
+		add_ruler_modifier = {
+			name = banquet_of_blood_well_read
+			duration = -1
+		}
+		wallachian_civil_war_banquet_of_blood_effect = yes
+	}
+}
