@@ -1,6 +1,9 @@
 wallachian_civil_war = {
 	potential = {
-		#	is_year = 1494
+		is_wallachia = yes
+		NOT = {
+			has_country_flag = complete_end_of_wallachian_civil_war
+		}
 	}
 	can_start = {
 		is_wallachia = yes
@@ -9,23 +12,48 @@ wallachian_civil_war = {
 		has_any_disaster = yes
 	}
 	can_end = {
-		stability = 3
-		legitimacy = 90
-		NOT = {
-			num_of_rebel_controlled_provinces = 1
-		}
-		NOT = {
-			num_of_rebel_armies = 1
+		OR = {
+			AND = {
+				stability = 3
+				legitimacy = 90
+				NOT = {
+					num_of_rebel_controlled_provinces = 1
+				}
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+				custom_trigger_tooltip = {
+					tooltip = wallachian_civil_war_defeated_the_10_houses_tooltip
+					has_defeated_the_10_houses = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wallachian_civil_war_voivode_was_captured_in_capital
+				has_country_flag = wallachian_civil_war_voivode_was_captured
+			}
+			custom_trigger_tooltip = {
+				tooltip = wallachian_civil_war_voivode_surrendered
+				has_country_flag = wallachian_civil_war_voivode_surrendered
+			}
+			hidden_trigger = {
+				has_country_flag = partial_end_of_wallachian_civil_war
+			}
 		}
 	}
 	progress = {
 		modifier = {
-			factor = 34
-			has_country_flag = wallachia_refused_nobility_ultimatum
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = wallachian_civil_war_refused_ultimatum_trigger_tooltip
+				has_refused_boiermiea_ultimatum = yes
+			}
 		}
 		modifier = {
-			factor = 50
-			has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = wallchian_civil_war_slaughtered_guests_trigger_tooltip
+				has_butchered_the_boiermiea = yes
+			}
 		}
 	}
 	modifier = {
@@ -34,4 +62,12 @@ wallachian_civil_war = {
 		manpower_recovery_speed = -0.25
 	}
 	on_start = wallachian_civil_war_events.2
+	on_end = wallachian_civil_war_events.99
+
+	on_monthly = {
+		events = {
+			wallachian_civil_war_events.3 #Event dispatcher
+			wallachian_civil_war_events.18 #Rebel flag manager
+		}
+	}
 }
