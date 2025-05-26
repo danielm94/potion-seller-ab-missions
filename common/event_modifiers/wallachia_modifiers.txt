@@ -21,5 +21,8 @@ banquet_of_blood_permanent_modifier = {
 	terror_power_gain_modifier = 0.15
 	max_absolutism = 5
 	max_absolutism_effect = 0.1
-	
+}
+
+banquet_of_blood_well_read = {
+	technology_cost = -0.01
 }

@@ -1,6 +1,8 @@
 ﻿l_english:
  banquet_of_blood_ruler_modifier: "Butcher of the Banquet"
- desc_banquet_of_blood_ruler_modifier: "Todo"
+ desc_banquet_of_blood_ruler_modifier: "The [Root.Monarch.GetTitle]'s name is now whispered in hushed, terrified tones across the courts of Europe and within [Root.Monarch.GetHerHis] own realm. The horrific slaughter at the banquet has shattered any semblance of diplomatic grace or internal trust. Foreign dignitaries recoil, alliances fray, and even [Root.Monarch.GetHerHis] own people question the sanity and soul of their ruler. The nobility, decimated and cowed, seethes with a mixture of fear and impotent rage. While terror may grant a certain kind of power, the cost in legitimacy, reputation, and the loyalty of [Root.Monarch.GetHerHis] own faith is steep."
  banquet_of_blood_permanent_modifier: "Legacy of the Banquet of Blood"
- desc_banquet_of_blood_permanent_modifier: "Todo"
+ desc_banquet_of_blood_permanent_modifier: "The memory of the Banquet of Blood is seared into the collective consciousness of [Root.GetName] and its neighbors. Though the immediate shock may fade, the event has irrevocably altered the nature of rule and the perception of the crown. Foreign powers remain wary, prestige is slow to recover, and the nobility will forever remember the day their peers were so brutally extinguished. This act of supreme terror, however, has also laid a grim foundation for a more absolute authority, where fear itself becomes a currency of power and a tool to centralize the state."
+ banquet_of_blood_well_read: "Well Read"
+ desc_banquet_of_blood_well_read: "When [Root.Monarch.GetName] is not having people impaled for crossing [Root.Monarch.GetHerHim], [Root.Monarch.GetSheHe] enjoys spending some time in [Root.Monarch.GetHerHis] library enjoying a good book."
  
