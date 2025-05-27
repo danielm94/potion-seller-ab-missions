@@ -26,3 +26,16 @@ banquet_of_blood_permanent_modifier = {
 banquet_of_blood_well_read = {
 	technology_cost = -0.01
 }
+
+serfs_pay_taxes_to_lords_instead = {
+	local_tax_modifier = -0.5
+	local_manpower_modifier = -0.5
+}
+
+destroyed_the_serfs = {
+	local_development_cost = 0.4
+	local_tax_modifier = -0.6
+	local_manpower_modifier = -0.6
+	local_production_efficiency = -0.6
+	improve_relation_modifier = -0.005
+}
