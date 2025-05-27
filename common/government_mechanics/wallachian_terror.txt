@@ -161,6 +161,20 @@ wallachian_terror_mechanic = {
 					power_type = terror_power
 					value = 30
 				}
+				if = {
+					limit = {
+						ruler_has_personality = impaler_personality
+					}
+					custom_trigger_tooltip = {
+						tooltip = wallachian_terror_awaken_the_butcher_banked_personality_trigger_tootip
+						NOT = {
+							check_variable = {
+								which = impaler_ruler_count
+								value = 3
+							}
+						}
+					}
+				}
 			}
 			effect = {
 				if = {
@@ -168,6 +182,10 @@ wallachian_terror_mechanic = {
 						ruler_has_personality = impaler_personality
 					}
 					custom_tooltip = awaken_the_butcher_bank_personality_tooltip
+					change_terror = {
+						value = -30
+						scaled_with_gain_modifier = no
+					}
 					hidden_effect = {
 						change_variable = {
 							which = impaler_ruler_count
