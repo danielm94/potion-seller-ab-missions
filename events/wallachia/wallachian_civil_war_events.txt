@@ -3,7 +3,7 @@ country_event = {
 	id = wallachian_civil_war_events.1
 	title = wallachian_civil_war_events.1.t
 	desc = wallachian_civil_war_events.1.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events.1
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_accept_the_ultimatum
@@ -53,7 +53,7 @@ country_event = {
 		}
 		desc = wallachian_civil_war_events.2.d_banquet
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = SIEGE_eventPicture
 	is_triggered_only = yes
 	major = yes
 	major_trigger = {
@@ -74,6 +74,8 @@ country_event = {
 		reduce_stability = {
 			amount = 4
 		}
+		custom_tooltip = wallachian_civil_war_refused_ultimatum_soldiers_defect_to_houses
+		add_yearly_manpower = -3.5
 		capital_scope = {
 			spawn_large_scaled_rebels = {
 				type = wallachia_civil_war_brancoveanu_refused_ultimatum_rebels
@@ -93,6 +95,8 @@ country_event = {
 		reduce_stability = {
 			amount = 3
 		}
+		custom_tooltip = wallachian_civil_war_butchered_soldiers_defect_to_houses
+		add_yearly_manpower = -6
 		capital_scope = {
 			spawn_large_scaled_rebels = {
 				type = wallachia_civil_war_brancoveanu_butchered_rebels
@@ -114,13 +118,13 @@ country_event = {
 	hidden = yes
 	immediate = {
 		random_list = {
-			30 = {
+			35 = {
 				#Spawn rebels
 				country_event = {
 					id = wallachian_civil_war_events.4
 				}
 			}
-			15 = {
+			10 = {
 				#Money for loyalty
 				country_event = {
 					id = wallachian_civil_war_events.5
@@ -130,7 +134,7 @@ country_event = {
 					has_butchered_the_boiermiea = yes
 				}
 			}
-			15 = {
+			10 = {
 				#Paranoia event
 				country_event = {
 					id = wallachian_civil_war_events.6
@@ -143,10 +147,26 @@ country_event = {
 					}
 				}
 			}
-			5 = {
-				#Peasants demand concessions
-				country_event = {
-					id = wallachian_civil_war_events.7
+			10 = {
+				#Serfs aren't paying us tax event
+				random_owned_province = {
+					limit = {
+						has_rebels_in_province = no
+						is_capital = no
+						if = {
+							limit = {
+								PREV = {
+									ruler_has_personality = impaler_personality
+								}
+							}
+							NOT = {
+								has_province_modifier = province_razed
+							}
+						}
+					}
+					province_event = {
+						id = wallachian_civil_war_events.7
+					}
 				}
 			}
 			5 = {
@@ -428,17 +448,82 @@ country_event = {
 	}
 }
 
-#Peasants demand concessions
-country_event = {
+#Serfs aren't paying us taxes.
+province_event = {
 	id = wallachian_civil_war_events.7
 	title = wallachian_civil_war_events.7.t
 	desc = wallachian_civil_war_events.7.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events.7
 	is_triggered_only = yes
 	immediate = {
 	}
 	option = {
-		name = blank
+		name = wallachian_civil_war_events_serfs_ignore_tax_evasion
+		trigger = {
+			NOT = {
+				owner = {
+					ruler_has_personality = impaler_personality
+				}
+			}
+		}
+		add_province_modifier = {
+			name = serfs_pay_taxes_to_lords_instead
+			duration = -1
+		}
+		custom_tooltip = wallachian_civil_war_modifier_lasts_until_end_of_disaster
+		owner = {
+			add_prestige = -5
+			add_legitimacy = -5
+		}
+	}
+	option = {
+		name = wallachian_civil_war_events_serfs_enforce_tax
+		trigger = {
+			NOT = {
+				owner = {
+					ruler_has_personality = impaler_personality
+				}
+			}
+		}
+		spawn_large_scaled_rebels = {
+			type = anti_tax_rebels
+			no_defined_leader = yes
+		}
+		owner = {
+			add_legitimacy = 5
+		}
+	}
+	option = {
+		name = wallachian_civil_war_kill_them_all
+		highlight = yes
+		trigger = {
+			owner = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		custom_tooltip = wallachian_civil_war_province_will_be_razed
+		hidden_effect = {
+			loot_province = yes
+			raze_province = yes
+			owner = {
+				play_sound = burncolony
+			}
+		}
+		add_province_modifier = {
+			name = destroyed_the_serfs
+			duration = 9125
+		}
+		spawn_small_scaled_rebels = {
+			type = anti_tax_rebels
+			no_defined_leader = yes
+		}
+		owner = {
+			add_legitimacy = 5
+			change_terror = {
+				amount = 5
+				scaled_with_gain_modifier = yes
+			}
+		}
 	}
 }
 
@@ -501,7 +586,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.9_option
@@ -553,7 +638,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.10_option
@@ -605,7 +690,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.11_option
@@ -657,7 +742,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.12_option
@@ -709,7 +794,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.13_option
@@ -761,7 +846,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.14_option
@@ -813,7 +898,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.15_option
@@ -865,7 +950,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.16_option
@@ -917,7 +1002,7 @@ country_event = {
 			}
 		}
 	}
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_events_nobles_rebel
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.17_option
@@ -1168,6 +1253,12 @@ country_event = {
 		clr_country_flag = partial_end_of_wallachian_civil_war
 		set_country_flag = complete_end_of_wallachian_civil_war
 		clr_country_flag = in_war_of_the_ten_houses
+		every_owned_province = {
+			limit = {
+				has_province_modifier = serfs_pay_taxes_to_lords_instead
+			}
+			remove_province_modifier = serfs_pay_taxes_to_lords_instead
+		}
 		if = {
 			limit = {
 				has_country_flag = wallachian_civil_war_voivode_was_captured_in_capital
