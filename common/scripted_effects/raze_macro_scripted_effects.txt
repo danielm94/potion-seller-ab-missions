@@ -52,81 +52,84 @@ execute_razed_province_on_actions = {
 #5 remove that amount from the transfer country's treasury
 #TODO: Figure out a solution for when the player is the last tag alive...
 loot_province = {
-	owner = {
-		set_variable = {
-			which = before_treasury
-			value = 0
-		}
-		random_country = {
-			limit = {
-				NOT = {
-					tag = ROOT
-				}
-			}
-			save_event_target_as = temp_transfer_country
-			export_to_variable = {
+	custom_tooltip = loot_province_effect_tooltip
+	hidden_effect = {
+		owner = {
+			set_variable = {
 				which = before_treasury
-				value = treasury
+				value = 0
 			}
-			PREV = {
-				change_variable = {
+			random_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				save_event_target_as = temp_transfer_country
+				export_to_variable = {
 					which = before_treasury
-					which = PREV
+					value = treasury
+				}
+				PREV = {
+					change_variable = {
+						which = before_treasury
+						which = PREV
+					}
 				}
 			}
 		}
-	}
-	remove_loot = {
-		who = event_target:temp_transfer_country
-		amount = 999
-	}
-	owner = {
-		set_variable = {
-			which = after_treasury
-			value = 0
+		remove_loot = {
+			who = event_target:temp_transfer_country
+			amount = 999
 		}
-		event_target:temp_transfer_country = {
-			export_to_variable = {
+		owner = {
+			set_variable = {
 				which = after_treasury
-				value = treasury
+				value = 0
 			}
-			PREV = {
-				change_variable = {
+			event_target:temp_transfer_country = {
+				export_to_variable = {
 					which = after_treasury
-					which = PREV
+					value = treasury
+				}
+				PREV = {
+					change_variable = {
+						which = after_treasury
+						which = PREV
+					}
 				}
 			}
-		}
-		set_variable = {
-			which = difference_after_loot
-			which = after_treasury
-		}
-		subtract_variable = {
-			which = difference_after_loot
-			which = before_treasury
-		}
-		#Remove ducats that were transfered to temp country
-		event_target:temp_transfer_country = {
 			set_variable = {
 				which = difference_after_loot
-				which = PREV
+				which = after_treasury
+			}
+			subtract_variable = {
+				which = difference_after_loot
+				which = before_treasury
+			}
+			#Remove ducats that were transfered to temp country
+			event_target:temp_transfer_country = {
+				set_variable = {
+					which = difference_after_loot
+					which = PREV
+				}
+				multiply_variable = {
+					which = difference_after_loot
+					value = -1
+				}
+				variable_effect = {
+					var = difference_after_loot
+					effect = add_treasury
+				}
 			}
 			multiply_variable = {
 				which = difference_after_loot
-				value = -1
+				value = 2
 			}
 			variable_effect = {
 				var = difference_after_loot
 				effect = add_treasury
 			}
-		}
-		multiply_variable = {
-			which = difference_after_loot
-			value = 2
-		}
-		variable_effect = {
-			var = difference_after_loot
-			effect = add_treasury
 		}
 	}
 }
