@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.1"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.1.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.2"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.2.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events_nobles_rebel"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events_house_revolts.dds"
+	}
+	spriteType = {
+		name = "GFX_wallachian_civil_war_events.7"
+		texturefile = "gfx/interface/events/wallachia/civil_war/wallachian_civil_war_events.7.dds"
+	}
+}
