@@ -28,8 +28,8 @@ banquet_of_blood_well_read = {
 }
 
 serfs_pay_taxes_to_lords_instead = {
-	local_tax_modifier = -0.5
-	local_manpower_modifier = -0.5
+	local_tax_modifier = -1
+	local_manpower_modifier = -1
 }
 
 destroyed_the_serfs = {

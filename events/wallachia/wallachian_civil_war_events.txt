@@ -437,9 +437,35 @@ country_event = {
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		if = {
-			limit = {
-				has_country_flag = a
+		random_list = {
+			30 = {
+				#advisor
+			}
+			5 = {
+				#Heir
+				modifier = {
+					has_heir = no
+					factor = 0
+				}
+			}
+			5 = {
+				#Wife
+				modifier = {
+					has_consort = no
+					factor = 0
+				}
+			}
+			20 = {
+				#Merchants
+			}
+			20 = {
+				#Diplomats
+			}
+			10 = {
+				#Administrators
+			}
+			10 = {
+				#It's that damned Bard! He's singing state secrets to the traitors!
 			}
 		}
 	}
@@ -586,7 +612,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.9_option
@@ -638,7 +664,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.10_option
@@ -690,7 +716,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.11_option
@@ -742,7 +768,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.12_option
@@ -794,7 +820,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.13_option
@@ -846,7 +872,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.14_option
@@ -898,7 +924,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.15_option
@@ -950,7 +976,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.16_option
@@ -1002,7 +1028,7 @@ country_event = {
 			}
 		}
 	}
-	picture = GFX_wallachian_civil_war_events_nobles_rebel
+	picture = REVOLT_HUNGARIAN_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.17_option
@@ -1030,7 +1056,7 @@ country_event = {
 	id = wallachian_civil_war_events.19
 	title = wallachian_civil_war_events.19.t
 	desc = wallachian_civil_war_events.19.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty		# Generic option name
@@ -1054,7 +1080,7 @@ country_event = {
 	id = wallachian_civil_war_events.20
 	title = wallachian_civil_war_events.20.t
 	desc = wallachian_civil_war_events.20.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1078,7 +1104,7 @@ country_event = {
 	id = wallachian_civil_war_events.21
 	title = wallachian_civil_war_events.21.t
 	desc = wallachian_civil_war_events.21.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1102,7 +1128,7 @@ country_event = {
 	id = wallachian_civil_war_events.22
 	title = wallachian_civil_war_events.22.t
 	desc = wallachian_civil_war_events.22.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1126,7 +1152,7 @@ country_event = {
 	id = wallachian_civil_war_events.23
 	title = wallachian_civil_war_events.23.t
 	desc = wallachian_civil_war_events.23.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1150,7 +1176,7 @@ country_event = {
 	id = wallachian_civil_war_events.24
 	title = wallachian_civil_war_events.24.t
 	desc = wallachian_civil_war_events.24.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1174,7 +1200,7 @@ country_event = {
 	id = wallachian_civil_war_events.25
 	title = wallachian_civil_war_events.25.t
 	desc = wallachian_civil_war_events.25.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1198,7 +1224,7 @@ country_event = {
 	id = wallachian_civil_war_events.26
 	title = wallachian_civil_war_events.26.t
 	desc = wallachian_civil_war_events.26.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
@@ -1222,7 +1248,7 @@ country_event = {
 	id = wallachian_civil_war_events.27
 	title = wallachian_civil_war_events.27.t
 	desc = wallachian_civil_war_events.27.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_wallachian_civil_war_money_for_loyalty
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
