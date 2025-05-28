@@ -29,11 +29,11 @@ wallachian_civil_war = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = wallachian_civil_war_voivode_was_captured_in_capital
-				has_country_flag = wallachian_civil_war_voivode_was_captured
+				has_voiovode_been_captured_wallachian_civil_war = yes
 			}
 			custom_trigger_tooltip = {
 				tooltip = wallachian_civil_war_voivode_surrendered
-				has_country_flag = wallachian_civil_war_voivode_surrendered
+				has_voiovode_surrendered_wallachian_civil_war = yes
 			}
 			hidden_trigger = {
 				has_country_flag = partial_end_of_wallachian_civil_war
