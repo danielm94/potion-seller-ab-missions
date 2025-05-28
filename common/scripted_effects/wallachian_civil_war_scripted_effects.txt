@@ -153,3 +153,25 @@ wallachian_civil_war_defeated_house_bonus = {
 		scaled_with_gain_modifier = yes
 	}
 }
+
+wallachian_civil_war_cleanup_effect = {
+	clr_country_flag = wallachian_civil_war_defeated_basarab
+	clr_country_flag = wallachian_civil_war_defeated_brancoveanu
+	clr_country_flag = wallachian_civil_war_defeated_cantacuzino
+	clr_country_flag = wallachian_civil_war_defeated_craiovesti
+	clr_country_flag = wallachian_civil_war_defeated_danesti
+	clr_country_flag = wallachian_civil_war_defeated_draculesti
+	clr_country_flag = wallachian_civil_war_defeated_ghica
+	clr_country_flag = wallachian_civil_war_defeated_mavrocordatos
+	clr_country_flag = wallachian_civil_war_defeated_movilesti
+	clr_country_flag = wallachian_civil_war_defeated_racovita
+	clr_country_flag = partial_end_of_wallachian_civil_war
+	set_country_flag = complete_end_of_wallachian_civil_war
+	clr_country_flag = in_war_of_the_ten_houses
+	every_owned_province = {
+		limit = {
+			has_province_modifier = peasants_cave_to_traitors
+		}
+		remove_province_modifier = peasants_cave_to_traitors
+	}
+}

@@ -124,6 +124,13 @@ has_spawned_danesti_rebels = {
 	has_country_flag = wallachian_civil_war_danesti_rebels_spawned
 }
 
-has_spawned_basarab_rebels = { 
+has_spawned_basarab_rebels = {
 	has_country_flag = wallachian_civil_war_basarab_rebels_spawned
+}
+
+has_voivode_lost_wallachian_civil_war = {
+	OR = {
+		has_country_flag = wallachian_civil_war_voivode_was_captured
+		has_country_flag = wallachian_civil_war_voivode_surrendered
+	}
 }

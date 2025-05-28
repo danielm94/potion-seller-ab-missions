@@ -120,8 +120,25 @@ country_event = {
 		random_list = {
 			35 = {
 				#Spawn rebels
-				country_event = {
-					id = wallachian_civil_war_events.4
+				if = {
+					limit = {
+						has_defeated_the_10_houses = yes
+					}
+					random_list = {
+						40 = {
+							country_event = {
+								id = wallachian_civil_war_events.35
+							}
+						}
+						60 = {
+							#Nothing
+						}
+					}
+				}
+				else = {
+					country_event = {
+						id = wallachian_civil_war_events.4
+					}
 				}
 			}
 			10 = {
@@ -153,6 +170,9 @@ country_event = {
 					limit = {
 						has_rebels_in_province = no
 						is_capital = no
+						NOT = {
+							has_province_modifier = peasants_cave_to_traitors
+						}
 						if = {
 							limit = {
 								PREV = {
@@ -171,6 +191,7 @@ country_event = {
 			}
 			5 = {
 				#Rivals fund rebels
+				save_global_event_target_as = voivode_country
 				random_rival_country = {
 					country_event = {
 						id = wallachian_civil_war_events.8
@@ -439,33 +460,64 @@ country_event = {
 	immediate = {
 		random_list = {
 			30 = {
-				#advisor
+				# Advisor
+				country_event = {
+					id = wallachian_civil_war_events.28
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							has_adm_advisor = yes
+							has_dip_advisor = yes
+							has_mil_advisor = yes
+						}
+					}
+				}
 			}
 			5 = {
-				#Heir
+				# Heir
 				modifier = {
 					has_heir = no
 					factor = 0
 				}
+				country_event = {
+					id = wallachian_civil_war_events.29
+				}
 			}
 			5 = {
-				#Wife
+				# Wife
 				modifier = {
 					has_consort = no
 					factor = 0
 				}
+				country_event = {
+					id = wallachian_civil_war_events.30
+				}
 			}
 			20 = {
-				#Merchants
+				# Merchants
+				country_event = {
+					id = wallachian_civil_war_events.31
+				}
 			}
 			20 = {
-				#Diplomats
+				# Diplomats
+				country_event = {
+					id = wallachian_civil_war_events.32
+				}
 			}
 			10 = {
-				#Administrators
+				# Administrators
+				country_event = {
+					id = wallachian_civil_war_events.33
+				}
 			}
 			10 = {
-				#It's that damned Bard! He's singing state secrets to the traitors!
+				#Bard
+				country_event = {
+					id = wallachian_civil_war_events.34
+				}
 			}
 		}
 	}
@@ -493,7 +545,7 @@ province_event = {
 			}
 		}
 		add_province_modifier = {
-			name = serfs_pay_taxes_to_lords_instead
+			name = peasants_cave_to_traitors
 			duration = -1
 		}
 		custom_tooltip = wallachian_civil_war_modifier_lasts_until_end_of_disaster
@@ -543,10 +595,10 @@ province_event = {
 			type = anti_tax_rebels
 			no_defined_leader = yes
 		}
-		owner = {
+		FROM = {
 			add_legitimacy = 5
 			change_terror = {
-				amount = 5
+				value = 5
 				scaled_with_gain_modifier = yes
 			}
 		}
@@ -563,7 +615,65 @@ country_event = {
 	immediate = {
 	}
 	option = {
-		name = blank
+		name = wallachian_civil_war_support_rebels_with_manpower
+		trigger = {
+			manpower = 5
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = {
+					manpower = 7
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				manpower = 20
+			}
+		}
+		add_manpower = -5
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+		event_target:voivode_country = {
+			country_event = {
+				id = wallachian_civil_war_events.36
+			}
+		}
+	}
+	option = {
+		name = wallachian_civil_war_support_rebels_with_cash
+		trigger = {
+			is_bankrupt = no
+		}
+		add_years_of_income = -0.5
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+		event_target:voivode_country = {
+			country_event = {
+				id = wallachian_civil_war_events.36
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					years_of_income = 0.5
+				}
+				num_of_loans = 5
+			}
+		}
+	}
+	option = {
+		name = wallachian_civil_war_dont_support_rebels
+		add_prestige = 10
 	}
 }
 
@@ -1267,42 +1377,451 @@ country_event = {
 	}
 }
 
+#Paranoia - Advisors 
+country_event = {
+	id = wallachian_civil_war_events.28
+	title = wallachian_civil_war_events.28.t
+	desc = wallachian_civil_war_events.28.d
+	picture = 1
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.28.a
+		kill_advisor_by_category_effect = {
+			ADM = yes
+		}
+		kill_advisor_by_category_effect = {
+			DIP = yes
+		}
+		kill_advisor_by_category_effect = {
+			MIL = yes
+		}
+		add_prestige = -10
+		add_country_modifier = {
+			name = wallachia_civil_war_advisors_avoid_us
+			duration = 7300
+		}
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Paranoia - Heir
+country_event = {
+	id = wallachian_civil_war_events.29
+	title = wallachian_civil_war_events.29.t
+	desc = wallachian_civil_war_events.29.d
+	picture = GFX_evt_execution	# Placeholder, adjust as needed
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.29.a
+		kill_heir = {
+			allow_new_heir = no
+		}
+		add_prestige = -50
+		add_legitimacy = -10
+		add_country_modifier = {
+			name = wallachia_civil_war_murdered_heir
+			duration = 7300
+		}
+		change_terror = {
+			value = 5
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Paranoia - Wife
+country_event = {
+	id = wallachian_civil_war_events.30
+	title = wallachian_civil_war_events.30.t
+	desc = wallachian_civil_war_events.30.d
+	picture = GFX_evt_execution	# Placeholder, adjust as needed
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.30.a
+		add_prestige = -50
+		add_legitimacy = -10
+		every_known_country = {
+			limit = {
+				NOT = {
+					tag = PREV
+				}
+				OR = {
+					dynasty = PREV
+					PREV = {
+						is_origin_of_consort = PREV
+					}
+				}
+			}
+			add_opinion = {
+				who = PREV
+				modifier = impaled_our_relative_opinion
+			}
+			add_trust = {
+				who = PREV
+				value = -30
+			}
+			if = {
+				limit = {
+					alliance_with = PREV
+				}
+				break_alliance = PREV
+			}
+			add_casus_belli = {
+				type = cb_insult
+				target = PREV
+				months = 120
+			}
+		}
+		kill_consort = yes
+		add_country_modifier = {
+			name = wallachia_civil_war_murdered_the_queen
+			duration = 7300
+		}
+		change_terror = {
+			value = 5
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Paranoia - Merchants
+country_event = {
+	id = wallachian_civil_war_events.31
+	title = wallachian_civil_war_events.31.t
+	desc = wallachian_civil_war_events.31.d
+	picture = GFX_evt_execution	# Placeholder, adjust as needed
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.31.a
+		add_years_of_trade_income = {
+			custom_tooltip = wallachian_civil_war_merchants_paranoia_tooltip
+			years = 1
+		}
+		add_mercantilism = -5
+		add_country_modifier = {
+			name = wallachia_civil_war_merchants_detest_us
+			duration = 7300
+		}
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Paranoia - Diplomats
+country_event = {
+	id = wallachian_civil_war_events.32
+	title = wallachian_civil_war_events.32.t
+	desc = wallachian_civil_war_events.32.d
+	picture = GFX_evt_execution	# Placeholder, adjust as needed
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.32.a
+		add_prestige = -10
+		add_country_modifier = {
+			name = wallachian_civil_war_diplomats_fear_us
+			duration = 7300
+		}
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Paranoia - Administrators
+country_event = {
+	id = wallachian_civil_war_events.33
+	title = wallachian_civil_war_events.33.t
+	desc = wallachian_civil_war_events.33.d
+	picture = GFX_evt_execution	# Placeholder, adjust as needed
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.33.a
+		add_prestige = -5
+		add_country_modifier = {
+			name = wallachian_civil_war_administrators_executed
+			duration = 7300
+		}
+		custom_tooltip = wallachian_civil_war_events_paranoia_administrators_tooltip
+		change_government_reform_progress = 30
+		change_terror = {
+			value = 2
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+#Paranoia - The Bard
+country_event = {
+	id = wallachian_civil_war_events.34
+	title = wallachian_civil_war_events.34.t
+	desc = wallachian_civil_war_events.34.d
+	picture = GFX_evt_execution	# Placeholder, adjust as needed
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.34.a
+		add_prestige = -5
+		add_country_modifier = {
+			name = wallachian_civil_war_impaled_beloved_bard
+			duration = 3650
+		}
+		change_terror = {
+			value = 5
+			scaled_with_gain_modifier = yes
+		}
+	}
+}
+
+# Upstart Noble Revolts - Echoes of Defiance
+country_event = {
+	id = wallachian_civil_war_events.35
+	title = wallachian_civil_war_events.35.t
+	desc = wallachian_civil_war_events.35.d
+	picture = GFX_evt_battle_in_mountains
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				spawn_small_scaled_rebels = {
+					type = noble_rebels
+					no_defined_leader = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = wallachian_civil_war_events.35.a
+	}
+}
+
+# Event Voivode receives after rival supports rebels 
+country_event = {
+	id = wallachian_civil_war_events.36
+	title = wallachian_civil_war_events.36.t
+	desc = wallachian_civil_war_events.36.d
+	picture = GFX_evt_battle_in_mountains
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				spawn_small_scaled_rebels = {
+					type = noble_rebels
+					no_defined_leader = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = wallachian_civil_war_events.36.a
+		add_casus_belli = {
+			type = cb_insult
+			target = FROM
+			months = 120
+		}
+	}
+	after = {
+		clear_global_event_target = voivode_country
+	}
+}
+
 #Civil War Ending Event Dispatcher
 country_event = {
-	id = wallachian_civil_war_events.99
+	id = wallachian_civil_war_events.37
 	title = blank
 	desc = blank
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		clr_country_flag = partial_end_of_wallachian_civil_war
-		set_country_flag = complete_end_of_wallachian_civil_war
-		clr_country_flag = in_war_of_the_ten_houses
-		every_owned_province = {
-			limit = {
-				has_province_modifier = serfs_pay_taxes_to_lords_instead
-			}
-			remove_province_modifier = serfs_pay_taxes_to_lords_instead
-		}
+		wallachian_civil_war_cleanup_effect = yes
 		if = {
 			limit = {
 				has_country_flag = wallachian_civil_war_voivode_was_captured_in_capital
 			}
 			#Clean up rebels effect
 			#Captured and executed event
+			add_government_reform = appointive_voivodate
 		}
 		else_if = {
 			limit = {
 				has_country_flag = wallachian_civil_war_voivode_surrendered
 			}
+			add_government_reform = appointive_voivodate
+			country_event = {
+				id = wallachian_civil_war_events.40
+			}
 			#surrendered event
 		}
 		else = {
-			#voivode won, I guess?
+			set_country_flag = wallachian_civil_war_victory
+			add_government_reform = wallachian_autocracy
+			if = {
+				limit = {
+					has_country_flag = wallachia_refused_nobility_ultimatum
+				}
+				country_event = {
+					id = wallachian_civil_war_events.38
+				}
+			}
+			else = {
+				country_event = {
+					id = wallachian_civil_war_events.39
+				}
+			}
 		}
 	}
 	option = {
 		name = blank
+	}
+}
+
+# Voivode Victorius (Rejected Ultimatum)
+country_event = {
+	id = wallachian_civil_war_events.38
+	title = wallachian_civil_war_events.38.t
+	desc = wallachian_civil_war_events.38.d
+	picture = GFX_evt_battle_in_mountains
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+	option = {
+		name = wallachian_civil_war_events.38.a
+		trigger = {
+			NOT = {
+				dynasty = "Draculesti"
+			}
+		}
+		add_stability = 2
+		add_legitimacy = 10
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_country_modifier = {
+			name = wallachian_civil_war_victory_refused_ultimatum
+			duration = -1
+		}
+		custom_tooltip = wallachia_civil_war_victory_no_more_noble_rebels
+		hidden_effect = {
+			set_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
+		}
+	}
+	option = {
+		name = draculesti_flow
+		highlight = yes
+		trigger = {
+			dynasty = "Draculesti"
+		}
+		add_stability = 2
+		add_legitimacy = 10
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_country_modifier = {
+			name = wallachian_civil_war_victory_refused_ultimatum
+			duration = -1
+		}
+		custom_tooltip = wallachia_civil_war_victory_no_more_noble_rebels
+		hidden_effect = {
+			set_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
+		}
+		remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+		tooltip = {
+			add_government_reform = wallachian_autocracy
+		}
+	}
+}
+
+#Voivode is Victorius (Butchered nobles at BoB)
+country_event = {
+	id = wallachian_civil_war_events.39
+	title = wallachian_civil_war_events.39.t
+	desc = wallachian_civil_war_events.39.d
+	picture = a
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+	option = {
+		name = wallachian_civil_war_events.39.a
+		add_stability = 2
+		add_legitimacy = 10
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+		custom_tooltip = wallachian_civil_war_victory_butcher_terror_bonus
+		add_country_modifier = {
+			name = wallachian_civil_war_victory_butcher
+			duration = -1
+		}
+		custom_tooltip = wallachia_civil_war_victory_no_more_noble_rebels
+		hidden_effect = {
+			set_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
+		}
+		tooltip = {
+			add_government_reform = wallachian_autocracy
+		}
+	}
+}
+
+#Voivode Surrenders
+country_event = {
+	id = wallachian_civil_war_events.40
+	title = wallachian_civil_war_events.40.t
+	desc = wallachian_civil_war_events.40.d
+	picture = a
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+	option = {
+		name = wallachian_civil_war_events.40.a
+		kill_ruler = yes
+		if = {
+			limit = {
+				stability = -3
+				NOT = {
+					stability = -2
+				}
+			}
+			add_stability = 3
+		}
+		else = {
+			add_stability = 2
+		}
+		remove_country_modifier = wallachian_terror_purging_the_estate_elites
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 20
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_estate_privilege = estate_nobles_dominance_of_the_boierime
+				}
+			}
+			set_estate_privilege = estate_nobles_dominance_of_the_boierime
+		}
+		tooltip = {
+			add_government_reform = appointive_voivodate
+		}
 	}
 }
