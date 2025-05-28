@@ -28,6 +28,18 @@ estate_nobles_dominance_of_the_boierime = {
 		global_manpower_modifier = 0.25
 		diplomatic_upkeep = 1
 	}
+	conditional_modifier = {
+		is_bad = yes
+		modifier = {
+			max_absolutism = -10
+			min_autonomy = 10
+			global_tax_modifier = -0.1
+			nobles_influence_modifier = 0.1
+		}
+		trigger = {
+			has_voivode_lost_wallachian_civil_war = yes
+		}
+	}
 	mechanics = {
 		exempt_from_seize_land
 	}
