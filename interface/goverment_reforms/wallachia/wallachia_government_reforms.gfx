@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_wallachian_autocracy"
+		texturefile = "gfx/interface/government_reform_icons/wallachian_autocracy.dds"
+	}
+	spriteType = {
+		name = "government_reform_wallachian_voivodate"
+		texturefile = "gfx/interface/government_reform_icons/wallachian_voivodate.dds"
+	}
+	spriteType = {
+		name = "government_reform_appointive_voivodate"
+		texturefile = "gfx/interface/government_reform_icons/appointive_voivodate.dds"
+	}
+}

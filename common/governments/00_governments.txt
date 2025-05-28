@@ -203,7 +203,8 @@ monarchy = {
 				# ]]]
 				# PotionSeller's Missions
 				wallachian_voivodate
-				wallachian_voivodate_with_raze
+				wallachian_autocracy
+				appointive_voivodate
 			}
 		}
 		hereditary_vs_nobility = {
