@@ -24,6 +24,7 @@ wallachian_voivodate = {
 	}
 }
 
+#Won the civil war
 wallachian_autocracy = {
 	icon = "wallachian_autocracy"
 	allow_convert = no
@@ -46,6 +47,7 @@ wallachian_autocracy = {
 	}
 }
 
+#Lost civil war
 appointive_voivodate = {
 	icon = "appointive_voivodate"
 	allow_convert = no
