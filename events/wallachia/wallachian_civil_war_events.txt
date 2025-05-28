@@ -1641,28 +1641,38 @@ country_event = {
 		wallachian_civil_war_cleanup_effect = yes
 		if = {
 			limit = {
-				has_country_flag = wallachian_civil_war_voivode_was_captured_in_capital
+				has_voiovode_been_captured_wallachian_civil_war = yes
 			}
-			#Clean up rebels effect
-			#Captured and executed event
 			add_government_reform = appointive_voivodate
+			if = {
+				limit = {
+					has_butchered_the_boiermiea = yes
+				}
+				country_event = {
+					id = wallachian_civil_war_events.41
+				}
+			}
+			else = {
+				country_event = {
+					id = wallachian_civil_war_events.42
+				}
+			}
 		}
 		else_if = {
 			limit = {
-				has_country_flag = wallachian_civil_war_voivode_surrendered
+				has_voiovode_surrendered_wallachian_civil_war = yes
 			}
 			add_government_reform = appointive_voivodate
 			country_event = {
 				id = wallachian_civil_war_events.40
 			}
-			#surrendered event
 		}
 		else = {
 			set_country_flag = wallachian_civil_war_victory
 			add_government_reform = wallachian_autocracy
 			if = {
 				limit = {
-					has_country_flag = wallachia_refused_nobility_ultimatum
+					has_refused_boiermiea_ultimatum = yes
 				}
 				country_event = {
 					id = wallachian_civil_war_events.38
@@ -1807,6 +1817,7 @@ country_event = {
 		else = {
 			add_stability = 2
 		}
+		add_prestige = -20
 		remove_country_modifier = wallachian_terror_purging_the_estate_elites
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -1823,5 +1834,144 @@ country_event = {
 		tooltip = {
 			add_government_reform = appointive_voivodate
 		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 25
+		}
+	}
+}
+
+#Voivode Captured (Butchered the Boyars)
+country_event = {
+	id = wallachian_civil_war_events.41
+	title = wallachian_civil_war_events.41.t
+	desc = wallachian_civil_war_events.41.d
+	picture = a
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+	option = {
+		name = wallachian_civil_war_events.41.a
+		custom_tooltip = wallachian_civil_war_events_voivode_tied_to_post_tooltip
+		hidden_effect = {
+			exile_ruler_as = {
+				name = tied_voivode
+				kill_monarch = no
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = wallachian_civil_war_tied_down_voivode
+					duration = 533
+				}
+			}
+			country_event = {
+				id = wallachian_civil_war_events.43
+				days = 533
+			}
+		}
+		define_ruler = {
+			dynasty = "Basarab"
+			change_adm = 2
+			change_dip = 2
+		}
+		if = {
+			limit = {
+				stability = -3
+				NOT = {
+					stability = -2
+				}
+			}
+			add_stability = 3
+		}
+		else = {
+			add_stability = 2
+		}
+		add_prestige = -15
+		remove_country_modifier = wallachian_terror_purging_the_estate_elites
+		remove_country_modifier = banquet_of_blood_permanent_modifier
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 20
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_estate_privilege = estate_nobles_dominance_of_the_boierime
+				}
+			}
+			set_estate_privilege = estate_nobles_dominance_of_the_boierime
+		}
+		tooltip = {
+			add_government_reform = appointive_voivodate
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 25
+		}
+	}
+}
+
+#Voivode Captured (Refused Ultimatum)
+country_event = {
+	id = wallachian_civil_war_events.42
+	title = wallachian_civil_war_events.42.t
+	desc = wallachian_civil_war_events.42.d
+	picture = a
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+	option = {
+		name = wallachian_civil_war_events.42.a
+		kill_ruler = yes
+		if = {
+			limit = {
+				stability = -3
+				NOT = {
+					stability = -2
+				}
+			}
+			add_stability = 3
+		}
+		else = {
+			add_stability = 2
+		}
+		add_prestige = -15
+		remove_country_modifier = wallachian_terror_purging_the_estate_elites
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 20
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_estate_privilege = estate_nobles_dominance_of_the_boierime
+				}
+			}
+			set_estate_privilege = estate_nobles_dominance_of_the_boierime
+		}
+		tooltip = {
+			add_government_reform = appointive_voivodate
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 25
+		}
+	}
+}
+
+#Death of tied voivode
+country_event = {
+	id = wallachian_civil_war_events.43
+	title = wallachian_civil_war_events.43.t
+	desc = wallachian_civil_war_events.43.d
+	picture = a
+	is_triggered_only = yes
+	option = {
+		name = wallachian_civil_war_events.43.a
+		add_legitimacy = 5
 	}
 }

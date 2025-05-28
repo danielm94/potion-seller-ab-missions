@@ -105,3 +105,7 @@ wallachian_civil_war_victory_butcher = {
 	terror_power_gain_modifier = 0.1
 	yearly_absolutism = 1
 }
+
+wallachian_civil_war_tied_down_voivode = {
+	prestige = -0.5
+}

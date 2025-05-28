@@ -58,7 +58,7 @@ wallachian_civil_war_banquet_of_blood_effect = {
 wallachian_civil_war_check_for_defeated_houses_effect = {
 	if = {
 		limit = {
-			has_country_flag = in_war_of_the_ten_houses
+			is_in_war_of_the_ten_houses_disaster = yes
 			NOT = {
 				num_of_rebel_armies = 1
 			}
@@ -168,10 +168,21 @@ wallachian_civil_war_cleanup_effect = {
 	clr_country_flag = partial_end_of_wallachian_civil_war
 	set_country_flag = complete_end_of_wallachian_civil_war
 	clr_country_flag = in_war_of_the_ten_houses
+	wallachian_civil_war_cleanup_rebels_effect = yes
 	every_owned_province = {
 		limit = {
 			has_province_modifier = peasants_cave_to_traitors
 		}
 		remove_province_modifier = peasants_cave_to_traitors
+	}
+}
+
+wallachian_civil_war_cleanup_rebels_effect = {
+	every_owned_province = {
+		limit = {
+			has_rebels_in_province = yes
+		}
+		remove_all_rebels_in_province = yes
+		change_controller = ROOT
 	}
 }

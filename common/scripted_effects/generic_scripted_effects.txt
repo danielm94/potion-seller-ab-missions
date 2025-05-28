@@ -10,3 +10,21 @@ reduce_stability = {
 		}
 	}
 }
+
+remove_all_rebels_in_province = {
+	kill_units = {
+		who = REB
+		type = infantry
+		amount = 9001
+	}
+	kill_units = {
+		who = REB
+		type = cavalry
+		amount = 9001
+	}
+	kill_units = {
+		who = REB
+		type = artillery
+		amount = 9001
+	}
+}
