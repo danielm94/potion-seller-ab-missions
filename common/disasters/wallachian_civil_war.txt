@@ -62,7 +62,7 @@ wallachian_civil_war = {
 		manpower_recovery_speed = -0.25
 	}
 	on_start = wallachian_civil_war_events.2
-	on_end = wallachian_civil_war_events.99
+	on_end = wallachian_civil_war_events.37
 
 	on_monthly = {
 		events = {
