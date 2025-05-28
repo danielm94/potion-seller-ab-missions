@@ -27,7 +27,7 @@ banquet_of_blood_well_read = {
 	technology_cost = -0.01
 }
 
-serfs_pay_taxes_to_lords_instead = {
+peasants_cave_to_traitors = {
 	local_tax_modifier = -1
 	local_manpower_modifier = -1
 }
@@ -38,4 +38,70 @@ destroyed_the_serfs = {
 	local_manpower_modifier = -0.6
 	local_production_efficiency = -0.6
 	improve_relation_modifier = -0.005
+}
+
+wallachia_civil_war_advisors_avoid_us = {
+	advisor_pool = -2
+	advisor_cost = 0.3
+}
+
+wallachia_civil_war_murdered_heir = {
+	heir_chance = -0.75
+	legitimacy = -0.5
+	prestige = -0.5
+	diplomatic_reputation = -1
+	tolerance_own = -3
+}
+
+wallachia_civil_war_murdered_the_queen = {
+	legitimacy = -0.5
+	prestige = -0.5
+	diplomatic_reputation = -2
+	tolerance_own = -3
+}
+
+wallachia_civil_war_merchants_detest_us = {
+	global_trade_power = -0.15
+	merchants = -1
+	burghers_loyalty_modifier = -0.2
+	burghers_privilege_slots = -1
+	interest = 1
+}
+
+wallachian_civil_war_diplomats_fear_us = {
+	diplomats = -1
+	diplomatic_reputation = -2
+	improve_relation_modifier = -0.2
+	diplomatic_upkeep = -1
+}
+
+wallachian_civil_war_administrators_executed = {
+	administrative_efficiency = -0.025
+	core_creation = 0.1
+	state_maintenance_modifier = 0.25
+	global_tax_modifier = -0.2
+}
+
+wallachian_civil_war_impaled_beloved_bard = {
+	global_unrest = 2
+	culture_conversion_cost = 0.25
+	prestige = -1
+}
+
+wallachian_civil_war_victory_refused_ultimatum = {
+	legitimacy = 1
+	stability_cost_modifier = -0.15
+	nobles_loyalty_modifier = -0.05
+	nobles_influence_modifier = -0.1
+	yearly_absolutism = 1
+	diplomatic_reputation = 2
+}
+
+wallachian_civil_war_victory_butcher = {
+	stability_cost_modifier = -0.2
+	nobles_loyalty_modifier = -0.1
+	nobles_influence_modifier = -0.15
+	max_general_shock = 1
+	terror_power_gain_modifier = 0.1
+	yearly_absolutism = 1
 }
