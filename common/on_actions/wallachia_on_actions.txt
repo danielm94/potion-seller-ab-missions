@@ -47,3 +47,22 @@ on_new_monarch = {
 		}
 	}
 }
+
+on_siege_won_country = {
+	if = {
+		limit = {
+			FROM = {
+				owner = {
+					is_in_war_of_the_ten_houses_disaster = yes
+				}
+				is_capital = yes
+			}
+			tag = REB
+		}
+		FROM = {
+			owner = {
+				set_country_flag = wallachian_civil_war_voivode_was_captured
+			}
+		}
+	}
+}
