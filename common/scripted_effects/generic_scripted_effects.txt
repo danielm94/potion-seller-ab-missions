@@ -28,3 +28,24 @@ remove_all_rebels_in_province = {
 		amount = 9001
 	}
 }
+
+#Adds permanent claims on all neighboring provinces that can be crossed on land from our country.
+#Does not include sea tiles, wasteland provinces, or uncolonized provinces.
+add_permanent_claim_on_all_neighboring_provinces = {
+	custom_tooltip = add_permanent_claim_on_all_neighboring_provinces_tooltip
+	hidden_effect = {
+		every_neighbor_province = {
+			limit = {
+				is_sea = no
+				is_wasteland = no
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
