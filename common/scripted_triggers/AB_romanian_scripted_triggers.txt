@@ -9,18 +9,8 @@ is_romanian_tag = {
 	}
 }
 
-is_wallachia = {
-	is_or_was_tag = {
-		tag = WAL
-	}
-}
-
 is_moldavia ={
 	is_or_was_tag = {
 		tag = MOL
 	}
-}
-
-is_wallachian_terror_dynamic_country_color_enabled = {
-	has_country_flag = wallachian_terror_dynamic_country_color
 }

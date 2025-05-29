@@ -1,0 +1,16 @@
+is_wallachia = {
+	is_or_was_tag = {
+		tag = WAL
+	}
+}
+
+is_wallachian_terror_dynamic_country_color_enabled = {
+	has_country_flag = wallachian_terror_dynamic_country_color
+}
+
+has_vlad_2nd_or_3rd_ruling = {
+	OR = {
+		has_ruler = "Vlad II"
+		has_ruler = "Vlad III"
+	}
+}
