@@ -1,5 +1,4 @@
 namespace = wallachian_civil_war_events
-
 #Ultimatum event
 country_event = {
 	id = wallachian_civil_war_events.1
@@ -14,6 +13,32 @@ country_event = {
 				ruler_has_personality = impaler_personality
 			}
 		}
+		set_country_flag = wallachian_civil_war_voivode_backded_down
+		remove_country_modifier = wallachian_terror_purging_the_estate_elites
+		add_prestige = -20
+		add_legitimacy = -20
+		change_terror = {
+			value = -20
+			scaled_with_gain_modifier = no
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 15
+		}
+		add_country_modifier = {
+			name = wallachian_civil_war_voivode_backed_down
+			duration = 7300
+		}
+		custom_tooltip = wallachian_civil_war_voivode_backed_down_estate_privilege_tooltip
+		if = {
+			limit = {
+				NOT = {
+					has_estate_privilege = estate_nobles_dominance_of_the_boierime
+				}
+			}
+			set_estate_privilege = estate_nobles_dominance_of_the_boierime
+		}
+		custom_tooltip = wallachian_civil_war_voivode_backed_down_terror_interaction_tooltip
 	}
 	option = {
 		name = wallachian_civil_war_reject_the_ultimatum
@@ -22,6 +47,12 @@ country_event = {
 				ruler_has_personality = impaler_personality
 			}
 		}
+		add_legitimacy = 5
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		custom_tooltip = wallachian_civil_war_reject_the_ultimatum_tooltip
 		hidden_effect = {
 			set_country_flag = wallachia_refused_nobility_ultimatum
 		}
@@ -1798,7 +1829,7 @@ country_event = {
 	id = wallachian_civil_war_events.40
 	title = wallachian_civil_war_events.40.t
 	desc = wallachian_civil_war_events.40.d
-	picture = a
+	picture = todo
 	is_triggered_only = yes
 	major = yes
 	major_trigger = {
@@ -1848,7 +1879,7 @@ country_event = {
 	id = wallachian_civil_war_events.41
 	title = wallachian_civil_war_events.41.t
 	desc = wallachian_civil_war_events.41.d
-	picture = a
+	picture = todo
 	is_triggered_only = yes
 	major = yes
 	major_trigger = {
@@ -1920,7 +1951,7 @@ country_event = {
 	id = wallachian_civil_war_events.42
 	title = wallachian_civil_war_events.42.t
 	desc = wallachian_civil_war_events.42.d
-	picture = a
+	picture = todo
 	is_triggered_only = yes
 	major = yes
 	major_trigger = {
@@ -1970,7 +2001,7 @@ country_event = {
 	id = wallachian_civil_war_events.43
 	title = wallachian_civil_war_events.43.t
 	desc = wallachian_civil_war_events.43.d
-	picture = a
+	picture = todo
 	is_triggered_only = yes
 	option = {
 		name = wallachian_civil_war_events.43.a

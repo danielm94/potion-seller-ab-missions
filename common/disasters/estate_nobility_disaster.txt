@@ -5,11 +5,24 @@ estate_nobility_disaster = {
 			estate = estate_nobles
 			influence = 80
 		}
-		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
-		NOT = { has_voivode_lost_wallachian_civil_war = yes }
+		NOT = {
+			has_disaster = tur_disaster_ottoman_power_struggle
+		}
+		NOT = {
+			has_voivode_lost_wallachian_civil_war = yes
+		}
+		NOT = {
+			AND = {
+				has_country_flag = wallachian_civil_war_voivode_backded_down
+				NOT = {
+					had_country_flag = {
+						flag = wallachian_civil_war_voivode_backded_down
+						days = 18250
+					}
+				}
+			}
+		}
 	}
-
-
 	can_start = {
 		has_any_disaster = no
 		estate_influence = {
@@ -18,7 +31,6 @@ estate_nobility_disaster = {
 		}
 		is_at_war = no
 	}
-	
 	can_stop = {
 		OR = {
 			has_any_disaster = yes
@@ -26,11 +38,10 @@ estate_nobility_disaster = {
 				estate_influence = {
 					estate = estate_nobles
 					influence = 100
-				}		
+				}
 			}
 		}
 	}
-	
 	down_progress = {
 		factor = 0
 		modifier = {
@@ -43,7 +54,6 @@ estate_nobility_disaster = {
 			}
 		}
 	}
-	
 	progress = {
 		modifier = {
 			factor = 0.5
@@ -96,7 +106,6 @@ estate_nobility_disaster = {
 			is_at_war = no
 		}
 	}
-	
 	can_end = {
 		custom_trigger_tooltip = {
 			tooltip = EST_CRUSHED_NOBLES
@@ -105,17 +114,13 @@ estate_nobility_disaster = {
 			}
 		}
 	}
-	
 	modifier = {
 		global_tax_modifier = -0.25
 		global_trade_power = -0.25
 		trade_efficiency = -0.25
 	}
-
 	on_start = estate_disasters.1
 	on_end = estate_disasters.2
-	
 	on_monthly = {
 	}
 }
-

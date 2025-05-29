@@ -109,3 +109,10 @@ wallachian_civil_war_victory_butcher = {
 wallachian_civil_war_tied_down_voivode = {
 	prestige = -0.5
 }
+
+wallachian_civil_war_voivode_backed_down = {
+	nobles_influence_modifier = 0.1
+	nobles_loyalty_modifier = 0.05
+	prestige = -0.5
+	monthly_terror_power = -0.25
+}

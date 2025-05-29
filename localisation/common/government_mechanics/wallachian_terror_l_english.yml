@@ -26,4 +26,5 @@
  wallachian_terror_purges_devastation_tooltip: "Every owned province will gain §R5§! devastation."
  wallachian_terror_purging_the_elites_civil_war_tooltip: "§R[tooltip_line_divider]§!\n§R WARNING: The Boiermiea hold an immense amount of influence in [Root.GetName], and carrying out such a purge will lead to a civil war!§!"
  wallachian_terror_awaken_the_butcher_banked_personality_trigger_tootip: "We have banked the personality trait less than §Y3§! times."
+ wallachian_terror_voivode_backed_down_trigger_tooltip: "We cannot use this interaction for at least §Y50§! years after we backed down from the §YBoiermiea§!."
  

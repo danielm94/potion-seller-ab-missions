@@ -27,7 +27,7 @@ wallachian_terror_mechanic = {
 				trigger = {
 					has_country_modifier = wallachian_civil_war_victory_butcher
 				}
-				modifier = { 
+				modifier = {
 					cavalry_shock = 0.3
 				}
 			}
@@ -43,6 +43,23 @@ wallachian_terror_mechanic = {
 					mechanic_type = wallachian_terror_mechanic
 					power_type = terror_power
 					value = 30
+				}
+				if = {
+					limit = {
+						NOT = {
+							had_country_flag = {
+								flag = wallachian_civil_war_voivode_backded_down
+								days = 18250
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = wallachian_terror_voivode_backed_down_trigger_tooltip
+						had_country_flag = {
+							flag = wallachian_civil_war_voivode_backded_down
+							days = 18250
+						}
+					}
 				}
 			}
 			effect = {

@@ -37,7 +37,18 @@ estate_nobles_dominance_of_the_boierime = {
 			nobles_influence_modifier = 0.1
 		}
 		trigger = {
-			has_voivode_lost_wallachian_civil_war = yes
+			OR = {
+				has_voivode_lost_wallachian_civil_war = yes
+				AND = {
+					has_country_flag = wallachian_civil_war_voivode_backded_down
+					NOT = {
+						had_country_flag = {
+							flag = wallachian_civil_war_voivode_backded_down
+							days = 18250
+						}
+					}
+				}
+			}
 		}
 	}
 	mechanics = {
