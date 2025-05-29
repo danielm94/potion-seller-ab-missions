@@ -26,14 +26,6 @@ set_variable = {
 		adm = 2
 		dip = 2
 		mil = 5
-		leader = {
-			name = "Vlad II"
-			type = general
-			fire = 3
-			shock = 3
-			manuever = 3
-			siege = 0
-		}
 	}
 	add_ruler_personality = cruel_personality
 	add_ruler_personality = bold_fighter_personality
