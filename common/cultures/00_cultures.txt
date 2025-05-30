@@ -4219,7 +4219,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Brancoveanu Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hajdau
 			Kogalniceanu Movilesti Racovita
 		}
 		male_names = {

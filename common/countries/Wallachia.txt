@@ -75,7 +75,7 @@ monarch_names = {
 	"Teodor #0" = 0
 	"Valeriu #0" = 0
 	
-	"Rahela #0" = -1
+	"Rahela #0" = -1 
 	"Flavia #0" = -1
 	"Cosmina #0" = -1
 	"Elena #0" = -1
@@ -92,7 +92,7 @@ monarch_names = {
 	"Teodora #0" = -1
 	"Ileana #0" = -1
 	"Smaranda #0" = -1
-	"Ancu?a #0" = -1
+	"Ancuta #0" = -1
 	"Catinca #0" = -1
 	"Vasilica #0" = -1
 	"Magdalena #0" = -1
@@ -102,14 +102,14 @@ monarch_names = {
 }
 
 leader_names = {
-	Basarab Brâncoveanu
+	Basarab Brancoveanu
 	Cantacuzino Caragea Craiovescu
 	Dracul Duca
 	Ghica Golescu
 	Ilias Ipsilanti
 	Mavrocordat Mircea Moruzi
 	Racovita
-	Sutu 
+	Sutu
 	Tepelus Tolmay
 	Vacarescu Voda
 	Movila
@@ -123,8 +123,8 @@ leader_names = {
 	Neagoe
 	Voinea
 	Doicescu
-	Patra?cu
-	?erban
+	Patrascu
+	Serban
 	Zamfirescu
 }
 
@@ -148,7 +148,7 @@ ship_names = {
 	Mihai Viteazul
 	Bran
 	Fulgerul
-	Sfântul Andrei
+	Sfantul Andrei
 	Corbul Negru
 	Dacia
 	Alutus
