@@ -1,7 +1,0 @@
-########################################
-# Flavor Events for Wallachia
-#
-# Scripted by Sara Wendel-Örtqvist
-########################################
-
-namespace = flavor_wal
