@@ -174,3 +174,168 @@ country_event = {
 		wallachian_civil_war_banquet_of_blood_effect = yes
 	}
 }
+
+#The Fate of the Moldavian Nobles
+country_event = {
+	id = AB_wallachia_events.9
+	title = AB_wallachia_events.9.t
+	desc = AB_wallachia_events.9.d
+	picture = GFX_AB_wallachia_events.9
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.9.a
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 5
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = Moldavian
+		}
+		custom_tooltip = AB_wallachia_events.9_province_bonus_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_integrating_the_moldavian_nobility
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = moldavia_area
+						area = bessarabia_area
+					}
+				}
+				add_province_modifier = {
+					name = wallachia_integrating_the_moldavian_nobility
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.9.b
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_cut_a_deal_with_the_cossacks
+			duration = -1
+		}
+		change_estate_land_share = {
+			estate = estate_cossacks
+			share = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_cossacks
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.9.c
+		highlight = yes
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -2
+		}
+		custom_tooltip = AB_wallachia_events.9_province_bonus_tooltip
+		tooltip = {
+			add_devastation = 15
+			add_base_tax = -1
+			add_local_autonomy = -30
+			add_province_modifier = {
+				name = wallachia_cut_down_the_moldavian_nobility
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = moldavia_area
+						area = bessarabia_area
+					}
+				}
+				add_devastation = 15
+				add_base_tax = -1
+				add_local_autonomy = -30
+				add_province_modifier = {
+					name = wallachia_cut_down_the_moldavian_nobility
+					duration = -1
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = moldavia_area
+					area = bessarabia_area
+				}
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				type = noble_rebels
+				no_defined_leader = yes
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+	}
+}

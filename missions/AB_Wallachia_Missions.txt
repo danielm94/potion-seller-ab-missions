@@ -1,0 +1,281 @@
+ab_wal_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_wallachia = yes
+	}
+}
+
+ab_wal_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_wallachia = yes
+	}
+	wal_unite_the_principalities = {
+		icon = gfx_wal_unite_the_principalities
+		position = 2
+		required_missions = {
+			wal_call_to_arms
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = moldavia_area
+				area = bessarabia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			moldavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bessarabia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = yedisan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = zaporizhia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = crimea_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = azov_area
+			}
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = adm
+						amount = 1
+					}
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
+			country_event = {
+				id = AB_wallachia_events.9
+			}
+		}
+	}
+}
+
+ab_wal_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_wallachia = yes
+	}
+	wal_call_to_arms = {
+		icon = GFX_wal_call_to_arms
+		position = 1
+		trigger = {
+			OR = {
+				army_size_percentage = 0.8
+				manpower_percentage = 1
+			}
+		}
+		effect = {
+			add_permanent_claim_on_all_neighboring_provinces = yes
+			add_permanent_claim_multi_provinces = {
+				target = moldavia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bessarabia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = southern_transylvania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = transylvania_area
+			}
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = wal_call_to_arms_vlad_general_tooltip_yes
+				define_ruler_to_general = {
+					fire = 3
+					shock = 4
+					manuever = 3
+					siege = 1
+				}
+			}
+			else = {
+				custom_tooltip = wal_call_to_arms_vlad_general_tooltip_no
+				tooltip = {
+					define_ruler_to_general = {
+						fire = 3
+						shock = 4
+						manuever = 3
+						siege = 1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_securing_the_homeland
+				duration = 5475
+			}
+		}
+	}
+}
+
+ab_wal_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_wallachia = yes
+	}
+	wal_liberate_transylvania = {
+		icon = GFX_wal_liberate_transylvania
+		position = 2
+		required_missions = {
+			wal_call_to_arms
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = transylvania_area
+				area = southern_transylvania_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = transylvania_area
+					area = southern_transylvania_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = alfold_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = centralhungary_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = eastslovakia_area
+			}
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = adm
+						amount = 1
+					}
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = transylvanian
+			}
+			custom_tooltip = wal_liberate_transylvania_heathen_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_establish_mountain_monasteries
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				transylvania_area = {
+					limit = {
+						religion = tengri_pagan_reformed
+					}
+					add_province_modifier = {
+						name = wallachia_establish_mountain_monasteries
+						duration = 7300
+					}
+				}
+				southern_transylvania_area = {
+					limit = {
+						religion = tengri_pagan_reformed
+					}
+					add_province_modifier = {
+						name = wallachia_establish_mountain_monasteries
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = wal_liberate_transylvania_bretheren_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_liberated_bretheren
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				transylvania_area = {
+					limit = {
+						culture = transylvanian
+					}
+					add_province_modifier = {
+						name = wallachia_liberated_bretheren
+						duration = 7300
+					}
+				}
+				southern_transylvania_area = {
+					limit = {
+						culture = transylvanian
+					}
+					add_province_modifier = {
+						name = wallachia_liberated_bretheren
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+}
+
+ab_wal_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_wallachia = yes
+	}
+}
