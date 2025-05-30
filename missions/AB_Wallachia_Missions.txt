@@ -54,6 +54,7 @@ ab_wal_2 = {
 			add_permanent_claim_multi_provinces = {
 				target = azov_area
 			}
+			custom_tooltip = tooltip_line_divider
 			if = {
 				limit = {
 					has_vlad_2nd_or_3rd_ruling = yes
@@ -114,11 +115,12 @@ ab_wal_3 = {
 			add_permanent_claim_multi_provinces = {
 				target = transylvania_area
 			}
+			custom_tooltip = tooltip_line_divider
 			if = {
 				limit = {
 					has_vlad_2nd_or_3rd_ruling = yes
 				}
-				custom_tooltip = wal_call_to_arms_vlad_general_tooltip_yes
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
 				define_ruler_to_general = {
 					fire = 3
 					shock = 4
@@ -127,19 +129,72 @@ ab_wal_3 = {
 				}
 			}
 			else = {
-				custom_tooltip = wal_call_to_arms_vlad_general_tooltip_no
-				tooltip = {
-					define_ruler_to_general = {
-						fire = 3
-						shock = 4
-						manuever = 3
-						siege = 1
-					}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				create_general = {
+					tradition = 40
 				}
 			}
 			add_country_modifier = {
 				name = wallachia_securing_the_homeland
 				duration = 5475
+			}
+		}
+	}
+	wal_strike_the_bulgars = {
+		icon = gfx_wal_strike_the_bulgars
+		position = 2
+		required_missions = {
+			wal_call_to_arms
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4706
+				province_id = 159
+				province_id = 4704
+				province_id = 150
+				province_id = 2746
+				province_id = 4957
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4706 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					province_id = 159
+					province_id = 4704
+					province_id = 150
+					province_id = 2746
+					province_id = 4957
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = thrace_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bulgaria_area
+			}
+			add_core = 4706
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					is_rival = BUL
+				}
+				custom_tooltip = wal_strike_the_bulgars_bul_rival_tooltip_yes
+				add_splendor = 100
+			}
+			else = {
+				custom_tooltip = wal_strike_the_bulgars_bul_rival_tooltip_no
+				tooltip = {
+					add_splendor = 100
+				}
 			}
 		}
 	}
@@ -187,6 +242,7 @@ ab_wal_4 = {
 			add_permanent_claim_multi_provinces = {
 				target = eastslovakia_area
 			}
+			custom_tooltip = tooltip_line_divider
 			if = {
 				limit = {
 					has_vlad_2nd_or_3rd_ruling = yes
