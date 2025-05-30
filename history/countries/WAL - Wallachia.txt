@@ -41,7 +41,7 @@ set_variable = {
 		claim = 95
 		adm = 2
 		dip = 1
-		mil = 6
+		mil = 5
 	}
 	add_heir_personality = cruel_personality
 }
