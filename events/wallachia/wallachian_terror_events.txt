@@ -1,4 +1,5 @@
 namespace = wallachian_terror_events
+#Initial capital fall event - impaler country
 country_event = {
 	id = wallachian_terror_events.0
 	title = wallachian_terror_events.0.t
@@ -57,7 +58,7 @@ country_event = {
 	}
 }
 
-#Capital captured
+#Capital captured - Impaled Country
 country_event = {
 	id = wallachian_terror_events.1
 	title = wallachian_terror_events.1.t
@@ -409,6 +410,7 @@ country_event = {
 	}
 }
 
+#Humiliation Event - Impaled Country
 country_event = {
 	id = wallachian_terror_events.8
 	title = wallachian_terror_events.8.t
@@ -453,6 +455,7 @@ country_event = {
 	}
 }
 
+#Emperor failed the empire event.
 country_event = {
 	id = wallachian_terror_events.9
 	title = wallachian_terror_events.9.t
@@ -463,5 +466,109 @@ country_event = {
 	option = {
 		name = wallachian_terror_emperor_failed_to_protect_prince
 		wallachian_terror_hre_emperor_failed_to_protect_effect = yes
+	}
+}
+
+#Banked Impaler Trait Event
+country_event = {
+	id = wallachian_terror_events.10
+	title = wallachian_terror_events.10.t
+	desc = wallachian_terror_events.10.d
+	picture = GFX_wallachian_terror_events.10
+	trigger = {
+		has_government_mechanic = wallachian_terror_mechanic
+		NOT = {
+			OR = {
+				has_heir_flag = impaler_heir
+				has_heir_flag = not_impaler_heir
+			}
+		}
+		heir_age = 10
+		check_variable = {
+			which = impaler_ruler_count
+			value = 1
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		#For the banked traits tooltip
+		hidden_effect = {
+			set_variable = {
+				which = impaler_ruler_count_after
+				which = impaler_ruler_count
+			}
+			subtract_variable = {
+				which = impaler_ruler_count_after
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.10.a
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		custom_tooltip = awaken_the_butcher_impaler_personality_heir_tooltip
+		custom_tooltip = wallachian_terror_events_come_of_age_tooltip
+		custom_tooltip = wallachian_terror_events.10_banked_traits_tooltip
+		hidden_effect = {
+			set_heir_flag = impaler_heir
+			subtract_variable = {
+				which = impaler_ruler_count
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.10.b
+		highlight = yes
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
+		custom_tooltip = awaken_the_butcher_impaler_personality_heir_tooltip
+		custom_tooltip = wallachian_terror_events_come_of_age_tooltip
+		custom_tooltip = wallachian_terror_events.10_banked_traits_tooltip
+		hidden_effect = {
+			set_heir_flag = impaler_heir
+			subtract_variable = {
+				which = impaler_ruler_count
+				value = 1
+			}
+		}
+		custom_tooltip = wallachian_terror_events.10_loving_parent_tooltip
+		change_heir_stat = {
+			type = dip
+			amount = 1
+		}
+	}
+	option = {
+		name = wallachian_terror_events.10.c
+		random_list = {
+			50 = {
+				custom_tooltip = wallachian_terror_events.10_zealot_heir_tooltip
+				tooltip = {
+					add_heir_personality = zealot_personality
+				}
+				custom_tooltip = wallachian_terror_events_come_of_age_tooltip
+				hidden_effect = {
+					set_heir_flag = zealot_heir
+				}
+			}
+			50 = {
+			}
+		}
+		custom_tooltip = wallachian_terror_events.10_heir_not_gain_trait_tooltip
+		custom_tooltip = wallachian_terror_events.10_banked_traits_tooltip
+		hidden_effect = {
+			set_heir_flag = not_impaler_heir
+			subtract_variable = {
+				which = impaler_ruler_count
+				value = 1
+			}
+		}
 	}
 }

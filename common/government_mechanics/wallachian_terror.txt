@@ -206,15 +206,43 @@ wallachian_terror_mechanic = {
 					limit = {
 						ruler_has_personality = impaler_personality
 					}
-					custom_tooltip = awaken_the_butcher_bank_personality_tooltip
-					change_terror = {
-						value = -30
-						scaled_with_gain_modifier = no
+					#TODO: Elective Romanian Monarchy case
+					if = {
+						limit = {
+							has_heir = yes
+							heir_age = 15
+							NOT = {
+								heir_has_personality = impaler_personality
+							}
+						}
+						change_heir_dip = -1
+						change_heir_stat = {
+							type = mil
+							amount = 1
+						}
+						custom_tooltip = awaken_the_butcher_impaler_personality_heir_tooltip
+						change_terror = {
+							value = -30
+							scaled_with_gain_modifier = no
+						}
+						hidden_effect = {
+							#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
+							country_event = {
+								id = AB_wallachia_events.0
+							}
+						}
 					}
-					hidden_effect = {
-						change_variable = {
-							which = impaler_ruler_count
-							value = 1
+					else = {
+						custom_tooltip = awaken_the_butcher_bank_personality_tooltip
+						change_terror = {
+							value = -30
+							scaled_with_gain_modifier = no
+						}
+						hidden_effect = {
+							change_variable = {
+								which = impaler_ruler_count
+								value = 1
+							}
 						}
 					}
 				}

@@ -1,4 +1,22 @@
 namespace = AB_wallachia_events
+
+#Give heir impaler trait
+country_event = {
+	id = AB_wallachia_events.0
+	title = AB_wallachia_events.0.t
+	desc = AB_wallachia_events.0.d
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		add_heir_personality = impaler_personality
+	}
+	option = {
+		name = blank
+	}
+}
+
+#Give ruler impaler trait
 country_event = {
 	id = AB_wallachia_events.1
 	title = AB_wallachia_events.1.t
