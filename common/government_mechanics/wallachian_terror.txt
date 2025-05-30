@@ -219,8 +219,11 @@ wallachian_terror_mechanic = {
 					}
 				}
 				else = {
-					change_dip = -2
-					change_mil = 1
+					change_dip = -1
+					change_ruler_stat = {
+						type = mil
+						amount = 1
+					}
 					custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
 					change_terror = {
 						value = -30
