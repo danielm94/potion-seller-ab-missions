@@ -149,6 +149,5 @@ wallachia_cut_a_deal_with_the_cossacks = {
 wallachia_cut_down_the_moldavian_nobility = {
 	local_core_creation = -0.25
 	years_of_nationalism = -15
-	local_culture_conversion_cost = -0.20
 	local_development_cost_modifier = 0.1
 }
