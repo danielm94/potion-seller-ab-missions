@@ -4,9 +4,17 @@ wallachian_civil_war = {
 		NOT = {
 			has_country_flag = complete_end_of_wallachian_civil_war
 		}
+		OR = {
+			has_butchered_the_boiermiea = yes
+			has_refused_boiermiea_ultimatum = yes
+		}
 	}
 	can_start = {
 		is_wallachia = yes
+		OR = {
+			has_butchered_the_boiermiea = yes
+			has_refused_boiermiea_ultimatum = yes
+		}
 	}
 	can_stop = {
 		has_any_disaster = yes
@@ -63,11 +71,10 @@ wallachian_civil_war = {
 	}
 	on_start = wallachian_civil_war_events.2
 	on_end = wallachian_civil_war_events.37
-
 	on_monthly = {
 		events = {
-			wallachian_civil_war_events.3 #Event dispatcher
-			wallachian_civil_war_events.18 #Rebel flag manager
+			wallachian_civil_war_events.3			#Event dispatcher
+			wallachian_civil_war_events.18			#Rebel flag manager
 		}
 	}
 }
