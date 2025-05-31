@@ -49,3 +49,322 @@ add_permanent_claim_on_all_neighboring_provinces = {
 		}
 	}
 }
+
+free_up_bad_ruler_personality_if_full = {
+	custom_tooltip = free_up_bad_ruler_personality_if_full_tooltip
+	hidden_effect = {
+		get_number_of_ruler_personalities = yes
+		if = {
+			limit = {
+				check_variable = {
+					which = num_of_ruler_personalities
+					value = 3
+				}
+			}
+			remove_one_bad_ruler_personality = yes
+		}
+	}
+}
+
+#Finds the number of personalities the ruler has, and saves it to the COUNTRY scope as variable "num_of_ruler_personalities"
+get_number_of_ruler_personalities = {
+	set_variable = {
+		which = num_of_ruler_personalities
+		value = 0
+	}
+	# Vanilla Personalities
+	check_for_personality = {
+		ruler_personality = just_personality
+	}
+	check_for_personality = {
+		ruler_personality = righteous_personality
+	}
+	check_for_personality = {
+		ruler_personality = tolerant_personality
+	}
+	check_for_personality = {
+		ruler_personality = kind_hearted_personality
+	}
+	check_for_personality = {
+		ruler_personality = free_thinker_personality
+	}
+	check_for_personality = {
+		ruler_personality = well_connected_personality
+	}
+	check_for_personality = {
+		ruler_personality = calm_personality
+	}
+	check_for_personality = {
+		ruler_personality = careful_personality
+	}
+	check_for_personality = {
+		ruler_personality = secretive_personality
+	}
+	check_for_personality = {
+		ruler_personality = intricate_web_weaver_personality
+	}
+	check_for_personality = {
+		ruler_personality = fertile_personality
+	}
+	check_for_personality = {
+		ruler_personality = well_advised_personality
+	}
+	check_for_personality = {
+		ruler_personality = benevolent_personality
+	}
+	check_for_personality = {
+		ruler_personality = zealot_personality
+	}
+	check_for_personality = {
+		ruler_personality = pious_personality
+	}
+	check_for_personality = {
+		ruler_personality = lawgiver_personality
+	}
+	check_for_personality = {
+		ruler_personality = midas_touched_personality
+	}
+	check_for_personality = {
+		ruler_personality = incorruptible_personality
+	}
+	check_for_personality = {
+		ruler_personality = architectural_visionary_personality
+	}
+	check_for_personality = {
+		ruler_personality = scholar_personality
+	}
+	check_for_personality = {
+		ruler_personality = entrepreneur_personality
+	}
+	check_for_personality = {
+		ruler_personality = industrious_personality
+	}
+	check_for_personality = {
+		ruler_personality = expansionist_personality
+	}
+	check_for_personality = {
+		ruler_personality = charismatic_negotiator_personality
+	}
+	check_for_personality = {
+		ruler_personality = silver_tongue_personality
+	}
+	check_for_personality = {
+		ruler_personality = conqueror_personality
+	}
+	check_for_personality = {
+		ruler_personality = tactical_genius_personality
+	}
+	check_for_personality = {
+		ruler_personality = bold_fighter_personality
+	}
+	check_for_personality = {
+		ruler_personality = strict_personality
+	}
+	check_for_personality = {
+		ruler_personality = inspiring_leader_personality
+	}
+	check_for_personality = {
+		ruler_personality = martial_educator_personality
+	}
+	check_for_personality = {
+		ruler_personality = navigator_personality
+	}
+	check_for_personality = {
+		ruler_personality = fierce_negotiator_personality
+	}
+	check_for_personality = {
+		ruler_personality = babbling_buffoon_personality
+	}
+	check_for_personality = {
+		ruler_personality = embezzler_personality
+	}
+	check_for_personality = {
+		ruler_personality = infertile_personality
+	}
+	check_for_personality = {
+		ruler_personality = drunkard_personality
+	}
+	check_for_personality = {
+		ruler_personality = sinner_personality
+	}
+	check_for_personality = {
+		ruler_personality = greedy_personality
+	}
+	check_for_personality = {
+		ruler_personality = cruel_personality
+	}
+	check_for_personality = {
+		ruler_personality = naive_personality
+	}
+	check_for_personality = {
+		ruler_personality = craven_personality
+	}
+	check_for_personality = {
+		ruler_personality = loose_lips_personality
+	}
+	check_for_personality = {
+		ruler_personality = obsessive_perfectionist_personality
+	}
+	check_for_personality = {
+		ruler_personality = malevolent_personality
+	}
+	check_for_personality = {
+		ruler_personality = immortal_personality
+	}
+	check_for_personality = {
+		ruler_personality = reformist_personality
+	}
+	check_for_personality = {
+		ruler_personality = legendary_pirate_personality
+	}
+	check_for_personality = {
+		ruler_personality = humane_personality
+	}
+	check_for_personality = {
+		ruler_personality = petty_personality
+	}
+	check_for_personality = {
+		ruler_personality = legendary_conqueror_personality
+	}
+	check_for_personality = {
+		ruler_personality = great_engineer_personality
+	}
+	check_for_personality = {
+		ruler_personality = patron_of_arts_personality
+	}
+	check_for_personality = {
+		ruler_personality = papal_puppetmaster_personality
+	}
+	check_for_personality = {
+		ruler_personality = iron_crowned_personality
+	}
+	check_for_personality = {
+		ruler_personality = peasant_revolt_leader_personality
+	}
+	check_for_personality = {
+		ruler_personality = merchant_basileus_personality
+	}
+	check_for_personality = {
+		ruler_personality = orangist_stadholder_personality
+	}
+	check_for_personality = {
+		ruler_personality = reaver_personality
+	}
+	check_for_personality = {
+		ruler_personality = last_knight_personality
+	}
+	#AB Personalities
+	check_for_personality = {
+		ruler_personality = maidenless_personality
+	}
+	check_for_personality = {
+		ruler_personality = thunderer_personality
+	}
+	#PotionSeller AB Personalities
+	check_for_personality = {
+		ruler_personality = impaler_personality
+	}
+}
+
+# Checks for individual personalities
+check_for_personality = {
+	if = {
+		limit = {
+			ruler_has_personality = $ruler_personality$
+		}
+		change_variable = {
+			which = num_of_ruler_personalities
+			value = 1
+		}
+	}
+}
+
+# Scripted effect to remove ONE bad ruler personality.
+# It checks for bad personalities in sequence. The first one found is removed.
+remove_one_bad_ruler_personality = {
+	if = {
+		limit = {
+			ruler_has_personality = babbling_buffoon_personality
+		}
+		remove_ruler_personality = babbling_buffoon_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = embezzler_personality
+		}
+		remove_ruler_personality = embezzler_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = infertile_personality
+		}
+		remove_ruler_personality = infertile_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = drunkard_personality
+		}
+		remove_ruler_personality = drunkard_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = sinner_personality
+		}
+		remove_ruler_personality = sinner_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = greedy_personality
+		}
+		remove_ruler_personality = greedy_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = cruel_personality
+		}
+		remove_ruler_personality = cruel_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = naive_personality
+		}
+		remove_ruler_personality = naive_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = craven_personality
+		}
+		remove_ruler_personality = craven_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = loose_lips_personality
+		}
+		remove_ruler_personality = loose_lips_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		remove_ruler_personality = obsessive_perfectionist_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = malevolent_personality
+		}
+		remove_ruler_personality = malevolent_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = petty_personality
+		}
+		remove_ruler_personality = petty_personality
+	}
+	else_if = {
+		limit = {
+			# From 01_ante_bellum.txt
+			ruler_has_personality = maidenless_personality
+		}
+		remove_ruler_personality = maidenless_personality
+	}
+}

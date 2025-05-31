@@ -290,6 +290,75 @@ ab_wal_3 = {
 			}
 		}
 		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = macedonia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = northern_greece_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = morea_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = albania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = rascia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = serbia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bosnia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			if = {
+				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = adm
+						amount = 1
+					}
+				}
+			}
+			add_ruler_modifier = {
+				name = wallachia_unifier_of_the_vlachs
+				duration = -1
+			}
+
+			free_up_bad_ruler_personality_if_full = yes
+			add_ruler_personality = conqueror_personality
+			add_power_projection = {
+				type = wallachia_unified_vlachs_pp
+				amount = 15
+			}
+			add_prestige_or_monarch_power = {
+				amount = 15
+			}
+			custom_tooltip = wal_unite_the_vlachs_autonomy_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = romanian_culture_group
+					}
+					add_local_autonomy = -10
+					add_nationalism = -5
+				}
+			}
+			custom_tooltip = wal_unite_the_vlachs_dacia_tooltip
+			hidden_effect = {
+				set_country_flag = early_form_dacia
+			}
 		}
 	}
 }
