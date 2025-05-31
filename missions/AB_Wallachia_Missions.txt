@@ -242,7 +242,7 @@ ab_wal_3 = {
 	}
 	wal_unite_the_vlachs = {
 		icon = gfx_wal_unify_the_vlachs
-		position = 4
+		position = 3
 		required_missions = {
 			wal_liberate_transylvania
 			wal_strike_the_bulgars
