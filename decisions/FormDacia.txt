@@ -2,7 +2,7 @@ country_decisions = {
 	wal_form_dacia = {
 		major = yes
 		potential = {
-			is_wallachia = yes
+			is_or_was_wallachia = yes
 			NOT = {
 				has_country_flag = formed_dacia
 			}
@@ -78,6 +78,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
+			add_government_reform = dacian_kingdom
 		}
 		ai_will_do = {
 			factor = 1

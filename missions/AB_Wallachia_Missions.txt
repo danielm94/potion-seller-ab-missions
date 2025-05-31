@@ -4,7 +4,7 @@ ab_wal_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 	}
 }
 
@@ -14,7 +14,7 @@ ab_wal_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 	}
 	wal_unite_the_principalities = {
 		icon = gfx_wal_unite_the_principalities
@@ -90,7 +90,7 @@ ab_wal_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 	}
 	wal_call_to_arms = {
 		icon = GFX_wal_call_to_arms
@@ -369,7 +369,7 @@ ab_wal_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 	}
 	wal_liberate_transylvania = {
 		icon = GFX_wal_liberate_transylvania
@@ -514,6 +514,6 @@ ab_wal_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 	}
 }

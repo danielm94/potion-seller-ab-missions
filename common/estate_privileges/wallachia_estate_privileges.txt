@@ -4,7 +4,7 @@ estate_nobles_dominance_of_the_boierime = {
 	loyalty = 0.05
 	influence = 0.15
 	is_valid = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 		#has_completed_wallachian_civil_war = yes
 	}
 	can_select = {

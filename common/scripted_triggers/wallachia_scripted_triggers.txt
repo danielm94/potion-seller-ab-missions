@@ -1,4 +1,4 @@
-is_wallachia = {
+is_or_was_wallachia = {
 	is_or_was_tag = {
 		tag = WAL
 	}

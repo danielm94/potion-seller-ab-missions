@@ -1,6 +1,6 @@
 wallachian_civil_war = {
 	potential = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 		NOT = {
 			has_country_flag = complete_end_of_wallachian_civil_war
 		}
@@ -10,7 +10,7 @@ wallachian_civil_war = {
 		}
 	}
 	can_start = {
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 		OR = {
 			has_butchered_the_boiermiea = yes
 			has_refused_boiermiea_ultimatum = yes

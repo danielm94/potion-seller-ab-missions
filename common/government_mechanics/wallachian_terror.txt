@@ -3,7 +3,7 @@ wallachian_terror_mechanic = {
 	alert_icon_index = 1
 	available = {
 		has_dlc = "Domination"
-		is_wallachia = yes
+		is_or_was_wallachia = yes
 	}
 	powers = {
 		terror_power = {
