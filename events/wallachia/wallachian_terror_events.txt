@@ -188,7 +188,7 @@ country_event = {
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachian_terror_events_impale
+		name =  wallachian_terror_events.2.a
 		trigger = {
 			NOT = {
 				ruler_has_personality = impaler_personality
@@ -197,7 +197,7 @@ country_event = {
 		wallachian_terror_impalement_effect = yes
 	}
 	option = {
-		name = wallachian_terror_events_humiliate
+		name = wallachian_terror_events.2.b
 		trigger = {
 			NOT = {
 				ruler_has_personality = impaler_personality
@@ -205,8 +205,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				event_target:impaled_country = {
-					is_rival = PREV
+				event_target:impaler_country = {
+					is_rival = event_target:impaled_country
 				}
 			}
 			custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
@@ -246,7 +246,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachian_terror_events_impale_impaler_personality
+		name = wallachian_terror_events.2.c
 		trigger = {
 			ruler_has_personality = impaler_personality
 		}

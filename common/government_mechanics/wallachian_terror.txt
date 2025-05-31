@@ -44,17 +44,15 @@ wallachian_terror_mechanic = {
 					power_type = terror_power
 					value = 30
 				}
-				if = {
-					limit = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = wallachian_terror_impale_the_privileged_hasnt_backed_down
 						NOT = {
-							had_country_flag = {
-								flag = wallachian_civil_war_voivode_backded_down
-								days = 18250
-							}
+							has_country_flag = wallachian_civil_war_voivode_backded_down
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = wallachian_terror_voivode_backed_down_trigger_tooltip
+						tooltip = wallachian_terror_impale_the_privileged_hasnt_backed_down_50
 						had_country_flag = {
 							flag = wallachian_civil_war_voivode_backded_down
 							days = 18250

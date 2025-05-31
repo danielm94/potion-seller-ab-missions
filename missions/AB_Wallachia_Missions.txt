@@ -69,7 +69,7 @@ ab_wal_2 = {
 				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
 				tooltip = {
 					change_ruler_stat = {
-						type = adm
+						type = mil
 						amount = 1
 					}
 				}
@@ -185,6 +185,25 @@ ab_wal_3 = {
 			custom_tooltip = tooltip_line_divider
 			if = {
 				limit = {
+					has_vlad_2nd_or_3rd_ruling = yes
+				}
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_yes
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+			}
+			else = {
+				custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = dip
+						amount = 1
+					}
+				}
+			}
+			if = {
+				limit = {
 					is_rival = BUL
 				}
 				custom_tooltip = wal_strike_the_bulgars_bul_rival_tooltip_yes
@@ -196,6 +215,81 @@ ab_wal_3 = {
 					add_splendor = 100
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = wallachia_impaled_bulgaria
+				}
+				custom_tooltip = wal_strike_the_bulgars_impale_tooltip_yes
+				change_terror = {
+					value = 5
+					scaled_with_gain_modifier = yes
+				}
+			}
+			else = {
+				custom_tooltip = wal_strike_the_bulgars_impale_tooltip_no
+				tooltip = {
+					change_terror = {
+						value = 5
+						scaled_with_gain_modifier = yes
+					}
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
+			add_adm_power = 50
+		}
+	}
+	wal_unite_the_vlachs = {
+		icon = gfx_wal_unify_the_vlachs
+		position = 4
+		required_missions = {
+			wal_liberate_transylvania
+			wal_strike_the_bulgars
+			wal_unite_the_principalities
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = moldavia_area
+				area = bessarabia_area
+				province_id = 4706
+			}
+			NOT = {
+				AND = {
+					is_core = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		trigger = {
+			transylvania_area = {
+				type = all
+				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_transylvania_area = {
+				type = all
+				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moldavia_area = {
+				type = all
+				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bessarabia_area = {
+				type = all
+				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4706 = {
+				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
 		}
 	}
 }
@@ -259,6 +353,25 @@ ab_wal_4 = {
 					change_ruler_stat = {
 						type = adm
 						amount = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = wallachia_impaled_magyars
+				}
+				custom_tooltip = wal_liberate_transylvania_impale_tooltip_yes
+				change_terror = {
+					value = 5
+					scaled_with_gain_modifier = yes
+				}
+			}
+			else = {
+				custom_tooltip = wal_liberate_transylvania_impale_tooltip_no
+				tooltip = {
+					change_terror = {
+						value = 5
+						scaled_with_gain_modifier = yes
 					}
 				}
 			}

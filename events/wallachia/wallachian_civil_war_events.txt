@@ -117,6 +117,7 @@ country_event = {
 			}
 		}
 		set_country_flag = wallachian_civil_war_brancoveanu_rebels_spawned
+		custom_tooltip = wallachian_civil_war_start_rules_refused_tooltip
 	}
 	option = {
 		name = wallachian_civil_war_start_banquet_option
@@ -138,6 +139,7 @@ country_event = {
 			}
 		}
 		set_country_flag = wallachian_civil_war_brancoveanu_rebels_spawned
+		custom_tooltip = wallachian_civil_war_start_rules_butchered_tooltip
 	}
 }
 

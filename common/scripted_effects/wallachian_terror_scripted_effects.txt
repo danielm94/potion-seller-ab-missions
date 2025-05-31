@@ -1527,9 +1527,7 @@ wallachian_terror_impalement_effect = {
 	}
 	if = {
 		limit = {
-			event_target:impaled_country = {
-				is_rival = PREV
-			}
+			is_rival = event_target:impaled_country
 		}
 		custom_tooltip = wallachian_terror_rival_converted_to_pp_tooltip
 		hidden_effect = {
@@ -1578,5 +1576,77 @@ wallachian_terror_impalement_effect = {
 	add_country_modifier = {
 		name = wallachian_terror_impaled_ruler
 		duration = 3650
+	}
+	wallachian_terror_special_country_impalement_effects = yes
+}
+
+wallachian_terror_special_country_impalement_effects = {
+	#Effect that handles the effects of impalement on certain tags.
+	event_target:impaled_country = {
+		trigger_switch = {
+			on_trigger = tag
+			BUL = {
+				wallachian_terror_bulgaria_impalement_effects = yes
+			}
+			MGY = {
+				wallachian_terror_magyars_impalement_effects = yes
+			}
+		}
+	}
+}
+
+#ROOT = Bulgaria
+wallachian_terror_bulgaria_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_bulgaria
+				}
+			}
+		}
+		add_prestige = -20
+		add_country_modifier = {
+			name = bulgaria_impaled_mod
+			duration = 7300
+		}
+		event_target:impaler_country = {
+			add_country_modifier = {
+				name = wallachia_impaled_bulgaria_mod
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			set_country_flag = wallachia_impaled_bulgaria
+		}
+	}
+}
+
+#ROOT = Magyars
+wallachian_terror_magyars_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_magyars
+				}
+			}
+		}
+		add_prestige = -20
+		add_country_modifier = {
+			name = magyars_impaled_mod
+			duration = 7300
+		}
+		event_target:impaler_country = {
+			add_country_modifier = {
+				name = wallachia_impaled_magyars_mod
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			set_country_flag = wallachia_impaled_magyars
+		}
 	}
 }

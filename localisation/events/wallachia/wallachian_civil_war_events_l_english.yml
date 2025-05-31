@@ -103,6 +103,8 @@
  wallachian_civil_war_give_bribe_for_loyalty: "Let them have their coin. If it keeps their steel idle, it's worth it."
  wallachian_civil_war_refuse_loyalty: "Hmm... but then I'd have to pay you next time. It'd be easier to just kill you all."
  wallachian_civil_war_refused_ultimatum_soldiers_defect_to_houses: "§RMany soldiers are more loyal to their Lords than the crown, and they now march beneath their banners.§!"
+ wallachian_civil_war_start_rules_refused_tooltip: "\n§RWARNING: IF YOUR CAPITAL IS CAPTURED BY THE REBELS, §Y[Root.Monarch.GetName]§! WILL BE HANGED AND YOU WILL LOSE THE CIVIL WAR, WHICH HAS PERMANENT CONCEQUENCES.§!"
+ wallachian_civil_war_start_rules_butchered_tooltip: "\n§RWARNING: IF YOUR CAPITAL IS CAPTURED BY THE REBELS, §Y[Root.Monarch.GetName]§! WILL SUFFER A FATE WORSE THAN DEATH AND YOU WILL LOSE THE CIVIL WAR, WHICH HAS PERMANENT CONCEQUENCES.§!"
  wallachian_civil_war_butchered_soldiers_defect_to_houses: "§RHorrified by the massacre, many soldiers either rally to their House or abandon the field in shame.§!"
  wallachian_civil_war_modifier_lasts_until_end_of_disaster: "This modifier will last until the end of §YThe War of the Ten Houses§! disaster."
  wallachian_civil_war_province_will_be_razed: "§Y[This.GetName] will be razed.§!"

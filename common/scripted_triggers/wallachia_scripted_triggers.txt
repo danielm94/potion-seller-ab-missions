@@ -14,3 +14,13 @@ has_vlad_2nd_or_3rd_ruling = {
 		has_ruler = "Vlad III"
 	}
 }
+
+is_special_impaled_country = {
+	event_target:impaled_country = {
+		OR = {
+			tag = BUL #Bulgaria
+			tag = MGY #Magyars
+			#In the future, HRE emperor, EOC, the pope...
+		}
+	}
+}

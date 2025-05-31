@@ -102,3 +102,84 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = wallachian_terror_impale_option_text
+	random = no
+	text = {
+		localisation_key = wallachian_terror_events_impale
+		trigger = {
+			is_special_impaled_country = no
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_bul_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = BUL
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_mgy_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = MGY
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = wallachian_terror_humiliate_option_text
+	random = no
+	text = {
+		localisation_key = wallachian_terror_events_humiliate
+		trigger = {
+			is_special_impaled_country = no
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_bul_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = BUL
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_mgy_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = MGY
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = wallachian_terror_impaler_personality_impale_option_text
+	random = no
+	text = {
+		localisation_key = wallachian_terror_events_impale_impaler_personality
+		trigger = {
+			is_special_impaled_country = no
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_bul_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = BUL
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_mgy_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = MGY
+			}
+		}
+	}
+}
