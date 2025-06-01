@@ -146,3 +146,7 @@ has_voivode_lost_wallachian_civil_war = {
 		has_voiovode_surrendered_wallachian_civil_war = yes
 	}
 }
+
+has_won_wallachian_civil_war = {
+	has_country_flag = wallachian_civil_war_victory
+}
