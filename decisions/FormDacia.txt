@@ -69,6 +69,12 @@ country_decisions = {
 			hidden_effect = {
 				set_country_flag = formed_dacia
 			}
+			hidden_effect = {
+				export_government_power_to_variable = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+				}
+			}
 			change_tag = DAC
 			if = {
 				limit = {
@@ -78,7 +84,31 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			add_government_reform = dacian_kingdom
+			if = {
+				limit = {
+					has_won_wallachian_civil_war = yes
+				}
+				add_government_reform = dacian_autocracy
+				variable_government_power_effect = {
+					var = terror_power_amount
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					scaled_with_gain_modifier = no
+				}
+			}
+			else_if = {
+				limit = {
+					has_won_wallachian_civil_war = no
+					has_voivode_lost_wallachian_civil_war = no
+				}
+				add_government_reform = dacian_kingdom
+				variable_government_power_effect = {
+					var = terror_power_amount
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					scaled_with_gain_modifier = no
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
