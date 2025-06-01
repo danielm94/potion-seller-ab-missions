@@ -1,10 +1,6 @@
-wallachian_voivodate = {
+romanian_government_name = {
 	trigger = {
-		OR = {
-			has_reform = wallachian_voivodate
-			has_reform = wallachian_autocracy
-			has_reform = appointive_voivodate
-		}
+		culture_group = romanian_culture_group
 	}
 	rank = {
 		1 = romanian_duchy
