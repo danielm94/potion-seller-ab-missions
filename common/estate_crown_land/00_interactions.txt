@@ -12,7 +12,7 @@ interaction = {
 		}
 		if = {
 			limit = {
-				has_country_flag = wallachian_terror_purged_estates
+				has_wallachia_purged_the_estates = yes
 			}
 			custom_trigger_tooltip = {
 				tooltip = wallachian_terror_purged_estates_trigger_tooltip
@@ -45,7 +45,7 @@ interaction = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = wallachian_terror_purged_estates
+				has_wallachia_purged_the_estates = yes
 			}
 			sell_crownland_modified_by_purges = yes
 		}

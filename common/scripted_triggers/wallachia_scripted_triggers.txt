@@ -24,3 +24,27 @@ is_special_impaled_country = {
 		}
 	}
 }
+
+has_wallachia_purged_the_estates = {
+	custom_trigger_tooltip = {
+		tooltip = has_wallachia_purged_the_estates_tooltip
+		has_country_flag = wallachian_terror_purged_estates
+	}
+}
+
+has_wallachia_compromised_with_the_boiars = {
+	custom_trigger_tooltip = {
+		tooltip = has_wallachia_compromised_with_the_boiars_tooltip
+		has_country_flag = wal_compromised_with_the_boiars
+	}
+}
+
+#So it reads better on estate privilege trigger tooltips
+has_wallachia_not_compromised_with_the_boiars = {
+	custom_trigger_tooltip = {
+		tooltip = has_wallachia_not_compromised_with_the_boiars_tooltip
+		NOT = {
+			has_country_flag = wal_compromised_with_the_boiars
+		}
+	}
+}
