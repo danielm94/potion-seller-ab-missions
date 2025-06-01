@@ -1,5 +1,4 @@
 namespace = AB_wallachia_events
-
 #Give heir impaler trait
 country_event = {
 	id = AB_wallachia_events.0
@@ -355,5 +354,22 @@ country_event = {
 			value = 10
 			scaled_with_gain_modifier = yes
 		}
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.10
+	title = AB_wallachia_events.10.t
+	desc = AB_wallachia_events.10.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.10.a
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = AB_wallachia_events.10.b
+
+		ai_chance = { factor = 0 }
 	}
 }

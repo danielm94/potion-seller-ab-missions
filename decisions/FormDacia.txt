@@ -7,6 +7,9 @@ country_decisions = {
 				has_country_flag = formed_dacia
 			}
 			NOT = {
+				tag = HLR
+			}
+			NOT = {
 				tag = TUH
 			}
 			NOT = {
@@ -32,6 +35,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				exists = DAC
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -89,11 +95,13 @@ country_decisions = {
 					has_won_wallachian_civil_war = yes
 				}
 				add_government_reform = dacian_autocracy
-				variable_government_power_effect = {
-					var = terror_power_amount
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
-					scaled_with_gain_modifier = no
+				hidden_effect = {
+					variable_government_power_effect = {
+						var = terror_power_amount
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						scaled_with_gain_modifier = no
+					}
 				}
 			}
 			else_if = {
@@ -102,12 +110,17 @@ country_decisions = {
 					has_voivode_lost_wallachian_civil_war = no
 				}
 				add_government_reform = dacian_kingdom
-				variable_government_power_effect = {
-					var = terror_power_amount
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
-					scaled_with_gain_modifier = no
+				hidden_effect = {
+					variable_government_power_effect = {
+						var = terror_power_amount
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						scaled_with_gain_modifier = no
+					}
 				}
+			}
+			country_event = {
+				id = AB_wallachia_events.10
 			}
 		}
 		ai_will_do = {
