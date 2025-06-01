@@ -1704,7 +1704,19 @@ country_event = {
 		}
 		else = {
 			set_country_flag = wallachian_civil_war_victory
+			hidden_effect = {
+				export_government_power_to_variable = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+				}
+			}
 			add_government_reform = wallachian_autocracy
+			variable_government_power_effect = {
+				var = terror_power_amount
+				mechanic_type = wallachian_terror_mechanic
+				power_type = terror_power
+				scaled_with_gain_modifier = no
+			}
 			if = {
 				limit = {
 					has_refused_boiermiea_ultimatum = yes
@@ -1758,6 +1770,10 @@ country_event = {
 		custom_tooltip = wallachia_civil_war_victory_no_more_noble_rebels
 		hidden_effect = {
 			set_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
+		}
+		remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+		tooltip = {
+			add_government_reform = wallachian_autocracy
 		}
 	}
 	option = {
