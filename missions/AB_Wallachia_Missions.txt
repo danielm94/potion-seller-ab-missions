@@ -234,8 +234,8 @@ ab_wal_3 = {
 					}
 				}
 			}
-			add_prestige_or_monarch_power = {
-				amount = 5
+			add_army_tradition_or_mil_power = {
+				amount = 10
 			}
 			add_adm_power = 50
 		}
@@ -335,7 +335,6 @@ ab_wal_3 = {
 				name = wallachia_unifier_of_the_vlachs
 				duration = -1
 			}
-
 			free_up_bad_ruler_personality_if_full = yes
 			add_ruler_personality = conqueror_personality
 			add_power_projection = {
@@ -444,8 +443,8 @@ ab_wal_4 = {
 					}
 				}
 			}
-			add_prestige_or_monarch_power = {
-				amount = 10
+			add_army_tradition_or_mil_power = {
+				amount = 15
 			}
 			add_accepted_culture_or_dip_power = {
 				culture = transylvanian
