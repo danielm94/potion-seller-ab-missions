@@ -11,13 +11,21 @@ ab_wal_boiar_compromise_missions = {
 		icon = gfx_wal_placate_the_boiars
 		position = 1
 		trigger = {
-			num_of_estate_agendas_completed = {
-				estate = estate_nobles
-				value = 2
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
 			}
-			estate_loyalty = {
-				estate = estate_nobles
-				loyalty = 60
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 2
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
 			}
 		}
 		effect = {
@@ -35,18 +43,26 @@ ab_wal_boiar_compromise_missions = {
 			wal_placate_the_boiars
 		}
 		trigger = {
-			num_of_estate_agendas_completed = {
-				estate = estate_nobles
-				value = 3
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
 			}
-			has_reform = maintain_nobles_status_quo_reform
-			num_of_estate_privileges = {
-				estate = estate_nobles
-				value = 5
-			}
-			estate_loyalty = {
-				estate = estate_nobles
-				loyalty = 70
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 3
+				}
+				has_reform = maintain_nobles_status_quo_reform
+				num_of_estate_privileges = {
+					estate = estate_nobles
+					value = 5
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 70
+				}
 			}
 		}
 		effect = {
@@ -66,6 +82,40 @@ ab_wal_boiar_compromise_missions = {
 			}
 			custom_tooltip = wal_compromise_with_the_boiars_can_no_longer_seize_from_boiars_tooltip
 			custom_tooltip = wal_compromise_with_the_boiars_dont_panic_tooltip
+		}
+	}
+	wal_the_great_feast = {
+		icon = gfx_wal_the_great_feast
+		position = 3
+		required_missions = {
+			wal_compromise_with_the_boiars
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 5
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 90
+				}
+				crown_land_share = 30
+			}
+		}
+		effect = {
+			set_country_flag = wal_elective_monarchy
+			add_government_reform = wallachian_elective_monarchy
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -20
+			}
 		}
 	}
 }
