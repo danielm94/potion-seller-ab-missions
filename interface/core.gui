@@ -163,7 +163,6 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "listboxSliderButton"
-				tooltipText = "You can use the §Y'§! and §Y/§! keys to scroll :)"	
 				quadTextureSprite = "GFX_scroll_drager"
 				position = { x=0 y =0}
 				scripted = yes
@@ -181,7 +180,7 @@ guiTypes = {
 				name = "upButton"
 				quadTextureSprite = "GFX_scroll_up"
 				position = { x=0 y =0}	
-				shortcut = "'"
+				shortcut = "PAGE_UP"
 			}
 			
 			guiButtonType = {
@@ -189,7 +188,7 @@ guiTypes = {
 				name = "downButton"
 				quadTextureSprite = "GFX_scroll_down"
 				position = { x=0 y =120}
-				shortcut = "/"
+				shortcut = "PAGE_DOWN"
 			}
 	}
 	scrollbarType = {
