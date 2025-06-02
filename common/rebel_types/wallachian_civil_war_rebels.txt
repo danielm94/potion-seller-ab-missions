@@ -1,4 +1,4 @@
-# --- Racovita Rebels ---
+﻿# --- Racovita Rebels ---
 wallachia_civil_war_racovita_refused_ultimatum_rebels = {
 	color = {
 		60
@@ -952,8 +952,8 @@ wallachia_civil_war_cantacuzino_butchered_rebels = {
 	}
 }
 
-# --- Craiovesti Rebels ---
-wallachia_civil_war_craiovesti_refused_ultimatum_rebels = {
+# --- Bibescu Rebels ---
+wallachia_civil_war_bibescu_refused_ultimatum_rebels = {
 	color = {
 		205
 		92
@@ -1027,12 +1027,12 @@ wallachia_civil_war_craiovesti_refused_ultimatum_rebels = {
 	demands_description = wallachian_civil_war_rebels_demands_refused_ultimatum
 	demands_enforced_effect = {
 		wallachian_civil_war_rebels_enforce_demands_effect = {
-			victorious_house = craiovesti
+			victorious_house = bibescu
 		}
 	}
 }
 
-wallachia_civil_war_craiovesti_butchered_rebels = {
+wallachia_civil_war_bibescu_butchered_rebels = {
 	color = {
 		205
 		92
@@ -1106,7 +1106,7 @@ wallachia_civil_war_craiovesti_butchered_rebels = {
 	demands_description = wallachian_civil_war_rebels_demands_butchered
 	demands_enforced_effect = {
 		wallachian_civil_war_rebels_enforce_demands_effect = {
-			victorious_house = craiovesti
+			victorious_house = bibescu
 		}
 	}
 }
@@ -1587,3 +1587,4 @@ wallachia_civil_war_basarab_butchered_rebels = {
 		}
 	}
 }
+

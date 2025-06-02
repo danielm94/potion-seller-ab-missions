@@ -1,4 +1,4 @@
-is_in_war_of_the_ten_houses_disaster = {
+﻿is_in_war_of_the_ten_houses_disaster = {
 	has_country_flag = in_war_of_the_ten_houses
 }
 
@@ -38,7 +38,7 @@ has_defeated_the_10_houses = {
 	has_defeated_house_brancoveanu = yes
 	has_defeated_house_ghica = yes
 	has_defeated_house_cantacuzino = yes
-	has_defeated_house_craiovesti = yes
+	has_defeated_house_bibescu = yes
 	has_defeated_house_draculesti = yes
 	has_defeated_house_danesti = yes
 	has_defeated_house_basarab = yes
@@ -68,8 +68,8 @@ has_defeated_house_cantacuzino = {
 	has_country_flag = wallachian_civil_war_defeated_cantacuzino
 }
 
-has_defeated_house_craiovesti = {
-	has_country_flag = wallachian_civil_war_defeated_craiovesti
+has_defeated_house_bibescu = {
+	has_country_flag = wallachian_civil_war_defeated_bibescu
 }
 
 has_defeated_house_draculesti = {
@@ -92,7 +92,7 @@ has_any_house_spawned_rebels = {
 		has_spawned_brancoveanu_rebels = yes
 		has_spawned_ghica_rebels = yes
 		has_spawned_cantacuzino_rebels = yes
-		has_spawned_craiovesti_rebels = yes
+		has_spawned_bibescu_rebels = yes
 		has_spawned_draculesti_rebels = yes
 		has_spawned_danesti_rebels = yes
 		has_spawned_basarab_rebels = yes
@@ -124,8 +124,8 @@ has_spawned_cantacuzino_rebels = {
 	has_country_flag = wallachian_civil_war_cantacuzino_rebels_spawned
 }
 
-has_spawned_craiovesti_rebels = {
-	has_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
+has_spawned_bibescu_rebels = {
+	has_country_flag = wallachian_civil_war_bibescu_rebels_spawned
 }
 
 has_spawned_draculesti_rebels = {
@@ -150,3 +150,4 @@ has_voivode_lost_wallachian_civil_war = {
 has_won_wallachian_civil_war = {
 	has_country_flag = wallachian_civil_war_victory
 }
+

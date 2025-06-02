@@ -60,15 +60,15 @@ l_english:
  wallachia_civil_war_cantacuzino_butchered_rebels_desc: "These are the bannermen, mercenaries, and surviving retainers of House Cantacuzino and its allied families. After the Voivode butchered the heads of the Ten Houses during a supposed banquet of reconciliation, they now rise in a fury to avenge their lords, reclaim their honor, and bring the Voivode to justice for his betrayal."
  wallachia_civil_war_cantacuzino_butchered_rebels_army: "Army of House Cantacuzino"
 
- # Craiovesti
- wallachia_civil_war_craiovesti_refused_ultimatum_rebels_title: "Craiovesti Rebels"
- wallachia_civil_war_craiovesti_refused_ultimatum_rebels_name: "Craiovesti Rebels"
- wallachia_civil_war_craiovesti_refused_ultimatum_rebels_desc: "These are the levied bannermen, mercenaries, and retainers loyal to the Craiovesti house and its allies — noble families humiliated by the Voivode's refusal to acknowledge their authority. With their pride wounded and their titles threatened, they now march not only to restore what was taken from them, but to see the Voivode deposed and Wallachia ruled once more by the old aristocratic order."
- wallachia_civil_war_craiovesti_refused_ultimatum_rebels_army: "Army of House Craiovesti"
- wallachia_civil_war_craiovesti_butchered_rebels_title: "Craiovesti Rebels"
- wallachia_civil_war_craiovesti_butchered_rebels_name: "Craiovesti Rebels"
- wallachia_civil_war_craiovesti_butchered_rebels_desc: "These are the bannermen, mercenaries, and surviving retainers of House Craiovesti and its allied families. After the Voivode butchered the heads of the Ten Houses during a supposed banquet of reconciliation, they now rise in a fury to avenge their lords, reclaim their honor, and bring the Voivode to justice for his betrayal."
- wallachia_civil_war_craiovesti_butchered_rebels_army: "Army of House Craiovesti"
+ # Bibescu
+ wallachia_civil_war_bibescu_refused_ultimatum_rebels_title: "Bibescu Rebels"
+ wallachia_civil_war_bibescu_refused_ultimatum_rebels_name: "Bibescu Rebels"
+ wallachia_civil_war_bibescu_refused_ultimatum_rebels_desc: "These are the levied bannermen, mercenaries, and retainers loyal to the Bibescu house and its allies — noble families humiliated by the Voivode's refusal to acknowledge their authority. With their pride wounded and their titles threatened, they now march not only to restore what was taken from them, but to see the Voivode deposed and Wallachia ruled once more by the old aristocratic order."
+ wallachia_civil_war_bibescu_refused_ultimatum_rebels_army: "Army of House Bibescu"
+ wallachia_civil_war_bibescu_butchered_rebels_title: "Bibescu Rebels"
+ wallachia_civil_war_bibescu_butchered_rebels_name: "Bibescu Rebels"
+ wallachia_civil_war_bibescu_butchered_rebels_desc: "These are the bannermen, mercenaries, and surviving retainers of House Bibescu and its allied families. After the Voivode butchered the heads of the Ten Houses during a supposed banquet of reconciliation, they now rise in a fury to avenge their lords, reclaim their honor, and bring the Voivode to justice for his betrayal."
+ wallachia_civil_war_bibescu_butchered_rebels_army: "Army of House Bibescu"
 
  # Draculesti
  wallachia_civil_war_draculesti_refused_ultimatum_rebels_title: "Draculesti Rebels"
@@ -108,3 +108,4 @@ l_english:
  wallachian_civil_war_rebels_demands_butchered: "Ruler Dies Horribly"
  wallachian_civil_war_rebels_demands_butchered_desc: "I'm not going to sugar-coat it, they will get medieval on your ass."
  wallachian_civil_war_slaughtered_rebels_enforced_effect_tooltip: "§YThe War of the Ten Houses§! disaster will end.\n§R§Y[Root.Monarch.GetName]§! will be tortured, and then impaled.§!\n§RThe §YBoiermiea§! will impose strict limitations on all royal powers.§!"
+

@@ -1,4 +1,4 @@
-wallachian_civil_war_rebels_enforce_demands_effect = {
+﻿wallachian_civil_war_rebels_enforce_demands_effect = {
 	if = {
 		limit = {
 			has_refused_boiermiea_ultimatum = yes
@@ -113,10 +113,10 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 		}
 		else_if = {
 			limit = {
-				has_spawned_craiovesti_rebels = yes
+				has_spawned_bibescu_rebels = yes
 			}
-			clr_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
-			set_country_flag = wallachian_civil_war_defeated_craiovesti
+			clr_country_flag = wallachian_civil_war_bibescu_rebels_spawned
+			set_country_flag = wallachian_civil_war_defeated_bibescu
 			wallachian_civil_war_defeated_house_bonus = yes
 		}
 		else_if = {
@@ -158,7 +158,7 @@ wallachian_civil_war_cleanup_effect = {
 	clr_country_flag = wallachian_civil_war_defeated_basarab
 	clr_country_flag = wallachian_civil_war_defeated_brancoveanu
 	clr_country_flag = wallachian_civil_war_defeated_cantacuzino
-	clr_country_flag = wallachian_civil_war_defeated_craiovesti
+	clr_country_flag = wallachian_civil_war_defeated_bibescu
 	clr_country_flag = wallachian_civil_war_defeated_danesti
 	clr_country_flag = wallachian_civil_war_defeated_draculesti
 	clr_country_flag = wallachian_civil_war_defeated_ghica
@@ -186,3 +186,4 @@ wallachian_civil_war_cleanup_rebels_effect = {
 		change_controller = ROOT
 	}
 }
+

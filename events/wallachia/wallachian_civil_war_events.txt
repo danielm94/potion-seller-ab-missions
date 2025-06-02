@@ -1,4 +1,4 @@
-namespace = wallachian_civil_war_events
+﻿namespace = wallachian_civil_war_events
 #Ultimatum event
 country_event = {
 	id = wallachian_civil_war_events.1
@@ -319,14 +319,14 @@ country_event = {
 				}
 			}
 			11 = {
-				# Craiovesti
+				# Bibescu
 				country_event = {
 					id = wallachian_civil_war_events.14
 				}
 				modifier = {
 					factor = 0
 					OR = {
-						has_defeated_house_craiovesti = yes
+						has_defeated_house_bibescu = yes
 						has_any_house_spawned_rebels = yes
 					}
 				}
@@ -438,13 +438,13 @@ country_event = {
 				}
 			}
 			11 = {
-				# Craiovesti
+				# Bibescu
 				country_event = {
-					id = wallachian_civil_war_events.24					# Bribe event for Craiovesti
+					id = wallachian_civil_war_events.24					# Bribe event for Bibescu
 				}
 				modifier = {
 					factor = 0
-					has_defeated_house_craiovesti = yes
+					has_defeated_house_bibescu = yes
 				}
 			}
 			11 = {
@@ -972,7 +972,7 @@ country_event = {
 	}
 }
 
-#Craiovesti Revolts
+#Bibescu Revolts
 country_event = {
 	id = wallachian_civil_war_events.14
 	title = wallachian_civil_war_events.14.t
@@ -996,24 +996,24 @@ country_event = {
 			hidden_effect = {
 				random_owned_province = {
 					spawn_large_scaled_rebels = {
-						type = wallachia_civil_war_craiovesti_refused_ultimatum_rebels
+						type = wallachia_civil_war_bibescu_refused_ultimatum_rebels
 						leader = "Dumitru"
-						leader_dynasty = "Craiovesti"
+						leader_dynasty = "Bibescu"
 					}
 				}
-				set_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
+				set_country_flag = wallachian_civil_war_bibescu_rebels_spawned
 			}
 		}
 		else = {
 			hidden_effect = {
 				random_owned_province = {
 					spawn_large_scaled_rebels = {
-						type = wallachia_civil_war_craiovesti_butchered_rebels
+						type = wallachia_civil_war_bibescu_butchered_rebels
 						leader = "Florin"
-						leader_dynasty = "Craiovesti"
+						leader_dynasty = "Bibescu"
 					}
 				}
-				set_country_flag = wallachian_civil_war_craiovesti_rebels_spawned
+				set_country_flag = wallachian_civil_war_bibescu_rebels_spawned
 			}
 		}
 	}
@@ -1316,7 +1316,7 @@ country_event = {
 	}
 }
 
-#Craiovesti Bribe Event (Event ID .24)
+#Bibescu Bribe Event (Event ID .24)
 country_event = {
 	id = wallachian_civil_war_events.24
 	title = wallachian_civil_war_events.24.t
@@ -1327,9 +1327,9 @@ country_event = {
 		name = wallachian_civil_war_give_bribe_for_loyalty
 		add_years_of_income = -0.5
 		add_legitimacy = 5
-		custom_tooltip = wallachian_civil_war_craiovesti_loyalty_tooltip
+		custom_tooltip = wallachian_civil_war_bibescu_loyalty_tooltip
 		hidden_effect = {
-			set_country_flag = wallachian_civil_war_defeated_craiovesti
+			set_country_flag = wallachian_civil_war_defeated_bibescu
 		}
 	}
 	option = {
@@ -2026,3 +2026,4 @@ country_event = {
 		add_legitimacy = 5
 	}
 }
+

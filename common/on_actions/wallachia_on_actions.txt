@@ -1,4 +1,4 @@
-on_new_monarch = {
+﻿on_new_monarch = {
 	if = {
 		limit = {
 			has_reform = appointive_voivodate
@@ -25,7 +25,7 @@ on_new_monarch = {
 				add_ruler_personality = scholar_personality
 			}
 			10 = {
-				set_dynasty = "Craiovesti"
+				set_dynasty = "Bibescu"
 				add_ruler_personality = strict_personality
 			}
 			10 = {
@@ -66,3 +66,4 @@ on_siege_won_country = {
 		}
 	}
 }
+

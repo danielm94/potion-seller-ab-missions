@@ -1,4 +1,4 @@
-defined_text = {
+﻿defined_text = {
 	name = wallachian_civil_war_events_boiermiea_ultimatum_accused_houses
 	random = no
 	text = {
@@ -98,9 +98,9 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = wallachian_civil_war_events_boiermiea_ultimatum_craiovesti_dynasty
+		localisation_key = wallachian_civil_war_events_boiermiea_ultimatum_bibescu_dynasty
 		trigger = {
-			dynasty = "Craiovesti"
+			dynasty = "Bibescu"
 		}
 	}
 	text = {
@@ -158,3 +158,4 @@ defined_text = {
 		}
 	}
 }
+

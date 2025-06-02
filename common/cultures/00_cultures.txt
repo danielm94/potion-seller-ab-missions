@@ -1,4 +1,4 @@
-# Do not change tags in here without changing every other reference to them.
+﻿# Do not change tags in here without changing every other reference to them.
 # If adding new groups or cultures, make sure they are unique.
 #
 # Union tags do not suffer from the 'same_culture_group' tax penalty.
@@ -4219,7 +4219,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Brancoveanu Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hajdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hajdau
 			Kogalniceanu Movilesti Racovita
 		}
 		male_names = {
@@ -4255,7 +4255,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Brancoveanu Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hâjdau
 			Kogalniceanu Movilesti Racovita
 		}
 		male_names = {
@@ -4291,7 +4291,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hâjdau
 			Kogalniceanu Movilesti
 		}
 		male_names = {
@@ -4327,7 +4327,7 @@ romanian_culture_group = {
 		dynasty_names = {
 			"Basarab" "Danesti" "Draculesti"
 			Callimachi Ghica Cantacuzino Cantemiresti Racovita Caradja Sturdza 
-			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Hâjdau
+			Conachi Soutzos Golescu Vacarescu Mavrocordatos Craiovesti Bibescu Hâjdau
 			Kogalniceanu Movilesti
 		}
 		male_names = {
