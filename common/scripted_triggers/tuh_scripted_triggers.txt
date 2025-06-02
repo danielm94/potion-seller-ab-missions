@@ -1,0 +1,114 @@
+is_any_romanian_faction_unbalanced_trigger = {
+	OR = {
+		# basarab_faction
+		faction_influence = {
+			faction = basarab_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = basarab_faction
+				influence = 9
+			}
+		}
+		# draculesti_faction
+		faction_influence = {
+			faction = draculesti_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = draculesti_faction
+				influence = 9
+			}
+		}
+		# danesti_faction
+		faction_influence = {
+			faction = danesti_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = danesti_faction
+				influence = 9
+			}
+		}
+		# bibescu_faction
+		faction_influence = {
+			faction = bibescu_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = bibescu_faction
+				influence = 9
+			}
+		}
+		# brancoveanu_faction
+		faction_influence = {
+			faction = brancoveanu_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = brancoveanu_faction
+				influence = 9
+			}
+		}
+		# movilesti_faction
+		faction_influence = {
+			faction = movilesti_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = movilesti_faction
+				influence = 9
+			}
+		}
+		# cantacuzino_faction
+		faction_influence = {
+			faction = cantacuzino_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = cantacuzino_faction
+				influence = 9
+			}
+		}
+		# ghica_faction
+		faction_influence = {
+			faction = ghica_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = ghica_faction
+				influence = 9
+			}
+		}
+		# mavrocordatos_faction
+		faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = mavrocordatos_faction
+				influence = 9
+			}
+		}
+		# racovita_faction
+		faction_influence = {
+			faction = racovita_faction
+			influence = 11
+		}
+		NOT = {
+			faction_influence = {
+				faction = racovita_faction
+				influence = 9
+			}
+		}
+	}
+}

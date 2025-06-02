@@ -116,6 +116,9 @@ ab_wal_boiar_compromise_missions = {
 				estate = estate_nobles
 				share = -20
 			}
+			hidden_effect = {
+				tuh_faction_initialization_effect = yes
+			}
 		}
 	}
 }

@@ -1,0 +1,379 @@
+tuh_faction_initialization_effect = {
+	tuh_balance_faction_influence_effect = yes
+	tuh_add_faction_influence_based_on_ruler_dynasty_effect = yes
+}
+
+tuh_balance_faction_influence_effect = {
+	while = {
+		limit = {
+			is_any_romanian_faction_unbalanced_trigger = yes
+		}
+		tuh_adjust_factions_towards_target_effect = yes
+	}
+}
+
+tuh_adjust_factions_towards_target_effect = {
+	# basarab_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = basarab_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = basarab_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 1
+		}
+	}
+	# draculesti_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = draculesti_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = draculesti_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 1
+		}
+	}
+	# danesti_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = danesti_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = danesti_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 1
+		}
+	}
+	# bibescu_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = bibescu_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = bibescu_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 1
+		}
+	}
+	# brancoveanu_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = brancoveanu_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = brancoveanu_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 1
+		}
+	}
+	# movilesti_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = movilesti_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = movilesti_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = 1
+		}
+	}
+	# cantacuzino_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = cantacuzino_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = cantacuzino_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 1
+		}
+	}
+	# ghica_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = ghica_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = ghica_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 1
+		}
+	}
+	# mavrocordatos_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = mavrocordatos_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = mavrocordatos_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 1
+		}
+	}
+	# racovita_faction
+	if = {
+		limit = {
+			faction_influence = {
+				faction = racovita_faction
+				influence = 11
+			}
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = -1
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = racovita_faction
+					influence = 9
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 1
+		}
+	}
+}
+
+tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
+    if = {
+        limit = {
+            dynasty = "Basarab"
+        }
+        add_faction_influence = {
+            faction = basarab_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Draculesti"
+        }
+        add_faction_influence = {
+            faction = draculesti_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Danesti"
+        }
+        add_faction_influence = {
+            faction = danesti_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Bibescu"
+        }
+        add_faction_influence = {
+            faction = bibescu_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Brancoveanu"
+        }
+        add_faction_influence = {
+            faction = brancoveanu_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Movilesti"
+        }
+        add_faction_influence = {
+            faction = movilesti_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Cantacuzino"
+        }
+        add_faction_influence = {
+            faction = cantacuzino_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Ghica"
+        }
+        add_faction_influence = {
+            faction = ghica_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Mavrocordatos"
+        }
+        add_faction_influence = {
+            faction = mavrocordatos_faction
+            influence = 15
+        }
+    }
+    else_if = {
+        limit = {
+            dynasty = "Racovita"
+        }
+        add_faction_influence = {
+            faction = racovita_faction
+            influence = 15
+        }
+    }
+}
