@@ -207,6 +207,7 @@ monarchy = {
 				appointive_voivodate
 				dacian_kingdom
 				dacian_autocracy
+				wallachian_elective_monarchy
 			}
 		}
 		hereditary_vs_nobility = {

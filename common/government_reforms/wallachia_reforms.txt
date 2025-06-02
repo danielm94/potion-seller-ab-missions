@@ -117,8 +117,47 @@ dacian_autocracy = {
 		years_of_nationalism = -5
 		max_absolutism = 10
 	}
-	
 	government_abilities = {
 		wallachian_terror_mechanic
+	}
+}
+
+wallachian_elective_monarchy = {
+	icon = "wallachian_elective_monarchy"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	heir = no
+	potential = {
+		tag = WAL
+		has_country_flag = wal_elective_monarchy
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		max_absolutism = -35
+		nobles_privilege_slots = 2
+		global_regiment_cost = -0.25
+		general_cost = -0.25
+		global_manpower_modifier = 0.25
+		diplomatic_upkeep = 1
+	}
+	effect = {
+		#Noble privileges grant no absolutism penalties
+	}
+	custom_attributes = {
+		has_parliament = yes
+	}
+	factions = {
+		basarab_faction
+		draculesti_faction
+		danesti_faction
+		bibescu_faction
+		brancoveanu_faction
+		movilesti_faction
+		cantacuzino_faction
+		ghica_faction
+		mavrocordatos_faction
+		racovita_faction
 	}
 }
