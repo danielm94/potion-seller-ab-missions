@@ -4,46 +4,37 @@ basarab_faction = {
 	modifier = {
 		core_creation = -0.05
 		stability_cost_modifier = -0.1
-	}
-}
-
-draculesti_faction = {
-	monarch_power = mil	
-	always = yes
-
-	modifier = {
-		discipline = 0.03
-		shock_damage = 0.05
-	}
-}
-
-danesti_faction = {
-	monarch_power = mil
-	always = yes
-	modifier = {
-		defensiveness = 0.1
-		fort_maintenance_modifier = -0.1
-		land_morale = 0.05
+		legitimacy = 0.5
 	}
 }
 
 bibescu_faction = {
-	monarch_power = adm
+	monarch_power = dip
 	always = yes
 	modifier = {
-		global_tax_modifier = 0.05
-		production_efficiency = 0.05
-		manpower_recovery_speed = 0.1
+		diplomats = 1
+		diplomatic_annexation_cost = -0.05
+		diplomatic_reputation = 1
+	}
+}
+
+draculesti_faction = {
+	monarch_power = mil
+	always = yes
+	modifier = {
+		discipline = 0.03
+		shock_damage = 0.05
+		siege_ability = 0.05
 	}
 }
 
 brancoveanu_faction = {
-	monarch_power = dip
+	monarch_power = adm
 	always = yes
 	modifier = {
-		diplomatic_reputation = 1
-		prestige = 0.5
-		culture_conversion_cost = -0.1
+		advisor_cost = -0.1
+		development_cost_modifier = -0.05
+		build_cost = -0.05
 	}
 }
 
@@ -51,19 +42,19 @@ movilesti_faction = {
 	monarch_power = dip
 	always = yes
 	modifier = {
-		trade_efficiency = 0.05
-		cavalry_power = 0.05
+		global_trade_power = 0.1
+		trade_efficiency = 0.1
 		improve_relation_modifier = 0.1
 	}
 }
 
-cantacuzino_faction = {
-	monarch_power = adm
+danesti_faction = {
+	monarch_power = mil
 	always = yes
 	modifier = {
-		development_cost = -0.05
-		advisor_cost = -0.1
-		yearly_corruption = -0.02
+		defensiveness = 0.15
+		fort_maintenance_modifier = -0.15
+		land_morale = 0.05
 	}
 }
 
@@ -71,9 +62,29 @@ ghica_faction = {
 	monarch_power = adm
 	always = yes
 	modifier = {
-		governing_capacity_modifier = 0.05
 		administrative_efficiency = 0.02
-		num_accepted_cultures = 1
+		governing_capacity_modifier = 0.05
+		state_maintenance_modifier = -0.1
+	}
+}
+
+racovita_faction = {
+	monarch_power = dip
+	always = yes
+	modifier = {
+		ae_impact = -0.1
+		dip_advisor_cost = -0.1
+		province_warscore_cost = -0.05
+	}
+}
+
+cantacuzino_faction = {
+	monarch_power = mil
+	always = yes
+	modifier = {
+		global_manpower_modifier = 0.15
+		manpower_recovery_speed = 0.1
+		global_regiment_cost = -0.05
 	}
 }
 
@@ -81,18 +92,8 @@ mavrocordatos_faction = {
 	monarch_power = adm
 	always = yes
 	modifier = {
-		global_unrest = -1
+		technology_cost = -0.1
 		idea_cost = -0.05
-		tolerance_own = 1
-	}
-}
-
-racovita_faction = {
-	monarch_power = adm
-	always = yes
-	modifier = {
-		trade_goods_size_modifier = 0.05
-		global_autonomy = -0.03
-		build_cost = -0.05
+		innovativeness_gain = 0.1
 	}
 }

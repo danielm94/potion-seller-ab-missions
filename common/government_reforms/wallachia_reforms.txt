@@ -150,14 +150,14 @@ wallachian_elective_monarchy = {
 	}
 	factions = {
 		basarab_faction
-		draculesti_faction
-		danesti_faction
 		bibescu_faction
+		draculesti_faction
 		brancoveanu_faction
 		movilesti_faction
-		cantacuzino_faction
+		danesti_faction
 		ghica_faction
-		mavrocordatos_faction
 		racovita_faction
+		cantacuzino_faction
+		mavrocordatos_faction
 	}
 }
