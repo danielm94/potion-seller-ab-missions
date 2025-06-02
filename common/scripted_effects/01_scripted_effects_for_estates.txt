@@ -4658,6 +4658,15 @@ on_completed_agenda_effect_estate_nobles = {
 		limit = { has_government_attribute = theocratic_monarchy_mechanic }
 		change_statists_vs_orangists = 0.05
 	}
+	if = {
+		limit = {
+			has_country_modifier = wallachia_placating_the_boiars
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+	}
 }
 on_completed_agenda_effect_estate_brahmins = {
 	if = {

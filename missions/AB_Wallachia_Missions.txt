@@ -1,10 +1,83 @@
-ab_wal_1 = {
+ab_wal_boiar_compromise_missions = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = {
 		is_or_was_wallachia = yes
+		has_wallachia_purged_the_estates = no
+	}
+	wal_placate_the_boiars = {
+		icon = gfx_wal_placate_the_boiars
+		position = 1
+		trigger = {
+			num_of_estate_agendas_completed = {
+				estate = estate_nobles
+				value = 2
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_placating_the_boiars
+				duration = 10950
+			}
+			custom_tooltip = wal_placate_the_boiars_effect_tooltip
+		}
+	}
+	wal_compromise_with_the_boiars = {
+		icon = gfx_wal_compromise_with_the_boiars
+		position = 2
+		required_missions = {
+			wal_placate_the_boiars
+		}
+		trigger = {
+			num_of_estate_agendas_completed = {
+				estate = estate_nobles
+				value = 3
+			}
+			has_reform = maintain_nobles_status_quo_reform
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 70
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			custom_tooltip = wal_compromise_with_the_boiars_increased_levies_bonus_tooltip
+			custom_tooltip = wal_compromise_with_the_boiars_advisor_privilege_bonus_tooltip
+			hidden_effect = {
+				set_country_flag = wal_compromised_with_the_boiars
+			}
+			add_prestige = -10
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 5
+			}
+			custom_tooltip = wal_compromise_with_the_boiars_can_no_longer_seize_from_boiars_tooltip
+			custom_tooltip = wal_compromise_with_the_boiars_dont_panic_tooltip
+		}
+	}
+}
+
+ab_wal_slayed_the_boiars_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		is_or_was_wallachia = yes
+		has_wallachia_purged_the_estates = yes
 	}
 }
 

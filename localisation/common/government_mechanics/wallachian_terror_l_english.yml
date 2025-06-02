@@ -25,6 +25,7 @@
  wallachian_terror_purged_estates_loyalty_loss_tooltip: "All of our estates will lose §R40§! loyalty."
  wallachian_terror_purges_devastation_tooltip: "Every owned province will gain §R5§! devastation."
  wallachian_terror_purging_the_elites_civil_war_tooltip: "§R[tooltip_line_divider]§!\n§R WARNING: The Boiermiea hold an immense amount of influence in [Root.GetName], and carrying out such a purge will lead to a civil war!§!"
+ wallachian_terror_cant_form_united_houses_tooltip: "§RWe will lose access to the §YPlacate the Boiermiea§! mission branch and all the benefits we gained. This also means you will no longer be able to form @TUH §Y[TUH.GetName]§!.§!"
  wallachian_terror_awaken_the_butcher_banked_personality_trigger_tootip: "We have banked the personality trait less than §Y3§! times."
  wallachian_terror_impale_the_privileged_hasnt_backed_down: "We haven't backed down from the §YBoiermiea§! ever."
  wallachian_terror_impale_the_privileged_hasnt_backed_down_50: "We haven't backed down from the §YBoiermiea§! in the last 50 years."

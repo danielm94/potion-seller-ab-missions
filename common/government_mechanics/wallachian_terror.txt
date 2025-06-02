@@ -108,10 +108,15 @@ wallachian_terror_mechanic = {
 						has_estate_privilege = estate_nobles_dominance_of_the_boierime
 					}
 					custom_tooltip = wallachian_terror_purging_the_elites_civil_war_tooltip
+					custom_tooltip = wallachian_terror_cant_form_united_houses_tooltip
 					country_event = {
 						id = wallachian_civil_war_events.1
 						days = 1
 					}
+					hidden_effect = {
+						swap_non_generic_missions = yes
+					}
+					#TODO Remove modifiers/bonuses from placating nobility missions.
 				}
 			}
 			cooldown_years = 20
