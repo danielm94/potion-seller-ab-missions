@@ -78,6 +78,7 @@ country_decisions = {
 			country_event = {
 				id = AB_wallachia_events.10
 			}
+			add_government_reform = dacian_elective_monarchy
 		}
 		ai_will_do = {
 			factor = 1

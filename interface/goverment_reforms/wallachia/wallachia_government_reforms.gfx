@@ -23,4 +23,8 @@ spriteTypes = {
 		name = "government_reform_wallachian_elective_monarchy"
 		texturefile = "gfx/interface/government_reform_icons/wallachian_elective_monarchy.dds"
 	}
+	spriteType = {
+		name = "government_reform_dacian_elective_monarchy"
+		texturefile = "gfx/interface/government_reform_icons/dacian_elective_monarchy.dds"
+	}
 }

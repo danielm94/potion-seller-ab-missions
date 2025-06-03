@@ -5,16 +5,15 @@ estate_nobles_dominance_of_the_boierime = {
 	influence = 0.15
 	is_valid = {
 		is_or_was_wallachia = yes
-		#has_completed_wallachian_civil_war = yes
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
 	}
 	can_select = {
 		always = no
 	}
 	can_revoke = {
 		has_country_modifier = wallachian_terror_purging_the_estate_elites
-	}
-	on_revoked = {
-		#trigger boierime ultimatum event
 	}
 	penalties = {
 		yearly_absolutism = -0.5
