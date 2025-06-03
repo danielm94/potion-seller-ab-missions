@@ -5,9 +5,20 @@ estate_nobles_land_rights = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	loyalty = 0.05
@@ -306,9 +317,20 @@ estate_nobles_nobility_primacy = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	loyalty = -0.05
@@ -436,9 +458,20 @@ estate_nobles_officer_corp = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	influence = 0.05
@@ -543,11 +576,19 @@ estate_nobles_levies = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = free_noble_levies
+				has_government_attribute = no_absolutism_from_boiar_privileges
 			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	influence = 0.1
@@ -731,9 +772,20 @@ estate_nobles_advisors = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	influence = 0.05
@@ -799,9 +851,20 @@ estate_nobles_right_of_counsel = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 10
 		}
 	}
 	loyalty = 0.1
@@ -842,9 +905,20 @@ estate_nobles_french_strong_duchies = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 10
 		}
 	}
 	loyalty = 0.1
@@ -946,9 +1020,20 @@ estate_nobles_supremacy_over_crown = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	influence = 0
@@ -1012,9 +1097,20 @@ estate_nobles_monopoly_of_metals = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 10
 		}
 	}
 	loyalty = 0.05
@@ -1156,9 +1252,20 @@ estate_nobles_monopoly_of_livestock = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 10
 		}
 	}
 	loyalty = 0.05
@@ -1288,9 +1395,20 @@ estate_nobles_monopoly_of_gems = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 10
 		}
 	}
 	loyalty = 0.05
@@ -1480,9 +1598,20 @@ estate_nobles_strong_duchies = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 10
 		}
 	}
 	influence = 0.1
@@ -1809,9 +1938,20 @@ estate_nobles_statutory_rights = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	influence = 0.1
@@ -3969,9 +4109,20 @@ estate_nobles_development_of_castles = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	is_valid = {
@@ -4126,9 +4277,20 @@ estate_nobles_statesman_servitude = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	conditional_modifier = {
@@ -4191,9 +4353,20 @@ estate_nobles_royal_court_tasks = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	can_revoke = {
@@ -4301,9 +4474,20 @@ estate_nobles_diet_right = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	can_revoke = {
@@ -4360,9 +4544,20 @@ estate_nobles_force_conscription = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	can_revoke = {
@@ -4413,9 +4608,20 @@ estate_nobles_noble_officer_right = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	can_revoke = {
@@ -4484,9 +4690,20 @@ estate_nobles_expedition_rights = {
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+			}
 		}
 		modifier = {
 			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	can_revoke = {
