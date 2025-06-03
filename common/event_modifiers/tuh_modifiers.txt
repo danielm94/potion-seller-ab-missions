@@ -1,0 +1,39 @@
+basarab_in_power = {
+    basarab_faction_influence = 0.3
+}
+
+draculesti_in_power = {
+    draculesti_faction_influence = 0.3
+}
+
+danesti_in_power = {
+    danesti_faction_influence = 0.3
+}
+
+bibescu_in_power = {
+    bibescu_faction_influence = 0.3
+}
+
+brancoveanu_in_power = {
+    brancoveanu_faction_influence = 0.3
+}
+
+movilesti_in_power = {
+    movilesti_faction_influence = 0.3
+}
+
+cantacuzino_in_power = {
+    cantacuzino_faction_influence = 0.3
+}
+
+ghica_in_power = {
+    ghica_faction_influence = 0.3
+}
+
+mavrocordatos_in_power = {
+    mavrocordatos_faction_influence = 0.3
+}
+
+racovita_in_power = {
+    racovita_faction_influence = 0.3
+}
