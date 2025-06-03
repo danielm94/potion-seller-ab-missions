@@ -48,41 +48,6 @@
 	}
 }
 
-on_monarch_death = {
-	if = {
-		limit = {
-			has_reform = wallachian_elective_monarchy
-			NOT = {
-				has_country_flag = council_of_ten_regency
-			}
-		}
-		set_country_flag = council_of_ten_regency
-		define_ruler = {
-			regency = yes
-			name = "The Council of Ten"
-			dip = 2
-			adm = 2
-			mil = 2
-			max_age = 20
-		}
-		country_event = {
-			id = AB_wallachia_events.11
-		}
-	}
-}
-
-on_new_monarch = {
-	if = {
-		limit = {
-			has_reform = wallachian_elective_monarchy
-			has_country_flag = council_of_ten_regency
-			has_regency = no
-		}
-		clr_country_flag =  council_of_ten_regency
-	}
-}
-
-
 on_siege_won_country = {
 	if = {
 		limit = {
