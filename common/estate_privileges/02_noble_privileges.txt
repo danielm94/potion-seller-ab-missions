@@ -583,14 +583,6 @@ estate_nobles_levies = {
 			max_absolutism = 1
 		}
 	}
-	conditional_modifier = {
-		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
-		}
-		modifier = {
-			max_absolutism = 5
-		}
-	}
 	influence = 0.1
 	loyalty = 0.1
 	is_valid = {
@@ -678,8 +670,18 @@ estate_nobles_levies = {
 			has_government_attribute = free_noble_levies
 		}
 		modifier = {
-			max_absolutism = 5
 			nobles_influence_modifier = -0.1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			OR = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = free_noble_levies
+			}
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	# AB [[[
@@ -780,14 +782,6 @@ estate_nobles_advisors = {
 			max_absolutism = 1
 		}
 	}
-	conditional_modifier = {
-		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
-		}
-		modifier = {
-			max_absolutism = 5
-		}
-	}
 	influence = 0.05
 	loyalty = 0.05
 	can_revoke = {
@@ -828,8 +822,21 @@ estate_nobles_advisors = {
 		}
 		modifier = {
 			stability_cost_modifier = -0.1
-			max_absolutism = 5
 			nobles_influence_modifier = -0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			OR = {
+				has_government_attribute = no_absolutism_from_boiar_privileges
+				AND = {
+					has_wallachia_compromised_with_the_boiars = yes
+					has_reform = maintain_nobles_status_quo_reform
+				}
+			}
+		}
+		modifier = {
+			max_absolutism = 5
 		}
 	}
 	ai_will_do = {
