@@ -20,7 +20,6 @@
  cantacuzino_faction: "House Cantacuzino"
  cantacuzino_faction_influence: "Cantacuzino Influence"
  cantacuzino_faction_FACTION_DESC: "Byzantine-descended nobles famous for martial traditions, abundant levies, and their steadfast defense of Wallachia."
-
  ghica_faction: "House Ghica"
  ghica_faction_influence: "Ghica Influence"
  ghica_faction_FACTION_DESC: "Eminent administrators, celebrated for modernizing Wallachian governance, progressive policies, and significant reforms."
@@ -32,5 +31,5 @@
  racovita_faction_FACTION_DESC: "Noble Moldavian house known for brief Wallachian rule, strategic alliances, and diplomatic efforts amidst regional rivalries."
  the_ten_houses_faction_tab: "The Ten Houses"
  the_ten_houses_faction_title: "The Ten Houses of [Root.GetName]"
- WAL_parliament_name: "Council of the Ten"
- TUH_parliament_name: "Council of the Ten"
+ WAL_parliament_name: "Diet of the Ten"
+ TUH_parliament_name: "Diet of the Ten"
