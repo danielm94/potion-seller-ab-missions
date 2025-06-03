@@ -72,7 +72,7 @@ racovita_faction = {
 	monarch_power = dip
 	always = yes
 	modifier = {
-		ae_impact = -0.1
+		ae_impact = -0.05
 		dip_advisor_cost = -0.1
 		province_warscore_cost = -0.05
 	}
