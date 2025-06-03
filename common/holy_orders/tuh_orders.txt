@@ -21,6 +21,7 @@ basarab_stronghold = {
 				}
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_tax = -1
@@ -59,6 +60,7 @@ bibescu_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_production = -1
@@ -97,6 +99,7 @@ draculesti_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_manpower = -1
@@ -136,6 +139,7 @@ brancoveanu_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_tax = -1
@@ -174,6 +178,7 @@ movilesti_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_production = -1
@@ -212,6 +217,7 @@ danesti_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_manpower = -1
@@ -251,6 +257,7 @@ ghica_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_tax = -1
@@ -288,6 +295,7 @@ racovita_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_production = -1
@@ -326,6 +334,7 @@ cantacuzino_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_manpower = -1
@@ -364,6 +373,7 @@ mavrocordatos_stronghold = {
 				share = 0.1
 			}
 		}
+		custom_tooltip = stronghold_on_dev_tooltip
 	}
 	per_province_abandon_effect = {
 		add_base_tax = -1

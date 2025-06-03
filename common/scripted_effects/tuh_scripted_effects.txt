@@ -286,94 +286,180 @@ tuh_adjust_factions_towards_target_effect = {
 }
 
 tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
-    if = {
-        limit = {
-            dynasty = "Basarab"
-        }
-        add_faction_influence = {
-            faction = basarab_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Draculesti"
-        }
-        add_faction_influence = {
-            faction = draculesti_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Danesti"
-        }
-        add_faction_influence = {
-            faction = danesti_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Bibescu"
-        }
-        add_faction_influence = {
-            faction = bibescu_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Brancoveanu"
-        }
-        add_faction_influence = {
-            faction = brancoveanu_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Movilesti"
-        }
-        add_faction_influence = {
-            faction = movilesti_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Cantacuzino"
-        }
-        add_faction_influence = {
-            faction = cantacuzino_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Ghica"
-        }
-        add_faction_influence = {
-            faction = ghica_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Mavrocordatos"
-        }
-        add_faction_influence = {
-            faction = mavrocordatos_faction
-            influence = 15
-        }
-    }
-    else_if = {
-        limit = {
-            dynasty = "Racovita"
-        }
-        add_faction_influence = {
-            faction = racovita_faction
-            influence = 15
-        }
-    }
+	if = {
+		limit = {
+			dynasty = "Basarab"
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Draculesti"
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Danesti"
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Bibescu"
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Brancoveanu"
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Movilesti"
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Cantacuzino"
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Ghica"
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Mavrocordatos"
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 15
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Racovita"
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 15
+		}
+	}
+}
+
+tuh_add_faction_influence_on_dev_effect = {
+	trigger_switch = {
+		on_trigger = holy_order		# This will check which stronghold is active in the province
+		basarab_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = basarab_faction
+					influence = 1
+				}
+			}
+		}
+		bibescu_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = bibescu_faction
+					influence = 1
+				}
+			}
+		}
+		draculesti_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = draculesti_faction
+					influence = 1
+				}
+			}
+		}
+		brancoveanu_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = brancoveanu_faction
+					influence = 1
+				}
+			}
+		}
+		movilesti_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = movilesti_faction
+					influence = 1
+				}
+			}
+		}
+		danesti_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = danesti_faction
+					influence = 1
+				}
+			}
+		}
+		ghica_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = ghica_faction
+					influence = 1
+				}
+			}
+		}
+		racovita_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = racovita_faction
+					influence = 1
+				}
+			}
+		}
+		cantacuzino_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = cantacuzino_faction
+					influence = 1
+				}
+			}
+		}
+		mavrocordatos_stronghold = {
+			owner = {
+				add_faction_influence = {
+					faction = mavrocordatos_faction
+					influence = 1
+				}
+			}
+		}
+	}
 }

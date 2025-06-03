@@ -22,4 +22,4 @@
  cantacuzino_stronghold_desc: "Marked by Cantacuzino's scholarly and Byzantine heritage, this area is a center of learning and sophisticated administration."
  mavrocordatos_stronghold: "Mavrocordatos Stronghold"
  mavrocordatos_stronghold_desc: "A region reflecting Mavrocordatos enlightenment, known for its orderly society, legal reforms, and a more tolerant atmosphere."
- stronghold_on_dev_tooltip: "Developing any province in this state will grant §G+<amount>§! faction influence per dev click."
+ stronghold_on_dev_tooltip: "Developing any province in this state will grant §G+1§! faction influence per dev click."
