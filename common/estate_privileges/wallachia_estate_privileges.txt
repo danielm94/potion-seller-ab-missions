@@ -5,21 +5,12 @@ estate_nobles_dominance_of_the_boierime = {
 	influence = 0.15
 	is_valid = {
 		is_or_was_wallachia = yes
-		NOT = {
-			has_government_attribute = romanian_elective_monarchy
-		}
 	}
 	can_select = {
-		always = no
+		has_government_attribute = romanian_elective_monarchy
 	}
 	can_revoke = {
 		has_country_modifier = wallachian_terror_purging_the_estate_elites
-	}
-	penalties = {
-		yearly_absolutism = -0.5
-		min_autonomy = 15
-		global_tax_modifier = -0.15
-		autonomy_change_time = 1
 	}
 	benefits = {
 		global_regiment_cost = -0.25
@@ -48,6 +39,30 @@ estate_nobles_dominance_of_the_boierime = {
 					}
 				}
 			}
+		}
+	}
+	conditional_modifier = {
+		is_bad = yes
+		trigger = {
+			NOT = {
+				has_government_attribute = romanian_elective_monarchy
+			}
+		}
+		modifier = {
+			yearly_absolutism = -0.5
+			min_autonomy = 15
+			global_tax_modifier = -0.15
+			autonomy_change_time = 1
+		}
+	}
+	conditional_modifier = {
+		is_bad = no
+		trigger = {
+			has_government_attribute = no_absolutism_from_boiar_privileges
+		}
+		modifier = {
+			max_absolutism = 20
+			nobles_influence_modifier = -0.15
 		}
 	}
 	mechanics = {
