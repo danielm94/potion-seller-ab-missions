@@ -1,0 +1,40 @@
+dacian_elective_monarchy = {
+	icon = "dacian_elective_monarchy"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	heir = no
+	potential = {
+		tag = TUH
+		has_country_flag = wal_elective_monarchy
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		global_manpower_modifier = 0.1
+		global_regiment_cost = -0.1
+		diplomatic_reputation = 1
+		nobles_privilege_slots = 3
+		governing_capacity = 100
+		state_governing_cost = -0.1
+		max_absolutism = -35
+	}
+	custom_attributes = {
+		has_parliament = yes
+		no_absolutism_from_boiar_privileges = yes
+		election_on_death = yes
+		romanian_elective_monarchy = yes
+	}
+	factions = {
+		basarab_faction
+		bibescu_faction
+		draculesti_faction
+		brancoveanu_faction
+		movilesti_faction
+		danesti_faction
+		ghica_faction
+		racovita_faction
+		cantacuzino_faction
+		mavrocordatos_faction
+	}
+}
