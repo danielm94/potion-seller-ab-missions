@@ -1,114 +1,78 @@
-is_any_romanian_faction_unbalanced_trigger = {
-	OR = {
-		# basarab_faction
-		faction_influence = {
-			faction = basarab_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = basarab_faction
-				influence = 9
-			}
-		}
-		# draculesti_faction
-		faction_influence = {
-			faction = draculesti_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = draculesti_faction
-				influence = 9
-			}
-		}
-		# danesti_faction
-		faction_influence = {
-			faction = danesti_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = danesti_faction
-				influence = 9
-			}
-		}
-		# bibescu_faction
-		faction_influence = {
-			faction = bibescu_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = bibescu_faction
-				influence = 9
-			}
-		}
-		# brancoveanu_faction
-		faction_influence = {
-			faction = brancoveanu_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = brancoveanu_faction
-				influence = 9
-			}
-		}
-		# movilesti_faction
-		faction_influence = {
-			faction = movilesti_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = movilesti_faction
-				influence = 9
-			}
-		}
-		# cantacuzino_faction
-		faction_influence = {
-			faction = cantacuzino_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = cantacuzino_faction
-				influence = 9
-			}
-		}
-		# ghica_faction
-		faction_influence = {
-			faction = ghica_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = ghica_faction
-				influence = 9
-			}
-		}
-		# mavrocordatos_faction
-		faction_influence = {
-			faction = mavrocordatos_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = mavrocordatos_faction
-				influence = 9
-			}
-		}
-		# racovita_faction
-		faction_influence = {
-			faction = racovita_faction
-			influence = 11
-		}
-		NOT = {
-			faction_influence = {
-				faction = racovita_faction
-				influence = 9
-			}
+is_var_basarab = {
+	is_variable_equal = {
+		which = $var$
+		value = 0
+	}
+}
+
+is_var_bibescu = {
+	is_variable_equal = {
+		which = $var$
+		value = 1
+	}
+}
+
+is_var_draculesti = {
+	is_variable_equal = {
+		which = $var$
+		value = 2
+	}
+}
+
+is_var_brancoveanu = {
+	is_variable_equal = {
+		which = $var$
+		value = 3
+	}
+}
+
+is_var_movilesti = {
+	is_variable_equal = {
+		which = $var$
+		value = 4
+	}
+}
+
+is_var_danesti = {
+	is_variable_equal = {
+		which = $var$
+		value = 5
+	}
+}
+
+is_var_ghica = {
+	is_variable_equal = {
+		which = $var$
+		value = 6
+	}
+}
+
+is_var_racovita = {
+	is_variable_equal = {
+		which = $var$
+		value = 7
+	}
+}
+
+is_var_cantacuzino = {
+	is_variable_equal = {
+		which = $var$
+		value = 8
+	}
+}
+
+is_var_mavrocordatos = {
+	is_variable_equal = {
+		which = $var$
+		value = 9
+	}
+}
+
+is_founding_house_set = {
+	NOT = {
+		is_variable_equal = {
+			which = tuh_founding_house # Assuming this is a country-scoped variable
+			value = -1
 		}
 	}
 }
