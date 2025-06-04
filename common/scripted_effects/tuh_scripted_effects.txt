@@ -1,287 +1,93 @@
 tuh_faction_initialization_effect = {
 	tuh_balance_faction_influence_effect = yes
 	tuh_add_faction_influence_based_on_ruler_dynasty_effect = yes
+	tuh_house_influence_ruler_modifier_effect = yes
+	tuh_set_founding_house_variable_effect = yes
+	tuh_set_current_ruling_house_variable_effect = yes
+	tuh_initialize_total_election_wins_vars = yes
+	tuh_initialize_consecutive_election_wins_vars = yes
 }
 
 tuh_balance_faction_influence_effect = {
-	while = {
-		limit = {
-			is_any_romanian_faction_unbalanced_trigger = yes
-		}
-		tuh_adjust_factions_towards_target_effect = yes
+	set_faction_influence_to_0_effect = {
+		faction = basarab_faction
 	}
-}
-
-tuh_adjust_factions_towards_target_effect = {
-	# basarab_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = basarab_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = basarab_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = basarab_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = basarab_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = basarab_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = draculesti_faction
 	}
-	# draculesti_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = draculesti_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = draculesti_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = draculesti_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = draculesti_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = draculesti_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = danesti_faction
 	}
-	# danesti_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = danesti_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = danesti_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = danesti_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = danesti_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = danesti_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = bibescu_faction
 	}
-	# bibescu_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = bibescu_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = bibescu_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = bibescu_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = bibescu_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = bibescu_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = brancoveanu_faction
 	}
-	# brancoveanu_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = brancoveanu_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = brancoveanu_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = brancoveanu_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = brancoveanu_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = brancoveanu_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = movilesti_faction
 	}
-	# movilesti_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = movilesti_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = movilesti_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = movilesti_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = movilesti_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = movilesti_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = cantacuzino_faction
 	}
-	# cantacuzino_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = cantacuzino_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = cantacuzino_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = cantacuzino_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = cantacuzino_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = cantacuzino_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = ghica_faction
 	}
-	# ghica_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = ghica_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = ghica_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = ghica_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = ghica_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = ghica_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = mavrocordatos_faction
 	}
-	# mavrocordatos_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = mavrocordatos_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = mavrocordatos_faction
-			influence = -1
-		}
+	add_faction_influence = {
+		faction = mavrocordatos_faction
+		influence = 10
+		perform_readjustment = no
 	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = mavrocordatos_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = mavrocordatos_faction
-			influence = 1
-		}
+	set_faction_influence_to_0_effect = {
+		faction = racovita_faction
 	}
-	# racovita_faction
-	if = {
-		limit = {
-			faction_influence = {
-				faction = racovita_faction
-				influence = 11
-			}
-		}
-		add_faction_influence = {
-			faction = racovita_faction
-			influence = -1
-		}
-	}
-	if = {
-		limit = {
-			NOT = {
-				faction_influence = {
-					faction = racovita_faction
-					influence = 9
-				}
-			}
-		}
-		add_faction_influence = {
-			faction = racovita_faction
-			influence = 1
-		}
+	add_faction_influence = {
+		faction = racovita_faction
+		influence = 10
+		perform_readjustment = no
 	}
 }
 
@@ -292,7 +98,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = basarab_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -301,7 +107,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = draculesti_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -310,7 +116,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = danesti_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -319,7 +125,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = bibescu_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -328,7 +134,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = brancoveanu_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -337,7 +143,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = movilesti_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -346,7 +152,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = cantacuzino_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -355,7 +161,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = ghica_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -364,7 +170,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = mavrocordatos_faction
-			influence = 15
+			influence = 30
 		}
 	}
 	else_if = {
@@ -373,7 +179,7 @@ tuh_add_faction_influence_based_on_ruler_dynasty_effect = {
 		}
 		add_faction_influence = {
 			faction = racovita_faction
-			influence = 15
+			influence = 30
 		}
 	}
 }
@@ -459,6 +265,1033 @@ tuh_add_faction_influence_on_dev_effect = {
 					faction = mavrocordatos_faction
 					influence = 1
 				}
+			}
+		}
+	}
+}
+
+tuh_house_influence_ruler_modifier_effect = {
+	trigger_switch = {
+		on_trigger = dynasty
+		"Basarab" = {
+			add_ruler_modifier = {
+				name = basarab_in_power
+				duration = -1
+			}
+		}
+		"Draculesti" = {
+			add_ruler_modifier = {
+				name = draculesti_in_power
+				duration = -1
+			}
+		}
+		"Danesti" = {
+			add_ruler_modifier = {
+				name = danesti_in_power
+				duration = -1
+			}
+		}
+		"Bibescu" = {
+			add_ruler_modifier = {
+				name = bibescu_in_power
+				duration = -1
+			}
+		}
+		"Brancoveanu" = {
+			add_ruler_modifier = {
+				name = brancoveanu_in_power
+				duration = -1
+			}
+		}
+		"Movilesti" = {
+			add_ruler_modifier = {
+				name = movilesti_in_power
+				duration = -1
+			}
+		}
+		"Cantacuzino" = {
+			add_ruler_modifier = {
+				name = cantacuzino_in_power
+				duration = -1
+			}
+		}
+		"Ghica" = {
+			add_ruler_modifier = {
+				name = ghica_in_power
+				duration = -1
+			}
+		}
+		"Mavrocordatos" = {
+			add_ruler_modifier = {
+				name = mavrocordatos_in_power
+				duration = -1
+			}
+		}
+		"Racovita" = {
+			add_ruler_modifier = {
+				name = racovita_in_power
+				duration = -1
+			}
+		}
+	}
+}
+
+set_var_to_basarab_constant = {
+	set_variable = {
+		which = $var$
+		value = 0
+	}
+}
+
+set_var_to_bibescu_constant = {
+	set_variable = {
+		which = $var$
+		value = 1
+	}
+}
+
+set_var_to_draculesti_constant = {
+	set_variable = {
+		which = $var$
+		value = 2
+	}
+}
+
+set_var_to_brancoveanu_constant = {
+	set_variable = {
+		which = $var$
+		value = 3
+	}
+}
+
+set_var_to_movilesti_constant = {
+	set_variable = {
+		which = $var$
+		value = 4
+	}
+}
+
+set_var_to_danesti_constant = {
+	set_variable = {
+		which = $var$
+		value = 5
+	}
+}
+
+set_var_to_ghica_constant = {
+	set_variable = {
+		which = $var$
+		value = 6
+	}
+}
+
+set_var_to_racovita_constant = {
+	set_variable = {
+		which = $var$
+		value = 7
+	}
+}
+
+set_var_to_cantacuzino_constant = {
+	set_variable = {
+		which = $var$
+		value = 8
+	}
+}
+
+set_var_to_mavrocordatos_constant = {
+	set_variable = {
+		which = $var$
+		value = 9
+	}
+}
+
+tuh_set_founding_house_variable_effect = {
+	if = {
+		limit = {
+			dynasty = "Basarab"
+		}
+		set_var_to_basarab_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Bibescu"
+		}
+		set_var_to_bibescu_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Draculesti"
+		}
+		set_var_to_draculesti_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Brancoveanu"
+		}
+		set_var_to_brancoveanu_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Movilesti"
+		}
+		set_var_to_movilesti_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Danesti"
+		}
+		set_var_to_danesti_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Ghica"
+		}
+		set_var_to_ghica_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Racovita"
+		}
+		set_var_to_racovita_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Cantacuzino"
+		}
+		set_var_to_cantacuzino_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Mavrocordatos"
+		}
+		set_var_to_mavrocordatos_constant = {
+			var = tuh_founding_house
+		}
+	}
+	else = {
+		#If the player has a dynasty that's not one of the 10 houses.
+		set_variable = {
+			which = tuh_founding_house
+			value = -1
+		}
+	}
+}
+
+tuh_set_current_ruling_house_variable_effect = {
+	if = {
+		limit = {
+			dynasty = "Basarab"
+		}
+		set_var_to_basarab_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Bibescu"
+		}
+		set_var_to_bibescu_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Draculesti"
+		}
+		set_var_to_draculesti_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Brancoveanu"
+		}
+		set_var_to_brancoveanu_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Movilesti"
+		}
+		set_var_to_movilesti_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Danesti"
+		}
+		set_var_to_danesti_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Ghica"
+		}
+		set_var_to_ghica_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Racovita"
+		}
+		set_var_to_racovita_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Cantacuzino"
+		}
+		set_var_to_cantacuzino_constant = {
+			var = tuh_current_house
+		}
+	}
+	else_if = {
+		limit = {
+			dynasty = "Mavrocordatos"
+		}
+		set_var_to_mavrocordatos_constant = {
+			var = tuh_current_house
+		}
+	}
+	else = {
+		# This block executes if the dynasty is not one of the 10 specified houses.
+		# Set tuh_current_house to a value indicating no specific recognized house is the founder.
+		set_variable = {
+			which = tuh_current_house
+			value = -1			# Using -1 as it's outside the 0-9 range for recognized houses.
+		}
+	}
+}
+
+tuh_initialize_total_election_wins_vars = {
+	set_variable = {
+		which = basarab_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = bibescu_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = draculesti_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = brancoveanu_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = movilesti_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = danesti_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = ghica_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = racovita_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = cantacuzino_total_wins
+		value = 0
+	}
+	set_variable = {
+		which = mavrocordatos_total_wins
+		value = 0
+	}
+}
+
+tuh_initialize_consecutive_election_wins_vars = {
+	set_variable = {
+		which = basarab_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = bibescu_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = draculesti_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = brancoveanu_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = movilesti_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = danesti_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = ghica_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = racovita_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = cantacuzino_consecutive_wins
+		value = 0
+	}
+	set_variable = {
+		which = mavrocordatos_consecutive_wins
+		value = 0
+	}
+}
+
+# tuh_set_total_house_wins_to_var = {
+# 	if = {
+# 		limit = {
+# 			is_var_basarab = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = basarab_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_bibescu = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = bibescu_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_draculesti = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = draculesti_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_brancoveanu = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = brancoveanu_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_movilesti = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = movilesti_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_danesti = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = danesti_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_ghica = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = ghica_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_racovita = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = racovita_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_cantacuzino = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = cantacuzino_total_wins
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			is_var_mavrocordatos = {
+# 				var = $house_id_var$
+# 			}
+# 		}
+# 		set_variable = {
+# 			which = $var$
+# 			which = mavrocordatos_total_wins
+# 		}
+# 	}
+# }
+
+tuh_update_house_total_wins = {
+	hidden_effect = {
+		trigger_switch = {
+			on_trigger = dynasty
+			"Basarab" = {
+				change_variable = {
+					which = basarab_total_wins
+					value = 1
+				}
+			}
+			"Bibescu" = {
+				change_variable = {
+					which = bibescu_total_wins
+					value = 1
+				}
+			}
+			"Draculesti" = {
+				change_variable = {
+					which = draculesti_total_wins
+					value = 1
+				}
+			}
+			"Brancoveanu" = {
+				change_variable = {
+					which = brancoveanu_total_wins
+					value = 1
+				}
+			}
+			"Movilesti" = {
+				change_variable = {
+					which = movilesti_total_wins
+					value = 1
+				}
+			}
+			"Danesti" = {
+				change_variable = {
+					which = danesti_total_wins
+					value = 1
+				}
+			}
+			"Ghica" = {
+				change_variable = {
+					which = ghica_total_wins
+					value = 1
+				}
+			}
+			"Racovita" = {
+				change_variable = {
+					which = racovita_total_wins
+					value = 1
+				}
+			}
+			"Cantacuzino" = {
+				change_variable = {
+					which = cantacuzino_total_wins
+					value = 1
+				}
+			}
+			"Mavrocordatos" = {
+				change_variable = {
+					which = mavrocordatos_total_wins
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+tuh_update_house_consecutive_wins = {
+	hidden_effect = {
+		trigger_switch = {
+			on_trigger = dynasty
+			"Basarab" = {
+				change_variable = {
+					which = basarab_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = basarab_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = basarab_consecutive_wins
+					which = temp
+				}
+			}
+			"Bibescu" = {
+				change_variable = {
+					which = bibescu_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = bibescu_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = bibescu_consecutive_wins
+					which = temp
+				}
+			}
+			"Draculesti" = {
+				change_variable = {
+					which = draculesti_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = draculesti_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = draculesti_consecutive_wins
+					which = temp
+				}
+			}
+			"Brancoveanu" = {
+				change_variable = {
+					which = brancoveanu_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = brancoveanu_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = brancoveanu_consecutive_wins
+					which = temp
+				}
+			}
+			"Movilesti" = {
+				change_variable = {
+					which = movilesti_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = movilesti_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = movilesti_consecutive_wins
+					which = temp
+				}
+			}
+			"Danesti" = {
+				change_variable = {
+					which = danesti_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = danesti_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = danesti_consecutive_wins
+					which = temp
+				}
+			}
+			"Ghica" = {
+				change_variable = {
+					which = ghica_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = ghica_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = ghica_consecutive_wins
+					which = temp
+				}
+			}
+			"Racovita" = {
+				change_variable = {
+					which = racovita_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = racovita_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = racovita_consecutive_wins
+					which = temp
+				}
+			}
+			"Cantacuzino" = {
+				change_variable = {
+					which = cantacuzino_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = cantacuzino_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = cantacuzino_consecutive_wins
+					which = temp
+				}
+			}
+			"Mavrocordatos" = {
+				change_variable = {
+					which = mavrocordatos_consecutive_wins
+					value = 1
+				}
+				set_variable = {
+					which = temp
+					which = mavrocordatos_consecutive_wins
+				}
+				tuh_initialize_consecutive_election_wins_vars = yes
+				set_variable = {
+					which = mavrocordatos_consecutive_wins
+					which = temp
+				}
+			}
+		}
+	}
+}
+
+tuh_calc_legitimacy_gain_for_each_house = {
+	# Basarab
+	set_variable = {
+		which = basarab_legitimacy_gain
+		which = basarab_total_wins
+	}
+	multiply_variable = {
+		which = basarab_legitimacy_gain
+		value = 5
+	}
+
+	# Bibescu
+	set_variable = {
+		which = bibescu_legitimacy_gain
+		which = bibescu_total_wins
+	}
+	multiply_variable = {
+		which = bibescu_legitimacy_gain
+		value = 5
+	}
+
+	# Draculesti
+	set_variable = {
+		which = draculesti_legitimacy_gain
+		which = draculesti_total_wins
+	}
+	multiply_variable = {
+		which = draculesti_legitimacy_gain
+		value = 5
+	}
+
+	# Brancoveanu
+	set_variable = {
+		which = brancoveanu_legitimacy_gain
+		which = brancoveanu_total_wins
+	}
+	multiply_variable = {
+		which = brancoveanu_legitimacy_gain
+		value = 5
+	}
+
+	# Movilesti
+	set_variable = {
+		which = movilesti_legitimacy_gain
+		which = movilesti_total_wins
+	}
+	multiply_variable = {
+		which = movilesti_legitimacy_gain
+		value = 5
+	}
+
+	# Danesti
+	set_variable = {
+		which = danesti_legitimacy_gain
+		which = danesti_total_wins
+	}
+	multiply_variable = {
+		which = danesti_legitimacy_gain
+		value = 5
+	}
+
+	# Ghica
+	set_variable = {
+		which = ghica_legitimacy_gain
+		which = ghica_total_wins
+	}
+	multiply_variable = {
+		which = ghica_legitimacy_gain
+		value = 5
+	}
+
+	# Racovita
+	set_variable = {
+		which = racovita_legitimacy_gain
+		which = racovita_total_wins
+	}
+	multiply_variable = {
+		which = racovita_legitimacy_gain
+		value = 5
+	}
+
+	# Cantacuzino
+	set_variable = {
+		which = cantacuzino_legitimacy_gain
+		which = cantacuzino_total_wins
+	}
+	multiply_variable = {
+		which = cantacuzino_legitimacy_gain
+		value = 5
+	}
+
+	# Mavrocordatos
+	set_variable = {
+		which = mavrocordatos_legitimacy_gain
+		which = mavrocordatos_total_wins
+	}
+	multiply_variable = {
+		which = mavrocordatos_legitimacy_gain
+		value = 5
+	}
+}
+
+tuh_calc_consecutive_win_legitimacy_lost_for_each_house = {
+	# Basarab
+	set_variable = {
+		which = basarab_consecutive_win_legitimacy_loss
+		which = basarab_consecutive_wins
+	}
+	multiply_variable = {
+		which = basarab_consecutive_win_legitimacy_loss
+		value = -5 
+	}
+	# Bibescu
+	set_variable = {
+		which = bibescu_consecutive_win_legitimacy_loss
+		which = bibescu_consecutive_wins
+	}
+	multiply_variable = {
+		which = bibescu_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Draculesti
+	set_variable = {
+		which = draculesti_consecutive_win_legitimacy_loss
+		which = draculesti_consecutive_wins
+	}
+	multiply_variable = {
+		which = draculesti_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Brancoveanu
+	set_variable = {
+		which = brancoveanu_consecutive_win_legitimacy_loss
+		which = brancoveanu_consecutive_wins
+	}
+	multiply_variable = {
+		which = brancoveanu_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Movilesti
+	set_variable = {
+		which = movilesti_consecutive_win_legitimacy_loss
+		which = movilesti_consecutive_wins
+	}
+	multiply_variable = {
+		which = movilesti_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Danesti
+	set_variable = {
+		which = danesti_consecutive_win_legitimacy_loss
+		which = danesti_consecutive_wins
+	}
+	multiply_variable = {
+		which = danesti_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Ghica
+	set_variable = {
+		which = ghica_consecutive_win_legitimacy_loss
+		which = ghica_consecutive_wins
+	}
+	multiply_variable = {
+		which = ghica_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Racovita
+	set_variable = {
+		which = racovita_consecutive_win_legitimacy_loss
+		which = racovita_consecutive_wins
+	}
+	multiply_variable = {
+		which = racovita_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Cantacuzino
+	set_variable = {
+		which = cantacuzino_consecutive_win_legitimacy_loss
+		which = cantacuzino_consecutive_wins
+	}
+	multiply_variable = {
+		which = cantacuzino_consecutive_win_legitimacy_loss
+		value = -5
+	}
+
+	# Mavrocordatos
+	set_variable = {
+		which = mavrocordatos_consecutive_win_legitimacy_loss
+		which = mavrocordatos_consecutive_wins
+	}
+	multiply_variable = {
+		which = mavrocordatos_consecutive_win_legitimacy_loss
+		value = -5
+	}
+}
+
+tuh_set_legitimacy_election_effect = {
+	hidden_effect = {
+		set_variable = {
+			which = candidate_house
+			value = $candidate_house_val$
+		}
+		set_variable = {
+			which = candidate_house_plus_one
+			which = candidate_house
+		}
+		change_variable = {
+			which = candidate_house_plus_one
+			value = 1
+		}
+	}
+	custom_tooltip = tooltip_line_divider
+	custom_tooltip = tuh_set_legitimacy_election_initial_legitimacy_tooltip
+	hidden_effect = {
+		add_legitimacy = -100
+		add_legitimacy = 50
+	}
+	if = {
+		limit = {
+			is_founding_house_set = yes
+			check_variable = {
+				which = founding_house
+				which = candidate_house
+			}
+			NOT = {
+				check_variable = {
+					which = founding_house
+					which = candidate_house_plus_one
+				}
+			}
+		}
+		custom_tooltip = tuh_set_legitimacy_election_founding_house_bonus_tooltip
+		hidden_effect = {
+			add_legitimacy = 25
+		}
+	}
+	if = {
+		limit = {
+			is_var_basarab = {
+				var = candidate_house
+			}
+		}
+		custom_tooltip = tuh_set_legitimacy_election_basarab_bonus_tooltip
+		hidden_effect = {
+			add_legitimacy = 15
+		}
+	}
+	hidden_effect = {
+		set_variable = {
+			which = candidate_house_total_wins
+			which = $candidate_house_total_wins_var$
+		}
+		set_variable = {
+			which = total_wins_legitimacy_gain
+			which = candidate_house_total_wins
+		}
+		multiply_variable = {
+			which = total_wins_legitimacy_gain
+			value = 5
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = candidate_house_total_wins
+				value = 1
+			}
+		}
+		custom_tooltip = tuh_set_legitimacy_total_wins_bonus_tooltip
+		hidden_effect = {
+			variable_effect = {
+				var = total_wins_legitimacy_gain
+				effect = add_legitimacy
 			}
 		}
 	}

@@ -1706,3 +1706,32 @@ export_government_power_to_variable = {
 	# If for some reason none of the above matched (e.g., power is negative, which shouldn't happen for gov power)
 	# the variable will retain its initial value of 0.
 }
+
+set_faction_influence_to_0_effect = {
+	while = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 10
+			}
+		}
+		add_faction_influence = {
+			faction = $faction$
+			influence = -10
+			perform_readjustment = no
+		}
+	}
+	while = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 1
+			}
+		}
+		add_faction_influence = {
+			faction = $faction$
+			influence = -1
+			perform_readjustment = no
+		}
+	}
+}

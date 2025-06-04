@@ -4,13 +4,15 @@ country_event = {
 	id = tuh_events.0
 	title = tuh_events.0.t
 	desc = tuh_events.0.d
-	picture = GFX_tuh_events.0
+	picture = PARLIAMENT_eventPicture
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
 	}
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
+			tuh_calc_legitimacy_gain_for_each_house = yes
+			tuh_calc_consecutive_win_legitimacy_lost_for_each_house = yes
 			define_ruler = {
 				name = "Council of the Ten Houses"
 				regency = yes
@@ -20,7 +22,7 @@ country_event = {
 				age = 15
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_basarab
+				exiled_as = tuh_elections_basarab
 				min_age = 20
 				max_age = 75
 				change_adm = 1
@@ -28,7 +30,7 @@ country_event = {
 				dynasty = "Basarab"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_bibescu
+				exiled_as = tuh_elections_bibescu
 				min_age = 20
 				max_age = 75
 				change_dip = 1
@@ -36,7 +38,7 @@ country_event = {
 				dynasty = "Bibescu"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_draculesti
+				exiled_as = tuh_elections_draculesti
 				min_age = 20
 				max_age = 75
 				change_mil = 1
@@ -44,7 +46,7 @@ country_event = {
 				dynasty = "Draculesti"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_brancoveanu
+				exiled_as = tuh_elections_brancoveanu
 				min_age = 20
 				max_age = 75
 				change_adm = 1
@@ -52,7 +54,7 @@ country_event = {
 				dynasty = "Brancoveanu"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_movilesti
+				exiled_as = tuh_elections_movilesti
 				min_age = 20
 				max_age = 75
 				change_dip = 1
@@ -60,7 +62,7 @@ country_event = {
 				dynasty = "Movilesti"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_danesti
+				exiled_as = tuh_elections_danesti
 				min_age = 20
 				max_age = 75
 				change_mil = 1
@@ -68,7 +70,7 @@ country_event = {
 				dynasty = "Danesti"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_ghica
+				exiled_as = tuh_elections_ghica
 				min_age = 20
 				max_age = 75
 				change_adm = 1
@@ -76,7 +78,7 @@ country_event = {
 				dynasty = "Ghica"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_racovita
+				exiled_as = tuh_elections_racovita
 				min_age = 20
 				max_age = 75
 				change_dip = 1
@@ -84,7 +86,7 @@ country_event = {
 				dynasty = "Racovita"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_cantacuzino
+				exiled_as = tuh_elections_cantacuzino
 				min_age = 20
 				max_age = 75
 				change_mil = 1
@@ -92,7 +94,7 @@ country_event = {
 				dynasty = "Cantacuzino"
 			}
 			define_exiled_ruler = {
-				exiled_as = wallachian_elections_mavrocordatos
+				exiled_as = tuh_elections_mavrocordatos
 				min_age = 20
 				max_age = 75
 				adm = 1
@@ -103,92 +105,271 @@ country_event = {
 	}
 	option = {
 		name = tuh_events.0.a
-		set_ruler = wallachian_elections_basarab
-		add_ruler_personality = righteous_personality
-		add_ruler_modifier = {
-			name = basarab_in_power
-			duration = -1
+		set_ruler = tuh_elections_basarab
+		custom_tooltip = tuh_election_basarab_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = righteous_personality
+		}
+		custom_tooltip = tuh_election_basarab_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = basarab_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 30
+		}
+		# tuh_set_legitimacy_election_effect = {
+		# 	candidate_house_val = 0
+		# 	candidate_house_total_wins_var = basarab_total_wins
+		# }
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = tuh_election_initial_legitimacy_tooltip
+		hidden_effect = {
+			add_legitimacy = -100
+			add_legitimacy = 50
+		}
+		if = {
+			limit = {
+				is_founding_house_set = yes
+				is_var_basarab = {
+					var = founding_house
+				}
+			}
+			custom_tooltip = tuh_set_legitimacy_election_founding_house_bonus_tooltip
+			hidden_effect = {
+				add_legitimacy = 25
+			}
+		}
+		custom_tooltip = tuh_set_legitimacy_election_basarab_bonus_tooltip
+		hidden_effect = {
+			add_legitimacy = 15
+		}
+		hidden_effect = {
+			set_variable = {
+				which = total_wins_legitimacy_gain
+				which = basarab_total_wins
+			}
+			log = "Total wins legitimacy gains: [This.total_wins_legitimacy_gain.GetValue]"
+			multiply_variable = {
+				which = total_wins_legitimacy_gain
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = basarab_total_wins
+					value = 1
+				}
+			}
+			custom_tooltip = tuh_basarab_total_wins_bonus_tooltip
+			hidden_effect = {
+				variable_effect = {
+					var = total_wins_legitimacy_gain
+					effect = add_legitimacy
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = x
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = basarab_consecutive_wins
+					value = 2
+				}
+			}
+			custom_tooltip = tuh_basarab_consecutive_wins_tooltip
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = basarab_consecutive_wins
+					value = 1
+				}
+			}
+			custom_tooltip = tuh_basarab_won_last_election_tooltip
 		}
 	}
 	option = {
 		name = tuh_events.0.b
-		set_ruler = wallachian_elections_bibescu
-		add_ruler_personality = charismatic_negotiator_personality
-		add_ruler_modifier = {
-			name = bibescu_in_power
-			duration = -1
+		set_ruler = tuh_elections_bibescu
+		custom_tooltip = tuh_election_bibescu_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = charismatic_negotiator_personality
+		}
+		custom_tooltip = tuh_election_bibescu_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = bibescu_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.c
-		set_ruler = wallachian_elections_draculesti
-		add_ruler_personality = bold_fighter_personality
-		add_ruler_modifier = {
-			name = draculesti_in_power
-			duration = -1
+		set_ruler = tuh_elections_draculesti
+		custom_tooltip = tuh_election_draculesti_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = bold_fighter_personality
+		}
+		custom_tooltip = tuh_election_draculesti_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = draculesti_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.dee
-		set_ruler = wallachian_elections_brancoveanu
-		add_ruler_personality = architectural_visionary_personality
-		add_ruler_modifier = {
-			name = brancoveanu_in_power
-			duration = -1
+		set_ruler = tuh_elections_brancoveanu
+		custom_tooltip = tuh_election_brancoveanu_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = architectural_visionary_personality
+		}
+		custom_tooltip = tuh_election_brancoveanu_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = brancoveanu_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.e
-		set_ruler = wallachian_elections_movilesti
-		add_ruler_personality = silver_tongue_personality
-		add_ruler_modifier = {
-			name = movilesti_in_power
-			duration = -1
+		set_ruler = tuh_elections_movilesti
+		custom_tooltip = tuh_election_movilesti_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = silver_tongue_personality
+		}
+		custom_tooltip = tuh_election_movilesti_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = movilesti_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.f
-		set_ruler = wallachian_elections_danesti
-		add_ruler_personality = strict_personality
-		add_ruler_modifier = {
-			name = danesti_in_power
-			duration = -1
+		set_ruler = tuh_elections_danesti
+		custom_tooltip = tuh_election_danesti_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = strict_personality
+		}
+		custom_tooltip = tuh_election_danesti_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = danesti_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.g
-		set_ruler = wallachian_elections_ghica
-		add_ruler_personality = reformist_personality
-		add_ruler_modifier = {
-			name = ghica_in_power
-			duration = -1
+		set_ruler = tuh_elections_ghica
+		custom_tooltip = tuh_election_ghica_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = reformist_personality
+		}
+		custom_tooltip = tuh_election_ghica_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = ghica_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.h
-		set_ruler = wallachian_elections_racovita
-		add_ruler_personality = careful_personality
-		add_ruler_modifier = {
-			name = racovita_in_power
-			duration = -1
+		set_ruler = tuh_elections_racovita
+		custom_tooltip = tuh_election_racovita_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = careful_personality
+		}
+		custom_tooltip = tuh_election_racovita_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = racovita_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.i
-		set_ruler = wallachian_elections_cantacuzino
-		add_ruler_personality = well_connected_personality
-		add_ruler_modifier = {
-			name = cantacuzino_in_power
-			duration = -1
+		set_ruler = tuh_elections_cantacuzino
+		custom_tooltip = tuh_election_cantacuzino_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = well_connected_personality
+		}
+		custom_tooltip = tuh_election_cantacuzino_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = cantacuzino_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 30
 		}
 	}
 	option = {
 		name = tuh_events.0.j
-		set_ruler = wallachian_elections_mavrocordatos
-		add_ruler_personality = scholar_personality
-		add_ruler_modifier = {
-			name = mavrocordatos_in_power
-			duration = -1
+		set_ruler = tuh_elections_mavrocordatos
+		custom_tooltip = tuh_election_mavrocordatos_personality_tooltip
+		hidden_effect = {
+			add_ruler_personality = scholar_personality
 		}
+		custom_tooltip = tuh_election_mavrocordatos_influence_monthly_gain_tooltip
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = mavrocordatos_in_power
+				duration = -1
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 30
+		}
+	}
+	after = {
+		tuh_update_house_total_wins = yes
+		tuh_update_house_consecutive_wins = yes
 	}
 }
