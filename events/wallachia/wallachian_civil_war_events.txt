@@ -1,4 +1,4 @@
-﻿namespace = wallachian_civil_war_events
+namespace = wallachian_civil_war_events
 #Ultimatum event
 country_event = {
 	id = wallachian_civil_war_events.1

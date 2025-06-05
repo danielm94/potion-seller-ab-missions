@@ -1,4 +1,4 @@
-﻿wallachian_civil_war_rebels_enforce_demands_effect = {
+wallachian_civil_war_rebels_enforce_demands_effect = {
 	if = {
 		limit = {
 			has_refused_boiermiea_ultimatum = yes

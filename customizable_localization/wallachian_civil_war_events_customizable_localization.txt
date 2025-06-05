@@ -1,4 +1,4 @@
-﻿defined_text = {
+defined_text = {
 	name = wallachian_civil_war_events_boiermiea_ultimatum_accused_houses
 	random = no
 	text = {

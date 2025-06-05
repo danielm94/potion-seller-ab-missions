@@ -1,4 +1,4 @@
-﻿on_new_monarch = {
+on_new_monarch = {
 	if = {
 		limit = {
 			has_reform = appointive_voivodate
