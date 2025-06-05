@@ -1,5 +1,7 @@
 ﻿l_english:
  tuh_events.0.t: "[tuh_get_random_house_name] Refuses to Recognize the Election"
- tuh_events.0.d: "Todo"
+ tuh_events.0.d: "Barely has [Root.Monarch.GetName] ascended to the throne when the ambitious House [tuh_get_random_house_name] cries foul! They denounce the election as a farce, proclaiming their own candidate as the rightful [Root.Monarch.GetTitle]. Their banners are raised in defiance, and they demand their 'due'. How shall [Root.Monarch.GetName] respond to this blatant challenge to [Root.Monarch.GetHerHis] authority?"
  tuh_events.0.a: "Hah! It's only rigged when they don't win. Off with their heads!"
- tuh_events.0.b: "We can't afford a conflict with [tuh_get_random_house_name]. Give in to their demands..."
+ tuh_events.0.b: "We can't afford a conflict with §Y[tuh_get_random_house_name]§!. Give in to their demands..."
+ tuh_events.0_pretender_tooltip: "§RThe §Y[tuh_get_random_house_name]§! pretender will become [Root.Monarch.GetTitle].§!\nThey will have §R20§! §YLegitimacy§!."
+ tuh_spawn_pretenders_who_reject_election_tooltip: "§Y[tuh_get_random_house_name]§! pretender rebels will spawn in [This.GetName]!"

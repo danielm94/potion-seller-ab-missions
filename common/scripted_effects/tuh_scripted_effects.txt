@@ -1138,7 +1138,7 @@ tuh_precalculate_all_election_tooltips_effect = {
 tuh_fire_pretender_event_based_on_legitimacy = {
 	export_to_variable = {
 		which = legit
-		value = modifier:legitimacy
+		value = trigger_value:legitimacy
 	}
 	set_variable = {
 		which = threshold
@@ -1149,19 +1149,19 @@ tuh_fire_pretender_event_based_on_legitimacy = {
 		which = legit
 	}
 	random_variable = {
-		which = random
+		which = rand
 		value = 100
 	}
 	round_variable = {
-		which = random
+		which = rand
 		value = -1
 	}
 	if = {
 		limit = {
 			NOT = {
 				check_variable = {
+					which = rand
 					which = threshold
-					which = random
 				}
 			}
 		}
@@ -1173,145 +1173,148 @@ tuh_fire_pretender_event_based_on_legitimacy = {
 }
 
 tuh_spawn_pretenders_who_reject_election = {
-	random_list = {
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Alexandru"
-				leader_dynasty = $dynasty$
+	custom_tooltip = tuh_spawn_pretenders_who_reject_election_tooltip
+	hidden_effect = {
+		random_list = {
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Alexandru"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Mircea"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Mircea"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Vlad"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Vlad"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Radu"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Radu"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Dan"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Dan"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Mihai"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Mihai"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Stefan"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Stefan"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Nicolae"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Nicolae"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Constantin"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Constantin"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Grigore"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Grigore"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Ioan"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Ioan"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Vasile"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Vasile"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Petru"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Petru"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Gheorghe"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Gheorghe"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Tudor"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Tudor"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Barbu"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Barbu"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Matei"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Matei"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Serban"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Serban"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Neagoe"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Neagoe"
+					leader_dynasty = $dynasty$
+				}
 			}
-		}
-		5 = {
-			spawn_large_scaled_rebels = {
-				type = pretender_rebels
-				leader = "Dragomir"
-				leader_dynasty = $dynasty$
+			5 = {
+				spawn_large_scaled_rebels = {
+					type = pretender_rebels
+					leader = "Dragomir"
+					leader_dynasty = $dynasty$
+				}
 			}
 		}
 	}

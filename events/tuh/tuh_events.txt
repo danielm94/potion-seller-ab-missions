@@ -31,6 +31,136 @@ country_event = {
 					value = -1
 				}
 			}
+			if = {
+				limit = {
+					is_var_basarab = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Basarab"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_bibescu = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Bibescu"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_draculesti = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Draculesti"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_brancoveanu = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Brancoveanu"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_movilesti = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Movilesti"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_danesti = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Danesti"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_ghica = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Ghica"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_racovita = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Racovita"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_cantacuzino = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Cantacuzino"
+					min_age = 20
+					max_age = 75
+				}
+			}
+			else_if = {
+				limit = {
+					is_var_mavrocordatos = {
+						var = random_house
+					}
+				}
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_pretender
+					dynasty = "Mavrocordatos"
+					min_age = 20
+					max_age = 75
+				}
+			}
 		}
 	}
 	option = {
@@ -155,5 +285,19 @@ country_event = {
 				}
 			}
 		}
+	}
+	option = {
+		name = tuh_events.0.b
+		custom_tooltip = tuh_events.0_pretender_tooltip
+		hidden_effect = {
+			set_ruler = tuh_elections_pretender
+			add_legitimacy = -100
+			add_legitimacy = 25
+		}
+		add_prestige = -20
+		add_stability = -1
+	}
+	after = {
+		clear_exiled_ruler = tuh_elections_pretender
 	}
 }
