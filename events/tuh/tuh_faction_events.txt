@@ -1,0 +1,2 @@
+namespace = tuh_faction_events
+
