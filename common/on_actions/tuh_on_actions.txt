@@ -30,3 +30,13 @@ on_mil_development = {
 		tuh_add_faction_influence_on_dev_effect = yes
 	}
 }
+
+on_rebels_break_country = {
+	THIS = {
+		tuh_set_current_ruling_house_variable_effect = yes
+	}
+}
+
+on_enforce_rebel_demands = {
+	tuh_set_current_ruling_house_variable_effect = yes
+}

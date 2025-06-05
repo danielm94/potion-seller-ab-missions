@@ -1,0 +1,5 @@
+﻿l_english:
+ tuh_events.0.t: "[tuh_get_random_house_name] Refuses to Recognize the Election"
+ tuh_events.0.d: "Todo"
+ tuh_events.0.a: "Hah! It's only rigged when they don't win. Off with their heads!"
+ tuh_events.0.b: "We can't afford a conflict with [tuh_get_random_house_name]. Give in to their demands..."

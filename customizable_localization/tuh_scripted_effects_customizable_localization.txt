@@ -251,3 +251,87 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = tuh_get_random_house_name
+	text = { 
+		localisation_key = basarab_faction
+		trigger = {
+			is_var_basarab = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = bibescu_faction
+		trigger = {
+			is_var_bibescu = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = draculesti_faction
+		trigger = {
+			is_var_draculesti = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = brancoveanu_faction
+		trigger = {
+			is_var_brancoveanu = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = movilesti_faction
+		trigger = {
+			is_var_movilesti = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = danesti_faction
+		trigger = {
+			is_var_danesti = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = ghica_faction
+		trigger = {
+			is_var_ghica = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = racovita_faction
+		trigger = {
+			is_var_racovita = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = cantacuzino_faction
+		trigger = {
+			is_var_cantacuzino = {
+				var = random_house
+			}
+		}
+	}
+	text = { 
+		localisation_key = mavrocordatos_faction
+		trigger = {
+			is_var_mavrocordatos = {
+				var = random_house
+			}
+		}
+	}
+}

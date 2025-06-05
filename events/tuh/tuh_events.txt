@@ -1,0 +1,159 @@
+namespace = tuh_events
+country_event = {
+	id = tuh_events.0
+	title = tuh_events.0.t
+	desc = tuh_events.0.d
+	picture = GFX_tuh_events.0
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_variable = {
+				which = random_house
+				value = 10
+			}
+			round_variable = {
+				which = random_house
+				value = -1
+			}
+			while = {
+				limit = {
+					is_variable_equal = {
+						which = random_house
+						which = tuh_current_house
+					}
+				}
+				random_variable = {
+					which = random_house
+					value = 10
+				}
+				round_variable = {
+					which = random_house
+					value = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = tuh_events.0.a
+		if = {
+			limit = {
+				is_var_basarab = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Basarab"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_bibescu = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Bibescu"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_draculesti = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Draculesti"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_brancoveanu = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Brancoveanu"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_movilesti = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Movilesti"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_danesti = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Danesti"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_ghica = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Ghica"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_racovita = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Racovita"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_cantacuzino = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Cantacuzino"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_var_mavrocordatos = {
+					var = random_house
+				}
+			}
+			random_owned_province = {
+				tuh_spawn_pretenders_who_reject_election = {
+					dynasty = "Mavrocordatos"
+				}
+			}
+		}
+	}
+}

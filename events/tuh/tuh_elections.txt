@@ -1,9 +1,9 @@
-namespace = tuh_events
+namespace = tuh_elections
 #Elective monarchy election
 country_event = {
-	id = tuh_events.0
-	title = tuh_events.0.t
-	desc = tuh_events.0.d
+	id = tuh_elections.0
+	title = tuh_elections.0.t
+	desc = tuh_elections.0.d
 	picture = PARLIAMENT_eventPicture
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
@@ -143,7 +143,7 @@ country_event = {
 	}
 	option = {
 		# Basarab
-		name = tuh_events.0.a
+		name = tuh_elections.0.a
 		set_ruler = tuh_elections_basarab
 		custom_tooltip = tuh_election_basarab_personality_tooltip
 		hidden_effect = {
@@ -224,7 +224,7 @@ country_event = {
 	}
 	option = {
 		# Bibescu
-		name = tuh_events.0.b
+		name = tuh_elections.0.b
 		set_ruler = tuh_elections_bibescu
 		custom_tooltip = tuh_election_bibescu_personality_tooltip
 		hidden_effect = {
@@ -302,7 +302,7 @@ country_event = {
 	}
 	option = {
 		# Draculesti
-		name = tuh_events.0.c
+		name = tuh_elections.0.c
 		set_ruler = tuh_elections_draculesti
 		custom_tooltip = tuh_election_draculesti_personality_tooltip
 		hidden_effect = {
@@ -379,7 +379,7 @@ country_event = {
 	}
 	option = {
 		# Brancoveanu
-		name = tuh_events.0.dee
+		name = tuh_elections.0.dee
 		set_ruler = tuh_elections_brancoveanu
 		custom_tooltip = tuh_election_brancoveanu_personality_tooltip
 		hidden_effect = {
@@ -457,7 +457,7 @@ country_event = {
 	}
 	option = {
 		# Movilesti
-		name = tuh_events.0.e
+		name = tuh_elections.0.e
 		set_ruler = tuh_elections_movilesti
 		custom_tooltip = tuh_election_movilesti_personality_tooltip
 		hidden_effect = {
@@ -535,7 +535,7 @@ country_event = {
 	}
 	option = {
 		# Danesti
-		name = tuh_events.0.f
+		name = tuh_elections.0.f
 		set_ruler = tuh_elections_danesti
 		custom_tooltip = tuh_election_danesti_personality_tooltip
 		hidden_effect = {
@@ -613,7 +613,7 @@ country_event = {
 	}
 	option = {
 		# Ghica
-		name = tuh_events.0.g
+		name = tuh_elections.0.g
 		set_ruler = tuh_elections_ghica
 		custom_tooltip = tuh_election_ghica_personality_tooltip
 		hidden_effect = {
@@ -691,7 +691,7 @@ country_event = {
 	}
 	option = {
 		# Racovita
-		name = tuh_events.0.h
+		name = tuh_elections.0.h
 		set_ruler = tuh_elections_racovita
 		custom_tooltip = tuh_election_racovita_personality_tooltip
 		hidden_effect = {
@@ -769,7 +769,7 @@ country_event = {
 	}
 	option = {
 		# Cantacuzino
-		name = tuh_events.0.i
+		name = tuh_elections.0.i
 		set_ruler = tuh_elections_cantacuzino
 		custom_tooltip = tuh_election_cantacuzino_personality_tooltip
 		hidden_effect = {
@@ -847,7 +847,7 @@ country_event = {
 	}
 	option = {
 		# Mavrocordatos
-		name = tuh_events.0.j
+		name = tuh_elections.0.j
 		set_ruler = tuh_elections_mavrocordatos
 		custom_tooltip = tuh_election_mavrocordatos_personality_tooltip
 		hidden_effect = {
@@ -926,6 +926,7 @@ country_event = {
 	after = {
 		tuh_update_house_total_wins = yes
 		tuh_update_house_consecutive_wins = yes
-		# tuh_check_election_pretender_rebels_effect = yes # Call this after legitimacy is set
+		tuh_set_current_ruling_house_variable_effect = yes
+		tuh_fire_pretender_event_based_on_legitimacy = yes
 	}
 }

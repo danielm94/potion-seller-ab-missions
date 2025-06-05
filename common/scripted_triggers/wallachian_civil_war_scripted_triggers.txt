@@ -1,4 +1,4 @@
-﻿is_in_war_of_the_ten_houses_disaster = {
+is_in_war_of_the_ten_houses_disaster = {
 	has_country_flag = in_war_of_the_ten_houses
 }
 

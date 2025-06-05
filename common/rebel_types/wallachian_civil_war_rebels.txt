@@ -1,4 +1,4 @@
-﻿# --- Racovita Rebels ---
+# --- Racovita Rebels ---
 wallachia_civil_war_racovita_refused_ultimatum_rebels = {
 	color = {
 		60
