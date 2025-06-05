@@ -1,4 +1,0 @@
-﻿l_english:
- tuh_set_legitimacy_election_founding_house_bonus_tooltip: "Since §Y[tuh_house_candidate_name]§! is a member of [tuh_founding_house_name], a founding house, they will gain §G+25§! §YLegitimacy§!."
- tuh_set_legitimacy_election_basarab_bonus_tooltip: "Since §Y[tuh_house_candidate_name]§! is a member of §YHouse Basarab§!, they will gain §G+15§! §YLegitimacy§!."
- tuh_set_legitimacy_total_wins_bonus_tooltip: "Since §Y[tuh_house_candidate_house]§! won §Y[This.candidate_house_total_wins.GetValue]§! election(s), §Y[tuh_house_candidate_name]§! will gain §G+[This.total_wins_legitimacy_gain.GetValue]§! §YLegitimacy§!."

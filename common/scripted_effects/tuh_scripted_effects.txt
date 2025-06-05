@@ -785,7 +785,6 @@ tuh_initialize_consecutive_election_wins_vars = {
 # 		}
 # 	}
 # }
-
 tuh_update_house_total_wins = {
 	hidden_effect = {
 		trigger_switch = {
@@ -1012,287 +1011,126 @@ tuh_update_house_consecutive_wins = {
 	}
 }
 
-tuh_calc_legitimacy_gain_for_each_house = {
-	# Basarab
+tuh_precalculate_all_election_tooltips_effect = {
 	set_variable = {
-		which = basarab_legitimacy_gain
-		which = basarab_total_wins
+		which = house_id
+		value = $house_id$
+	}
+	set_variable = {
+		which = precalc_$house$_total_legitimacy
+		value = 50
+	}
+	###########################
+	### TOTAL WINS HANDLING ###
+	###########################
+	set_variable = {
+		which = precalc_$house$_total_wins
+		which = $house$_total_wins
+	}
+	set_variable = {
+		which = precalc_$house$_total_wins_gain
+		which = precalc_$house$_total_wins
 	}
 	multiply_variable = {
-		which = basarab_legitimacy_gain
+		which = precalc_$house$_total_wins_gain
 		value = 5
-	}
-
-	# Bibescu
-	set_variable = {
-		which = bibescu_legitimacy_gain
-		which = bibescu_total_wins
-	}
-	multiply_variable = {
-		which = bibescu_legitimacy_gain
-		value = 5
-	}
-
-	# Draculesti
-	set_variable = {
-		which = draculesti_legitimacy_gain
-		which = draculesti_total_wins
-	}
-	multiply_variable = {
-		which = draculesti_legitimacy_gain
-		value = 5
-	}
-
-	# Brancoveanu
-	set_variable = {
-		which = brancoveanu_legitimacy_gain
-		which = brancoveanu_total_wins
-	}
-	multiply_variable = {
-		which = brancoveanu_legitimacy_gain
-		value = 5
-	}
-
-	# Movilesti
-	set_variable = {
-		which = movilesti_legitimacy_gain
-		which = movilesti_total_wins
-	}
-	multiply_variable = {
-		which = movilesti_legitimacy_gain
-		value = 5
-	}
-
-	# Danesti
-	set_variable = {
-		which = danesti_legitimacy_gain
-		which = danesti_total_wins
-	}
-	multiply_variable = {
-		which = danesti_legitimacy_gain
-		value = 5
-	}
-
-	# Ghica
-	set_variable = {
-		which = ghica_legitimacy_gain
-		which = ghica_total_wins
-	}
-	multiply_variable = {
-		which = ghica_legitimacy_gain
-		value = 5
-	}
-
-	# Racovita
-	set_variable = {
-		which = racovita_legitimacy_gain
-		which = racovita_total_wins
-	}
-	multiply_variable = {
-		which = racovita_legitimacy_gain
-		value = 5
-	}
-
-	# Cantacuzino
-	set_variable = {
-		which = cantacuzino_legitimacy_gain
-		which = cantacuzino_total_wins
-	}
-	multiply_variable = {
-		which = cantacuzino_legitimacy_gain
-		value = 5
-	}
-
-	# Mavrocordatos
-	set_variable = {
-		which = mavrocordatos_legitimacy_gain
-		which = mavrocordatos_total_wins
-	}
-	multiply_variable = {
-		which = mavrocordatos_legitimacy_gain
-		value = 5
-	}
-}
-
-tuh_calc_consecutive_win_legitimacy_lost_for_each_house = {
-	# Basarab
-	set_variable = {
-		which = basarab_consecutive_win_legitimacy_loss
-		which = basarab_consecutive_wins
-	}
-	multiply_variable = {
-		which = basarab_consecutive_win_legitimacy_loss
-		value = -5 
-	}
-	# Bibescu
-	set_variable = {
-		which = bibescu_consecutive_win_legitimacy_loss
-		which = bibescu_consecutive_wins
-	}
-	multiply_variable = {
-		which = bibescu_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Draculesti
-	set_variable = {
-		which = draculesti_consecutive_win_legitimacy_loss
-		which = draculesti_consecutive_wins
-	}
-	multiply_variable = {
-		which = draculesti_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Brancoveanu
-	set_variable = {
-		which = brancoveanu_consecutive_win_legitimacy_loss
-		which = brancoveanu_consecutive_wins
-	}
-	multiply_variable = {
-		which = brancoveanu_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Movilesti
-	set_variable = {
-		which = movilesti_consecutive_win_legitimacy_loss
-		which = movilesti_consecutive_wins
-	}
-	multiply_variable = {
-		which = movilesti_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Danesti
-	set_variable = {
-		which = danesti_consecutive_win_legitimacy_loss
-		which = danesti_consecutive_wins
-	}
-	multiply_variable = {
-		which = danesti_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Ghica
-	set_variable = {
-		which = ghica_consecutive_win_legitimacy_loss
-		which = ghica_consecutive_wins
-	}
-	multiply_variable = {
-		which = ghica_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Racovita
-	set_variable = {
-		which = racovita_consecutive_win_legitimacy_loss
-		which = racovita_consecutive_wins
-	}
-	multiply_variable = {
-		which = racovita_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Cantacuzino
-	set_variable = {
-		which = cantacuzino_consecutive_win_legitimacy_loss
-		which = cantacuzino_consecutive_wins
-	}
-	multiply_variable = {
-		which = cantacuzino_consecutive_win_legitimacy_loss
-		value = -5
-	}
-
-	# Mavrocordatos
-	set_variable = {
-		which = mavrocordatos_consecutive_win_legitimacy_loss
-		which = mavrocordatos_consecutive_wins
-	}
-	multiply_variable = {
-		which = mavrocordatos_consecutive_win_legitimacy_loss
-		value = -5
-	}
-}
-
-tuh_set_legitimacy_election_effect = {
-	hidden_effect = {
-		set_variable = {
-			which = candidate_house
-			value = $candidate_house_val$
-		}
-		set_variable = {
-			which = candidate_house_plus_one
-			which = candidate_house
-		}
-		change_variable = {
-			which = candidate_house_plus_one
-			value = 1
-		}
-	}
-	custom_tooltip = tooltip_line_divider
-	custom_tooltip = tuh_set_legitimacy_election_initial_legitimacy_tooltip
-	hidden_effect = {
-		add_legitimacy = -100
-		add_legitimacy = 50
-	}
-	if = {
-		limit = {
-			is_founding_house_set = yes
-			check_variable = {
-				which = founding_house
-				which = candidate_house
-			}
-			NOT = {
-				check_variable = {
-					which = founding_house
-					which = candidate_house_plus_one
-				}
-			}
-		}
-		custom_tooltip = tuh_set_legitimacy_election_founding_house_bonus_tooltip
-		hidden_effect = {
-			add_legitimacy = 25
-		}
-	}
-	if = {
-		limit = {
-			is_var_basarab = {
-				var = candidate_house
-			}
-		}
-		custom_tooltip = tuh_set_legitimacy_election_basarab_bonus_tooltip
-		hidden_effect = {
-			add_legitimacy = 15
-		}
-	}
-	hidden_effect = {
-		set_variable = {
-			which = candidate_house_total_wins
-			which = $candidate_house_total_wins_var$
-		}
-		set_variable = {
-			which = total_wins_legitimacy_gain
-			which = candidate_house_total_wins
-		}
-		multiply_variable = {
-			which = total_wins_legitimacy_gain
-			value = 5
-		}
 	}
 	if = {
 		limit = {
 			check_variable = {
-				which = candidate_house_total_wins
+				which = $house$_total_wins
 				value = 1
 			}
 		}
-		custom_tooltip = tuh_set_legitimacy_total_wins_bonus_tooltip
-		hidden_effect = {
-			variable_effect = {
-				var = total_wins_legitimacy_gain
-				effect = add_legitimacy
+		change_variable = {
+			which = precalc_$house$_total_legitimacy
+			which = precalc_$house$_total_wins_gain
+		}
+	}
+	#################################
+	### CONSECUTIVE WINS HANDLING ###
+	#################################
+	set_variable = {
+		which = precalc_$house$_consecutive_wins
+		which = $house$_consecutive_wins
+	}
+	set_variable = {
+		which = precalc_$house$_consecutive_wins_loss
+		which = precalc_$house$_consecutive_wins
+	}
+	multiply_variable = {
+		which = precalc_$house$_consecutive_wins_loss
+		value = -10
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = $house$_consecutive_wins
+				value = 1
 			}
+		}
+		change_variable = {
+			which = precalc_$house$_total_legitimacy
+			which = precalc_$house$_consecutive_wins_loss
+		}
+	}
+	set_variable = {
+		which = display_$house$_consecutive_wins
+		which = $house$_consecutive_wins
+	}
+	####################################
+	### FOUNDING HOUSE BONUS HANDLING ##
+	####################################
+	if = {
+		limit = {
+			is_founding_house_set = yes
+			is_variable_equal = {
+				which = tuh_founding_house
+				which = house_id
+			}
+		}
+		change_variable = {
+			which = precalc_$house$_total_legitimacy
+			value = 25
+		}
+	}
+	##############################
+	### BASARAB BONUS HANDLING ###
+	##############################
+	if = {
+		limit = {
+			is_var_basarab = {
+				var = house_id
+			}
+		}
+		change_variable = {
+			which = precalc_$house$_total_legitimacy
+			value = 15
+		}
+	}
+	######################################
+	### LOW FACTION INFLUENCE HANDLING ###
+	######################################
+	set_variable = {
+		which = precalc_$house$_low_influence_penalty
+		value = 0
+	}
+	if = {
+		limit = {
+			NOT = {
+				faction_influence = {
+					faction = $house$_faction
+					influence = 10
+				}
+			}
+		}
+		change_variable = {
+			which = precalc_$house$_low_influence_penalty
+			value = 20
+		}
+		subtract_variable = {
+			which = precalc_$house$_total_legitimacy
+			which = precalc_$house$_low_influence_penalty
 		}
 	}
 }
