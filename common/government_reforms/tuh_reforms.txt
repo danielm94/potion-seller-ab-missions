@@ -37,4 +37,7 @@ dacian_elective_monarchy = {
 		cantacuzino_faction
 		mavrocordatos_faction
 	}
+	government_abilities = {
+		romanian_elective_monarchy_mechanic
+	}
 }

@@ -1,0 +1,216 @@
+romanian_elective_monarchy_mechanic = {
+	alert_icon_gfx = GFX_rem_alert_icon
+	alert_icon_index = 1
+	available = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	interactions = {
+		promote_dynastic_prerogative = {
+			icon = GFX_rem_interaction_1_button
+			trigger = {
+				OR = {
+					dynasty = "Basarab"
+					dynasty = "Bibescu"
+					dynasty = "Draculesti"
+					dynasty = "Brancoveanu"
+					dynasty = "Movilesti"
+					dynasty = "Danesti"
+					dynasty = "Ghica"
+					dynasty = "Racovita"
+					dynasty = "Cantacuzino"
+					dynasty = "Mavrocordatos"
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = hidden_prerogative_trigger_modifier
+					duration = 7300
+					hidden = yes
+				}
+				tooltip = {
+					if = {
+						limit = {
+							dynasty = "Basarab"
+						}
+						add_country_modifier = {
+							name = tooltip_basarab_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Bibescu"
+						}
+						add_country_modifier = {
+							name = tooltip_bibescu_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Draculesti"
+						}
+						add_country_modifier = {
+							name = tooltip_draculesti_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Brancoveanu"
+						}
+						add_country_modifier = {
+							name = tooltip_brancoveanu_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Movilesti"
+						}
+						add_country_modifier = {
+							name = tooltip_movilesti_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Danesti"
+						}
+						add_country_modifier = {
+							name = tooltip_danesti_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Ghica"
+						}
+						add_country_modifier = {
+							name = tooltip_ghica_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Racovita"
+						}
+						add_country_modifier = {
+							name = tooltip_racovita_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Cantacuzino"
+						}
+						add_country_modifier = {
+							name = tooltip_cantacuzino_dynastic_prerogative
+							duration = 7300
+						}
+					}
+					else_if = {
+						limit = {
+							dynasty = "Mavrocordatos"
+						}
+						add_country_modifier = {
+							name = tooltip_mavrocordatos_dynastic_prerogative
+							duration = 7300
+						}
+					}
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = romanian_elective_monarchy_mechanic
+			cooldown_desc =	romanian_elective_monarchy_cooldown
+			ai_chance = {
+				factor = 10
+			}
+		}
+		forge_a_coalition = {
+			icon = GFX_rem_interaction_2_button
+			trigger = {
+			}
+			effect = {
+				if = {
+					limit = {
+						dynasty = "Movilesti"
+					}
+					custom_tooltip = forge_a_coalition_movilesti_bonus_tooltip_yes
+				}
+				else = {
+					custom_tooltip = forge_a_coalition_movilesti_bonus_tooltip_no
+				}
+				country_event = {
+					id = tuh_events.1
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = romanian_elective_monarchy_mechanic
+			cooldown_desc =	romanian_elective_monarchy_cooldown
+			ai_chance = {
+				factor = 10
+			}
+		}
+		revive_public_punishments = {
+			icon = GFX_rem_interaction_3_button
+			trigger = {
+			}
+			effect = {
+				custom_tooltip = revive_public_punishments_seperatism_tooltip
+				hidden_effect = {
+					every_owned_province = {
+						add_nationalism = -5
+					}
+				}
+				add_country_modifier = {
+					name = hidden_revive_public_punishments
+					duration = 7300
+					hidden = yes
+				}
+				if = {
+					limit = {
+						dynasty = "Draculesti"
+					}
+					custom_tooltip = revive_public_punishments_draculesti_tooltip_yes
+				}
+				else = {
+					custom_tooltip = revive_public_punishments_draculesti_tooltip_no
+				}
+				tooltip = {
+					add_country_modifier = {
+						name = tooltip_revive_public_punishments_draculesti
+						duration = 7300
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							dynasty = "Draculesti"
+						}
+					}
+					custom_tooltip = revive_public_punishments_else_tooltip_yes
+				}
+				else = {
+					custom_tooltip = revive_public_punishments_else_tooltip_no
+				}
+				tooltip = {
+					add_country_modifier = {
+						name = tooltip_revive_public_punishments
+						duration = 7300
+					}
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = romanian_elective_monarchy_mechanic
+			cooldown_desc =	romanian_elective_monarchy_cooldown
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 2
+					unrest = 2
+				}
+			}
+		}
+	}
+}
