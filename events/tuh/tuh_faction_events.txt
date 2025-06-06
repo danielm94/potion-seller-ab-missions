@@ -35,9 +35,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = brancoveanu_infrastructure_initiative
-			duration = 3650			# 10 years
+			duration = 3650
 		}
-		add_years_of_income = -0.5		# Or add_years_of_income = -0.25
+		add_years_of_income = -0.5
 		add_prestige_or_monarch_power = {
 			amount = 5
 		}
@@ -134,6 +134,178 @@ country_event = {
 			duration = 1825
 		}
 		add_prestige = -5
-		
+	}
+}
+
+#BYZ EVENT
+country_event = {
+	id = tuh_faction_events.2
+	title = tuh_faction_events.2.t
+	desc = tuh_faction_events.2.d
+	picture = BYZ_BYZANTINE_EAGLE_eventPicture
+	is_triggered_only = no
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.5
+			faction_in_power = cantacuzino_faction
+		}
+		modifier = {
+			factor = 0.5
+			BYZ = {
+				NOT = {
+					legitimacy_equivalent = 50
+				}
+			}
+		}
+	}
+	trigger = {
+		NOT = {
+			has_country_flag = tuh_claimed_a_byzantine_throne
+		}
+		has_government_attribute = romanian_elective_monarchy
+		exists = BYZ
+		dynasty = "Cantacuzino"
+		marriage_with = BYZ
+		BYZ = {
+			has_heir = no
+		}
+		has_more_legitimacy_or_equivalent_than = {
+			targetA = ROOT
+			targetB = BYZ
+		}
+		has_more_prestige_than = {
+			targetA = ROOT
+			targetB = BYZ
+		}
+		army_strength = {
+			who = BYZ
+			value = 1.1
+		}
+	}
+	option = {
+		name = tuh_faction_events.2.a
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			target = BYZ
+			months = 120
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 20
+		}
+		BYZ = {
+			add_opinion = {
+				who = PREV
+				modifier = claimed_throne_on_us
+			}
+			break_alliance = PREV
+		}
+		every_country = {
+			limit = {
+				marriage_with = PREV
+				NOT = {
+					tag = BYZ
+				}
+			}
+			add_opinion = {
+				who = PREV
+				modifier = claimed_throne_other_rm
+			}
+		}
+		set_country_flag = tuh_claimed_a_byzantine_throne
+	}
+	option = {
+		name = tuh_faction_events.2.b
+		add_prestige = -5
+	}
+}
+
+#NCI EVENT
+country_event = {
+	id = tuh_faction_events.3
+	title = tuh_faction_events.3.t
+	desc = tuh_faction_events.3.d
+	picture = AB_BYZFALL_eventPicture
+	is_triggered_only = no
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.5
+			faction_in_power = cantacuzino_faction
+		}
+		modifier = {
+			factor = 0.5
+			NCI = {
+				NOT = {
+					legitimacy_equivalent = 50
+				}
+			}
+		}
+	}
+	trigger = {
+		NOT = {
+			has_country_flag = tuh_claimed_a_byzantine_throne
+		}
+		has_government_attribute = romanian_elective_monarchy
+		exists = NCI
+		NOT = {
+			exists = BYZ
+		}
+		dynasty = "Cantacuzino"
+		marriage_with = NCI
+		NCI = {
+			has_heir = no
+		}
+		has_more_legitimacy_or_equivalent_than = {
+			targetA = ROOT
+			targetB = NCI
+		}
+		has_more_prestige_than = {
+			targetA = ROOT
+			targetB = NCI
+		}
+		army_strength = {
+			who = NCI
+			value = 1.1
+		}
+	}
+	option = {
+		name = tuh_faction_events.3.a
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			target = NCI
+			months = 120
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 20
+		}
+		NCI = {
+			add_opinion = {
+				who = PREV
+				modifier = claimed_throne_on_us
+			}
+			break_alliance = PREV
+		}
+		every_country = {
+			limit = {
+				marriage_with = PREV
+				NOT = {
+					tag = NCI
+				}
+			}
+			add_opinion = {
+				who = PREV
+				modifier = claimed_throne_other_rm
+			}
+		}
+		set_country_flag = tuh_claimed_a_byzantine_throne
+	}
+	option = {
+		name = tuh_faction_events.3.b
+		add_prestige = -5
 	}
 }
