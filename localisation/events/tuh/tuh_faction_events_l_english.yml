@@ -1,2 +1,10 @@
 ﻿l_english:
- 
+ tuh_faction_events.0.t: "The Brancoveanu Infrastructure Initiative"
+ tuh_faction_events.0.d: "Representatives from House Brancoveanu, ever mindful of the foundations of our realm's prosperity, have approached the Council of the Ten Houses with an ambitious proposal. They advocate for a significant investment in infrastructure across [Root.GetName]: roads, bridges, and perhaps even new marketplaces, arguing it will stimulate growth and ease administration for generations to come. While the long-term benefits are clear, such an undertaking requires substantial upfront resources. Rejecting their vision, however, may not sit well with such an influential house."
+ tuh_faction_events.0.a: "An excellent proposal! Let the building commence."
+ tuh_faction_events.0.b: "Regrettably, the state cannot commit to such an endeavor at this time."
+ tuh_faction_events.1.t: "Bibescu's Grand Reconciliation"
+ tuh_faction_events.1.d: "House Bibescu, ever attuned to the delicate dance of diplomacy, has presented a bold strategy to the United Houses. They propose a sweeping diplomatic campaign aimed at mending fences and fostering goodwill with all our neighbors simultaneously. This 'Grand Reconciliation,' they argue, would significantly reduce regional tensions, improve our standing, and open new avenues for cooperation. Such an ambitious undertaking would require considerable diplomatic capital and the [Root.Monarch.GetTitle]'s full support. However, to dismiss this vision could be seen as a diplomatic misstep, potentially damaging our prestige and certainly offending House Bibescu."
+ tuh_faction_events.1.a: "A bold vision for regional harmony! Let us proceed."
+ tuh_faction_events.1.b: "Such a grand gesture is beyond our current means or focus."
+ tuh_faction_events_1_tooltip: "Every neighboring country will lose §G5§! §YAggressive Expansion§! against us and gain §G10§! opinion of us."
