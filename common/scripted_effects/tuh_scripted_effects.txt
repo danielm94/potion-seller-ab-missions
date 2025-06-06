@@ -1319,3 +1319,89 @@ tuh_spawn_pretenders_who_reject_election = {
 		}
 	}
 }
+
+tuh_add_estate_loyalty_on_dev_effect = {
+	if = {
+		limit = {
+			has_tax_building_trigger = yes
+		}
+		random = {
+			chance = 40
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_trade_building_trigger = yes
+		}
+		random = {
+			chance = 40
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_manpower_building_trigger = yes
+		}
+		random = {
+			chance = 40
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 1
+				}
+			}
+		}
+	}
+}
+
+romanian_elective_monarchy_on_dev_effect = {
+	if = {
+		limit = {
+			is_state = yes
+			owner = {
+				has_government_attribute = romanian_elective_monarchy
+			}
+		}
+		tuh_add_faction_influence_on_dev_effect = yes
+		if = {
+			limit = {
+				owner = {
+					dynasty = "Brancoveanu"
+				}
+			}
+			tuh_add_estate_loyalty_on_dev_effect = yes
+		}
+	}
+}
+#
+tuh_clear_dynasty_specific_bonuses = {
+	tuh_clear_ghica_bonuses = yes
+}
+
+tuh_clear_ghica_bonuses = {
+	if = {
+		limit = {
+			has_country_flag = fra_courthouse_bonus_flag
+		}
+		clr_country_flag = fra_courthouse_bonus_flag
+
+		every_owned_province = {
+			limit = {
+				has_courthouse_building_trigger = yes
+			}
+
+			remove_province_modifier = fra_improved_court_houses_modifier
+		}
+	}
+}

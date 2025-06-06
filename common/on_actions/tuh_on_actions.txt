@@ -1,42 +1,84 @@
 on_adm_development = {
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = romanian_elective_monarchy
-			}
-		}
-		tuh_add_faction_influence_on_dev_effect = yes
-	}
+	romanian_elective_monarchy_on_dev_effect = yes
 }
 
 on_dip_development = {
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = romanian_elective_monarchy
-			}
-		}
-		tuh_add_faction_influence_on_dev_effect = yes
-	}
+	romanian_elective_monarchy_on_dev_effect = yes
 }
 
 on_mil_development = {
-	if = {
-		limit = {
-			owner = {
-				has_government_attribute = romanian_elective_monarchy
-			}
-		}
-		tuh_add_faction_influence_on_dev_effect = yes
-	}
+	romanian_elective_monarchy_on_dev_effect = yes
 }
 
 on_rebels_break_country = {
-	THIS = {
-		tuh_set_current_ruling_house_variable_effect = yes
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		THIS = {
+			tuh_set_current_ruling_house_variable_effect = yes
+		}
 	}
 }
 
 on_enforce_rebel_demands = {
-	tuh_set_current_ruling_house_variable_effect = yes
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		tuh_set_current_ruling_house_variable_effect = yes
+	}
+}
+
+on_institution_embracement = {
+	if = {
+		limit = {
+			dynasty = "Mavrocordatos"
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		change_innovativeness = 5
+	}
+}
+
+on_battle_won_country = {
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+			dynasty = "Danesti"
+		}
+		set_variable = {
+			which = soldiers_we_killed
+			which = land_units_lost
+		}
+		set_variable = {
+			which = debug
+			which = soldiers_we_killed
+		}
+		divide_variable = {
+			which = soldiers_we_killed
+			value = 1000
+		}
+		round_variable = {
+			which = soldiers_we_killed
+			value = -1
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = soldiers_we_killed
+					value = 1
+				}
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = 1
+			}
+			subtract_variable = {
+				which = soldiers_we_killed
+				value = 1
+			}
+		}
+	}
 }

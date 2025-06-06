@@ -11,6 +11,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
+			tuh_clear_dynasty_specific_bonuses = yes
 			tuh_precalculate_all_election_tooltips_effect = {
 				house_id = 0
 				house = basarab
@@ -142,7 +143,6 @@ country_event = {
 		}
 	}
 	option = {
-		# Basarab
 		name = tuh_elections.0.a
 		set_ruler = tuh_elections_basarab
 		custom_tooltip = tuh_election_basarab_personality_tooltip
@@ -160,7 +160,6 @@ country_event = {
 			faction = basarab_faction
 			influence = 30
 		}
-		# --- BASARAB Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_basarab_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
@@ -172,11 +171,10 @@ country_event = {
 			}
 			custom_tooltip = tuh_basarab_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		custom_tooltip = tuh_basarab_set_legitimacy_election_basarab_bonus_tooltip		# Included for Basarab
+		custom_tooltip = tuh_basarab_set_legitimacy_election_basarab_bonus_tooltip
 		if = {
 			limit = {
 				check_variable = {
-					# This uses the direct country variable as per your template
 					which = basarab_total_wins
 					value = 1
 				}
@@ -186,7 +184,6 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					# This uses the direct country variable
 					which = basarab_consecutive_wins
 					value = 2
 				}
@@ -196,7 +193,6 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					# This uses the direct country variable
 					which = basarab_consecutive_wins
 					value = 1
 				}
@@ -205,17 +201,16 @@ country_event = {
 		}
 		if = {
 			limit = {
-				# This uses the precalc variable as per your template
 				check_variable = {
 					which = precalc_basarab_low_influence_penalty
-					value = 1					# Assuming this precalc var is set to 1 if penalty applies, 0 otherwise
+					value = 1
 				}
 			}
 			custom_tooltip = tuh_basarab_low_influence_house_legitimacy_loss_tooltip
 		}
 		custom_tooltip = tuh_basarab_total_legitimacy_of_candidate
 		hidden_effect = {
-			add_legitimacy = -200			# Added to ensure legitimacy is set
+			add_legitimacy = -200
 			variable_effect = {
 				var = precalc_basarab_total_legitimacy
 				effect = add_legitimacy
@@ -223,7 +218,6 @@ country_event = {
 		}
 	}
 	option = {
-		# Bibescu
 		name = tuh_elections.0.b
 		set_ruler = tuh_elections_bibescu
 		custom_tooltip = tuh_election_bibescu_personality_tooltip
@@ -241,24 +235,30 @@ country_event = {
 			faction = bibescu_faction
 			influence = 30
 		}
-		# --- BIBESCU Legitimacy Tooltips & Effect ---
+		define_advisor = {
+			type = diplomat
+			skill = 2
+			cost_multiplier = 0.25
+			min_age = 20
+			max_age = 40
+			culture = ROOT
+			religion = ROOT
+		}
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_bibescu_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_bibescu = {
-					# Changed to is_var_bibescu
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_bibescu_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = bibescu_total_wins					# Changed to bibescu_total_wins
+					which = bibescu_total_wins
 					value = 1
 				}
 			}
@@ -267,7 +267,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = bibescu_consecutive_wins					# Changed to bibescu_consecutive_wins
+					which = bibescu_consecutive_wins
 					value = 2
 				}
 			}
@@ -276,7 +276,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = bibescu_consecutive_wins					# Changed to bibescu_consecutive_wins
+					which = bibescu_consecutive_wins
 					value = 1
 				}
 			}
@@ -285,7 +285,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_bibescu_low_influence_penalty					# Changed to precalc_bibescu_...
+					which = precalc_bibescu_low_influence_penalty
 					value = 1
 				}
 			}
@@ -295,13 +295,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_bibescu_total_legitimacy				# Changed to precalc_bibescu_...
+				var = precalc_bibescu_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Draculesti
 		name = tuh_elections.0.c
 		set_ruler = tuh_elections_draculesti
 		custom_tooltip = tuh_election_draculesti_personality_tooltip
@@ -320,7 +319,6 @@ country_event = {
 			influence = 30
 		}
 		custom_tooltip = tooltip_line_divider
-		# --- DRACULESTI Legitimacy Tooltips & Effect ---
 		custom_tooltip = tuh_draculesti_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
@@ -331,11 +329,10 @@ country_event = {
 			}
 			custom_tooltip = tuh_draculesti_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = draculesti_total_wins					# Changed to draculesti_total_wins
+					which = draculesti_total_wins
 					value = 1
 				}
 			}
@@ -344,7 +341,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = draculesti_consecutive_wins					# Changed to draculesti_consecutive_wins
+					which = draculesti_consecutive_wins
 					value = 2
 				}
 			}
@@ -353,7 +350,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = draculesti_consecutive_wins					# Changed to draculesti_consecutive_wins
+					which = draculesti_consecutive_wins
 					value = 1
 				}
 			}
@@ -362,7 +359,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_draculesti_low_influence_penalty					# Changed to precalc_draculesti_...
+					which = precalc_draculesti_low_influence_penalty
 					value = 1
 				}
 			}
@@ -372,13 +369,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_draculesti_total_legitimacy				# Changed to precalc_draculesti_...
+				var = precalc_draculesti_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Brancoveanu
 		name = tuh_elections.0.dee
 		set_ruler = tuh_elections_brancoveanu
 		custom_tooltip = tuh_election_brancoveanu_personality_tooltip
@@ -396,24 +392,21 @@ country_event = {
 			faction = brancoveanu_faction
 			influence = 30
 		}
-		# --- BRANCOVEANU Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_brancoveanu_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_brancoveanu = {
-					# Changed to is_var_brancoveanu
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_brancoveanu_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = brancoveanu_total_wins					# Changed to brancoveanu_total_wins
+					which = brancoveanu_total_wins
 					value = 1
 				}
 			}
@@ -422,7 +415,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = brancoveanu_consecutive_wins					# Changed to brancoveanu_consecutive_wins
+					which = brancoveanu_consecutive_wins
 					value = 2
 				}
 			}
@@ -431,7 +424,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = brancoveanu_consecutive_wins					# Changed to brancoveanu_consecutive_wins
+					which = brancoveanu_consecutive_wins
 					value = 1
 				}
 			}
@@ -440,7 +433,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_brancoveanu_low_influence_penalty					# Changed to precalc_brancoveanu_...
+					which = precalc_brancoveanu_low_influence_penalty
 					value = 1
 				}
 			}
@@ -450,13 +443,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_brancoveanu_total_legitimacy				# Changed to precalc_brancoveanu_...
+				var = precalc_brancoveanu_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Movilesti
 		name = tuh_elections.0.e
 		set_ruler = tuh_elections_movilesti
 		custom_tooltip = tuh_election_movilesti_personality_tooltip
@@ -474,24 +466,21 @@ country_event = {
 			faction = movilesti_faction
 			influence = 30
 		}
-		# --- MOVİLESTİ Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_movilesti_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_movilesti = {
-					# Changed to is_var_movilesti
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_movilesti_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = movilesti_total_wins					# Changed to movilesti_total_wins
+					which = movilesti_total_wins
 					value = 1
 				}
 			}
@@ -500,7 +489,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = movilesti_consecutive_wins					# Changed to movilesti_consecutive_wins
+					which = movilesti_consecutive_wins
 					value = 2
 				}
 			}
@@ -509,7 +498,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = movilesti_consecutive_wins					# Changed to movilesti_consecutive_wins
+					which = movilesti_consecutive_wins
 					value = 1
 				}
 			}
@@ -518,7 +507,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_movilesti_low_influence_penalty					# Changed to precalc_movilesti_...
+					which = precalc_movilesti_low_influence_penalty
 					value = 1
 				}
 			}
@@ -528,13 +517,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_movilesti_total_legitimacy				# Changed to precalc_movilesti_...
+				var = precalc_movilesti_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Danesti
 		name = tuh_elections.0.f
 		set_ruler = tuh_elections_danesti
 		custom_tooltip = tuh_election_danesti_personality_tooltip
@@ -552,24 +540,21 @@ country_event = {
 			faction = danesti_faction
 			influence = 30
 		}
-		# --- DANESTI Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_danesti_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_danesti = {
-					# Changed to is_var_danesti
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_danesti_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = danesti_total_wins					# Changed to danesti_total_wins
+					which = danesti_total_wins
 					value = 1
 				}
 			}
@@ -578,7 +563,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = danesti_consecutive_wins					# Changed to danesti_consecutive_wins
+					which = danesti_consecutive_wins
 					value = 2
 				}
 			}
@@ -587,7 +572,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = danesti_consecutive_wins					# Changed to danesti_consecutive_wins
+					which = danesti_consecutive_wins
 					value = 1
 				}
 			}
@@ -596,7 +581,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_danesti_low_influence_penalty					# Changed to precalc_danesti_...
+					which = precalc_danesti_low_influence_penalty
 					value = 1
 				}
 			}
@@ -606,13 +591,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_danesti_total_legitimacy				# Changed to precalc_danesti_...
+				var = precalc_danesti_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Ghica
 		name = tuh_elections.0.g
 		set_ruler = tuh_elections_ghica
 		custom_tooltip = tuh_election_ghica_personality_tooltip
@@ -630,24 +614,21 @@ country_event = {
 			faction = ghica_faction
 			influence = 30
 		}
-		# --- GHICA Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_ghica_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_ghica = {
-					# Changed to is_var_ghica
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_ghica_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = ghica_total_wins					# Changed to ghica_total_wins
+					which = ghica_total_wins
 					value = 1
 				}
 			}
@@ -656,7 +637,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = ghica_consecutive_wins					# Changed to ghica_consecutive_wins
+					which = ghica_consecutive_wins
 					value = 2
 				}
 			}
@@ -665,7 +646,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = ghica_consecutive_wins					# Changed to ghica_consecutive_wins
+					which = ghica_consecutive_wins
 					value = 1
 				}
 			}
@@ -674,7 +655,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_ghica_low_influence_penalty					# Changed to precalc_ghica_...
+					which = precalc_ghica_low_influence_penalty
 					value = 1
 				}
 			}
@@ -684,13 +665,22 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_ghica_total_legitimacy				# Changed to precalc_ghica_...
+				var = precalc_ghica_total_legitimacy
 				effect = add_legitimacy
+			}
+			set_country_flag = fra_courthouse_bonus_flag
+			every_owned_province = {
+				limit = {
+					has_courthouse_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = fra_improved_court_houses_modifier
+					duration = -1
+				}
 			}
 		}
 	}
 	option = {
-		# Racovita
 		name = tuh_elections.0.h
 		set_ruler = tuh_elections_racovita
 		custom_tooltip = tuh_election_racovita_personality_tooltip
@@ -708,24 +698,21 @@ country_event = {
 			faction = racovita_faction
 			influence = 30
 		}
-		# --- RACOVITA Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_racovita_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_racovita = {
-					# Changed to is_var_racovita
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_racovita_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = racovita_total_wins					# Changed to racovita_total_wins
+					which = racovita_total_wins
 					value = 1
 				}
 			}
@@ -734,7 +721,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = racovita_consecutive_wins					# Changed to racovita_consecutive_wins
+					which = racovita_consecutive_wins
 					value = 2
 				}
 			}
@@ -743,7 +730,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = racovita_consecutive_wins					# Changed to racovita_consecutive_wins
+					which = racovita_consecutive_wins
 					value = 1
 				}
 			}
@@ -752,7 +739,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_racovita_low_influence_penalty					# Changed to precalc_racovita_...
+					which = precalc_racovita_low_influence_penalty
 					value = 1
 				}
 			}
@@ -762,13 +749,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_racovita_total_legitimacy				# Changed to precalc_racovita_...
+				var = precalc_racovita_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Cantacuzino
 		name = tuh_elections.0.i
 		set_ruler = tuh_elections_cantacuzino
 		custom_tooltip = tuh_election_cantacuzino_personality_tooltip
@@ -786,24 +772,21 @@ country_event = {
 			faction = cantacuzino_faction
 			influence = 30
 		}
-		# --- CANTACUZINO Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_cantacuzino_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_cantacuzino = {
-					# Changed to is_var_cantacuzino
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_cantacuzino_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = cantacuzino_total_wins					# Changed to cantacuzino_total_wins
+					which = cantacuzino_total_wins
 					value = 1
 				}
 			}
@@ -812,7 +795,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = cantacuzino_consecutive_wins					# Changed to cantacuzino_consecutive_wins
+					which = cantacuzino_consecutive_wins
 					value = 2
 				}
 			}
@@ -821,7 +804,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = cantacuzino_consecutive_wins					# Changed to cantacuzino_consecutive_wins
+					which = cantacuzino_consecutive_wins
 					value = 1
 				}
 			}
@@ -830,7 +813,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_cantacuzino_low_influence_penalty					# Changed to precalc_cantacuzino_...
+					which = precalc_cantacuzino_low_influence_penalty
 					value = 1
 				}
 			}
@@ -840,13 +823,12 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_cantacuzino_total_legitimacy				# Changed to precalc_cantacuzino_...
+				var = precalc_cantacuzino_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
 	}
 	option = {
-		# Mavrocordatos
 		name = tuh_elections.0.j
 		set_ruler = tuh_elections_mavrocordatos
 		custom_tooltip = tuh_election_mavrocordatos_personality_tooltip
@@ -864,24 +846,21 @@ country_event = {
 			faction = mavrocordatos_faction
 			influence = 30
 		}
-		# --- MAVROCORDATOS Legitimacy Tooltips & Effect ---
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = tuh_mavrocordatos_set_legitimacy_election_initial_legitimacy_tooltip
 		if = {
 			limit = {
 				is_founding_house_set = yes
 				is_var_mavrocordatos = {
-					# Changed to is_var_mavrocordatos
 					var = tuh_founding_house
 				}
 			}
 			custom_tooltip = tuh_mavrocordatos_set_legitimacy_election_founding_house_bonus_tooltip
 		}
-		# Basarab bonus tooltip omitted
 		if = {
 			limit = {
 				check_variable = {
-					which = mavrocordatos_total_wins					# Changed to mavrocordatos_total_wins
+					which = mavrocordatos_total_wins
 					value = 1
 				}
 			}
@@ -890,7 +869,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = mavrocordatos_consecutive_wins					# Changed to mavrocordatos_consecutive_wins
+					which = mavrocordatos_consecutive_wins
 					value = 2
 				}
 			}
@@ -899,7 +878,7 @@ country_event = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = mavrocordatos_consecutive_wins					# Changed to mavrocordatos_consecutive_wins
+					which = mavrocordatos_consecutive_wins
 					value = 1
 				}
 			}
@@ -908,7 +887,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					which = precalc_mavrocordatos_low_influence_penalty					# Changed to precalc_mavrocordatos_...
+					which = precalc_mavrocordatos_low_influence_penalty
 					value = 1
 				}
 			}
@@ -918,7 +897,7 @@ country_event = {
 		hidden_effect = {
 			add_legitimacy = -200
 			variable_effect = {
-				var = precalc_mavrocordatos_total_legitimacy				# Changed to precalc_mavrocordatos_...
+				var = precalc_mavrocordatos_total_legitimacy
 				effect = add_legitimacy
 			}
 		}
@@ -927,6 +906,13 @@ country_event = {
 		tuh_update_house_total_wins = yes
 		tuh_update_house_consecutive_wins = yes
 		tuh_set_current_ruling_house_variable_effect = yes
-		tuh_fire_pretender_event_based_on_legitimacy = yes
+		if = {
+			limit = {
+				NOT = {
+					dynasty = "Basarab"
+				}
+			}
+			tuh_fire_pretender_event_based_on_legitimacy = yes
+		}
 	}
 }

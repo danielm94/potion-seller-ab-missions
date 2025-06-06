@@ -1,0 +1,48 @@
+#Checks if targetA has more prestige than targetB
+has_more_prestige_than = {
+	variable_arithmetic_trigger = {
+		[[tooltip]
+		custom_tooltip = $tooltip$
+		]
+		export_to_variable = {
+			which = target_a_prestige
+			value = prestige
+			who = $targetA$
+		}
+		export_to_variable = {
+			which = target_b_prestige
+			value = prestige
+			who = $targetB$
+		}
+		NOT = {
+			check_variable = {
+				which = target_b_prestige
+				which = target_a_prestige
+			}
+		}
+	}
+}
+
+has_more_legitimacy_or_equivalent_than = {
+		variable_arithmetic_trigger = {
+		[[tooltip]
+		custom_tooltip = $tooltip$
+		]
+		export_to_variable = {
+			which = target_a_legit
+			value = trigger_value:legitimacy_equivalent
+			who = $targetA$
+		}
+		export_to_variable = {
+			which = target_b_legit
+			value = trigger_value:legitimacy_equivalent
+			who = $targetB$
+		}
+		NOT = {
+			check_variable = {
+				which = target_b_legit
+				which = target_a_legit
+			}
+		}
+	}
+}
