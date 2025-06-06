@@ -113,9 +113,9 @@ racovita_dynastic_prerogative = {
 			has_country_modifier = hidden_prerogative_trigger_modifier
 		}
 	}
-	ae_impact = -0.037
-	dip_advisor_cost = -0.075
-	province_warscore_cost = -0.037
+	ae_impact = -0.05
+	dip_advisor_cost = -0.1
+	province_warscore_cost = -0.05
 }
 
 cantacuzino_dynastic_prerogative = {

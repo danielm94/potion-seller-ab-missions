@@ -104,9 +104,9 @@ tooltip_ghica_dynastic_prerogative = {
 }
 
 tooltip_racovita_dynastic_prerogative = {
-	ae_impact = -0.0375
-	dip_advisor_cost = -0.075
-	province_warscore_cost = -0.0375
+	ae_impact = -0.05
+	dip_advisor_cost = -0.1
+	province_warscore_cost = -0.05
 }
 
 tooltip_cantacuzino_dynastic_prerogative = {
