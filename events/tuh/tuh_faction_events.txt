@@ -309,3 +309,878 @@ country_event = {
 		add_prestige = -5
 	}
 }
+
+# Factional Conflict: Draculesti vs. Danesti
+country_event = {
+	id = tuh_faction_events.4
+	title = tuh_faction_events.4.t
+	desc = tuh_faction_events.4.d
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	# Option A: Side with the aggressive Draculesti. This cripples national defense.
+	option = {
+		name = tuh_faction_events.4.a
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Danesti"
+					dynasty = "Draculesti"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = -15
+		}
+		add_country_modifier = {
+			name = sulking_shield_modifier
+			duration = 3650			# 10 years
+		}
+	}
+	# Option B: Side with the disciplined Danesti. This cripples national offense.
+	option = {
+		name = tuh_faction_events.4.b
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Danesti"
+					dynasty = "Draculesti"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = -15
+		}
+		add_country_modifier = {
+			name = blunted_spear_modifier
+			duration = 3650			# 10 years
+		}
+	}
+	# Option C: Punish both, preserving military cohesion at great cost to the state.
+	option = {
+		name = tuh_faction_events.4.c
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Danesti"
+					dynasty = "Draculesti"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = -5
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = -5
+		}
+		add_prestige = -15
+		add_years_of_income = -0.25
+		add_mil_power = -50
+	}
+	option = {
+		name = tuh_faction_events.4.draculesti_option
+		highlight = yes
+		trigger = {
+			dynasty = "Draculesti"
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = 25
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = -25
+		}
+		add_country_modifier = {
+			name = sulking_shield_modifier
+			duration = 3650			# 10 years
+		}
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+		add_legitimacy = 5
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+				leader = "Matei"
+				leader_dynasty = "Danesti"
+				win = yes
+			}
+		}
+	}
+	option = {
+		name = tuh_faction_events.4.danesti_option
+		highlight = yes
+		trigger = {
+			dynasty = "Danesti"
+		}
+		add_faction_influence = {
+			faction = danesti_faction
+			influence = 25
+		}
+		add_faction_influence = {
+			faction = draculesti_faction
+			influence = -25
+		}
+		add_country_modifier = {
+			name = blunted_spear_modifier
+			duration = 3650			# 10 years
+		}
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+		add_legitimacy = 5
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+				leader = "Bogdan"
+				leader_dynasty = "Draculesti"
+				win = yes
+			}
+		}
+	}
+}
+
+# Factional Conflict: Ghica vs. Cantacuzino
+country_event = {
+	id = tuh_faction_events.5
+	title = tuh_faction_events.5.t
+	desc = tuh_faction_events.5.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	# Option A: Side with the Ghica focus on administrative reform.
+	option = {
+		name = tuh_faction_events.5.a
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Ghica"
+					dynasty = "Cantacuzino"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = -15
+		}
+		add_country_modifier = {
+			name = ghica_reforms_modifier
+			duration = 3650			# 10 years
+		}
+	}
+	# Option B: Side with the Cantacuzino focus on military levies.
+	option = {
+		name = tuh_faction_events.5.b
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Ghica"
+					dynasty = "Cantacuzino"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = -15
+		}
+		add_country_modifier = {
+			name = cantacuzino_levies_modifier
+			duration = 3650			# 10 years
+		}
+	}
+	# Option C: Maintain the status quo at a cost.
+	option = {
+		name = tuh_faction_events.5.c
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Ghica"
+					dynasty = "Cantacuzino"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = -5
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = -5
+		}
+		add_adm_power = -20
+		change_government_reform_progress = -10
+	}
+	# Option D: Ghica ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.5.ghica_option
+		highlight = yes
+		trigger = {
+			dynasty = "Ghica"
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = 25
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = -25
+		}
+		add_country_modifier = {
+			name = ghica_supremacy_modifier
+			duration = 3650			# 10 years
+		}
+		change_government_reform_progress = 25
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+				leader = "Anton"
+				leader_dynasty = "Cantacuzino"
+				win = yes
+			}
+		}
+	}
+	# Option E: Cantacuzino ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.5.cantacuzino_option
+		highlight = yes
+		trigger = {
+			dynasty = "Cantacuzino"
+		}
+		add_faction_influence = {
+			faction = cantacuzino_faction
+			influence = 25
+		}
+		add_faction_influence = {
+			faction = ghica_faction
+			influence = -25
+		}
+		add_country_modifier = {
+			name = cantacuzino_supremacy_modifier
+			duration = 3650			# 10 years
+		}
+		add_yearly_manpower = 2
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+				leader = "Stefan"
+				leader_dynasty = "Ghica"
+				win = yes
+			}
+		}
+	}
+}
+
+# Factional Conflict: Mavrocordatos vs. Racovita
+country_event = {
+	id = tuh_faction_events.6
+	title = tuh_faction_events.6.t
+	desc = tuh_faction_events.6.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = no
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.7
+			OR = {
+				faction_in_power = mavrocordatos_faction
+				faction_in_power = racovita_faction
+			}
+		}
+		modifier = {
+			factor = 1.8
+			is_at_war = yes
+		}
+	}
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	# Option A: Side with the Mavrocordatos to found a national academy.
+	option = {
+		name = tuh_faction_events.6.a
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Mavrocordatos"
+					dynasty = "Racovita"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = -15
+		}
+		add_years_of_income = -0.3
+		add_country_modifier = {
+			name = national_academy_founded
+			duration = 7300			# 20 years
+		}
+	}
+	# Option B: Side with the Racovita to establish a new diplomatic corps.
+	option = {
+		name = tuh_faction_events.6.b
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Mavrocordatos"
+					dynasty = "Racovita"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = -15
+		}
+		add_years_of_income = -0.3
+		add_country_modifier = {
+			name = diplomatic_corps_established
+			duration = 7300			# 20 years
+		}
+	}
+	# Option C: Refuse both projects to save money, angering both factions.
+	option = {
+		name = tuh_faction_events.6.c
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Mavrocordatos"
+					dynasty = "Racovita"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = -5
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = -5
+		}
+		add_prestige = -5
+	}
+	# Option D: Mavrocordatos ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.6.mavrocordatos_option
+		highlight = yes
+		trigger = {
+			dynasty = "Mavrocordatos"
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = 25
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = -25
+		}
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = age_of_enlightenment_modifier
+			duration = 7300			# 20 years
+		}
+	}
+	# Option E: Racovita ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.6.racovita_option
+		highlight = yes
+		trigger = {
+			dynasty = "Racovita"
+		}
+		add_faction_influence = {
+			faction = racovita_faction
+			influence = 25
+		}
+		add_faction_influence = {
+			faction = mavrocordatos_faction
+			influence = -25
+		}
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = grand_diplomatic_corps_modifier
+			duration = 7300			# 20 years
+		}
+	}
+}
+
+# Factional Conflict: Basarab vs. Bibescu
+country_event = {
+	id = tuh_faction_events.7
+	title = tuh_faction_events.7.t
+	desc = tuh_faction_events.7.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	# Option A: Side with the Basarab to emphasize traditional court ceremony.
+	option = {
+		name = tuh_faction_events.7.a
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Basarab"
+					dynasty = "Bibescu"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = -10
+		}
+		add_country_modifier = {
+			name = traditional_court_ceremonies
+			duration = 3650			# 10 years
+		}
+	}
+	# Option B: Side with the Bibescu to adopt cosmopolitan court ceremony.
+	option = {
+		name = tuh_faction_events.7.b
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Basarab"
+					dynasty = "Bibescu"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = -10
+		}
+		add_country_modifier = {
+			name = cosmopolitan_court_ceremonies
+			duration = 3650			# 10 years
+		}
+	}
+	# Option C: Tell them their squabble is petty.
+	option = {
+		name = tuh_faction_events.7.c
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Basarab"
+					dynasty = "Bibescu"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = -5
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = -5
+		}
+		add_legitimacy = -5
+	}
+	# Option D: Basarab ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.7.basarab_option
+		highlight = yes
+		trigger = {
+			dynasty = "Basarab"
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = 20
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = -20
+		}
+		add_country_modifier = {
+			name = basarab_court_ascendant
+			duration = 3650			# 10 years
+		}
+		add_legitimacy = 10
+	}
+	# Option E: Bibescu ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.7.bibescu_option
+		highlight = yes
+		trigger = {
+			dynasty = "Bibescu"
+		}
+		add_faction_influence = {
+			faction = bibescu_faction
+			influence = 20
+		}
+		add_faction_influence = {
+			faction = basarab_faction
+			influence = -20
+		}
+		add_country_modifier = {
+			name = bibescu_court_ascendant
+			duration = 3650			# 10 years
+		}
+		add_prestige = 10
+	}
+}
+
+# Factional Conflict: Brancoveanu vs. Movilesti
+country_event = {
+	id = tuh_faction_events.8
+	title = tuh_faction_events.8.t
+	desc = tuh_faction_events.8.d
+	picture = ARTIST_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	# Option A: Grant patronage to the Brancoveanu's candidate.
+	option = {
+		name = tuh_faction_events.8.a
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Brancoveanu"
+					dynasty = "Movilesti"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = -10
+		}
+		add_adm_power = 15
+		add_prestige = 2
+	}
+	# Option B: Grant patronage to the Movilesti's candidate.
+	option = {
+		name = tuh_faction_events.8.b
+		trigger = {
+			NOT = {
+				OR = {
+					dynasty = "Brancoveanu"
+					dynasty = "Movilesti"
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = 10
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = -10
+		}
+		add_dip_power = 15
+		add_prestige = 2
+	}
+	# Option D: Brancoveanu ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.8.brancoveanu_option
+		highlight = yes
+		trigger = {
+			dynasty = "Brancoveanu"
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = -15
+		}
+		add_adm_power = 25
+		add_prestige = 5
+	}
+	# Option E: Movilesti ruler sides with their own house.
+	option = {
+		name = tuh_faction_events.8.movilesti_option
+		highlight = yes
+		trigger = {
+			dynasty = "Movilesti"
+		}
+		add_faction_influence = {
+			faction = movilesti_faction
+			influence = 15
+		}
+		add_faction_influence = {
+			faction = brancoveanu_faction
+			influence = -15
+		}
+		add_dip_power = 25
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = tuh_faction_events.9
+	title = tuh_faction_events.9.t
+	desc = tuh_faction_events.9.d
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+		NOT = {
+			has_ruler_flag = romanian_revolution
+		}
+		any_house_influence_greater_or_equal_to_n = {
+			n = 80
+		}
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.9
+			any_house_influence_greater_or_equal_to_n = {
+				n = 90
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_house_influence_greater_or_equal_to_n = {
+				n = 95
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_house_influence_greater_or_equal_to_n = {
+				n = 100
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				stability = 0
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				legitimacy = 80
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				legitimacy = 60
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				legitimacy = 40
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = romanian_revolution
+			tuh_find_highest_house_influence = yes
+		}
+	}
+	option = {
+		name = tuh_faction_events.9.a
+		add_legitimacy = 5
+		custom_tooltip = tuh_faction_events.9.a_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wrecked_by_factional_riots
+				duration = 1825
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = i
+				value = 9
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_modifier = wrecked_by_factional_riots
+					}
+				}
+				add_province_modifier = {
+					name = wrecked_by_factional_riots
+					duration = 1825
+				}
+				add_devastation = 20
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = i
+				value = 9
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+				}
+				spawn_rebels = {
+					size = 1
+					type = noble_rebels
+				}
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = tuh_faction_events.9.b		# If these savages burn shops, what will they do next?
+		add_stability = -1
+		add_years_of_income = -0.5
+		add_prestige = -30
+		if = {
+			limit = {
+				faction_in_power = basarab_faction
+			}
+			add_faction_influence = {
+				faction = basarab_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = bibescu_faction
+			}
+			add_faction_influence = {
+				faction = bibescu_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = draculesti_faction
+			}
+			add_faction_influence = {
+				faction = draculesti_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = brancoveanu_faction
+			}
+			add_faction_influence = {
+				faction = brancoveanu_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = movilesti_faction
+			}
+			add_faction_influence = {
+				faction = movilesti_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = danesti_faction
+			}
+			add_faction_influence = {
+				faction = danesti_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = ghica_faction
+			}
+			add_faction_influence = {
+				faction = ghica_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = racovita_faction
+			}
+			add_faction_influence = {
+				faction = racovita_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = cantacuzino_faction
+			}
+			add_faction_influence = {
+				faction = cantacuzino_faction
+				influence = -60
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = mavrocordatos_faction
+			}
+			add_faction_influence = {
+				faction = mavrocordatos_faction
+				influence = -60
+			}
+		}
+		kill_ruler = yes
+	}
+}

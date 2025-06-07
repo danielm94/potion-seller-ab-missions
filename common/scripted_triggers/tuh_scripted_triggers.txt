@@ -71,8 +71,53 @@ is_var_mavrocordatos = {
 is_founding_house_set = {
 	NOT = {
 		is_variable_equal = {
-			which = tuh_founding_house # Assuming this is a country-scoped variable
+			which = tuh_founding_house			# Assuming this is a country-scoped variable
 			value = -1
+		}
+	}
+}
+
+any_house_influence_greater_or_equal_to_n = {
+	OR = {
+		faction_influence = {
+			faction = basarab_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = bibescu_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = draculesti_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = brancoveanu_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = movilesti_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = danesti_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = ghica_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = racovita_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = cantacuzino_faction
+			influence = $n$
+		}
+		faction_influence = {
+			faction = mavrocordatos_faction
+			influence = $n$
 		}
 	}
 }

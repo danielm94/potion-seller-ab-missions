@@ -3065,6 +3065,12 @@ on_four_year_pulse = {
 		#Volcano Events
 		75 = volcano_events.2
 
+		#PotionSeller AB Missions
+		#Romanian Elective Monarchy Faction Events
+		100 = tuh_faction_events.4
+		100 = tuh_faction_events.5
+		100 = tuh_faction_events.7
+		100 = tuh_faction_events.8
 		1000 = 0
 	}
 }

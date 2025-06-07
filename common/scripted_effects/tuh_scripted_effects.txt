@@ -1384,6 +1384,7 @@ romanian_elective_monarchy_on_dev_effect = {
 		}
 	}
 }
+
 #
 tuh_clear_dynasty_specific_bonuses = {
 	tuh_clear_ghica_bonuses = yes
@@ -1395,13 +1396,98 @@ tuh_clear_ghica_bonuses = {
 			has_country_flag = fra_courthouse_bonus_flag
 		}
 		clr_country_flag = fra_courthouse_bonus_flag
-
 		every_owned_province = {
 			limit = {
 				has_courthouse_building_trigger = yes
 			}
-
 			remove_province_modifier = fra_improved_court_houses_modifier
+		}
+	}
+}
+
+tuh_find_highest_house_influence = {
+	set_variable = {
+		which = highest_influence_house
+		value = -1
+	}
+	if = {
+		limit = {
+			faction_in_power = basarab_faction
+		}
+		set_var_to_basarab_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = bibescu_faction
+		}
+		set_var_to_bibescu_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = draculesti_faction
+		}
+		set_var_to_draculesti_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = brancoveanu_faction
+		}
+		set_var_to_brancoveanu_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = movilesti_faction
+		}
+		set_var_to_movilesti_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = danesti_faction
+		}
+		set_var_to_danesti_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = ghica_faction
+		}
+		set_var_to_ghica_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = racovita_faction
+		}
+		set_var_to_racovita_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = cantacuzino_faction
+		}
+		set_var_to_cantacuzino_constant = {
+			var = highest_influence_house
+		}
+	}
+	if = {
+		limit = {
+			faction_in_power = mavrocordatos_faction
+		}
+		set_var_to_mavrocordatos_constant = {
+			var = highest_influence_house
 		}
 	}
 }
