@@ -41,6 +41,52 @@ WAL_ideas = {
 	}
 }
 
+TUH_ideas = {
+	free = yes
+	start = {
+		land_morale = 0.15
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+		nobles_loyalty_modifier = 0.1
+	}
+	bonus = {
+		stability_cost_modifier = -0.25
+	}
+	trigger = {
+		tag = TUH
+	}
+	TUH_great_council = {
+		advisor_cost = -0.2
+		num_of_parliament_issues = 2
+	}
+	TUH_bibescu_diplomatic_corps = {
+		diplomatic_reputation = 1
+		diplomatic_annexation_cost = -0.1
+	}
+	TUH_patronage_of_the_brancoveanu = {
+		development_cost_modifier = -0.075
+	}
+	TUH_household_regiments = {
+		cavalry_power = 0.2
+		cavalry_cost = -0.25
+	}
+	TUH_noble_self_governance = {
+		state_governing_cost = -0.15
+		global_prosperity_growth = 0.10
+	}
+	TUH_danubian_compact = {
+		improve_relation_modifier = 0.1
+		global_trade_power = 0.1
+	}
+	TUH_boieri_strongholds = {
+		defensiveness = 0.25
+		establish_order_cost = -0.25
+	}
+}
+
 DAC_ideas = {
 	free = yes
 	start = {
