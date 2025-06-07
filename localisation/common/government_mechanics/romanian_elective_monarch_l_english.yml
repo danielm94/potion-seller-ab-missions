@@ -4,7 +4,7 @@
  promote_dynastic_prerogative_desc: "We will receive §Y75%§! of the benefits of our dynasty's faction being in power for §Y20 years§!.\n[tooltip_line_divider]"
  forge_a_coalition: "Forge a Coalition"
  romanian_elective_monarchy_cooldown: "A Romanian Elective Monarchy ability"
- forge_a_coalition_desc: "We will form a coalition with one of the other §YTen Houses§! of our choosing and gain §Y50%§! of the benefits of them being in power for an extended period. In turn, the coalition house will receive §Y+20§! faction influence and we will lose §R5§! §YPrestige§!.\n[tooltip_line_divider]"
+ forge_a_coalition_desc: "We will form a coalition with one of the other §YTen Houses§! of our choosing and gain §Y50%§! of the benefits of them being in power for an extended period. In turn, the coalition house will receive §Y+20§! faction influence, and we will lose §R5§! §YPrestige§!.\n[tooltip_line_divider]"
  forge_a_coalition_movilesti_bonus_tooltip_yes: "£yes£ If our ruler's dynasty is §YMovilesti§!, the modifier will last §G30 years§! instead of §Y20 years§!. Additionally, the coalition house will only receive §Y50%§! of the faction influence, and we will suffer no §YPrestige§! loss."
  forge_a_coalition_movilesti_bonus_tooltip_no: "£no£ If our ruler's dynasty is §YMovilesti§!, the modifier will last §G30 years§! instead of §Y20 years§!. Additionally, the coalition house will only receive §Y50%§! of the faction influence, and we will suffer no §YPrestige§! loss."
  revive_public_punishments: "Revive Public Punishments"
