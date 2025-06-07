@@ -1155,3 +1155,59 @@ country_event = {
 		kill_ruler = yes
 	}
 }
+
+country_event = {
+	id = tuh_faction_events.10
+	title = tuh_faction_events.10.t
+	desc = tuh_faction_events.10.d
+	picture = WITCHTRIAL_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = romanian_elective_monarchy
+		any_owned_province = {
+			has_terrain = farmlands
+		}
+	}
+	option = {
+		name = tuh_faction_events.10.a
+		trigger = {
+			NOT = {
+				dynasty = "Draculesti"
+			}
+		}
+		add_years_of_income = -0.333
+	}
+	option = {
+		name = tuh_faction_events.10.b
+		trigger = {
+			NOT = {
+				dynasty = "Draculesti"
+			}
+		}
+		add_country_modifier = {
+			name = festering_paranoia
+			duration = 3650
+		}
+	}
+	option = {
+		name = tuh_faction_events.10.c
+		trigger = {
+			dynasty = "Draculesti"
+		}
+		highlight = yes
+		add_stability = 1
+		random_owned_province = {
+			limit = {
+				has_terrain = farmlands
+			}
+			add_devastation = 10
+		}
+		random_owned_province = {
+			limit = {
+				has_terrain = farmlands
+			}
+			add_devastation = 10
+		}
+		add_yearly_manpower = -0.5
+	}
+}

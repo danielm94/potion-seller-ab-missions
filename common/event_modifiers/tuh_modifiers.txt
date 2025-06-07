@@ -301,3 +301,8 @@ bibescu_court_ascendant = {
 	diplomatic_reputation = 1
 	legitimacy = -0.5
 }
+
+festering_paranoia = {
+	global_unrest = 1
+	stability_cost_modifier = 0.10
+}
