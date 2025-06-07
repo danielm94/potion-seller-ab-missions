@@ -7,8 +7,8 @@ ab_wal_boier_compromise_missions = {
 		is_or_was_wallachia = yes
 		has_wallachia_purged_the_estates = no
 	}
-	wal_placate_the_boiers = {
-		icon = gfx_wal_placate_the_boiers
+	wal_placate_the_boieri = {
+		icon = gfx_wal_placate_the_boieri
 		position = 1
 		trigger = {
 			if = {
@@ -30,17 +30,17 @@ ab_wal_boier_compromise_missions = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = wallachia_placating_the_boiers
+				name = wallachia_placating_the_boieri
 				duration = 10950
 			}
-			custom_tooltip = wal_placate_the_boiers_effect_tooltip
+			custom_tooltip = wal_placate_the_boieri_effect_tooltip
 		}
 	}
-	wal_compromise_with_the_boiers = {
-		icon = gfx_wal_compromise_with_the_boiers
+	wal_compromise_with_the_boieri = {
+		icon = gfx_wal_compromise_with_the_boieri
 		position = 2
 		required_missions = {
-			wal_placate_the_boiers
+			wal_placate_the_boieri
 		}
 		trigger = {
 			if = {
@@ -70,25 +70,25 @@ ab_wal_boier_compromise_missions = {
 				estate = estate_nobles
 				loyalty = 10
 			}
-			custom_tooltip = wal_compromise_with_the_boiers_increased_levies_bonus_tooltip
-			custom_tooltip = wal_compromise_with_the_boiers_advisor_privilege_bonus_tooltip
+			custom_tooltip = wal_compromise_with_the_boieri_increased_levies_bonus_tooltip
+			custom_tooltip = wal_compromise_with_the_boieri_advisor_privilege_bonus_tooltip
 			hidden_effect = {
-				set_country_flag = wal_compromised_with_the_boiers
+				set_country_flag = wal_compromised_with_the_boieri
 			}
 			add_prestige = -10
 			change_estate_land_share = {
 				estate = estate_nobles
 				share = 5
 			}
-			custom_tooltip = wal_compromise_with_the_boiers_can_no_longer_seize_from_boiers_tooltip
-			custom_tooltip = wal_compromise_with_the_boiers_dont_panic_tooltip
+			custom_tooltip = wal_compromise_with_the_boieri_can_no_longer_seize_from_boieri_tooltip
+			custom_tooltip = wal_compromise_with_the_boieri_dont_panic_tooltip
 		}
 	}
 	wal_the_great_feast = {
 		icon = gfx_wal_the_great_feast
 		position = 3
 		required_missions = {
-			wal_compromise_with_the_boiers
+			wal_compromise_with_the_boieri
 		}
 		trigger = {
 			if = {
@@ -123,7 +123,7 @@ ab_wal_boier_compromise_missions = {
 	}
 }
 
-ab_wal_slayed_the_boiers_missions = {
+ab_wal_slayed_the_boieri_missions = {
 	slot = 1
 	generic = no
 	ai = yes

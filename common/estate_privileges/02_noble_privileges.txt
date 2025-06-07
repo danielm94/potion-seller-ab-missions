@@ -37,7 +37,7 @@ estate_nobles_land_rights = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	on_granted = {
@@ -346,7 +346,7 @@ estate_nobles_nobility_primacy = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	on_granted = {
@@ -486,7 +486,7 @@ estate_nobles_officer_corp = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	can_select = {
@@ -599,7 +599,7 @@ estate_nobles_levies = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	can_select = {
@@ -653,7 +653,7 @@ estate_nobles_levies = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_wallachia_compromised_with_the_boiers = yes
+			has_wallachia_compromised_with_the_boieri = yes
 			has_reform = maintain_nobles_status_quo_reform
 		}
 		modifier = {
@@ -790,7 +790,7 @@ estate_nobles_advisors = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	penalties = {
@@ -817,7 +817,7 @@ estate_nobles_advisors = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_wallachia_compromised_with_the_boiers = yes
+			has_wallachia_compromised_with_the_boieri = yes
 			has_reform = maintain_nobles_status_quo_reform
 		}
 		modifier = {
@@ -830,7 +830,7 @@ estate_nobles_advisors = {
 			OR = {
 				has_government_attribute = no_absolutism_from_boier_privileges
 				AND = {
-					has_wallachia_compromised_with_the_boiers = yes
+					has_wallachia_compromised_with_the_boieri = yes
 					has_reform = maintain_nobles_status_quo_reform
 				}
 			}
@@ -882,7 +882,7 @@ estate_nobles_right_of_counsel = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	penalties = {
@@ -1057,7 +1057,7 @@ estate_nobles_supremacy_over_crown = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	can_select = {
@@ -1127,7 +1127,7 @@ estate_nobles_monopoly_of_metals = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	is_valid = {
@@ -1291,7 +1291,7 @@ estate_nobles_monopoly_of_livestock = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	can_select = {
@@ -1434,7 +1434,7 @@ estate_nobles_monopoly_of_gems = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	can_select = {
@@ -1644,7 +1644,7 @@ estate_nobles_strong_duchies = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	can_select = {
@@ -1971,7 +1971,7 @@ estate_nobles_statutory_rights = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	on_granted = {
@@ -4141,7 +4141,7 @@ estate_nobles_development_of_castles = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	conditional_modifier = {
@@ -4278,7 +4278,7 @@ estate_nobles_statesman_servitude = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	conditional_modifier = {
@@ -4382,7 +4382,7 @@ estate_nobles_royal_court_tasks = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	is_valid = {
@@ -4503,7 +4503,7 @@ estate_nobles_diet_right = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	is_valid = {
@@ -4573,7 +4573,7 @@ estate_nobles_force_conscription = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	is_valid = {
@@ -4637,7 +4637,7 @@ estate_nobles_noble_officer_right = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	is_valid = {
@@ -4719,7 +4719,7 @@ estate_nobles_expedition_rights = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiers = yes
+			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
 	is_valid = {

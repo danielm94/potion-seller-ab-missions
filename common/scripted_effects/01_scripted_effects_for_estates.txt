@@ -4660,7 +4660,7 @@ on_completed_agenda_effect_estate_nobles = {
 	}
 	if = {
 		limit = {
-			has_country_modifier = wallachia_placating_the_boiers
+			has_country_modifier = wallachia_placating_the_boieri
 		}
 		add_estate_loyalty = {
 			estate = estate_nobles

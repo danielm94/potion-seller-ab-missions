@@ -16,7 +16,7 @@
  AB_wallachia_events_banquet_of_blood_remove_privilege_tooltip: "The estate privilege §YDominance of the Boierime§! will be removed."
  AB_wallachia_events_banquet_of_blood_civil_war_tooltip: "§RThe Boierime of the Ten Houses will rise in rebellion, but with their patriarchs slaughtered, the revolt will lack direction and unity.§!"
  AB_wallachia_events.9_province_bonus_tooltip: "Every province in §YMoldavia§! will receive:"
- AB_wallachia_events.9.t: "The Fate of Moldavia's Boiars"
+ AB_wallachia_events.9.t: "The Fate of Moldavia's Boieri"
  AB_wallachia_events.9.d: "With Moldavia now firmly under the dominion of [Root.GetName], the question of its native Boier aristocracy looms large. These nobles, accustomed to their own privileges and power, represent both an opportunity for stable integration and a potential source of future dissent. [Root.Monarch.GetTitle] [Root.Monarch.GetName] must now decide how to deal with these Moldavian elites to best secure our new territories and further the interests of our united Vlach realm. Their fate will shape the future of Moldavia for generations to come."
  AB_wallachia_events.9.a: "Integrate them. Their loyalty can be won."
  AB_wallachia_events.9.b: "The Cossacks are more reliable. Empower them."

@@ -32,19 +32,19 @@ has_wallachia_purged_the_estates = {
 	}
 }
 
-has_wallachia_compromised_with_the_boiers = {
+has_wallachia_compromised_with_the_boieri = {
 	custom_trigger_tooltip = {
-		tooltip = has_wallachia_compromised_with_the_boiers_tooltip
-		has_country_flag = wal_compromised_with_the_boiers
+		tooltip = has_wallachia_compromised_with_the_boieri_tooltip
+		has_country_flag = wal_compromised_with_the_boieri
 	}
 }
 
 #So it reads better on estate privilege trigger tooltips
-has_wallachia_not_compromised_with_the_boiers = {
+has_wallachia_not_compromised_with_the_boieri = {
 	custom_trigger_tooltip = {
-		tooltip = has_wallachia_not_compromised_with_the_boiers_tooltip
+		tooltip = has_wallachia_not_compromised_with_the_boieri_tooltip
 		NOT = {
-			has_country_flag = wal_compromised_with_the_boiers
+			has_country_flag = wal_compromised_with_the_boieri
 		}
 	}
 }
