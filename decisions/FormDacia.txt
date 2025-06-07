@@ -15,6 +15,9 @@ country_decisions = {
 			NOT = {
 				tag = RMN
 			}
+			NOT = {
+				mission_completed = wal_the_great_feast
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
