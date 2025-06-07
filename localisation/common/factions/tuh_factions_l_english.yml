@@ -28,8 +28,7 @@
  mavrocordatos_faction_FACTION_DESC: "Greek-origin rulers prominent for their enlightenment ideas, legal reforms, and attempts to modernize Wallachian institutions.\n\n\n§YRuler Bonus:§! §TEmbracing an institutiton grants §G+100§! £allmana£ mana power and §G+5§! §YInnovativeness§!"
  racovita_faction: "House Racovita"
  racovita_faction_influence: "Racovita Influence"
- racovita_faction_FACTION_DESC: "Noble Moldavian house known for brief Wallachian rule, strategic alliances, and diplomatic efforts amidst regional rivalries.\n\n§YRuler Bonus:§! §TThe §YPromote Dynastic Prerogative§! ability grants the §G100%§! of our faction's bonus instead of §Y75%§!.§!"
-#promote_dynastic_prerogative
+ racovita_faction_FACTION_DESC: "Noble Moldavian house known for brief Wallachian rule, strategic alliances, and diplomatic efforts amidst regional rivalries.\n\n§YRuler Bonus:§! §TThe §YPromote Dynastic Prerogative§! ability grants §G100%§! of our faction's bonus instead of §Y75%§!.§!"
  the_ten_houses_faction_tab: "The Ten Houses"
  the_ten_houses_faction_title: "The Ten Houses of [Root.GetName]"
  WAL_parliament_name: "Diet of the Ten"
