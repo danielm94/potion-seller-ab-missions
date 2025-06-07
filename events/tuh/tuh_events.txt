@@ -296,6 +296,9 @@ country_event = {
 		}
 		add_prestige = -20
 		add_stability = -1
+		hidden_effect = {
+			tuh_set_current_ruling_house_variable_effect = yes
+		}
 	}
 	after = {
 		clear_exiled_ruler = tuh_elections_pretender
