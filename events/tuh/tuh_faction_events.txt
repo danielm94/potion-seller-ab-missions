@@ -137,7 +137,6 @@ country_event = {
 	}
 }
 
-#BYZ EVENT
 country_event = {
 	id = tuh_faction_events.2
 	title = tuh_faction_events.2.t
@@ -222,7 +221,6 @@ country_event = {
 	}
 }
 
-#NCI EVENT
 country_event = {
 	id = tuh_faction_events.3
 	title = tuh_faction_events.3.t
@@ -310,7 +308,6 @@ country_event = {
 	}
 }
 
-# Factional Conflict: Draculesti vs. Danesti
 country_event = {
 	id = tuh_faction_events.4
 	title = tuh_faction_events.4.t
@@ -320,7 +317,6 @@ country_event = {
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
 	}
-	# Option A: Side with the aggressive Draculesti. This cripples national defense.
 	option = {
 		name = tuh_faction_events.4.a
 		trigger = {
@@ -341,10 +337,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = sulking_shield_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 	}
-	# Option B: Side with the disciplined Danesti. This cripples national offense.
 	option = {
 		name = tuh_faction_events.4.b
 		trigger = {
@@ -365,10 +360,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = blunted_spear_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 	}
-	# Option C: Punish both, preserving military cohesion at great cost to the state.
 	option = {
 		name = tuh_faction_events.4.c
 		trigger = {
@@ -407,7 +401,7 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = sulking_shield_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 		add_prestige_or_monarch_power = {
 			amount = 5
@@ -439,7 +433,7 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = blunted_spear_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 		add_prestige_or_monarch_power = {
 			amount = 5
@@ -457,7 +451,6 @@ country_event = {
 	}
 }
 
-# Factional Conflict: Ghica vs. Cantacuzino
 country_event = {
 	id = tuh_faction_events.5
 	title = tuh_faction_events.5.t
@@ -467,7 +460,6 @@ country_event = {
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
 	}
-	# Option A: Side with the Ghica focus on administrative reform.
 	option = {
 		name = tuh_faction_events.5.a
 		trigger = {
@@ -488,10 +480,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = ghica_reforms_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 	}
-	# Option B: Side with the Cantacuzino focus on military levies.
 	option = {
 		name = tuh_faction_events.5.b
 		trigger = {
@@ -512,10 +503,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = cantacuzino_levies_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 	}
-	# Option C: Maintain the status quo at a cost.
 	option = {
 		name = tuh_faction_events.5.c
 		trigger = {
@@ -537,7 +527,6 @@ country_event = {
 		add_adm_power = -20
 		change_government_reform_progress = -10
 	}
-	# Option D: Ghica ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.5.ghica_option
 		highlight = yes
@@ -554,7 +543,7 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = ghica_supremacy_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 		change_government_reform_progress = 25
 		random_owned_province = {
@@ -567,7 +556,6 @@ country_event = {
 			}
 		}
 	}
-	# Option E: Cantacuzino ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.5.cantacuzino_option
 		highlight = yes
@@ -584,7 +572,7 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = cantacuzino_supremacy_modifier
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 		add_yearly_manpower = 2
 		random_owned_province = {
@@ -599,7 +587,6 @@ country_event = {
 	}
 }
 
-# Factional Conflict: Mavrocordatos vs. Racovita
 country_event = {
 	id = tuh_faction_events.6
 	title = tuh_faction_events.6.t
@@ -623,7 +610,6 @@ country_event = {
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
 	}
-	# Option A: Side with the Mavrocordatos to found a national academy.
 	option = {
 		name = tuh_faction_events.6.a
 		trigger = {
@@ -645,10 +631,9 @@ country_event = {
 		add_years_of_income = -0.3
 		add_country_modifier = {
 			name = national_academy_founded
-			duration = 7300			# 20 years
+			duration = 7300
 		}
 	}
-	# Option B: Side with the Racovita to establish a new diplomatic corps.
 	option = {
 		name = tuh_faction_events.6.b
 		trigger = {
@@ -670,10 +655,9 @@ country_event = {
 		add_years_of_income = -0.3
 		add_country_modifier = {
 			name = diplomatic_corps_established
-			duration = 7300			# 20 years
+			duration = 7300
 		}
 	}
-	# Option C: Refuse both projects to save money, angering both factions.
 	option = {
 		name = tuh_faction_events.6.c
 		trigger = {
@@ -694,7 +678,6 @@ country_event = {
 		}
 		add_prestige = -5
 	}
-	# Option D: Mavrocordatos ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.6.mavrocordatos_option
 		highlight = yes
@@ -712,10 +695,9 @@ country_event = {
 		add_years_of_income = -0.5
 		add_country_modifier = {
 			name = age_of_enlightenment_modifier
-			duration = 7300			# 20 years
+			duration = 7300
 		}
 	}
-	# Option E: Racovita ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.6.racovita_option
 		highlight = yes
@@ -733,12 +715,11 @@ country_event = {
 		add_years_of_income = -0.5
 		add_country_modifier = {
 			name = grand_diplomatic_corps_modifier
-			duration = 7300			# 20 years
+			duration = 7300
 		}
 	}
 }
 
-# Factional Conflict: Basarab vs. Bibescu
 country_event = {
 	id = tuh_faction_events.7
 	title = tuh_faction_events.7.t
@@ -748,7 +729,6 @@ country_event = {
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
 	}
-	# Option A: Side with the Basarab to emphasize traditional court ceremony.
 	option = {
 		name = tuh_faction_events.7.a
 		trigger = {
@@ -769,10 +749,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = traditional_court_ceremonies
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 	}
-	# Option B: Side with the Bibescu to adopt cosmopolitan court ceremony.
 	option = {
 		name = tuh_faction_events.7.b
 		trigger = {
@@ -793,10 +772,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = cosmopolitan_court_ceremonies
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 	}
-	# Option C: Tell them their squabble is petty.
 	option = {
 		name = tuh_faction_events.7.c
 		trigger = {
@@ -817,7 +795,6 @@ country_event = {
 		}
 		add_legitimacy = -5
 	}
-	# Option D: Basarab ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.7.basarab_option
 		highlight = yes
@@ -834,11 +811,10 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = basarab_court_ascendant
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 		add_legitimacy = 10
 	}
-	# Option E: Bibescu ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.7.bibescu_option
 		highlight = yes
@@ -855,13 +831,12 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = bibescu_court_ascendant
-			duration = 3650			# 10 years
+			duration = 3650
 		}
 		add_prestige = 10
 	}
 }
 
-# Factional Conflict: Brancoveanu vs. Movilesti
 country_event = {
 	id = tuh_faction_events.8
 	title = tuh_faction_events.8.t
@@ -871,7 +846,6 @@ country_event = {
 	trigger = {
 		has_government_attribute = romanian_elective_monarchy
 	}
-	# Option A: Grant patronage to the Brancoveanu's candidate.
 	option = {
 		name = tuh_faction_events.8.a
 		trigger = {
@@ -893,7 +867,6 @@ country_event = {
 		add_adm_power = 15
 		add_prestige = 2
 	}
-	# Option B: Grant patronage to the Movilesti's candidate.
 	option = {
 		name = tuh_faction_events.8.b
 		trigger = {
@@ -915,7 +888,6 @@ country_event = {
 		add_dip_power = 15
 		add_prestige = 2
 	}
-	# Option D: Brancoveanu ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.8.brancoveanu_option
 		highlight = yes
@@ -933,7 +905,6 @@ country_event = {
 		add_adm_power = 25
 		add_prestige = 5
 	}
-	# Option E: Movilesti ruler sides with their own house.
 	option = {
 		name = tuh_faction_events.8.movilesti_option
 		highlight = yes
@@ -1087,7 +1058,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = tuh_faction_events.9.b		# If these savages burn shops, what will they do next?
+		name = tuh_faction_events.9.b
 		add_stability = -1
 		add_years_of_income = -0.5
 		add_prestige = -30
