@@ -110,6 +110,7 @@ ab_wal_boier_compromise_missions = {
 			}
 		}
 		effect = {
+			custom_tooltip = cant_form_dacia_tooltip
 			set_country_flag = wal_elective_monarchy
 			add_government_reform = wallachian_elective_monarchy
 			change_estate_land_share = {
