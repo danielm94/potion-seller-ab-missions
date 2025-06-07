@@ -28,6 +28,7 @@
  wal_compromise_with_the_boieri_desc: "Todo"
  wal_the_great_feast_title: "The Great Feast"
  wal_the_great_feast_desc: "Todo"
+ cant_form_dacia_tooltip: "§YWARNING: YOU WILL NOT BE ABLE TO FORM @DAC DACIA OR HAVE ACCESS TO TERROR MECHANICS §RFOR THE REST OF THE GAME§! IF YOU COMPLETE THIS MISSION.§!\n"
  wal_compromise_with_the_boieri_increased_levies_bonus_tooltip: "The §YIncreased Levies§! estate privilege will now grant a flat §G-10.0%§! to §YRegiment Costs§! so as long as we have the §YCompromise with the Nobility§! reform.\n"
  wal_compromise_with_the_boieri_advisor_privilege_bonus_tooltip: "The §YArtistocratic Counselors§! estate privilege no longer grants penalties to §YAbsolutism§!, §YStability Cost§! or §YBoiermiea Influence§!, so as long as we have the §YCompromise with the Nobility§! reform.\n"
  wal_compromise_with_the_boieri_can_no_longer_seize_from_boieri_tooltip: "§RWe will no longer be able to revoke privileges from the §YBoiermiea§!, unless we use the §Y'Purge the Elite' Terror§! interaction.§!\n"
