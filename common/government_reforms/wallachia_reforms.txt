@@ -146,7 +146,7 @@ wallachian_elective_monarchy = {
 	}
 	custom_attributes = {
 		has_parliament = yes
-		no_absolutism_from_boiar_privileges = yes
+		no_absolutism_from_boier_privileges = yes
 		election_on_death = yes
 		romanian_elective_monarchy = yes
 	}

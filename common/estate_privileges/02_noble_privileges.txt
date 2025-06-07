@@ -6,7 +6,7 @@ estate_nobles_land_rights = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -15,7 +15,7 @@ estate_nobles_land_rights = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -37,7 +37,7 @@ estate_nobles_land_rights = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	on_granted = {
@@ -318,7 +318,7 @@ estate_nobles_nobility_primacy = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -327,7 +327,7 @@ estate_nobles_nobility_primacy = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -346,7 +346,7 @@ estate_nobles_nobility_primacy = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	on_granted = {
@@ -459,7 +459,7 @@ estate_nobles_officer_corp = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -468,7 +468,7 @@ estate_nobles_officer_corp = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -486,7 +486,7 @@ estate_nobles_officer_corp = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	can_select = {
@@ -576,7 +576,7 @@ estate_nobles_levies = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -599,7 +599,7 @@ estate_nobles_levies = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	can_select = {
@@ -653,7 +653,7 @@ estate_nobles_levies = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_wallachia_compromised_with_the_boiars = yes
+			has_wallachia_compromised_with_the_boiers = yes
 			has_reform = maintain_nobles_status_quo_reform
 		}
 		modifier = {
@@ -676,7 +676,7 @@ estate_nobles_levies = {
 	conditional_modifier = {
 		trigger = {
 			OR = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 				has_government_attribute = free_noble_levies
 			}
 		}
@@ -775,7 +775,7 @@ estate_nobles_advisors = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -790,7 +790,7 @@ estate_nobles_advisors = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	penalties = {
@@ -817,7 +817,7 @@ estate_nobles_advisors = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_wallachia_compromised_with_the_boiars = yes
+			has_wallachia_compromised_with_the_boiers = yes
 			has_reform = maintain_nobles_status_quo_reform
 		}
 		modifier = {
@@ -828,9 +828,9 @@ estate_nobles_advisors = {
 	conditional_modifier = {
 		trigger = {
 			OR = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 				AND = {
-					has_wallachia_compromised_with_the_boiars = yes
+					has_wallachia_compromised_with_the_boiers = yes
 					has_reform = maintain_nobles_status_quo_reform
 				}
 			}
@@ -859,7 +859,7 @@ estate_nobles_right_of_counsel = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -868,7 +868,7 @@ estate_nobles_right_of_counsel = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 10
@@ -882,7 +882,7 @@ estate_nobles_right_of_counsel = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	penalties = {
@@ -913,7 +913,7 @@ estate_nobles_french_strong_duchies = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -922,7 +922,7 @@ estate_nobles_french_strong_duchies = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 10
@@ -1028,7 +1028,7 @@ estate_nobles_supremacy_over_crown = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -1037,7 +1037,7 @@ estate_nobles_supremacy_over_crown = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -1057,7 +1057,7 @@ estate_nobles_supremacy_over_crown = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	can_select = {
@@ -1105,7 +1105,7 @@ estate_nobles_monopoly_of_metals = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -1114,7 +1114,7 @@ estate_nobles_monopoly_of_metals = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 10
@@ -1127,7 +1127,7 @@ estate_nobles_monopoly_of_metals = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	is_valid = {
@@ -1260,7 +1260,7 @@ estate_nobles_monopoly_of_livestock = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -1269,7 +1269,7 @@ estate_nobles_monopoly_of_livestock = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 10
@@ -1291,7 +1291,7 @@ estate_nobles_monopoly_of_livestock = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	can_select = {
@@ -1403,7 +1403,7 @@ estate_nobles_monopoly_of_gems = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -1412,7 +1412,7 @@ estate_nobles_monopoly_of_gems = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 10
@@ -1434,7 +1434,7 @@ estate_nobles_monopoly_of_gems = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	can_select = {
@@ -1606,7 +1606,7 @@ estate_nobles_strong_duchies = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -1615,7 +1615,7 @@ estate_nobles_strong_duchies = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 10
@@ -1644,7 +1644,7 @@ estate_nobles_strong_duchies = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	can_select = {
@@ -1946,7 +1946,7 @@ estate_nobles_statutory_rights = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -1955,7 +1955,7 @@ estate_nobles_statutory_rights = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -1971,7 +1971,7 @@ estate_nobles_statutory_rights = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	on_granted = {
@@ -4117,7 +4117,7 @@ estate_nobles_development_of_castles = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4126,7 +4126,7 @@ estate_nobles_development_of_castles = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4141,7 +4141,7 @@ estate_nobles_development_of_castles = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	conditional_modifier = {
@@ -4278,14 +4278,14 @@ estate_nobles_statesman_servitude = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4294,7 +4294,7 @@ estate_nobles_statesman_servitude = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4361,7 +4361,7 @@ estate_nobles_royal_court_tasks = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4370,7 +4370,7 @@ estate_nobles_royal_court_tasks = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4382,7 +4382,7 @@ estate_nobles_royal_court_tasks = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	is_valid = {
@@ -4482,7 +4482,7 @@ estate_nobles_diet_right = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4491,7 +4491,7 @@ estate_nobles_diet_right = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4503,7 +4503,7 @@ estate_nobles_diet_right = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	is_valid = {
@@ -4552,7 +4552,7 @@ estate_nobles_force_conscription = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4561,7 +4561,7 @@ estate_nobles_force_conscription = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4573,7 +4573,7 @@ estate_nobles_force_conscription = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	is_valid = {
@@ -4616,7 +4616,7 @@ estate_nobles_noble_officer_right = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4625,7 +4625,7 @@ estate_nobles_noble_officer_right = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4637,7 +4637,7 @@ estate_nobles_noble_officer_right = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	is_valid = {
@@ -4698,7 +4698,7 @@ estate_nobles_expedition_rights = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
 			NOT = {
-				has_government_attribute = no_absolutism_from_boiar_privileges
+				has_government_attribute = no_absolutism_from_boier_privileges
 			}
 		}
 		modifier = {
@@ -4707,7 +4707,7 @@ estate_nobles_expedition_rights = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 5
@@ -4719,7 +4719,7 @@ estate_nobles_expedition_rights = {
 				is_or_was_wallachia = yes
 				has_wallachia_purged_the_estates = no
 			}
-			has_wallachia_not_compromised_with_the_boiars = yes
+			has_wallachia_not_compromised_with_the_boiers = yes
 		}
 	}
 	is_valid = {

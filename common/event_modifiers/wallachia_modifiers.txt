@@ -178,7 +178,7 @@ wallachia_unifier_of_the_vlachs = {
 	heir_chance = 0.5
 }
 
-wallachia_placating_the_boiars = {
+wallachia_placating_the_boiers = {
 	estate_interaction_cooldown_modifier = -0.2
 	nobles_loyalty_modifier = 0.05
 	prestige = -0.5

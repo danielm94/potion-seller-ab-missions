@@ -110,7 +110,7 @@
  wallachian_civil_war_province_will_be_razed: "§Y[This.GetName] will be razed.§!"
 
  wallachian_civil_war_events.28.t: "Whispers in the Council"
- wallachian_civil_war_events.28.d: "My advisors... they offer their counsel, but their eyes betray a hidden agenda. Was that a flicker of contempt when I spoke? A shared, knowing glance between them? They speak of caution and prudence, but I hear the echoes of Boiar defiance. Perhaps their 'wisdom' is merely a cloak for their sympathies with the rebels. Their advice feels tainted, their loyalty a fragile veneer over a core of deceit. How many of them secretly pray for my downfall?"
+ wallachian_civil_war_events.28.d: "My advisors... they offer their counsel, but their eyes betray a hidden agenda. Was that a flicker of contempt when I spoke? A shared, knowing glance between them? They speak of caution and prudence, but I hear the echoes of Boier defiance. Perhaps their 'wisdom' is merely a cloak for their sympathies with the rebels. Their advice feels tainted, their loyalty a fragile veneer over a core of deceit. How many of them secretly pray for my downfall?"
  wallachian_civil_war_events.28.a: "Their counsel reeks of treachery!"
  wallachian_civil_war_events.29.t: "The Serpent in My Own Blood"
  wallachian_civil_war_events.29.d: "My own heir... [Root.Monarch.GetSheHe] watches me with an unnerving intensity. Is it filial piety, or the glint of ambition I see in those eyes? Every smile seems calculated, every word a veiled probe for weakness. They are young, yes, but vipers strike from the cradle. Do they dream of my throne, stained with my blood, while I fight to preserve it? The whispers of the Boiars could easily turn a young mind. I see the shadow of betrayal lengthening even in my own halls."

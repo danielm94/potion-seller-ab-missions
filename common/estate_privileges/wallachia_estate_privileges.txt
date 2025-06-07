@@ -58,7 +58,7 @@ estate_nobles_dominance_of_the_boierime = {
 	conditional_modifier = {
 		is_bad = no
 		trigger = {
-			has_government_attribute = no_absolutism_from_boiar_privileges
+			has_government_attribute = no_absolutism_from_boier_privileges
 		}
 		modifier = {
 			max_absolutism = 20
