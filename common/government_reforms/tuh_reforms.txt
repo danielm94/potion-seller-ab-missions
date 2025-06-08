@@ -164,3 +164,8 @@ phanariot_cadre = {
 		}
 	}
 }
+
+#-------Tier 7-------#
+expand_powers_of_the_rege = {
+
+}
