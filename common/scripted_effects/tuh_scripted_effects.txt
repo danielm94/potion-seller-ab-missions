@@ -1185,154 +1185,6 @@ tuh_fire_pretender_event_based_on_legitimacy = {
 	}
 }
 
-tuh_spawn_pretenders_who_reject_election = {
-	custom_tooltip = tuh_spawn_pretenders_who_reject_election_tooltip
-	hidden_effect = {
-		random_list = {
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Alexandru"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Mircea"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Vlad"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Radu"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Dan"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Mihai"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Stefan"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Nicolae"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Constantin"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Grigore"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Ioan"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Vasile"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Petru"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Gheorghe"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Tudor"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Barbu"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Matei"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Serban"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Neagoe"
-					leader_dynasty = $dynasty$
-				}
-			}
-			5 = {
-				spawn_large_scaled_rebels = {
-					type = pretender_rebels
-					leader = "Dragomir"
-					leader_dynasty = $dynasty$
-				}
-			}
-		}
-	}
-}
-
 tuh_add_estate_loyalty_on_dev_effect = {
 	if = {
 		limit = {
@@ -1501,6 +1353,405 @@ tuh_find_highest_house_influence = {
 		}
 		set_var_to_mavrocordatos_constant = {
 			var = highest_influence_house
+		}
+	}
+}
+
+tuh_define_exiled_house_candidates = {
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_basarab
+		min_age = 20
+		max_age = 75
+		change_adm = 1
+		option = 0
+		dynasty = "Basarab"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_bibescu
+		min_age = 20
+		max_age = 75
+		change_dip = 1
+		option = 1
+		dynasty = "Bibescu"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_draculesti
+		min_age = 20
+		max_age = 75
+		change_mil = 1
+		option = 2
+		dynasty = "Draculesti"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_brancoveanu
+		min_age = 20
+		max_age = 75
+		change_adm = 1
+		option = 3
+		dynasty = "Brancoveanu"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_movilesti
+		min_age = 20
+		max_age = 75
+		change_dip = 1
+		option = 4
+		dynasty = "Movilesti"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_danesti
+		min_age = 20
+		max_age = 75
+		change_mil = 1
+		option = 5
+		dynasty = "Danesti"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_ghica
+		min_age = 20
+		max_age = 75
+		change_adm = 1
+		option = 6
+		dynasty = "Ghica"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_racovita
+		min_age = 20
+		max_age = 75
+		change_dip = 1
+		option = 7
+		dynasty = "Racovita"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_cantacuzino
+		min_age = 20
+		max_age = 75
+		change_mil = 1
+		option = 8
+		dynasty = "Cantacuzino"
+	}
+	define_exiled_ruler = {
+		exiled_as = tuh_elections_mavrocordatos
+		min_age = 20
+		max_age = 75
+		change_adm = 1
+		option = 9
+		dynasty = "Mavrocordatos"
+	}
+}
+
+tuh_spawn_pretenders_from_the_other_9_houses = {
+	hidden_effect = {
+		tuh_define_exiled_house_candidates = yes
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Basarab"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = basarab_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = basarab_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Bibescu"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = bibescu_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = bibescu_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Draculesti"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = draculesti_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = draculesti_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Brancoveanu"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = brancoveanu_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = brancoveanu_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Movilesti"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = movilesti_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = movilesti_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Danesti"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = danesti_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = danesti_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Ghica"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = ghica_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = ghica_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Racovita"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = racovita_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = racovita_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Cantacuzino"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = cantacuzino_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = cantacuzino_pretender_rebels
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				dynasty = "Mavrocordatos"
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_rebels_in_province = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = $size$
+					type = mavrocordatos_pretender_rebels
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = $size$
+					type = mavrocordatos_pretender_rebels
+				}
+			}
 		}
 	}
 }

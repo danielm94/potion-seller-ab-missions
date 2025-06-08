@@ -1029,31 +1029,274 @@ country_event = {
 				value = 1
 			}
 		}
-		hidden_effect = {
-			set_variable = {
-				which = i
-				value = 9
-			}
-		}
-		while = {
+		if = {
 			limit = {
-				check_variable = {
-					which = i
-					value = 1
+				NOT = {
+					faction_in_power = basarab_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_basarab
+					min_age = 20
+					max_age = 75
+					change_adm = 1
+					option = 0
+					dynasty = "Basarab"
 				}
 			}
 			random_owned_province = {
 				limit = {
 					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
 				}
 				spawn_rebels = {
 					size = 1
-					type = noble_rebels
+					type = basarab_pretender_rebels
 				}
 			}
-			subtract_variable = {
-				which = i
-				value = 1
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = bibescu_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_bibescu
+					min_age = 20
+					max_age = 75
+					change_dip = 1
+					option = 1
+					dynasty = "Bibescu"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = bibescu_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = draculesti_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_draculesti
+					min_age = 20
+					max_age = 75
+					change_mil = 1
+					option = 2
+					dynasty = "Draculesti"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = draculesti_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = brancoveanu_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_brancoveanu
+					min_age = 20
+					max_age = 75
+					change_adm = 1
+					option = 3
+					dynasty = "Brancoveanu"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = brancoveanu_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = movilesti_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_movilesti
+					min_age = 20
+					max_age = 75
+					change_dip = 1
+					option = 4
+					dynasty = "Movilesti"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = movilesti_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = danesti_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_danesti
+					min_age = 20
+					max_age = 75
+					change_mil = 1
+					option = 5
+					dynasty = "Danesti"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = danesti_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = ghica_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_ghica
+					min_age = 20
+					max_age = 75
+					change_adm = 1
+					option = 6
+					dynasty = "Ghica"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = ghica_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = racovita_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_racovita
+					min_age = 20
+					max_age = 75
+					change_dip = 1
+					option = 7
+					dynasty = "Racovita"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = racovita_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = cantacuzino_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_cantacuzino
+					min_age = 20
+					max_age = 75
+					change_mil = 1
+					option = 8
+					dynasty = "Cantacuzino"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = cantacuzino_pretender_rebels
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					faction_in_power = mavrocordatos_faction
+				}
+			}
+			hidden_effect = {
+				define_exiled_ruler = {
+					exiled_as = tuh_elections_mavrocordatos
+					min_age = 20
+					max_age = 75
+					change_adm = 1
+					option = 9
+					dynasty = "Mavrocordatos"
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = wrecked_by_factional_riots
+					has_rebels_in_province = no
+				}
+				spawn_rebels = {
+					size = 1
+					type = mavrocordatos_pretender_rebels
+				}
 			}
 		}
 	}
