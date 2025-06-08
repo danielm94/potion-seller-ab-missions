@@ -51,8 +51,8 @@ empower_the_diet_of_the_ten = {
 	}
 	modifiers = {
 		max_absolutism = -5
-		advisor_cost = -0.1
-		parliament_backing_chance = 0.25
+		same_culture_advisor_cost = -0.15
+		parliament_backing_chance = 0.15
 		stability_cost_modifier = -0.075
 	}
 	custom_attributes = {
@@ -135,5 +135,32 @@ bulwark_of_the_faith = {
 
 	custom_attributes = {
 		improved_defender_of_faith = yes
+	}
+}
+
+#------Tier 6------#
+phanariot_cadre = {
+	icon = "phanariot_cadre"
+	allow_normal_conversion = yes
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		idea_cost = -0.1
+		technology_cost = -0.05
+		num_accepted_cultures = 1
+		global_spy_defence = -0.3
+		nobles_loyalty_modifier = -0.10
+		nobles_influence_modifier = -0.05
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					accepted_culture = greek
+				}
+			}
+			add_accepted_culture = greek
+		}
 	}
 }
