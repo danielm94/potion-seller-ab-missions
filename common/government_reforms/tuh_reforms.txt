@@ -1,3 +1,4 @@
+#-Tier 1-#
 dacian_elective_monarchy = {
 	icon = "dacian_elective_monarchy"
 	allow_convert = no
@@ -39,5 +40,100 @@ dacian_elective_monarchy = {
 	}
 	government_abilities = {
 		romanian_elective_monarchy_mechanic
+	}
+}
+
+#--Tier 2--#
+empower_the_diet_of_the_ten = {
+	icon = "parliament_hall"
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		max_absolutism = -5
+		advisor_cost = -0.1
+		parliament_backing_chance = 0.25
+		stability_cost_modifier = -0.075
+	}
+	custom_attributes = {
+		rem_higher_legitimacy_candidates = yes
+		rem_no_pretenders_after_election = yes
+	}
+}
+
+dominance_of_the_ruling_house = {
+	icon = "dominance_of_the_ruling_house"
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		max_absolutism = 5
+		max_absolutism_effect = 0.05
+		nobles_influence_modifier = -0.05
+		legitimacy = -0.5
+		global_unrest = 1
+	}
+	custom_attributes = {
+		rem_ruling_house_monthly_influence = yes
+	}
+}
+
+#---Tier 3---#
+ghica_bureaucracy = {
+	icon = "ghica_bureaucracy"
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.1
+		reform_progress_growth = 0.2
+		nobles_influence_modifier = 0.1
+		ghica_faction_influence = 0.08
+		yearly_absolutism = -0.5
+	}
+	custom_attributes = {
+		centralize_state_half_refund = yes
+	}
+}
+
+#----Tier 4----#
+recognize_dniester_host = {
+	icon = "cossack_reform"
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+		has_estate = estate_cossacks
+	}
+	modifiers = {
+		cavalry_flanking = 0.25
+		cav_to_inf_ratio = 0.20
+		allowed_cossack_fraction = 0.20
+		cossacks_loyalty_modifier = 0.1
+		cossacks_influence_modifier = 0.2
+		nobles_loyalty_modifier = -0.15
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 10
+			has_idea_group = aristocracy_ideas
+		}
+	}
+}
+
+#-----Tier 5-----#
+bulwark_of_the_faith = {
+	icon = "bulwark_of_the_faith"
+	allow_normal_conversion = yes
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		global_missionary_strength = 0.02
+		yearly_patriarch_authority = 0.005
+		manpower_in_true_faith_provinces = 0.05
+	}
+
+	custom_attributes = {
+		improved_defender_of_faith = yes
 	}
 }

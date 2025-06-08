@@ -911,6 +911,9 @@ country_event = {
 				NOT = {
 					dynasty = "Basarab"
 				}
+				NOT = {
+					has_reform = empower_the_diet_of_the_ten
+				}
 			}
 			tuh_fire_pretender_event_based_on_legitimacy = yes
 		}

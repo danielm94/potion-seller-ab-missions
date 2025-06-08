@@ -166,3 +166,76 @@ wallachian_elective_monarchy = {
 		romanian_elective_monarchy_mechanic
 	}
 }
+
+# Tier 3 - Bureaucracy -
+wallachia_codification_of_the_pravila_reform = {
+	icon = "laesio_enormis_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_or_was_wallachia = yes
+	}
+	modifiers = {
+		stability_cost_modifier = -0.1
+		yearly_corruption = -0.1
+		monarch_admin_power = 1
+		all_estate_loyalty_equilibrium = -0.15
+		nobles_influence_modifier = -0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = {
+				stability = 0
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 30
+				}
+			}
+		}
+	}
+}
+
+# Tier 4 - Military -
+wallachia_carpathian_ambush_doctrine_reform = {
+	icon = "carpathian_ambush"
+	allow_normal_conversion = yes
+	potential = {
+		is_or_was_wallachia = yes
+	}
+	modifiers = {
+		hostile_attrition = 2
+		max_hostile_attrition = 1
+		defensiveness = 0.2
+		movement_speed = 0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 100
+			has_idea_group = defensive_ideas
+		}
+	}
+}
+
+wallachia_establish_the_pandurs_reform = {
+	icon = "pandur_regiments"
+	allow_normal_conversion = yes
+	potential = {
+		is_or_was_wallachia = yes
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.1
+		global_manpower_modifier = 0.1
+		infantry_cost = -0.10
+		fort_maintenance_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}

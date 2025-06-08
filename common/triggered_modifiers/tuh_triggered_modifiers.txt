@@ -351,3 +351,114 @@ revive_public_punishments_draculesti = {
 	harsh_treatment_cost = -0.75
 	max_absolutism = 7
 }
+
+
+dominance_of_basarab = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Basarab"
+	}
+
+	basarab_faction_influence = 0.05
+}
+
+dominance_of_bibescu = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Bibescu"
+	}
+
+	bibescu_faction_influence = 0.05
+}
+
+dominance_of_draculesti = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Draculesti"
+	}
+
+	draculesti_faction_influence = 0.05
+}
+
+dominance_of_brancoveanu = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Brancoveanu"
+	}
+
+	brancoveanu_faction_influence = 0.05
+}
+
+dominance_of_movilesti = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Movilesti"
+	}
+
+	movilesti_faction_influence = 0.05
+}
+
+dominance_of_danesti = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Danesti"
+	}
+
+	danesti_faction_influence = 0.05
+}
+
+dominance_of_ghica = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Ghica"
+	}
+
+	ghica_faction_influence = 0.05
+}
+
+dominance_of_racovita = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Racovita"
+	}
+
+	racovita_faction_influence = 0.05
+}
+
+dominance_of_cantacuzino = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Cantacuzino"
+	}
+
+	cantacuzino_faction_influence = 0.05
+}
+
+dominance_of_mavrocordatos = {
+	potential = {
+		has_reform = dominance_of_the_ruling_house
+	}
+	trigger = {
+		dynasty = "Mavrocordatos"
+	}
+
+	mavrocordatos_faction_influence = 0.05
+}

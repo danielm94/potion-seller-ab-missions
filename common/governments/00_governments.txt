@@ -336,6 +336,10 @@ monarchy = {
 				bav_council_of_eight
 				mgygyula
 				# ]]]
+				#--PotionSeller--#
+				# Wallachia
+				empower_the_diet_of_the_ten
+				dominance_of_the_ruling_house
 			}
 		}
 		bureaucracy = {
@@ -473,6 +477,10 @@ monarchy = {
 				# Blood and Iron
 				ger_state_captains_reform
 				# ]]]
+				#--PotionSeller--#
+				#Romania:
+				wallachia_codification_of_the_pravila_reform
+				ghica_bureaucracy
 			}
 		}
 		# state_and_religion = {
@@ -682,6 +690,9 @@ monarchy = {
 				blt_forest_warfare
 				blt_pulka_system
 				# ]]]
+				wallachia_carpathian_ambush_doctrine_reform 
+				wallachia_establish_the_pandurs_reform
+				recognize_dniester_host
 			}
 		}
 		state_and_religion = {
@@ -742,6 +753,9 @@ monarchy = {
 				# Baltic
 				est_harmony
 				# ]]]
+				#---PotionSeller--#
+				#Romania
+				bulwark_of_the_faith
 			}
 		}
 		# deliberative_assembly = {

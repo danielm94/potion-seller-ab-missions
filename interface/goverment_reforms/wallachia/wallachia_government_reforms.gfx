@@ -27,4 +27,28 @@ spriteTypes = {
 		name = "government_reform_dacian_elective_monarchy"
 		texturefile = "gfx/interface/government_reform_icons/dacian_elective_monarchy.dds"
 	}
+	spriteType = {
+		name = "government_reform_dominance_of_the_ruling_house"
+		texturefile = "gfx/interface/government_reform_icons/dominance_of_the_ruling_house.dds"
+	}
+	spriteType = {
+		name = "government_reform_ghica_bureaucracy"
+		texturefile = "gfx/interface/government_reform_icons/ghica_bureaucracy.dds"
+	}
+	spriteType = {
+		name = "government_reform_carpathian_ambush"
+		texturefile = "gfx/interface/government_reform_icons/carpathian_ambush.dds"
+	}
+	spriteType = {
+		name = "government_reform_pandur_regiments"
+		texturefile = "gfx/interface/government_reform_icons/pandur_regiments.dds"
+	}
+	spriteType = {
+		name = "government_reform_cossack_reform"
+		texturefile = "gfx/interface/government_reform_icons/cossack_reform.dds"
+	}
+	spriteType = {
+		name = "government_reform_bulwark_of_the_faith"
+		texturefile = "gfx/interface/government_reform_icons/bulwark_of_the_faith.dds"
+	}
 }

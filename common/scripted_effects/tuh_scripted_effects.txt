@@ -1017,8 +1017,21 @@ tuh_precalculate_all_election_tooltips_effect = {
 		value = $house_id$
 	}
 	set_variable = {
-		which = precalc_$house$_total_legitimacy
+		which = initial_$house$_total_legitimacy
 		value = 50
+	}
+	if = {
+		limit = {
+			has_reform = empower_the_diet_of_the_ten
+		}
+		change_variable = {
+			which = initial_$house$_total_legitimacy
+			value = 10
+		}
+	}
+	set_variable = {
+		which = precalc_$house$_total_legitimacy
+		which = initial_$house$_total_legitimacy
 	}
 	###########################
 	### TOTAL WINS HANDLING ###
