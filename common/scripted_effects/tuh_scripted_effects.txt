@@ -1755,3 +1755,45 @@ tuh_spawn_pretenders_from_the_other_9_houses = {
 		}
 	}
 }
+
+tuh_apply_government_mechanic_cooldown = {
+	if = {
+		limit = {
+			has_government_attribute = revive_public_punishments_shorter_cooldown
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = promote_dynastic_prerogative_cooldown
+					}
+					had_country_flag = {
+						flag = promote_dynastic_prerogative_cooldown
+						days = 7300
+					}
+				}
+			}
+			set_country_flag = promote_dynastic_prerogative_cooldown
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = forge_a_coalition_cooldown
+					}
+					had_country_flag = {
+						flag = forge_a_coalition_cooldown
+						days = 7300
+					}
+				}
+			}
+			set_country_flag = forge_a_coalition_cooldown
+		}
+		set_country_flag = revive_public_punishments_cooldown
+	}
+	else = {
+		set_country_flag = promote_dynastic_prerogative_cooldown
+		set_country_flag = forge_a_coalition_cooldown
+		set_country_flag = revive_public_punishments_cooldown
+	}
+}

@@ -121,3 +121,55 @@ any_house_influence_greater_or_equal_to_n = {
 		}
 	}
 }
+
+is_promote_dynastic_prerogative_available = {
+	OR = {
+		NOT = {
+			has_country_flag = promote_dynastic_prerogative_cooldown
+		}
+		had_country_flag = {
+			flag = promote_dynastic_prerogative_cooldown
+			days = 7300
+		}
+	}
+}
+
+is_forge_a_coalition_available = {
+	OR = {
+		NOT = {
+			has_country_flag = forge_a_coalition_cooldown
+		}
+		had_country_flag = {
+			flag = forge_a_coalition_cooldown
+			days = 7300
+		}
+	}
+}
+
+is_revive_public_punishments_available = {
+	if = {
+		limit = {
+			has_government_attribute = revive_public_punishments_shorter_cooldown
+		}
+		OR = {
+			NOT = {
+				has_country_flag = revive_public_punishments_cooldown
+			}
+			had_country_flag = {
+				flag = revive_public_punishments_cooldown
+				days = 3650
+			}
+		}
+	}
+	else = {
+		OR = {
+			NOT = {
+				has_country_flag = revive_public_punishments_cooldown
+			}
+			had_country_flag = {
+				flag = revive_public_punishments_cooldown
+				days = 7300
+			}
+		}
+	}
+}
