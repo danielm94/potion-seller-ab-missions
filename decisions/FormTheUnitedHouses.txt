@@ -76,7 +76,7 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			country_event = {
-				id = AB_wallachia_events.10
+				id = AB_wallachia_events.12
 			}
 			add_government_reform = dacian_elective_monarchy
 		}

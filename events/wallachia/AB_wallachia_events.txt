@@ -432,3 +432,50 @@ country_event = {
 		remove_idea_group = humanist_ideas
 	}
 }
+
+#New traditions and ambitions for The United Houses
+country_event = {
+	id = AB_wallachia_events.12
+	title = AB_wallachia_events.10.t
+	desc = AB_wallachia_events.12.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.10.a
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = AB_wallachia_events.10.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#The great feast page 1
+country_event = {
+	id = AB_wallachia_events.13
+	title = AB_wallachia_events.13.t
+	desc = AB_wallachia_events.13.d
+	picture = GFX_AB_wallachia_events.13
+	is_triggered_only = yes
+	option = {
+		name = NEXT
+	}
+	option = {
+		name = AB_wallachia_events.13.tldr
+		hidden_effect = {
+			remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -20
+		}
+		hidden_effect = {
+			set_estate_privilege = estate_nobles_dominance_of_the_boierime
+			tuh_faction_initialization_effect = yes
+		}
+		set_country_flag = wal_elective_monarchy
+		add_government_reform = wallachian_elective_monarchy
+	}
+}
