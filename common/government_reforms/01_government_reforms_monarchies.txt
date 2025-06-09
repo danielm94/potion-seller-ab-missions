@@ -6389,6 +6389,9 @@ royal_decree_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
 	}
 	modifiers = {
 		max_absolutism = 5
@@ -6417,6 +6420,9 @@ states_general_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
 	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
@@ -6940,6 +6946,9 @@ become_a_republic_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
 	}
 	trigger = {
 		NOT = { has_government_attribute_short_desc = locked_government_type }
@@ -6974,6 +6983,9 @@ install_theocratic_government_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
 	}
 	trigger = {
 		NOT = { has_government_attribute_short_desc = locked_government_type }
