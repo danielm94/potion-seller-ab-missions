@@ -1797,3 +1797,12 @@ tuh_apply_government_mechanic_cooldown = {
 		set_country_flag = revive_public_punishments_cooldown
 	}
 }
+
+tuh_clear_government_mechanic_cooldowns = {
+	custom_tooltip = tuh_clear_government_mechanic_cooldowns_tooltip
+	hidden_effect = {
+		clr_country_flag = promote_dynastic_prerogative_cooldown
+		clr_country_flag = forge_a_coalition_cooldown
+		clr_country_flag = revive_public_punishments_cooldown
+	}
+}
