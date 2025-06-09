@@ -149,6 +149,7 @@ wallachian_elective_monarchy = {
 		no_absolutism_from_boier_privileges = yes
 		election_on_death = yes
 		romanian_elective_monarchy = yes
+		locked_government_type = yes
 	}
 	factions = {
 		basarab_faction
