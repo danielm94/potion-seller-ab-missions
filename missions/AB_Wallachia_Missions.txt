@@ -111,14 +111,32 @@ ab_wal_boier_compromise_missions = {
 		}
 		effect = {
 			custom_tooltip = cant_form_dacia_tooltip
-			set_country_flag = wal_elective_monarchy
-			add_government_reform = wallachian_elective_monarchy
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -20
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = form_tuh_tooltip
+			if = {
+				limit = {
+					has_country_modifier = wallachia_placating_the_boieri
+				}
+				custom_tooltip = wal_the_great_feast_mod_bonus_tooltip_yes
+				hidden_effect = {
+					remove_country_modifier = wallachia_placating_the_boieri
+				}
+				add_country_modifier = {
+					name = boier_compact
+					duration = 36500
+				}
 			}
-			hidden_effect = {
-				tuh_faction_initialization_effect = yes
+			else = {
+				custom_tooltip = wal_the_great_feast_mod_bonus_tooltip_no
+				tooltip = {
+					add_country_modifier = {
+						name = boier_compact
+						duration = 36500
+					}
+				}
+			}
+			country_event = {
+				id = AB_wallachia_events.13
 			}
 		}
 	}
