@@ -915,6 +915,9 @@ monarchy = {
 				# pol
 				polestablishsejm
 				# ]]]
+				#-PotionSeller-#
+				expand_executive_powers
+				great_concordat
 			}
 		}
 		economical_matters = {
@@ -955,6 +958,9 @@ monarchy = {
 				# Baltic
 				blt_amber_trade_charter
 				# ]]]
+				#-PotionSeller-#
+				#Romania
+				state_appropriation_of_the_robie
 			}
 		}
 		legitimation_of_power = {
