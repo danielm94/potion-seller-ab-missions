@@ -14,3 +14,5 @@
  revive_public_punishments_draculesti_tooltip_no: "£no£ If our ruling dynasty is §YDraculesti§!, we will receive:"
  revive_public_punishments_else_tooltip_yes: "£yes£ Else, we will receive:"
  revive_public_punishments_else_tooltip_no: "£no£ Else, we will receive:"
+ rem_hasnt_used_ability_in_20_years_tooltip: "We haven't used any ability in the last §Y20 years§!."
+ rem_hasnt_used_ability_in_20_or_10_years_tooltip: "We haven't used §YPromote Dynastic Prerogative§! or §YForge a Coalition§! in the last §Y20 years§!, and we haven't used §YRevive Public Punishments§! in the last §Y10 years§!."
