@@ -375,3 +375,60 @@ country_event = {
 		}
 	}
 }
+
+#When the player takes the Roma eco reform. For some reason, the game crashes if you try to remove
+#idea groups from governemnt reforms. Very stupid.
+country_event = {
+	id = AB_wallachia_events.11
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = blank
+		if = {
+			limit = {
+				humanist_ideas = 7
+			}
+			add_adm_power = 280
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 6
+			}
+			add_adm_power = 240
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 5
+			}
+			add_adm_power = 200
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 4
+			}
+			add_adm_power = 160
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 3
+			}
+			add_adm_power = 120
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 2
+			}
+			add_adm_power = 80
+		}
+		else_if = {
+			limit = {
+				humanist_ideas = 1
+			}
+			add_adm_power = 40
+		}
+		remove_idea_group = humanist_ideas
+	}
+}

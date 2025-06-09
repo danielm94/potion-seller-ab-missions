@@ -55,4 +55,16 @@ spriteTypes = {
 		name = "government_reform_phanariot_cadre"
 		texturefile = "gfx/interface/government_reform_icons/phanariot_cadre.dds"
 	}
+	spriteType = {
+		name = "government_reform_expand_executive_powers"
+		texturefile = "gfx/interface/government_reform_icons/expand_executive_powers.dds"
+	}
+	spriteType = {
+		name = "government_reform_great_concordat"
+		texturefile = "gfx/interface/government_reform_icons/great_concordat.dds"
+	}
+		spriteType = {
+		name = "government_reform_state_appropriation_of_the_robie"
+		texturefile = "gfx/interface/government_reform_icons/state_appropriation_of_the_robie.dds"
+	}
 }

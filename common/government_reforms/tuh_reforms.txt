@@ -25,6 +25,7 @@ dacian_elective_monarchy = {
 		no_absolutism_from_boier_privileges = yes
 		election_on_death = yes
 		romanian_elective_monarchy = yes
+		locked_government_type = yes
 	}
 	factions = {
 		basarab_faction
@@ -105,8 +106,8 @@ recognize_dniester_host = {
 	}
 	modifiers = {
 		cavalry_flanking = 0.25
-		cav_to_inf_ratio = 0.20
-		allowed_cossack_fraction = 0.20
+		cav_to_inf_ratio = 0.2
+		allowed_cossack_fraction = 0.2
 		cossacks_loyalty_modifier = 0.1
 		cossacks_influence_modifier = 0.2
 		nobles_loyalty_modifier = -0.15
@@ -132,7 +133,6 @@ bulwark_of_the_faith = {
 		yearly_patriarch_authority = 0.005
 		manpower_in_true_faith_provinces = 0.05
 	}
-
 	custom_attributes = {
 		improved_defender_of_faith = yes
 	}
@@ -150,7 +150,7 @@ phanariot_cadre = {
 		technology_cost = -0.05
 		num_accepted_cultures = 1
 		global_spy_defence = -0.3
-		nobles_loyalty_modifier = -0.10
+		nobles_loyalty_modifier = -0.1
 		nobles_influence_modifier = -0.05
 	}
 	effect = {
@@ -166,6 +166,137 @@ phanariot_cadre = {
 }
 
 #-------Tier 7-------#
-expand_powers_of_the_rege = {
+expand_executive_powers = {
+	icon = "expand_executive_powers"
+	allow_normal_conversion = yes
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		max_absolutism = 10
+		yearly_absolutism = 0.5
+		nobles_loyalty_modifier = -0.2
+		nobles_influence_modifier = -0.1
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = hide_expand_executive_powers_rebels_tooltip
+				}
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -30
+			}
+			tuh_spawn_pretenders_from_the_other_9_houses = {
+				size = 1
+			}
+			hidden_effect = {
+				set_country_flag = hide_expand_executive_powers_rebels_tooltip
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			clr_country_flag = hide_expand_executive_powers_rebels_tooltip
+		}
+	}
+	custom_attributes = {
+		revive_public_punishments_shorter_cooldown = yes
+	}
+}
 
+great_concordat = {
+	icon = "great_concordat"
+	allow_normal_conversion = yes
+	potential = {
+		has_government_attribute = romanian_elective_monarchy
+	}
+	modifiers = {
+		estate_interaction_cooldown_modifier = -0.2
+		global_unrest = -2
+		monarch_diplomatic_power = 1
+		development_cost = -0.05
+		max_absolutism = -10
+		yearly_absolutism = -0.5
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.15
+	}
+}
+
+state_appropriation_of_the_robie = {
+	icon = "state_appropriation_of_the_robie"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = romanian_culture_group
+	}
+	modifiers = {
+		production_efficiency = 0.15
+		build_cost = -0.1
+		development_cost = -0.1
+		all_estate_loyalty_equilibrium = -0.1
+		stability_cost_modifier = 0.1
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = hide_state_appropriation_of_the_robie_tooltip
+				}
+			}
+			if = {
+				limit = {
+					has_idea_group = humanist_ideas
+				}
+				custom_tooltip = state_appropriation_of_the_robie_warning_tooltip
+				hidden_effect = {
+					country_event = {
+						id = AB_wallachia_events.11
+						days = 1
+					}
+				}
+			}
+			set_country_flag = hide_state_appropriation_of_the_robie_tooltip
+			add_estate_loyalty = {
+				estate = all
+				loyalty = -20
+			}
+			random_owned_province = {
+				spawn_rebels = {
+					size = 1
+					type = noble_rebels
+				}
+			}
+			random_owned_province = {
+				spawn_rebels = {
+					size = 1
+					type = orthodox_rebels
+				}
+			}
+			random_owned_province = {
+				spawn_rebels = {
+					size = 1
+					type = particularist_rebels
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_cossacks
+				}
+				random_owned_province = {
+					spawn_rebels = {
+						size = 1
+						type = cossack_rebels
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		clr_country_flag = hide_state_appropriation_of_the_robie_tooltip
+	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
+	}
 }
