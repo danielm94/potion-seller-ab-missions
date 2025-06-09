@@ -53,5 +53,7 @@
  desc_wallachia_impaled_magyars_mod: "By impaling the ruler of the Magyars, we have broken not just their leader but the very spirit of their dreaded cavalry. Our warriors now face their charges with newfound confidence, knowing the terror we have instilled. This victory over the horse-lords who once dominated our lands also allows us to maintain our own cavalry forces with greater efficiency, having learned from and now surpassed our former masters."
  wallachia_unifier_of_the_vlachs: "Unifier of the Vlachs"
  desc_wallachia_unifier_of_the_vlachs: "[Root.Monarch.GetName] has achieved what many deemed impossible: all Vlach lands are now united under one banner. This monumental feat has secured [Root.Monarch.GetHerHis] dynasty's legacy, eased the integration of new territories, and filled the realm with pride."
- wallachia_placating_the_boieri: "Placating the Boiars"
+ wallachia_placating_the_boieri: "Placating the Boieri"
  desc_wallachia_placating_the_boieri: "The Crown's concessions have secured the loyalty of the Boieri, ensuring a period of internal stability and cooperation."
+ boier_compact: "The Boier Compact"
+ desc_boier_compact: "By choosing compromise over conflict, we have forged a lasting pact with the nobility, securing their loyalty and cooperation for generations."

@@ -183,3 +183,8 @@ wallachia_placating_the_boieri = {
 	nobles_loyalty_modifier = 0.05
 	prestige = -0.5
 }
+
+boier_compact = {
+	estate_interaction_cooldown_modifier = -0.2
+	nobles_loyalty_modifier = 0.05
+}
