@@ -352,7 +352,6 @@ revive_public_punishments_draculesti = {
 	max_absolutism = 7
 }
 
-
 dominance_of_basarab = {
 	potential = {
 		has_reform = dominance_of_the_ruling_house
@@ -360,7 +359,6 @@ dominance_of_basarab = {
 	trigger = {
 		dynasty = "Basarab"
 	}
-
 	basarab_faction_influence = 0.05
 }
 
@@ -371,7 +369,6 @@ dominance_of_bibescu = {
 	trigger = {
 		dynasty = "Bibescu"
 	}
-
 	bibescu_faction_influence = 0.05
 }
 
@@ -382,7 +379,6 @@ dominance_of_draculesti = {
 	trigger = {
 		dynasty = "Draculesti"
 	}
-
 	draculesti_faction_influence = 0.05
 }
 
@@ -393,7 +389,6 @@ dominance_of_brancoveanu = {
 	trigger = {
 		dynasty = "Brancoveanu"
 	}
-
 	brancoveanu_faction_influence = 0.05
 }
 
@@ -404,7 +399,6 @@ dominance_of_movilesti = {
 	trigger = {
 		dynasty = "Movilesti"
 	}
-
 	movilesti_faction_influence = 0.05
 }
 
@@ -415,7 +409,6 @@ dominance_of_danesti = {
 	trigger = {
 		dynasty = "Danesti"
 	}
-
 	danesti_faction_influence = 0.05
 }
 
@@ -426,7 +419,6 @@ dominance_of_ghica = {
 	trigger = {
 		dynasty = "Ghica"
 	}
-
 	ghica_faction_influence = 0.05
 }
 
@@ -437,7 +429,6 @@ dominance_of_racovita = {
 	trigger = {
 		dynasty = "Racovita"
 	}
-
 	racovita_faction_influence = 0.05
 }
 
@@ -448,7 +439,6 @@ dominance_of_cantacuzino = {
 	trigger = {
 		dynasty = "Cantacuzino"
 	}
-
 	cantacuzino_faction_influence = 0.05
 }
 
@@ -459,6 +449,27 @@ dominance_of_mavrocordatos = {
 	trigger = {
 		dynasty = "Mavrocordatos"
 	}
-
 	mavrocordatos_faction_influence = 0.05
+}
+
+return_of_the_emperor = {
+	potential = {
+		has_country_flag = cantacuzino_constantinople_bonus
+	}
+	trigger = {
+		capital = 151
+		OR = {
+			dynasty = "Cantacuzino"
+			AND = {
+				OR = {
+					has_regency = yes
+					has_consort_regency = yes
+				}
+				heir_dynasty = "Cantacuzino"
+			}
+		}
+	}
+	cantacuzino_faction_influence = 0.05
+	unjustified_demands = -0.2
+	diplomatic_reputation = 1
 }

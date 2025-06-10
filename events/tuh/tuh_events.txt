@@ -818,3 +818,52 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = tuh_events.2
+	title = tuh_events.2.t
+	desc = tuh_events.2.d
+	picture = BYZ_BYZANTINE_EMPEROR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		capital = 151
+		dynasty = "Cantacuzino"
+		is_or_was_wallachia = yes
+		#TODO
+		#ADD CHECKS FOR MOLDAVIA
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	option = {
+		name = tuh_events.2.a
+		hidden_effect = {
+			set_country_flag = cantacuzino_constantinople_bonus
+		}
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+			first_limit = "has_government_attribute = romanian_elective_monarchy"
+			first_effect = "custom_tooltip = as_long_as_constantinople_is_our_capital_tooltip
+			custom_tooltip = cantacuzino_candidate_legitimacy_bonus_tooltip
+			custom_tooltip = cantacuzino_candidate_half_consecutive_election_penalty_tooltip
+			custom_tooltip = cantacuzino_candidate_no_low_influence_penalty_tooltip
+			custom_tooltip = cantacuzino_candidate_no_pretenders_tooltip"
+		}
+		custom_tooltip = tooltip_line_divider
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		add_legitimacy_or_mil_power = {
+			amount = 30
+		}
+		add_stability = 1
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = cantacuzino_modifier_tooltip
+		tooltip = {
+			add_country_modifier = {
+				name = return_of_the_emperor_tooltip_mod
+				duration = -1
+			}
+		}
+	}
+}

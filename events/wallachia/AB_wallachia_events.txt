@@ -527,7 +527,6 @@ province_event = {
 	}
 	option = {
 		name = blank
-		
 		ai_chance = {
 			factor = 1
 		}
@@ -553,10 +552,68 @@ country_event = {
 	id = AB_wallachia_events.21
 	title = AB_wallachia_events.21.t
 	desc = AB_wallachia_events.21.d
-	picture = GFX_AB_wallachia_events.21
-	is_triggered_only = is_triggered_only
+	picture = CONSTANTINOPLE_eventPicture
+	is_triggered_only = yes
 	option = {
 		name = AB_wallachia_events.21.a
-		
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+			first_limit = "has_government_attribute = romanian_elective_monarchy"
+			first_effect = "capital_scope = {
+			add_province_modifier = {
+				name = tuh_less_oversight_on_the_boieri
+				duration = -1
+			}
+		}"
+		}
+		151 = {
+			move_capital_effect = yes
+			change_culture = owner
+			add_core = ROOT
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = wallachia_rebuilding_the_great_city
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_the_worlds_desire
+			duration = -1
+		}
+		if = {
+			limit = {
+				dynasty = "Cantacuzino"
+			}
+			country_event = {
+				id = wallachian_terror_events.10
+			}
+		}
+		else = {
+			custom_tooltip = cantacuzino_constantinople_bonus_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events.21.b
+		trigger = {
+			capital_scope = {
+				culture_group = romanian_culture_group
+			}
+		}
+		capital_scope = {
+			change_province_name = "Cetatea de Scaun"
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = wallachia_rome_on_the_danube
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_new_roman_identity
+			duration = -1
+		}
 	}
 }

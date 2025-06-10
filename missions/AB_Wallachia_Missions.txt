@@ -300,18 +300,10 @@ ab_wal_2 = {
 				}
 			}
 			#TUH
-			if = {
-				limit = {
-					has_government_mechanic = romanian_elective_monarchy_mechanic
-				}
-				custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip_yes
-				tuh_clear_government_mechanic_cooldowns = yes
-			}
-			else = {
-				custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip_no
-				tooltip = {
-					tuh_clear_government_mechanic_cooldowns = yes
-				}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
+				first_effect = "tuh_clear_government_mechanic_cooldowns = yes"
 			}
 			add_mil_power = 50
 		}
@@ -327,7 +319,7 @@ ab_wal_3 = {
 		is_or_was_wallachia = yes
 	}
 	wal_call_to_arms = {
-		icon = GFX_wal_call_to_arms
+		icon = mission_modern_knight_army
 		position = 1
 		trigger = {
 			OR = {
@@ -375,7 +367,7 @@ ab_wal_3 = {
 		}
 	}
 	wal_strike_the_bulgars = {
-		icon = gfx_wal_strike_the_bulgars
+		icon = push_on_to_bulgaria
 		position = 2
 		required_missions = {
 			wal_call_to_arms
@@ -812,7 +804,7 @@ ab_wal_4 = {
 		}
 	}
 	wal_worlds_desire = {
-		icon = gfx_wal_worlds_desire
+		icon = byz_city_of_worlds_desire
 		position = 4
 		required_missions = {
 			wal_unite_the_vlachs
@@ -830,6 +822,23 @@ ab_wal_4 = {
 			}
 		}
 		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = hudavendigar_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = aydin_area
+			}
+			custom_tooltip = tooltip_line_divider
+			set_government_rank = 3
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_legitimacy_or_mil_power = {
+				amount = 10
+			}
+			country_event = {
+				id = AB_wallachia_events.21
+			}
 		}
 	}
 }
