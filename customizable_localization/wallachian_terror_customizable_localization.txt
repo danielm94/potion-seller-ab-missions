@@ -128,6 +128,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_glh_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = GLH
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -155,6 +163,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_glh_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = GLH
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -179,6 +195,14 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = MGY
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_glh_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = GLH
 			}
 		}
 	}

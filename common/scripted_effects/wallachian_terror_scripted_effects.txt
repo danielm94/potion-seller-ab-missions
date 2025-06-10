@@ -1577,7 +1577,12 @@ wallachian_terror_impalement_effect = {
 		name = wallachian_terror_impaled_ruler
 		duration = 3650
 	}
-	wallachian_terror_special_country_impalement_effects = yes
+	if = {
+		limit = {
+			is_special_impaled_country = yes
+		}
+		wallachian_terror_special_country_impalement_effects = yes
+	}
 }
 
 wallachian_terror_special_country_impalement_effects = {
@@ -1590,6 +1595,9 @@ wallachian_terror_special_country_impalement_effects = {
 			}
 			MGY = {
 				wallachian_terror_magyars_impalement_effects = yes
+			}
+			GLH = {
+				wallachian_terror_golden_horde_impalement_effects = yes
 			}
 		}
 	}
@@ -1647,6 +1655,76 @@ wallachian_terror_magyars_impalement_effects = {
 				amount = 20
 			}
 			set_country_flag = wallachia_impaled_magyars
+		}
+	}
+}
+
+#ROOT = GLH
+wallachian_terror_golden_horde_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_golden_horde
+				}
+			}
+		}
+		add_prestige = -20
+
+		custom_tooltip = golden_horde_impalement_effects_crimean_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = crimean
+					controlled_by = GLH
+				}
+				add_core = CRI
+				add_unrest = 20
+			}
+		}
+		custom_tooltip = golden_horde_impalement_effects_nogaybak_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = nogaybak
+					controlled_by = GLH
+				}
+				add_core = NOG
+				add_unrest = 20
+			}
+		}
+		custom_tooltip = golden_horde_impalement_effects_astrakhani_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = astrakhani
+					controlled_by = GLH
+				}
+				add_core = AST
+				add_unrest = 20
+			}
+		}
+		custom_tooltip = golden_horde_impalement_effects_kazani_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = kazani
+					controlled_by = GLH
+				}
+				add_core = KAZ
+				add_unrest = 20
+			}
+		}
+		
+		event_target:impaler_country = {
+			add_ruler_modifier = {
+				name = aln_bane
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			set_country_flag = wallachia_impaled_golden_horde
 		}
 	}
 }

@@ -20,6 +20,7 @@ is_special_impaled_country = {
 		OR = {
 			tag = BUL #Bulgaria
 			tag = MGY #Magyars
+			tag = GLH
 			#In the future, HRE emperor, EOC, the pope...
 		}
 	}
