@@ -479,3 +479,84 @@ country_event = {
 		add_government_reform = wallachian_elective_monarchy
 	}
 }
+
+province_event = {
+	id = AB_wallachia_events.20
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			nationalism = 0
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_hungary
+		}
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		culture_group = carpathian
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_hungary_recently
+				}
+				had_country_flag = {
+					flag = wal_romanianized_hungary_recently
+					days = 730
+				}
+			}
+		}
+		region = carpathia_region
+		religion = ROOT
+	}
+	option = {
+		name = blank
+		
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_hungary_recently
+		}
+		if = {
+			limit = {
+				OR = {
+					area = transylvania_area
+					area = southern_transylvania_area
+				}
+			}
+			change_culture = transylvanian
+		}
+		else = {
+			change_culture = panonic
+		}
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.21
+	title = AB_wallachia_events.21.t
+	desc = AB_wallachia_events.21.d
+	picture = GFX_AB_wallachia_events.21
+	is_triggered_only = is_triggered_only
+	option = {
+		name = AB_wallachia_events.21.a
+		
+	}
+}
