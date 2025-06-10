@@ -227,6 +227,95 @@ ab_wal_2 = {
 			}
 		}
 	}
+	wal_pontic_dominion = {
+		icon = gfx_wal_pontic_dominion
+		position = 3
+		required_missions = {
+			wal_unite_the_principalities
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = yedisan_area
+				area = zaporizhia_area
+				area = crimea_area
+				area = azov_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			yedisan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			zaporizhia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			azov_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = astrakhan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_don_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = circassia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = dagestan_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_build_the_black_sea_fleet
+				duration = 10950
+			}
+			if = {
+				limit = {
+					has_country_flag = wallachia_impaled_golden_horde
+				}
+				custom_tooltip = wal_pontic_dominion_impale_tooltip_yes
+				change_terror = {
+					value = 5
+					scaled_with_gain_modifier = yes
+				}
+			}
+			else = {
+				custom_tooltip = wal_pontic_dominion_impale_tooltip_no
+				tooltip = {
+					change_terror = {
+						value = 5
+						scaled_with_gain_modifier = yes
+					}
+				}
+			}
+			#TUH
+			if = {
+				limit = {
+					has_government_mechanic = romanian_elective_monarchy_mechanic
+				}
+				custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip_yes
+				tuh_clear_government_mechanic_cooldowns = yes
+			}
+			else = {
+				custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip_no
+				tooltip = {
+					tuh_clear_government_mechanic_cooldowns = yes
+				}
+			}
+			add_mil_power = 50
+		}
+	}
 }
 
 ab_wal_3 = {
@@ -648,6 +737,99 @@ ab_wal_4 = {
 					}
 				}
 			}
+		}
+	}
+	wal_crush_the_magyars = {
+		icon = gfx_wal_crush_the_magyars
+		position = 3
+		required_missions = {
+			wal_liberate_transylvania
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alfold_area
+				area = centralhungary_area
+				area = eastslovakia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			alfold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			centralhungary_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastslovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = transdanubia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = slovakia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = moravia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				cost_multiplier = 0.5
+				religion = ROOT
+				culture = ROOT
+			}
+			if = {
+				limit = {
+					exists = MGY
+				}
+				custom_tooltip = wal_crush_the_magyars_mgy_exists_tooltip_no
+				tooltip = {
+					change_ruler_stat = {
+						type = mil
+						amount = 1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = wal_crush_the_magyars_mgy_exists_tooltip_yes
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}
+			}
+			custom_tooltip = wal_transylvania_romanianization_tooltip
+			custom_tooltip = wal_hungary_romanianization_tooltip
+			set_country_flag = wal_romanianization_of_hungary
+		}
+	}
+	wal_worlds_desire = {
+		icon = gfx_wal_worlds_desire
+		position = 4
+		required_missions = {
+			wal_unite_the_vlachs
+		}
+		provinces_to_highlight = {
+			area = thrace_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
 		}
 	}
 }
