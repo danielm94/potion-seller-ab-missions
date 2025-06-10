@@ -1599,6 +1599,9 @@ wallachian_terror_special_country_impalement_effects = {
 			GLH = {
 				wallachian_terror_golden_horde_impalement_effects = yes
 			}
+			BYZ = {
+				wallachian_terror_byzantium_impalement_effects = yes
+			}
 		}
 	}
 }
@@ -1659,7 +1662,7 @@ wallachian_terror_magyars_impalement_effects = {
 	}
 }
 
-#ROOT = GLH
+#ROOT = Golden Horde
 wallachian_terror_golden_horde_impalement_effects = {
 	if = {
 		limit = {
@@ -1670,7 +1673,6 @@ wallachian_terror_golden_horde_impalement_effects = {
 			}
 		}
 		add_prestige = -20
-
 		custom_tooltip = golden_horde_impalement_effects_crimean_tooltip
 		hidden_effect = {
 			every_owned_province = {
@@ -1715,7 +1717,6 @@ wallachian_terror_golden_horde_impalement_effects = {
 				add_unrest = 20
 			}
 		}
-		
 		event_target:impaler_country = {
 			add_ruler_modifier = {
 				name = aln_bane
@@ -1726,5 +1727,42 @@ wallachian_terror_golden_horde_impalement_effects = {
 			}
 			set_country_flag = wallachia_impaled_golden_horde
 		}
+	}
+}
+
+#ROOT = Byzantium
+wallachian_terror_byzantium_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_byzantium
+				}
+			}
+		}
+		add_prestige = -20
+		add_legitimacy = -100
+		add_adm_power = -25
+		add_dip_power = -25
+		add_mil_power = -25
+		event_target:impaler_country = {
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			add_legitimacy = 20
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_ruler_has_impaler_trait
+				first_limit = "ruler_has_personality = impaler_personality"
+				first_effect = "add_country_modifier = {
+				name = byzantium_greekfire
+				duration = -1
+			}"
+			}	
+		}
+		set_country_flag = wallachia_impaled_byzantium
 	}
 }

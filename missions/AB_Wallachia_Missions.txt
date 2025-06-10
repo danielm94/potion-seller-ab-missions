@@ -828,7 +828,22 @@ ab_wal_4 = {
 			add_permanent_claim_multi_provinces = {
 				target = aydin_area
 			}
+			add_permanent_claim_multi_provinces = {
+				target = aegean_archipelago_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = ionian_islands_area
+			}
 			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_impaled_byz_tooltip
+				first_limit = "has_country_flag = wallachia_impaled_byzantium"
+				first_effect = "change_terror = {
+				value = 5
+				scaled_with_gain_modifier = yes
+			}"
+			}		
+			custom_tooltip = blank
 			set_government_rank = 3
 			add_prestige_or_monarch_power = {
 				amount = 10

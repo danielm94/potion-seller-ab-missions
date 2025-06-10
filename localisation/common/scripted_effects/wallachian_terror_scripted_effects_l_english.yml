@@ -3,3 +3,4 @@
  golden_horde_impalement_effects_nogaybak_tooltip: "All of our provinces of §YNogaybak§! culture will gain §R20§! Unrest and a core for §Y[NOG.GetName]§!."
  golden_horde_impalement_effects_astrakhani_tooltip: "All of our provinces of §YAstrakhani§! culture will gain §R20§! Unrest and a core for §Y[AST.GetName]§!."
  golden_horde_impalement_effects_kazani_tooltip: "All of our provinces of §YKazani§! culture will gain §R20§! Unrest and a core for §Y[KAZ.GetName]§!."
+ if_ruler_has_impaler_trait: "If our ruler has the §YImpaler§! trait:"
