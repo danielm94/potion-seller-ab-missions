@@ -4357,6 +4357,32 @@ romanian_culture_group = {
 			Tereza Teresa Vasilica Violeta Yolanda Voica Zina
 		}
 	}
+	panonic = {
+		primary = PNN
+		dynasty_names = {
+			"Basarab" "Bathory" "Bibescu" "Callimachi" "Cantacuzino" "Craiovesti" "Danesti" 
+			"Draculesti" "Esterhazy" "Ghica" "Hunyadi" "Karolyi" "Mavrocordatos" "Movilesti" 
+			"Racovita" "Sturdza" "Szilagyi" "Teleki" "Thurzo" "Vacarescu" "Zrinyi"
+		}
+		male_names = {
+			Alexandru Andras Andrei Attila Barbat Bela Benedek Bogdan Constantin Corneliu 
+			Costin Dan Denes Dragos Dumitru Elek Endre Erno Farkas Ferenc Florin Gabriel 
+			Gabor Gaspar Geza Gheorghe George Grigore Gyorgy Iancu Ieremia Imre Ioan Istvan 
+			Janos Jozsef Karoly Kristof Lajos Laszlo Laurentiu Lorinc Lucian Marius Marton 
+			Matyas Mihai Mihaly Miklos Mircea Moise Neagoe Nicolae Octavian Pal Peter Petru 
+			Radu Sandor Serban Sergiu Simion Stefan Tamas Teodor Tibor Tudor Valentin 
+			Vasile Victor Vlad Zoltan Zsolt
+		}
+
+		female_names = {
+			Adelina Adriana Agnes Agota Ana Anastasia Angela Anna Borbala Cristina Dana 
+			Dorottya Ecaterina Edina Edit Elena Elisabeta Emese Emilia Erika Erzsebet 
+			Eszter Eva Felicia Floarea Gabriela Gizella Ibolya Ildiko Ilona Ioana Irina 
+			Iulia Judit Julianna Katalin Kinga Klara Margit Maria Monica Natalia Orsolya 
+			Piroska Reka Roxana Ruxandra Sarolta Sofia Stana Stefana Szilvia Teodora Tunde 
+			Valentina Vasilica Violeta Voica Zsofia Zsuzsanna
+		}
+	}
 }
 
 carpathian = {	
