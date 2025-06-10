@@ -188,3 +188,9 @@ boier_compact = {
 	estate_interaction_cooldown_modifier = -0.2
 	nobles_loyalty_modifier = 0.05
 }
+
+wallachia_build_the_black_sea_fleet = {
+	global_ship_cost = -0.25
+	ship_recruit_speed = -0.25
+	admiral_cost = -0.5
+}
