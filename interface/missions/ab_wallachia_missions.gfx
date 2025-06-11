@@ -1,0 +1,10 @@
+spriteTypes = {
+		spriteType = {
+		name = "gfx_wal_compromise_with_the_boieri"
+		texturefile = "gfx/interface/missions/wal/wal_compromise_with_the_boieri.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_unite_the_vlachs"
+		texturefile = "gfx/interface/missions/wal/wal_unite_the_vlachs.dds"
+	}
+}
