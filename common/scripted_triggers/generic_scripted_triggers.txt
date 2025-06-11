@@ -24,7 +24,7 @@ has_more_prestige_than = {
 }
 
 has_more_legitimacy_or_equivalent_than = {
-		variable_arithmetic_trigger = {
+	variable_arithmetic_trigger = {
 		[[tooltip]
 		custom_tooltip = $tooltip$
 		]
@@ -44,5 +44,12 @@ has_more_legitimacy_or_equivalent_than = {
 				which = target_a_legit
 			}
 		}
+	}
+}
+
+is_great_project_destroyed = {
+	custom_trigger_tooltip = {
+		tooltip = is_great_project_destroyed_tooltip
+		has_province_flag = destroyed_great_project
 	}
 }
