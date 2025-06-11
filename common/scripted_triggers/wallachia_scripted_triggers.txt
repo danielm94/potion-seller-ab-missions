@@ -18,8 +18,8 @@ has_vlad_2nd_or_3rd_ruling = {
 is_special_impaled_country = {
 	event_target:impaled_country = {
 		OR = {
-			tag = BUL #Bulgaria
-			tag = MGY #Magyars
+			tag = BUL			#Bulgaria
+			tag = MGY			#Magyars
 			tag = GLH
 			tag = BYZ
 			#In the future, HRE emperor, EOC, the pope...
@@ -49,4 +49,8 @@ has_wallachia_not_compromised_with_the_boieri = {
 			has_country_flag = wal_compromised_with_the_boieri
 		}
 	}
+}
+
+are_bulgars_an_underclass = {
+	has_country_flag = wal_bulgarian_underclass
 }
