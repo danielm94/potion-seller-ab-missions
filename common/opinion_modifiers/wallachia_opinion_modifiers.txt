@@ -3,3 +3,19 @@ banquet_of_blood_opinion = {
 	min = -200
 	yearly_decay =1
 }
+krushenieto_bul_opinion = {
+	opinion = -400
+	min = -400
+	yearly_decay = 1
+}
+krushenieto_other_opinion = {
+	opinion = -40
+	min = -200
+	yearly_decay = 1
+}
+
+bulgarian_underclass_opinion = {
+	opinion = -100
+	min = -200
+	yearly_decay = -1
+}
