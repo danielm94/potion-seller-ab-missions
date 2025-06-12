@@ -23,6 +23,9 @@ wallachian_voivodate = {
 	government_abilities = {
 		wallachian_terror_mechanic
 	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
+	}
 }
 
 #Won the civil war
@@ -45,6 +48,9 @@ wallachian_autocracy = {
 	}
 	government_abilities = {
 		wallachian_terror_mechanic
+	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
 	}
 }
 
@@ -97,6 +103,9 @@ dacian_kingdom = {
 	government_abilities = {
 		wallachian_terror_mechanic
 	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
+	}
 }
 
 #Won the civil war
@@ -122,6 +131,9 @@ dacian_autocracy = {
 	}
 	government_abilities = {
 		wallachian_terror_mechanic
+	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
 	}
 }
 
@@ -233,7 +245,7 @@ wallachia_establish_the_pandurs_reform = {
 	modifiers = {
 		manpower_recovery_speed = 0.1
 		global_manpower_modifier = 0.1
-		infantry_cost = -0.10
+		infantry_cost = -0.1
 		fort_maintenance_modifier = -0.1
 	}
 	ai = {
