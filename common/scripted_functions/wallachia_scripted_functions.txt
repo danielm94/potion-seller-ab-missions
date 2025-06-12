@@ -13,27 +13,17 @@ can_change_culture = {
 	}
 }
 
-
 can_add_seat_in_parliament = {
 	condition = {
 		tooltip = bulgarian_underclass_no_parliament_tooltip
 		potential = {
 			culture = bulgarian
-			FROM = {
-				are_bulgars_an_underclass = yes
+			OR = {
+				FROM = {
+					are_bulgars_an_underclass = yes
+				}
+				has_province_modifier = wallachia_aftermath_of_the_krushenieto
 			}
-		}
-		allow = {
-			always = no
-		}
-	}
-}
-can_add_seat_in_parliament = {
-	condition = {
-		tooltip = bulgarian_genocide_no_parliament_tooltip
-		potential = {
-			culture = bulgarian
-			has_province_modifier = wallachia_aftermath_of_the_krushenieto
 		}
 		allow = {
 			always = no
