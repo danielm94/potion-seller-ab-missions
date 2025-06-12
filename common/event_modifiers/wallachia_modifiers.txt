@@ -220,3 +220,50 @@ wallachia_rome_on_the_danube = {
 	local_tax_modifier = 0.5
 	nobles_loyalty_modifier = 0.1
 }
+
+wallachia_vlach_resettlement = {
+	local_culture_conversion_cost = -0.75
+	local_culture_conversion_time = -0.25
+	local_core_creation = -0.2
+}
+
+wallachia_aftermath_of_the_krushenieto = {
+	local_tax_modifier = -0.95
+	local_manpower_modifier = -0.95
+	local_production_efficiency = -0.95
+	local_development_cost_modifier = 0.75
+	diplomatic_reputation = -0.25
+	tolerance_own = -0.2
+	yearly_patriarch_authority = -0.001
+	monthly_terror_power = 0.01
+	local_unrest = -10
+}
+
+wallachia_bulgar_underclass = {
+	local_build_cost = -0.1
+	local_development_cost = -0.1
+	land_forcelimit = 0.5
+	local_unrest = 6
+	stability_cost_modifier = 0.025
+}
+
+wallachia_angry_no_justice = {
+	global_unrest = 3
+	nobles_loyalty_modifier = -0.2
+	stability_cost_modifier = 0.25
+	legitimacy = -0.5
+}
+wallachia_reconcile_with_the_bulgars = {
+	num_accepted_cultures = 1
+	improve_relation_modifier = 0.05
+}
+wallachia_turn_the_other_cheek = {
+	num_accepted_cultures = 1
+	yearly_patriarch_authority = 0.002
+}
+wallachia_integrating_the_bulgars = {
+	local_unrest = -1
+	core_creation = -0.1
+	local_manpower_modifier = 0.5
+	land_forcelimit_modifier = 0.25
+}

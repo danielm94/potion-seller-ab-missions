@@ -8,7 +8,7 @@ ab_wal_boier_compromise_missions = {
 		has_wallachia_purged_the_estates = no
 	}
 	wal_placate_the_boieri = {
-		icon = gfx_wal_placate_the_boieri
+		icon = mission_noble_council
 		position = 1
 		trigger = {
 			if = {
@@ -467,7 +467,7 @@ ab_wal_3 = {
 		}
 	}
 	wal_unite_the_vlachs = {
-		icon = gfx_wal_unify_the_vlachs
+		icon = gfx_wal_unite_the_vlachs
 		position = 3
 		required_missions = {
 			wal_liberate_transylvania
@@ -583,6 +583,57 @@ ab_wal_3 = {
 			custom_tooltip = wal_unite_the_vlachs_dacia_tooltip
 			hidden_effect = {
 				set_country_flag = early_form_dacia
+			}
+		}
+	}
+	wal_drive_out_the_bulgars = {
+		icon = gfx_wal_drive_out_the_bulgars
+		position = 4
+		required_missions = {
+			wal_unite_the_vlachs
+		}
+		provinces_to_highlight = {
+			owned_by = BUL
+			OR = {
+				region = balkan_region
+				region = carpathia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				NOT = {
+					exists = BUL
+				}
+				custom_trigger_tooltip = {
+					tooltip = wal_drive_out_the_bulgars_trigger_tooltip
+					NOT = {
+						any_province = {
+							owned_by = BUL
+							OR = {
+								region = balkan_region
+								region = carpathia_region
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_power_projection = {
+				type = drove_out_the_bulgars_pp
+				amount = 20
+			}
+			country_event = {
+				id = AB_wallachia_events.22
 			}
 		}
 	}
@@ -842,7 +893,7 @@ ab_wal_4 = {
 				value = 5
 				scaled_with_gain_modifier = yes
 			}"
-			}		
+			}
 			custom_tooltip = blank
 			set_government_rank = 3
 			add_prestige_or_monarch_power = {

@@ -66,3 +66,82 @@ on_siege_won_country = {
 		}
 	}
 }
+
+on_culture_promoted = {
+	if = {
+		limit = {
+			has_country_flag = wal_bulgarian_underclass
+			accepted_culture = bulgarian
+		}
+		remove_accepted_culture = bulgarian
+		hidden_effect = {
+			export_to_variable = {
+				which = promote_culture_cost_var
+				value = modifier:promote_culture_cost
+			}
+			export_to_variable = {
+				which = all_power_cost_var
+				value = modifier:all_power_cost
+			}
+			set_variable = {
+				which = total_reduction
+				which = promote_culture_cost_var
+			}
+			change_variable = {
+				which = total_reduction
+				which = all_power_cost_var
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = total_reduction
+							value = -0.9
+						}
+					}
+				}
+				set_variable = {
+					which = total_reduction
+					value = -0.9
+				}
+			}
+			multiply_variable = {
+				which = total_reduction
+				value = 100
+			}
+			set_variable = {
+				which = diplo_refund
+				which = total_reduction
+			}
+			change_variable = {
+				which = diplo_refund
+				value = 100
+			}
+			round_variable = {
+				which = diplo_refund
+				value = -1
+			}
+			variable_effect = {
+				var = diplo_refund
+				effect = add_dip_power
+			}
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				are_bulgars_an_underclass = yes
+			}
+			culture = bulgarian
+		}
+		add_unrest = 10
+		add_nationalism = 30
+		add_province_modifier = {
+			name = wallachia_bulgar_underclass
+			duration = -1
+		}
+	}
+}

@@ -1,0 +1,6 @@
+drove_out_the_bulgars_pp = {
+	min = 1
+	max = 20
+	power = 1
+	yearly_decay = 1
+}

@@ -617,3 +617,638 @@ country_event = {
 		}
 	}
 }
+
+#The Bulgarian Question
+country_event = {
+	id = AB_wallachia_events.22
+	title = AB_wallachia_events.22.t
+	desc = AB_wallachia_events.22.d
+	picture = GFX_AB_wallachia_events.22
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.22.a
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		country_event = {
+			id = AB_wallachia_events.23
+		}
+	}
+	option = {
+		name = AB_wallachia_events.22.impaler
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
+		country_event = {
+			id = AB_wallachia_events.23
+		}
+	}
+	option = {
+		name = AB_wallachia_events.22.c
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		set_country_flag = wal_bulgarian_underclass
+		custom_tooltip = bulgarian_underclass_every_province_tooltip
+		tooltip = {
+			add_unrest = 10
+			add_nationalism = 30
+			add_province_modifier = {
+				name = wallachia_bulgar_underclass
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_province_modifier = {
+					name = wallachia_bulgar_underclass
+					duration = -1
+				}
+				add_unrest = 10
+				add_nationalism = 30
+			}
+		}
+		custom_tooltip = bulgarian_underclass_culture_tooltip
+		custom_tooltip = bulgarian_underclass_parliament_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+					has_seat_in_parliament = yes
+				}
+				set_seat_in_parliament = no
+			}
+		}
+		custom_tooltip = bulgarian_underclass_advisors_tooltip
+		every_country = {
+			limit = {
+				culture = bulgarian
+			}
+			add_opinion = {
+				who = PREV
+				modifier = bulgarian_underclass_opinion
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.22.humanist
+		highlight = yes
+		trigger = {
+			full_idea_group = humanist_ideas
+			hidden_trigger = {
+				NOT = {
+					ruler_has_personality = impaler_personality
+				}
+			}
+		}
+		add_legitimacy = -10
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_angry_no_justice
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = wallachia_reconcile_with_the_bulgars
+			duration = -1
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = bulgarian
+		}
+		custom_tooltip = reconcile_bulgarians_every_province_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_integrating_the_bulgars
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_province_modifier = {
+					name = wallachia_integrating_the_bulgars
+					duration = -1
+				}
+			}
+		}
+		set_country_flag = can_use_bulgarian_great_projects_flag
+		custom_tooltip = wal_drive_out_the_bulgars_monuments_tooltip
+	}
+	option = {
+		name = AB_wallachia_events.22.religious
+		highlight = yes
+		trigger = {
+			full_idea_group = religious_ideas
+			hidden_trigger = {
+				NOT = {
+					ruler_has_personality = impaler_personality
+				}
+			}
+		}
+		add_legitimacy = -10
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture = bulgarian
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = anti_tax_rebels
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_angry_no_justice
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = wallachia_turn_the_other_cheek
+			duration = -1
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = bulgarian
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		custom_tooltip = reconcile_bulgarians_every_province_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_integrating_the_bulgars
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_province_modifier = {
+					name = wallachia_integrating_the_bulgars
+					duration = -1
+				}
+			}
+		}
+		set_country_flag = can_use_bulgarian_great_projects_flag
+		custom_tooltip = wal_drive_out_the_bulgars_monuments_tooltip
+	}
+}
+
+#Bulgarian Genocide (Yikes)
+country_event = {
+	id = AB_wallachia_events.23
+	title = AB_wallachia_events.23.t
+	desc = AB_wallachia_events.23.d
+	picture = VILLAGE_BURNING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_neighbor_country = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+				}
+				save_event_target_as = krushenieto_province
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.23.a
+		custom_tooltip = bulgarian_genocide_every_province_tooltip
+		tooltip = {
+			custom_tooltip = bulgarian_genocide_loot_tooltip
+			add_nationalism = -30
+			add_unrest = -20
+			add_local_autonomy = -25
+			add_province_modifier = {
+				name = wallachia_vlach_resettlement
+				duration = 36500
+			}
+			add_devastation = 100
+			custom_tooltip = bulgarian_genocide_lose_patriarchal_authority
+			custom_tooltip = bulgarian_genocide_dev_loss_tooltip
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = bulgarian_genocide_terror_per_dev_tooltip"
+			}
+			add_province_modifier = {
+				name = wallachia_aftermath_of_the_krushenieto
+				duration = 36500
+			}
+			remove_all_buildings_effect = yes
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bulgarian
+				}
+				add_nationalism = -30
+				add_unrest = -20
+				add_local_autonomy = -25
+				add_devastation = 90
+				owner = {
+					add_patriarch_authority = -0.1
+				}
+				loot_province = yes
+				export_to_variable = {
+					which = province_dev_var
+					value = trigger_value:development
+				}
+				owner = {
+					set_variable = {
+						which = province_dev_var
+						which = PREV
+					}
+					change_terror_var = {
+						var = province_dev_var
+						scaled_with_gain_modifier = yes
+					}
+				}
+				#Base Tax
+				export_to_variable = {
+					which = province_adm_var
+					value = trigger_value:base_tax
+				}
+				divide_variable = {
+					which = province_adm_var
+					value = 2
+				}
+				round_variable = {
+					which = province_adm_var
+					value = -1
+				}
+				multiply_variable = {
+					which = province_adm_var
+					value = -1
+				}
+				variable_effect = {
+					var = province_adm_var
+					effect = add_base_tax
+				}
+				#Base Production
+				export_to_variable = {
+					which = province_dip_var
+					value = trigger_value:base_production
+				}
+				divide_variable = {
+					which = province_dip_var
+					value = 2
+				}
+				round_variable = {
+					which = province_dip_var
+					value = -1
+				}
+				multiply_variable = {
+					which = province_dip_var
+					value = -1
+				}
+				variable_effect = {
+					var = province_dip_var
+					effect = add_base_production
+				}
+				#Base Manpower
+				export_to_variable = {
+					which = province_mil_var
+					value = trigger_value:base_manpower
+				}
+				divide_variable = {
+					which = province_mil_var
+					value = 2
+				}
+				round_variable = {
+					which = province_mil_var
+					value = -1
+				}
+				multiply_variable = {
+					which = province_mil_var
+					value = -1
+				}
+				variable_effect = {
+					var = province_mil_var
+					effect = add_base_manpower
+				}
+				add_province_modifier = {
+					name = wallachia_vlach_resettlement
+					duration = 36500
+				}
+				add_province_modifier = {
+					name = wallachia_aftermath_of_the_krushenieto
+					duration = 36500
+				}
+				remove_all_buildings_effect = yes
+			}
+		}
+		custom_tooltip = bulgarian_genocide_bulgarian_great_projects
+		hidden_effect = {
+			if = {
+				limit = {
+					4704 = {
+						owned_by = PREV
+						has_great_project = {
+							type = tsarevets
+						}
+					}
+				}
+				4704 = {
+					set_province_flag = destroyed_great_project
+					destroy_great_project = {
+						type = tsarevets
+					}
+				}
+			}
+			if = {
+				limit = {
+					4704 = {
+						owned_by = PREV
+						has_great_project = {
+							type = preslav_literary_school
+						}
+					}
+				}
+				4704 = {
+					set_province_flag = destroyed_great_project
+					destroy_great_project = {
+						type = preslav_literary_school
+					}
+				}
+			}
+			if = {
+				limit = {
+					4703 = {
+						owned_by = PREV
+						has_great_project = {
+							type = rila_monasteries
+						}
+					}
+				}
+				4703 = {
+					set_province_flag = destroyed_great_project
+					destroy_great_project = {
+						type = rila_monasteries
+					}
+				}
+			}
+		}
+		custom_tooltip = bulgarian_genocide_bulgarian_culture_reaction
+		hidden_effect = {
+			every_country = {
+				limit = {
+					culture = bulgarian
+				}
+				add_opinion = {
+					who = PREV
+					modifier = krushenieto_bul_opinion
+				}
+				add_trust = {
+					who = PREV
+					value = -100
+				}
+			}
+		}
+		custom_tooltip = bulgarian_genocide_neighbor_reaction
+		hidden_effect = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						culture = bulgarian
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = krushenieto_other_opinion
+				}
+				add_trust = {
+					who = PREV
+					value = -10
+				}
+			}
+		}
+	}
+}
+
+#Bulgar ADM Advisor Event
+country_event = {
+	id = AB_wallachia_events.24
+	title = AB_wallachia_events.24.t
+	desc = AB_wallachia_events.24.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	trigger = {
+		are_bulgars_an_underclass = yes
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		employed_advisor = {
+			category = ADM
+			culture = bulgarian
+		}
+		OR = {
+			NOT = {
+				has_country_flag = wal_stood_ground_for_bulgar_advisor
+			}
+			had_country_flag = {
+				flag = wal_stood_ground_for_bulgar_advisor
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_accept_demands
+		kill_advisor_by_category_effect = {
+			ADM = yes
+		}
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 10
+			duration = 3650
+			desc = AB_wallachia_events_caved_to_nobility_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_reject_demands
+		set_country_flag = wal_stood_ground_for_bulgar_advisor
+		reduce_stability_or_adm_power = yes
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+#Bulgar DIP Advisor Event
+country_event = {
+	id = AB_wallachia_events.25
+	title = AB_wallachia_events.25.t
+	desc = AB_wallachia_events.25.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	trigger = {
+		are_bulgars_an_underclass = yes
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		employed_advisor = {
+			category = DIP
+			culture = bulgarian
+		}
+		OR = {
+			NOT = {
+				has_country_flag = wal_stood_ground_for_bulgar_advisor
+			}
+			had_country_flag = {
+				flag = wal_stood_ground_for_bulgar_advisor
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_accept_demands
+		kill_advisor_by_category_effect = {
+			DIP = yes
+		}
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 10
+			duration = 3650
+			desc = AB_wallachia_events_caved_to_nobility_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_reject_demands
+		set_country_flag = wal_stood_ground_for_bulgar_advisor
+		reduce_stability_or_adm_power = yes
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+}
+
+#Bulgar MIL Advisor Event
+country_event = {
+	id = AB_wallachia_events.26
+	title = AB_wallachia_events.26.t
+	desc = AB_wallachia_events.26.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	trigger = {
+		are_bulgars_an_underclass = yes
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		employed_advisor = {
+			category = MIL
+			culture = bulgarian
+		}
+		OR = {
+			NOT = {
+				has_country_flag = wal_stood_ground_for_bulgar_advisor
+			}
+			had_country_flag = {
+				flag = wal_stood_ground_for_bulgar_advisor
+				days = 1825
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_accept_demands
+		kill_advisor_by_category_effect = {
+			MIL = yes
+		}
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 10
+			duration = 3650
+			desc = AB_wallachia_events_caved_to_nobility_tooltip
+		}
+	}
+	option = {
+		name = AB_wallachia_events_bulgar_advisor_reject_demands
+		set_country_flag = wal_stood_ground_for_bulgar_advisor
+		reduce_stability_or_adm_power = yes
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+}
