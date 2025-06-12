@@ -822,6 +822,18 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = mavrocordatos_candidate_buff
+			}
+			define_advisor = {
+				type = in_advisor
+				skill = 2
+				cost_multiplier = 0.5
+				culture = greek
+				religion = ROOT
+			}
+		}
 	}
 	after = {
 		tuh_update_house_total_wins = yes

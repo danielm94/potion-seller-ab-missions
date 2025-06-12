@@ -791,6 +791,7 @@ ab_wal_3 = {
 			}
 		}
 	}
+	
 }
 
 ab_wal_4 = {
@@ -1103,6 +1104,38 @@ ab_wal_4 = {
 			}
 		}
 		effect = {
+			set_country_flag = artists_help_with_great_projects
+			custom_tooltip = artists_help_with_great_projects_tooltip
+			define_advisor = {
+				type = philosopher
+				skill = 3
+				cost_multiplier = 0.33333
+				culture = greek
+				religion = ROOT
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = mavrocordatos_ruler_tooltip
+				first_limit = "dynasty = Mavrocordatos"
+				first_effect = "tooltip = {
+				add_unrest = -5
+				add_nationalism = -5
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = greek
+					}
+					add_unrest = -5
+					add_nationalism = -5
+				}
+			}"
+			}
+			set_country_flag = mavrocordatos_candidate_buff
+			custom_tooltip = mavrocordatos_candidate_buff_tooltip
+			add_accepted_culture_or_dip_power_stated = {
+				culture = greek
+				dip_reward = yes
+			}
 		}
 	}
 }

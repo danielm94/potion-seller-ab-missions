@@ -608,7 +608,14 @@ artist = {
 		}
 	}
 	# ]]]
-
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = artists_help_with_great_projects
+			}
+		}
+		modifier = { great_project_upgrade_cost = -0.05 }
+	}
 	chance = {
 		factor = 1
 	}

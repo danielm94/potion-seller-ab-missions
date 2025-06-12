@@ -65,3 +65,6 @@
  romanization_of_illyria_tooltip: "§YSouth Slavic§! culture group provinces (excluding Bulgarian) of the §YOrthodox§! faith will slowly be §YRomanizanized§!."
  wal_conquer_greece_title: "The Greek Reclamation"
  wal_conquer_greece_desc: "The head of the Empire rests in Constantinople, but its body remains severed. The lands of Greece—Macedonia, the Morea, the isles of the Aegean—languish under the rule of petty Latin crusaders, grasping Venetian merchants, and the scattered remnants of the old regime. These are not foreign lands to be conquered; they are the stolen heartlands of our Roman domain, provinces that must be restored to imperial authority. We will march south, sweep the schismatic pretenders into the sea, and bring the Emperor's peace to all of Hellas."
+ artists_help_with_great_projects_tooltip: "§YArtist§! advisors now grant §G-5.0%§! §YGreat Project Upgrade Cost§! per skill level.\n"
+ mavrocordatos_ruler_tooltip: "\nIf our ruler's dynasty is §YMavrocordatos§!, every owned §YGreek§! province will gain:"
+ mavrocordatos_candidate_buff_tooltip: "\n@TUH Electing a candidate from §YHouse Mavrocordatos§! now grants an §YInnovator§! advisor for §G50%§! of the cost.\n"
