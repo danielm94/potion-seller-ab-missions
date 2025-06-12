@@ -476,10 +476,32 @@ country_event = {
 			tuh_faction_initialization_effect = yes
 		}
 		set_country_flag = wal_elective_monarchy
-		add_government_reform = wallachian_elective_monarchy
+		if = {
+			limit = {
+				tag = DAC
+			}
+			set_country_flag = formed_the_united_houses
+			change_tag = TUH
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			country_event = {
+				id = AB_wallachia_events.12
+			}
+			add_government_reform = dacian_elective_monarchy
+		}
+		else = {
+			add_government_reform = wallachian_elective_monarchy
+		}
 	}
 }
 
+#Romanianization of Hungary & Transylvania
 province_event = {
 	id = AB_wallachia_events.20
 	title = blank
@@ -490,7 +512,9 @@ province_event = {
 		months = 24
 		modifier = {
 			factor = 0.5
-			nationalism = 0
+			NOT = {
+				nationalism = 1
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -884,6 +908,7 @@ country_event = {
 			add_nationalism = -30
 			add_unrest = -20
 			add_local_autonomy = -25
+			remove_core = BUL
 			add_province_modifier = {
 				name = wallachia_vlach_resettlement
 				duration = 36500
@@ -911,6 +936,7 @@ country_event = {
 				add_unrest = -20
 				add_local_autonomy = -25
 				add_devastation = 90
+				remove_core = BUL
 				owner = {
 					add_patriarch_authority = -0.1
 				}
@@ -1250,5 +1276,138 @@ country_event = {
 				size = 2
 			}
 		}
+	}
+}
+
+country_event = {
+	id = AB_wallachia_events.27
+	title = AB_wallachia_events.27.t
+	desc = AB_wallachia_events.27.d
+	picture = GFX_AB_wallachia_events.27
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.27.a
+		add_patriarch_authority = 0.2
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_country_modifier = {
+			name = wallachia_subsumed_the_serbian_patriarch
+			duration = -1
+		}
+		custom_tooltip = AB_wallachia_events_27_province_bonus_tooltip
+		tooltip = {
+			add_unrest = 10
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = serbian
+					religion = orthodox
+				}
+				add_unrest = 10
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.27.b
+		add_accepted_culture_or_dip_power_stated = {
+			culture = serbian
+			dip_reward = yes
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		custom_tooltip = AB_wallachia_events_27_province_bonus_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_respected_serbian_patriarch
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = serbian
+					religion = orthodox
+				}
+				add_province_modifier = {
+					name = wallachia_respected_serbian_patriarch
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Romanianization of Slavic Balkan Provinces, Except Bulgarian
+province_event = {
+	id = AB_wallachia_events.28
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_illyria
+		}
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		culture_group = south_slavic
+		NOT = {
+			culture = bulgarian
+		}
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_hungary_recently
+				}
+				had_country_flag = {
+					flag = wal_romanianized_illyria_recently
+					days = 730
+				}
+			}
+		}
+		OR = {
+			region = balkan_region
+			area = inner_austria_area
+			area = carinthia_area
+		}
+		religion = ROOT
+	}
+	option = {
+		name = blank
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_illyria_recently
+		}
+		change_culture = morlach
 	}
 }

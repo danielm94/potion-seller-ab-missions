@@ -267,3 +267,44 @@ wallachia_integrating_the_bulgars = {
 	local_manpower_modifier = 0.5
 	land_forcelimit_modifier = 0.25
 }
+
+wallachia_subsumed_the_serbian_patriarch = {
+	yearly_patriarch_authority = 0.001
+	church_loyalty_modifier = 0.05
+}
+
+wallachia_respected_serbian_patriarch = {
+	local_unrest = -1
+	local_manpower_modifier = 0.10
+}
+
+wallachia_develop_kosovo_gold = {
+	local_gold_depletion_chance_modifier = -0.25
+	local_development_cost = -0.05
+}
+
+wallachia_construct_the_adriatic_fleet = {
+	light_ship_cost = -0.25
+	sailors_recovery_speed = 0.25
+	global_sailors_modifier = 0.25
+}
+
+wallachia_liberated_orthodox_bretheren_from_heretics = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -20
+	local_unrest = -2
+}
+wallachia_liberated_orthodox_bretheren_from_heathens = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -20
+	local_unrest = -2
+}
+wallachia_liberated_orthodox_bretheren_from_devil_worshipers = {
+	local_core_creation = -0.25
+	local_years_of_nationalism = -20
+	local_unrest = -2
+}
+wallachia_convert_illyria = {
+	local_missionary_strength = 0.03
+	local_tax_modifier = -0.333
+}

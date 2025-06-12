@@ -308,6 +308,160 @@ ab_wal_2 = {
 			add_mil_power = 50
 		}
 	}
+	wal_conquer_the_serbs = {
+		icon = defeat_the_serbs
+		position = 4
+		required_missions = {
+			wal_unite_the_vlachs
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = serbia_area
+				area = rascia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rascia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = croatia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = east_adriatic_coast_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = slavonia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_a_master_of_the_mint_tooltip
+				first_limit = "employed_advisor = {
+					type = master_of_mint
+				}"
+				first_effect = "1766 = {
+			add_province_modifier = {
+				name = wallachia_develop_kosovo_gold
+				duration = -1
+			}
+		}"
+			}
+			add_mil_power = 50
+			set_country_flag = dof_liberation_mechanic
+			custom_tooltip = dof_liberation_mechanic_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_liberated_orthodox_bretheren_from_heretics
+					duration = 7300
+				}
+			}
+			country_event = {
+				id = AB_wallachia_events.27
+			}
+		}
+	}
+	wal_conquer_illyria = {
+		icon = secure_the_sava
+		position = 5
+		required_missions = {
+			wal_conquer_the_serbs
+			wal_drive_out_the_bulgars
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bosnia_area
+				area = east_adriatic_coast_area
+				area = croatia_area
+				area = slavonia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bosnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_adriatic_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			croatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slavonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = carinthia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = venetia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = inner_austria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = austria_proper_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tirol_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = commandant
+				skill = 2
+				cost_multiplier = 0.5
+				religion = ROOT
+				culture = ROOT
+			}
+			add_country_modifier = {
+				name = wallachia_construct_the_adriatic_fleet
+				duration = 5475
+			}
+			custom_tooltip = wal_conquer_illyria_conversion_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_convert_illyria
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = bosnia_area
+							area = east_adriatic_coast_area
+							area = croatia_area
+							area = slavonia_area
+						}
+						religion = catholic
+					}
+					add_province_modifier = {
+						name = wallachia_convert_illyria
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = romanization_of_illyria_tooltip
+			set_country_flag = wal_romanianization_of_illyria
+		}
+	}
 }
 
 ab_wal_3 = {
@@ -905,6 +1059,50 @@ ab_wal_4 = {
 			country_event = {
 				id = AB_wallachia_events.21
 			}
+		}
+	}
+	wal_conquer_greece = {
+		icon = mission_parthenon
+		position = 5
+		required_missions = {
+			wal_worlds_desire
+			wal_drive_out_the_bulgars
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = macedonia_area
+				area = northern_greece_area
+				area = morea_area
+				area = ionian_islands_area
+				area = aegean_archipelago_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ionian_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				area = aegean_archipelago_area
+				value = 4
+			}
+		}
+		effect = {
 		}
 	}
 }

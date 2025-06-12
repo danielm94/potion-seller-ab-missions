@@ -145,3 +145,53 @@ on_province_owner_change = {
 		}
 	}
 }
+
+#Bonus for liberating orthodox
+on_conquest = {
+	if = {
+		limit = {
+			owner = {
+				is_or_was_wallachia = yes
+				has_country_flag = dof_liberation_mechanic
+				is_defender_of_faith = yes
+			}
+			religion = orthodox
+			FROM = {
+				NOT = {
+					religion = orthodox
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion_group = christian
+				}
+			}
+			add_province_modifier = {
+				name = wallachia_liberated_orthodox_bretheren_from_heretics
+				duration = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion_group = reformed_pagan
+						religion_group = pagan
+					}
+				}
+			}
+			add_province_modifier = {
+				name = wallachia_liberated_orthodox_bretheren_from_devil_worshipers
+				duration = 7300
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = wallachia_liberated_orthodox_bretheren_from_heathens
+				duration = 7300
+			}
+		}
+	}
+}
