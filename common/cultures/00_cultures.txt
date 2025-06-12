@@ -4358,7 +4358,7 @@ romanian_culture_group = {
 		}
 	}
 	panonic = {
-		primary = PNN
+		primary = HUN
 		dynasty_names = {
 			"Basarab" "Bathory" "Bibescu" "Callimachi" "Cantacuzino" "Craiovesti" "Danesti" 
 			"Draculesti" "Esterhazy" "Ghica" "Hunyadi" "Karolyi" "Mavrocordatos" "Movilesti" 
@@ -4381,6 +4381,27 @@ romanian_culture_group = {
 			Iulia Judit Julianna Katalin Kinga Klara Margit Maria Monica Natalia Orsolya 
 			Piroska Reka Roxana Ruxandra Sarolta Sofia Stana Stefana Szilvia Teodora Tunde 
 			Valentina Vasilica Violeta Voica Zsofia Zsuzsanna
+		}
+	}
+	morlach = {
+		primary = ILR
+		dynasty_names = {
+			"Basarab" "Brankovic" "Cantacuzino" "Dragovic" "Frankopan" "Ghica" 
+			"Hrvatinic" "Kotromanic" "Kosača" "Movilesti" "Nemanjic" "Radulovic" 
+			"Sturdza" "Vladislavic" "Zrinski"
+		}
+		male_names = {
+			Andrei Andrija Ante Bogdan Boris Branimir Constantin Damir Dejan Dragan 
+			Dragos Dusan Filip Florin Goran Gheorghe Ioan Ivan Jovan Lazar Luka 
+			Marin Marko Mihai Milan Milos Mircea Mladen Nicolae Petar Radu Ratko 
+			Slobodan Stanko Stefan Stjepan Tomislav Vasile Vlad Vladimir Vlado 
+			Vuk Zoran
+		}
+		female_names = {
+			Ana Anca Biljana Branka Cristina Danica Doina Dragana Dubravka Elena 
+			Florica Gordana Ioana Ivana Jelena Katarina Ljiljana Ljubica Maria 
+			Milena Milica Mirjana Nada Nataša Nevenka Olga Ruxandra Slavica 
+			Sofia Stana Svetlana Tatjana Teodora Vesna Zora
 		}
 	}
 }
