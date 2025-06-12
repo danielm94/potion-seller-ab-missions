@@ -53,3 +53,10 @@ is_great_project_destroyed = {
 		has_province_flag = destroyed_great_project
 	}
 }
+
+can_use_bulgarian_great_projects = {
+	custom_trigger_tooltip = {
+		tooltip = can_use_bulgarian_great_projects_tooltip
+	}
+	has_country_flag = can_use_bulgarian_great_projects_flag
+}
