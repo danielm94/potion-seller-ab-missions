@@ -1469,7 +1469,7 @@
 4701 = "Corint"
 4702 = "Serres"
 4703 = "Chiustendil"
-4704 = "Tîrnovo"
+4704 = "Tirnovo"
 4705 = "Komotini"
 4706 = "Dobrogea"
 4709 = "Pasau"
