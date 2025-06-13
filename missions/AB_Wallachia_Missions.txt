@@ -474,7 +474,7 @@ ab_wal_3 = {
 		is_or_was_wallachia = yes
 	}
 	wal_call_to_arms = {
-		icon = mission_modern_knight_army
+		icon = mission_landsknecht_soldier
 		position = 1
 		trigger = {
 			OR = {
