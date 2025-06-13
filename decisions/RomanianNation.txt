@@ -4,8 +4,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			
-			NOT = { has_country_flag = formed_romania_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -17,6 +15,8 @@ country_decisions = {
 				primary_culture = Wallachian
 				primary_culture = Moldavian
 				primary_culture = transylvanian
+				primary_culture = morlach
+				primary_culture = panonic
 			}
 			is_colonial_nation = no
 			OR = {
@@ -78,7 +78,6 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_romania_flag
 		}
 		ai_will_do = {
 			factor = 1
