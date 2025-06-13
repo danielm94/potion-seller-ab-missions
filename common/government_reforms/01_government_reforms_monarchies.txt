@@ -5048,7 +5048,6 @@ blackmail_nobility_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
 		NOT = {
 			has_government_attribute = romanian_elective_monarchy
 		}
