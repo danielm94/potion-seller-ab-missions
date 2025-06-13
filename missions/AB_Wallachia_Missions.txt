@@ -791,7 +791,61 @@ ab_wal_3 = {
 			}
 		}
 	}
-	
+	wal_balkan_hegemony = {
+		icon = mission_balkan_conquest
+		position = 6
+		required_missions = {
+			wal_conquer_illyria
+			wal_drive_out_the_bulgars
+			wal_conquer_greece
+		}
+		provinces_to_highlight = {
+			region = balkan_region
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		trigger = {
+			balkan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip
+				first_limit = "has_vlad_2nd_or_3rd_ruling = yes"
+				first_effect = "change_ruler_stat = {
+					type = adm
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+				change_ruler_stat = {
+					type = mil
+					amount = 1
+				}"
+			}
+			custom_tooltip = blank
+			free_up_bad_ruler_personality_if_full = yes
+			add_ruler_personality = legendary_conqueror_personality
+			custom_tooltip = tooltip_line_divider
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = blank
+			add_country_modifier = {
+				name = wallachia_balkan_hegemon
+				duration = 36500
+			}
+		}
+	}
 }
 
 ab_wal_4 = {

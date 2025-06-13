@@ -308,3 +308,10 @@ wallachia_convert_illyria = {
 	local_missionary_strength = 0.03
 	local_tax_modifier = -0.333
 }
+
+wallachia_balkan_hegemon = {
+	prestige = 1
+	core_creation = -0.05
+	land_morale = 0.05
+	morale_damage_received = -0.1
+}

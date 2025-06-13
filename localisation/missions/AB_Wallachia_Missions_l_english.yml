@@ -68,3 +68,5 @@
  artists_help_with_great_projects_tooltip: "§YArtist§! advisors now grant §G-5.0%§! §YGreat Project Upgrade Cost§! per skill level.\n"
  mavrocordatos_ruler_tooltip: "\nIf our ruler's dynasty is §YMavrocordatos§!, every owned §YGreek§! province will gain:"
  mavrocordatos_candidate_buff_tooltip: "\n@TUH Electing a candidate from §YHouse Mavrocordatos§! now grants an §YInnovator§! advisor for §G50%§! of the cost.\n"
+ wal_balkan_hegemony_title: "Balkan Hegemon"
+ has_vlad_2nd_or_3rd_ruling_tooltip: "If §YVlad II§! or §YVlad III§! are our rulers:"
