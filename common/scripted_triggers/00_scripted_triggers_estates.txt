@@ -48,13 +48,6 @@ has_exempt_from_seize_land_for_estate_nobles = {
 		#Jolof's starting privileges
 		has_estate_privilege = estate_nobles_decentralized_tribe
 		has_estate_privilege = estate_nobles_tribe_unification
-		#Norway's starting privileges
-		has_estate_privilege = estate_nobles_danish_nobility
-		has_estate_privilege = estate_nobles_nobles_instead_of_royal_court
-		#England's starting privilege
-		has_estate_privilege = estate_nobles_english_villeinage
-		#Prussia's privilege
-		has_estate_privilege = estate_nobles_consolidated_noble_contracts
 		#Wallachia's starting privilege
 		has_estate_privilege = estate_nobles_dominance_of_the_boierime
 	}
@@ -69,14 +62,6 @@ has_exempt_from_seize_land_for_estate_church = {
 	OR = {
 		has_estate_privilege = estate_church_inwards_perfection
 		has_estate_privilege = estate_church_administrative_privileges
-		#Livonian Order's starting privileges
-		has_estate_privilege = estate_church_lands_of_riga
-		has_estate_privilege = estate_church_bishopric_of_dorpat
-		has_estate_privilege = estate_church_bishopric_of_osel_wiek
-		has_estate_privilege = estate_church_bishopric_of_courland
-		has_estate_privilege = estate_church_bishopric_of_reval
-		#Timurids
-		has_estate_privilege = estate_church_TIM_promote_ijazah
 	}
 }
 has_exempt_from_seize_land_for_estate_cossacks = {
