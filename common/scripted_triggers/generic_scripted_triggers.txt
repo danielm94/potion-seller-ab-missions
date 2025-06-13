@@ -58,7 +58,10 @@ can_use_bulgarian_great_projects = {
 	custom_trigger_tooltip = {
 		tooltip = can_use_bulgarian_great_projects_tooltip
 	}
-	has_country_flag = can_use_bulgarian_great_projects_flag
+	OR = {
+		has_country_flag = can_use_bulgarian_great_projects_flag
+		has_country_flag = mva_unlocked_preslav_project
+	}
 }
 
 eastern_roman_empire_province_cb_trigger = {

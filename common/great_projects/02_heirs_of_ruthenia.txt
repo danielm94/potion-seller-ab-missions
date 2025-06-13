@@ -509,12 +509,9 @@ szeged = {
 					culture_group = carpathian
 					religion = tengri_pagan_reformed
 				}
-				AND = {
-					OR = {
-						tag = CMN
-						was_tag = CMN
-					}
-					mission_completed = cmn_carpathia
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = cmn_unlocked_magyar_project
 				}
 			}
 		}
@@ -536,12 +533,9 @@ szeged = {
 					culture_group = carpathian
 					religion = tengri_pagan_reformed
 				}
-				AND = {
-					OR = {
-						tag = CMN
-						was_tag = CMN
-					}
-					mission_completed = cmn_carpathia
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = cmn_unlocked_magyar_project
 				}
 			}
 		}
@@ -555,12 +549,9 @@ szeged = {
 					culture_group = carpathian
 					religion = tengri_pagan_reformed
 				}
-				AND = {
-					OR = {
-						tag = CMN
-						was_tag = CMN
-					}
-					mission_completed = cmn_carpathia
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = cmn_unlocked_magyar_project
 				}
 			}
 		}
@@ -1102,17 +1093,15 @@ hohenstaufen_palace = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			owner = {
+		owner = {
+			OR = {
 				dynasty = Hohenstaufen
-			}
-			owner = {
 				AND = {
+					full_idea_group = imperial_ideas
 					OR = {
 						is_emperor = yes
 						tag = HLR
 					}
-					full_idea_group = imperial_ideas
 				}
 			}
 		}
@@ -1120,17 +1109,15 @@ hohenstaufen_palace = {
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			owner = {
+		owner = {
+			OR = {
 				dynasty = Hohenstaufen
-			}
-			owner = {
 				AND = {
+					full_idea_group = imperial_ideas
 					OR = {
 						is_emperor = yes
 						tag = HLR
 					}
-					full_idea_group = imperial_ideas
 				}
 			}
 		}
@@ -1514,18 +1501,12 @@ nicene_academy = {
 
 	#can we build it?
 	build_trigger = {
-		OR = {
-			owner = {
-				dynasty = "Gabras"
-			}
+		owner = {
 			OR = {
-				owner = {
-					OR = {
-						full_idea_group = offensive_ideas
-						full_idea_group = quality_ideas
-						full_idea_group = professional_ideas
-					}
-				}
+				dynasty = "Gabras"
+				full_idea_group = offensive_ideas
+				full_idea_group = quality_ideas
+				full_idea_group = professional_ideas
 			}
 		}
 	}
@@ -1540,36 +1521,24 @@ nicene_academy = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			owner = {
-				dynasty = "Gabras"
-			}
+		owner = {
 			OR = {
-				owner = {
-					OR = {
-						full_idea_group = offensive_ideas
-						full_idea_group = quality_ideas
-						full_idea_group = professional_ideas
-					}
-				}
+				dynasty = "Gabras"
+				full_idea_group = offensive_ideas
+				full_idea_group = quality_ideas
+				full_idea_group = professional_ideas
 			}
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			owner = {
-				dynasty = "Gabras"
-			}
+		owner = {
 			OR = {
-				owner = {
-					OR = {
-						full_idea_group = offensive_ideas
-						full_idea_group = quality_ideas
-						full_idea_group = professional_ideas
-					}
-				}
+				dynasty = "Gabras"
+				full_idea_group = offensive_ideas
+				full_idea_group = quality_ideas
+				full_idea_group = professional_ideas
 			}
 		}
 	}
@@ -1745,19 +1714,13 @@ preslav_literary_school = {
 		hidden_trigger = {
 			is_great_project_destroyed = no
 		}
-		OR = {
-			AND = {
-				owner = {
+		owner = {
+			OR = {
+				AND = {
 					culture_group = south_slavic
 					religion = orthodox
 				}
-			}
-			owner = {
-				OR = {
-					mission_completed = mva_bulgaria
-					mission_completed = ser_dissolve_bulgaria
-					can_use_bulgarian_great_projects = yes
-				}
+				can_use_bulgarian_great_projects = yes
 			}
 		}
 	}
@@ -1775,19 +1738,13 @@ preslav_literary_school = {
 		hidden_trigger = {
 			is_great_project_destroyed = no
 		}
-		OR = {
-			AND = {
-				owner = {
+		owner = {
+			OR = {
+				AND = {
 					culture_group = south_slavic
 					religion = orthodox
 				}
-			}
-			owner = {
-				OR = {
-					mission_completed = mva_bulgaria
-					mission_completed = ser_dissolve_bulgaria
-					can_use_bulgarian_great_projects = yes
-				}
+				can_use_bulgarian_great_projects = yes
 			}
 		}
 	}
@@ -1797,19 +1754,13 @@ preslav_literary_school = {
 		hidden_trigger = {
 			is_great_project_destroyed = no
 		}
-		OR = {
-			AND = {
-				owner = {
+		owner = {
+			OR = {
+				AND = {
 					culture_group = south_slavic
 					religion = orthodox
 				}
-			}
-			owner = {
-				OR = {
-					mission_completed = mva_bulgaria
-					mission_completed = ser_dissolve_bulgaria
-					can_use_bulgarian_great_projects = yes
-				}
+				can_use_bulgarian_great_projects = yes
 			}
 		}
 	}
@@ -1818,20 +1769,14 @@ preslav_literary_school = {
 	keep_trigger = {
 		hidden_trigger = {
 			is_great_project_destroyed = no
-		}	
-		OR = {
-			AND = {
-				owner = {
+		}
+		owner = {
+			OR = {
+				AND = {
 					culture_group = south_slavic
 					religion = orthodox
 				}
-			}
-			owner = {
-				OR = {
-					mission_completed = mva_bulgaria
-					mission_completed = ser_dissolve_bulgaria
-					can_use_bulgarian_great_projects = yes
-				}
+				can_use_bulgarian_great_projects = yes
 			}
 		}
 	}
@@ -2676,10 +2621,9 @@ aachen = {
 				}
 			}
 		}
-		WEE = {
-			NOT = {
-				mission_completed = wee_aachen
-			}
+		custom_trigger_tooltip = {
+			tooltip = ab_per_destroyed_monument
+			NOT = { has_province_flag = wee_destroyed_aachen }
 		}
 	}
 
@@ -2696,19 +2640,17 @@ aachen = {
 				}
 			}
 		}
-		WEE = {
-			NOT = {
-				mission_completed = wee_aachen
-			}
+		custom_trigger_tooltip = {
+			tooltip = ab_per_destroyed_monument
+			NOT = { has_province_flag = wee_destroyed_aachen }
 		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
-		WEE = {
-			NOT = {
-				mission_completed = wee_aachen
-			}
+		custom_trigger_tooltip = {
+			tooltip = ab_per_destroyed_monument
+			NOT = { has_province_flag = wee_destroyed_aachen }
 		}
 	}
 
