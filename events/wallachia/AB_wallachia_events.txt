@@ -1385,7 +1385,7 @@ province_event = {
 		owner = {
 			OR = {
 				NOT = {
-					has_country_flag = wal_romanianized_hungary_recently
+					has_country_flag = wal_romanianized_illyria_recently
 				}
 				had_country_flag = {
 					flag = wal_romanianized_illyria_recently
