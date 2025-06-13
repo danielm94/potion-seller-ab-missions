@@ -3353,7 +3353,7 @@ royal_marines_reform = {
 		has_dlc = "Domination"
 		OR = {
 			primary_culture = english
-			primary_culture = anglois
+			primary_culture = Anglois
 		}
 	}
 	trigger = {
@@ -4592,10 +4592,6 @@ modernized_furusiyya_reform = {
 	removed_effect = {
 		remove_country_modifier = mam_disc_troops_modifier
 	}
-
-	custom_attributes = {
-		advisors_generate_innovativeness = yes
-	}
 	
 	ai = {
 		factor = 1
@@ -4666,13 +4662,6 @@ state_madrasas_reform = {
 	modifiers = {
 		same_religion_advisor_cost = -0.2
 		yearly_government_power = 0.33
-	}
-
-	conditional = {
-		allow = { has_dlc = "Rule Britannia" }
-		custom_attributes = {
-			advisors_generate_innovativeness = yes
-		}
 	}
 	
 	ai = {
