@@ -82,6 +82,7 @@ wallachian_terror_mechanic = {
 						value = 1
 					}
 				}
+				remove_estate_privilege = estate_nobles_dominance_of_the_boierime
 				change_estate_land_share = {
 					estate = all
 					share = -10
@@ -138,11 +139,25 @@ wallachian_terror_mechanic = {
 					duration = 3650
 				}
 				custom_tooltip = brutalize_the_enemy_razing_tooltip
-				tooltip = {
-					add_nationalism = 15
-					add_province_modifier = {
-						name = wallachian_terror_raze_mod
-						duration = 5475
+				if = {
+					limit = {
+						has_country_flag = wallachian_terror_reduced_raze_penalty
+					}
+					tooltip = {
+						add_nationalism = 10
+						add_province_modifier = {
+							name = wallachian_terror_raze_mod_nerfed
+							duration = 3650
+						}
+					}
+				}
+				else = {
+					tooltip = {
+						add_nationalism = 15
+						add_province_modifier = {
+							name = wallachian_terror_raze_mod
+							duration = 5475
+						}
 					}
 				}
 				hidden_effect = {

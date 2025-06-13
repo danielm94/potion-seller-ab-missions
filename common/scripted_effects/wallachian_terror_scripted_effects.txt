@@ -509,11 +509,25 @@ wallachian_terror_on_raze_effect = {
 				has_country_modifier = wallachian_terror_brutalize_the_enemy
 			}
 		}
-		add_province_modifier = {
-			name = wallachian_terror_raze_mod
-			duration = 5475
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = wallachian_terror_reduced_raze_penalty
+				}
+			}
+			add_province_modifier = {
+				name = wallachian_terror_raze_mod_nerfed
+				duration = 3650
+			}
+			add_nationalism = 10
 		}
-		add_nationalism = 15
+		else = {
+			add_province_modifier = {
+				name = wallachian_terror_raze_mod
+				duration = 5475
+			}
+			add_nationalism = 15
+		}
 		export_to_variable = {
 			which = dev
 			value = development
@@ -1753,7 +1767,6 @@ wallachian_terror_byzantium_impalement_effects = {
 			add_adm_power = 25
 			add_dip_power = 25
 			add_mil_power = 25
-
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_ruler_has_impaler_trait
 				first_limit = "ruler_has_personality = impaler_personality"
@@ -1761,7 +1774,7 @@ wallachian_terror_byzantium_impalement_effects = {
 				name = byzantium_greekfire
 				duration = -1
 			}"
-			}	
+			}
 		}
 		set_country_flag = wallachia_impaled_byzantium
 	}

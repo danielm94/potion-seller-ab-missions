@@ -282,23 +282,24 @@ ab_wal_2 = {
 			}
 			if = {
 				limit = {
-					has_country_flag = wallachia_impaled_golden_horde
+					has_government_mechanic = wallachian_terror_mechanic
 				}
-				custom_tooltip = wal_pontic_dominion_impale_tooltip_yes
-				change_terror = {
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = wal_pontic_dominion_impale_tooltip
+				first_limit = "has_country_flag = wallachia_impaled_golden_horde"
+				effect = "change_terror = {
 					value = 5
 					scaled_with_gain_modifier = yes
-				}
+				}"
 			}
-			else = {
-				custom_tooltip = wal_pontic_dominion_impale_tooltip_no
-				tooltip = {
-					change_terror = {
-						value = 5
-						scaled_with_gain_modifier = yes
-					}
-				}
+			set_country_flag = wallachian_terror_reduced_raze_penalty
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = wallachian_terror_reduced_raze_penalty_tooltip"
 			}
+			custom_tooltip = blank
 			#TUH
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
@@ -857,7 +858,7 @@ ab_wal_4 = {
 		is_or_was_wallachia = yes
 	}
 	wal_liberate_transylvania = {
-		icon = GFX_wal_liberate_transylvania
+		icon = gfx_wal_liberate_transylvania
 		position = 2
 		required_missions = {
 			wal_call_to_arms

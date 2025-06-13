@@ -12,6 +12,8 @@
  desc_wallachian_terror_garden_of_the_defeated: "Once a battlefield, this land has been turned into a grotesque monument to failure. Impaled enemy soldiers line the fields. It is a spectacle of cruelty that spreads fear and panic among nearby communities. Soldiers who witness it become disheartened, and some desert outright rather than risk the same fate."
  wallachian_terror_raze_mod: "Broken by Our Hand"
  desc_wallachian_terror_raze_mod: "The province was stripped bare to fuel the ambitions of its new masters. Wealth was seized, the able-bodied conscripted or sold, and the land left to rot. No investment remains; only fear and ruin. It is a place exploited and discarded without a second thought."
+ wallachian_terror_raze_mod_nerfed: "Broken by Our Hand"
+ desc_wallachian_terror_raze_mod_nerfed: "The province was stripped bare to fuel the ambitions of its new masters. Wealth was seized, the able-bodied conscripted or sold, and the land left to rot. No investment remains; only fear and ruin. It is a place exploited and discarded without a second thought."
  wallachian_terror_impaled_ruler: "Kingslayer"
  desc_wallachian_terror_impaled_ruler: "By impaling a foreign sovereign, the [Root.Monarch.GetTitle] has earned a title that echoes through both the battlefield and the court. Our discipline sharpens with the fear we inspire, but our name is blackened across Christendom."
  wallachian_terror_leadership_in_exile: "Leadership in Exile"
