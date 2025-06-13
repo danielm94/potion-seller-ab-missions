@@ -20,12 +20,28 @@ country_decisions = {
 				custom_tooltip = disable_wallachian_terror_dynamic_country_color
 				hidden_effect = {
 					clr_country_flag = wallachian_terror_dynamic_country_color
-					change_country_color = {
-						#TODO: add logic for handling other tags with this mechanic (should be few)
-						color = {
-							68
-							122
-							174
+					if = {
+						limit = {
+							tag = WAL
+						}
+						change_country_color = {
+							color = {
+								68
+								122
+								174
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							tag = DAC
+						}
+						change_country_color = {
+							color = {
+								70
+								70
+								70
+							}
 						}
 					}
 				}
