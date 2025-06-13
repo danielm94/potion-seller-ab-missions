@@ -1,5 +1,5 @@
 spriteTypes = {
-		spriteType = {
+	spriteType = {
 		name = "gfx_wal_compromise_with_the_boieri"
 		texturefile = "gfx/interface/missions/wal/wal_compromise_with_the_boieri.dds"
 	}
@@ -7,8 +7,28 @@ spriteTypes = {
 		name = "gfx_wal_unite_the_vlachs"
 		texturefile = "gfx/interface/missions/wal/wal_unite_the_vlachs.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "gfx_wal_crush_the_magyars"
 		texturefile = "gfx/interface/missions/wal/wal_crush_the_magyars.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_the_great_feast"
+		texturefile = "gfx/interface/missions/wal/wal_the_great_feast.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_liberate_transylvania"
+		texturefile = "gfx/interface/missions/wal/wal_liberate_transylvania.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_unite_the_principalities"
+		texturefile = "gfx/interface/missions/wal/wal_unite_the_principalities.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_drive_out_the_bulgars"
+		texturefile = "gfx/interface/missions/wal/wal_drive_out_the_bulgars.dds"
+	}
+	spriteType = {
+		name = "gfx_wal_pontic_dominion"
+		texturefile = "gfx/interface/missions/wal/wal_pontic_dominion.dds"
 	}
 }
