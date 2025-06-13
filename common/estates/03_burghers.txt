@@ -1,57 +1,28 @@
 estate_burghers = {
 	icon = 3
+
 	# If true, country will get estate
-	trigger = {
-		NOT = {
-			has_government_attribute = disables_estate_burghers
-		}
-		NOT = {
-			has_disabled_estate = {
-				estate = estate_burghers
-			}
-		}
+	trigger = {	
+		NOT = { has_government_attribute = disables_estate_burghers }
+		NOT = { has_disabled_estate = { estate = estate_burghers } }
 		OR = {
 			has_government_attribute = enables_estate_burghers
-			has_enabled_estate = {
-				estate = estate_burghers
-			}
-			has_unlocked_estate = {
-				estate = estate_burghers
-			}
+			has_enabled_estate = { estate = estate_burghers }
+			has_unlocked_estate = { estate = estate_burghers }
 			AND = {
-				NOT = {
-					has_government_attribute = is_pirate_republic_reform
-				}
-				NOT = {
-					is_revolutionary_republic_trigger = yes
-				}
-				NOT = {
-					government = native
-				}
-				NOT = {
-					has_reform = siberian_tribe
-				}
+				NOT = { has_government_attribute = is_pirate_republic_reform }
+				NOT = { is_revolutionary_republic_trigger = yes }
+				NOT = { government = native }
+				NOT = { has_reform = siberian_tribe }
 				is_nomad = no
 				is_colonial_nation = no
-				NOT = {
-					has_reform = revolutionary_empire_reform
-				}
-				NOT = {
-					has_estate = estate_vaisyas
-				}
-				NOT = {
-					has_estate = estate_jains
-				}
+				NOT = { has_reform = revolutionary_empire_reform }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_jains }
 			}
 		}
-		#NOT = { has_government_attribute = is_merchant_republic }
-		#NOT = { has_reform = veche_republic }
-		#NOT = { has_reform = trading_city }
-		#OR = {
-		#	NOT = { has_reform = celestial_empire }
-		#	has_dlc = "Mandate of Heaven"
-		#}
 	}
+
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		trade_efficiency = 0.2
@@ -59,7 +30,7 @@ estate_burghers = {
 	}
 	country_modifier_neutral = {
 		trade_efficiency = 0.2
-	}
+	}	
 	country_modifier_angry = {
 		trade_efficiency = -0.1
 		development_cost = 0.1
@@ -68,23 +39,18 @@ estate_burghers = {
 	land_ownership_modifier = {
 		burghers_loyalty_modifier = 0.2
 	}
+	
 	province_independence_weight = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			NOT = {
-				development = 5
-			}
+			NOT = { development = 5 }
 		}
 		modifier = {
 			factor = 0.5
 			OR = {
-				NOT = {
-					development = 10
-				}
-				NOT = {
-					province_trade_power = 5
-				}
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
 			}
 		}
 		modifier = {
@@ -108,9 +74,10 @@ estate_burghers = {
 			has_province_modifier = thankful_guilds
 		}
 	}
+
 	# Influence modifiers
 	base_influence = 10
-	influence_modifier = {
+	influence_modifier = {	
 		desc = EST_HIGH_DEVELOPMENT_PROVINCE
 		trigger = {
 			any_owned_province = {
@@ -119,12 +86,10 @@ estate_burghers = {
 		}
 		influence = 5
 	}
-	influence_modifier = {
+	influence_modifier = {	
 		desc = EST_VAL_COT
 		trigger = {
-			NOT = {
-				has_reform = free_city
-			}
+			NOT = { has_reform = free_city }
 			any_owned_province = {
 				province_has_center_of_trade_of_level = 1
 			}
@@ -134,106 +99,82 @@ estate_burghers = {
 	influence_modifier = {
 		desc = EST_VAL_HANSEATIC_CITY
 		trigger = {
-			NOT = {
-				has_reform = free_city
-			}
+			NOT = { has_reform = free_city }
 			OR = {
-				capital = 1				#Stockholm
-				capital = 6				#Sk�ne
-				capital = 23				#Bergen
-				capital = 36				#Reval
-				capital = 38				#Riga
-				capital = 41				#K�nigsberg
-				capital = 43				#Danzig
-				capital = 44				#Hamburg
-				capital = 45				#Lubeck
-				capital = 46				#Wismar
-				capital = 47				#Stralsund
-				capital = 52				#Magdeburg
-				capital = 53				#Luneburg
-				capital = 54				#Stade
-				capital = 56				#Osnabruck
-				capital = 57				#Brunswick
-				capital = 85				#K�ln
-				capital = 86				#Munster
-				capital = 90				#Bruges
-				capital = 100				#Groningen
-				capital = 236				#London
-				capital = 238				#Ipswich
-				capital = 274				#Pskov
-				capital = 275				#Polotsk
-				capital = 310				#Novgorod
-				capital = 1744				# Antwerp
-				capital = 1834				# Dorpat
-				capital = 1858				# Stettin
-				capital = 1859				# Torun
-				capital = 1860				# Bishop's Lynn
-				capital = 1874				# Bremen
-				capital = 1936				# Kaunas
-				capital = 2994				# Greifswald
-				capital = 2995				# Stolp
+				capital = 1 #Stockholm
+				capital = 6 #Sk�ne
+				capital = 23 #Bergen
+				capital = 36 #Reval
+				capital = 38 #Riga
+				capital = 41 #K�nigsberg
+				capital = 43 #Danzig
+				capital = 44 #Hamburg
+				capital = 45 #Lubeck
+				capital = 46 #Wismar
+				capital = 47 #Stralsund
+				capital = 52 #Magdeburg
+				capital = 53 #Luneburg
+				capital = 54 #Stade
+				capital = 56 #Osnabruck
+				capital = 57 #Brunswick
+				capital = 85 #K�ln
+				capital = 86 #Munster
+				capital = 90 #Bruges
+				capital = 100 #Groningen
+				capital = 236 #London
+				capital = 238 #Ipswich
+				capital = 274 #Pskov
+				capital = 275 #Polotsk
+				capital = 310 #Novgorod
+				capital = 1744 # Antwerp
+				capital = 1834 # Dorpat
+				capital = 1858 # Stettin
+				capital = 1859 # Torun
+				capital = 1860 # Bishop's Lynn
+				capital = 1874 # Bremen
+				capital = 1936 # Kaunas
+				capital = 2994 # Greifswald
+				capital = 2995 # Stolp
 			}
-		}
-		influence = 5
-	}
-	influence_modifier = {
-		desc = EST_VAL_EAST_AFRICAN_TRADE_CITIES
-		trigger = {
-			capital_scope = {
-				OR = {
-					area = central_swahili_coast_area
-					area = mombasa_area
-					area = mozambique_area
-					area = northern_swahili_coast_area
-					area = mogadishu_area
-				}
-			}
-		}
+		}	
 		influence = 5
 	}
 	influence_modifier = {
 		desc = EST_VAL_LOW_TRADE_INCOME
 		trigger = {
-			NOT = {
-				trade_income_percentage = 0.25
-			}
-		}
+			NOT = { trade_income_percentage = 0.25 }
+		}	
 		influence = -5
 	}
 	influence_modifier = {
 		desc = EST_VAL_HIGH_TRADE_INCOME
 		trigger = {
 			trade_income_percentage = 0.5
-			NOT = {
-				trade_income_percentage = 0.75
-			}
-		}
+			NOT = { trade_income_percentage = 0.75 }
+		}	
 		influence = 5
 	}
 	influence_modifier = {
 		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
 		trigger = {
 			trade_income_percentage = 0.75
-		}
+		}	
 		influence = 10
 	}
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			has_any_estate_disaster_active = yes
-			has_not_own_estate_disaster_active = {
-				estate = estate_burghers
-			}
-		}
+			has_not_own_estate_disaster_active = { estate = estate_burghers }
+		}	
 		influence = -40
 	}
+	
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
 			has_any_estate_disaster_active = yes
-			has_not_own_estate_disaster_active = {
-				estate = estate_burghers
-			}
+			has_not_own_estate_disaster_active = { estate = estate_burghers }
 		}
 		loyalty = -20
 	}
@@ -245,17 +186,15 @@ estate_burghers = {
 				tag = FIN
 				was_tag = FIN
 			}
-			OR = {
-				religion = suomi_pagan
-				religion = reformed_suomi
-			}
 		}
 	}
 	custom_name = {
 		desc = estate_emporoi
 		trigger = {
-			tag = BYZ
-			culture_group = byzantine
+			OR = {
+				primary_culture = greek
+				primary_culture = sclavinian
+			}
 		}
 	}
 	custom_name = {
@@ -268,29 +207,16 @@ estate_burghers = {
 		desc = estate_gorozhane
 		trigger = {
 			culture_group = east_slavic
-			NOT = {
-				primary_culture = Litvin
-			}
+			NOT = { primary_culture = Litvin }
 		}
 	}
 	custom_name = {
 		desc = estate_hutukhshan
 		trigger = {
 			OR = {
-				tag = PER
-				tag = PRZ
-				tag = PRC
-				tag = PMN
-				tag = SSN
-				tag = SHP
-				tag = KRN
-				tag = ISP
-				tag = ZKD
-				tag = INJ
-				tag = MRV
-				tag = SRN
-				tag = KYN
-				tag = MRH
+				ab_is_persia_trigger = yes
+				has_reform = persianprince
+				has_reform = persianprincet
 			}
 		}
 	}
@@ -316,6 +242,13 @@ estate_burghers = {
 		}
 	}
 	custom_name = {
+		desc = estate_neoconfucian_reformers
+		trigger = {
+			tag = KOR
+			religion = confucianism
+		}
+	}
+	custom_name = {
 		desc = estate_ppolom
 		trigger = {
 			is_mayan_society_trigger = yes
@@ -327,7 +260,7 @@ estate_burghers = {
 			religion = nahuatl
 		}
 	}
-	# AB {{{
+	# AB [[[
 	custom_name = {
 		desc = estate_mesainiai
 		trigger = {
@@ -339,13 +272,11 @@ estate_burghers = {
 			}
 		}
 	}
-	# }}}
+	# ]]]
 	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
 			OR = {
-				#Just like "NOT = { religion_group = Christian }", but at least it doesn't override estate names for new religion groups
-				#Still needs more diversity
 				religion_group = muslim
 				religion_group = eastern
 				religion_group = dharmic
@@ -358,14 +289,11 @@ estate_burghers = {
 	custom_name = {
 		desc = estate_breslele
 		trigger = {
-			is_romanian_tag = yes
+			culture_group = romanian_culture_group
 		}
 	}
-	color = {
-		35
-		35
-		150
-	}
+	color = { 35 35 150 }
+
 	privileges = {
 		estate_burghers_land_rights
 		estate_burghers_land_of_commerce
@@ -376,7 +304,6 @@ estate_burghers = {
 		estate_burghers_new_world_charter
 		estate_burghers_indebted_to_burghers
 		estate_burghers_free_enterprise
-		estate_burghers_the_great_privilege
 		estate_burghers_exclusive_trade_rights
 		estate_burghers_control_over_monetary_policy
 		estate_burghers_private_trade_fleets
@@ -387,7 +314,6 @@ estate_burghers = {
 		estate_burghers_monopoly_of_glass
 		estate_burghers_monopoly_of_paper
 		estate_burghers_enforced_interfaith_dialogue
-		estate_burghers_prussian_confederation
 		estate_burghers_statutory_rights
 		estate_burghers_orang_laut_alliances
 		estate_burghers_control_over_the_mint
@@ -395,9 +321,7 @@ estate_burghers = {
 		estate_burghers_forest_expansion
 		estate_burghers_mountain_expansion
 		estate_burghers_orthodox_tolerance
-		estate_burghers_polish_merchant_seal
 		estate_burghers_rise_of_the_burghers
-		estate_burghers_the_new_middle_class
 		estate_burghers_autonomous_trade_companies
 		estate_burghers_development_of_cities
 		estate_burghers_control_over_the_coinage
@@ -406,41 +330,17 @@ estate_burghers = {
 		estate_burghers_naval_school_right
 		estate_burghers_expanded_monopoly_rights
 		estate_burghers_financial_demand
-		estate_burghers_sindicat_remensa_privilege
 		estate_burghers_promote_burgher_bookkeeping
-		estate_burghers_great_works_of_iran
 		estate_burghers_fund_karimi
-		estate_burghers_foreign_expeditions
-		estate_burghers_nile_goods_transport
 		estate_burghers_monopoly_of_coffee
-		estate_burghers_reliance_on_republics
-		estate_burghers_exkousseiai_for_latins
-		estate_burghers_BYZ_single_market
 		estate_burghers_ARB_oasis_development
-		#estate_burghers_YEM_coffee_monopoly
-		estate_burghers_persian_rugs
-		estate_burghers_hungarian_royal_cities
-		estate_burghers_italian_coastal_influence
-		#estate_burghers_livestock_regulations
-		estate_burghers_arabian_traders
-		estate_burghers_omani_marines
-		#estate_burghers_ITA_promote_latin_merchants
-		estate_burghers_ITA_permit_merchant_colonists
 		estate_burghers_GER_customs_union
-		estate_burghers_GER_turn_towards_mercantilism
 		estate_burghers_black_devils
 		estate_burghers_maximize_cargo_space
 		estate_burghers_diversify_fluyts
 		estate_burghers_voc_privilege
 		estate_burghers_INC_mountain_development
-		estate_burghers_MAY_support_of_chontal_maya
-		estate_burghers_MAY_tropical_adaptation
-		estate_burghers_SUN_support_recovering_populations
-		estate_burghers_AZT_sponsor_artisans
-		estate_burghers_AZT_mexican_gold_mines
-		estate_burghers_fugger_family
-		estate_burghers_TIM_gulf_toll
-		# AB {{{
+		# AB [[[
 		estate_burghers_ottoman_loans
 		estate_burghers_highland_rights
 		estate_burghers_ire_deforestation
@@ -454,8 +354,9 @@ estate_burghers = {
 		estate_burghers_italo_balkan_unity
 		estate_burghers_saxon_woods_expansion
 		estate_burghers_german_woods_expansion
-		# }}}
+		# ]]]
 	}
+
 	agendas = {
 		estate_burghers_develop_x
 		estate_burghers_build_trade_building_in_y
@@ -489,5 +390,6 @@ estate_burghers = {
 		estate_burghers_hire_advisor
 		estate_burghers_fire_advisor
 	}
-	influence_from_dev_modifier = 1
+
+	influence_from_dev_modifier = 1.0
 }
