@@ -1,70 +1,35 @@
 estate_church = {
 	icon = 1
+
 	# If true, country will get estate
 	trigger = {
-		NOT = {
-			has_government_attribute = disables_estate_church
-		}
-		NOT = {
-			has_disabled_estate = {
-				estate = estate_church
-			}
-		}
+		NOT = { has_government_attribute = disables_estate_church }
+		NOT = { has_disabled_estate = { estate = estate_church } }
 		if = {
 			limit = {
 				religion_group = dharmic
 			}
 			OR = {
-				has_enabled_estate = {
-					estate = estate_church
-				}
-				NOT = {
-					has_estate = estate_brahmins
-				}
+				has_enabled_estate = { estate = estate_church }
+				NOT = { has_estate = estate_brahmins }
 			}
 		}
 		OR = {
 			has_government_attribute = enables_estate_church
-			has_enabled_estate = {
-				estate = estate_church
-			}
-			has_unlocked_estate = {
-				estate = estate_church
-			}
+			has_enabled_estate = { estate = estate_church }
+			has_unlocked_estate = { estate = estate_church }
 			AND = {
-				NOT = {
-					has_government_attribute = is_pirate_republic_reform
-				}
-				NOT = {
-					has_reform = siberian_tribe
-				}
-				NOT = {
-					government = native
-				}
-				NOT = {
-					is_revolutionary_republic_trigger = yes
-				}
-				NOT = {
-					has_reform = revolutionary_empire_reform
-				}
-				OR = {
-					NOT = {
-						tag = USA
-					}
-					government = theocracy
-				}
+				NOT = { has_government_attribute = is_pirate_republic_reform }
+				NOT = { has_reform = siberian_tribe }
+				NOT = { government = native }
+				NOT = { is_revolutionary_republic_trigger = yes }
+				NOT = { has_reform = revolutionary_empire_reform }
 				is_nomad = no
 				is_colonial_nation = no
 			}
 		}
-		#NOT = { has_government_attribute = is_merchant_republic }
-		#NOT = { has_reform = veche_republic }
-		#NOT = { has_reform = trading_city }
-		#OR = {
-		#	NOT = { has_reform = celestial_empire }
-		#	has_dlc = "Mandate of Heaven"
-		#}
 	}
+
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		global_tax_modifier = 0.2
@@ -76,7 +41,7 @@ estate_church = {
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
-	}
+	}	
 	country_modifier_angry = {
 		global_tax_modifier = -0.1
 		papal_influence = -1
@@ -86,78 +51,62 @@ estate_church = {
 		stability_cost_modifier = 0.1
 		global_unrest = 2
 	}
+
 	land_ownership_modifier = {
 		church_loyalty_modifier = 0.2
 	}
+
 	province_independence_weight = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			NOT = {
-				religion_group = owner
-			}
+			NOT = { religion_group = owner }
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				religion = owner
-			}
+			NOT = { religion = owner }
 		}
 		modifier = {
 			factor = 0.67
-			NOT = {
-				is_state_core = owner
-			}
+			NOT = { is_state_core = owner }
 		}
 		modifier = {
 			factor = 1.2
 			base_tax = 10
 		}
 	}
+
 	# Influence modifiers
 	base_influence = 10
-	influence_modifier = {
-		desc = EST_VAL_SHARIFS
-		trigger = {
-			tag = HED
-			owns = 385			#Mecca
-		}
-		influence = 20
-	}
 	influence_modifier = {
 		desc = EST_VAL_NEO_SUFISM
 		trigger = {
 			has_global_flag = neo_sufism
 			religion_group = muslim
-		}
+		}	
 		influence = 10
 	}
 	influence_modifier = {
 		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
 		trigger = {
-			NOT = {
-				dominant_religion = ROOT
-			}
-		}
+			NOT = { dominant_religion = ROOT }
+		}	
 		influence = -15
 	}
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			has_any_estate_disaster_active = yes
-			has_not_own_estate_disaster_active = {
-				estate = estate_church
-			}
+			has_not_own_estate_disaster_active = { estate = estate_church }
 		}
 		influence = -40
 	}
+
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
 			has_any_estate_disaster_active = yes
-			has_not_own_estate_disaster_active = {
-				estate = estate_church
-			}
+			has_not_own_estate_disaster_active = { estate = estate_church }
 		}
 		loyalty = -20
 	}
@@ -184,10 +133,7 @@ estate_church = {
 		loyalty = 5
 		trigger = {
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
-			358 = {
-				religion = coptic
-				has_owner_religion = yes
-			}
+			358 = { religion = coptic has_owner_religion = yes }
 		}
 	}
 	loyalty_modifier = {
@@ -195,10 +141,7 @@ estate_church = {
 		loyalty = 5
 		trigger = {
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
-			1227 = {
-				religion = coptic
-				has_owner_religion = yes
-			}
+			1227 = { religion = coptic has_owner_religion = yes }
 		}
 	}
 	loyalty_modifier = {
@@ -206,10 +149,7 @@ estate_church = {
 		loyalty = 5
 		trigger = {
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
-			2313 = {
-				religion = coptic
-				has_owner_religion = yes
-			}
+			2313 = { religion = coptic has_owner_religion = yes }
 		}
 	}
 	loyalty_modifier = {
@@ -217,10 +157,7 @@ estate_church = {
 		loyalty = 5
 		trigger = {
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
-			1234 = {
-				religion = coptic
-				has_owner_religion = yes
-			}
+			1234 = { religion = coptic has_owner_religion = yes }
 		}
 	}
 	loyalty_modifier = {
@@ -228,53 +165,32 @@ estate_church = {
 		loyalty = 5
 		trigger = {
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
-			419 = {
-				religion = coptic
-				has_owner_religion = yes
-			}
+			419 = { religion = coptic has_owner_religion = yes }
 		}
 	}
+	
 	custom_name = {
 		desc = estate_klirikoi
 		trigger = {
-			tag = BYZ
-			culture_group = byzantine
-		}
-	}
-	custom_name = {
-		desc = estate_ogboni
-		trigger = {
-			tag = OYO
-		}
-	}
-	custom_name = {
-		desc = estate_tengbiise
-		trigger = {
-			primary_culture = mossi
-			religion = shamanism
+			OR = {
+				primary_culture = greek
+				primary_culture = sclavinian
+			}
 		}
 	}
 	custom_name = {
 		desc = estate_monasteries
 		trigger = {
-			OR = {
-				religion = buddhism				#Theravada
-				religion = mahayana
-				religion = vajrayana
-			}
+			uses_karma = yes
 		}
 	}
-	# AB {{{
+	# AB [[[
 	custom_name = {
 		desc = estate_tietajat
 		trigger = {
 			OR = {
 				tag = FIN
 				was_tag = FIN
-			}
-			OR = {
-				religion = suomi_pagan
-				religion = reformed_suomi
 			}
 		}
 	}
@@ -293,9 +209,7 @@ estate_church = {
 		desc = estate_dukhovenstvo
 		trigger = {
 			culture_group = east_slavic
-			NOT = {
-				primary_culture = Litvin
-			}
+			NOT = { primary_culture = Litvin }
 		}
 	}
 	custom_name = {
@@ -307,13 +221,7 @@ estate_church = {
 			}
 		}
 	}
-	# }}}
-	custom_name = {
-		desc = estate_babaylanes
-		trigger = {
-			tag = MAS
-		}
-	}
+	# ]]]
 	custom_name = {
 		desc = estate_brahmins
 		trigger = {
@@ -338,7 +246,6 @@ estate_church = {
 					culture_group = east_slavic
 					culture_group = south_slavic
 					culture_group = west_slavic
-					#culture_group = slavic
 				}
 			}
 		}
@@ -349,13 +256,6 @@ estate_church = {
 			OR = {
 				religion = tengri_pagan_reformed
 			}
-		}
-	}
-	custom_name = {
-		desc = HORDE_SHAMANS
-		trigger = {
-			has_country_flag = hordes_devout_tengri_completion_flag
-			religion = tengri_pagan_reformed
 		}
 	}
 	custom_name = {
@@ -391,20 +291,9 @@ estate_church = {
 		desc = estate_asronan
 		trigger = {
 			OR = {
-				tag = PER
-				tag = PRZ
-				tag = PRC
-				tag = PMN
-				tag = SSN
-				tag = SHP
-				tag = KRN
-				tag = ISP
-				tag = ZKD
-				tag = INJ
-				tag = MRV
-				tag = SRN
-				tag = KYN
-				tag = MRH
+				ab_is_persia_trigger = yes
+				has_reform = persianprince
+				has_reform = persianprincet
 			}
 		}
 	}
@@ -414,10 +303,6 @@ estate_church = {
 			OR = {
 				tag = SMI
 				was_tag = SMI
-			}
-			OR = {
-				religion = suomi_pagan
-				religion = reformed_suomi
 			}
 		}
 	}
@@ -463,59 +348,15 @@ estate_church = {
 		}
 	}
 	custom_name = {
-		desc = estate_kahuna
-		trigger = {
-			capital_scope = {
-				area = northern_polynesia_area
-			}
-			primary_culture = polynesian
-			religion = animism
-		}
-	}
-	custom_name = {
-		desc = estate_tohunga
-		trigger = {
-			primary_culture = maori
-			religion = animism
-		}
-	}
-	custom_name = {
-		desc = estate_taula_otua
-		trigger = {
-			tag = TOG
-			religion = animism
-		}
-	}
-	custom_name = {
-		desc = estate_taula_aitu
-		trigger = {
-			tag = SAM
-			religion = animism
-		}
-	}
-	custom_name = {
-		desc = estate_bete
-		trigger = {
-			OR = {
-				tag = LAI
-				tag = VIL
-				tag = VNL
-			}
-			religion = animism
-		}
-	}
-	custom_name = {
 		desc = estate_clerul
 		trigger = {
-			is_romanian_tag = yes
+			culture_group = romanian_culture_group
+			religion_group = christian
 		}
 	}
 	contributes_to_curia_treasury = yes
-	color = {
-		200
-		150
-		0
-	}
+	color = { 200 150 0 }
+
 	privileges = {
 		estate_church_land_rights
 		estate_church_papal_emissary
@@ -547,11 +388,6 @@ estate_church = {
 		estate_church_scholar_connections
 		estate_church_integrated_school
 		estate_church_anti_heresy_act
-		estate_church_lands_of_riga
-		estate_church_bishopric_of_dorpat
-		estate_church_bishopric_of_osel_wiek
-		estate_church_bishopric_of_courland
-		estate_church_bishopric_of_reval
 		estate_church_japanese_christian_communities_privilege
 		estate_church_development_of_temples
 		estate_church_expand_the_theology
@@ -559,25 +395,16 @@ estate_church = {
 		estate_church_religious_delegation
 		estate_church_institutionalized_clergy
 		estate_church_donation_right
-		estate_church_union_of_the_churches
-		estate_church_BYZ_legitimization_of_dynasty
 		#1.36
-		estate_church_fund_dar_al_hadith
-		estate_church_fund_madrasas
 		estate_church_sponsor_waqf_payments
-		estate_church_muslim_integration
 		#1.37
-		estate_church_INC_idol_making
 		estate_church_MAY_cocoa_monopoly
-		estate_church_religious_tolerance
-		estate_church_TIM_yasa_supremacy
-		estate_church_TIM_promote_ijazah
-		estate_church_MUG_promote_divine_religion
-		# AB {{{
+		# AB [[[
 		estate_church_pagan_reconciliation
 		estate_church_interfaith_unity
-		# }}}
+		# ]]]
 	}
+
 	agendas = {
 		estate_church_develop_x
 		estate_church_build_temple_in_y
@@ -599,5 +426,5 @@ estate_church = {
 		estate_church_hire_advisor
 		estate_church_fire_advisor
 	}
-	influence_from_dev_modifier = 1
+	influence_from_dev_modifier = 1.0
 }
