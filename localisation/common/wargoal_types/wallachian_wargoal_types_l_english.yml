@@ -1,0 +1,6 @@
+﻿l_english:
+ eastern_roman_wargoal: "Show Superiority"
+ eastern_roman_wargoal_desc: "Show Superiority"
+ western_roman_wargoal: "Show Superiority"
+ western_roman_wargoal_desc: "Show Superiority"
+ roman_war_name: "$ORDER$$FIRST$-$SECOND$ War of Roman Reclamation"

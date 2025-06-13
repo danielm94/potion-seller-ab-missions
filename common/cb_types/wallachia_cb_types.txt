@@ -1,0 +1,72 @@
+cb_eastern_roman_ambition = {
+	valid_for_subject = no
+	prerequisites_self = {
+		has_country_flag = eastern_roman_ambition
+	}
+	prerequisites = {
+		OR = {
+			is_neighbor_of = FROM
+			AND = {
+				FROM = {
+					any_owned_province = {
+						province_id = 321
+					}
+				}
+				is_neighbor_of_province = 1317
+			}
+			AND = {
+				FROM = {
+					any_owned_province = {
+						area = aegean_archipelago_area
+					}
+				}
+				is_neighbor_of_province = 1319
+			}
+		}
+		claim = FROM
+		FROM = {
+			any_owned_province = {
+				eastern_roman_empire_province_cb_trigger = yes
+			}
+		}
+	}
+	war_goal = eastern_roman_wargoal
+}
+
+cb_western_roman_ambition = {
+	valid_for_subject = no
+	prerequisites_self = {
+		has_country_flag = western_roman_ambition
+	}
+	prerequisites = {
+		OR = {
+			is_neighbor_of = FROM
+			AND = {
+				FROM = {
+					any_owned_province = {
+						area = home_counties_area
+					}
+				}
+				is_neighbor_of_province = 1271
+			}
+			AND = {
+				FROM = {
+					any_owned_province = {
+						OR = {
+							area = wessex_area
+							area = cornwall_area
+						}
+					}
+				}
+				is_neighbor_of_province = 1272
+			}
+		}
+		claim = FROM
+		FROM = {
+			any_owned_province = {
+				western_roman_empire_province_cb_trigger = yes
+			}
+		}
+	}
+	war_goal = western_roman_wargoal
+}

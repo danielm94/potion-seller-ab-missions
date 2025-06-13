@@ -1,0 +1,67 @@
+eastern_roman_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.85
+		prestige_factor = 1
+		peace_cost_factor = 0.8
+		
+		allowed_provinces = {
+			OR = {
+				is_claim = ROOT
+				is_permanent_claim = ROOT
+				is_core = ROOT
+			}
+			eastern_roman_empire_province_cb_trigger = yes
+		}
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	war_name = roman_war_name
+}
+
+western_roman_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.80
+		prestige_factor = 1
+		peace_cost_factor = 0.85
+		
+		allowed_provinces = {
+			OR = {
+				is_claim = ROOT
+				is_permanent_claim = ROOT
+				is_core = ROOT
+			}
+			western_roman_empire_province_cb_trigger = yes
+		}
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	war_name = roman_war_name
+}
