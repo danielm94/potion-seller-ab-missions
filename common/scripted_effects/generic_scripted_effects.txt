@@ -1784,3 +1784,51 @@ remove_all_buildings_effect = {
 		remove_building = rail_road
 	}
 }
+
+add_country_modifier_until_end_of_current_age = {
+	if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_discovery
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_reformation
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_absolutism
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_revolutions
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_imperialism
+		}
+		add_country_modifier_for_age = {
+			name = $name$
+			age = age_of_imperialism
+		}
+	}
+}
