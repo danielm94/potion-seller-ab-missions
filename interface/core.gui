@@ -191,6 +191,7 @@ guiTypes = {
 				shortcut = "PAGE_DOWN"
 			}
 	}
+		
 	scrollbarType = {
 			name = "standardtext_slider"
 			slider = "listboxSliderButton"
@@ -339,7 +340,7 @@ guiTypes = {
 			position = { x=0 y =120}	
 		}
 	}	
-	
+
 	scrollbarType = {
 		name = "AGES_slider"	
 		slider = "SliderButton"
@@ -384,4 +385,5 @@ guiTypes = {
 			position = { x=0 y =0}	
 		}
 	}
+		
 }
