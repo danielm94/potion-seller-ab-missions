@@ -82,7 +82,10 @@ wallachian_terror_mechanic = {
 						value = 1
 					}
 				}
-				remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+				custom_tooltip = wallachian_terror_remove_privilege
+				hidden_effect = {
+					remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+				}
 				change_estate_land_share = {
 					estate = all
 					share = -10
