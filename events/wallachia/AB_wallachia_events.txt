@@ -1411,3 +1411,44 @@ province_event = {
 		change_culture = morlach
 	}
 }
+
+country_event = {
+	id = AB_wallachia_events.29
+	title = AB_wallachia_events.29.t
+	desc = AB_wallachia_events.29.d
+	picture = GFX_AB_wallachia_events.29
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.29.a
+		custom_tooltip = western_roman_ambition_cb_tooltip
+		set_country_flag = western_roman_ambition
+		set_country_flag = depose_hre_emperor_cb
+		add_country_modifier = {
+			name = wallachia_western_ambitions
+			duration = 36500
+		}
+		define_advisor = {
+			type = ae_advisor
+			skill = 3
+			cost_multiplier = 0.3333
+			religion = ROOT
+			culture = ROOT
+		}
+	}
+	option = {
+		name = AB_wallachia_events.29.b
+		custom_tooltip = eastern_roman_ambition_cb_tooltip
+		set_country_flag = eastern_roman_ambition
+		add_country_modifier = {
+			name = wallachia_eastern_ambitions
+			duration = 36500
+		}
+		define_advisor = {
+			type = inquisitor
+			skill = 3
+			cost_multiplier = 0.333
+			religion = ROOT
+			culture = ROOT
+		}
+	}
+}

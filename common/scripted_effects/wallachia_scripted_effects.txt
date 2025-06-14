@@ -1,0 +1,66 @@
+depose_the_pretender_effect = {
+	set_variable = {
+		which = matches_found_for_hre_emperor
+		value = 0
+	}
+	every_country = {
+		limit = {
+			OR = {
+				NOT = {
+					has_country_flag = ignore_for_select_new_emperor_effect
+				}
+				had_country_flag = {
+					flag = ignore_for_select_new_emperor_effect
+					days = 9125
+				}
+			}
+			has_matching_religion = event_target:Emperor
+			is_emperor = no
+			is_subject = no
+			is_part_of_hre = yes
+			government = monarchy
+		}
+		PREV = {
+			change_variable = {
+				which = matches_found_for_hre_emperor
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = strongest_eligible_hre_emperor
+				}
+			}
+			save_global_event_target_as = strongest_eligible_hre_emperor
+		}
+		else = {
+			if = {
+				limit = {
+					military_strength = {
+						who = event_target:strongest_eligible_hre_emperor
+						value = 1
+					}
+				}
+				save_global_event_target_as = strongest_eligible_hre_emperor
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = matches_found_for_hre_emperor
+				value = 0
+			}
+		}
+		event_target:Emperor = {
+			dismantle_hre = yes
+		}
+	}
+	else = {
+		event_target:strongest_eligible_hre_emperor = {
+			set_emperor = yes
+		}
+		clear_global_event_target = strongest_eligible_hre_emperor
+	}
+}

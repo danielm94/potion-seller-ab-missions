@@ -2,30 +2,27 @@ eastern_roman_wargoal = {
 	type = superiority
 	
 	attacker = {
-		badboy_factor = 0.85
+		badboy_factor = 0.90
 		prestige_factor = 1
 		peace_cost_factor = 0.8
 		
 		allowed_provinces = {
-			OR = {
-				is_claim = ROOT
-				is_permanent_claim = ROOT
-				is_core = ROOT
-			}
 			eastern_roman_empire_province_cb_trigger = yes
 		}
 		peace_options = {
 			po_demand_provinces
+			po_return_cores
 		}
 	}
 	
 	defender = {
-		badboy_factor = 1
-		prestige_factor = 1
+		badboy_factor = 0.50
+		prestige_factor = 1.25
 		peace_cost_factor = 1
 		
 		peace_options = {
 			po_demand_provinces
+			po_return_cores
 		}
 	}
 	
@@ -38,30 +35,73 @@ western_roman_wargoal = {
 	attacker = {
 		badboy_factor = 0.80
 		prestige_factor = 1
-		peace_cost_factor = 0.85
+		peace_cost_factor = 0.9
 		
 		allowed_provinces = {
-			OR = {
-				is_claim = ROOT
-				is_permanent_claim = ROOT
-				is_core = ROOT
-			}
 			western_roman_empire_province_cb_trigger = yes
 		}
 		peace_options = {
 			po_demand_provinces
+			po_return_cores
 		}
 	}
 	
 	defender = {
-		badboy_factor = 1
-		prestige_factor = 1
+		badboy_factor = 0.50
+		prestige_factor = 1.25
 		peace_cost_factor = 1
 		
 		peace_options = {
 			po_demand_provinces
+			po_return_cores
 		}
 	}
 	
 	war_name = roman_war_name
+}
+
+depose_the_pretender_wargoal = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_depose_pretender
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate_rival
+		}
+		
+		deny_annex = yes
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.6
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = HUMILIATE_ROTW_WAR_NAME	
 }
