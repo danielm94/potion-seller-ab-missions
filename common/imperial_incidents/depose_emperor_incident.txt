@@ -1,0 +1,191 @@
+incident_emperor_deposed = {
+	event = wallachia_hre_events.1
+	default_option = 1
+	can_stop = {
+		has_global_flag = hre_emperor_was_impaled
+	}
+	# Dissolve the Empire
+	0 = {
+		factor = 1
+		modifier = {
+			factor = -1
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 1000
+			event_target:Emperor = {
+				is_bankrupt = yes
+			}
+		}
+		modifier = {
+			factor = 1000
+			event_target:Emperor = {
+				has_country_modifier = dishonoured_alliance
+			}
+		}
+		modifier = {
+			factor = 100
+			is_heretic_hre_prince = yes
+		}
+		modifier = {
+			factor = 100
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 100
+			military_strength = {
+				who = event_target:Emperor
+				value = 1
+			}
+		}
+		modifier = {
+			factor = 10
+			NOT = {
+				has_opinion = {
+					who = event_target:Emperor
+					value = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			num_of_allies = 4
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_outraged
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_rebellious
+				}
+				ai_attitude = {
+					who = event_target:Emperor
+					attitude = attitude_disloyal
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			calc_true_if = {
+				all_province = {
+					is_part_of_hre = yes
+					OR = {
+						is_claim = PREV
+						is_permanent_claim = PREV
+					}
+				}
+				amount = 10
+			}
+		}
+		modifier = {
+			factor = 20
+			calc_true_if = {
+				all_province = {
+					is_part_of_hre = yes
+					OR = {
+						is_claim = PREV
+						is_permanent_claim = PREV
+					}
+				}
+				amount = 20
+			}
+		}
+		modifier = {
+			factor = 5
+			has_opinion = {
+				who = event_target:dude_who_deposed_emperor
+				value = 100
+			}
+		}
+		modifier = {
+			factor = 15
+			alliance_with = event_target:dude_who_deposed_emperor
+		}
+	}
+	# Keep the Empire
+	1 = {
+		factor = 1
+		modifier = {
+			factor = 10000
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 5
+			is_elector = yes
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_outraged
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_rebellious
+				}
+				ai_attitude = {
+					who = event_target:dude_who_deposed_emperor
+					attitude = attitude_disloyal
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			has_opinion = {
+				who = event_target:Emperor
+				value = 100
+			}
+		}
+		modifier = {
+			factor = 5
+			alliance_with = event_target:Emperor
+		}
+	}
+}
