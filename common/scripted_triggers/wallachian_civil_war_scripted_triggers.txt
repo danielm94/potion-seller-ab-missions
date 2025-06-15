@@ -3,19 +3,31 @@ is_in_war_of_the_ten_houses_disaster = {
 }
 
 has_refused_boiermiea_ultimatum = {
-	has_country_flag = wallachia_refused_nobility_ultimatum
+	custom_trigger_tooltip = {
+		tooltip = has_refused_boiermiea_ultimatum_tooltip
+		has_country_flag = wallachia_refused_nobility_ultimatum
+	}
 }
 
 has_butchered_the_boiermiea = {
-	has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+	custom_trigger_tooltip = {
+		tooltip = has_butchered_the_boiermiea_tooltip
+		has_country_flag = wallachia_slaughtered_guests_in_your_own_home
+	}
 }
 
 has_voiovode_been_captured_wallachian_civil_war = {
-	has_country_flag = wallachian_civil_war_voivode_was_captured
+	custom_trigger_tooltip = {
+		tooltip = voivode_was_captured_tooltip
+		has_country_flag = wallachian_civil_war_voivode_was_captured
+	}
 }
 
 has_voiovode_surrendered_wallachian_civil_war = {
-	has_country_flag = wallachian_civil_war_voivode_surrendered
+	custom_trigger_tooltip = {
+		tooltip = voivode_surrendered_tooltip
+		has_country_flag = wallachian_civil_war_voivode_surrendered
+	}
 }
 
 can_negotiate_with_wallachian_civil_war_rebels = {
@@ -150,4 +162,3 @@ has_voivode_lost_wallachian_civil_war = {
 has_won_wallachian_civil_war = {
 	has_country_flag = wallachian_civil_war_victory
 }
-
