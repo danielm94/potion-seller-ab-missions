@@ -36,3 +36,8 @@ imperial_dissident = {
 	diplomatic_reputation = -1
 	prestige = -0.5
 }
+
+a_union_reaffirmed = {
+	imperial_authority_value = 0.05
+	diplomatic_reputation = 1
+}

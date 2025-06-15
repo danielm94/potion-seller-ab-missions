@@ -76,12 +76,16 @@ country_event = {
 						value = 0.33
 					}
 				}
+				#No Clear Winner - Possible Civil War Event
 				country_event = {
 					id = wallachia_hre_events.6
 				}
 			}
 			else = {
-				#HRE stays together event
+				#Stay Majority Event
+				country_event = {
+					id = wallachia_hre_events.9
+				}
 			}
 		}
 	}
@@ -624,7 +628,7 @@ country_event = {
 	id = wallachia_hre_events.8
 	title = wallachia_hre_events.8.t
 	desc = wallachia_hre_events.8.d
-	picture = HRE_eventPicture
+	picture = DIET_eventPicture
 	is_triggered_only = yes
 	major = yes
 	option = {
@@ -656,10 +660,31 @@ country_event = {
 	id = wallachia_hre_events.9
 	title = wallachia_hre_events.9.t
 	desc = wallachia_hre_events.9.d
-	picture = GFX_wallachia_hre_events.9
+	picture = DIET_eventPicture
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_leave_hre = yes
+				}
+				country_event = {
+					id = wallachia_hre_events.10
+				}
+			}
+		}
+	}
+	major = yes
 	option = {
 		name = wallachia_hre_events.9.a
+		add_imperial_influence = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		add_country_modifier = {
+			name = a_union_reaffirmed
+			duration = 7300
+		}
 	}
 }
 
@@ -668,7 +693,7 @@ country_event = {
 	id = wallachia_hre_events.10
 	title = wallachia_hre_events.10.t
 	desc = wallachia_hre_events.10.d
-	picture = GFX_wallachia_hre_events.10
+	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = wallachia_hre_events.10.a
@@ -701,5 +726,17 @@ country_event = {
 			amount = -10
 			republican_tradition = -5
 		}
+	}
+}
+
+#Human Cast Vote Event
+country_event = {
+	id = wallachia_hre_events.11
+	title = wallachia_hre_events.11.t
+	desc = wallachia_hre_events.11.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachia_hre_events.11.a
 	}
 }
