@@ -27,3 +27,12 @@ architect_of_sovereignty = {
 	land_morale = 0.05
 	legitimacy = 1
 }
+
+questionable_loyalty = {
+	reasons_to_elect = -1000
+}
+
+imperial_dissident = {
+	diplomatic_reputation = -1
+	prestige = -0.5
+}

@@ -650,3 +650,56 @@ country_event = {
 		}
 	}
 }
+
+#Majority Vote to Stay Event
+country_event = {
+	id = wallachia_hre_events.9
+	title = wallachia_hre_events.9.t
+	desc = wallachia_hre_events.9.d
+	picture = GFX_wallachia_hre_events.9
+	is_triggered_only = yes
+	option = {
+		name = wallachia_hre_events.9.a
+	}
+}
+
+#Majority Vote to Stay Event (Prince who voted leave)
+country_event = {
+	id = wallachia_hre_events.10
+	title = wallachia_hre_events.10.t
+	desc = wallachia_hre_events.10.d
+	picture = GFX_wallachia_hre_events.10
+	is_triggered_only = yes
+	option = {
+		name = wallachia_hre_events.10.a
+		custom_tooltip = lose_opinion_with_voted_to_stay_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_stay_hre = yes
+				}
+				add_opinion = {
+					who = PREV
+					modifier = hre_dislike_secessionists
+				}
+				add_trust = {
+					who = PREV
+					value = -10
+				}
+			}
+		}
+		add_ruler_modifier = {
+			name = questionable_loyalty
+			duration = -1
+		}
+		add_country_modifier = {
+			name = imperial_dissident
+			duration = 7300
+		}
+		add_prestige = -10
+		add_legitimacy_equivalent = {
+			amount = -10
+			republican_tradition = -5
+		}
+	}
+}
