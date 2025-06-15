@@ -54,3 +54,11 @@ has_wallachia_not_compromised_with_the_boieri = {
 are_bulgars_an_underclass = {
 	has_country_flag = wal_bulgarian_underclass
 }
+
+has_voted_to_leave_hre = {
+	has_country_flag = wants_to_leave_hre
+}
+
+has_voted_to_stay_hre = {
+	has_country_flag = wants_to_keep_hre
+}
