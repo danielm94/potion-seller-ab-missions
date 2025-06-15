@@ -4,3 +4,17 @@ drove_out_the_bulgars_pp = {
 	power = 1
 	yearly_decay = 1
 }
+
+dismantled_the_hre_pp = {
+	min = 1
+	max = 10
+	power = 1
+	yearly_decay = 0.001
+}
+
+saved_the_hre_pp = {
+	min = 1
+	max = 10
+	power = 1
+	yearly_decay = 0.001
+}
