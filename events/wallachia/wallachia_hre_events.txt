@@ -9,13 +9,21 @@ country_event = {
 	hidden = yes
 	option = {
 		name = EMPTY_TOOLTIP
-		set_imperial_incident = incident_emperor_deposed
+		if = {
+			limit = {
+				active_imperial_incident = any
+			}
+			set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+		}
+		else = {
+			set_imperial_incident = incident_emperor_deposed
+		}
 	}
 }
 
 country_event = {
 	id = wallachia_hre_events.1
-	title = incident_emperor_deposed
+	title = wallachia_hre_events.1.t
 	desc = incident_emperor_deposed_member_alert
 	picture = HRE_eventPicture
 	fire_only_once = yes
@@ -32,18 +40,64 @@ country_event = {
 		}
 	}
 	after = {
-		hidden_effect = {
-			set_global_flag = had_fate_of_francia_incident
-			# Add logic here to check the final vote counts and fire the appropriate result event
+		event_target:Emperor = {
+			set_variable = {
+				which = sum_of_votes
+				which = leave_votes
+			}
+			change_variable = {
+				which = sum_of_votes
+				which = stay_votes
+			}
+			set_variable = {
+				which = leave_percentage
+				which = leave_votes
+			}
+			divide_variable = {
+				which = leave_percentage
+				which = sum_of_votes
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = leave_percentage
+						value = 0.67
+					}
+				}
+				#Leave majority event
+				country_event = {
+					id = wallachia_hre_events.4
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = leave_percentage
+						value = 0.33
+					}
+				}
+				country_event = {
+					id = wallachia_hre_events.6
+				}
+			}
+			else = {
+				#HRE stays together event
+			}
 		}
 	}
 	option = {
 		name = wallachia_hre_events.1.a
-		add_treasury = 6969
+		#Dissolve Vote
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = {
 		name = wallachia_hre_events.1.b
-		add_treasury = 100000
+		#Stay vote
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
@@ -69,7 +123,6 @@ country_event = {
 		every_country = {
 			limit = {
 				is_part_of_hre = yes
-				is_emperor = no
 				ai = yes
 			}
 			country_event = {
@@ -92,10 +145,7 @@ country_event = {
 	option = {
 		name = AB_EMPTY
 		#DISSOLVE EMPIRE
-		set_variable = {
-			which = dissolve_empire
-			value = 1
-		}
+		set_country_flag = wants_to_leave_hre
 		event_target:Emperor = {
 			change_variable = {
 				which = leave_votes
@@ -105,31 +155,32 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = -1
-				is_emperor = yes
-			}
-			modifier = {
 				factor = 1000
+				is_emperor = no
 				event_target:Emperor = {
 					is_bankrupt = yes
 				}
 			}
 			modifier = {
 				factor = 1000
+				is_emperor = no
 				event_target:Emperor = {
 					has_country_modifier = dishonoured_alliance
 				}
 			}
 			modifier = {
 				factor = 100
+				is_emperor = no
 				is_heretic_hre_prince = yes
 			}
 			modifier = {
 				factor = 100
+				is_emperor = no
 				is_great_power = yes
 			}
 			modifier = {
 				factor = 100
+				is_emperor = no
 				military_strength = {
 					who = event_target:Emperor
 					value = 1
@@ -137,6 +188,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 10
+				is_emperor = no
 				NOT = {
 					has_opinion = {
 						who = event_target:Emperor
@@ -146,10 +198,12 @@ country_event = {
 			}
 			modifier = {
 				factor = 10
+				is_emperor = no
 				num_of_allies = 4
 			}
 			modifier = {
 				factor = 5
+				is_emperor = no
 				OR = {
 					ai_attitude = {
 						who = event_target:Emperor
@@ -163,6 +217,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 3
+				is_emperor = no
 				OR = {
 					ai_attitude = {
 						who = event_target:Emperor
@@ -188,6 +243,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 10
+				is_emperor = no
 				calc_true_if = {
 					all_province = {
 						is_part_of_hre = yes
@@ -201,6 +257,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 20
+				is_emperor = no
 				calc_true_if = {
 					all_province = {
 						is_part_of_hre = yes
@@ -214,6 +271,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 5
+				is_emperor = no
 				has_opinion = {
 					who = event_target:dude_who_deposed_emperor
 					value = 100
@@ -221,6 +279,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 15
+				is_emperor = no
 				alliance_with = event_target:dude_who_deposed_emperor
 			}
 		}
@@ -228,10 +287,7 @@ country_event = {
 	option = {
 		name = AB_EMPTY
 		#KEEP EMPIRE
-		set_variable = {
-			which = dissolve_empire
-			value = 0
-		}
+		set_country_flag = wants_to_keep_hre
 		event_target:Emperor = {
 			change_variable = {
 				which = stay_votes
@@ -297,6 +353,300 @@ country_event = {
 				factor = 5
 				alliance_with = event_target:Emperor
 			}
+		}
+	}
+}
+
+#Leave Event
+country_event = {
+	id = wallachia_hre_events.4
+	title = wallachia_hre_events.4.t
+	desc = {
+		desc = wallachia_hre_events.4.desc_majority
+		trigger = {
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+	}
+	desc = {
+		desc = wallachia_hre_events.4.desc_backed_down
+		trigger = {
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+	}
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+				}
+				country_event = {
+					id = wallachia_hre_events.5
+				}
+			}
+		}
+	}
+	after = {
+		event_target:Emperor = {
+			set_country_flag = was_hre_emperor
+			dismantle_hre = yes
+		}
+	}
+	option = {
+		name = wallachia_hre_events.4.a
+		if = {
+			limit = {
+				has_country_flag = hremperor_backed_down
+			}
+			add_prestige = -50
+			add_country_modifier = {
+				name = legacy_of_failure
+				duration = 36500
+			}
+			#TODO: ADD NEGATIVE OPINION WITH EVERY PRINCE THAT VOTED TO STAY
+		}
+		else = {
+			add_prestige = -25
+			add_country_modifier = {
+				name = legacy_of_failure
+				duration = 18250
+			}
+		}
+	}
+}
+
+#Prince event for Leave Majority Event
+country_event = {
+	id = wallachia_hre_events.5
+	title = wallachia_hre_events.5.t
+	desc = {
+		desc = wallachia_hre_events.5.desc_majority
+		trigger = {
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+	}
+	desc = {
+		desc = wallachia_hre_events.5.desc_backed_down
+		trigger = {
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+	}
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachia_hre_events.5.a
+		trigger = {
+			has_voted_to_stay_hre = yes
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+		add_prestige = -5
+		add_country_modifier = {
+			name = foolish_optimism
+			duration = 10950
+		}
+	}
+	option = {
+		name = wallachia_hre_events.5.a_backed_down
+		trigger = {
+			has_voted_to_stay_hre = yes
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+		add_prestige = -5
+		add_country_modifier = {
+			name = foolish_optimism
+			duration = 10950
+		}
+	}
+	option = {
+		name = wallachia_hre_events.5.b
+		trigger = {
+			has_voted_to_leave_hre = yes
+			emperor = {
+				check_variable = {
+					which = leave_percentage
+					value = 0.67
+				}
+			}
+		}
+		add_prestige = 5
+		add_country_modifier = {
+			name = on_the_right_side_of_history
+			duration = 10950
+		}
+	}
+	option = {
+		name = wallachia_hre_events.5.b_backed_down
+		trigger = {
+			has_voted_to_leave_hre = yes
+			emperor = {
+				has_country_flag = hremperor_backed_down
+			}
+		}
+		add_prestige = 5
+		add_country_modifier = {
+			name = on_the_right_side_of_history
+			duration = 10950
+		}
+	}
+}
+
+#No clear majority for staying or leaving
+country_event = {
+	id = wallachia_hre_events.6
+	title = wallachia_hre_events.6.t
+	desc = wallachia_hre_events.6.d
+	picture = DIET_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = wallachia_hre_events.6.a
+		add_imperial_influence = 10
+		hidden_effect = {
+			find_strongest_country_that_voted_to_leave_hre = {
+				event_target_name_to_save_as = strongest_hre_prince
+			}
+		}
+		declare_war_with_cb = {
+			casus_belli = cb_enforce_imperial_unity
+			who = event_target:strongest_hre_prince
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					is_subject = no
+					NOT = {
+						tag = event_target:strongest_hre_prince
+					}
+				}
+				country_event = {
+					id = wallachia_hre_events.7
+					days = 1
+					random = 42
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = wallachia_hre_events.6.b
+		set_country_flag = hremperor_backed_down
+		custom_tooltip = hremperor_backed_down_diplo_penalty_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_stay_hre = yes
+				}
+				add_opinion = {
+					who = event_target:Emperor
+					modifier = hre_emperor_backed_down
+				}
+				add_trust = {
+					who = event_target:Emperor
+					value = -15
+				}
+			}
+		}
+		country_event = {
+			id = wallachia_hre_events.4
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#WAR PROPOSITION EVENT
+country_event = {
+	id = wallachia_hre_events.7
+	title = wallachia_hre_events.7.t
+	desc = wallachia_hre_events.7.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachia_hre_events.7.a
+		join_all_offensive_wars_of = emperor
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_voted_to_stay_hre = yes
+			}
+		}
+	}
+	option = {
+		name = wallachia_hre_events.7.b
+		join_all_defensive_wars_of = event_target:strongest_hre_prince
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_voted_to_leave_hre = yes
+			}
+		}
+	}
+	option = {
+		name = wallachia_hre_events.7.c
+		add_ruler_personality = craven_personality
+		add_prestige = -25
+	}
+}
+
+#War Won Event - Dismantled
+country_event = {
+	id = wallachia_hre_events.8
+	title = wallachia_hre_events.8.t
+	desc = wallachia_hre_events.8.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = wallachia_hre_events.8.a
+		custom_tooltip = wallachia_hre_events.8_opinion_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_voted_to_leave_hre = yes
+				}
+				add_opinion = {
+					who = PREV
+					modifier = hre_dissolve_led_us_to_victory
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+		add_prestige_or_monarch_power = {
+			amount = 50
 		}
 	}
 }
