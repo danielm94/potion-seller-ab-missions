@@ -83,13 +83,6 @@ wallachian_terror_mechanic = {
 					}
 				}
 				custom_tooltip = wallachian_terror_remove_privilege
-				hidden_effect = {
-					remove_estate_privilege = estate_nobles_dominance_of_the_boierime
-				}
-				change_estate_land_share = {
-					estate = all
-					share = -10
-				}
 				add_country_modifier = {
 					name = wallachian_terror_purging_the_estate_elites
 					duration = 7300
@@ -113,6 +106,9 @@ wallachian_terror_mechanic = {
 					}
 					custom_tooltip = wallachian_terror_purging_the_elites_civil_war_tooltip
 					custom_tooltip = wallachian_terror_cant_form_united_houses_tooltip
+					hidden_effect = {
+						remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+					}
 					country_event = {
 						id = wallachian_civil_war_events.1
 						days = 1
@@ -121,6 +117,10 @@ wallachian_terror_mechanic = {
 						swap_non_generic_missions = yes
 					}
 					#TODO Remove modifiers/bonuses from placating nobility missions.
+				}
+				change_estate_land_share = {
+					estate = all
+					share = -10
 				}
 			}
 			cooldown_years = 20
