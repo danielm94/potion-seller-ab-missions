@@ -1,4 +1,9 @@
 ﻿l_english:
+ wallachia_hre_events.0.t: "The Empire's Humiliation"
+ wallachia_hre_events.0.d: "The great doors of the palace in [Emperor.Capital.GetCapitalName] swing open, but it is not a herald who enters. It is the sound of shod hooves on polished marble.\n\n[Root.Monarch.GetTitle] [Root.Monarch.GetName] rides into the throne room, flanked by [Root.GetHerHis] guard. [Emperor.Monarch.GetTitle] [Emperor.Monarch.GetName] watches from his throne, his face a mask of disbelief as the [Root.Monarch.GetTitle] slowly rides towards [Emperor.Monarch.GetHerHim]. [Root.Monarch.GetSheHe] halts the beast before the dais, looking down upon the defeated monarch.\n\nThen, with a slow, deliberate motion, [Root.Monarch.GetName] leans down and grips the Emperor's face, forcing [Emperor.Monarch.GetHerHis] head up. \"Look at this... a Holy Roman Emperor,\" [Root.Monarch.GetSheHe] says, the words dripping with contempt. \"Your authority comes from a heretic in Rome who crowns anyone with enough gold. You are no Roman; you are a [Emperor.Monarch.Culture.GetName] dog, presiding over a squabbling pack of lesser German dogs. And you call yourself an 'Emperor' when you can't even get your dogs to heel. Hah! Hahahahaha!\"\n\n[Root.Monarch.GetName] releases [Emperor.Monarch.GetHerHis] face and begins heading towards the door, cackling the entire time, leaving the broken Emperor in a silent throne room."
+ wallachia_hre_events.0.a: "Spread the word. Let the dogs fight over their broken crown."
+ deposed_emperor_tooltip: "§Y[Emperor.Monarch.GetName]§! will renounce their claim to the title of §YHoly Roman Emperor§!, triggering an immediate new election in which they will be ineligible.\n"
+ deposed_emperor_start_incident_tooltip: "\n§YThe Emperor's Humiliation§! imperial incident will begin."
  wallachia_hre_events.1.t: "The Fate of the Empire"
  wallachia_hre_events.1.a: "The Emperor Can't Protect Us!"
  wallachia_hre_events.1.b: "Dissolving the Empire is Suicide!"
@@ -34,3 +39,7 @@
  wallachia_hre_events.10.d: "The votes of the Imperial Diet have been tallied, and our bid to dissolve the Empire has failed. A clear majority of princes have reaffirmed their loyalty to the old union, choosing the security of the institution over the sovereignty of its members. The Empire has weathered the crisis, but our position within it is now precarious. We have marked ourselves as dissenters, and the loyalists will not soon forget our vote."
  wallachia_hre_events.10.a: "A bitter pill to swallow."
  lose_opinion_with_voted_to_stay_tooltip: "We will lose §R25§! opinion and §R10§! trust with every prince that voted to stay."
+ wallachia_hre_events.11.t: "A Declaration to the Diet"
+ wallachia_hre_events.11.d: "The Imperial Diet has convened to decide the fate of the Empire. The arguments have been made, and the time for debate is over. As a sovereign prince of the Empire, we must now formally declare our position. Our envoys await our final, binding instruction. This decision will be recorded and will determine our allegiance in the events to come."
+ wallachia_hre_events.11.a: "Instruct our envoys: The Empire must be preserved."
+ wallachia_hre_events.11.b: "Instruct our envoys: The Empire must be dissolved."

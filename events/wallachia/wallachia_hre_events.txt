@@ -2,21 +2,42 @@ namespace = wallachia_hre_events
 #Initial event to set the incident
 country_event = {
 	id = wallachia_hre_events.0
-	title = EMPTY_TOOLTIP
-	desc = EMPTY_TOOLTIP
-	picture = AB_BATTLE_eventPicture
+	title = wallachia_hre_events.0.t
+	desc = wallachia_hre_events.0.d
+	picture = gfx_wallachia_hre_events.0
 	is_triggered_only = yes
-	hidden = yes
+	major = yes
 	option = {
-		name = EMPTY_TOOLTIP
-		if = {
-			limit = {
-				active_imperial_incident = any
+		name = wallachia_hre_events.0.a
+		emperor = {
+			add_imperial_influence = -100
+			add_stability = -1
+			add_legitimacy = -50
+			add_country_modifier = {
+				name = wallachia_forcibly_deposed_by_outside_power
+				duration = 9125
 			}
-			set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+			set_country_flag = ignore_for_select_new_emperor_effect
 		}
-		else = {
-			set_imperial_incident = incident_emperor_deposed
+		custom_tooltip = deposed_emperor_tooltip
+		hidden_effect = {
+			depose_the_pretender_effect = yes
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+
+		custom_tooltip = deposed_emperor_start_incident_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					active_imperial_incident = any
+				}
+				set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+			}
+			else = {
+				set_imperial_incident = incident_emperor_deposed
+			}
 		}
 	}
 }
@@ -36,6 +57,16 @@ country_event = {
 			country_event = {
 				id = wallachia_hre_events.2
 				days = 364
+			}
+			# Get human votes because we got no other way of checking how a human voted.
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					ai = no
+				}
+				country_event = {
+					id = wallachia_hre_events.11
+				}
 			}
 		}
 	}
@@ -597,6 +628,7 @@ country_event = {
 	option = {
 		name = wallachia_hre_events.7.a
 		join_all_offensive_wars_of = emperor
+		set_country_flag = joined_war_with_emperor
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -608,6 +640,7 @@ country_event = {
 	option = {
 		name = wallachia_hre_events.7.b
 		join_all_defensive_wars_of = event_target:strongest_hre_prince
+		set_country_flag = joined_war_with_secessionists
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -633,6 +666,21 @@ country_event = {
 	major = yes
 	option = {
 		name = wallachia_hre_events.8.a
+		emperor = {
+			add_country_modifier = {
+				name = legacy_of_failure
+				duration = 18250
+			}
+			dismantle_hre = yes
+		}
+		add_country_modifier = {
+			name = architect_of_sovereignty
+			duration = -1
+		}
+		add_power_projection = {
+			type = dismantled_the_hre_pp
+			amount = 10
+		}
 		custom_tooltip = wallachia_hre_events.8_opinion_tooltip
 		hidden_effect = {
 			every_country = {
@@ -738,5 +786,59 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = wallachia_hre_events.11.a
+		set_country_flag = wants_to_keep_hre
+		#TODO: List concequences of winning/losing
+	}
+	option = {
+		name = wallachia_hre_events.11.b
+		set_country_flag = wants_to_leave_hre
+		#TODO: List concequences of winning/losing
+	}
+}
+
+#War Won - Emperor Preserved HRE
+country_event = {
+	id = wallachia_hre_events.12
+	title = wallachia_hre_events.12.t
+	desc = wallachia_hre_events.12.d
+	picture = GFX_wallachia_hre_events.12
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = joined_war_with_secessionists
+				}
+				country_event = {
+					id = wallachia_hre_events.13
+				}
+			}
+		}
+	}
+	option = {
+		name = wallachia_hre_events.12.a
+		every_elector = {
+			limit = {
+				has_voted_to_leave_hre = yes
+			}
+			elector = no
+		}
+		add_imperial_influence = 100
+		add_country_modifier = {
+			name = savior_of_the_empire
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = wallachia_hre_events.13
+	title = wallachia_hre_events.13.t
+	desc = wallachia_hre_events.13.d
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachia_hre_events.13.a
 	}
 }
