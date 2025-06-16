@@ -33,6 +33,7 @@ po_dissolve_the_empire = {
 		country_event = {
 			id = wallachia_hre_events.8
 		}
+		set_global_flag = hre_schism_war_secessionist_victory
 	}
 	ai_weight = {
 		export_to_variable = {
