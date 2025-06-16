@@ -670,7 +670,7 @@ country_event = {
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
-					has_country_flag = joined_war_with_secessionists
+					has_joined_secessionists_in_imperial_schism_war = yes
 				}
 				country_event = {
 					id = wallachia_hre_events.15
@@ -679,7 +679,7 @@ country_event = {
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
-					has_country_flag = joined_war_with_emperor
+					has_joined_emperor_in_imperial_schism_war = yes
 				}
 				country_event = {
 					id = wallachia_hre_events.16
@@ -843,7 +843,7 @@ country_event = {
 			every_country = {
 				limit = {
 					OR = {
-						has_country_flag = joined_war_with_secessionists
+						has_joined_secessionists_in_imperial_schism_war = yes
 						tag = event_target:strongest_hre_prince
 					}
 					is_part_of_hre = yes
@@ -854,7 +854,7 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = joined_war_with_emperor
+					has_joined_emperor_in_imperial_schism_war = yes
 					is_part_of_hre = yes
 				}
 				country_event = {
