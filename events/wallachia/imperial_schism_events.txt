@@ -1,15 +1,15 @@
-namespace = wallachia_hre_events
+namespace = imperial_schism_events
 #TODO: RENAME THIS TO IMPERIAL_SCHISM_EVENTS
 #Initial event to set the incident
 country_event = {
-	id = wallachia_hre_events.0
-	title = wallachia_hre_events.0.t
-	desc = wallachia_hre_events.0.d
-	picture = gfx_wallachia_hre_events.0
+	id = imperial_schism_events.0
+	title = imperial_schism_events.0.t
+	desc = imperial_schism_events.0.d
+	picture = gfx_imperial_schism_events.0
 	is_triggered_only = yes
 	major = yes
 	option = {
-		name = wallachia_hre_events.0.a
+		name = imperial_schism_events.0.a
 		emperor = {
 			add_imperial_influence = -100
 			add_stability = -1
@@ -51,8 +51,8 @@ country_event = {
 
 #Incident Event
 country_event = {
-	id = wallachia_hre_events.1
-	title = wallachia_hre_events.1.t
+	id = imperial_schism_events.1
+	title = imperial_schism_events.1.t
 	desc = incident_emperor_deposed_member_alert
 	picture = HRE_eventPicture
 	fire_only_once = yes
@@ -64,7 +64,7 @@ country_event = {
 			#Capture all of the AI votes using an event 1 day before the incident ends so we have some way of checking how the AI voted.
 			#And before you ask, no, PDX didn't include a method of checking how the AI voted during an incident. It would've made our lives a lot easier though, wouldn't it?
 			country_event = {
-				id = wallachia_hre_events.2
+				id = imperial_schism_events.2
 				days = 364
 			}
 			# Get human votes because we got no other way of checking how a human voted.
@@ -74,7 +74,7 @@ country_event = {
 					ai = no
 				}
 				country_event = {
-					id = wallachia_hre_events.11
+					id = imperial_schism_events.11
 				}
 			}
 		}
@@ -106,7 +106,7 @@ country_event = {
 				}
 				#Leave majority event
 				country_event = {
-					id = wallachia_hre_events.4
+					id = imperial_schism_events.4
 				}
 			}
 			else_if = {
@@ -118,19 +118,19 @@ country_event = {
 				}
 				#No Clear Winner - Possible Civil War Event
 				country_event = {
-					id = wallachia_hre_events.6
+					id = imperial_schism_events.6
 				}
 			}
 			else = {
 				#Stay Majority Event
 				country_event = {
-					id = wallachia_hre_events.9
+					id = imperial_schism_events.9
 				}
 			}
 		}
 	}
 	option = {
-		name = wallachia_hre_events.1.a
+		name = imperial_schism_events.1.a
 		custom_tooltip = voting_system_tooltip
 		#Dissolve Vote
 		ai_chance = {
@@ -138,7 +138,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.1.b
+		name = imperial_schism_events.1.b
 		custom_tooltip = voting_system_tooltip
 		#Stay vote
 		ai_chance = {
@@ -149,7 +149,7 @@ country_event = {
 
 #Dispatcher of AI voting mechanism
 country_event = {
-	id = wallachia_hre_events.2
+	id = imperial_schism_events.2
 	title = AB_EMPTY
 	desc = AB_EMPTY
 	picture = AB_BATTLE_eventPicture
@@ -172,7 +172,7 @@ country_event = {
 				ai = yes
 			}
 			country_event = {
-				id = wallachia_hre_events.3
+				id = imperial_schism_events.3
 			}
 		}
 	}
@@ -183,10 +183,10 @@ country_event = {
 
 #Sneaky Way of checking how AI votes
 country_event = {
-	id = wallachia_hre_events.3
+	id = imperial_schism_events.3
 	title = AB_EMPTY
 	desc = AB_EMPTY
-	picture = GFX_wallachia_hre_events.3
+	picture = GFX_imperial_schism_events.3
 	is_triggered_only = yes
 	option = {
 		name = AB_EMPTY
@@ -405,10 +405,10 @@ country_event = {
 
 #Leave Majority Event
 country_event = {
-	id = wallachia_hre_events.4
-	title = wallachia_hre_events.4.t
+	id = imperial_schism_events.4
+	title = imperial_schism_events.4.t
 	desc = {
-		desc = wallachia_hre_events.4.desc_majority
+		desc = imperial_schism_events.4.desc_majority
 		trigger = {
 			emperor = {
 				check_variable = {
@@ -419,7 +419,7 @@ country_event = {
 		}
 	}
 	desc = {
-		desc = wallachia_hre_events.4.desc_backed_down
+		desc = imperial_schism_events.4.desc_backed_down
 		trigger = {
 			emperor = {
 				has_country_flag = hremperor_backed_down
@@ -437,7 +437,7 @@ country_event = {
 					is_emperor = no
 				}
 				country_event = {
-					id = wallachia_hre_events.5
+					id = imperial_schism_events.5
 				}
 			}
 		}
@@ -449,7 +449,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.4.a
+		name = imperial_schism_events.4.a
 		if = {
 			limit = {
 				has_country_flag = hremperor_backed_down
@@ -472,10 +472,10 @@ country_event = {
 
 #Prince event for Leave Majority Event
 country_event = {
-	id = wallachia_hre_events.5
-	title = wallachia_hre_events.5.t
+	id = imperial_schism_events.5
+	title = imperial_schism_events.5.t
 	desc = {
-		desc = wallachia_hre_events.5.desc_majority
+		desc = imperial_schism_events.5.desc_majority
 		trigger = {
 			emperor = {
 				check_variable = {
@@ -486,7 +486,7 @@ country_event = {
 		}
 	}
 	desc = {
-		desc = wallachia_hre_events.5.desc_backed_down
+		desc = imperial_schism_events.5.desc_backed_down
 		trigger = {
 			emperor = {
 				has_country_flag = hremperor_backed_down
@@ -496,7 +496,7 @@ country_event = {
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.5.a
+		name = imperial_schism_events.5.a
 		trigger = {
 			has_voted_to_stay_hre = yes
 			emperor = {
@@ -513,7 +513,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.5.a_backed_down
+		name = imperial_schism_events.5.a_backed_down
 		trigger = {
 			has_voted_to_stay_hre = yes
 			emperor = {
@@ -527,7 +527,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.5.b
+		name = imperial_schism_events.5.b
 		trigger = {
 			has_voted_to_leave_hre = yes
 			emperor = {
@@ -544,7 +544,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.5.b_backed_down
+		name = imperial_schism_events.5.b_backed_down
 		trigger = {
 			has_voted_to_leave_hre = yes
 			emperor = {
@@ -561,14 +561,14 @@ country_event = {
 
 #No clear majority for staying or leaving
 country_event = {
-	id = wallachia_hre_events.6
-	title = wallachia_hre_events.6.t
-	desc = wallachia_hre_events.6.d
+	id = imperial_schism_events.6
+	title = imperial_schism_events.6.t
+	desc = imperial_schism_events.6.d
 	picture = DIET_eventPicture
 	is_triggered_only = yes
 	major = yes
 	option = {
-		name = wallachia_hre_events.6.a
+		name = imperial_schism_events.6.a
 		add_imperial_influence = 10
 		hidden_effect = {
 			find_strongest_country_that_voted_to_leave_hre = {
@@ -591,7 +591,7 @@ country_event = {
 					}
 				}
 				country_event = {
-					id = wallachia_hre_events.7
+					id = imperial_schism_events.7
 					days = 1
 					random = 42
 				}
@@ -602,7 +602,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.6.b
+		name = imperial_schism_events.6.b
 		set_country_flag = hremperor_backed_down
 		custom_tooltip = hremperor_backed_down_diplo_penalty_tooltip
 		hidden_effect = {
@@ -621,7 +621,7 @@ country_event = {
 			}
 		}
 		country_event = {
-			id = wallachia_hre_events.4
+			id = imperial_schism_events.4
 		}
 		ai_chance = {
 			factor = 1
@@ -631,13 +631,13 @@ country_event = {
 
 #WAR PROPOSITION EVENT
 country_event = {
-	id = wallachia_hre_events.7
-	title = wallachia_hre_events.7.t
-	desc = wallachia_hre_events.7.d
+	id = imperial_schism_events.7
+	title = imperial_schism_events.7.t
+	desc = imperial_schism_events.7.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.7.a
+		name = imperial_schism_events.7.a
 		join_all_offensive_wars_of = emperor
 		set_country_flag = joined_war_with_emperor
 		custom_tooltip = loyalist_victory_header_tooltip
@@ -683,7 +683,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.7.b
+		name = imperial_schism_events.7.b
 		join_all_defensive_wars_of = event_target:strongest_hre_prince
 		set_country_flag = joined_war_with_secessionists
 		custom_tooltip = secessionist_victory_header_tooltip
@@ -729,7 +729,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = wallachia_hre_events.7.c
+		name = imperial_schism_events.7.c
 		add_ruler_personality = craven_personality
 		add_prestige = -25
 	}
@@ -737,9 +737,9 @@ country_event = {
 
 #Secessionist Victory - Leader
 country_event = {
-	id = wallachia_hre_events.8
-	title = wallachia_hre_events.8.t
-	desc = wallachia_hre_events.8.d
+	id = imperial_schism_events.8
+	title = imperial_schism_events.8.t
+	desc = imperial_schism_events.8.d
 	picture = DIET_eventPicture
 	is_triggered_only = yes
 	major = yes
@@ -751,7 +751,7 @@ country_event = {
 					has_joined_secessionists_in_imperial_schism_war = yes
 				}
 				country_event = {
-					id = wallachia_hre_events.15
+					id = imperial_schism_events.15
 				}
 			}
 			every_country = {
@@ -760,19 +760,19 @@ country_event = {
 					has_joined_emperor_in_imperial_schism_war = yes
 				}
 				country_event = {
-					id = wallachia_hre_events.16
+					id = imperial_schism_events.16
 				}
 			}
 			emperor = {
 				country_event = {
-					id = wallachia_hre_events.17
+					id = imperial_schism_events.17
 					days = 1					#Avoids race condition with empire dissolving
 				}
 			}
 		}
 	}
 	option = {
-		name = wallachia_hre_events.8.a
+		name = imperial_schism_events.8.a
 		add_country_modifier = {
 			name = architect_of_sovereignty
 			duration = -1
@@ -781,7 +781,7 @@ country_event = {
 			type = dismantled_the_hre_pp
 			amount = 10
 		}
-		custom_tooltip = wallachia_hre_events.8_opinion_tooltip
+		custom_tooltip = imperial_schism_events.8_opinion_tooltip
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -805,9 +805,9 @@ country_event = {
 
 #Majority Vote to Stay Event
 country_event = {
-	id = wallachia_hre_events.9
-	title = wallachia_hre_events.9.t
-	desc = wallachia_hre_events.9.d
+	id = imperial_schism_events.9
+	title = imperial_schism_events.9.t
+	desc = imperial_schism_events.9.d
 	picture = DIET_eventPicture
 	is_triggered_only = yes
 	immediate = {
@@ -817,14 +817,14 @@ country_event = {
 					has_voted_to_leave_hre = yes
 				}
 				country_event = {
-					id = wallachia_hre_events.10
+					id = imperial_schism_events.10
 				}
 			}
 		}
 	}
 	major = yes
 	option = {
-		name = wallachia_hre_events.9.a
+		name = imperial_schism_events.9.a
 		add_imperial_influence = 25
 		add_prestige_or_monarch_power = {
 			amount = 25
@@ -838,13 +838,13 @@ country_event = {
 
 #Majority Vote to Stay Event (Prince who voted leave)
 country_event = {
-	id = wallachia_hre_events.10
-	title = wallachia_hre_events.10.t
-	desc = wallachia_hre_events.10.d
+	id = imperial_schism_events.10
+	title = imperial_schism_events.10.t
+	desc = imperial_schism_events.10.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.10.a
+		name = imperial_schism_events.10.a
 		custom_tooltip = lose_opinion_with_voted_to_stay_tooltip
 		hidden_effect = {
 			every_country = {
@@ -879,13 +879,13 @@ country_event = {
 
 #Human Cast Vote Event
 country_event = {
-	id = wallachia_hre_events.11
-	title = wallachia_hre_events.11.t
-	desc = wallachia_hre_events.11.d
+	id = imperial_schism_events.11
+	title = imperial_schism_events.11.t
+	desc = imperial_schism_events.11.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.11.a
+		name = imperial_schism_events.11.a
 		set_country_flag = wants_to_keep_hre
 		hidden_effect = {
 			event_target:Emperor = {
@@ -898,7 +898,7 @@ country_event = {
 		custom_tooltip = voting_system_tooltip
 	}
 	option = {
-		name = wallachia_hre_events.11.b
+		name = imperial_schism_events.11.b
 		set_country_flag = wants_to_leave_hre
 		hidden_effect = {
 			event_target:Emperor = {
@@ -914,9 +914,9 @@ country_event = {
 
 #War Won - Emperor Preserved HRE
 country_event = {
-	id = wallachia_hre_events.12
-	title = wallachia_hre_events.12.t
-	desc = wallachia_hre_events.12.d
+	id = imperial_schism_events.12
+	title = imperial_schism_events.12.t
+	desc = imperial_schism_events.12.d
 	picture = AB_CHARLEMAGNE_eventPicture
 	is_triggered_only = yes
 	major = yes
@@ -931,7 +931,7 @@ country_event = {
 					is_part_of_hre = yes
 				}
 				country_event = {
-					id = wallachia_hre_events.13
+					id = imperial_schism_events.13
 				}
 			}
 			every_country = {
@@ -940,13 +940,13 @@ country_event = {
 					is_part_of_hre = yes
 				}
 				country_event = {
-					id = wallachia_hre_events.14
+					id = imperial_schism_events.14
 				}
 			}
 		}
 	}
 	option = {
-		name = wallachia_hre_events.12.a
+		name = imperial_schism_events.12.a
 		add_imperial_influence = 100
 		custom_tooltip = hremperor_victory_relation_bonus_tooltip
 		hidden_effect = {
@@ -999,13 +999,13 @@ country_event = {
 
 #Emperor Victory - Punishment for princes who fought in the war to leave
 country_event = {
-	id = wallachia_hre_events.13
-	title = wallachia_hre_events.13.t
-	desc = wallachia_hre_events.13.d
+	id = imperial_schism_events.13
+	title = imperial_schism_events.13.t
+	desc = imperial_schism_events.13.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.13.a
+		name = imperial_schism_events.13.a
 		add_legitimacy_equivalent = {
 			amount = -100
 			republican_tradition = -50
@@ -1024,13 +1024,13 @@ country_event = {
 
 #Emperor Victory - Reward for princes who fought in the war to preserve the empire
 country_event = {
-	id = wallachia_hre_events.14
-	title = wallachia_hre_events.14.t
-	desc = wallachia_hre_events.14.d
+	id = imperial_schism_events.14
+	title = imperial_schism_events.14.t
+	desc = imperial_schism_events.14.d
 	picture = AB_CHARLEMAGNE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.14.a
+		name = imperial_schism_events.14.a
 		add_adm_power = 25
 		add_dip_power = 25
 		add_mil_power = 25
@@ -1060,13 +1060,13 @@ country_event = {
 
 #Secessionist Victory - Secessionist Princes Reward Event
 country_event = {
-	id = wallachia_hre_events.15
-	title = wallachia_hre_events.15.t
-	desc = wallachia_hre_events.15.d
+	id = imperial_schism_events.15
+	title = imperial_schism_events.15.t
+	desc = imperial_schism_events.15.d
 	picture = DIET_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.15.a
+		name = imperial_schism_events.15.a
 		add_adm_power = 25
 		add_dip_power = 25
 		add_mil_power = 25
@@ -1099,13 +1099,13 @@ country_event = {
 
 #Secessionist Victory - Emperor's Supporters Punishment
 country_event = {
-	id = wallachia_hre_events.16
-	title = wallachia_hre_events.16.t
-	desc = wallachia_hre_events.16.d
+	id = imperial_schism_events.16
+	title = imperial_schism_events.16.t
+	desc = imperial_schism_events.16.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.16.a
+		name = imperial_schism_events.16.a
 		add_prestige = -25
 		add_legitimacy_equivalent = {
 			amount = -25
@@ -1120,14 +1120,14 @@ country_event = {
 
 #Secessionist Victory - Emperor's Punishment
 country_event = {
-	id = wallachia_hre_events.17
-	title = wallachia_hre_events.17.t
-	desc = wallachia_hre_events.17.d
+	id = imperial_schism_events.17
+	title = imperial_schism_events.17.t
+	desc = imperial_schism_events.17.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	major = yes
 	option = {
-		name = wallachia_hre_events.17.a
+		name = imperial_schism_events.17.a
 		add_prestige = -50
 		add_legitimacy = -50
 		add_country_modifier = {
@@ -1141,13 +1141,13 @@ country_event = {
 ## White Peace/ Stupid AI Didn't Pick One of the Peace Options to Enforce Unity/Dissolve HRE ##
 #White Peace: Secessionist Event
 country_event = {
-	id = wallachia_hre_events.18
-	title = wallachia_hre_events.18.t
-	desc = wallachia_hre_events.18.d
+	id = imperial_schism_events.18
+	title = imperial_schism_events.18.t
+	desc = imperial_schism_events.18.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.18.a
+		name = imperial_schism_events.18.a
 		custom_tooltip = we_and_our_subjects_leave_hre_tooltip
 		hidden_effect = {
 			every_owned_province = {
@@ -1167,27 +1167,27 @@ country_event = {
 
 #For the princes that sided with emperor when neither side could achieve victory
 country_event = {
-	id = wallachia_hre_events.19
-	title = wallachia_hre_events.19.t
-	desc = wallachia_hre_events.19.d
+	id = imperial_schism_events.19
+	title = imperial_schism_events.19.t
+	desc = imperial_schism_events.19.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = wallachia_hre_events.19.a
+		name = imperial_schism_events.19.a
 		add_prestige = -5
 	}
 }
 
 #For the emperor when neither side could achieve victory
 country_event = {
-	id = wallachia_hre_events.20
-	title = wallachia_hre_events.19.t
-	desc = wallachia_hre_events.19.d
+	id = imperial_schism_events.20
+	title = imperial_schism_events.19.t
+	desc = imperial_schism_events.19.d
 	picture = HRE_eventPicture
 	is_triggered_only = yes
 	major = yes
 	option = {
-		name = wallachia_hre_events.20.a
+		name = imperial_schism_events.20.a
 		custom_tooltip = secessionists_leave_tooltip
 		add_imperial_influence = -25
 		add_prestige = -5

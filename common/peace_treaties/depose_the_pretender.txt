@@ -42,7 +42,7 @@ po_depose_pretender = {
 			add_humiliation_reward = yes
 		}
 		country_event = {
-			id = wallachia_hre_events.0
+			id = imperial_schism_events.0
 			days = 1
 		}
 	}

@@ -1,5 +1,5 @@
 incident_emperor_deposed = {
-	event = wallachia_hre_events.1
+	event = imperial_schism_events.1
 	default_option = 0
 	can_stop = {
 		has_global_flag = hre_emperor_was_impaled

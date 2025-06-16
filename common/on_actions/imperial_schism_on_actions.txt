@@ -38,7 +38,7 @@ on_war_ended = {
 				has_voted_to_leave_hre = yes
 			}
 			country_event = {
-				id = wallachia_hre_events.18
+				id = imperial_schism_events.18
 			}
 		}
 		every_country = {
@@ -47,12 +47,12 @@ on_war_ended = {
 				is_emperor = no
 			}
 			country_event = {
-				id = wallachia_hre_events.19
+				id = imperial_schism_events.19
 			}
 		}
 		emperor = {
 			country_event = {
-				id = wallachia_hre_events.20
+				id = imperial_schism_events.20
 			}
 		}
 		clr_global_flag = hre_schism_war_started
