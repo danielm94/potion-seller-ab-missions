@@ -195,21 +195,3 @@ on_conquest = {
 		}
 	}
 }
-
-#Wait for current incident to end before starting deposed emperor incident.
-on_monthly_pulse = {
-	if = {
-		limit = {
-			has_global_flag = start_deposed_emperor_incident_when_current_incident_ends
-		}
-		if = {
-			limit = {
-				NOT = {
-					active_imperial_incident = any
-				}
-			}
-			clr_global_flag = start_deposed_emperor_incident_when_current_incident_ends
-			set_imperial_incident = incident_emperor_deposed
-		}
-	}
-}
