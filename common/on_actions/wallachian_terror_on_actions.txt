@@ -87,6 +87,16 @@ on_siege_won_country = {
 					save_global_event_target_as = impaled_country
 				}
 			}
+			if = {
+				limit = {
+					FROM = {
+						is_emperor = yes
+					}
+				}
+				country_event = {
+					id = wallachian_terror_events.11
+				}
+			}
 			country_event = {
 				id = wallachian_terror_events.0
 			}
