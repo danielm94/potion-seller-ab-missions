@@ -42,6 +42,7 @@ country_event = {
 	}
 }
 
+#Incident Event
 country_event = {
 	id = wallachia_hre_events.1
 	title = wallachia_hre_events.1.t
@@ -122,6 +123,7 @@ country_event = {
 	}
 	option = {
 		name = wallachia_hre_events.1.a
+		custom_tooltip = voting_system_tooltip
 		#Dissolve Vote
 		ai_chance = {
 			factor = 0
@@ -129,6 +131,7 @@ country_event = {
 	}
 	option = {
 		name = wallachia_hre_events.1.b
+		custom_tooltip = voting_system_tooltip
 		#Stay vote
 		ai_chance = {
 			factor = 100
@@ -448,7 +451,6 @@ country_event = {
 				name = legacy_of_failure
 				duration = 36500
 			}
-			#TODO: ADD NEGATIVE OPINION WITH EVERY PRINCE THAT VOTED TO STAY
 		}
 		else = {
 			add_prestige = -25
@@ -630,6 +632,40 @@ country_event = {
 		name = wallachia_hre_events.7.a
 		join_all_offensive_wars_of = emperor
 		set_country_flag = joined_war_with_emperor
+		custom_tooltip = loyalist_victory_header_tooltip
+		tooltip = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			add_legitimacy_equivalent = {
+				amount = 50
+				republican_tradition = 25
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = bled_for_the_empire
+				duration = -1
+			}
+		}
+		custom_tooltip = loyalist_victory_relations_tooltip
+		custom_tooltip = loyalist_defeat_header_tooltip
+		tooltip = {
+			add_prestige = -25
+			add_legitimacy_equivalent = {
+				amount = -25
+				republican_tradition = -10
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = failed_the_emperor
+				duration = 10950
+			}
+		}
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -642,6 +678,40 @@ country_event = {
 		name = wallachia_hre_events.7.b
 		join_all_defensive_wars_of = event_target:strongest_hre_prince
 		set_country_flag = joined_war_with_secessionists
+		custom_tooltip = secessionist_victory_header_tooltip
+		tooltip = {
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			add_legitimacy_equivalent = {
+				amount = 50
+				republican_tradition = 25
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = bled_for_freedom
+				duration = -1
+			}
+		}
+		custom_tooltip = secessionist_victory_relations_tooltip
+		custom_tooltip = secessionist_defeat_header_tooltip
+		tooltip = {
+			add_prestige = -100
+			add_legitimacy_equivalent = {
+				amount = -100
+				republican_tradition = -50
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = legacy_of_treason
+				duration = -1
+			}
+		}
+		custom_tooltip = secessionist_defeat_shattered_realm_tooltip
+		custom_tooltip = secessionist_defeat_sanctioned_tooltip
+		custom_tooltip = secessionist_defeat_elector_tooltip
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -809,24 +879,28 @@ country_event = {
 	option = {
 		name = wallachia_hre_events.11.a
 		set_country_flag = wants_to_keep_hre
-		event_target:Emperor = {
-			change_variable = {
-				which = stay_votes
-				value = 1
+		hidden_effect = {
+			event_target:Emperor = {
+				change_variable = {
+					which = stay_votes
+					value = 1
+				}
 			}
 		}
-		#TODO: List concequences of winning/losing
+		custom_tooltip = voting_system_tooltip
 	}
 	option = {
 		name = wallachia_hre_events.11.b
 		set_country_flag = wants_to_leave_hre
-		event_target:Emperor = {
-			change_variable = {
-				which = leave_votes
-				value = 1
+		hidden_effect = {
+			event_target:Emperor = {
+				change_variable = {
+					which = leave_votes
+					value = 1
+				}
 			}
 		}
-		#TODO: List concequences of winning/losing
+		custom_tooltip = voting_system_tooltip
 	}
 }
 
@@ -907,7 +981,7 @@ country_event = {
 		hidden_effect = {
 			every_elector = {
 				limit = {
-					has_voted_to_leave_hre = yes
+					has_joined_secessionists_in_imperial_schism_war = yes
 				}
 				elector = no
 			}

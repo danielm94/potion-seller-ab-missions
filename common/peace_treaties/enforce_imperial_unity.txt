@@ -1,7 +1,7 @@
 po_enforce_imperial_unity = {
 	# Show in treaties tab
 	category = 6
-	prestige_base = 0.8
+	prestige_base = 2
 	ae_base = 0
 	power_projection = humiliated_rival
 	power_cost_base = 1
