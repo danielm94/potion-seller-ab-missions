@@ -129,6 +129,22 @@ declarewar = {
 		}
 	}
 	# ]]]
+	#Potion Seller
+	condition = {
+		tooltip = CANNOT_DECLARE_WARS_TEUTONS_HRE
+		potential = {
+			ai = yes
+			has_country_flag = hre_sanctioned_prince
+			FROM = {
+				is_part_of_hre = yes
+			}
+		}
+		allow = {
+			FROM = {
+				is_part_of_hre = no
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 		# AB [[[
@@ -337,6 +353,28 @@ declarewar = {
 			}
 		}
 		# ]]]
+		if = {
+			limit = {
+				has_country_flag = hre_sanctioned_prince
+				is_part_of_hre = yes
+				FROM = {
+					is_part_of_hre = yes
+				}
+			}
+			save_event_target_as = sanctioned_prince
+			random_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = event_target:sanctioned_prince
+						defender_leader = THIS
+					}
+					is_part_of_hre = yes
+				}
+				emperor = {
+					join_all_defensive_wars_of = PREV
+				}
+			}
+		}
 	}
 }
 
@@ -363,6 +401,24 @@ demand_unlawful_territory_action = {
 			}
 			FROM = {
 				has_country_modifier = fate_of_francia_carolingian_timer
+			}
+		}
+		allow = { 
+			always = no
+		}
+	}
+	condition = {
+		tooltip = imperial_schism_war_ut_tooltip
+		potential = {
+			FROM = {
+				has_joined_emperor_in_imperial_schism_war = yes
+			}
+			has_global_flag = hre_schism_war_emperor_victory
+			NOT = {
+				had_global_flag = {
+					flag = hre_schism_war_emperor_victory
+					days = 3650
+				}
 			}
 		}
 		allow = { 
