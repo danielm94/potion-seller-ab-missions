@@ -124,6 +124,9 @@ wallachian_terror_mechanic = {
 				}
 			}
 			cooldown_years = 20
+			ai_chance = {
+				factor = 0
+			}
 		}
 		brutalize_the_enemy = {
 			gui = wallachian_terror_gov_interaction
@@ -197,6 +200,9 @@ wallachian_terror_mechanic = {
 				}
 			}
 			cooldown_years = 10
+			ai_chance = {
+				factor = 10
+			}
 		}
 		awaken_the_butcher = {
 			gui = wallachian_terror_gov_interaction
@@ -287,6 +293,9 @@ wallachian_terror_mechanic = {
 				}
 			}
 			cooldown_years = 0
+			ai_chance = {
+				factor = 2
+			}
 		}
 	}
 }
