@@ -1,0 +1,15 @@
+has_voted_to_leave_hre = {
+	has_country_flag = wants_to_leave_hre
+}
+
+has_voted_to_stay_hre = {
+	has_country_flag = wants_to_keep_hre
+}
+
+has_joined_emperor_in_imperial_schism_war = {
+	has_country_flag = joined_war_with_emperor
+}
+
+has_joined_secessionists_in_imperial_schism_war = {
+	has_country_flag = joined_war_with_secessionists
+}
