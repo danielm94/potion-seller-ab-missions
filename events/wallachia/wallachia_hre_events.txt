@@ -31,12 +31,19 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					active_imperial_incident = any
+					NOT = {
+						has_global_flag = imperial_schism_incident_happened
+					}
 				}
-				set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
-			}
-			else = {
-				set_imperial_incident = incident_emperor_deposed
+				if = {
+					limit = {
+						active_imperial_incident = any
+					}
+					set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+				}
+				else = {
+					set_imperial_incident = incident_emperor_deposed
+				}
 			}
 		}
 	}
@@ -52,6 +59,7 @@ country_event = {
 	is_triggered_only = yes
 	major = yes
 	immediate = {
+		set_global_flag = imperial_schism_incident_happened
 		hidden_effect = {
 			#Capture all of the AI votes using an event 1 day before the incident ends so we have some way of checking how the AI voted.
 			#And before you ask, no, PDX didn't include a method of checking how the AI voted during an incident. It would've made our lives a lot easier though, wouldn't it?
