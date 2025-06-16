@@ -72,6 +72,9 @@ find_strongest_country_that_voted_to_leave_hre = {
 			is_emperor = no
 			is_subject = no
 			has_voted_to_leave_hre = yes
+			NOT = {
+				alliance_with = emperor
+			}
 		}
 		
 		if = {
