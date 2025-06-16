@@ -1,4 +1,6 @@
 ﻿l_english:
+ forcibly_deposed_by_outside_power: "Imperial Authority Shattered"
+ desc_forcibly_deposed_by_outside_power: "Our ruler was decisively defeated and forced to abdicate the Imperial throne by an outside power. This unprecedented humiliation has shattered our prestige and called the very legitimacy of our rule into question, both at home and abroad. The Electors shun us, and our rivals mock our weakness. It will take a generation to recover from this blow to our honor."
  foolish_optimism: "Foolish Optimism"
  desc_foolish_optimism: "We stood for the preservation of the Empire while all others voted for its dissolution. Our faith in the old order has left us on the wrong side of history, isolated and appearing naive in the eyes of our newly sovereign neighbors."
  on_the_right_side_of_history: "On the Right Side of History"
@@ -15,3 +17,11 @@
  desc_a_union_reaffirmed: "When faced with an existential crisis, the princes of the Empire chose unity over dissolution. By navigating the Imperial Diet to a peaceful resolution, we have reaffirmed the strength of our ancient union and bolstered our diplomatic standing as its respected leader."
  savior_of_the_empire: "Savior of the Empire"
  desc_savior_of_the_empire: "When the Empire was torn asunder by the Imperial Schism, we answered treason with iron. The secessionist princes were met on the field of battle and decisively crushed. The Empire has not merely been preserved; it has been reforged in the fires of civil war. The debate over Imperial authority is over, settled by our victory. Our will is now the undisputed law of a realm united by force."
+ legacy_of_treason: "Legacy of Treason"
+ desc_legacy_of_treason: "Our rulers took up arms against the Emperor in the Imperial Schism and were defeated. Our armies were broken, our cause lost. We are now a realm disgraced, our name synonymous with treason. We will bear this shame for generations, our influence in the Empire permanently shattered."
+ bled_for_the_empire: "Bled for the Empire"
+ desc_bled_for_the_empire: "In the crucible of the Imperial Schism, we held true to our oath. We answered the Emperor's call and bled to preserve the unity of the realm. Our loyalty, proven in battle, has been recognized by the victorious Emperor. Our house is now held in the highest esteem, a pillar of the restored Imperial order and a worthy candidate for the crown."
+ bled_for_freedom: "Bled for Freedom"
+ desc_bled_for_freedom: "When the Emperor sought to preserve the Empire through force, we answered with steel. The Imperial Schism was our war of liberation, and we were victorious."
+ failed_the_emperor: "Failed the Emperor"
+ desc_failed_the_emperor: "We remained loyal to the Emperor during the Imperial Schism, a choice that has now branded us as failures. With the secessionists victorious and the Empire destroyed, our steadfastness is seen not as honor, but as a foolish adherence to a dead cause. Our influence has waned, and our prestige is tarnished by our association with the losing side."
