@@ -201,6 +201,12 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
+				factor = 10000
+				emperor = {
+					has_country_flag = debug_leave_majority
+				}
+			}
+			modifier = {
 				factor = 1000
 				is_emperor = no
 				event_target:Emperor = {
@@ -342,6 +348,12 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 10000
+				emperor = {
+					has_country_flag = debug_stay_majority
+				}
+			}
 			modifier = {
 				factor = 1000
 				is_emperor = yes
@@ -579,7 +591,7 @@ country_event = {
 			casus_belli = cb_enforce_imperial_unity
 			who = event_target:strongest_hre_prince
 		}
-		set_global_flag = hre_schism_war_started
+		set_global_flag = hre_schism_war_active
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -604,6 +616,7 @@ country_event = {
 	option = {
 		name = imperial_schism_events.6.b
 		set_country_flag = hremperor_backed_down
+		custom_tooltip = emperor_backs_down_dissolves_hre_tooltip
 		custom_tooltip = hremperor_backed_down_diplo_penalty_tooltip
 		hidden_effect = {
 			every_country = {

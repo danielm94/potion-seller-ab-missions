@@ -34,6 +34,7 @@ po_dissolve_the_empire = {
 			id = imperial_schism_events.8
 		}
 		set_global_flag = hre_schism_war_secessionist_victory
+		clr_global_flag = hre_schism_war_active
 	}
 	ai_weight = {
 		export_to_variable = {

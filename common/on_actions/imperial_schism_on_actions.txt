@@ -21,14 +21,12 @@ on_monthly_pulse = {
 on_war_ended = {
 	if = {
 		limit = {
-			has_global_flag = hre_schism_war_started
+			is_imperial_schism_war_ongoing = yes
 			OR = {
 				is_emperor = yes
 				tag = event_target:strongest_hre_prince
 			}
-			NOT = {
-				has_global_flag = hre_schism_war_emperor_victory
-			}
+			has_emperor_won_imperial_schism_war = no
 			NOT = {
 				has_global_flag = hre_schism_war_secessionist_victory
 			}
@@ -55,6 +53,6 @@ on_war_ended = {
 				id = imperial_schism_events.20
 			}
 		}
-		clr_global_flag = hre_schism_war_started
+		clr_global_flag = hre_schism_war_active
 	}
 }

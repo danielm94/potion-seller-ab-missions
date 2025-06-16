@@ -10,7 +10,7 @@ cb_depose_the_pretender = {
 		has_country_flag = depose_hre_emperor_cb
 		OR = {
 			NOT = {
-				has_country_flag = deposed_hre_emperor
+				has_been_deposed_as_hre_emperor = yes
 			}
 			had_country_flag = {
 				flag = deposed_hre_emperor

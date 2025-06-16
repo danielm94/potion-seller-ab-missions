@@ -413,7 +413,7 @@ demand_unlawful_territory_action = {
 			FROM = {
 				has_joined_emperor_in_imperial_schism_war = yes
 			}
-			has_global_flag = hre_schism_war_emperor_victory
+			has_emperor_won_imperial_schism_war = yes
 			NOT = {
 				had_global_flag = {
 					flag = hre_schism_war_emperor_victory

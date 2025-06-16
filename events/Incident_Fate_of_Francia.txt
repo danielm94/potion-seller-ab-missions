@@ -33,6 +33,7 @@ country_event = {
 				}
 			}
 		}
+		is_imperial_schism_war_ongoing = no
 	}
 
 	immediate = {

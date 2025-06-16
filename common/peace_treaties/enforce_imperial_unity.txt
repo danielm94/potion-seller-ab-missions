@@ -34,6 +34,7 @@ po_enforce_imperial_unity = {
 			id = imperial_schism_events.12
 		}
 		set_global_flag = hre_schism_war_emperor_victory
+		clr_global_flag = hre_schism_war_active
 	}
 	ai_weight = {
 		export_to_variable = {
