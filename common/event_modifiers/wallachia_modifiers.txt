@@ -327,10 +327,3 @@ wallachia_eastern_ambitions = {
 	warscore_cost_vs_other_religion = -0.1
 	global_heathen_missionary_strength = 0.03
 }
-
-wallachia_forcibly_deposed_by_outside_power = {
-	reasons_to_elect = -6969
-	diplomatic_reputation = -3
-	prestige = -1
-	legitimacy = -1
-}
