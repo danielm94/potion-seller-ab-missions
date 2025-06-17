@@ -111,6 +111,7 @@ on_war_lost = {
 		wallachian_terror_remove_severed_command_modifier = yes
 		wallachian_terror_remove_leadership_in_exile_modifier = yes
 	}
+	clr_country_flag = wallachian_terror_captured_hre_emperor
 }
 
 on_war_won = {
@@ -118,6 +119,7 @@ on_war_won = {
 		wallachian_terror_remove_severed_command_modifier = yes
 		wallachian_terror_remove_leadership_in_exile_modifier = yes
 	}
+	clr_country_flag = wallachian_terror_captured_hre_emperor
 }
 
 on_war_ended = {
