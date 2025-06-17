@@ -68,3 +68,10 @@ cb_western_roman_ambition = {
 	}
 	war_goal = western_roman_wargoal
 }
+
+cb_imperial_retribution = {
+	ai_peace_desire = -80
+	valid_for_subject = no
+	is_triggered_only = yes
+	war_goal = punish_the_regicide
+}
