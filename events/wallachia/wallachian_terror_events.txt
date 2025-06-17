@@ -188,12 +188,11 @@ country_event = {
 	picture = {
 		picture = AB_LOTHAIR_eventPicture
 		trigger = {
-	
 		}
 	}
 	is_triggered_only = yes
 	option = {
-		name =  wallachian_terror_events.2.a
+		name = wallachian_terror_events.2.a
 		trigger = {
 			NOT = {
 				ruler_has_personality = impaler_personality
@@ -226,7 +225,12 @@ country_event = {
 			hidden_effect = {
 				wallachian_terror_convert_humiliated_rival_to_terror = yes
 			}
-			add_humiliation_reward = yes
+			if = {
+				limit = {
+					is_rival = event_target:impaled_country
+				}
+				add_humiliation_reward = yes
+			}
 		}
 		else = {
 			custom_tooltip = wallachian_terror_events_humiliated_ruler_prestige_tooltip
@@ -583,11 +587,158 @@ country_event = {
 country_event = {
 	id = wallachian_terror_events.11
 	title = wallachian_terror_events.11.t
-	desc = wallachian_terror_events.11.d
+	desc = {
+		desc = wallachian_terror_events.11_catholic_emperor_desc
+		trigger = {
+			hre_religion = catholic
+		}
+	}
+	desc = {
+		desc = wallachian_terror_events.11_non_catholic_emperor_desc
+		trigger = {
+			NOT = {
+				hre_religion = catholic
+			}
+		}
+	}
 	picture = GFX_wallachian_terror_events.11
 	is_triggered_only = yes
 	option = {
 		name = wallachian_terror_events.11.a
-		
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
+		event_target:impaled_country = {
+			country_event = {
+				id = wallachian_terror_events.12
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.11.b
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		event_target:impaled_country = {
+			capital_scope = {
+				add_province_modifier = {
+					name = wallachian_terror_severed_command
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+	option = {
+		name = wallachian_terror_events.11.c
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
+		highlight = yes
+		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
+		event_target:impaled_country = {
+			country_event = {
+				id = wallachian_terror_events.12
+				days = 1
+			}
+		}
+	}
+}
+
+#Emperor is Captured
+country_event = {
+	id = wallachian_terror_events.12
+	title = wallachian_terror_events.12.t
+	desc = wallachian_terror_events.12.desc
+	picture = GFX_wallachian_terror_events.12
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = wallachian_terror_captured_hre_emperor
+	}
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.13
+		}
+	}
+}
+
+country_event = {
+	id = wallachian_terror_events.13
+	title = wallachian_terror_events.13.t
+	desc = wallachian_terror_events.13.desc
+	picture = GFX_wallachian_terror_events.12
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.12
+		}
+	}
+	option = {
+		name = wallachian_terror_events.13.a
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.13.b
+		trigger = {
+			NOT = {
+				ruler_has_personality = impaler_personality
+			}
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_prestige_or_monarch_power = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_terror_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_terror = yes
+		}
+		if = {
+			limit = {
+				is_rival = emperor
+			}
+			add_humiliation_reward = yes
+		}
+		set_global_flag = imperial_schism_emperor_on_leash
+		custom_tooltip = wallachian_terror_forcibly_deposed_emperor_tooltip
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_depose_the_pretender
+				}
+			}
+			custom_tooltip = depose_the_pretender_peace_option_disabled_tooltip
+		}
+		add_adm_power = 10
+		add_dip_power = 10
+		add_mil_power = 10
+		emperor = {
+			country_event = {
+				id = imperial_schism_events.21
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.13.c
+		highlight = yes
+		trigger = {
+			ruler_has_personality = impaler_personality
+		}
 	}
 }

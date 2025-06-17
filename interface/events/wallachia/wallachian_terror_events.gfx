@@ -1,0 +1,6 @@
+spriteTypes= {
+	spriteType = {
+		name = "GFX_wallachian_terror_events.12"
+		texturefile = "gfx/interface/events/wallachia/terror/wallachian_terror_events.12.dds"
+	}
+}
