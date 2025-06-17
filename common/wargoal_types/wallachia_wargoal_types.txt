@@ -59,3 +59,32 @@ western_roman_wargoal = {
 	
 	war_name = roman_war_name
 }
+
+punish_the_regicide = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 1.5
+		peace_cost_factor = 0.25
+		
+		peace_options = {
+			po_demand_provinces
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+	}
+
+	war_name = imperial_retribution
+}
