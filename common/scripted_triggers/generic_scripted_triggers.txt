@@ -153,12 +153,6 @@ is_heretic_hre_prince = {
 			}
 		}
 		AND = {
-			hre_religion = protestant
-			NOT = {
-				religion = protestant
-			}
-		}
-		AND = {
 			hre_religion = reformed
 			NOT = {
 				religion = reformed
