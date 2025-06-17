@@ -57,6 +57,8 @@ on_bi_yearly_pulse = {
 	}
 }
 
+#ROOT = winner country
+#FROM = location
 on_siege_won_country = {
 	if = {
 		limit = {
