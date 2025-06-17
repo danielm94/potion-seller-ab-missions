@@ -89,3 +89,6 @@
  secessionist_defeat_shattered_realm_tooltip: "Our realm will be shattered: we will be forced to §Rrelease all our subjects§! and §Rall releasable nations§! from our lands."
  secessionist_defeat_sanctioned_tooltip: "We will be permanently sanctioned, §Rrevoking our right to declare war§! on any other prince in the Empire."
  secessionist_defeat_elector_tooltip: "If we are an §YElector§!, we will be §Rstripped of our title§!."
+ imperial_schism_events.21.t: "The Emperor's Humiliation"
+ imperial_schism_events.21.d: "Dragged from the throne room and chained before his captor, [Root.Monarch.GetName] was forced to crawl through the streets of [Root.Capital.GetCapitalName] on all fours—paraded before jeering crowds, stripped of every shred of dignity, made to wear the collar of a beaten dog. Before the assembled princes of the Empire, [Root.Monarch.GetSheHe] was compelled to kneel and formally renounce all claims to the imperial title. No plea was heard, no mercy shown. The electors have already chosen a new master; the throne that once ruled Christendom now belongs to another."
+ imperial_schism_events.21.a: "It will be generations before our dynasty recovers from this..."

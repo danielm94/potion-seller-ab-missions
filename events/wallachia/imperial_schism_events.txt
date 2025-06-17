@@ -1206,3 +1206,49 @@ country_event = {
 		add_prestige = -5
 	}
 }
+
+#If the player captures the emperor and humiliates them.
+country_event = {
+	id = imperial_schism_events.21
+	title = imperial_schism_events.21.t
+	desc = imperial_schism_events.21.d
+	picture = GFX_imperial_schism_events.21
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ignore_for_select_new_emperor_effect
+			depose_the_pretender_effect = yes
+		}
+	}
+	option = {
+		name = imperial_schism_events.21.a
+		add_imperial_influence = -100
+		add_stability = -1
+		add_prestige = -25
+		add_legitimacy = -50
+		add_country_modifier = {
+			name = forcibly_deposed_by_outside_power
+			duration = 9125
+		}
+		custom_tooltip = deposed_emperor_start_incident_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = imperial_schism_incident_happened
+					}
+				}
+				if = {
+					limit = {
+						active_imperial_incident = any
+					}
+					set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+				}
+				else = {
+					set_imperial_incident = incident_emperor_deposed
+				}
+			}
+		}
+	}
+}
