@@ -1,5 +1,4 @@
 po_depose_pretender = {
-	# Show in treaties tab
 	category = 6
 	prestige_base = 0.8
 	ae_base = 0
@@ -20,6 +19,10 @@ po_depose_pretender = {
 	warscore_cap = 100
 	requires_is_allowed = no
 	is_visible = {
+		#In case the player captures the capital and humiliates rather than impaling them.
+		NOT = {
+			has_country_flag = wallachian_terror_captured_hre_emperor
+		}
 		is_in_war = {
 			attacker_leader = ROOT
 			defender_leader = emperor
