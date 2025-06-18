@@ -124,6 +124,23 @@ country_event = {
 			name = wrath_of_the_antichrist
 			duration = 1825
 		}
+		custom_tooltip = retribution_war_objective_tooltip
+		tooltip = {
+			add_country_modifier = {
+				name = wallachia_antichrist_victorius
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			change_terror = {
+				value = 50
+				scaled_with_gain_modifier = yes
+			}
+			emperor = {
+				dismantle_hre = yes
+			}
+		}
 	}
 }
 
