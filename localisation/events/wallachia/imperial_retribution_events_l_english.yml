@@ -30,3 +30,7 @@
  imperial_retribution_events.6.d: "It is done. The tyrant who defiled the Empire lies dead, his dynasty extinguished, his house wiped from the earth. His capital smolders, stripped of wealth, power, and pride. His lands lie in ruin, his people scattered, his name cursed in every tongue of Christendom. The retribution he invited has been delivered in full, and from the ashes of his folly, the order of the world is restored."
  imperial_retribution_events.6.a: "Let this be a warning to all who would defy the Empire."
  imperial_retribution_every_province_tooltip: "Every province owned by [impaler_country.GetName] will experience the following:"
+ imperial_retribution_events.7.t: "A Hollow Peace"
+ imperial_retribution_events.7.d: "The war has ended, but no true victory was won. The forces of [retribution_leader.GetName] failed to destroy the so-called Antichrist, and the tyrant who impaled the Emperor still rules from his bloodied throne. Across the Empire, voices rise in doubt and discontent. What is the purpose of the Empire, they ask, if its banners cannot bring justice? If a monster may strike at the heart of our order and escape retribution, then what claim does the Empire have to command loyalty or respect? The cracks in the foundation deepen."
+ imperial_retribution_events.7.a: "A bitter end to a bitter war."
+

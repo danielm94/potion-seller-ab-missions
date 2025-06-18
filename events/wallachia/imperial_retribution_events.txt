@@ -65,6 +65,8 @@ country_event = {
 				}
 				country_event = {
 					id = imperial_retribution_events.3
+					days = 1
+					random = 30
 				}
 			}
 		}
@@ -392,6 +394,41 @@ country_event = {
 			add_country_modifier = {
 				name = slayer_of_the_antichrist_monarchy
 				duration = -1
+			}
+		}
+	}
+}
+
+#Neither Side Achieved Their Aims
+country_event = {
+	id = imperial_retribution_events.7
+	title = imperial_retribution_events.7.t
+	desc = imperial_retribution_events.7.d
+	picture = GFX_imperial_retribution_events.7
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = imperial_retribution_events.7.a
+		emperor = {
+			add_imperial_influence = -50
+		}
+		add_prestige = -25
+		add_legitimacy = -25
+		if = {
+			limit = {
+				has_imperial_schism_incident_happened = no
+			}
+			custom_tooltip = deposed_emperor_start_incident_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						active_imperial_incident = any
+					}
+					set_global_flag = start_deposed_emperor_incident_when_current_incident_ends
+				}
+				else = {
+					set_imperial_incident = incident_emperor_deposed
+				}
 			}
 		}
 	}
