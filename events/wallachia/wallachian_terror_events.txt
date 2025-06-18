@@ -720,7 +720,7 @@ country_event = {
 			}
 			add_humiliation_reward = yes
 		}
-		set_global_flag = imperial_schism_emperor_on_leash
+		set_country_flag = deposed_hre_emperor
 		custom_tooltip = wallachian_terror_forcibly_deposed_emperor_tooltip
 		if = {
 			limit = {
