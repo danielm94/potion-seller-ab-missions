@@ -690,7 +690,7 @@ country_event = {
 			}
 			event_target:retribution_leader = {
 				country_event = {
-					id = imperial_retribution.events.0
+					id = imperial_retribution_events.0
 				}
 			}
 		}
