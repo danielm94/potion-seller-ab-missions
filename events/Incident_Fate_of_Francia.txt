@@ -34,6 +34,7 @@ country_event = {
 			}
 		}
 		is_imperial_schism_war_ongoing = no
+		is_imperial_retribution_war_ongoing = no
 	}
 
 	immediate = {
