@@ -83,6 +83,7 @@ punish_the_regicide = {
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
+			po_imperial_retribution_dissolve
 		}
 	}
 
