@@ -76,7 +76,38 @@ find_strongest_country_that_voted_to_leave_hre = {
 				alliance_with = emperor
 			}
 		}
-		
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = $event_target_name_to_save_as$
+				}
+			}
+			save_global_event_target_as = $event_target_name_to_save_as$
+		}
+		else = {
+			if = {
+				limit = {
+					military_strength = {
+						who = event_target:$event_target_name_to_save_as$
+						value = 1
+					}
+				}
+				save_global_event_target_as = $event_target_name_to_save_as$
+			}
+		}
+	}
+}
+
+imperial_retribution_find_strongest_hre_prince = {
+	every_country = {
+		limit = {
+			is_part_of_hre = yes
+			is_emperor = no
+			is_subject = no
+			NOT = {
+				truce_with = event_target:impaler_country
+			}
+		}
 		if = {
 			limit = {
 				NOT = {
