@@ -327,3 +327,9 @@ wallachia_eastern_ambitions = {
 	warscore_cost_vs_other_religion = -0.1
 	global_heathen_missionary_strength = 0.03
 }
+
+wallachia_antichrist_victorius = {
+	land_forcelimit_modifier = 0.5
+	core_creation = -0.05
+	monthly_terror_power = 0.05
+}
