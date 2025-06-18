@@ -611,11 +611,9 @@ country_event = {
 			}
 		}
 		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
-		event_target:impaled_country = {
-			country_event = {
-				id = wallachian_terror_events.12
-				days = 1
-			}
+		country_event = {
+			id = wallachian_terror_events.12
+			days = 1
 		}
 	}
 	option = {
@@ -642,11 +640,9 @@ country_event = {
 		}
 		highlight = yes
 		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
-		event_target:impaled_country = {
-			country_event = {
-				id = wallachian_terror_events.12
-				days = 1
-			}
+		country_event = {
+			id = wallachian_terror_events.12
+			days = 1
 		}
 	}
 }
@@ -686,6 +682,16 @@ country_event = {
 		trigger = {
 			NOT = {
 				ruler_has_personality = impaler_personality
+			}
+		}
+		hidden_effect = {
+			imperial_retribution_find_strongest_hre_prince = {
+				event_target_name_to_save_as = retribution_leader
+			}
+			event_target:retribution_leader = {
+				country_event = {
+					id = imperial_retribution.events.0
+				}
 			}
 		}
 	}
