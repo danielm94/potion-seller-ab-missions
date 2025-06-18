@@ -33,7 +33,7 @@ po_imperial_retribution_dissolve = {
 		clr_global_flag = imperial_retibution_war_ongoing
 		set_global_flag = imperial_retribution_impaler_victory
 		country_event = {
-			id = imperial_retribution_events.3
+			id = imperial_retribution_events.5
 		}
 	}
 	ai_weight = {
