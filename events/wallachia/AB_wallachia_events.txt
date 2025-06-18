@@ -955,69 +955,9 @@ country_event = {
 						scaled_with_gain_modifier = yes
 					}
 				}
-				#Base Tax
-				export_to_variable = {
-					which = province_adm_var
-					value = trigger_value:base_tax
-				}
-				divide_variable = {
-					which = province_adm_var
-					value = 2
-				}
-				round_variable = {
-					which = province_adm_var
-					value = -1
-				}
-				multiply_variable = {
-					which = province_adm_var
-					value = -1
-				}
-				variable_effect = {
-					var = province_adm_var
-					effect = add_base_tax
-				}
-				#Base Production
-				export_to_variable = {
-					which = province_dip_var
-					value = trigger_value:base_production
-				}
-				divide_variable = {
-					which = province_dip_var
-					value = 2
-				}
-				round_variable = {
-					which = province_dip_var
-					value = -1
-				}
-				multiply_variable = {
-					which = province_dip_var
-					value = -1
-				}
-				variable_effect = {
-					var = province_dip_var
-					effect = add_base_production
-				}
-				#Base Manpower
-				export_to_variable = {
-					which = province_mil_var
-					value = trigger_value:base_manpower
-				}
-				divide_variable = {
-					which = province_mil_var
-					value = 2
-				}
-				round_variable = {
-					which = province_mil_var
-					value = -1
-				}
-				multiply_variable = {
-					which = province_mil_var
-					value = -1
-				}
-				variable_effect = {
-					var = province_mil_var
-					effect = add_base_manpower
-				}
+				halve_province_base_tax = yes
+				halve_province_base_production = yes
+				halve_province_base_manpower = yes
 				add_province_modifier = {
 					name = wallachia_vlach_resettlement
 					duration = 36500

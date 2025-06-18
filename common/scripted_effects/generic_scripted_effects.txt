@@ -1832,3 +1832,105 @@ add_country_modifier_until_end_of_current_age = {
 		}
 	}
 }
+
+halve_province_base_tax = {
+	custom_tooltip = halve_province_base_tax_tooltip
+	hidden_effect = {
+		export_to_variable = {
+			which = province_adm_var
+			value = trigger_value:base_tax
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_adm_var
+					value = 2
+				}
+			}
+			divide_variable = {
+				which = province_adm_var
+				value = 2
+			}
+			round_variable = {
+				which = province_adm_var
+				value = -1
+			}
+			multiply_variable = {
+				which = province_adm_var
+				value = -1
+			}
+			variable_effect = {
+				var = province_adm_var
+				effect = add_base_tax
+			}
+		}
+	}
+}
+
+halve_province_base_production = {
+	custom_tooltip = halve_province_base_production_tooltip
+	hidden_effect = {
+		export_to_variable = {
+			which = province_dip_var
+			value = trigger_value:base_production
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_dip_var
+					value = 2
+				}
+			}
+			divide_variable = {
+				which = province_dip_var
+				value = 2
+			}
+			round_variable = {
+				which = province_dip_var
+				value = -1
+			}
+			multiply_variable = {
+				which = province_dip_var
+				value = -1
+			}
+			variable_effect = {
+				var = province_dip_var
+				effect = add_base_production
+			}
+		}
+	}
+}
+
+halve_province_base_manpower = {
+	custom_tooltip = halve_province_base_manpower_tooltip
+	hidden_effect = {
+		export_to_variable = {
+			which = province_mil_var
+			value = trigger_value:base_manpower
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = province_mil_var
+					value = 2
+				}
+			}
+			divide_variable = {
+				which = province_mil_var
+				value = 2
+			}
+			round_variable = {
+				which = province_mil_var
+				value = -1
+			}
+			multiply_variable = {
+				which = province_mil_var
+				value = -1
+			}
+			variable_effect = {
+				var = province_mil_var
+				effect = add_base_manpower
+			}
+		}
+	}
+}
