@@ -92,15 +92,19 @@ on_siege_won_country = {
 			if = {
 				limit = {
 					FROM = {
-						is_emperor = yes
+						owner = {
+							is_emperor = yes
+						}
 					}
 				}
 				country_event = {
 					id = wallachian_terror_events.11
 				}
 			}
-			country_event = {
-				id = wallachian_terror_events.0
+			else = {
+				country_event = {
+					id = wallachian_terror_events.0
+				}
 			}
 		}
 	}
