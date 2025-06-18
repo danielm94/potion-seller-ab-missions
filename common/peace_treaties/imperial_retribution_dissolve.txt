@@ -30,7 +30,7 @@ po_imperial_retribution_dissolve = {
 		always = yes
 	}
 	effect = {
-		clr_global_flag = imperial_retibution_war_started
+		clr_global_flag = imperial_retibution_war_ongoing
 		country_event = {
 			id = imperial_retribution_events.3
 		}

@@ -22,7 +22,7 @@ country_event = {
 			casus_belli = cb_imperial_retribution
 			who = event_target:impaler_country
 		}
-		set_global_flag = imperial_retibution_war_started
+		set_global_flag = imperial_retibution_war_ongoing
 		custom_tooltip = every_hre_prince_invited_to_retribution_war_tooltip
 		hidden_effect = {
 			every_country = {
