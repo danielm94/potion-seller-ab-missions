@@ -345,6 +345,18 @@ interaction = {
 		hidden_trigger = {
 			has_any_estates = yes
 		}
+		if = {
+			limit = {
+				has_government_mechanic = wallachian_terror_mechanic
+			}
+			OR = {
+				has_country_modifier = wallachian_terror_purging_the_estate_elites
+				is_at_war = no
+			}
+		}
+		else = {
+			is_at_war = no
+		}
 		NOT = {
 			crown_land_share = 100
 		}
@@ -410,14 +422,6 @@ interaction = {
 			}
 			NOT = {
 				has_estate_privilege = estate_church_statutory_rights
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_modifier = wallachian_terror_purging_the_estate_elites
-				}
-				is_at_war = no
 			}
 		}
 		if = {
