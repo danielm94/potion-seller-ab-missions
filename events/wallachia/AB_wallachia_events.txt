@@ -1383,6 +1383,7 @@ country_event = {
 		name = AB_wallachia_events.29.a
 		custom_tooltip = western_roman_ambition_cb_tooltip
 		set_country_flag = western_roman_ambition
+		custom_tooltip = depose_hre_emperor_cb_tooltip
 		set_country_flag = depose_hre_emperor_cb
 		add_country_modifier = {
 			name = wallachia_western_ambitions
