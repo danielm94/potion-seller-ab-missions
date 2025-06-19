@@ -4,10 +4,23 @@ on_war_ended = {
 	if = {
 		limit = {
 			has_saved_global_event_target = retribution_leader
-			NOT = {
-				is_in_war = {
-					attacker_leader = event_target:retribution_leader
-					casus_belli = cb_imperial_retribution
+			OR = {
+				tag = event_target:impaler_country
+				tag = event_target:retribution_leader
+			}
+			is_imperial_retribution_war_ongoing = yes
+			event_target:impaler_country = {
+				NOT = {
+					is_in_war = {
+						casus_belli = cb_imperial_retribution
+					}
+				}
+			}
+			event_target:retribution_leader = {
+				NOT = {
+					is_in_war = {
+						casus_belli = cb_imperial_retribution
+					}
 				}
 			}
 		}
