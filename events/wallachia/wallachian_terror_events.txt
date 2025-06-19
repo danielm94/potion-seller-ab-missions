@@ -611,6 +611,15 @@ country_event = {
 			}
 		}
 		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_depose_the_pretender
+				}
+			}
+			custom_tooltip = depose_the_pretender_peace_option_disabled_tooltip
+		}
 		country_event = {
 			id = wallachian_terror_events.12
 			days = 1
@@ -640,6 +649,15 @@ country_event = {
 		}
 		highlight = yes
 		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_depose_the_pretender
+				}
+			}
+			custom_tooltip = depose_the_pretender_peace_option_disabled_tooltip
+		}
 		country_event = {
 			id = wallachian_terror_events.12
 			days = 1
@@ -664,6 +682,7 @@ country_event = {
 		}
 	}
 }
+
 #Emperor is Captured (CONT'D)
 country_event = {
 	id = wallachian_terror_events.13
@@ -726,15 +745,6 @@ country_event = {
 		}
 		set_country_flag = deposed_hre_emperor
 		custom_tooltip = wallachian_terror_forcibly_deposed_emperor_tooltip
-		if = {
-			limit = {
-				is_in_war = {
-					attacker_leader = ROOT
-					casus_belli = cb_depose_the_pretender
-				}
-			}
-			custom_tooltip = depose_the_pretender_peace_option_disabled_tooltip
-		}
 		add_adm_power = 10
 		add_dip_power = 10
 		add_mil_power = 10
