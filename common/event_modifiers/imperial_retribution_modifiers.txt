@@ -48,3 +48,21 @@ slayer_of_the_antichrist_theocracy = {
 	devotion = 1
 	global_missionary_strength = 0.02
 }
+
+antichrist = {
+	diplomatic_reputation = -50
+	improve_relation_modifier = -1
+	monthly_terror_power = 0.1
+	terror_power_gain_modifier = 1
+	fire_damage = 0.1
+	shock_damage = 0.1
+}
+
+legacy_of_the_antichrist = {
+	diplomatic_reputation = -10
+	improve_relation_modifier = -0.1
+	monthly_terror_power = 0.02
+	terror_power_gain_modifier = 0.1
+	max_general_fire = 1
+	leader_land_fire = 2
+}
