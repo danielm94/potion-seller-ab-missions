@@ -83,3 +83,6 @@
  wallachian_terror_events.13.c: "You should admit your situation. There would be more dignity in it."
  wallachian_terror_forcibly_deposed_emperor_tooltip: "After their long walk around §Y[Emperor.Capital.GetCapitalName]§!, §Y[Emperor.Monarch.GetName]§! will be forced renounce their claim to the title of §YHoly Roman Emperor§!, triggering an immediate new election in which they will be ineligible.\n"
  depose_the_pretender_peace_option_disabled_tooltip: "We will not able to demand the §YForce Imperial Abdication§! peace option for the remainder of this war.\n"
+ emperor_impalement_concequences_tooltip: "§REvery country in the §YHoly Roman Empire§! will declare war on us!§!"
+ emperor_impalement_concequences_opportunism_tooltip: "§ROur §Yenemies§!, §Yrivals§!, and other §Ygreat powers§! in §YEurope§! will likely capitalize on our pariah status to join the empire in destroying us!§!"
+ emperor_impalement_concequences_outcomes_tooltip: "Defeating the coalition will give us powerful rewards, but if we lose our country will be §Rannihilated§!."
