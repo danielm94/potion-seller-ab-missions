@@ -63,3 +63,9 @@ wallachian_terror_humiliated_us_opinion = {
 	min = -200
 	yearly_decay = 1
 }
+
+wallachian_terror_impaled_the_emperor = {
+	opinion = -200
+	min = -1000
+	yearly_decay = 1
+}
