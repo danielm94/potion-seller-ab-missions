@@ -19,7 +19,7 @@
  wal_liberate_transylvania_impale_tooltip_no: "£no£ If we impaled the @MGY [MGY.GetName]' ruler:"
  wal_unite_the_vlachs_title: "The Union of Vlachs"
  wal_unite_the_vlachs_desc: "The banners of [Root.GetName] now fly unchallenged over all the ancient lands of our Vlach ancestors – from the fertile plains of Moldavia and Bessarabia, across the rugged heart of Transylvania, to the strategic shores of Dobruja. The Magyar has been humbled, the Bulgar pushed back from the Danube. Our people, once scattered and subject, are gathered under one rule."
- wal_unite_the_vlachs_autonomy_tooltip: "Every owned province of §YRomanian§! culture will lose §G10§! §YAutonomy§! and §G5§! §YYears of Separatism§!."
+ wal_unite_the_vlachs_autonomy_tooltip: "Every owned province in the §YRomanian§! culture group will lose §G10§! §YAutonomy§! and §G5§! §YYears of Separatism§!."
  wal_unite_the_vlachs_dacia_tooltip: "We can §Gbypass§! the tech requirement to form §YDacia§!."
  wal_placate_the_boieri_effect_tooltip: "While this modifier is active, we will gain a bonus §G5§! loyalty for completed estate agendas for the §YBoiermiea§!."
  wal_placate_the_boieri_title: "Placate the Boieri"
