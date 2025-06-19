@@ -144,6 +144,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_retribution_leader_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = event_target:retribution_leader
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -227,6 +235,14 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = BYZ
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_retribution_leader_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = event_target:retribution_leader
 			}
 		}
 	}
