@@ -208,46 +208,80 @@ wallachian_terror_mechanic = {
 			gui = wallachian_terror_gov_interaction
 			icon = GFX_wallachian_terror_awaken_the_butcher_button
 			trigger = {
-				has_government_power = {
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
-					value = 30
-				}
 				if = {
+					limit = {
+						is_ruler_impaler = no
+					}
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 30
+					}
+				}
+				else_if = {
 					limit = {
 						ruler_has_personality = impaler_personality
 					}
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 50
+					}
+				}
+				else_if = {
+					limit = {
+						ruler_has_personality = impaler2_personality
+					}
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 75
+					}
+				}
+				else_if = {
+					limit = {
+						ruler_has_personality = impaler3_personality
+					}
 					custom_trigger_tooltip = {
-						tooltip = wallachian_terror_awaken_the_butcher_banked_personality_trigger_tootip
-						NOT = {
-							check_variable = {
-								which = impaler_ruler_count
-								value = 3
-							}
-						}
+						tooltip = cant_upgrade_impaler_further_tooltip
+						always = no
 					}
 				}
 			}
 			effect = {
 				if = {
 					limit = {
-						ruler_has_personality = impaler_personality
+						is_ruler_impaler = no
 					}
-					#TODO: Elective Romanian Monarchy case
+					custom_tooltip = can_remove_personality_tooltip
+					hidden_effect = {
+						#This variable declaration is just so the tooltip doesn't shit itself.
+						set_variable = {
+							which = num_of_ruler_personalities
+							value = 0
+						}
+						get_number_of_ruler_personalities = {
+							var_name = num_of_ruler_personalities
+						}
+					}
 					if = {
 						limit = {
-							has_heir = yes
-							heir_age = 15
-							NOT = {
-								heir_has_personality = impaler_personality
+							check_variable = {
+								which = num_of_ruler_personalities
+								value = 3
 							}
 						}
-						change_heir_dip = -1
-						change_heir_stat = {
+						country_event = {
+							id = wallachian_terror_events.10
+						}
+					}
+					else = {
+						change_dip = -1
+						change_ruler_stat = {
 							type = mil
 							amount = 1
 						}
-						custom_tooltip = awaken_the_butcher_impaler_personality_heir_tooltip
+						custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
 						change_terror = {
 							value = -30
 							scaled_with_gain_modifier = no
@@ -255,33 +289,67 @@ wallachian_terror_mechanic = {
 						hidden_effect = {
 							#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
 							country_event = {
-								id = AB_wallachia_events.0
-							}
-						}
-					}
-					else = {
-						custom_tooltip = awaken_the_butcher_bank_personality_tooltip
-						change_terror = {
-							value = -30
-							scaled_with_gain_modifier = no
-						}
-						hidden_effect = {
-							change_variable = {
-								which = impaler_ruler_count
-								value = 1
+								id = AB_wallachia_events.1
 							}
 						}
 					}
 				}
-				else = {
-					change_dip = -1
-					change_ruler_stat = {
-						type = mil
-						amount = 1
+				else_if = {
+					limit = {
+						ruler_has_personality = impaler_personality
 					}
-					custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
+					custom_tooltip = tier2_impaler_upgrade_tooltip
+					if = {
+						limit = {
+							OR = {
+								religion = orthodox
+								religion = nestorian
+							}
+						}
+						custom_tooltip = tier2_impaler_upgrade_patriarch_tooltip
+					}
+					else_if = {
+						limit = {
+							religion = catholic
+						}
+						custom_tooltip = tier2_impaler_upgrade_papal_tooltip
+					}
+					else_if = {
+						limit = {
+							OR = {
+								religion = anglican
+								religion = protestant
+								religion = hussite
+								religion = gaelic_ab
+							}
+						}
+						custom_tooltip = tier2_impaler_upgrade_church_power_tooltip
+					}
+					else_if = {
+						limit = {
+							religion = reformed
+						}
+						custom_tooltip = tier2_impaler_upgrade_fervor_tooltip
+					}
 					change_terror = {
-						value = -30
+						value = -50
+						scaled_with_gain_modifier = no
+					}
+					hidden_effect = {
+						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
+						country_event = {
+							id = AB_wallachia_events.1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						ruler_has_personality = impaler2_personality
+					}
+					custom_tooltip = tier3_impaler_upgrade_tooltip
+					custom_tooltip = tier3_bonus_ability_tooltip
+					change_terror = {
+						value = -75
 						scaled_with_gain_modifier = no
 					}
 					hidden_effect = {

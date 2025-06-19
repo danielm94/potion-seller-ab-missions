@@ -353,6 +353,8 @@ declarewar = {
 			}
 		}
 		# ]]]
+		#PotionSeller
+		#Sanctioned Princes Call In Emperor Against Them
 		if = {
 			limit = {
 				has_country_flag = hre_sanctioned_prince
@@ -374,6 +376,13 @@ declarewar = {
 					join_all_defensive_wars_of = PREV
 				}
 			}
+		}
+		#Impaler T3 reduces war exhaustion penalty scaled by the amount of stab hit reduction
+		if = {
+			limit = {
+				ruler_has_personality = impaler3_personality
+			}
+			add_war_exhaustion = -3
 		}
 	}
 }

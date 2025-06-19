@@ -53,7 +53,9 @@ add_permanent_claim_on_all_neighboring_provinces = {
 free_up_bad_ruler_personality_if_full = {
 	custom_tooltip = free_up_bad_ruler_personality_if_full_tooltip
 	hidden_effect = {
-		get_number_of_ruler_personalities = yes
+		get_number_of_ruler_personalities = {
+			var_name = num_of_ruler_personalities
+		}
 		if = {
 			limit = {
 				check_variable = {
@@ -69,7 +71,7 @@ free_up_bad_ruler_personality_if_full = {
 #Finds the number of personalities the ruler has, and saves it to the COUNTRY scope as variable "num_of_ruler_personalities"
 get_number_of_ruler_personalities = {
 	set_variable = {
-		which = num_of_ruler_personalities
+		which = $var_name$
 		value = 0
 	}
 	# Vanilla Personalities

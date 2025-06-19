@@ -1,17 +1,19 @@
 namespace = AB_wallachia_events
-#Give heir impaler trait
+
+#Reduce WE by the amount of stab hit reduction
 country_event = {
 	id = AB_wallachia_events.0
 	title = AB_wallachia_events.0.t
 	desc = AB_wallachia_events.0.d
-	picture = AB_LOTHAIR_eventPicture
+	picture = GFX_AB_wallachia_events.0
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		add_heir_personality = impaler_personality
+		add_war_exhaustion = -5
 	}
 	option = {
-		name = blank
+		name = AB_wallachia_events.0.a
+		
 	}
 }
 
@@ -24,7 +26,26 @@ country_event = {
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		add_ruler_personality = impaler_personality
+		if = {
+			limit = {
+				is_ruler_impaler = no
+			}
+			add_ruler_personality = impaler_personality
+		}
+		else_if = {
+			limit = {
+				ruler_has_personality = impaler_personality
+			}
+			remove_ruler_personality = impaler_personality
+			add_ruler_personality = impaler2_personality
+		}
+		else_if = {
+			limit = {
+				ruler_has_personality = impaler2_personality
+			}
+			remove_ruler_personality = impaler2_personality
+			add_ruler_personality = impaler3_personality
+		}
 	}
 	option = {
 		name = blank
@@ -203,7 +224,7 @@ country_event = {
 		name = AB_wallachia_events.9.a
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		change_estate_land_share = {
@@ -239,7 +260,7 @@ country_event = {
 		name = AB_wallachia_events.9.b
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		add_country_modifier = {
@@ -275,7 +296,7 @@ country_event = {
 		name = AB_wallachia_events.9.c
 		highlight = yes
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -653,7 +674,7 @@ country_event = {
 		name = AB_wallachia_events.22.a
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		country_event = {
@@ -663,7 +684,7 @@ country_event = {
 	option = {
 		name = AB_wallachia_events.22.impaler
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		country_event = {
 			id = AB_wallachia_events.23
@@ -673,7 +694,7 @@ country_event = {
 		name = AB_wallachia_events.22.c
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		set_country_flag = wal_bulgarian_underclass
@@ -728,7 +749,7 @@ country_event = {
 			full_idea_group = humanist_ideas
 			hidden_trigger = {
 				NOT = {
-					ruler_has_personality = impaler_personality
+					is_ruler_impaler = yes
 				}
 			}
 		}
@@ -805,7 +826,7 @@ country_event = {
 			full_idea_group = religious_ideas
 			hidden_trigger = {
 				NOT = {
-					ruler_has_personality = impaler_personality
+					is_ruler_impaler = yes
 				}
 			}
 		}

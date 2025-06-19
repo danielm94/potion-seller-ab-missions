@@ -54,3 +54,11 @@ has_wallachia_not_compromised_with_the_boieri = {
 are_bulgars_an_underclass = {
 	has_country_flag = wal_bulgarian_underclass
 }
+
+is_ruler_impaler = {
+	OR = {
+		ruler_has_personality = impaler_personality
+		ruler_has_personality = impaler2_personality
+		ruler_has_personality = impaler3_personality
+	}
+}

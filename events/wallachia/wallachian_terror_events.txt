@@ -10,7 +10,7 @@ country_event = {
 		name = wallachian_terror_events_attempt_to_capture
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		#effect
@@ -26,7 +26,7 @@ country_event = {
 		name = wallachian_terror_events_dont_capture
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		#effect
@@ -44,7 +44,7 @@ country_event = {
 		#If ruler has Impaler personality, this is the only option lol
 		name = wallachian_terror_events_impaler_we_must_capture
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		highlight = yes
 		#effect
@@ -195,7 +195,7 @@ country_event = {
 		name = wallachian_terror_events.2.a
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		wallachian_terror_impalement_effect = yes
@@ -204,7 +204,7 @@ country_event = {
 		name = wallachian_terror_events.2.b
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		if = {
@@ -257,7 +257,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.2.c
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		highlight = yes
 		wallachian_terror_impalement_effect = yes
@@ -275,7 +275,7 @@ country_event = {
 		name = wallachian_terror_events_they_escaped
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		add_prestige = -10
@@ -288,7 +288,7 @@ country_event = {
 		name = wallachian_terror_events_they_escaped_impaler
 		highlight = yes
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		add_prestige = -10
 		add_manpower = -2
@@ -478,107 +478,26 @@ country_event = {
 	}
 }
 
-#Banked Impaler Trait Event
+#Remove personality for Impaler
 country_event = {
 	id = wallachian_terror_events.10
 	title = wallachian_terror_events.10.t
 	desc = wallachian_terror_events.10.d
 	picture = GFX_wallachian_terror_events.10
-	trigger = {
-		has_government_mechanic = wallachian_terror_mechanic
-		NOT = {
-			OR = {
-				has_heir_flag = impaler_heir
-				has_heir_flag = not_impaler_heir
-			}
-		}
-		heir_age = 10
-		check_variable = {
-			which = impaler_ruler_count
-			value = 1
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	immediate = {
-		#For the banked traits tooltip
-		hidden_effect = {
-			set_variable = {
-				which = impaler_ruler_count_after
-				which = impaler_ruler_count
-			}
-			subtract_variable = {
-				which = impaler_ruler_count_after
-				value = 1
-			}
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.10.nevermind
+		change_terror = {
+			value = 30
+			scaled_with_gain_modifier = no
 		}
 	}
 	option = {
-		name = wallachian_terror_events.10.a
+		name = just_personality
 		trigger = {
-			NOT = {
-				ruler_has_personality = impaler_personality
-			}
+			ruler_has_personality = just_personality
 		}
-		custom_tooltip = awaken_the_butcher_impaler_personality_heir_tooltip
-		custom_tooltip = wallachian_terror_events_come_of_age_tooltip
-		custom_tooltip = wallachian_terror_events.10_banked_traits_tooltip
-		hidden_effect = {
-			set_heir_flag = impaler_heir
-			subtract_variable = {
-				which = impaler_ruler_count
-				value = 1
-			}
-		}
-	}
-	option = {
-		name = wallachian_terror_events.10.b
-		highlight = yes
-		trigger = {
-			ruler_has_personality = impaler_personality
-		}
-		custom_tooltip = awaken_the_butcher_impaler_personality_heir_tooltip
-		custom_tooltip = wallachian_terror_events_come_of_age_tooltip
-		custom_tooltip = wallachian_terror_events.10_banked_traits_tooltip
-		hidden_effect = {
-			set_heir_flag = impaler_heir
-			subtract_variable = {
-				which = impaler_ruler_count
-				value = 1
-			}
-		}
-		custom_tooltip = wallachian_terror_events.10_loving_parent_tooltip
-		change_heir_stat = {
-			type = dip
-			amount = 1
-		}
-	}
-	option = {
-		name = wallachian_terror_events.10.c
-		random_list = {
-			50 = {
-				custom_tooltip = wallachian_terror_events.10_zealot_heir_tooltip
-				tooltip = {
-					add_heir_personality = zealot_personality
-				}
-				custom_tooltip = wallachian_terror_events_come_of_age_tooltip
-				hidden_effect = {
-					set_heir_flag = zealot_heir
-				}
-			}
-			50 = {
-			}
-		}
-		custom_tooltip = wallachian_terror_events.10_heir_not_gain_trait_tooltip
-		custom_tooltip = wallachian_terror_events.10_banked_traits_tooltip
-		hidden_effect = {
-			set_heir_flag = not_impaler_heir
-			subtract_variable = {
-				which = impaler_ruler_count
-				value = 1
-			}
-		}
+		remove_ruler_personality = just_personality
 	}
 }
 
@@ -607,7 +526,7 @@ country_event = {
 		name = wallachian_terror_events.11.a
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
@@ -629,7 +548,7 @@ country_event = {
 		name = wallachian_terror_events.11.b
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		event_target:impaled_country = {
@@ -645,7 +564,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.11.c
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		highlight = yes
 		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
@@ -700,7 +619,7 @@ country_event = {
 		name = wallachian_terror_events.13.a
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		wallachian_terror_emperor_impalement_effect = yes
@@ -722,7 +641,7 @@ country_event = {
 		name = wallachian_terror_events.13.b
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
@@ -758,7 +677,7 @@ country_event = {
 		name = wallachian_terror_events.13.c
 		highlight = yes
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		wallachian_terror_emperor_impalement_effect = yes
 		custom_tooltip = emperor_impalement_concequences_tooltip

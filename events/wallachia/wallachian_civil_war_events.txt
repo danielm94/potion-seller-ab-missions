@@ -10,7 +10,7 @@ country_event = {
 		name = wallachian_civil_war_accept_the_ultimatum
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		set_country_flag = wallachian_civil_war_voivode_backded_down
@@ -44,7 +44,7 @@ country_event = {
 		name = wallachian_civil_war_reject_the_ultimatum
 		trigger = {
 			NOT = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		add_legitimacy = 5
@@ -61,7 +61,7 @@ country_event = {
 		name = wallachian_civil_war_trick_them
 		highlight = yes
 		trigger = {
-			ruler_has_personality = impaler_personality
+			is_ruler_impaler = yes
 		}
 		country_event = {
 			id = AB_wallachia_events.4
@@ -211,7 +211,7 @@ country_event = {
 						if = {
 							limit = {
 								PREV = {
-									ruler_has_personality = impaler_personality
+									is_ruler_impaler = yes
 								}
 							}
 							NOT = {
@@ -575,7 +575,7 @@ province_event = {
 		trigger = {
 			NOT = {
 				owner = {
-					ruler_has_personality = impaler_personality
+					is_ruler_impaler = yes
 				}
 			}
 		}
@@ -594,7 +594,7 @@ province_event = {
 		trigger = {
 			NOT = {
 				owner = {
-					ruler_has_personality = impaler_personality
+					is_ruler_impaler = yes
 				}
 			}
 		}
@@ -611,7 +611,7 @@ province_event = {
 		highlight = yes
 		trigger = {
 			owner = {
-				ruler_has_personality = impaler_personality
+				is_ruler_impaler = yes
 			}
 		}
 		custom_tooltip = wallachian_civil_war_province_will_be_razed

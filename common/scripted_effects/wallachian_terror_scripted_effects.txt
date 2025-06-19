@@ -1922,7 +1922,7 @@ wallachian_terror_byzantium_impalement_effects = {
 			add_mil_power = 25
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_ruler_has_impaler_trait
-				first_limit = "ruler_has_personality = impaler_personality"
+				first_limit = "is_ruler_impaler = yes"
 				first_effect = "add_country_modifier = {
 				name = byzantium_greekfire
 				duration = -1
