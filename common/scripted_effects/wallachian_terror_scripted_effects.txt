@@ -1709,7 +1709,6 @@ wallachian_terror_impalement_effect = {
 			wallachian_terror_convert_impaled_ruler_to_pp = yes
 		}
 	}
-	custom_tooltip = tooltip_line_divider
 	wallachian_terror_international_reaction_effect = yes
 	if = {
 		limit = {
@@ -1951,7 +1950,6 @@ wallachian_terror_emperor_impalement_effect = {
 	hidden_effect = {
 		wallachian_terror_convert_humiliated_ruler_to_prestige_or_monarch_power = yes
 	}
-	custom_tooltip = tooltip_line_divider
 	wallachian_terror_country_reaction_effect = yes
 	custom_tooltip = hre_emperor_impaled_empire_reaction
 	hidden_effect = {
