@@ -1418,7 +1418,7 @@ country_event = {
 				dynasty = "Draculesti"
 			}
 		}
-		add_years_of_income = -0.666
+		add_years_of_income = -0.30
 	}
 	option = {
 		name = tuh_faction_events.10.b
