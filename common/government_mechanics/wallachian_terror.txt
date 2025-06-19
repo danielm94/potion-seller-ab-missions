@@ -263,6 +263,10 @@ wallachian_terror_mechanic = {
 						get_number_of_ruler_personalities = {
 							var_name = num_of_ruler_personalities
 						}
+						change_terror = {
+							value = -30
+							scaled_with_gain_modifier = no
+						}
 					}
 					if = {
 						limit = {

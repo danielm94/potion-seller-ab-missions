@@ -498,6 +498,399 @@ country_event = {
 			ruler_has_personality = just_personality
 		}
 		remove_ruler_personality = just_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = righteous_personality
+		trigger = {
+			ruler_has_personality = righteous_personality
+		}
+		remove_ruler_personality = righteous_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = tolerant_personality
+		trigger = {
+			ruler_has_personality = tolerant_personality
+		}
+		remove_ruler_personality = tolerant_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = kind_hearted_personality
+		trigger = {
+			ruler_has_personality = kind_hearted_personality
+		}
+		remove_ruler_personality = kind_hearted_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = free_thinker_personality
+		trigger = {
+			ruler_has_personality = free_thinker_personality
+		}
+		remove_ruler_personality = free_thinker_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = well_connected_personality
+		trigger = {
+			ruler_has_personality = well_connected_personality
+		}
+		remove_ruler_personality = well_connected_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = calm_personality
+		trigger = {
+			ruler_has_personality = calm_personality
+		}
+		remove_ruler_personality = calm_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = careful_personality
+		trigger = {
+			ruler_has_personality = careful_personality
+		}
+		remove_ruler_personality = careful_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = secretive_personality
+		trigger = {
+			ruler_has_personality = secretive_personality
+		}
+		remove_ruler_personality = secretive_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = intricate_web_weaver_personality
+		trigger = {
+			ruler_has_personality = intricate_web_weaver_personality
+		}
+		remove_ruler_personality = intricate_web_weaver_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = fertile_personality
+		trigger = {
+			ruler_has_personality = fertile_personality
+		}
+		remove_ruler_personality = fertile_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = well_advised_personality
+		trigger = {
+			ruler_has_personality = well_advised_personality
+		}
+		remove_ruler_personality = well_advised_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = benevolent_personality
+		trigger = {
+			ruler_has_personality = benevolent_personality
+		}
+		remove_ruler_personality = benevolent_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = zealot_personality
+		trigger = {
+			ruler_has_personality = zealot_personality
+		}
+		remove_ruler_personality = zealot_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = pious_personality
+		trigger = {
+			ruler_has_personality = pious_personality
+		}
+		remove_ruler_personality = pious_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = lawgiver_personality
+		trigger = {
+			ruler_has_personality = lawgiver_personality
+		}
+		remove_ruler_personality = lawgiver_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = midas_touched_personality
+		trigger = {
+			ruler_has_personality = midas_touched_personality
+		}
+		remove_ruler_personality = midas_touched_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = incorruptible_personality
+		trigger = {
+			ruler_has_personality = incorruptible_personality
+		}
+		remove_ruler_personality = incorruptible_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = architectural_visionary_personality
+		trigger = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+		remove_ruler_personality = architectural_visionary_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = scholar_personality
+		trigger = {
+			ruler_has_personality = scholar_personality
+		}
+		remove_ruler_personality = scholar_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = entrepreneur_personality
+		trigger = {
+			ruler_has_personality = entrepreneur_personality
+		}
+		remove_ruler_personality = entrepreneur_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = industrious_personality
+		trigger = {
+			ruler_has_personality = industrious_personality
+		}
+		remove_ruler_personality = industrious_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = expansionist_personality
+		trigger = {
+			ruler_has_personality = expansionist_personality
+		}
+		remove_ruler_personality = expansionist_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = charismatic_negotiator_personality
+		trigger = {
+			ruler_has_personality = charismatic_negotiator_personality
+		}
+		remove_ruler_personality = charismatic_negotiator_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = silver_tongue_personality
+		trigger = {
+			ruler_has_personality = silver_tongue_personality
+		}
+		remove_ruler_personality = silver_tongue_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = conqueror_personality
+		trigger = {
+			ruler_has_personality = conqueror_personality
+		}
+		remove_ruler_personality = conqueror_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = tactical_genius_personality
+		trigger = {
+			ruler_has_personality = tactical_genius_personality
+		}
+		remove_ruler_personality = tactical_genius_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = bold_fighter_personality
+		trigger = {
+			ruler_has_personality = bold_fighter_personality
+		}
+		remove_ruler_personality = bold_fighter_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = strict_personality
+		trigger = {
+			ruler_has_personality = strict_personality
+		}
+		remove_ruler_personality = strict_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = inspiring_leader_personality
+		trigger = {
+			ruler_has_personality = inspiring_leader_personality
+		}
+		remove_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = martial_educator_personality
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+		remove_ruler_personality = martial_educator_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = navigator_personality
+		trigger = {
+			ruler_has_personality = navigator_personality
+		}
+		remove_ruler_personality = navigator_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = fierce_negotiator_personality
+		trigger = {
+			ruler_has_personality = fierce_negotiator_personality
+		}
+		remove_ruler_personality = fierce_negotiator_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = babbling_buffoon_personality
+		trigger = {
+			ruler_has_personality = babbling_buffoon_personality
+		}
+		remove_ruler_personality = babbling_buffoon_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = embezzler_personality
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		remove_ruler_personality = embezzler_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = infertile_personality
+		trigger = {
+			ruler_has_personality = infertile_personality
+		}
+		remove_ruler_personality = infertile_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = drunkard_personality
+		trigger = {
+			ruler_has_personality = drunkard_personality
+		}
+		remove_ruler_personality = drunkard_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = sinner_personality
+		trigger = {
+			ruler_has_personality = sinner_personality
+		}
+		remove_ruler_personality = sinner_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = greedy_personality
+		trigger = {
+			ruler_has_personality = greedy_personality
+		}
+		remove_ruler_personality = greedy_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = cruel_personality
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+		remove_ruler_personality = cruel_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = naive_personality
+		trigger = {
+			ruler_has_personality = naive_personality
+		}
+		remove_ruler_personality = naive_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = craven_personality
+		trigger = {
+			ruler_has_personality = craven_personality
+		}
+		remove_ruler_personality = craven_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = loose_lips_personality
+		trigger = {
+			ruler_has_personality = loose_lips_personality
+		}
+		remove_ruler_personality = loose_lips_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = obsessive_perfectionist_personality
+		trigger = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		remove_ruler_personality = obsessive_perfectionist_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = malevolent_personality
+		trigger = {
+			ruler_has_personality = malevolent_personality
+		}
+		remove_ruler_personality = malevolent_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = immortal_personality
+		trigger = {
+			ruler_has_personality = immortal_personality
+		}
+		remove_ruler_personality = immortal_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = reformist_personality
+		trigger = {
+			ruler_has_personality = reformist_personality
+		}
+		remove_ruler_personality = reformist_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = enlightened_personality
+		trigger = {
+			ruler_has_personality = enlightened_personality
+		}
+		remove_ruler_personality = enlightened_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = absolutist_personality
+		trigger = {
+			ruler_has_personality = absolutist_personality
+		}
+		remove_ruler_personality = absolutist_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = legendary_pirate_personality
+		trigger = {
+			ruler_has_personality = legendary_pirate_personality
+		}
+		remove_ruler_personality = legendary_pirate_personality
+		add_ruler_personality = impaler_personality
 	}
 }
 
