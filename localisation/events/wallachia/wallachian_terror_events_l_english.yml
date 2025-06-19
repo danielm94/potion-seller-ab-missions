@@ -29,6 +29,8 @@
  wallachian_terror_events_byz_impale: "Hah! Lot of good those walls did you! Plant [BYZ.Monarch.GetHerHis] there, as a monument to [BYZ.Monarch.GetHerHis] failure."
  wallachian_terror_events_byz_humiliate: "Look! The emperor has no clothes!"
  wallachian_terror_events_byz_impale_impaler_personality: "Fetch me this 'Greek Fire'. I haven't yet seen what it can do."
+ wallachian_terror_events_retribution_leader_impale: "How does it feel, knowing you’ll die as your dog Emperor did?"
+ wallachian_terror_events_retribution_leader_impale_impaler_personality: "*[Root.Monarch.GetName] approaches [retribution_leader.Monarch.GetHerHim], driving [Root.Monarch.GetHerHis] thumbs into [retribution_leader.Monarch.GetHerHis] eye sockets without a word*"
  wallachian_terror_events_impaler_we_must_capture: "Return them to [impaler_country.Capital.GetCapitalName]. The garden still has room."
  wallachian_terror_events_capital_penalty_mechanics_tooltip: "§TThis modifier will remain until someone liberates the [impaled_country.GetAdjective] capital or the war ends.§!"
  wallachian_terror_events_impaled_escape_tooltip: "§TYou and your family make it out of [impaled_country.Capital.GetCapitalName] alive and go into exile while your capital is occupied.§!"

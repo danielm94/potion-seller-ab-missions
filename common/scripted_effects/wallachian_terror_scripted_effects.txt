@@ -1348,37 +1348,39 @@ wallachian_terror_country_reaction_effect = {
 }
 
 wallachian_terror_hre_reaction_effect = {
-	if = {
-		limit = {
-			event_target:impaled_country = {
-				is_part_of_hre = yes
-				is_emperor = no
-			}
-		}
-		every_country = {
+	hidden_effect = {
+		if = {
 			limit = {
-				is_part_of_hre = yes
-				is_emperor = no
-				NOT = {
-					tag = event_target:impaled_country
+				event_target:impaled_country = {
+					is_part_of_hre = yes
+					is_emperor = no
 				}
 			}
-			add_opinion = {
-				who = event_target:impaler_country
-				modifier = hre_prince_outraged_at_impalement_opinion
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					NOT = {
+						tag = event_target:impaled_country
+					}
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = hre_prince_outraged_at_impalement_opinion
+				}
 			}
-		}
-		event_target:Emperor = {
-			add_opinion = {
-				who = event_target:impaler_country
-				modifier = hre_emperor_outraged_at_impalement_opinion
+			event_target:Emperor = {
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = hre_emperor_outraged_at_impalement_opinion
+				}
+				country_event = {
+					id = wallachian_terror_events.9
+				}
 			}
-			country_event = {
-				id = wallachian_terror_events.9
+			event_target:impaler_country = {
+				wallachian_terror_convert_impaled_ruler_to_prestige_or_monarch_power = yes
 			}
-		}
-		event_target:impaler_country = {
-			wallachian_terror_convert_impaled_ruler_to_prestige_or_monarch_power = yes
 		}
 	}
 }
@@ -1755,20 +1757,35 @@ wallachian_terror_impalement_effect = {
 #Effect that handles the effects of impalement on certain tags.
 wallachian_terror_special_country_impalement_effects = {
 	event_target:impaled_country = {
-		trigger_switch = {
-			on_trigger = tag
-			BUL = {
-				wallachian_terror_bulgaria_impalement_effects = yes
+		if = {
+			limit = {
+				tag = BUL
 			}
-			MGY = {
-				wallachian_terror_magyars_impalement_effects = yes
+			wallachian_terror_bulgaria_impalement_effects = yes
+		}
+		else_if = {
+			limit = {
+				tag = MGY
 			}
-			GLH = {
-				wallachian_terror_golden_horde_impalement_effects = yes
+			wallachian_terror_magyars_impalement_effects = yes
+		}
+		else_if = {
+			limit = {
+				tag = GLH
 			}
-			BYZ = {
-				wallachian_terror_byzantium_impalement_effects = yes
+			wallachian_terror_golden_horde_impalement_effects = yes
+		}
+		else_if = {
+			limit = {
+				tag = BYZ
 			}
+			wallachian_terror_byzantium_impalement_effects = yes
+		}
+		else_if = {
+			limit = {
+				tag = event_target:retribution_leader
+			}
+			wallachian_terror_retribution_leader_effect = yes
 		}
 	}
 }
@@ -1930,6 +1947,42 @@ wallachian_terror_byzantium_impalement_effects = {
 			}
 		}
 		set_country_flag = wallachia_impaled_byzantium
+	}
+}
+
+#ROOT = event_Target:retribution_leader
+wallachian_terror_retribution_leader_effect = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_retribution_leader
+				}
+			}
+		}
+		custom_tooltip = retribution_leader_impaled_tooltip
+		tooltip = {
+			add_war_exhaustion = 10
+			add_country_modifier = {
+				name = retribution_leader_was_impaled
+				duration = 1825
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_in_war = {
+						casus_belli = cb_imperial_retribution
+					}
+				}
+				add_war_exhaustion = 10
+				add_country_modifier = {
+					name = retribution_leader_was_impaled
+					duration = 1825
+				}
+			}
+		}
 	}
 }
 

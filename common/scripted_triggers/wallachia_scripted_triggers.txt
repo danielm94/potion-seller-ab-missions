@@ -22,6 +22,7 @@ is_special_impaled_country = {
 			tag = MGY			#Magyars
 			tag = GLH
 			tag = BYZ
+			tag = event_target:retribution_leader
 			#In the future, HRE emperor, EOC, the pope...
 		}
 	}
@@ -56,9 +57,14 @@ are_bulgars_an_underclass = {
 }
 
 is_ruler_impaler = {
-	OR = {
-		ruler_has_personality = impaler_personality
-		ruler_has_personality = impaler2_personality
-		ruler_has_personality = impaler3_personality
+	custom_trigger_tooltip = {
+		tooltip = is_ruler_impaler_tooltip
+		hidden_trigger = {
+			OR = {
+				ruler_has_personality = impaler_personality
+				ruler_has_personality = impaler2_personality
+				ruler_has_personality = impaler3_personality
+			}
+		}
 	}
 }

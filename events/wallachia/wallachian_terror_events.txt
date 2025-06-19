@@ -206,6 +206,11 @@ country_event = {
 			NOT = {
 				is_ruler_impaler = yes
 			}
+			NOT = {
+				event_target:impaled_country = {
+					tag = event_target:retribution_leader
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -869,22 +874,6 @@ country_event = {
 		add_ruler_personality = impaler_personality
 	}
 	option = {
-		name = enlightened_personality
-		trigger = {
-			ruler_has_personality = enlightened_personality
-		}
-		remove_ruler_personality = enlightened_personality
-		add_ruler_personality = impaler_personality
-	}
-	option = {
-		name = absolutist_personality
-		trigger = {
-			ruler_has_personality = absolutist_personality
-		}
-		remove_ruler_personality = absolutist_personality
-		add_ruler_personality = impaler_personality
-	}
-	option = {
 		name = legendary_pirate_personality
 		trigger = {
 			ruler_has_personality = legendary_pirate_personality
@@ -1020,9 +1009,7 @@ country_event = {
 		custom_tooltip = emperor_impalement_concequences_opportunism_tooltip
 		custom_tooltip = emperor_impalement_concequences_outcomes_tooltip
 		hidden_effect = {
-			imperial_retribution_find_strongest_hre_prince = {
-				event_target_name_to_save_as = retribution_leader
-			}
+			imperial_retribution_find_strongest_hre_prince = yes
 			event_target:retribution_leader = {
 				country_event = {
 					id = imperial_retribution_events.0
@@ -1077,9 +1064,7 @@ country_event = {
 		custom_tooltip = emperor_impalement_concequences_opportunism_tooltip
 		custom_tooltip = emperor_impalement_concequences_outcomes_tooltip
 		hidden_effect = {
-			imperial_retribution_find_strongest_hre_prince = {
-				event_target_name_to_save_as = retribution_leader
-			}
+			imperial_retribution_find_strongest_hre_prince = yes
 			event_target:retribution_leader = {
 				country_event = {
 					id = imperial_retribution_events.0
