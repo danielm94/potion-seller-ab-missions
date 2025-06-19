@@ -610,7 +610,7 @@ country_event = {
 				ruler_has_personality = impaler_personality
 			}
 		}
-		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
+		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
 		country_event = {
 			id = wallachian_terror_events.12
 			days = 1
@@ -639,7 +639,7 @@ country_event = {
 			ruler_has_personality = impaler_personality
 		}
 		highlight = yes
-		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
+		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
 		country_event = {
 			id = wallachian_terror_events.12
 			days = 1
@@ -664,7 +664,7 @@ country_event = {
 		}
 	}
 }
-
+#Emperor is Captured (CONT'D)
 country_event = {
 	id = wallachian_terror_events.13
 	title = wallachian_terror_events.13.t
