@@ -1,6 +1,8 @@
 ﻿l_english:
  forcibly_deposed_by_outside_power: "Imperial Authority Shattered"
  desc_forcibly_deposed_by_outside_power: "Our ruler was decisively defeated and forced to abdicate the Imperial throne by an outside power. This unprecedented humiliation has shattered our prestige and called the very legitimacy of our rule into question, both at home and abroad. The Electors shun us, and our rivals mock our weakness. It will take a generation to recover from this blow to our honor."
+ true_roman_emperor: "True Roman Emperor"
+ desc_true_roman_emperor: "By deposing the pretender who clung to a hollow title, we have claimed the mantle of true imperial authority."
  foolish_optimism: "Foolish Optimism"
  desc_foolish_optimism: "We stood for the preservation of the Empire while all others voted for its dissolution. Our faith in the old order has left us on the wrong side of history, isolated and appearing naive in the eyes of our newly sovereign neighbors."
  on_the_right_side_of_history: "On the Right Side of History"

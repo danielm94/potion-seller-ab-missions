@@ -26,6 +26,11 @@ country_event = {
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
+
+		add_country_modifier = {
+			name = true_roman_emperor
+			duration = -1
+		}
 		if = {
 			limit = {
 				has_imperial_schism_incident_happened = no

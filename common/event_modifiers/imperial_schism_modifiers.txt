@@ -4,7 +4,10 @@ forcibly_deposed_by_outside_power = {
 	prestige = -1
 	legitimacy = -1
 }
-
+true_roman_emperor = {
+	unjustified_demands = -0.1
+	legitimacy = 0.5
+}
 foolish_optimism = {
 	diplomatic_reputation = -1
 	prestige = -0.5
