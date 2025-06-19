@@ -365,7 +365,18 @@ ab_building_fort_effect = {
 			hidden = yes
 		}
 	}
-	
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = wal_buffed_carpathian_forts
+			}
+			region = carpathia_region
+		}
+		add_province_modifier = {
+			name = wallachia_carpathian_defenses
+			duration = -1
+		}
+	}
 }
 
 ab_removing_fort_effect = {

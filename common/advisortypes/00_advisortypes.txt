@@ -2321,7 +2321,17 @@ fortification_expert = {
 		}
 	}
 	# ]]]
-
+	#PotionSeller
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = wal_fort_advisor_buff_flag
+			}
+		}
+		modifier = { 
+			garrison_size = 0.05
+		}
+	}
 	chance = {
 		factor = 1
 	}

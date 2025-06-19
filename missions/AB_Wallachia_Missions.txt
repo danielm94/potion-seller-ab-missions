@@ -1206,4 +1206,74 @@ ab_wal_5 = {
 	potential = {
 		is_or_was_wallachia = yes
 	}
+	wal_seal_the_carpathians = {
+		icon = gfx_wal_seal_the_carpathians
+		position = 4
+		required_missions = {
+			wal_crush_the_magyars
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = transdanubia_area
+				area = slovakia_area
+				area = moravia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = wal_buffed_carpathian_forts
+			custom_tooltip = wal_buffed_carpathian_forts_tooltip
+			tooltip = {
+				4128 = {
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_carpathian_defenses
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = carpathia_region
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_carpathian_defenses
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = buffed_bran_castle_reward_tooltip
+			set_country_flag = upgraded_bran_castle
+
+			custom_tooltip = wal_fort_advisor_buff_flag_tooltip
+			set_country_flag = wal_fort_advisor_buff_flag
+			
+			define_advisor = {
+				type = fortification_expert
+				skill = 2
+				cost_multiplier = 0.5
+				culture = transylvanian
+				religion = root
+			}
+		}
+	}
 }

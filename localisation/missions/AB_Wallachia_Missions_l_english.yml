@@ -70,3 +70,8 @@
  mavrocordatos_candidate_buff_tooltip: "\n@TUH Electing a candidate from §YHouse Mavrocordatos§! now grants an §YInnovator§! advisor for §G50%§! of the cost.\n"
  wal_balkan_hegemony_title: "Balkan Hegemon"
  has_vlad_2nd_or_3rd_ruling_tooltip: "If §YVlad II§! or §YVlad III§! are our rulers:"
+ wal_seal_the_carpathians_title: "Seal the Carpathians"
+ wal_seal_the_carpathians_desc: "With the Magyars shattered, our dominion over the Pannonian Basin is nearly complete. A new vulnerability has been exposed, however, along the western mountain passes. The German princes and the Polish crown watch our ascent with avarice. Our nation's security cannot be guaranteed while these gateways remain in foreign hands. We must seize the lands of Transdanubia, Slovakia, and Moravia to establish an unbreachable frontier, turning the Carpathians into the impenetrable spine of our kingdom."
+ wal_buffed_carpathian_forts_tooltip: "All existing §Yforts§! in the §YCarpathia§! region, as well as any constructed in the future, will receive:\n"
+ buffed_bran_castle_reward_tooltip: "The §YBran Castle§! great project now provides additional bonuses."
+ wal_fort_advisor_buff_flag_tooltip: "§YMilitary Engineer§! advisors now grant §G+5.0%§! §YGarrison Size§! for each skill level\n"

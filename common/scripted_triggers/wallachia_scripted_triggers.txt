@@ -68,3 +68,10 @@ is_ruler_impaler = {
 		}
 	}
 }
+
+has_bran_castle_bonus = {
+	custom_trigger_tooltip = {
+		tooltip = has_bran_castle_bonus_tooltip
+		has_country_flag = upgraded_bran_castle
+	}
+}

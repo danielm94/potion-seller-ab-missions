@@ -196,7 +196,7 @@ wallachia_build_the_black_sea_fleet = {
 }
 
 #Player gains this modifier for moving capital to Constantinople
-wallachia_the_worlds_desire  = {
+wallachia_the_worlds_desire = {
 	prestige = 1
 }
 
@@ -212,6 +212,7 @@ wallachia_rebuilding_the_great_city = {
 	local_monthly_devastation = -0.1
 	local_development_cost_modifier = -0.05
 }
+
 #Province bonus for keeping capital in Romanian province.
 wallachia_rome_on_the_danube = {
 	local_development_cost_modifier = -0.1
@@ -253,14 +254,17 @@ wallachia_angry_no_justice = {
 	stability_cost_modifier = 0.25
 	legitimacy = -0.5
 }
+
 wallachia_reconcile_with_the_bulgars = {
 	num_accepted_cultures = 1
 	improve_relation_modifier = 0.05
 }
+
 wallachia_turn_the_other_cheek = {
 	num_accepted_cultures = 1
 	yearly_patriarch_authority = 0.002
 }
+
 wallachia_integrating_the_bulgars = {
 	local_unrest = -1
 	core_creation = -0.1
@@ -275,7 +279,7 @@ wallachia_subsumed_the_serbian_patriarch = {
 
 wallachia_respected_serbian_patriarch = {
 	local_unrest = -1
-	local_manpower_modifier = 0.10
+	local_manpower_modifier = 0.1
 }
 
 wallachia_develop_kosovo_gold = {
@@ -294,16 +298,19 @@ wallachia_liberated_orthodox_bretheren_from_heretics = {
 	local_years_of_nationalism = -20
 	local_unrest = -2
 }
+
 wallachia_liberated_orthodox_bretheren_from_heathens = {
 	local_core_creation = -0.25
 	local_years_of_nationalism = -20
 	local_unrest = -2
 }
+
 wallachia_liberated_orthodox_bretheren_from_devil_worshipers = {
 	local_core_creation = -0.25
 	local_years_of_nationalism = -20
 	local_unrest = -2
 }
+
 wallachia_convert_illyria = {
 	local_missionary_strength = 0.03
 	local_tax_modifier = -0.333
@@ -326,4 +333,11 @@ wallachia_eastern_ambitions = {
 	core_creation = -0.1
 	warscore_cost_vs_other_religion = -0.1
 	global_heathen_missionary_strength = 0.03
+}
+
+wallachia_carpathian_defenses = {
+	local_defender_dice_roll_bonus = 1
+	local_hostile_attrition = 1
+	local_defensiveness = 0.2
+	local_assault_fort_ability = -0.5
 }
