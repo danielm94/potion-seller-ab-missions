@@ -66,7 +66,7 @@ country_event = {
 				country_event = {
 					id = imperial_retribution_events.3
 					days = 1
-					random = 30
+					random = 90
 				}
 			}
 		}
@@ -112,7 +112,6 @@ country_event = {
 				add_prestige = -200
 				set_government_rank = 1
 			}
-			custom_tooltip = tooltip_line_divider
 			if = {
 				limit = {
 					government = republic
