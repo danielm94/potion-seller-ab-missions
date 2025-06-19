@@ -684,6 +684,10 @@ country_event = {
 				ruler_has_personality = impaler_personality
 			}
 		}
+		wallachian_terror_emperor_impalement_effect = yes
+		custom_tooltip = emperor_impalement_concequences_tooltip
+		custom_tooltip = emperor_impalement_concequences_opportunism_tooltip
+		custom_tooltip = emperor_impalement_concequences_outcomes_tooltip
 		hidden_effect = {
 			imperial_retribution_find_strongest_hre_prince = {
 				event_target_name_to_save_as = retribution_leader
@@ -745,6 +749,20 @@ country_event = {
 		highlight = yes
 		trigger = {
 			ruler_has_personality = impaler_personality
+		}
+		wallachian_terror_emperor_impalement_effect = yes
+		custom_tooltip = emperor_impalement_concequences_tooltip
+		custom_tooltip = emperor_impalement_concequences_opportunism_tooltip
+		custom_tooltip = emperor_impalement_concequences_outcomes_tooltip
+		hidden_effect = {
+			imperial_retribution_find_strongest_hre_prince = {
+				event_target_name_to_save_as = retribution_leader
+			}
+			event_target:retribution_leader = {
+				country_event = {
+					id = imperial_retribution_events.0
+				}
+			}
 		}
 	}
 }
