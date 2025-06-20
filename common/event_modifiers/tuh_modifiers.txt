@@ -309,7 +309,7 @@ festering_paranoia = {
 
 tuh_less_oversight_on_the_boieri = {
 	nobles_influence_modifier = 0.05
-	yearly_corruption = 0.05
+	yearly_corruption = 0.02
 }
 
 return_of_the_emperor_tooltip_mod = {
