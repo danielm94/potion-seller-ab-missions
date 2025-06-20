@@ -1196,6 +1196,125 @@ ab_wal_4 = {
 			}
 		}
 	}
+	wal_secure_the_straits = {
+		icon = mission_the_bospborus
+		position = 5
+		required_missions = {
+			wal_conquer_greece
+			wal_conquer_nicaea
+		}
+		trigger = {
+			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			any_owned_province = {
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				area = hudavendigar_area
+			}
+			any_owned_province = {
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				area = aydin_area
+			}
+			any_owned_province = {
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				area = thrace_area
+			}
+			any_owned_province = {
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				area = macedonia_area
+			}
+			any_owned_province = {
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				area = morea_area
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			custom_tooltip = wal_secure_the_straits_province_bonus_tooltip
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						area = thrace_area
+						has_trade_building_trigger = yes
+						OR = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = wallachia_imperial_maratime_hub
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = hudavendigar_area
+							area = aydin_area
+							area = thrace_area
+							area = macedonia_area
+							area = morea_area
+							area = northern_greece_area
+							area = aegean_archipelago_area
+						}
+						has_trade_building_trigger = yes
+						OR = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = wallachia_imperial_maratime_hub
+						duration = -1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_ionian_company_investments
+				duration = 14600
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = wal_secure_the_straits_movilesti_bonus_tooltip
+			tooltip = {
+				define_advisor = {
+					type = trader
+					skill = 2
+					cost_multiplier = 0.35
+					age = 20
+					culture = ROOT
+					religion = ROOT
+				}
+				add_mercantilism = 5
+			}"
+			}
+			set_country_flag = movilesti_election_bonus
+		}
+	}
 }
 
 ab_wal_5 = {
@@ -1206,6 +1325,7 @@ ab_wal_5 = {
 	potential = {
 		is_or_was_wallachia = yes
 	}
+	#TODO: Spread this mission's rewards across another 1 or 2 missions
 	wal_seal_the_carpathians = {
 		icon = gfx_wal_seal_the_carpathians
 		position = 4
@@ -1263,16 +1383,78 @@ ab_wal_5 = {
 			}
 			custom_tooltip = buffed_bran_castle_reward_tooltip
 			set_country_flag = upgraded_bran_castle
-
 			custom_tooltip = wal_fort_advisor_buff_flag_tooltip
 			set_country_flag = wal_fort_advisor_buff_flag
-			
+			custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
+			set_country_flag = panonic_spread_extra
 			define_advisor = {
 				type = fortification_expert
 				skill = 2
 				cost_multiplier = 0.5
 				culture = transylvanian
 				religion = root
+			}
+		}
+	}
+	wal_conquer_nicaea = {
+		icon = mission_nicaea
+		position = 5
+		required_missions = {
+			wal_worlds_desire
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hudavendigar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = anatolia_region
+			}
+			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = wal_nicaea_dead_tooltip
+				first_limit = "NOT = {
+				exists = NCI
+			}"
+				first_effect = "custom_tooltip = wal_nicaea_lose_all_cores_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_core = NCI
+					}
+					remove_core = NCI
+				}
+			}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = byzantium_pushing
+				duration = 5475
+			}
+			add_army_professionalism = 0.05
+			custom_tooltip = AB_EMPTY
+			316 = {
+				add_unit_construction = {
+					type = galley
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
 			}
 		}
 	}

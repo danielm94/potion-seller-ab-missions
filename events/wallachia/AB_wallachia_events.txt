@@ -1,22 +1,4 @@
 namespace = AB_wallachia_events
-
-#Reduce WE by the amount of stab hit reduction
-country_event = {
-	id = AB_wallachia_events.0
-	title = AB_wallachia_events.0.t
-	desc = AB_wallachia_events.0.d
-	picture = GFX_AB_wallachia_events.0
-	is_triggered_only = yes
-	hidden = yes
-	immediate = {
-		add_war_exhaustion = -5
-	}
-	option = {
-		name = AB_wallachia_events.0.a
-		
-	}
-}
-
 #Give ruler impaler trait
 country_event = {
 	id = AB_wallachia_events.1
@@ -551,7 +533,18 @@ province_event = {
 		NOT = {
 			culture_group = romanian_culture_group
 		}
-		culture_group = carpathian
+		OR = {
+			culture_group = carpathian
+			AND = {
+				owner = {
+					has_country_flag = panonic_spread_extra
+				}
+				OR = {
+					culture = Pannonian
+					culture = slovak
+				}
+			}
+		}
 		any_neighbor_province = {
 			owned_by = ROOT
 			culture_group = romanian_culture_group

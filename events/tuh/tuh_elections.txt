@@ -442,6 +442,20 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = movilesti_election_bonus
+			}
+			define_advisor = {
+				type = trader
+				skill = 2
+				cost_multiplier = 0.35
+				age = 20
+				culture = ROOT
+				religion = ROOT
+			}
+			add_mercantilism = 5
+		}
 	}
 	option = {
 		name = tuh_elections.0.f
