@@ -1471,7 +1471,7 @@
 4703 = "Croia"
 4704 = "Tirnovo"
 4705 = "Komotini"
-4706 = "Constantsa"
+4706 = "Constanta"
 4709 = "Pasau"
 4710 = "Bregent"
 4711 = "Donauworth"
