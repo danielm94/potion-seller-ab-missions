@@ -358,3 +358,8 @@ wallachia_imperial_maratime_hub = {
 	local_center_of_trade_upgrade_cost = -0.25
 	movilesti_faction_influence = 0.02
 }
+
+wallachia_reintroduce_the_theme_system = {
+	manpower_recovery_speed = 0.1
+	state_maintenance_modifier = -0.1
+}

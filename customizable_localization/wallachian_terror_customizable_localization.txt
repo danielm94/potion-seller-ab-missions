@@ -152,6 +152,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_sel_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = SEL
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -192,6 +200,14 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = BYZ
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_sel_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = SEL
 			}
 		}
 	}
@@ -243,6 +259,14 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = event_target:retribution_leader
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_sel_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = SEL
 			}
 		}
 	}

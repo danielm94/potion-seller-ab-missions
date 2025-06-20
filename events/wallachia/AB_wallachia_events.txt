@@ -1407,3 +1407,67 @@ country_event = {
 		}
 	}
 }
+
+#Greek Resettlement of Anatolia, Requires Mavrocordatos or Cantacuzino
+province_event = {
+	id = AB_wallachia_events.30
+	title = blank
+	desc = blank
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_government_attribute = romanian_elective_monarchy
+			has_country_flag = tuh_anatolia_greek_resettlement
+			OR = {
+				dynasty = "Cantacuzino"
+				dynasty = "Mavrocordatos"
+			}
+		}
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = byzantine
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = tuh_greeks_settled_recently
+				}
+				had_country_flag = {
+					flag = tuh_greeks_settled_recently
+					days = 730
+				}
+			}
+		}
+		region = anatolia_region
+		religion = ROOT
+	}
+	option = {
+		name = blank
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = tuh_greeks_settled_recently
+		}
+		change_culture = greek
+	}
+}

@@ -1787,6 +1787,12 @@ wallachian_terror_special_country_impalement_effects = {
 			}
 			wallachian_terror_retribution_leader_effect = yes
 		}
+		else_if = {
+			limit = {
+				tag = SEL
+			}
+			wallachian_terror_seljuk_impalement_effects = yes
+		}
 	}
 }
 
@@ -1982,6 +1988,40 @@ wallachian_terror_retribution_leader_effect = {
 					duration = 1825
 				}
 			}
+		}
+	}
+}
+
+#ROOT = Seljuks
+wallachian_terror_seljuk_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_seljuks
+				}
+			}
+		}
+		add_prestige = -20
+		random_owned_province = {
+			limit = {
+				religion = orthodox
+			}
+			spawn_rebels = {
+				size = 5
+				type = orthodox_rebels
+				friend = event_target:impaler_country
+			}
+		}
+		event_target:impaler_country = {
+			add_ruler_modifier = {
+				name = byz_avenger
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			set_country_flag = wallachia_impaled_seljuks
 		}
 	}
 }

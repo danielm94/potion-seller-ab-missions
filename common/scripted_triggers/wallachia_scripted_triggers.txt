@@ -20,10 +20,10 @@ is_special_impaled_country = {
 		OR = {
 			tag = BUL			#Bulgaria
 			tag = MGY			#Magyars
-			tag = GLH
-			tag = BYZ
+			tag = GLH			#Golden Horde
+			tag = BYZ			#Byzantium
 			tag = event_target:retribution_leader
-			#In the future, HRE emperor, EOC, the pope...
+			tag = SEL			#Seljuks
 		}
 	}
 }

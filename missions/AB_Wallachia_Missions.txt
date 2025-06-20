@@ -1253,15 +1253,7 @@ ab_wal_4 = {
 			add_mercantilism = 5
 			custom_tooltip = wal_secure_the_straits_province_bonus_tooltip
 			tooltip = {
-				random_owned_province = {
-					limit = {
-						area = thrace_area
-						has_trade_building_trigger = yes
-						OR = {
-							has_dock_building_trigger = yes
-							has_shipyard_building_trigger = yes
-						}
-					}
+				151 = {
 					add_province_modifier = {
 						name = wallachia_imperial_maratime_hub
 						duration = -1
@@ -1299,7 +1291,8 @@ ab_wal_4 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
-				first_effect = "custom_tooltip = wal_secure_the_straits_movilesti_bonus_tooltip
+				first_effect = "set_country_flag = movilesti_election_bonus
+				custom_tooltip = wal_secure_the_straits_movilesti_bonus_tooltip
 			tooltip = {
 				define_advisor = {
 					type = trader
@@ -1455,6 +1448,69 @@ ab_wal_5 = {
 					speed = 0.5
 					cost = 0
 				}
+			}
+		}
+	}
+	wal_conquer_anatolia = {
+		icon = geo_turkoman
+		position = 6
+		required_missions = {
+			wal_conquer_nicaea
+		}
+		provinces_to_highlight = {
+			region = anatolia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = mashriq_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = samtskhe_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = imereti_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = kartli_kakheti_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = armenia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_army_tradition_or_mil_power = {
+				amount = 25
+			}
+			add_country_modifier = {
+				name = wallachia_reintroduce_the_theme_system
+				duration = -1
+			}
+
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_seljuks_tooltip
+				first_limit = "has_country_flag = wallachia_impaled_seljuks"
+				first_effect = "			change_terror = {
+				value = 20
+				scaled_with_gain_modifier = yes
+			}
+			add_adm_power = 10
+			add_dip_power = 10
+			add_mil_power = 10"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_anatolia_greek_resettlement
+			custom_tooltip = tuh_greek_resettlement_anatolia"
 			}
 		}
 	}
