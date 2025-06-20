@@ -341,3 +341,20 @@ wallachia_carpathian_defenses = {
 	local_defensiveness = 0.2
 	local_assault_fort_ability = -0.5
 }
+
+wallachia_ionian_company_investments = {
+	trade_company_investment_cost = -0.5
+	trade_company_governing_cost = -0.25
+	global_trade_power = 0.1
+}
+
+wallachia_imperial_maratime_hub = {
+	block_slave_raid = yes
+	local_ship_cost = -0.25
+	local_sailors_modifier = 0.25
+	ship_recruit_speed  = -0.25
+	province_trade_power_modifier =0.25
+	trade_value_modifier  = 0.25
+	local_center_of_trade_upgrade_cost = -0.25
+	movilesti_faction_influence = 0.02
+}
