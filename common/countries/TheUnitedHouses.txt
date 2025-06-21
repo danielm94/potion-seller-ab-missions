@@ -1,8 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = easterngfx
-color = { 44 45 84 }
-revolutionary_colors = { 13 8 5 }
+color = {
+	44
+	45
+	84
+}
+
+revolutionary_colors = {
+	13
+	8
+	5
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -75,8 +83,7 @@ monarch_names = {
 	"Sergiu #0" = 0
 	"Teodor #0" = 0
 	"Valeriu #0" = 0
-	
-	"Rahela #0" = -1 
+	"Rahela #0" = -1
 	"Flavia #0" = -1
 	"Cosmina #0" = -1
 	"Elena #0" = -1
@@ -103,16 +110,26 @@ monarch_names = {
 }
 
 leader_names = {
-	Basarab Brancoveanu
-	Cantacuzino Caragea Craiovescu
-	Dracul Duca
-	Ghica Golescu
-	Ilias Ipsilanti
-	Mavrocordat Mircea Moruzi
+	Basarab
+	Brancoveanu
+	Cantacuzino
+	Caragea
+	Craiovescu
+	Dracul
+	Duca
+	Ghica
+	Golescu
+	Ilias
+	Ipsilanti
+	Mavrocordat
+	Mircea
+	Moruzi
 	Racovita
 	Sutu
-	Tepelus Tolmay
-	Vacarescu Voda
+	Tepelus
+	Tolmay
+	Vacarescu
+	Voda
 	Movila
 	Buicescu
 	Stirbei
@@ -129,11 +146,10 @@ leader_names = {
 	Zamfirescu
 }
 
-
 ship_names = {
 	Dracul
 	Viteazul
-	Putera mari
+	"Putera mari"
 	Sperietoaria
 	"Frumuseatsa valurilor"
 	Posada
@@ -146,22 +162,40 @@ ship_names = {
 	Arges
 	Oltul
 	Mircea
-	Mihai Viteazul
+	"Mihai Viteazul"
 	Bran
 	Fulgerul
-	Sfantul Andrei
-	Corbul Negru
+	"Sfantul Andrei"
+	"Corbul Negru"
 	Dacia
 	Alutus
-	Straja Dunarii
-	Stefan cel Mare
+	"Straja Dunarii"
+	"Stefan cel Mare"
 }
 
-
 army_names = {
-	"Oastea de $PROVINCE$" 
+	"Oastea de $PROVINCE$"
+	"Oastea Mare"
+	"Armata Domneasca"
+	"Armata Tarii"
+	"Armata Munteniei"
+	"Armata Olteniei"
+	"Armata Moldovei"
+	"Armata Ardealului"
+	"Armata Carpatilor"
+	"Armata Dunarii"
 }
 
 fleet_names = {
-	Flota Domneasca din $PROVINCE$
+	"Flota Marii Negre"
+	"Flota Dunarii"
+	"Straja Marii"
+	"Straja Dunarii"
+	"Escadra Rosie"
+	"Escadra Albastra"
+	"Escadra Neagra"
+	"Panzele Domnesti"
+	"Lupii Marii"
+	"Flota $PROVINCE$"
+	"Straja $PROVINCE$"
 }
