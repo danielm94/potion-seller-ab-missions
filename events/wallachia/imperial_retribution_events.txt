@@ -104,7 +104,7 @@ country_event = {
 						amount = 999
 					}
 				}
-				custom_tooltip = blank
+				custom_tooltip = AB_EMPTY
 				reduce_stability = {
 					amount = 6
 				}
@@ -363,7 +363,7 @@ country_event = {
 					}
 				}
 			}
-			custom_tooltip = blank
+			custom_tooltip = AB_EMPTY
 			reduce_stability = {
 				amount = 6
 			}

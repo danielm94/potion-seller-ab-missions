@@ -299,7 +299,7 @@ ab_wal_2 = {
 				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
 				first_effect = "custom_tooltip = wallachian_terror_reduced_raze_penalty_tooltip"
 			}
-			custom_tooltip = blank
+			custom_tooltip = AB_EMPTY
 			#TUH
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
@@ -833,14 +833,14 @@ ab_wal_3 = {
 					amount = 1
 				}"
 			}
-			custom_tooltip = blank
+			custom_tooltip = AB_EMPTY
 			free_up_bad_ruler_personality_if_full = yes
 			add_ruler_personality = legendary_conqueror_personality
 			custom_tooltip = tooltip_line_divider
 			add_prestige_or_monarch_power = {
 				amount = 25
 			}
-			custom_tooltip = blank
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = wallachia_balkan_hegemon
 				duration = 36500
@@ -1107,7 +1107,7 @@ ab_wal_4 = {
 				scaled_with_gain_modifier = yes
 			}"
 			}
-			custom_tooltip = blank
+			custom_tooltip = AB_EMPTY
 			set_government_rank = 3
 			add_prestige_or_monarch_power = {
 				amount = 10

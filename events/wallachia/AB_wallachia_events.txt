@@ -30,7 +30,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
@@ -46,7 +46,7 @@ country_event = {
 		disable_razing = yes
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
@@ -62,7 +62,7 @@ country_event = {
 		clr_country_flag = wallachian_terror_gain_terror_from_dead_enemies
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
@@ -383,13 +383,13 @@ country_event = {
 #idea groups from governemnt reforms. Very stupid.
 country_event = {
 	id = AB_wallachia_events.11
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		name = blank
+		name = AB_EMPTY
 		if = {
 			limit = {
 				humanist_ideas = 7
@@ -507,8 +507,8 @@ country_event = {
 #Romanianization of Hungary & Transylvania
 province_event = {
 	id = AB_wallachia_events.20
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	hidden = yes
 	mean_time_to_happen = {
@@ -564,7 +564,7 @@ province_event = {
 		religion = ROOT
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 		ai_chance = {
 			factor = 1
 		}
@@ -1302,8 +1302,8 @@ country_event = {
 #Romanianization of Slavic Balkan Provinces, Except Bulgarian
 province_event = {
 	id = AB_wallachia_events.28
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	hidden = yes
 	mean_time_to_happen = {
@@ -1355,7 +1355,7 @@ province_event = {
 		religion = ROOT
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 		ai_chance = {
 			factor = 1
 		}
@@ -1411,8 +1411,8 @@ country_event = {
 #Greek Resettlement of Anatolia, Requires Mavrocordatos or Cantacuzino
 province_event = {
 	id = AB_wallachia_events.30
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	hidden = yes
 	mean_time_to_happen = {
@@ -1461,7 +1461,7 @@ province_event = {
 		religion = ROOT
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 		ai_chance = {
 			factor = 1
 		}

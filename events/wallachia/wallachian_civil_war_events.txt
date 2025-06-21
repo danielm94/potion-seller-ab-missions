@@ -146,8 +146,8 @@ country_event = {
 #Civil War In Progress Event Dispatcher
 country_event = {
 	id = wallachian_civil_war_events.3
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
@@ -239,15 +239,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
 #House Rebel Dispatcher
 country_event = {
 	id = wallachian_civil_war_events.4
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
@@ -373,15 +373,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
 #House Rebel Loyalty For Sale Dispatcher
 country_event = {
 	id = wallachian_civil_war_events.5
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
@@ -480,15 +480,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
 #Paranoia event dispatcher
 country_event = {
 	id = wallachian_civil_war_events.6
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
@@ -557,7 +557,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
@@ -1183,8 +1183,8 @@ country_event = {
 #Check for defeated rebel event.
 country_event = {
 	id = wallachian_civil_war_events.18
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
@@ -1192,7 +1192,7 @@ country_event = {
 		wallachian_civil_war_check_for_defeated_houses_effect = yes
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
@@ -1667,8 +1667,8 @@ country_event = {
 #Civil War Ending Event Dispatcher
 country_event = {
 	id = wallachian_civil_war_events.37
-	title = blank
-	desc = blank
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = AB_LOTHAIR_eventPicture
 	is_triggered_only = yes
 	hidden = yes
@@ -1733,7 +1733,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = blank
+		name = AB_EMPTY
 	}
 }
 
