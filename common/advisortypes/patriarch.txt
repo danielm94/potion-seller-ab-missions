@@ -17,7 +17,12 @@ patriarch = {
 		modifier = {
 			factor = 0
 			owner = {
-				uses_patriarch_authority = no
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					religion = nestorian
+				}
 			}
 		}
 		modifier = {
