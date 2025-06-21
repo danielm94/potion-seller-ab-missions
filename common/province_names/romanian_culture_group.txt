@@ -99,7 +99,7 @@
 367 = "Azore"
 377 = "Alep"
 378 = "Tripoli"
-379 = "Ierusalim"
+379 = {"Iudeea" "Ierusalim"}
 382 = "Damasc"
 390 = "Sanaa"
 410 = "Bagdad"
