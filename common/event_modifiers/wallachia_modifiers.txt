@@ -363,3 +363,15 @@ wallachia_reintroduce_the_theme_system = {
 	manpower_recovery_speed = 0.1
 	state_maintenance_modifier = -0.1
 }
+
+wallachia_gate_of_the_caucasus = {
+	local_defender_dice_roll_bonus = 1
+	local_defensiveness = 0.25
+	local_hostile_attrition = 2
+	local_garrison_size = 0.25
+}
+
+wallachia_build_narikala_fortress = {
+	local_great_project_upgrade_cost = -0.5
+	local_great_project_upgrade_time = -0.5
+}

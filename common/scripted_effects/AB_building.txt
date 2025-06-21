@@ -377,6 +377,18 @@ ab_building_fort_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = { 
+			owner = {
+				has_country_flag = wal_buffed_caucasian_forts
+			}
+			region = caucasia_region
+		}
+		add_province_modifier = {
+			name = wallachia_gate_of_the_caucasus
+			duration = -1
+		}
+	}
 }
 
 ab_removing_fort_effect = {
