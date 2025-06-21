@@ -1,0 +1,36 @@
+patriarch = {
+	monarch_power = ADM
+	yearly_patriarch_authority = 0.005
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				uses_meritocracy = yes
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+	allow_only_male = yes
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+				uses_patriarch_authority = no
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = {
+				religion = orthodox
+			}
+			NOT = {
+				religion = nestorian
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
