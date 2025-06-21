@@ -11,6 +11,26 @@ patriarch = {
 			meritocracy = 0.25
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_constantinople
+			}
+		}
+		modifier = {
+			tolerance_own = 0.5
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_antioch
+			}
+		}
+		modifier = {
+			missionary_maintenance_cost = -0.05
+		}
+	}
 	allow_only_male = yes
 	chance = {
 		factor = 1

@@ -375,3 +375,10 @@ wallachia_build_narikala_fortress = {
 	local_great_project_upgrade_cost = -0.5
 	local_great_project_upgrade_time = -0.5
 }
+
+wallachia_patriarchate_of_antiohia = {
+	yearly_patriarch_authority = 0.001
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_missionary_strength = 0.03
+}

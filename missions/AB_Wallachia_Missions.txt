@@ -1109,12 +1109,31 @@ ab_wal_4 = {
 			}
 			custom_tooltip = AB_EMPTY
 			set_government_rank = 3
+			custom_tooltip = AB_EMPTY
 			add_prestige_or_monarch_power = {
 				amount = 10
 			}
+			custom_tooltip = AB_EMPTY
 			add_legitimacy_or_mil_power = {
 				amount = 10
 			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 1
+				cost_multiplier = 0.25
+				culture = greek
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Constantinopol"
+				location = 151
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = patriarch_constantinople_buff
+			set_country_flag = patriarch_of_constantinople
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
 			country_event = {
 				id = AB_wallachia_events.21
 			}
@@ -1308,6 +1327,78 @@ ab_wal_4 = {
 			set_country_flag = movilesti_election_bonus
 		}
 	}
+	wal_conquer_antioch = {
+		icon = gfx_wal_conquer_antioch
+		position = 7
+		required_missions = {
+			wal_conquer_anatolia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				area = syrian_desert_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			aleppo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			syrian_desert_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = palestine_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = trans_jordan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = al_jazira_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = iraq_arabi_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = basra_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = patriarch
+				skill = 2
+				cost_multiplier = 0.25
+				culture = greek
+				religion = orthodox
+				location = 2313
+				age = 40
+				name = "The Patriarch of Antiohia"
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = patriarch_of_antioch
+			custom_tooltip = patriarch_of_antioch_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			2313 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_antiohia
+					duration = -1
+				}
+				rename_capital = "Antiohia"
+			}
+		}
+	}
 }
 
 ab_wal_5 = {
@@ -1471,7 +1562,13 @@ ab_wal_5 = {
 		}
 		effect = {
 			add_permanent_claim_multi_provinces = {
-				target = mashriq_region
+				target = aleppo_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = syria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = syrian_desert_area
 			}
 			add_permanent_claim_multi_provinces = {
 				target = samtskhe_area
@@ -1604,3 +1701,5 @@ ab_wal_5 = {
 		}
 	}
 }
+
+#TODO: COUNTRY RENAME TO Imparatia Romanilor

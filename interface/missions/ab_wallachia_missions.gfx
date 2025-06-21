@@ -35,4 +35,8 @@ spriteTypes = {
 		name = "gfx_wal_seal_the_carpathians"
 		texturefile = "gfx/interface/missions/wal/wal_seal_the_carpathians.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_conquer_antioch"
+		texturefile = "gfx/interface/missions/wal/wal_conquer_antioch.dds"
+	}
 }
