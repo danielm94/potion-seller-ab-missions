@@ -75,3 +75,11 @@ has_bran_castle_bonus = {
 		has_country_flag = upgraded_bran_castle
 	}
 }
+
+has_access_to_wallachian_missions = {
+	OR = {
+		tag = WAL
+		tag = DAC
+		tag = TUH
+	}
+}
