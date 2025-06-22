@@ -400,3 +400,10 @@ wallachia_develop_bagdad = {
 	great_project_upgrade_cost = -0.25
 	build_cost = -0.1
 }
+
+wallachia_prepare_to_land_in_sicily = {
+	naval_tradition_from_battle = 1
+	global_ship_recruit_speed = -0.25
+	galley_cost = -0.5
+	landing_penalty = -1
+}
