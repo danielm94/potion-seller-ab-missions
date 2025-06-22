@@ -103,4 +103,12 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_advisor_romanian_culture_group_patriarch"
+		texturefile = "gfx/interface/advisors/romanian_patriarch.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
 }
