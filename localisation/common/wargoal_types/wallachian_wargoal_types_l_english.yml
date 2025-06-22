@@ -1,9 +1,12 @@
 ﻿l_english:
  eastern_roman_wargoal: "Show Superiority"
+ eastern_roman_wargoal_desc: "We must crush the enemies of Rome!"
  western_roman_wargoal: "Show Superiority"
+ western_roman_wargoal_desc: "We must crush the enemies of Rome!"
  roman_war_name: "$ORDER$$FIRST$-$SECOND$ War of Roman Reclamation"
- imperial_retribution: "The Imperial Retribution"
  punish_the_regicide: "Show Superiority"
+ punish_the_regicide_desc: "We must annihilate the Antichrist's armies!"
+ imperial_retribution: "The Imperial Retribution"
  conquer_persia_wargoal: "Show Superiority"
  conquer_persia_wargoal_desc: "We need to finish what the emperors before us have started!"
  roman_persian_war_name: "$ORDER$$FIRST$-$SECOND$ Roman - Persian War"
