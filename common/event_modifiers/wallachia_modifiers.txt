@@ -352,9 +352,9 @@ wallachia_imperial_maratime_hub = {
 	block_slave_raid = yes
 	local_ship_cost = -0.25
 	local_sailors_modifier = 0.25
-	ship_recruit_speed  = -0.25
-	province_trade_power_modifier =0.25
-	trade_value_modifier  = 0.25
+	ship_recruit_speed = -0.25
+	province_trade_power_modifier = 0.25
+	trade_value_modifier = 0.25
 	local_center_of_trade_upgrade_cost = -0.25
 	movilesti_faction_influence = 0.02
 }
@@ -381,4 +381,22 @@ wallachia_patriarchate_of_antiohia = {
 	local_development_cost = -0.1
 	local_build_cost = -0.1
 	local_missionary_strength = 0.03
+}
+
+wallachia_patriarchate_of_ierusalim = {
+	yearly_patriarch_authority = 0.001
+	local_missionary_strength = 0.04
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
+}
+
+wallachia_prepare_persia_invasion = {
+	global_regiment_recruit_speed = -0.25
+	siege_ability = 0.1
+	warscore_cost_vs_other_religion = -0.1
+}
+wallachia_develop_bagdad = {
+	local_development_cost = -0.15
+	great_project_upgrade_cost = -0.25
+	build_cost = -0.1
 }

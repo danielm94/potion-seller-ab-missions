@@ -31,6 +31,17 @@ patriarch = {
 			missionary_maintenance_cost = -0.05
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_jersualem
+			}
+		}
+		modifier = {
+			reverse_relation_with_same_religion = 5
+			reverse_relation_with_heretic_religion = 5
+		}
+	}
 	allow_only_male = yes
 	chance = {
 		factor = 1

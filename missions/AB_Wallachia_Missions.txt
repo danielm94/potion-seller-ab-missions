@@ -836,7 +836,7 @@ ab_wal_3 = {
 			custom_tooltip = AB_EMPTY
 			free_up_bad_ruler_personality_if_full = yes
 			add_ruler_personality = legendary_conqueror_personality
-			custom_tooltip = tooltip_line_divider
+			custom_tooltip = AB_EMPTY
 			add_prestige_or_monarch_power = {
 				amount = 25
 			}
@@ -1344,6 +1344,10 @@ ab_wal_4 = {
 			}
 		}
 		trigger = {
+			2313 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
 			aleppo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1396,6 +1400,67 @@ ab_wal_4 = {
 					duration = -1
 				}
 				rename_capital = "Antiohia"
+			}
+		}
+	}
+	wal_conquer_judea = {
+		icon = convert_the_holy_lands
+		position = 8
+		required_missions = {
+			wal_conquer_antioch
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = palestine_area
+				area = trans_jordan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			379 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			trans_jordan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = egypt_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = saharan_oases
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_suryah_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Ierusalim"
+				location = 151
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			set_country_flag = patriarch_of_jersualem
+			custom_tooltip = patriarch_of_jersualem_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			379 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_ierusalim
+					duration = -1
+				}
 			}
 		}
 	}
@@ -1698,6 +1763,56 @@ ab_wal_5 = {
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = wal_fort_advisor_buff_flag_tooltip
 			set_country_flag = wal_fort_advisor_buff_flag
+		}
+	}
+	wal_conquer_iraq = {
+		icon = mission_cradle_of_civilization
+		position = 8
+		required_missions = {
+			wal_conquer_antioch
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = basra_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = persia_region
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_prepare_persia_invasion
+				duration = 7300
+			}
+			410 = {
+				add_province_modifier = {
+					name = wallachia_develop_bagdad
+					duration = -1
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
 		}
 	}
 }
