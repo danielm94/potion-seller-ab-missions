@@ -160,6 +160,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_ven_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = VEN
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -208,6 +216,14 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = SEL
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_ven_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = VEN
 			}
 		}
 	}
@@ -267,6 +283,49 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = SEL
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_ven_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = VEN
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = wallachian_terror_method_of_execution_localisation
+	random = no
+	text = {
+		localisation_key = wallachian_terror_events_impale_family_default_tooltip
+		trigger = {
+			event_target:impaled_country = {
+				is_special_execution_country = no
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_venice_execution_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = yes
+			}
+			event_target:impaled_country = {
+				tag = VEN
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_impale_family_default_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = no
+			}
+			event_target:impaled_country = {
+				tag = VEN
 			}
 		}
 	}

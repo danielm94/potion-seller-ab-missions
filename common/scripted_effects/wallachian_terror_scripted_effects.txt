@@ -1688,6 +1688,8 @@ wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = {
 }
 
 wallachian_terror_impalement_effect = {
+	custom_tooltip = wallachian_terror_events_impale_family_tooltip
+	custom_tooltip = AB_EMPTY
 	custom_tooltip = wallachian_terror_events_convert_ruler_to_mana_tooltip
 	hidden_effect = {
 		wallachian_terror_convert_impaled_ruler_to_mana = yes
@@ -1729,7 +1731,6 @@ wallachian_terror_impalement_effect = {
 		custom_tooltip = wallachian_terror_events_hre_reaction_tooltip
 	}
 	custom_tooltip = tooltip_line_divider
-	custom_tooltip = wallachian_terror_events_impale_family_tooltip
 	hidden_effect = {
 		event_target:impaled_country = {
 			kill_consort = yes
@@ -1792,6 +1793,40 @@ wallachian_terror_special_country_impalement_effects = {
 				tag = SEL
 			}
 			wallachian_terror_seljuk_impalement_effects = yes
+		}
+		else_if = {
+			limit = {
+				tag = VEN
+			}
+			wallachian_terror_venice_impalement_effects = yes
+		}
+	}
+}
+
+#ROOT = Venice
+wallachian_terror_venice_impalement_effects = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				NOT = {
+					has_country_flag = wallachia_impaled_venice
+				}
+			}
+		}
+		add_prestige = -20
+		add_mercantilism = -10
+		add_navy_tradition = -20
+		event_target:impaler_country = {
+			add_ruler_modifier = {
+				name = wallachia_impaled_venice_modifier
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_mercantilism = 4
+			add_navy_tradition = 10
+			set_country_flag = wallachia_impaled_venice
 		}
 	}
 }
@@ -2027,6 +2062,8 @@ wallachian_terror_seljuk_impalement_effects = {
 }
 
 wallachian_terror_emperor_impalement_effect = {
+	custom_tooltip = wallachian_terror_emperor_impaled_tooltip
+	custom_tooltip = AB_EMPTY
 	custom_tooltip = wallachian_terror_events_convert_emperor_to_mana_tooltip
 	hidden_effect = {
 		wallachian_terror_convert_impaled_emperor_to_mana = yes
@@ -2067,7 +2104,6 @@ wallachian_terror_emperor_impalement_effect = {
 		}
 	}
 	custom_tooltip = tooltip_line_divider
-	custom_tooltip = wallachian_terror_emperor_impaled_tooltip
 	hidden_effect = {
 		event_target:impaled_country = {
 			kill_consort = yes

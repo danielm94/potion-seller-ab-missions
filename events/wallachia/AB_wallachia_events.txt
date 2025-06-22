@@ -1474,3 +1474,474 @@ province_event = {
 		change_culture = greek
 	}
 }
+
+#The Fate of Venice
+country_event = {
+	id = AB_wallachia_events.31
+	title = AB_wallachia_events.31.t
+	desc = AB_wallachia_events.31.d
+	picture = GFX_AB_wallachia_events.31
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.31.a
+		trigger = {
+			is_ruler_impaler = no
+		}
+		112 = {
+			custom_tooltip = sack_of_venice_tooltip
+			hidden_effect = {
+				export_to_variable = {
+					which = BYZ_amount_of_dev
+					value = trigger_value:development
+				}
+				multiply_variable = {
+					which = BYZ_amount_of_dev
+					value = 0.75
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = BYZ_amount_of_dev
+							value = 1
+						}
+						OR = {
+							base_tax = 2
+							base_production = 2
+							base_manpower = 2
+						}
+					}
+					random_list = {
+						1 = {
+							trigger = {
+								base_tax = 2
+							}
+							add_base_tax = -1
+							ROOT = {
+								add_treasury = 75
+								add_adm_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_production = 2
+							}
+							add_base_production = -1
+							ROOT = {
+								add_treasury = 75
+								add_dip_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_manpower = 2
+							}
+							add_base_manpower = -1
+							ROOT = {
+								add_treasury = 75
+								add_mil_power = 10
+							}
+						}
+					}
+					change_variable = {
+						which = BYZ_amount_of_dev
+						value = -1
+					}
+				}
+				set_variable = {
+					which = BYZ_amount_of_dev
+					value = 0
+				}
+			}
+			hidden_effect = {
+				remove_all_buildings_effect = yes
+				destroy_great_project = {
+					type = doges_palace
+				}
+				destroy_great_project = {
+					type = venetian_arsenal_gp
+				}
+				owner = {
+					set_country_flag = cant_rebuild_venetian_gp
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_devastation = 75
+			add_permanent_province_modifier = {
+				name = BYZ_chastening_of_venice
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			151 = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+		add_patriarch_authority = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = burghers_not_happy_with_sack_tooltip
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		if = {
+			limit = {
+				exists = VEN
+			}
+			custom_tooltip = AB_EMPTY
+			VEN = {
+				add_opinion = {
+					who = PREV
+					modifier = razed_venice
+				}
+			}
+		}
+		play_sound = burncolony
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = AB_wallachia_events.31.a_impaler
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		112 = {
+			custom_tooltip = sack_of_venice_tooltip
+			hidden_effect = {
+				export_to_variable = {
+					which = BYZ_amount_of_dev
+					value = trigger_value:development
+				}
+				multiply_variable = {
+					which = BYZ_amount_of_dev
+					value = 0.75
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = BYZ_amount_of_dev
+							value = 1
+						}
+						OR = {
+							base_tax = 2
+							base_production = 2
+							base_manpower = 2
+						}
+					}
+					random_list = {
+						1 = {
+							trigger = {
+								base_tax = 2
+							}
+							add_base_tax = -1
+							ROOT = {
+								add_treasury = 75
+								add_adm_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_production = 2
+							}
+							add_base_production = -1
+							ROOT = {
+								add_treasury = 75
+								add_dip_power = 10
+							}
+						}
+						1 = {
+							trigger = {
+								base_manpower = 2
+							}
+							add_base_manpower = -1
+							ROOT = {
+								add_treasury = 75
+								add_mil_power = 10
+							}
+						}
+					}
+					change_variable = {
+						which = BYZ_amount_of_dev
+						value = -1
+					}
+				}
+				set_variable = {
+					which = BYZ_amount_of_dev
+					value = 0
+				}
+			}
+			hidden_effect = {
+				remove_all_buildings_effect = yes
+				destroy_great_project = {
+					type = doges_palace
+				}
+				destroy_great_project = {
+					type = venetian_arsenal_gp
+				}
+				owner = {
+					set_country_flag = cant_rebuild_venetian_gp
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_devastation = 75
+			add_permanent_province_modifier = {
+				name = BYZ_chastening_of_venice
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			151 = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = -1
+				}
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+		add_patriarch_authority = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = burghers_not_happy_with_sack_tooltip
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		if = {
+			limit = {
+				exists = VEN
+			}
+			custom_tooltip = AB_EMPTY
+			VEN = {
+				add_opinion = {
+					who = PREV
+					modifier = razed_venice
+				}
+			}
+		}
+		play_sound = burncolony
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = AB_wallachia_events.31.b
+		trigger = {
+			is_ruler_impaler = no
+		}
+		if = {
+			limit = {
+				151 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			151 = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = 7300
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = byzantine_treasures_returned
+					duration = 7300
+				}
+			}
+		}
+		custom_tooltip = pissed_at_no_revenge_tooltip
+		random_owned_province = {
+			limit = {
+				religion = orthodox
+			}
+			spawn_rebels = {
+				size = 2
+				type = orthodox_rebels
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		add_patriarch_authority = -0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		add_legitimacy = -10
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = wal_every_italian_opinion_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					culture_group = latin
+					if = {
+						limit = {
+							exists = VEN
+						}
+						NOT = {
+							is_rival = VEN
+						}
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = italian_spared_the_venetians
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+		custom_tooltip = wal_every_catholic_opinion_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = catholic
+					if = {
+						limit = {
+							exists = VEN
+						}
+						NOT = {
+							is_rival = VEN
+						}
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = catholic_spared_the_venetians
+				}
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}
+		}
+		custom_tooltip = wal_italian_adriatic_romanianization_tooltip
+		set_country_flag = wal_romanianization_of_adriatic_italians
+		romanianization_of_adriatic_italy_mark_provinces = yes
+		custom_tooltip = AB_EMPTY
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		custom_tooltip = AB_EMPTY
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+			first_limit = "has_government_attribute = romanian_elective_monarchy"
+			first_effect = "custom_tooltip = tuh_galleass_gift_tooltip"
+		}
+		set_country_flag = tuh_galleass_gift
+	}
+}
+
+#Romanianization of Adriatic provinces
+province_event = {
+	id = AB_wallachia_events.32
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_adriatic_italians
+		}
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		has_province_flag = WAL_adriaticii_province
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = tuh_romanianized_adriatic_recently
+				}
+				had_country_flag = {
+					flag = tuh_romanianized_adriatic_recently
+					days = 730
+				}
+			}
+		}
+		religion = ROOT
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = tuh_romanianized_adriatic_recently
+		}
+		change_culture = adriaticii
+	}
+}

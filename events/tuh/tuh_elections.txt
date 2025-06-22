@@ -870,5 +870,34 @@ country_event = {
 			}
 			tuh_fire_pretender_event_based_on_legitimacy = yes
 		}
+		if = {
+			limit = {
+				has_country_flag = tuh_galleass_gift
+			}
+			if = {
+				limit = {
+					owns = 112
+				}
+				112 = {
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+				}
+			}
+		}
 	}
 }

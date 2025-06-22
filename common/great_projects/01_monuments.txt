@@ -11396,14 +11396,21 @@ chan_chan_citadel = {
 doges_palace = {
 	start = 112 #Venice
 	date = 1340.01.01
-	time = { months = 0	}
-	build_cost = 0
+	time = { months = 240 }
+	build_cost = 2500
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 2
 	type = monument
 
 	build_trigger = {
+		hidden_trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = cant_rebuild_venetian_gp
+				}
+			}
+		}
 	}
 
 	on_built = {
@@ -19354,13 +19361,20 @@ al_azhar_university = {
 venetian_arsenal_gp = {
 	start = 112 
 	date = 1177.3.2
-	time = { months = 0	}
-	build_cost = 0
+	time = { months = 240 }
+	build_cost = 2500
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
 	build_trigger = {
+		hidden_trigger = {
+			owner = {
+				NOT = {
+					has_country_flag = cant_rebuild_venetian_gp
+				}
+			}
+		}
 	}
 	on_built = {
 	}

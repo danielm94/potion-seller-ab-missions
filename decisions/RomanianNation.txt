@@ -17,6 +17,7 @@ country_decisions = {
 				primary_culture = transylvanian
 				primary_culture = morlach
 				primary_culture = panonic
+				primary_culture = adriaticii
 			}
 			is_colonial_nation = no
 			OR = {

@@ -25,3 +25,20 @@ refused_to_join_in_retribution_war = {
 	min = -50
 	yearly_decay = 1
 }
+
+italian_spared_the_venetians = {
+	opinion = 25
+	max = 25
+	yearly_decay = 2
+}
+
+catholic_spared_the_venetians = {
+	opinion = 25
+	max = 25
+	yearly_decay = 2
+}
+razed_venice = {
+	opinion = -400
+	min = -400
+	yearly_decay = 1
+}

@@ -129,3 +129,25 @@ imperial_retribution_find_strongest_hre_prince = {
 		}
 	}
 }
+
+romanianization_of_adriatic_italy_mark_provinces = {
+	every_province = {
+		limit = {
+			OR = {
+				area = venetia_area
+				area = east_adriatic_coast_area
+				area = carinthia_area
+				area = croatia_area
+				area = rascia_area
+				area = albania_area
+				area = central_italy_area
+				area = apulia_area
+				province_id = 110
+				province_id = 113
+				province_id = 114
+			}
+			culture_group = latin
+		}
+		set_province_flag = WAL_adriaticii_province
+	}
+}

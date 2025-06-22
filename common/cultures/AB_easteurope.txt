@@ -1076,6 +1076,27 @@ romanian_culture_group = {
 			Sofia Stana Svetlana Tatjana Teodora Vesna Zora
 		}
 	}
+	adriaticii = {
+		primary = VEN
+		dynasty_names = {
+			"Basarab" "Bibescu" "Brancoveanu" "Cantacuzino" "Contarini" "Dandolo" 
+			"Draculesti" "Ghica" "Giustiniani" "Loredan" "Mocenigo" "Morosini" 
+			"Movilesti" "Racovita" "Sturdza" "Zorzi"
+		}
+		male_names = {
+			Alvise Andrei Bogdan Constantin Cornel Cosimo Daniele Dragan Dragos 
+			Florin Francesco Gheorghe Giacomo Giovanni Ioan Jacopo Lorenzo Luca 
+			Marco Marin Matteo Mihai Mircea Nicolae Paolo Petru Pietro Radu 
+			Stefan Teodor Vasile Vincenzo Vlad
+		}
+		female_names = {
+			Adriana Alba Ana Anca Andreea Beatrice Bianca Camilla Caterina Chiara 
+			Cristina Elena Elisabetta Fiorenza Florica Francesca Giulia Ioana 
+			Isabella Laura Lucia Lucrezia Margherita Maria Marta Nicoletta Paola 
+			Ruxandra Sofia Teodora Valentina Veronica Vittoria
+		}
+	
+	}
 }
 
 

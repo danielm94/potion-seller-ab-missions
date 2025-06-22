@@ -407,3 +407,8 @@ wallachia_prepare_to_land_in_sicily = {
 	galley_cost = -0.5
 	landing_penalty = -1
 }
+
+wallachia_impaled_venice_modifier = {
+	galley_power = 0.25
+	light_ship_cost = -0.25
+}

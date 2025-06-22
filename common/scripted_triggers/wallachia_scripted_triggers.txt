@@ -18,16 +18,25 @@ has_vlad_2nd_or_3rd_ruling = {
 is_special_impaled_country = {
 	event_target:impaled_country = {
 		OR = {
+			tag = event_target:retribution_leader
 			tag = BUL			#Bulgaria
 			tag = MGY			#Magyars
 			tag = GLH			#Golden Horde
 			tag = BYZ			#Byzantium
-			tag = event_target:retribution_leader
 			tag = SEL			#Seljuks
+			tag = VEN			#Venice
 		}
 	}
 }
 
+#Flavor text trigger for the style of execution
+is_special_execution_country = {
+	event_target:impaled_country = {
+		OR = {
+			tag = VEN #Venice
+		}
+	}
+}
 has_wallachia_purged_the_estates = {
 	custom_trigger_tooltip = {
 		tooltip = has_wallachia_purged_the_estates_tooltip
