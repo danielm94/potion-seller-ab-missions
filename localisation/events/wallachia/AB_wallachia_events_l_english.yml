@@ -76,4 +76,5 @@
  AB_wallachia_events.29.b: "Constantine's legacy lies to the East."
  western_roman_ambition_cb_tooltip: "We will gain a powerful casus belli on all §Yneighboring§! countries who hold provinces in the former §YWestern Roman Empire§!. This includes §YItaly§!, §YFrance§!, §YIberia§!, §YEngland§!, parts of the §YHoly Roman Empire§!, §YMorocco§! and §YAlgeria§!.\n"
  eastern_roman_ambition_cb_tooltip: "We will gain a powerful casus belli on all §Yneighboring§! countries who hold provinces in the former §YEastern Roman Empire§!. This starts from §YThe Balkans§!, down through §YAnatolia§! to §YMashriq§!, then §YEgypt§!, and finally ending at §YTunisia§!.\n"
+ persian_campaign_cb_tooltip: "We will gain a powerful casus belli on all §Yneighboring§! countries who hold provinces in §YPersia§! and §YKhorasan§!.\n"
  depose_hre_emperor_cb_tooltip: "We will gain the §YDepose the Emperor§! casus belli, which allows us to force the §YHoly Roman emperor§! to abdicate, potentially leading to a civil war within the empire or its immediate collapse! There are also additional rewards to dissolving the §YHoly Roman Empire§! in this manner.\n"

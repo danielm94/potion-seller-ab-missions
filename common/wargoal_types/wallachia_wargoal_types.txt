@@ -1,11 +1,9 @@
 eastern_roman_wargoal = {
 	type = superiority
-	
 	attacker = {
-		badboy_factor = 0.90
+		badboy_factor = 0.9
 		prestige_factor = 1
 		peace_cost_factor = 0.8
-		
 		allowed_provinces = {
 			eastern_roman_empire_province_cb_trigger = yes
 		}
@@ -14,29 +12,24 @@ eastern_roman_wargoal = {
 			po_return_cores
 		}
 	}
-	
 	defender = {
-		badboy_factor = 0.50
+		badboy_factor = 0.5
 		prestige_factor = 1.25
 		peace_cost_factor = 1
-		
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
 		}
 	}
-	
 	war_name = roman_war_name
 }
 
 western_roman_wargoal = {
 	type = superiority
-	
 	attacker = {
-		badboy_factor = 0.80
+		badboy_factor = 0.8
 		prestige_factor = 1
 		peace_cost_factor = 0.9
-		
 		allowed_provinces = {
 			western_roman_empire_province_cb_trigger = yes
 		}
@@ -45,29 +38,58 @@ western_roman_wargoal = {
 			po_return_cores
 		}
 	}
-	
 	defender = {
-		badboy_factor = 0.50
+		badboy_factor = 0.5
 		prestige_factor = 1.25
 		peace_cost_factor = 1
-		
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
 		}
 	}
-	
 	war_name = roman_war_name
+}
+
+conquer_persia_wargoal = {
+	type = superiority
+	attacker = {
+		badboy_factor = 0.8
+		prestige_factor = 1.25
+		peace_cost_factor = 0.8
+		allowed_provinces = {
+			OR = {
+				region = persia_region
+				region = khorasan_region
+				area = armenia_area
+				area = shirvan_area
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = basra_area
+			}
+		}
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+	}
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.25
+		peace_cost_factor = 0.5
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+	}
+	war_name = roman_persian_war_name
 }
 
 punish_the_regicide = {
 	type = superiority
-
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 1.5
 		peace_cost_factor = 0.25
-		
 		peace_options = {
 			po_demand_provinces
 			po_release_vassals
@@ -80,13 +102,11 @@ punish_the_regicide = {
 		badboy_factor = 1
 		prestige_factor = 1.5
 		peace_cost_factor = 0.75
-		
 		peace_options = {
 			po_demand_provinces
 			po_return_cores
 			po_imperial_retribution_dissolve
 		}
 	}
-
 	war_name = imperial_retribution
 }

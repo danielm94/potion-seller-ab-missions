@@ -4,3 +4,6 @@
  roman_war_name: "$ORDER$$FIRST$-$SECOND$ War of Roman Reclamation"
  imperial_retribution: "The Imperial Retribution"
  punish_the_regicide: "Show Superiority"
+ conquer_persia_wargoal: "Show Superiority"
+ conquer_persia_wargoal_desc: "We need to finish what the emperors before us have started!"
+ roman_persian_war_name: "$ORDER$$FIRST$-$SECOND$ Roman - Persian War"
