@@ -25,6 +25,7 @@ is_special_impaled_country = {
 			tag = BYZ			#Byzantium
 			tag = SEL			#Seljuks
 			tag = VEN			#Venice
+			tag = SIC			#Sicily
 		}
 	}
 }
@@ -33,7 +34,9 @@ is_special_impaled_country = {
 is_special_execution_country = {
 	event_target:impaled_country = {
 		OR = {
+			tag = BYZ #Byzantium
 			tag = VEN #Venice
+			tag = SIC #Sicily
 		}
 	}
 }
@@ -91,4 +94,35 @@ has_access_to_wallachian_missions = {
 		tag = DAC
 		tag = TUH
 	}
+}
+
+has_impaled_bulgaria_ruler = {
+	has_country_flag = wallachia_impaled_bulgaria
+}
+
+has_impaled_magyars_ruler = {
+	has_country_flag = wallachia_impaled_magyars
+}
+
+has_impaled_golden_horde_ruler = {
+	has_country_flag = wallachia_impaled_golden_horde
+}
+
+has_impaled_byzantium_ruler = {
+	has_country_flag = wallachia_impaled_byzantium
+}
+
+has_impaled_retribution_leader = {
+	has_country_flag = wallachia_impaled_retribution_leader
+}
+
+has_impaled_seljuks_ruler = {
+	has_country_flag = wallachia_impaled_seljuks
+}
+has_impaled_venice_ruler = {
+	has_country_flag = wallachia_impaled_venice
+}
+
+has_impaled_sicily_ruler = {
+	has_country_flag = wallachia_impaled_sicily
 }

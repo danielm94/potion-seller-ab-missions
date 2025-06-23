@@ -195,3 +195,39 @@ on_conquest = {
 		}
 	}
 }
+
+on_raid_coast = {
+	if = {
+		limit = {
+			tag = SIC
+		}
+		FROM = {
+			every_neighbor_province = {
+				limit = {
+					is_sea = no
+					is_wasteland = no
+					is_empty = no
+					NOT = {
+						owned_by = SIC
+					}
+				}
+				set_province_flag = SIC_raided_province
+			}
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_impaled_sicily_ruler = yes
+			}
+			has_port = yes
+		}
+		add_province_modifier = {
+			name = wallachia_pirates_bane
+			duration = -1
+		}
+	}
+}

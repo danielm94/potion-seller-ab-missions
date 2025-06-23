@@ -530,6 +530,12 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = danesti_no_raids
+			}
+			tuh_set_danesti_coastal_defences = yes
+		}
 	}
 	option = {
 		name = tuh_elections.0.g

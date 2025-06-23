@@ -1316,6 +1316,7 @@ romanian_elective_monarchy_on_dev_effect = {
 #
 tuh_clear_dynasty_specific_bonuses = {
 	tuh_clear_ghica_bonuses = yes
+	tuh_clear_danesti_coastal_defences = yes
 }
 
 tuh_clear_ghica_bonuses = {
@@ -1867,5 +1868,41 @@ tuh_clear_government_mechanic_cooldowns = {
 		clr_country_flag = promote_dynastic_prerogative_cooldown
 		clr_country_flag = forge_a_coalition_cooldown
 		clr_country_flag = revive_public_punishments_cooldown
+	}
+}
+
+tuh_set_danesti_coastal_defences = {
+	custom_tooltip = danesti_coastal_defences_tooltip
+	tooltip = {
+		random_owned_province = {
+			limit = {
+				has_port = yes
+			}
+			add_province_modifier = {
+				name = danesti_coastal_defences
+				duration = -1
+			}
+		}
+	}
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				has_port = yes
+			}
+			add_province_modifier = {
+				name = danesti_coastal_defences
+				duration = -1
+			}
+		}
+	}
+}
+
+tuh_clear_danesti_coastal_defences = {
+	every_owned_province = {
+		limit = {
+			has_port = yes
+			has_province_modifier = danesti_coastal_defences
+		}
+		remove_province_modifier = danesti_coastal_defences
 	}
 }

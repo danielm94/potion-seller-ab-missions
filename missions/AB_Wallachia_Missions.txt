@@ -196,6 +196,12 @@ ab_wal_1 = {
 			add_permanent_claim_multi_provinces = {
 				target = naples_area
 			}
+			2986 = {
+				add_permanent_claim = ROOT
+			}
+			120 = {
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = tooltip_line_divider
 			add_country_modifier = {
 				name = wallachia_prepare_to_land_in_sicily
@@ -210,6 +216,73 @@ ab_wal_1 = {
 				culture = venetian
 				religion = catholic
 				cost_multiplier = 0.5
+			}
+		}
+	}
+	wal_conquer_sicily = {
+		icon = arb_sicily
+		position = 7
+		required_missions = {
+			wal_conquer_southern_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = naples_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = naples_area
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = lazio_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = corsica_sardinia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_italy_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = inquisitor
+				skill = 1
+				religion = ROOT
+				culture = adriaticii
+				cost_multiplier = 0.5
+				location = 122
+			}
+			custom_tooltip = AB_EMPTY
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			custom_tooltip = AB_EMPTY
+			
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = danesti_no_raids
+				custom_tooltip = danesti_raid_coast_tooltip"
+			}
+			custom_tooltip = AB_EMPTY
+			country_event = {
+				id = AB_wallachia_events.33
 			}
 		}
 	}
@@ -580,7 +653,7 @@ ab_wal_2 = {
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_impaled_venice_tooltip
-				first_limit = "has_country_flag = wallachia_impaled_venice"
+				first_limit = "has_impaled_venice_ruler = yes"
 				first_effect = "change_terror = {
 				value = 5
 				scaled_with_gain_modifier = yes
@@ -728,7 +801,7 @@ ab_wal_3 = {
 			}
 			if = {
 				limit = {
-					has_country_flag = wallachia_impaled_bulgaria
+					has_impaled_bulgaria_ruler = yes
 				}
 				custom_tooltip = wal_strike_the_bulgars_impale_tooltip_yes
 				change_terror = {
@@ -1057,7 +1130,7 @@ ab_wal_4 = {
 			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
-					has_country_flag = wallachia_impaled_magyars
+					has_impaled_magyars_ruler = yes
 				}
 				custom_tooltip = wal_liberate_transylvania_impale_tooltip_yes
 				change_terror = {
@@ -1244,7 +1317,7 @@ ab_wal_4 = {
 			custom_tooltip = tooltip_line_divider
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_impaled_byz_tooltip
-				first_limit = "has_country_flag = wallachia_impaled_byzantium"
+				first_limit = "has_impaled_byzantium_ruler = yes"
 				first_effect = "change_terror = {
 				value = 5
 				scaled_with_gain_modifier = yes
@@ -1803,7 +1876,7 @@ ab_wal_5 = {
 			}
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_impaled_seljuks_tooltip
-				first_limit = "has_country_flag = wallachia_impaled_seljuks"
+				first_limit = "has_impaled_seljuks_ruler = yes"
 				first_effect = "change_terror = {
 				value = 20
 				scaled_with_gain_modifier = yes

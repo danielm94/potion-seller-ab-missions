@@ -412,3 +412,39 @@ wallachia_impaled_venice_modifier = {
 	galley_power = 0.25
 	light_ship_cost = -0.25
 }
+wallachia_great_liberator = {
+	improve_relation_modifier = 0.1
+	diplomatic_reputation = 1
+}
+wallachia_aftermath_of_slave_reprisals = {
+	local_manpower_modifier = -1
+	local_production_efficiency = -1
+	local_tax_modifier = -1
+	local_development_cost_modifier = 1
+	local_build_cost = 1
+}
+
+wallachia_vlach_resettlement_of_sicily = {
+	local_culture_conversion_cost = -0.50
+	local_culture_conversion_time = -0.25
+	local_core_creation = -0.2
+	local_missionary_strength = 0.1
+}
+
+wallachia_appropriated_sicilian_slaves = {
+	build_cost = -0.1
+	build_time = -0.25
+	development_cost = -0.1
+	global_trade_goods_size_modifier = 0.20
+	diplomatic_reputation = -2
+	tolerance_own = -1
+}
+
+wallachia_pirates_bane = {
+	block_slave_raid = yes
+}
+
+sicily_impaled_mod = {
+	galley_power = -0.2
+	naval_morale = -0.1
+}

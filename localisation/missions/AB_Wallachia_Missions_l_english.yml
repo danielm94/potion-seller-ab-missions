@@ -108,3 +108,5 @@
  wal_conquer_venice_title: "Drown the  Lion"
  wal_conquer_venice_desc: "The Illyrian coast is ours, yet the Adriatic remains the private lake of the Venetian Republic. This nation of usurers has grown obscenely wealthy by leeching the trade of the East. Their entire city is a monument to greed, built upon the memory of their ultimate sin: the financing of the Fourth Crusade, an act of betrayal that shattered the Roman world. The Lion of Saint Mark is a beast gorged on stolen gold and Christian blood. It is time to settle that ancient debt, to extinguish their republic, and to drown the Lion in its own lagoon."
  if_we_impaled_venice_tooltip: "If we impaled the [VEN.Monarch.GetTitle] of @VEN §Y[VEN.GetName]§!:"
+ wal_conquer_sicily_title: "Crush the Corsairs"
+ wal_conquer_sicily_desc: "The island of Sicily has become a den of corsairs and slavers. Their fleets are a plague upon the sea, their raids a constant terror to the coasts of Christendom. This cannot be allowed to stand. We will land our legions on their shores, break their fleets, and restore order to this vital province, silencing the pirate menace once and for all."

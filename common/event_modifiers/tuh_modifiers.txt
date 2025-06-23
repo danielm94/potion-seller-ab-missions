@@ -317,3 +317,7 @@ return_of_the_emperor_tooltip_mod = {
 	unjustified_demands = -0.2
 	diplomatic_reputation = 1
 }
+
+danesti_coastal_defences = {
+	block_slave_raid = yes
+}

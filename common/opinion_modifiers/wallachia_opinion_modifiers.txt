@@ -42,3 +42,8 @@ razed_venice = {
 	min = -400
 	yearly_decay = 1
 }
+freed_our_enslaved_people = {
+	opinion = 25
+	max = 25
+	years = -1
+}

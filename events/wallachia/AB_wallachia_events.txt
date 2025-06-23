@@ -1945,3 +1945,123 @@ province_event = {
 		change_culture = adriaticii
 	}
 }
+
+#The fate of the slaves of Sicily
+country_event = {
+	id = AB_wallachia_events.33
+	title = AB_wallachia_events.33.t
+	desc = AB_wallachia_events.33.d
+	picture = GFX_AB_wallachia_events.33
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.33.a
+		trigger = {
+			any_country = {
+				any_owned_province = {
+					has_province_flag = SIC_raided_province
+					NOT = {
+						had_province_flag = {
+							flag = SIC_raided_province
+							days = 14600
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+				any_owned_province = {
+					has_province_flag = SIC_raided_province
+					NOT = {
+						had_province_flag = {
+							flag = SIC_raided_province
+							days = 14600
+						}
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = freed_our_enslaved_people
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = return_slaves_home_tooltip
+		custom_tooltip = AB_EMPTY
+		add_ruler_modifier = {
+			name = wallachia_great_liberator
+			duration = 7300
+		}
+		add_prestige_or_monarch_power = {
+			amount = 5
+		}
+		custom_tooltip = AB_EMPTY
+		add_years_of_income = -1
+	}
+	option = {
+		name = AB_wallachia_events.33.b
+		custom_tooltip = let_the_slaves_loose_tooltip
+		tooltip = {
+			125 = {
+				remove_core = SIC
+				halve_province_base_tax = yes
+				halve_province_base_production = yes
+				halve_province_base_manpower = yes
+				remove_all_buildings_effect = yes
+				add_devastation = 75
+				add_province_modifier = {
+					name = wallachia_aftermath_of_slave_reprisals
+					duration = 7300
+				}
+				add_province_modifier = {
+					name = wallachia_vlach_resettlement_of_sicily
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = sicilian
+						culture = Italiyyan
+						AND = {
+							region = italy_region
+							religion = shiite
+						}
+					}
+				}
+				remove_core = SIC
+				halve_province_base_tax = yes
+				halve_province_base_production = yes
+				halve_province_base_manpower = yes
+				remove_all_buildings_effect = yes
+				add_devastation = 75
+				add_province_modifier = {
+					name = wallachia_aftermath_of_slave_reprisals
+					duration = 7300
+				}
+				add_province_modifier = {
+					name = wallachia_vlach_resettlement_of_sicily
+					duration = -1
+				}
+			}
+		}
+		change_terror = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+	}
+	option = {
+		name = AB_wallachia_events.33.c
+		add_country_modifier = {
+			name = wallachia_appropriated_sicilian_slaves
+			duration = 14600
+		}
+		add_patriarch_authority = -0.25
+		add_prestige = -25
+	}
+}
