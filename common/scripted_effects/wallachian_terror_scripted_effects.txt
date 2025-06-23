@@ -1757,146 +1757,145 @@ wallachian_terror_impalement_effect = {
 
 #Effect that handles the effects of impalement on certain tags.
 wallachian_terror_special_country_impalement_effects = {
-	event_target:impaled_country = {
-		if = {
-			limit = {
+	if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = BUL
 			}
-			wallachian_terror_bulgaria_impalement_effects = yes
+			has_impaled_bulgaria_ruler = no
 		}
-		else_if = {
-			limit = {
+		wallachian_terror_bulgaria_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_bulgaria_impaled_effects = yes
+		set_country_flag = wallachia_impaled_bulgaria
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = MGY
 			}
-			wallachian_terror_magyars_impalement_effects = yes
+			has_impaled_magyars_ruler = no
 		}
-		else_if = {
-			limit = {
+		wallachian_terror_magyars_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_magyars_impaled_effects = yes
+		set_country_flag = wallachia_impaled_magyars
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = GLH
 			}
-			wallachian_terror_golden_horde_impalement_effects = yes
+			has_impaled_golden_horde_ruler = no
 		}
-		else_if = {
-			limit = {
+		wallachian_terror_golden_horde_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_golden_horde_impaled_effects = yes
+		set_country_flag = wallachia_impaled_golden_horde
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = BYZ
 			}
-			wallachian_terror_byzantium_impalement_effects = yes
+			has_impaled_byzantium_ruler = no
 		}
-		else_if = {
-			limit = {
+		wallachian_terror_byzantium_impaler_effects = yes
+		wallachian_terror_byzantium_impaled_effects = yes
+		set_country_flag = wallachia_impaled_byzantium
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = event_target:retribution_leader
 			}
-			wallachian_terror_retribution_leader_effect = yes
+			has_impaled_retribution_leader = no
 		}
-		else_if = {
-			limit = {
+		wallachian_terror_retribution_leader_impaler_effect = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_retribution_leader_impaled_effect = yes
+		set_country_flag = wallachia_impaled_retribution_leader
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = SEL
 			}
-			wallachian_terror_seljuk_impalement_effects = yes
+			has_impaled_seljuks_ruler = no
 		}
-		else_if = {
-			limit = {
+		wallachian_terror_seljuk_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_seljuk_impaled_effects = yes
+		set_country_flag = wallachia_impaled_seljuks
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
 				tag = VEN
 			}
-			wallachian_terror_venice_impalement_effects = yes
+			has_impaled_venice_ruler = no
 		}
+		wallachian_terror_venice_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_venice_impaled_effects = yes
+		set_country_flag = wallachia_impaled_venice
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = SIC
+			}
+			has_impaled_sicily_ruler = no
+		}
+		wallachian_terror_sicily_impaler_effects = yes
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_sicily_impaled_effects = yes
+		set_country_flag = wallachia_impaled_sicily
 	}
 }
 
-#ROOT = Venice
-wallachian_terror_venice_impalement_effects = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_venice
-				}
-			}
-		}
-		add_prestige = -20
-		add_mercantilism = -10
-		add_navy_tradition = -20
-		event_target:impaler_country = {
-			add_ruler_modifier = {
-				name = wallachia_impaled_venice_modifier
-				duration = -1
-			}
-			add_prestige_or_monarch_power = {
-				amount = 10
-			}
-			add_mercantilism = 4
-			add_navy_tradition = 10
-			set_country_flag = wallachia_impaled_venice
-		}
-	}
-}
-
-#ROOT = Bulgaria
-wallachian_terror_bulgaria_impalement_effects = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_bulgaria
-				}
-			}
-		}
+wallachian_terror_bulgaria_impaled_effects = {
+	event_target:impaled_country = {
 		add_prestige = -20
 		add_country_modifier = {
 			name = bulgaria_impaled_mod
 			duration = 7300
 		}
-		event_target:impaler_country = {
-			add_country_modifier = {
-				name = wallachia_impaled_bulgaria_mod
-				duration = 7300
-			}
-			add_prestige_or_monarch_power = {
-				amount = 20
-			}
-			set_country_flag = wallachia_impaled_bulgaria
-		}
 	}
 }
 
-#ROOT = Magyars
-wallachian_terror_magyars_impalement_effects = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_magyars
-				}
-			}
-		}
+wallachian_terror_bulgaria_impaler_effects = {
+	add_country_modifier = {
+		name = wallachia_impaled_bulgaria_mod
+		duration = 7300
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_magyars_impaled_effects = {
+	event_target:impaled_country = {
 		add_prestige = -20
 		add_country_modifier = {
 			name = magyars_impaled_mod
 			duration = 7300
 		}
-		event_target:impaler_country = {
-			add_country_modifier = {
-				name = wallachia_impaled_magyars_mod
-				duration = 7300
-			}
-			add_prestige_or_monarch_power = {
-				amount = 20
-			}
-			set_country_flag = wallachia_impaled_magyars
-		}
 	}
 }
 
-#ROOT = Golden Horde
-wallachian_terror_golden_horde_impalement_effects = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_golden_horde
-				}
-			}
-		}
+wallachian_terror_magyars_impaler_effects = {
+	add_country_modifier = {
+		name = wallachia_impaled_magyars_mod
+		duration = 7300
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_golden_horde_impaled_effects = {
+	event_target:impaled_country = {
 		add_prestige = -20
 		custom_tooltip = golden_horde_impalement_effects_crimean_tooltip
 		hidden_effect = {
@@ -1942,65 +1941,51 @@ wallachian_terror_golden_horde_impalement_effects = {
 				add_unrest = 20
 			}
 		}
-		event_target:impaler_country = {
-			add_ruler_modifier = {
-				name = aln_bane
-				duration = -1
-			}
-			add_prestige_or_monarch_power = {
-				amount = 20
-			}
-			set_country_flag = wallachia_impaled_golden_horde
-		}
 	}
 }
 
-#ROOT = Byzantium
-wallachian_terror_byzantium_impalement_effects = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_byzantium
-				}
-			}
-		}
+wallachian_terror_golden_horde_impaler_effects = {
+	add_ruler_modifier = {
+		name = aln_bane
+		duration = -1
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_byzantium_impaled_effects = {
+	event_target:impaled_country = {
 		add_prestige = -20
 		add_legitimacy = -100
 		add_adm_power = -25
 		add_dip_power = -25
 		add_mil_power = -25
-		event_target:impaler_country = {
-			add_prestige_or_monarch_power = {
-				amount = 30
-			}
-			add_legitimacy = 20
-			add_adm_power = 25
-			add_dip_power = 25
-			add_mil_power = 25
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_ruler_has_impaler_trait
-				first_limit = "is_ruler_impaler = yes"
-				first_effect = "add_country_modifier = {
-				name = byzantium_greekfire
-				duration = -1
-			}"
-			}
-		}
-		set_country_flag = wallachia_impaled_byzantium
 	}
 }
 
-#ROOT = event_Target:retribution_leader
-wallachian_terror_retribution_leader_effect = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_retribution_leader
-				}
-			}
-		}
+wallachian_terror_byzantium_impaler_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 30
+	}
+	custom_tooltip = AB_EMPTY
+	add_legitimacy = 20
+	add_adm_power = 25
+	add_dip_power = 25
+	add_mil_power = 25
+	custom_tooltip = AB_EMPTY
+	complex_dynamic_effect = {
+		first_custom_tooltip = if_ruler_has_impaler_trait
+		first_limit = "is_ruler_impaler = yes"
+		first_effect = "add_country_modifier = {
+				name = byzantium_greekfire
+				duration = -1
+			}"
+	}
+}
+
+wallachian_terror_retribution_leader_impaled_effect = {
+	event_target:impaled_country = {
 		custom_tooltip = retribution_leader_impaled_tooltip
 		tooltip = {
 			add_war_exhaustion = 10
@@ -2027,16 +2012,15 @@ wallachian_terror_retribution_leader_effect = {
 	}
 }
 
-#ROOT = Seljuks
-wallachian_terror_seljuk_impalement_effects = {
-	if = {
-		limit = {
-			event_target:impaler_country = {
-				NOT = {
-					has_country_flag = wallachia_impaled_seljuks
-				}
-			}
-		}
+wallachian_terror_retribution_leader_impaler_effect = {
+	add_war_exhaustion = -10
+	add_army_tradition_or_mil_power = {
+		amount = 10
+	}
+}
+
+wallachian_terror_seljuk_impaled_effects = {
+	event_target:impaled_country = {
 		add_prestige = -20
 		random_owned_province = {
 			limit = {
@@ -2048,15 +2032,69 @@ wallachian_terror_seljuk_impalement_effects = {
 				friend = event_target:impaler_country
 			}
 		}
-		event_target:impaler_country = {
-			add_ruler_modifier = {
-				name = byz_avenger
+	}
+}
+
+wallachian_terror_seljuk_impaler_effects = {
+	add_ruler_modifier = {
+		name = byz_avenger
+		duration = -1
+	}
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+}
+
+wallachian_terror_venice_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_mercantilism = -10
+		add_navy_tradition = -20
+	}
+}
+
+wallachian_terror_venice_impaler_effects = {
+	add_ruler_modifier = {
+		name = wallachia_impaled_venice_modifier
+		duration = -1
+	}
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	custom_tooltip = AB_EMPTY
+	add_mercantilism = 4
+	add_navy_tradition = 10
+}
+
+wallachian_terror_sicily_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -20
+		add_navy_tradition = -20
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = sicily_impaled_mod
+			duration = 7300
+		}
+	}
+}
+
+wallachian_terror_sicily_impaler_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+	custom_tooltip = AB_EMPTY
+	add_navy_tradition = 10
+	custom_tooltip = AB_EMPTY
+	custom_tooltip = wallachia_block_pirate_raids_tooltip
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				has_port = yes
+			}
+			add_province_modifier = {
+				name = wallachia_pirates_bane
 				duration = -1
 			}
-			add_prestige_or_monarch_power = {
-				amount = 20
-			}
-			set_country_flag = wallachia_impaled_seljuks
 		}
 	}
 }
