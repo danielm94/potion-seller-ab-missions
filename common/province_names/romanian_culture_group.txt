@@ -105,6 +105,7 @@
 410 = "Bagdad"
 419 = "Erevan"
 425 = "Daghestan"
+427 = "Cumis"
 440 = "Karakalpak"
 442 = "Buhara"
 443 = "Ustiurt"

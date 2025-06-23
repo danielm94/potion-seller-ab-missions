@@ -809,9 +809,6 @@ ab_wal_2 = {
 				target = central_italy_area
 			}
 			custom_tooltip = tooltip_line_divider
-			add_prestige_or_monarch_power = {
-				amount = 25
-			}
 			101 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -821,6 +818,21 @@ ab_wal_2 = {
 				}
 			}
 			add_mercantilism = 5
+			custom_tooltip = PER_TRADER_SCALING
+			set_country_flag = ab_trader_advisor_gives_trade_steering
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = artist
+				skill = 2
+				cost_multiplier = 0.5
+				culture = tuscan
+				religion = catholic
+				location = 116
+			}
 		}
 	}
 }
