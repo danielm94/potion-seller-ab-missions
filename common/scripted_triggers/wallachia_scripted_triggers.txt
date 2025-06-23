@@ -26,6 +26,7 @@ is_special_impaled_country = {
 			tag = SEL			#Seljuks
 			tag = VEN			#Venice
 			tag = SIC			#Sicily
+			tag = LOM			#Lombardy
 		}
 	}
 }
@@ -34,12 +35,13 @@ is_special_impaled_country = {
 is_special_execution_country = {
 	event_target:impaled_country = {
 		OR = {
-			tag = BYZ #Byzantium
-			tag = VEN #Venice
-			tag = SIC #Sicily
+			tag = BYZ			#Byzantium
+			tag = VEN			#Venice
+			tag = SIC			#Sicily
 		}
 	}
 }
+
 has_wallachia_purged_the_estates = {
 	custom_trigger_tooltip = {
 		tooltip = has_wallachia_purged_the_estates_tooltip
@@ -119,10 +121,15 @@ has_impaled_retribution_leader = {
 has_impaled_seljuks_ruler = {
 	has_country_flag = wallachia_impaled_seljuks
 }
+
 has_impaled_venice_ruler = {
 	has_country_flag = wallachia_impaled_venice
 }
 
 has_impaled_sicily_ruler = {
 	has_country_flag = wallachia_impaled_sicily
+}
+
+has_impaled_lombardy_ruler = {
+	has_country_flag = wallachia_impaled_lombardy
 }

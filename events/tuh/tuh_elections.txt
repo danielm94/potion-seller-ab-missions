@@ -620,6 +620,15 @@ country_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = ghica_lombard_banking
+			}
+			add_ruler_modifier = {
+				name = ghica_lombard_banking
+				duration = -1
+			}
+		}
 	}
 	option = {
 		name = tuh_elections.0.h

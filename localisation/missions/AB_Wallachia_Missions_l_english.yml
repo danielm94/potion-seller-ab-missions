@@ -110,3 +110,8 @@
  if_we_impaled_venice_tooltip: "If we impaled the [VEN.Monarch.GetTitle] of @VEN §Y[VEN.GetName]§!:"
  wal_conquer_sicily_title: "Crush the Corsairs"
  wal_conquer_sicily_desc: "The island of Sicily has become a den of corsairs and slavers. Their fleets are a plague upon the sea, their raids a constant terror to the coasts of Christendom. This cannot be allowed to stand. We will land our legions on their shores, break their fleets, and restore order to this vital province, silencing the pirate menace once and for all."
+ wal_conquer_north_italy_title: "Shatter the Iron Crown"
+ wal_conquer_north_italy_desc: "The Iron Crown of Lombardy is an insult forged in steel, the legacy of the barbarian hordes who tore Italy from the Empire. For centuries, German pretenders have placed it upon their heads in a mockery of true Roman authority. We will march our legions into the rich plains of the Po, seize their cities, and extinguish this symbol of their illegitimate rule forever."
+ ghica_lombard_banking_tooltip: "Electing a ruler from house §YGhica§! will give the following bonus:"
+ if_we_impaled_the_lombard_ruler_tooltip: "If we impaled the §Y[LOM.Monarch.GetTitle]§! of  @LOM §Y[LOM.GetName]§!:"
+ wal_conquer_north_italy_impale_bonus_tooltip: "All of the required provinces that are owned but not cored by us will receive:"

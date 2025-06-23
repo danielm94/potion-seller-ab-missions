@@ -273,7 +273,6 @@ ab_wal_1 = {
 			add_dip_power = 25
 			add_mil_power = 25
 			custom_tooltip = AB_EMPTY
-			
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
@@ -664,6 +663,164 @@ ab_wal_2 = {
 			country_event = {
 				id = AB_wallachia_events.31
 			}
+		}
+	}
+	wal_conquer_north_italy = {
+		icon = kingdom_of_lombardy
+		position = 7
+		required_missions = {
+			wal_conquer_venice
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = po_valley_area
+				area = lombardy_area
+				area = piedmont_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			po_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			piedmont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = liguria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = emilia_romagna_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tuscany_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = corsica_sardinia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_milanese_armaments
+				duration = -1
+			}
+			#CDE blocks tooltip for some reason...
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_the_lombard_ruler_tooltip
+				first_limit = "has_impaled_lombardy_ruler = yes"
+				first_effect = ""
+			}
+			custom_tooltip = wal_conquer_north_italy_impale_bonus_tooltip
+			#So we have to do it like this...
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_broke_the_iron_crown
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_impaled_lombardy_ruler = yes
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = po_valley_area
+								area = lombardy_area
+								area = piedmont_area
+							}
+							NOT = {
+								is_core = ROOT
+							}
+						}
+						add_province_modifier = {
+							name = wallachia_broke_the_iron_crown
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = ghica_lombard_banking
+			custom_tooltip = ghica_lombard_banking_tooltip
+			tooltip = {
+				add_ruler_modifier = {
+					name = ghica_lombard_banking
+					duration = -1
+				}
+			}"
+			}
+			add_mil_power = 100
+		}
+	}
+	wal_break_the_republics = {
+		icon = conquer_tuscany
+		position = 8
+		required_missions = {
+			wal_conquer_north_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = emilia_romagna_area
+				area = liguria_area
+				area = corsica_sardinia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			emilia_romagna_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			liguria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = lazio_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_italy_area
+			}
+			custom_tooltip = tooltip_line_divider
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			101 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = genoa_trade_node_power_title
+				}
+			}
+			add_mercantilism = 5
 		}
 	}
 }

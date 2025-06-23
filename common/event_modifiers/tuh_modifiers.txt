@@ -321,3 +321,9 @@ return_of_the_emperor_tooltip_mod = {
 danesti_coastal_defences = {
 	block_slave_raid = yes
 }
+
+ghica_lombard_banking = {
+	interest = -1
+	inflation_reduction = 0.1
+	inflation_action_cost = -0.1
+}

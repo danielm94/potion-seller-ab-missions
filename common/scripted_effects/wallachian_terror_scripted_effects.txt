@@ -1852,6 +1852,36 @@ wallachian_terror_special_country_impalement_effects = {
 		wallachian_terror_sicily_impaled_effects = yes
 		set_country_flag = wallachia_impaled_sicily
 	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = LOM
+			}
+			has_impaled_lombardy_ruler = no
+		}
+		wallachian_terror_lombardy_impaler_effects = yes
+		wallachian_terror_lombardy_impaled_effects = yes
+		set_country_flag = wallachia_impaled_lombardy
+	}
+}
+
+wallachian_terror_lombardy_impaler_effects = {
+	add_army_tradition_or_mil_power = {
+		amount = 10
+	}
+	add_ruler_modifier = {
+		name = wallachia_impaled_lombardy_mod
+		duration = -1
+	}
+}
+
+wallachian_terror_lombardy_impaled_effects = {
+	event_target:impaled_country = {
+		add_country_modifier = {
+			name = lombardy_impaled_mod
+			duration = 7300
+		}
+	}
 }
 
 wallachian_terror_bulgaria_impaled_effects = {

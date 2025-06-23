@@ -448,3 +448,21 @@ sicily_impaled_mod = {
 	galley_power = -0.2
 	naval_morale = -0.1
 }
+
+wallachia_milanese_armaments = {
+	infantry_fire = 0.05
+	infantry_power = 0.05
+}
+
+wallachia_broke_the_iron_crown = {
+	local_core_creation = -0.1
+}
+
+wallachia_impaled_lombardy_mod = {
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.05
+}
+lombardy_impaled_mod = {
+	mercenary_manpower = -0.5
+	mercenary_cost = 0.5
+}
