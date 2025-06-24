@@ -1849,6 +1849,80 @@ ab_wal_4 = {
 			}
 		}
 	}
+	wal_conquer_egypt = {
+		icon = gfx_wal_conquer_egypt
+		position = 9
+		required_missions = {
+			wal_conquer_judea
+		}
+		provinces_to_highlight = {
+			region = egypt_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			egypt_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = tunisia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = djerba_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = north_saharan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tripolitania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = fezzan_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = kabylia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = ouled_nail_area
+			}
+			custom_tooltip = tooltip_line_divider
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_misr_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Alexandria"
+				location = 358
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			set_country_flag = patriarch_of_alexandria
+			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			358 = {
+				add_province_modifier = {
+					name = wallachia_patriarchat_of_alexandria
+					duration = -1
+				}
+			}
+
+			add_country_modifier = {
+				name = wallachia_granaries_of_egypt
+				duration = -1
+			}
+
+			country_event = {
+				id = AB_wallachia_events.34
+			}
+		}
+	}
 }
 
 ab_wal_5 = {

@@ -2065,3 +2065,245 @@ country_event = {
 		add_prestige = -25
 	}
 }
+
+#Return of the Copts
+country_event = {
+	id = AB_wallachia_events.34
+	title = AB_wallachia_events.34.t
+	desc = AB_wallachia_events.34.d
+	picture = COPTIC_CITY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.34.a
+		set_country_flag = wal_allow_copts_return_egypt
+		if = {
+			limit = {
+				any_country = {
+					religion = coptic
+					knows_country = ROOT
+				}
+			}
+			every_country = {
+				limit = {
+					religion = coptic
+					knows_country = ROOT
+				}
+				add_opinion = {
+					who = PREV
+					modifier = allowed_the_copts_to_return_to_egypt
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = copts_will_never_forget_kindness_tooltip
+			custom_tooltip = AB_EMPTY
+		}
+		add_country_modifier = {
+			name = wallachia_tolerating_the_copts
+			duration = -1
+		}
+		if = {
+			limit = {
+				358 = {
+					owned_by = ROOT
+				}
+			}
+			custom_tooltip = not_affect_pentarchy_tooltip
+			358 = {
+				change_religion = coptic
+				add_reform_center = coptic
+				add_province_modifier = {
+					name = wallachia_coptic_pope
+					duration = -1
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = wallachia_coptic_administrators
+						duration = -1
+					}
+					add_province_modifier = {
+						name = wallachia_coptic_tolerance
+						duration = -1
+					}
+				}
+			}
+		}
+		custom_tooltip = coptic_spread_egypt_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_coptic_administrators
+				duration = -1
+			}
+			add_province_modifier = {
+				name = wallachia_coptic_tolerance
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = egypt_region
+					religion = coptic
+				}
+				add_province_modifier = {
+					name = wallachia_coptic_administrators
+					duration = -1
+				}
+				add_province_modifier = {
+					name = wallachia_coptic_tolerance
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = clergy_reaction_copts_egypt_tooltip
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -30
+		}
+		add_patriarch_authority = -0.1
+		random_owned_province = {
+			limit = {
+				religion = orthodox
+			}
+			spawn_rebels = {
+				size = 2
+				type = orthodox_rebels
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.34.b
+		custom_tooltip = coptic_properties_seized_tooltip
+		add_years_of_income = 0.66
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = copts_will_rebel_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = coptic
+					NOT = {
+						has_rebel_faction = coptic_rebels
+					}
+				}
+				spawn_rebels = {
+					size = 2
+					type = coptic_rebels
+				}
+			}
+			random_list = {
+				1 = {
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+				}
+				1 = {
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+				}
+				1 = {
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+					random_province = {
+						limit = {
+							region = egypt_region
+							NOT = {
+								has_rebel_faction = coptic_rebels
+							}
+						}
+						spawn_rebels = {
+							size = 2
+							type = coptic_rebels
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				any_country = {
+					religion = coptic
+					knows_country = ROOT
+				}
+			}
+			custom_tooltip = copts_not_happy_tooltip
+			custom_tooltip = AB_EMPTY
+			every_country = {
+				limit = {
+					religion = coptic
+					knows_country = ROOT
+				}
+				add_opinion = {
+					who = PREV
+					modifier = persecuted_the_copts_of_egypt
+				}
+			}
+			custom_tooltip = AB_EMPTY
+		}
+		add_country_modifier = {
+			name = wallachia_not_tolerating_the_copts
+			duration = -1
+		}
+		add_patriarch_authority = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 15
+		}
+		custom_tooltip = AB_EMPTY
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+	}
+}

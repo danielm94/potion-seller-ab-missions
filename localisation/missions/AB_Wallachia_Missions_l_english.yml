@@ -115,3 +115,8 @@
  ghica_lombard_banking_tooltip: "Electing a ruler from house §YGhica§! will give the following bonus:"
  if_we_impaled_the_lombard_ruler_tooltip: "If we impaled the §Y[LOM.Monarch.GetTitle]§! of  @LOM §Y[LOM.GetName]§!:"
  wal_conquer_north_italy_impale_bonus_tooltip: "All of the required provinces that are owned but not cored by us will receive:"
+ wal_break_the_republics_title: "Break the Republics"
+ wal_break_the_republics_desc: "The rule of merchants is an aberration. In Genoa and Tuscany, councils of grasping plutocrats sit on thrones of coin, defying our imperial mandate. They are a nest of rivals whose wealth funds our enemies. Our legions will march south to dismantle their councils, shatter their fleets, and seize their treasuries."
+ wal_conquer_egypt_title: "Secure Egypt"
+ wal_conquer_egypt_desc: "For centuries, the province of Aegyptus was the granary of the Roman Empire, its immense wealth feeding the legions and the capital. The Nizzarid Sultans who rule there now invoke the legacies of Pharaohs and Alexander, but their rule is a fleeting interruption in millennia of history. We will march our legions south to reclaim the Nile, restore the Patriarch of Alexandria to his rightful place, and ensure the wealth of Egypt once again flows to its rightful masters."
+ patriarch_of_alexandria_bonus_tooltip: "§YPatriarch§! advisors now grant §G+0.5%§! §YMissionary Strength vs Heathens§! per skill level."

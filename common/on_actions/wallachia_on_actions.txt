@@ -231,3 +231,68 @@ on_province_owner_change = {
 		}
 	}
 }
+
+on_province_religion_changed= {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = wal_allow_copts_return_egypt
+			}
+			religion = coptic
+			OR = {
+				region = egypt_region
+				area = saharan_oases
+			}
+		}
+		add_province_modifier = {
+			name = wallachia_coptic_administrators
+			duration = -1
+		}
+		add_province_modifier = {
+			name = wallachia_coptic_tolerance
+			duration = -1
+		}
+	}
+}
+
+on_bi_yearly_pulse = {
+	every_country = {
+		limit = {
+			has_country_flag = wal_allow_copts_return_egypt
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_province = {
+						OR = {
+							region = egypt_region
+							area = saharan_oases
+						}
+						is_reformation_center = yes
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						region = egypt_region
+						area = saharan_oases
+					}
+					NOT = {
+						religion = coptic
+					}
+				}
+				change_religion = coptic
+				add_reform_center = coptic
+				add_province_modifier = {
+					name = wallachia_coptic_administrators
+					duration = -1
+				}
+				add_province_modifier = {
+					name = wallachia_coptic_tolerance
+					duration = -1
+				}
+			}
+		}
+	}
+}

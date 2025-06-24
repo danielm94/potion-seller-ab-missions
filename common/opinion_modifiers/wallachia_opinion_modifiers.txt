@@ -47,3 +47,14 @@ freed_our_enslaved_people = {
 	max = 25
 	years = -1
 }
+allowed_the_copts_to_return_to_egypt = {
+	opinion = 25
+	max = 25
+	years = -1
+}
+
+persecuted_the_copts_of_egypt = {
+	opinion = -50
+	min = -50
+	yearly_decay = 1
+}
