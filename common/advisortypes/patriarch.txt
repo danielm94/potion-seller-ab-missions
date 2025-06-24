@@ -42,6 +42,16 @@ patriarch = {
 			reverse_relation_with_heretic_religion = 5
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_alexandria
+			}
+		}
+		modifier = {
+			global_heathen_missionary_strength = 0.005
+		}
+	}
 	allow_only_male = yes
 	chance = {
 		factor = 1
