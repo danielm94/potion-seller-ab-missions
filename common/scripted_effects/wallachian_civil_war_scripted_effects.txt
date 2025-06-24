@@ -147,10 +147,10 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 }
 
 wallachian_civil_war_defeated_house_bonus = {
-	add_legitimacy = 2.5
+	add_legitimacy = 3
 	change_terror = {
-		amount = 2.5
-		scaled_with_gain_modifier = yes
+		value = 3
+		scaled_with_gain_modifier = no
 	}
 }
 
@@ -186,4 +186,3 @@ wallachian_civil_war_cleanup_rebels_effect = {
 		change_controller = ROOT
 	}
 }
-
