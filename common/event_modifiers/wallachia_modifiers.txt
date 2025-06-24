@@ -466,3 +466,42 @@ lombardy_impaled_mod = {
 	mercenary_manpower = -0.5
 	mercenary_cost = 0.5
 }
+wallachia_patriarchat_of_alexandria = {
+	tolerance_own = 1
+	local_missionary_strength = 0.05
+	yearly_patriarch_authority = 0.001
+}
+
+wallachia_granaries_of_egypt = {
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.05
+}
+
+wallachia_coptic_administrators = {
+	local_governing_cost = -0.5
+	local_tax_modifier = 0.25
+}
+
+wallachia_coptic_tolerance = {
+	local_religious_unity_contribution = -1
+	local_tolerance_of_heretics = 10
+	local_missionary_strength = -1
+}
+
+wallachia_tolerating_the_copts = {
+	tolerance_of_heathens_capacity = 1
+	tolerance_heretic = 2
+	yearly_patriarch_authority = -0.005
+	church_loyalty_modifier = -0.2
+	tolerance_own = -1
+	religion = yes
+}
+
+wallachia_not_tolerating_the_copts = {
+	global_heretic_missionary_strength = 0.02
+	yearly_patriarch_authority = 0.002
+	tolerance_own = 2
+	church_loyalty_modifier = 0.1
+	tolerance_heretic = -2
+	religion = yes
+}
