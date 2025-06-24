@@ -395,6 +395,7 @@ wallachia_prepare_persia_invasion = {
 	siege_ability = 0.1
 	warscore_cost_vs_other_religion = -0.1
 }
+
 wallachia_develop_bagdad = {
 	local_development_cost = -0.15
 	great_project_upgrade_cost = -0.25
@@ -412,10 +413,12 @@ wallachia_impaled_venice_modifier = {
 	galley_power = 0.25
 	light_ship_cost = -0.25
 }
+
 wallachia_great_liberator = {
 	improve_relation_modifier = 0.1
 	diplomatic_reputation = 1
 }
+
 wallachia_aftermath_of_slave_reprisals = {
 	local_manpower_modifier = -1
 	local_production_efficiency = -1
@@ -425,7 +428,7 @@ wallachia_aftermath_of_slave_reprisals = {
 }
 
 wallachia_vlach_resettlement_of_sicily = {
-	local_culture_conversion_cost = -0.50
+	local_culture_conversion_cost = -0.5
 	local_culture_conversion_time = -0.25
 	local_core_creation = -0.2
 	local_missionary_strength = 0.1
@@ -435,7 +438,7 @@ wallachia_appropriated_sicilian_slaves = {
 	build_cost = -0.1
 	build_time = -0.25
 	development_cost = -0.1
-	global_trade_goods_size_modifier = 0.20
+	global_trade_goods_size_modifier = 0.2
 	diplomatic_reputation = -2
 	tolerance_own = -1
 }
@@ -462,10 +465,12 @@ wallachia_impaled_lombardy_mod = {
 	mercenary_cost = -0.1
 	mercenary_discipline = 0.05
 }
+
 lombardy_impaled_mod = {
 	mercenary_manpower = -0.5
 	mercenary_cost = 0.5
 }
+
 wallachia_patriarchat_of_alexandria = {
 	tolerance_own = 1
 	local_missionary_strength = 0.05
@@ -488,9 +493,14 @@ wallachia_coptic_tolerance = {
 	local_missionary_strength = -1
 }
 
+wallachia_coptic_pope = {
+	tolerance_heretic = 1
+	num_accepted_cultures = 1
+}
+
 wallachia_tolerating_the_copts = {
 	tolerance_of_heathens_capacity = 1
-	tolerance_heretic = 2
+	tolerance_heretic = 1
 	yearly_patriarch_authority = -0.005
 	church_loyalty_modifier = -0.2
 	tolerance_own = -1
@@ -502,6 +512,7 @@ wallachia_not_tolerating_the_copts = {
 	yearly_patriarch_authority = 0.002
 	tolerance_own = 2
 	church_loyalty_modifier = 0.1
+	culture_conversion_cost = -0.05
 	tolerance_heretic = -2
 	religion = yes
 }
