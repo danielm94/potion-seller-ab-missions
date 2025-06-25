@@ -52,6 +52,16 @@ patriarch = {
 			global_heathen_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = patriarch_of_rome
+			}
+		}
+		modifier = {
+			global_heretic_missionary_strength = 0.005
+		}
+	}
 	allow_only_male = yes
 	chance = {
 		factor = 1

@@ -610,17 +610,7 @@ country_event = {
 			name = wallachia_the_worlds_desire
 			duration = -1
 		}
-		if = {
-			limit = {
-				dynasty = "Cantacuzino"
-			}
-			country_event = {
-				id = wallachian_terror_events.10
-			}
-		}
-		else = {
-			custom_tooltip = cantacuzino_constantinople_bonus_tooltip
-		}
+		custom_tooltip = cantacuzino_constantinople_bonus_tooltip
 		custom_tooltip = AB_EMPTY
 		complex_dynamic_effect = {
 			first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
@@ -2304,6 +2294,123 @@ country_event = {
 		custom_tooltip = AB_EMPTY
 		add_prestige_or_monarch_power = {
 			amount = 10
+		}
+	}
+}
+
+#Move capital to Rome?
+country_event = {
+	id = AB_wallachia_events.35
+	title = AB_wallachia_events.35.t
+	desc = AB_wallachia_events.35.d
+	picture = GFX_AB_wallachia_events.35
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+				118 = {
+					previous_owner = PREV
+				}
+			}
+			
+			save_event_target_as = previous_owner_of_rome
+		}
+	}
+	option = {
+		name = AB_wallachia_events.35.a
+		118 = {
+			move_capital_effect = yes
+			change_culture = ROOT
+			add_core = ROOT
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			custom_tooltip = AB_EMPTY
+			add_province_modifier = {
+				name = wallachia_rebuilding_rome
+				duration = 7300
+			}
+		}
+		set_country_flag = wal_moved_capital_to_rome
+		#TODO
+		#ADD TOOLTIP ABOUT HOW ONCE YOU COMPLETE X MISSION ITALY GETS ROMANIANIZED
+	}
+	option = {
+		name = AB_wallachia_events.35.b
+		highlight = yes
+		trigger = {
+			capital = 151
+		}
+		#Keep in constantinople
+		151 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = wallachia_queen_of_all_cities
+				duration = -1
+			}
+		}
+		custom_tooltip = theodosian_walls_tooltip
+		set_country_flag = byzantine_monument_flag
+	}
+	option = {
+		name = AB_wallachia_events.35.c
+		highlight = yes
+		trigger = {
+			capital_scope = {
+				culture_group = romanian_culture_group
+			}
+		}
+		capital_scope = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			custom_tooltip = rome_on_the_danube_upgrade_tooltip
+			tooltip = {
+				capital_scope = {
+					add_province_modifier = {
+						name = wallachia_rome_on_the_danube_upgraded
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				ROOT = {
+					every_owned_province = {
+						limit = {
+							has_province_modifier = wallachia_rome_on_the_danube
+						}
+						remove_province_modifier = wallachia_rome_on_the_danube
+					}
+				}
+				add_province_modifier = {
+					name = wallachia_rome_on_the_danube_upgraded
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = new_roman_identity_upgrade_tooltip
+		tooltip = {
+			add_country_modifier = {
+				name = wallachia_new_roman_identity_upgraded
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_modifier = wallachia_new_roman_identity
+				}
+				remove_country_modifier = wallachia_new_roman_identity
+			}
+			add_country_modifier = {
+				name = wallachia_new_roman_identity_upgraded
+				duration = -1
+			}
 		}
 	}
 }

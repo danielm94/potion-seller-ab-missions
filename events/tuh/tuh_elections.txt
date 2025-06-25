@@ -137,6 +137,15 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = basarab_augustan_bonus
+			}
+			add_ruler_modifier = {
+				name = basarab_augustan_legacy
+				duration = -1
+			}
+		}
 	}
 	option = {
 		name = tuh_elections.0.b
@@ -720,7 +729,8 @@ country_event = {
 					mamluks_cavalry = ROOT
 					mamluks_cavalry = ROOT
 				}
-			} else = {
+			}
+			else = {
 				capital_scope = {
 					mamluks_cavalry = ROOT
 					mamluks_cavalry = ROOT

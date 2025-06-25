@@ -332,3 +332,8 @@ racovita_mamluk_contacts = {
 	mercenary_manpower = 0.25
 	mercenary_cost = -0.25
 }
+
+basarab_augustan_legacy = {
+	province_warscore_cost = -0.025
+	global_autonomy = -0.05
+}

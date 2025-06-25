@@ -43,4 +43,8 @@ spriteTypes = {
 		name = "gfx_wal_conquer_egypt"
 		texturefile = "gfx/interface/missions/wal/wal_conquer_egypt.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_rome"
+		texturefile = "gfx/interface/missions/wal/wal_rome.dds"
+	}
 }

@@ -195,25 +195,28 @@ wallachia_build_the_black_sea_fleet = {
 	admiral_cost = -0.5
 }
 
-#Player gains this modifier for moving capital to Constantinople
 wallachia_the_worlds_desire = {
 	prestige = 1
 }
 
-#Player gains this modifier for keeping capital in Targoviste, or any province that is their capital and whose primary culture is Romanian.
 wallachia_new_roman_identity = {
 	culture_conversion_cost = -0.05
 	culture_conversion_time = -0.1
 }
 
-#Province modifier for moving capital to Constantinople
 wallachia_rebuilding_the_great_city = {
 	local_tax_modifier = -0.9
 	local_monthly_devastation = -0.1
 	local_development_cost_modifier = -0.05
 }
 
-#Province bonus for keeping capital in Romanian province.
+wallachia_patriarchate_of_constantinople = {
+	yearly_patriarch_authority = 0.001
+	legitimacy = 0.5
+	prestige_decay = -0.01
+	local_great_project_upgrade_cost = -0.1
+}
+
 wallachia_rome_on_the_danube = {
 	local_development_cost_modifier = -0.1
 	province_trade_power_modifier = 0.5
@@ -471,7 +474,7 @@ lombardy_impaled_mod = {
 	mercenary_cost = 0.5
 }
 
-wallachia_patriarchat_of_alexandria = {
+wallachia_patriarchate_of_alexandria = {
 	tolerance_own = 1
 	local_missionary_strength = 0.05
 	yearly_patriarch_authority = 0.001
@@ -520,4 +523,45 @@ wallachia_not_tolerating_the_copts = {
 wallachia_impaled_pyramids_bonus = {
 	local_great_project_upgrade_cost = -0.25
 	local_great_project_upgrade_time = -0.25
+}
+
+wallachia_rebuilding_rome = {
+	local_tax_modifier = -0.9
+	local_monthly_devastation = -0.1
+	local_development_cost_modifier = -0.05
+	great_project_upgrade_cost = -0.1
+}
+
+wallachia_queen_of_all_cities = {
+	local_development_cost_modifier = -0.1
+	local_build_cost = -0.1
+	local_build_time = -0.25
+	local_great_project_upgrade_cost = -0.1
+	local_great_project_upgrade_time = -0.25
+	allowed_num_of_manufactories = 2
+}
+
+wallachia_new_roman_identity_upgraded = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.2
+}
+
+wallachia_rome_on_the_danube_upgraded = {
+	local_development_cost_modifier = -0.2
+	province_trade_power_modifier = 1
+	local_manpower_modifier = 1
+	local_tax_modifier = 1
+	allowed_num_of_manufactories = 2
+	all_estate_loyalty_equilibrium = 0.15
+}
+
+wallachia_patriarchate_of_rome = {
+	yearly_patriarch_authority = 0.001
+	legitimacy = 0.5
+	local_great_project_upgrade_cost = -0.1
+	prestige = 0.5
+}
+
+wallachia_impaled_pope_mission_bonus = {
+	global_heretic_missionary_strength = 0.02
 }

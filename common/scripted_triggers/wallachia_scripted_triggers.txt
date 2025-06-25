@@ -151,3 +151,10 @@ has_impaled_egypt_ruler = {
 		has_country_flag = wallachia_impaled_egypt
 	}
 }
+
+has_impaled_pope = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_pope_tooltip
+		has_country_flag = wallachia_impaled_pope
+	}
+}

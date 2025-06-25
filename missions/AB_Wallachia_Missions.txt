@@ -835,6 +835,85 @@ ab_wal_2 = {
 			}
 		}
 	}
+	wal_rome = {
+		icon = gfx_wal_rome
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = lazio_area
+				area = central_italy_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				mission_completed = wal_break_the_republics
+				mission_completed = wal_conquer_sicily
+			}
+			lazio_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_italy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = italy_region
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				religion = orthodox
+				culture = umbrian
+				location = 118
+				min_age = 40
+			}
+			add_patriarch_authority = 0.2
+			set_country_flag = patriarch_of_rome
+			custom_tooltip = patriarch_of_rome_tooltip
+			custom_tooltip = AB_EMPTY
+			118 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_rome
+					duration = -1
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_the_pope_tooltip
+				first_limit = "has_impaled_pope = yes"
+				first_effect = "add_country_modifier = {
+				name = wallachia_impaled_pope_mission_bonus
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = basarab_rome_bonus_tooltip
+			tooltip = {
+				add_ruler_modifier = {
+					name = basarab_augustan_legacy
+					duration = -1
+				}
+			}
+			set_country_flag = basarab_augustan_bonus"
+			}
+			country_event = {
+				id = AB_wallachia_events.35
+			}
+		}
+	}
 }
 
 ab_wal_3 = {
@@ -1519,6 +1598,12 @@ ab_wal_4 = {
 			custom_tooltip = AB_EMPTY
 			add_patriarch_authority = 0.1
 			custom_tooltip = AB_EMPTY
+			151 = {
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_constantinople
+					duration = -1
+				}
+			}
 			country_event = {
 				id = AB_wallachia_events.21
 			}
@@ -1906,7 +1991,7 @@ ab_wal_4 = {
 			custom_tooltip = AB_EMPTY
 			358 = {
 				add_province_modifier = {
-					name = wallachia_patriarchat_of_alexandria
+					name = wallachia_patriarchate_of_alexandria
 					duration = -1
 				}
 			}
