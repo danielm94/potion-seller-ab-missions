@@ -489,13 +489,149 @@ country_event = {
 	title = wallachian_terror_events.10.t
 	desc = wallachian_terror_events.10.d
 	picture = GFX_wallachian_terror_events.10
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = replaced_ability
+				value = 1
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				is_variable_equal = {
+					which = replaced_ability
+					value = 1
+				}
+			}
+			change_terror = {
+				value = -30
+				scaled_with_gain_modifier = no
+			}
+		}
+	}
 	is_triggered_only = yes
 	option = {
 		name = wallachian_terror_events.10.nevermind
-		change_terror = {
-			value = 30
-			scaled_with_gain_modifier = no
+		hidden_effect = {
+			set_variable = {
+				which = replaced_ability
+				value = 0
+			}
 		}
+	}
+	option = {
+		name = humane_personality
+		trigger = {
+			ruler_has_personality = humane_personality
+		}
+		remove_ruler_personality = humane_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = petty_personality
+		trigger = {
+			ruler_has_personality = petty_personality
+		}
+		remove_ruler_personality = petty_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = legendary_conqueror_personality
+		trigger = {
+			ruler_has_personality = legendary_conqueror_personality
+		}
+		remove_ruler_personality = legendary_conqueror_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = great_engineer_personality
+		trigger = {
+			ruler_has_personality = great_engineer_personality
+		}
+		remove_ruler_personality = great_engineer_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = patron_of_arts_personality
+		trigger = {
+			ruler_has_personality = patron_of_arts_personality
+		}
+		remove_ruler_personality = patron_of_arts_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = peasant_revolt_leader_personality
+		trigger = {
+			ruler_has_personality = peasant_revolt_leader_personality
+		}
+		remove_ruler_personality = peasant_revolt_leader_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = papal_puppetmaster_personality
+		trigger = {
+			ruler_has_personality = papal_puppetmaster_personality
+		}
+		remove_ruler_personality = papal_puppetmaster_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = iron_crowned_personality
+		trigger = {
+			ruler_has_personality = iron_crowned_personality
+		}
+		remove_ruler_personality = iron_crowned_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = merchant_basileus_personality
+		trigger = {
+			ruler_has_personality = merchant_basileus_personality
+		}
+		remove_ruler_personality = merchant_basileus_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = orangist_stadholder_personality
+		trigger = {
+			ruler_has_personality = orangist_stadholder_personality
+		}
+		remove_ruler_personality = orangist_stadholder_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = reaver_personality
+		trigger = {
+			ruler_has_personality = reaver_personality
+		}
+		remove_ruler_personality = reaver_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = last_knight_personality
+		trigger = {
+			ruler_has_personality = last_knight_personality
+		}
+		remove_ruler_personality = last_knight_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = maidenless_personality
+		trigger = {
+			ruler_has_personality = maidenless_personality
+		}
+		remove_ruler_personality = maidenless_personality
+		add_ruler_personality = impaler_personality
+	}
+	option = {
+		name = thunderer_personality
+		trigger = {
+			ruler_has_personality = thunderer_personality
+		}
+		remove_ruler_personality = thunderer_personality
+		add_ruler_personality = impaler_personality
 	}
 	option = {
 		name = just_personality
