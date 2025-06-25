@@ -37,3 +37,8 @@
  wallachian_terror_emperor_impaled_tooltip: "§Y[Emperor.Monarch.GetName]§! and the pack of dogs [Emperor.Monarch.GetSheHe] calls [Emperor.Monarch.GetHerHis] family will be impaled."
  retribution_leader_impaled_tooltip: "Every country in the §YHoly Roman Empire§! that is fighting in §YThe Imperial Retribution§! war will receive:"
  wallachia_block_pirate_raids_tooltip: "Pirates will be unable to raid §Y[Root.GetName]§!'s coasts until the end of the game."
+ impaling_on_pyramids_cost_tooltip: "Impaling the §Y[impaled_country.Monarch.GetTitle]§! and [impaled_country.Monarch.GetHerHis] family on the top of the pyramids is an engineering challenge, and will come at a cost..."
+ pyramids_monument_bonus_tooltip: "The §YPyramid of Cheops§! will give us additional bonuses!"
+ pillage_naz_cities_tooltips: "For every @NAZ §Y[NAZ.GetAdjective]§! province occuped by §Y[impaler_country.GetName]§!:"
+ pillage_egy_cities_tooltips: "For every @EGY §Y[EGY.GetAdjective]§! province occuped by §Y[impaler_country.GetName]§!:"
+ wallachian_terror_events_niz_egy_execution_tooltip: "§Y[impaled_country.Monarch.GetName]§! and [impaled_country.Monarch.GetHerHis] heathen family are impaled on top of the pyramids."

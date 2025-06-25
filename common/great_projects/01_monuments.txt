@@ -7193,6 +7193,17 @@ pyramid_of_cheops = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
+		conditional_modifier = {
+			trigger = { 
+				owner = { 
+					OR = {
+						has_impaled_nizzarids_ruler = yes 
+						has_impaled_egypt_ruler = yes
+					}
+				} 
+			}
+			modifier = { monthly_terror_power = 0.02 }
+		}
 	}
 
 	tier_2 = {
@@ -7223,6 +7234,20 @@ pyramid_of_cheops = {
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+		}
+		conditional_modifier = {
+			trigger = { 
+				owner = { 
+					OR = {
+						has_impaled_nizzarids_ruler = yes 
+						has_impaled_egypt_ruler = yes
+					}
+				} 
+			}
+			modifier = { 
+				monthly_terror_power = 0.03
+				terror_power_gain_modifier = 0.10
+		 	}
 		}
 	}
 
@@ -7255,6 +7280,20 @@ pyramid_of_cheops = {
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
+		}
+		conditional_modifier = {
+			trigger = { 
+				owner = { 
+					OR = {
+						has_impaled_nizzarids_ruler = yes 
+						has_impaled_egypt_ruler = yes
+					}
+				} 
+			}
+			modifier = { 
+				monthly_terror_power = 0.05
+				terror_power_gain_modifier = 0.25
+		 	}
 		}
 	}
 }

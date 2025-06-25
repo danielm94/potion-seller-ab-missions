@@ -1900,9 +1900,7 @@ ab_wal_4 = {
 				name = "The Patriarch of Alexandria"
 				location = 358
 			}
-			custom_tooltip = AB_EMPTY
 			add_patriarch_authority = 0.1
-			custom_tooltip = AB_EMPTY
 			set_country_flag = patriarch_of_alexandria
 			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
 			custom_tooltip = AB_EMPTY
@@ -1912,12 +1910,40 @@ ab_wal_4 = {
 					duration = -1
 				}
 			}
-
 			add_country_modifier = {
 				name = wallachia_granaries_of_egypt
 				duration = -1
 			}
-
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_impaled_naz_or_egy_tooltip
+				first_limit = "OR = {
+						has_impaled_egypt_ruler = yes
+						has_impaled_nizzarids_ruler = yes
+					}"
+				first_effect = "361 = {
+				add_province_modifier = {
+					name = wallachia_impaled_pyramids_bonus
+					duration = -1
+				}
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = racovita_mamluks_tooltip
+			tooltip = {
+				add_ruler_modifier = {
+					name = racovita_mamluk_contacts
+					duration = -1
+				}
+				361 = {
+					mamluks_cavalry = ROOT
+					mamluks_cavalry = ROOT
+					mamluks_cavalry = ROOT
+				}
+			}
+			set_country_flag = racovita_mamluks_bonus"
+			}
 			country_event = {
 				id = AB_wallachia_events.34
 			}

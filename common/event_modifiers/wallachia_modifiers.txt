@@ -516,3 +516,8 @@ wallachia_not_tolerating_the_copts = {
 	tolerance_heretic = -2
 	religion = yes
 }
+
+wallachia_impaled_pyramids_bonus = {
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
+}

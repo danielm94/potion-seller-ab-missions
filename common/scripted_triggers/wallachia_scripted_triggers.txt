@@ -27,6 +27,8 @@ is_special_impaled_country = {
 			tag = VEN			#Venice
 			tag = SIC			#Sicily
 			tag = LOM			#Lombardy
+			tag = NAZ			#Nizzarids
+			tag = EGY			#Egypt
 		}
 	}
 }
@@ -38,6 +40,8 @@ is_special_execution_country = {
 			tag = BYZ			#Byzantium
 			tag = VEN			#Venice
 			tag = SIC			#Sicily
+			tag = NAZ			#Nizzarids
+			tag = EGY			#Egypt
 		}
 	}
 }
@@ -132,4 +136,18 @@ has_impaled_sicily_ruler = {
 
 has_impaled_lombardy_ruler = {
 	has_country_flag = wallachia_impaled_lombardy
+}
+
+has_impaled_nizzarids_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_nizzarids_ruler_tooltip
+		has_country_flag = wallachia_impaled_nizzarids
+	}
+}
+
+has_impaled_egypt_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_egypt_ruler_tooltip
+		has_country_flag = wallachia_impaled_egypt
+	}
 }

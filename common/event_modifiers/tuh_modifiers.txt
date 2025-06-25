@@ -327,3 +327,8 @@ ghica_lombard_banking = {
 	inflation_reduction = 0.1
 	inflation_action_cost = -0.1
 }
+
+racovita_mamluk_contacts = {
+	mercenary_manpower = 0.25
+	mercenary_cost = -0.25
+}

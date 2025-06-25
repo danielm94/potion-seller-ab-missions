@@ -176,11 +176,22 @@ defined_text = {
 			}
 		}
 	}
-		text = {
+	text = {
 		localisation_key = wallachian_terror_events_lom_impale
 		trigger = {
 			event_target:impaled_country = {
 				tag = LOM
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_naz_impale
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = NAZ
+					tag = EGY
+				}
 			}
 		}
 	}
@@ -259,6 +270,17 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_naz_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = NAZ
+					tag = EGY
+				}
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -334,11 +356,22 @@ defined_text = {
 			}
 		}
 	}
-		text = {
+	text = {
 		localisation_key = wallachian_terror_events_lom_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
 				tag = LOM
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_naz_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = NAZ
+					tag = EGY
+				}
 			}
 		}
 	}
@@ -418,6 +451,17 @@ defined_text = {
 			}
 			event_target:impaled_country = {
 				tag = SIC
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_niz_egy_execution_tooltip
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = NAZ
+					tag = EGY
+				}
 			}
 		}
 	}

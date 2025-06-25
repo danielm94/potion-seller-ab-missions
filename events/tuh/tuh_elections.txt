@@ -703,6 +703,31 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = racovita_mamluks_bonus
+			}
+			add_ruler_modifier = {
+				name = racovita_mamluk_contacts
+				duration = -1
+			}
+			if = {
+				limit = {
+					owns = 361
+				}
+				361 = {
+					mamluks_cavalry = ROOT
+					mamluks_cavalry = ROOT
+					mamluks_cavalry = ROOT
+				}
+			} else = {
+				capital_scope = {
+					mamluks_cavalry = ROOT
+					mamluks_cavalry = ROOT
+					mamluks_cavalry = ROOT
+				}
+			}
+		}
 	}
 	option = {
 		name = tuh_elections.0.i
