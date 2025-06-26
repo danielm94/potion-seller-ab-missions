@@ -626,9 +626,7 @@ country_event = {
 	option = {
 		name = AB_wallachia_events.21.b
 		trigger = {
-			capital_scope = {
-				culture_group = romanian_culture_group
-			}
+			capital = 161
 		}
 		capital_scope = {
 			change_province_name = "Cetatea de Scaun"
@@ -643,6 +641,23 @@ country_event = {
 		add_country_modifier = {
 			name = wallachia_new_roman_identity
 			duration = -1
+		}
+	}
+	option = {
+		name = AB_wallachia_events.21.c
+		trigger = {
+			NOT = {
+				capital = 161
+			}
+		}
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			add_province_modifier = {
+				name = capital_expansion_modifier
+				duration = -1
+			}
 		}
 	}
 }
@@ -2315,7 +2330,6 @@ country_event = {
 					previous_owner = PREV
 				}
 			}
-			
 			save_event_target_as = previous_owner_of_rome
 		}
 	}
@@ -2361,11 +2375,9 @@ country_event = {
 		name = AB_wallachia_events.35.c
 		highlight = yes
 		trigger = {
-			capital_scope = {
-				culture_group = romanian_culture_group
-			}
+			capital = 161
 		}
-		capital_scope = {
+		161 = {
 			add_base_tax = 2
 			add_base_production = 2
 			add_base_manpower = 2
@@ -2409,6 +2421,26 @@ country_event = {
 			}
 			add_country_modifier = {
 				name = wallachia_new_roman_identity_upgraded
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.35_im_fine_thanks
+		trigger = {
+			NOT = {
+				capital = 151
+			}
+			NOT = {
+				capital = 161
+			}
+		}
+		capital_scope = {
+			add_base_manpower = 4
+			add_base_production = 4
+			add_base_tax = 4
+			add_province_modifier = {
+				name = capital_boom
 				duration = -1
 			}
 		}

@@ -48,5 +48,19 @@ defined_text = {
 	}
 	text = {
 		localisation_key = AB_wallachia_events.35.d.homeland
+		trigger = {
+			capital = 161
+		}
+	}
+	text = {
+		localisation_key = AB_wallachia_events.35.d.other
+		trigger = {
+			NOT = {
+				capital = 161
+			}
+			NOT = {
+				capital = 151
+			}
+		}
 	}
 }
