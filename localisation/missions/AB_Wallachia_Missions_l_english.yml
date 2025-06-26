@@ -138,3 +138,6 @@
  wal_carpathian_fortifications_title: "The Gates of Carpathia"
  wal_carpathian_fortifications_desc: "Our brethren in Transylvania are free, but the Magyar threat remains. The Carpathian Mountains, our ancestral shield, must be forged into an unbreakable wall. By fortifying the crucial mountain passes, we will transform them into gates of steel, locking the region against any invader. Transylvania will become an impenetrable bastion, a graveyard for any army foolish enough to test its strength."
  wal_carpathian_fortifications_ramparts_bonus_tooltip: "If the provinces that meet the mission's requirements have §YRamparts§!, then:\nGain §G50.00§! ducats for each §YRampart§!."
+ wal_pentarchy_title: "Restore the Pentarchy"
+ wal_pentarchy_desc: "The ancient Patriarchates of Alexandria, Antiohia, and Ierusalim—the very cradle of our faith—languish under the yoke of infidels and heretics. The Pentarchy, the five-pillared foundation of the original Church, is incomplete. It is our ultimate duty to liberate these holy cities and bring all five Sees under our protection."
+ pentarchy_religious_state_buff_tooltip: "The §YClerul§! estate privilege §YReligious State§! now grants up to §G+30.0%§! §YManpower in True Faith provinces§!, scaling with loyalty.\nIt will also no longer have any §YClerul Loyalty Equilibrium§! or §YMax Absolutism§! costs."

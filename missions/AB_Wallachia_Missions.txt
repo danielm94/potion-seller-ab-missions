@@ -1216,11 +1216,12 @@ ab_wal_3 = {
 				custom_trigger_tooltip = {
 					tooltip = wal_drive_out_the_bulgars_trigger_tooltip
 					NOT = {
-						any_province = {
-							owned_by = BUL
-							OR = {
-								region = balkan_region
-								region = carpathia_region
+						BUL = {
+							any_owned_province = {
+								OR = {
+									region = balkan_region
+									region = carpathia_region
+								}
 							}
 						}
 					}
@@ -1309,6 +1310,42 @@ ab_wal_3 = {
 			country_event = {
 				id = AB_wallachia_events.29
 			}
+		}
+	}
+	wal_pentarchy = {
+		icon = mission_pope
+		position = 10
+		required_missions = {
+			wal_rome
+			wal_conquer_egypt
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 118
+				province_id = 151
+				province_id = 358
+				province_id = 379
+				province_id = 2313
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns = 118			#Rome
+			owns = 151			#Constantinople
+			owns = 358			#Alexandria
+			owns = 379			#Jerusalem
+			owns = 2313			#Antioch
+		}
+		effect = {
+			add_patriarch_authority = 0.1
+			add_country_modifier = {
+				name = healing_the_schism
+				duration = -1
+			}
+			set_country_flag = pentarchy_religious_state_buff
+			custom_tooltip = pentarchy_religious_state_buff_tooltip
 		}
 	}
 }

@@ -231,6 +231,23 @@ estate_church_religious_state = {
 			build_time = -0.15
 		}
 	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = { 
+			has_country_flag = pentarchy_religious_state_buff
+		}
+		modifier = { 
+			manpower_in_true_faith_provinces = 0.3
+		}
+	}
+	conditional_modifier = {
+		trigger = { 
+			has_country_flag = pentarchy_religious_state_buff
+		}
+		modifier = {
+			church_loyalty_modifier = 0.05
+			max_absolutism = 5
+		}
+	}
 	# ]]]
 	ai_will_do = {
 		factor = 100
