@@ -2044,6 +2044,58 @@ ab_wal_5 = {
 	potential = {
 		has_access_to_wallachian_missions = yes
 	}
+	wal_danubian_fortifications = {
+		icon = protect_against_the_turks
+		position = 2
+		provinces_to_highlight = {
+			NOT = {
+				has_fort_building_trigger = yes
+			}
+			area = wallachia_area
+			owned_by = ROOT
+		}
+		trigger = {
+			capital_scope = {
+				has_fort_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				area = wallachia_area
+				has_fort_building_trigger = yes
+				grown_by_development = 3
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				capital_scope = {
+					add_province_modifier = {
+						name = wallachia_danubian_fortifications
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = wallachia_area
+						has_fort_building_trigger = yes
+						grown_by_development = 3
+					}
+					add_province_modifier = {
+						name = wallachia_danubian_fortifications
+						duration = -1
+					}
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				skill = 1
+				cost_multiplier = 0.5
+				location = capital
+			}
+		}
+	}
 	#TODO: Spread this mission's rewards across another 1 or 2 missions
 	wal_seal_the_carpathians = {
 		icon = gfx_wal_seal_the_carpathians

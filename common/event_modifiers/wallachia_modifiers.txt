@@ -565,3 +565,8 @@ wallachia_patriarchate_of_rome = {
 wallachia_impaled_pope_mission_bonus = {
 	global_heretic_missionary_strength = 0.02
 }
+
+wallachia_danubian_fortifications = {
+	local_fort_maintenance_modifier = -0.5
+	local_defender_dice_roll_bonus = 1
+}
