@@ -285,6 +285,37 @@ ab_wal_1 = {
 			}
 		}
 	}
+	wal_st_pauls_basilica = {
+		icon = new_st_peters_basilica
+		position = 10
+		required_missions = {
+			wal_rome
+		}
+		provinces_to_highlight = {
+			province_id = 151
+			OR = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		trigger = {
+			151 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			religion = orthodox
+			treasury = 2500
+		}
+		effect = {
+			destroy_great_project = {
+				type = stpeters_cathedral
+			}
+		}
+	}
 }
 
 ab_wal_2 = {
@@ -912,6 +943,52 @@ ab_wal_2 = {
 			country_event = {
 				id = AB_wallachia_events.35
 			}
+		}
+	}
+	wal_italy = {
+		icon = mission_rule_italy
+		position = 10
+		required_missions = {
+			wal_rome
+		}
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = switzerland_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = romandie_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = provence_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = savoy_dauphine_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = languedoc_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = massif_central_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = pyrenees_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = guyenne_area
+			}
+			custom_tooltip = tooltip_line_divider
 		}
 	}
 }
