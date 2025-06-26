@@ -177,3 +177,7 @@
  desc_wallachia_patriarchate_of_rome: "The First See of Christendom has been restored to the True Faith. An Orthodox Patriarch now sits in Rome, his presence sanctifying our rule and projecting our prestige across the world."
  wallachia_danubian_fortifications: "Danubian Citadel"
  desc_wallachia_danubian_fortifications: "This fortress is a key link in our Danubian defensive chain. Its garrison is well-supplied, its walls are expertly engineered, and its cannons provide interlocking fire with neighboring strongholds. Any army that attempts to pass will pay dearly."
+ wallachia_carpathian_fort: "Carpathian Gate"
+ desc_wallachia_carpathian_fort: "This fortress stands as one of the great gates of the Carpathians. It commands a vital mountain pass, its cannons sweeping the narrow approaches below."
+ wal_carpathian_fortifications_ramparts_bonus: "The Fortress-Foundry"
+ desc_wal_carpathian_fortifications_ramparts_bonus: "The immense security provided by the new ramparts creates a safe zone for vital state industries. Within these fortified compounds, armories, foundries, and workshops can operate without fear of disruption, supplying our legions from the heart of the mountains."

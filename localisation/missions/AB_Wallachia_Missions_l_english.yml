@@ -135,3 +135,6 @@
  basarab_rome_bonus_tooltip: "Electing a ruler from House §YBasarab§! grands the following bonuses:"
  wal_danubian_fortifications_title: "Citadels of the Danube"
  wal_danubian_fortifications_desc: "Our lands along the Danube are the lifeblood of our nation. Their prosperity makes them a constant target for our powerful neighbors. We must transform our most developed towns into a chain of formidable citadels."
+ wal_carpathian_fortifications_title: "The Gates of Carpathia"
+ wal_carpathian_fortifications_desc: "Our brethren in Transylvania are free, but the Magyar threat remains. The Carpathian Mountains, our ancestral shield, must be forged into an unbreakable wall. By fortifying the crucial mountain passes, we will transform them into gates of steel, locking the region against any invader. Transylvania will become an impenetrable bastion, a graveyard for any army foolish enough to test its strength."
+ wal_carpathian_fortifications_ramparts_bonus_tooltip: "If the provinces that meet the mission's requirements have §YRamparts§!, then:\nGain §G50.00§! ducats for each §YRampart§!."

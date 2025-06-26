@@ -570,3 +570,13 @@ wallachia_danubian_fortifications = {
 	local_fort_maintenance_modifier = -0.5
 	local_defender_dice_roll_bonus = 1
 }
+
+wallachia_carpathian_fort = {
+	local_fort_maintenance_modifier = -0.5
+	local_defender_dice_roll_bonus = 1
+	local_garrison_damage = 0.5
+}
+
+wal_carpathian_fortifications_ramparts_bonus = {
+	allowed_num_of_manufactories = 1
+}

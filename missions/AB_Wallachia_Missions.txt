@@ -2048,8 +2048,11 @@ ab_wal_5 = {
 		icon = protect_against_the_turks
 		position = 2
 		provinces_to_highlight = {
-			NOT = {
-				has_fort_building_trigger = yes
+			OR = {
+				has_fort_building_trigger = no
+				NOT = {
+					grown_by_development = 3
+				}
 			}
 			area = wallachia_area
 			owned_by = ROOT
@@ -2096,12 +2099,101 @@ ab_wal_5 = {
 			}
 		}
 	}
+	wal_carpathian_fortifications = {
+		icon = gfx_wal_carpathian_fortifications
+		position = 3
+		required_missions = {
+			wal_danubian_fortifications
+			wal_liberate_transylvania
+		}
+		provinces_to_highlight = {
+			OR = {
+				has_fort_building_trigger = no
+				NOT = {
+					grown_by_development = 3
+				}
+			}
+			OR = {
+				area = southern_transylvania_area
+				area = transylvania_area
+			}
+			owned_by = ROOT
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					area = southern_transylvania_area
+					area = transylvania_area
+				}
+				has_fort_building_trigger = yes
+				grown_by_development = 3
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_carpathian_fort
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = southern_transylvania_area
+							area = transylvania_area
+						}
+						has_fort_building_trigger = yes
+						grown_by_development = 3
+					}
+					add_province_modifier = {
+						name = wallachia_carpathian_fort
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_carpathian_fortifications_ramparts_bonus_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wal_carpathian_fortifications_ramparts_bonus
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = southern_transylvania_area
+							area = transylvania_area
+						}
+						has_fort_building_trigger = yes
+						grown_by_development = 3
+						has_building = ramparts
+					}
+					owner = {
+						add_treasury = 50
+					}
+					add_province_modifier = {
+						name = wal_carpathian_fortifications_ramparts_bonus
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = buffed_bran_castle_reward_tooltip
+			set_country_flag = upgraded_bran_castle
+			custom_tooltip = AB_EMPTY
+		}
+	}
 	#TODO: Spread this mission's rewards across another 1 or 2 missions
 	wal_seal_the_carpathians = {
 		icon = gfx_wal_seal_the_carpathians
 		position = 4
 		required_missions = {
 			wal_crush_the_magyars
+			wal_carpathian_fortifications
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -2152,9 +2244,6 @@ ab_wal_5 = {
 					}
 				}
 			}
-			custom_tooltip = buffed_bran_castle_reward_tooltip
-			set_country_flag = upgraded_bran_castle
-			custom_tooltip = AB_EMPTY
 			custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
 			set_country_flag = panonic_spread_extra
 			custom_tooltip = AB_EMPTY
