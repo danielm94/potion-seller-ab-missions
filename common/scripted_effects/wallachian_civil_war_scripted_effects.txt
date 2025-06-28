@@ -70,6 +70,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_racovita_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_racovita
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -78,6 +84,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_movilesti_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_movilesti
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -86,6 +98,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_mavrocordatos_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_mavrocordatos
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -94,6 +112,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_brancoveanu_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_brancoveanu
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -102,6 +126,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_ghica_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_ghica
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -110,6 +140,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_cantacuzino_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_cantacuzino
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -118,6 +154,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_bibescu_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_bibescu
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -126,6 +168,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_draculesti_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_draculesti
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -134,6 +182,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_danesti_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_danesti
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -142,6 +196,12 @@ wallachian_civil_war_check_for_defeated_houses_effect = {
 			clr_country_flag = wallachian_civil_war_basarab_rebels_spawned
 			set_country_flag = wallachian_civil_war_defeated_basarab
 			wallachian_civil_war_defeated_house_bonus = yes
+			hidden_effect = {
+				change_variable = {
+					which = war_of_ten_houses_num_defeated
+					value = 1
+				}
+			}
 		}
 	}
 }

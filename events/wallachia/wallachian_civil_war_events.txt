@@ -95,6 +95,10 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = in_war_of_the_ten_houses
+			set_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 0
+			}
 		}
 	}
 	option = {
@@ -153,7 +157,7 @@ country_event = {
 	hidden = yes
 	immediate = {
 		random_list = {
-			35 = {
+			45 = {
 				#Spawn rebels
 				if = {
 					limit = {
@@ -186,7 +190,7 @@ country_event = {
 					has_butchered_the_boiermiea = yes
 				}
 			}
-			10 = {
+			5 = {
 				#Paranoia event
 				country_event = {
 					id = wallachian_civil_war_events.6
@@ -199,7 +203,7 @@ country_event = {
 					}
 				}
 			}
-			10 = {
+			5 = {
 				#Serfs aren't paying us tax event
 				random_owned_province = {
 					limit = {
@@ -226,8 +230,32 @@ country_event = {
 			}
 			5 = {
 				#Rivals fund rebels
+				trigger = {
+					any_rival_country = {
+						OR = {
+							NOT = {
+								has_country_flag = funded_rebels_in_wallachia
+							}
+							had_country_flag = {
+								flag = funded_rebels_in_wallachia
+								days = 1095
+							}
+						}
+					}
+				}
 				save_global_event_target_as = voivode_country
 				random_rival_country = {
+					limit = {
+						OR = {
+							NOT = {
+								has_country_flag = funded_rebels_in_wallachia
+							}
+							had_country_flag = {
+								flag = funded_rebels_in_wallachia
+								days = 1095
+							}
+						}
+					}
 					country_event = {
 						id = wallachian_civil_war_events.8
 					}
@@ -654,6 +682,7 @@ country_event = {
 		trigger = {
 			manpower = 5
 		}
+		set_country_flag = funded_rebels_in_wallachia
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -686,6 +715,7 @@ country_event = {
 		trigger = {
 			is_bankrupt = no
 		}
+		set_country_flag = funded_rebels_in_wallachia
 		add_years_of_income = -0.5
 		add_prestige_or_monarch_power = {
 			amount = 5
@@ -1196,7 +1226,7 @@ country_event = {
 	}
 }
 
-#Racovita Bribe Event (Your example, for reference - Event ID .19)
+#Racovita Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.19
 	title = wallachian_civil_war_events.19.t
@@ -1211,6 +1241,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_racovita
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty		# Generic option name
@@ -1220,7 +1256,7 @@ country_event = {
 	}
 }
 
-#Movilesti Bribe Event (Event ID .20)
+#Movilesti Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.20
 	title = wallachian_civil_war_events.20.t
@@ -1235,6 +1271,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_movilesti
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1244,7 +1286,7 @@ country_event = {
 	}
 }
 
-#Mavrocordatos Bribe Event (Event ID .21)
+#Mavrocordatos Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.21
 	title = wallachian_civil_war_events.21.t
@@ -1259,6 +1301,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_mavrocordatos
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1268,7 +1316,7 @@ country_event = {
 	}
 }
 
-#Ghica Bribe Event (Event ID .22)
+#Ghica Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.22
 	title = wallachian_civil_war_events.22.t
@@ -1283,6 +1331,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_ghica
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1292,7 +1346,7 @@ country_event = {
 	}
 }
 
-#Cantacuzino Bribe Event (Event ID .23)
+#Cantacuzino Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.23
 	title = wallachian_civil_war_events.23.t
@@ -1307,6 +1361,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_cantacuzino
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1316,7 +1376,7 @@ country_event = {
 	}
 }
 
-#Bibescu Bribe Event (Event ID .24)
+#Bibescu Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.24
 	title = wallachian_civil_war_events.24.t
@@ -1331,6 +1391,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_bibescu
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1340,7 +1406,7 @@ country_event = {
 	}
 }
 
-#Draculesti Bribe Event (Event ID .25)
+#Draculesti Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.25
 	title = wallachian_civil_war_events.25.t
@@ -1355,6 +1421,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_draculesti
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1364,7 +1436,7 @@ country_event = {
 	}
 }
 
-#Danesti Bribe Event (Event ID .26)
+#Danesti Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.26
 	title = wallachian_civil_war_events.26.t
@@ -1379,6 +1451,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_danesti
 		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
+		}
 	}
 	option = {
 		name = wallachian_civil_war_refuse_loyalty
@@ -1388,7 +1466,7 @@ country_event = {
 	}
 }
 
-#Basarab Bribe Event (Event ID .27)
+#Basarab Bribe Event
 country_event = {
 	id = wallachian_civil_war_events.27
 	title = wallachian_civil_war_events.27.t
@@ -1402,6 +1480,12 @@ country_event = {
 		custom_tooltip = wallachian_civil_war_basarab_loyalty_tooltip
 		hidden_effect = {
 			set_country_flag = wallachian_civil_war_defeated_basarab
+		}
+		hidden_effect = {
+			change_variable = {
+				which = war_of_ten_houses_num_defeated
+				value = 1
+			}
 		}
 	}
 	option = {
@@ -1710,7 +1794,15 @@ country_event = {
 					power_type = terror_power
 				}
 			}
-			add_government_reform = wallachian_autocracy
+			if = {
+				limit = {
+					tag = DAC
+				}
+				add_government_reform = dacian_autocracy
+			}
+			else = {
+				add_government_reform = wallachian_autocracy
+			}
 			variable_government_power_effect = {
 				var = terror_power_amount
 				mechanic_type = wallachian_terror_mechanic
@@ -2026,4 +2118,3 @@ country_event = {
 		add_legitimacy = 5
 	}
 }
-
