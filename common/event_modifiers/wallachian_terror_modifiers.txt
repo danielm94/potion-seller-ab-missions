@@ -15,13 +15,13 @@ wallachian_terror_warning_for_the_rest = {
 	local_defensiveness = 0.1
 	local_defender_dice_roll_bonus = 1
 	local_monthly_devastation = 0.01
-	development_cost = 0.1
+	local_development_cost = 0.1
 }
 
 wallachian_terror_garden_of_the_defeated = {
 	war_exhaustion = 0.02
 	local_monthly_devastation = 0.01
-	development_cost = 0.1
+	local_development_cost = 0.1
 }
 
 wallachian_terror_raze_mod = {
