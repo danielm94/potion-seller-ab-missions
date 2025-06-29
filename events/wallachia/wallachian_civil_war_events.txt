@@ -157,19 +157,19 @@ country_event = {
 	hidden = yes
 	immediate = {
 		random_list = {
-			45 = {
+			55 = {
 				#Spawn rebels
 				if = {
 					limit = {
 						has_defeated_the_10_houses = yes
 					}
 					random_list = {
-						40 = {
+						30 = {
 							country_event = {
 								id = wallachian_civil_war_events.35
 							}
 						}
-						60 = {
+						70 = {
 							#Nothing
 						}
 					}
@@ -261,7 +261,7 @@ country_event = {
 					}
 				}
 			}
-			40 = {
+			30 = {
 				#Nothing
 			}
 		}
