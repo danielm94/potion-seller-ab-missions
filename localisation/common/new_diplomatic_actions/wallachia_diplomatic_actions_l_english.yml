@@ -1,0 +1,7 @@
+﻿l_english:
+ provoke_coalition: "Provoke Coalition"
+ provoke_coalition_title: "Provoke Coalition"
+ provoke_coalition_desc: "We will trick this member of the coalition into attacking us preemptively.\n\nLose §R-30§! §YTerror§!."
+ provoke_coalition_tooltip: "We will trick this member of the coaliation into attacking us."
+ provoke_coalition_alert_tooltip: "You can provoke the coalition into attacking you"
+ not_already_in_coaltion_war: "We are not already in a coalition war with them."

@@ -1,0 +1,53 @@
+provoke_coalition = {
+	category = alliance
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		has_government_attribute = can_provoke_coalition
+		FROM = {
+			coalition_target = ROOT
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = not_already_in_coaltion_war
+			NOT = {
+				is_in_war = {
+					attackers = FROM
+					defenders = ROOT
+					casus_belli = cb_super_badboy
+				}
+			}
+		}
+		NOT = {
+			truce_with = FROM
+		}
+		OR = {
+			is_neighbor_of = FROM
+			any_subject_country = {
+				is_neighbor_of = FROM
+			}
+		}
+		has_government_power = {
+			mechanic_type = wallachian_terror_mechanic
+			power_type = terror_power
+			value = 30
+		}
+	}
+
+	on_accept = {
+		change_terror = {
+			value = -30
+			scaled_with_gain_modifier = no
+		}
+		FROM = {
+			declare_war_with_cb = {
+				casus_belli = cb_super_badboy
+				who = ROOT
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
