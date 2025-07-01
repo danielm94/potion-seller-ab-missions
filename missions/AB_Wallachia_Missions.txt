@@ -316,6 +316,34 @@ ab_wal_1 = {
 			}
 		}
 	}
+	wal_switzerland = {
+		icon = reorganize_the_confederacy
+		position = 11
+		required_missions = {
+			wal_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = switzerland_area
+				area = romandie_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			switzerland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			romandie_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+		}
+	}
 }
 
 ab_wal_2 = {
@@ -991,6 +1019,94 @@ ab_wal_2 = {
 			custom_tooltip = tooltip_line_divider
 		}
 	}
+	wal_southern_france = {
+		icon = mission_invade_occitania
+		position = 11
+		required_missions = {
+			wal_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = provence_area
+				area = savoy_dauphine_area
+				area = languedoc_area
+				area = massif_central_area
+				area = pyrenees_area
+				area = guyenne_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = provence_area
+					area = savoy_dauphine_area
+					area = languedoc_area
+					area = massif_central_area
+					area = pyrenees_area
+					area = guyenne_area
+				}
+				value = 22
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = france_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = iberia_region
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
+	wal_france = {
+		icon = centralize_france
+		position = 12
+		required_missions = {
+			wal_southern_france
+		}
+		provinces_to_highlight = {
+			region = france_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 63
+				region = france_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = east_midlands_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = west_midlands_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = yorkshire_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = wessex_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = home_counties_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = east_anglia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = wales_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = scottish_marches_area
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
 }
 
 ab_wal_3 = {
@@ -1389,6 +1505,171 @@ ab_wal_3 = {
 			}
 		}
 	}
+	wal_austria = {
+		icon = end_the_habsburgs
+		position = 7
+		required_missions = {
+			wal_balkan_hegemony
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = inner_austria_area
+				area = austria_proper_area
+				area = tirol_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					area = inner_austria_area
+					area = austria_proper_area
+					area = tirol_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = east_bavaria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_bavaria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = upper_bavaria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_swabia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = upper_swabia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = upper_rhineland_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = palatinate_area
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
+	wal_south_germany = {
+		icon = interfere_in_germany
+		position = 8
+		required_missions = {
+			wal_austria
+		}
+		#28
+		provinces_to_highlight = {
+			OR = {
+				area = east_bavaria_area
+				area = lower_bavaria_area
+				area = upper_bavaria_area
+				area = lower_swabia_area
+				area = upper_swabia_area
+				area = upper_rhineland_area
+				area = palatinate_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 23
+				OR = {
+					area = east_bavaria_area
+					area = lower_bavaria_area
+					area = upper_bavaria_area
+					area = lower_swabia_area
+					area = upper_swabia_area
+					area = upper_rhineland_area
+					area = palatinate_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = lower_rhineland_area
+			}
+			85 = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim_multi_provinces = {
+				target = wallonia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = flanders_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = brabant_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = north_brabant_area
+			}
+			96 = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
+	wal_lowlands = {
+		icon = conquer_burgundy
+		position = 9
+		required_missions = {
+			wal_south_germany
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+				province_id = 96
+				area = lower_rhineland_area
+				area = wallonia_area
+				area = flanders_area
+				area = brabant_area
+				area = north_brabant_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			85 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			96 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 16
+				OR = {
+					area = lower_rhineland_area
+					area = wallonia_area
+					area = flanders_area
+					area = brabant_area
+					area = north_brabant_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = low_countries_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = north_german_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = south_german_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = wendia_region
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
 	wal_pentarchy = {
 		icon = mission_pope
 		position = 10
@@ -1423,6 +1704,48 @@ ab_wal_3 = {
 			}
 			set_country_flag = pentarchy_religious_state_buff
 			custom_tooltip = pentarchy_religious_state_buff_tooltip
+		}
+	}
+	wal_england = {
+		icon = mission_rb_into_england
+		position = 13
+		required_missions = {
+			wal_france
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = wales_area
+				area = scottish_marches_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				OR = {
+					area = east_midlands_area
+					area = west_midlands_area
+					area = yorkshire_area
+					area = wessex_area
+					area = home_counties_area
+					area = east_anglia_area
+					area = wales_area
+					area = scottish_marches_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = british_isles_region
+			}
 		}
 	}
 }
@@ -2131,20 +2454,144 @@ ab_wal_4 = {
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
 				first_effect = "custom_tooltip = racovita_mamluks_tooltip
 			tooltip = {
+				custom_tooltip = mamluk_cavalry_bonus_tooltip
 				add_ruler_modifier = {
 					name = racovita_mamluk_contacts
 					duration = -1
-				}
-				361 = {
-					mamluks_cavalry = ROOT
-					mamluks_cavalry = ROOT
-					mamluks_cavalry = ROOT
-				}
+				}		
 			}
 			set_country_flag = racovita_mamluks_bonus"
 			}
 			country_event = {
 				id = AB_wallachia_events.34
+			}
+		}
+	}
+	wal_tunis = {
+		icon = mission_conquer_tunisia
+		position = 10
+		required_missions = {
+			wal_conquer_egypt
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = djerba_area
+				area = north_saharan_area
+				area = tripolitania_area
+				area = fezzan_area
+				area = kabylia_area
+				area = ouled_nail_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			tunisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			djerba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_saharan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			fezzan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabylia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ouled_nail_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = high_plains_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = barbary_coast_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = algiers_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tafilalt_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = marrekesh_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = northern_morocco_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = western_morocco_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = southern_morocco_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = sus_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = high_plains_area
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
+	wal_north_africa = {
+		icon = mission_moroccan_ports
+		position = 11
+		required_missions = {
+			wal_tunis
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = high_plains_area
+				area = barbary_coast_area
+				area = algiers_area
+				area = tafilalt_area
+				area = marrekesh_area
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = southern_morocco_area
+				area = sus_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 28
+				OR = {
+					area = high_plains_area
+					area = barbary_coast_area
+					area = algiers_area
+					area = tafilalt_area
+					area = marrekesh_area
+					area = northern_morocco_area
+					area = western_morocco_area
+					area = southern_morocco_area
+					area = sus_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = iberia_region
 			}
 		}
 	}
@@ -2637,6 +3084,67 @@ ab_wal_5 = {
 			}
 			add_prestige_or_monarch_power = {
 				amount = 25
+			}
+		}
+	}
+	wal_persia = {
+		icon = per_reborn_in_fire
+		position = 9
+		required_missions = {
+			wal_conquer_iraq
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				region = persia_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = khorasan_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = bahrain_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = pirate_coast_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = oman_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = mascat_area
+			}
+			custom_tooltip = tooltip_line_divider
+		}
+	}
+	wal_khorasan = {
+		icon = mission_pertribes
+		position = 10
+		required_missions = {
+			wal_persia
+		}
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 32
+				region = khorasan_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = india_superregion
 			}
 		}
 	}
