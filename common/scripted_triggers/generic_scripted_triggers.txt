@@ -119,7 +119,6 @@ western_roman_empire_province_cb_trigger = {
 		area = switzerland_area
 		region = maghreb_region
 	}
-	#A lot easier to w
 	NOT = {
 		area = tripolitania_area
 	}
