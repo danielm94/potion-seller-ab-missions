@@ -339,7 +339,7 @@ wallachia_eastern_ambitions = {
 }
 
 wallachia_carpathian_defenses = {
-	local_defender_dice_roll_bonus = 1
+	local_fort_maintenance_modifier = -0.25
 	local_hostile_attrition = 1
 	local_defensiveness = 0.2
 	local_assault_fort_ability = -0.5
