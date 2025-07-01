@@ -1706,46 +1706,26 @@ ab_wal_3 = {
 			custom_tooltip = pentarchy_religious_state_buff_tooltip
 		}
 	}
-	wal_england = {
-		icon = mission_rb_into_england
-		position = 13
-		required_missions = {
-			wal_france
-		}
+	wal_iberia = {
+		icon = gfx_wal_iberia
+		position = 12
 		provinces_to_highlight = {
-			OR = {
-				area = east_midlands_area
-				area = west_midlands_area
-				area = yorkshire_area
-				area = wessex_area
-				area = home_counties_area
-				area = east_anglia_area
-				area = wales_area
-				area = scottish_marches_area
-			}
+			region = iberia_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
+			OR = {
+				mission_completed = wal_southern_france
+				mission_completed = wal_north_africa
+			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 25
-				OR = {
-					area = east_midlands_area
-					area = west_midlands_area
-					area = yorkshire_area
-					area = wessex_area
-					area = home_counties_area
-					area = east_anglia_area
-					area = wales_area
-					area = scottish_marches_area
-				}
+				value = 60
+				region = iberia_region
 			}
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
-				target = british_isles_region
-			}
 		}
 	}
 }
@@ -2384,9 +2364,9 @@ ab_wal_4 = {
 			}
 		}
 		trigger = {
-			egypt_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 28
+				region = egypt_region
 			}
 		}
 		effect = {
@@ -2748,7 +2728,7 @@ ab_wal_5 = {
 			custom_tooltip = AB_EMPTY
 		}
 	}
-	#TODO: Spread this mission's rewards across another 1 or 2 missions
+	
 	wal_seal_the_carpathians = {
 		icon = gfx_wal_seal_the_carpathians
 		position = 4
@@ -2892,9 +2872,9 @@ ab_wal_5 = {
 			}
 		}
 		trigger = {
-			anatolia_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 52
+				region = anatolia_region
 			}
 		}
 		effect = {
@@ -2969,25 +2949,15 @@ ab_wal_5 = {
 			}
 		}
 		trigger = {
-			samtskhe_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			armenia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kartli_kakheti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			imereti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shirvan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = samtskhe_area
+					area = armenia_area
+					area = kartli_kakheti_area
+					area = imereti_area
+					area = shirvan_area
+				}
 			}
 		}
 		effect = {
