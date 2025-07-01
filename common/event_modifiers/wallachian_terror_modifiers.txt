@@ -36,11 +36,15 @@ wallachian_terror_raze_mod_nerfed = {
 	local_tax_modifier = -0.25
 	local_manpower_modifier = -0.25
 	local_production_efficiency = -0.25
+	improve_relation_modifier = -0.002
 }
 
 wallachian_terror_impaled_ruler = {
-	diplomatic_reputation = -3
-	improve_relation_modifier = -0.2
+	diplomatic_reputation = -5
+	improve_relation_modifier = -0.05
+	reverse_relation_with_same_religion = -50
+	reverse_relation_with_heretic_religion = -50
+	reverse_relation_with_heathen_religion  = -50
 	monthly_terror_power = 0.05
 	discipline = 0.025
 }
