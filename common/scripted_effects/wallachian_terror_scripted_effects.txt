@@ -1743,9 +1743,12 @@ wallachian_terror_impalement_effect = {
 			}
 		}
 	}
-	add_country_modifier = {
-		name = wallachian_terror_impaled_ruler
-		duration = 3650
+	custom_tooltip = wallachian_terror_kingslayer_tooltip
+	hidden_effect = {
+		add_country_modifier = {
+			name = wallachian_terror_impaled_ruler
+			duration = 3650
+		}
 	}
 	if = {
 		limit = {

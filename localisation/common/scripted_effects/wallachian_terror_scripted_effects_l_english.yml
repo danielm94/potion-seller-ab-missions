@@ -27,6 +27,7 @@
  wallachian_terror_events_humiliated_ruler_terror_tooltip: "We will gain §Y33%§! of the sum of §Y[impaled_country.Monarch.GetName]§!'s mana power as §YTerror§!!"
  wallachian_terror_events_humiliated_rival_terror_tooltip: "We will gain §Y50%§! of the sum of §Y[impaled_country.Monarch.GetName]§!'s mana power as §YTerror§!!"
  wallachian_terror_events_hre_reaction_tooltip: "[tooltip_line_divider]\nSince §Y[impaled_country.GetName]§! is a part of the §YHoly Roman Empire§!, we will gain §R15%§! aggresive expansion instead of §R10%§!.\nWe will gain §R-25§! opinion with all members of the Empire and §R-50§! opinion with the §YEmperor§!.\nWe will gain §Y[impaled_country.Monarch.GetName]§!'s monarch power as §Yprestige§! or §Ymonarch power§!.\nThe §YEmperor§! will be humiliated, causing them to §Glose Imperial Authority§!, as well as §Glose trust and opinion§! with §Yall§! members of the Empire."
+ wallachian_terror_kingslayer_tooltip: "We will gain the §RKingslayer§! modifier for §Y10 years§!."
  wallachian_terror_events_impale_family_tooltip: "[wallachian_terror_method_of_execution_localisation]"
  wallachian_terror_events_impale_family_default_tooltip: "§Y[impaled_country.Monarch.GetName]§! and [impaled_country.Monarch.GetHerHis] whole rat family are §Yimpaled§!!"
  wallachian_terror_events_venice_execution_tooltip: "§Y[impaled_country.Monarch.GetName]§!'s family is forced to watch as [impaled_country.Monarch.GetSheHe] has molten gold poured down [impaled_country.Monarch.GetHerHis] throat before they are impaled themselves."
