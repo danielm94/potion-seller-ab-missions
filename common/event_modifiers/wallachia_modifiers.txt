@@ -50,14 +50,14 @@ wallachia_civil_war_murdered_heir = {
 	legitimacy = -0.5
 	prestige = -0.5
 	diplomatic_reputation = -1
-	tolerance_own = -3
+	tolerance_own = -1
 }
 
 wallachia_civil_war_murdered_the_queen = {
 	legitimacy = -0.5
 	prestige = -0.5
 	diplomatic_reputation = -2
-	tolerance_own = -3
+	tolerance_own = -1
 }
 
 wallachia_civil_war_merchants_detest_us = {
@@ -71,13 +71,13 @@ wallachia_civil_war_merchants_detest_us = {
 wallachian_civil_war_diplomats_fear_us = {
 	diplomats = -1
 	diplomatic_reputation = -2
-	improve_relation_modifier = -0.2
+	improve_relation_modifier = -0.1
 	diplomatic_upkeep = -1
 }
 
 wallachian_civil_war_administrators_executed = {
 	administrative_efficiency = -0.025
-	core_creation = 0.1
+	core_creation = 0.05
 	state_maintenance_modifier = 0.25
 	global_tax_modifier = -0.2
 }
@@ -401,7 +401,7 @@ wallachia_prepare_persia_invasion = {
 
 wallachia_develop_bagdad = {
 	local_development_cost = -0.15
-	great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_cost = -0.25
 	build_cost = -0.1
 }
 
@@ -502,7 +502,7 @@ wallachia_coptic_pope = {
 }
 
 wallachia_tolerating_the_copts = {
-	tolerance_of_heathens_capacity = 1
+	tolerance_of_heretics_capacity = 1
 	tolerance_heretic = 1
 	yearly_patriarch_authority = -0.005
 	church_loyalty_modifier = -0.2
