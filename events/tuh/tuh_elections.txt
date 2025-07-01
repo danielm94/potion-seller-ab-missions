@@ -900,6 +900,10 @@ country_event = {
 		}
 	}
 	after = {
+		change_variable = {
+			which = rem_num_elected
+			value = 1
+		}
 		tuh_update_house_total_wins = yes
 		tuh_update_house_consecutive_wins = yes
 		tuh_set_current_ruling_house_variable_effect = yes

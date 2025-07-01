@@ -142,3 +142,8 @@
  wal_pentarchy_title: "Restore the Pentarchy"
  wal_pentarchy_desc: "The ancient Patriarchates of Alexandria, Antiohia, and Ierusalim—the very cradle of our faith—languish under the yoke of infidels and heretics. The Pentarchy, the five-pillared foundation of the original Church, is incomplete. It is our ultimate duty to liberate these holy cities and bring all five Sees under our protection."
  pentarchy_religious_state_buff_tooltip: "The §YClerul§! estate privilege §YReligious State§! now grants up to §G+30.0%§! §YManpower in True Faith provinces§!, scaling with loyalty.\nIt will also no longer have any §YClerul Loyalty Equilibrium§! or §YMax Absolutism§! costs."
+ wal_foundation_for_the_union_title: "A Foundation for the Union"
+ wal_foundation_for_the_union_desc: "The Great Feast established our union, but it is an agreement written on parchment, not yet carved in stone. To ensure this new order endures, the realm must see our government as truly legitimate, its authority unquestioned. Our Diet must demonstrate its capacity to govern by successfully resolving the critical issues facing the nation. Finally, the principle of our elective monarchy must be proven through a stable transition of power to a new Voivode. Only when these foundations of stable governance are laid can we begin to lay the physical foundation of our great Sfatul Tarii."
+ wal_sfatul_tarii_has_elected_new_candidate_tooltip: "We have elected a new §Y[Root.Monarch.GetTitle]§!"
+ wal_sfatul_tarii_parliament_issues_tooltip: "We have passed §Y3§! parliament issues. Currently: §Y[Root.rem_parliament_issues_passed.GetValue]§! / §Y3§!"
+ can_construct_sfatul_tarii_tooltip: "We can now construct the §YStaful Tarii§! great project in §Y[161.GetName]§!."

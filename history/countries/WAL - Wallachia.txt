@@ -12,6 +12,14 @@ set_variable = {
 	which = estate_purges_amount
 	value = 0
 }
+set_variable = {
+	which = rem_num_elected
+	value = 0
+}
+set_variable = {
+	which = rem_parliament_issues_passed
+	value = 0
+}
 
 1436.12.1 = {
 	monarch = {

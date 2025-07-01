@@ -140,6 +140,46 @@ ab_wal_boier_compromise_missions = {
 			}
 		}
 	}
+	wal_foundation_for_the_union = {
+		icon = gfx_wal_foundation_for_the_union
+		position = 4
+		required_missions = {
+			wal_the_great_feast
+		}
+		trigger = {
+			tag = TUH
+			custom_trigger_tooltip = {
+				tooltip = wal_sfatul_tarii_has_elected_new_candidate_tooltip
+				check_variable = {
+					which = rem_num_elected
+					value = 1
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = wal_sfatul_tarii_parliament_issues_tooltip
+				check_variable = {
+					which = rem_parliament_issues_passed
+					value = 3
+				}
+			}
+			legitimacy = 90
+		}
+		effect = {
+			custom_tooltip = can_construct_sfatul_tarii_tooltip
+			set_country_flag = can_construct_sfatul_tarii
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = statesman
+				skill = 1
+				cost_multiplier = 0.5
+				location = 161
+			}
+			custom_tooltip = AB_EMPTY
+			add_legitimacy_or_mil_power = {
+				amount = 20
+			}
+		}
+	}
 }
 
 ab_wal_slayed_the_boieri_missions = {
@@ -1791,7 +1831,6 @@ ab_wal_3 = {
 			}
 		}
 		trigger = {
-			
 		}
 		effect = {
 		}

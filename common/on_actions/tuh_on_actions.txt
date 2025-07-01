@@ -82,3 +82,10 @@ on_battle_won_country = {
 		}
 	}
 }
+
+on_parliament_debate_succeeded = {
+	change_variable = {
+		which = rem_parliament_issues_passed
+		value = 1
+	}
+}

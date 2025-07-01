@@ -20,6 +20,9 @@ sfatul_tarii = {
 	#can we build it?
 	build_trigger = {
 		owned_by = TUH
+		owner = {
+			has_country_flag = can_construct_sfatul_tarii
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -105,7 +108,7 @@ sfatul_tarii = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			parliament_backing_chance = 0.20
+			parliament_backing_chance = 0.2
 			num_of_parliament_issues = 2
 		}
 		#what effects happen when this tier is achieved
@@ -135,7 +138,7 @@ sfatul_tarii = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			parliament_backing_chance = 0.40
+			parliament_backing_chance = 0.4
 			num_of_parliament_issues = 5
 			no_stability_loss_on_monarch_death = yes
 		}
