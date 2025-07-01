@@ -344,6 +344,50 @@ ab_wal_1 = {
 		effect = {
 		}
 	}
+	wal_lowlands = {
+		icon = conquer_burgundy
+		position = 13
+		required_missions = {
+			wal_france
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+				province_id = 96
+				area = lower_rhineland_area
+				area = wallonia_area
+				area = flanders_area
+				area = brabant_area
+				area = north_brabant_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			85 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			96 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 16
+				OR = {
+					area = lower_rhineland_area
+					area = wallonia_area
+					area = flanders_area
+					area = brabant_area
+					area = north_brabant_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = low_countries_region
+			}
+		}
+	}
 }
 
 ab_wal_2 = {
@@ -1080,6 +1124,27 @@ ab_wal_2 = {
 			}
 		}
 		effect = {
+			85 = {
+				add_permanent_claim = ROOT
+			}
+			96 = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim_multi_provinces = {
+				target = lower_rhineland_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = wallonia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = flanders_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = brabant_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = north_brabant_area
+			}
 			add_permanent_claim_multi_provinces = {
 				target = east_midlands_area
 			}
@@ -1105,6 +1170,48 @@ ab_wal_2 = {
 				target = scottish_marches_area
 			}
 			custom_tooltip = tooltip_line_divider
+		}
+	}
+	wal_england = {
+		icon = mission_londres
+		position = 13
+		required_missions = {
+			wal_france
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = wales_area
+				area = scottish_marches_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 27
+				OR = {
+					area = east_midlands_area
+					area = west_midlands_area
+					area = yorkshire_area
+					area = wessex_area
+					area = home_counties_area
+					area = east_anglia_area
+					area = wales_area
+					area = scottish_marches_area
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = british_isles_region
+			}
 		}
 	}
 }
@@ -1551,6 +1658,9 @@ ab_wal_3 = {
 				target = upper_rhineland_area
 			}
 			add_permanent_claim_multi_provinces = {
+				target = alsace_area
+			}
+			add_permanent_claim_multi_provinces = {
 				target = palatinate_area
 			}
 			custom_tooltip = tooltip_line_divider
@@ -1572,6 +1682,7 @@ ab_wal_3 = {
 				area = upper_swabia_area
 				area = upper_rhineland_area
 				area = palatinate_area
+				area = alsace_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1592,72 +1703,6 @@ ab_wal_3 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
-				target = lower_rhineland_area
-			}
-			85 = {
-				add_permanent_claim = ROOT
-			}
-			add_permanent_claim_multi_provinces = {
-				target = wallonia_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = flanders_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = brabant_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = north_brabant_area
-			}
-			96 = {
-				add_permanent_claim = ROOT
-			}
-			custom_tooltip = tooltip_line_divider
-		}
-	}
-	wal_lowlands = {
-		icon = conquer_burgundy
-		position = 9
-		required_missions = {
-			wal_south_germany
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 85
-				province_id = 96
-				area = lower_rhineland_area
-				area = wallonia_area
-				area = flanders_area
-				area = brabant_area
-				area = north_brabant_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			85 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			96 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 16
-				OR = {
-					area = lower_rhineland_area
-					area = wallonia_area
-					area = flanders_area
-					area = brabant_area
-					area = north_brabant_area
-				}
-			}
-		}
-		effect = {
-			add_permanent_claim_multi_provinces = {
-				target = low_countries_region
-			}
 			add_permanent_claim_multi_provinces = {
 				target = north_german_region
 			}
@@ -1724,6 +1769,29 @@ ab_wal_3 = {
 				value = 60
 				region = iberia_region
 			}
+		}
+		effect = {
+		}
+	}
+	wal_roman_empire = {
+		icon = a_roman_empire
+		position = 14
+		required_missions = {
+			wal_iberia
+			wal_england
+			wal_lowlands
+		}
+		provinces_to_highlight = {
+			OR = {
+				eastern_roman_empire_province_cb_trigger = yes
+				western_roman_empire_province_cb_trigger = yes
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			
 		}
 		effect = {
 		}
@@ -2728,7 +2796,6 @@ ab_wal_5 = {
 			custom_tooltip = AB_EMPTY
 		}
 	}
-	
 	wal_seal_the_carpathians = {
 		icon = gfx_wal_seal_the_carpathians
 		position = 4
