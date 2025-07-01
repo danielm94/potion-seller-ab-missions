@@ -107,6 +107,12 @@ imperial_retribution_find_strongest_hre_prince = {
 			NOT = {
 				truce_with = event_target:impaler_country
 			}
+			NOT = {
+				war_with = event_target:impaler_country
+			}
+			NOT = {
+				alliance_with = event_target:impaler_country
+			}
 		}
 		if = {
 			limit = {
