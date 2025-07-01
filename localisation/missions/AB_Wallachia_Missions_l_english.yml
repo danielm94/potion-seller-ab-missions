@@ -122,6 +122,7 @@
  patriarch_of_alexandria_bonus_tooltip: "§YPatriarch§! advisors now grant §G+0.5%§! §YMissionary Strength vs Heathens§! per skill level."
  if_we_have_impaled_naz_or_egy_tooltip: "If we impaled the @NAZ [NAZ.GetName]' or @EGY [EGY.GetName]'s ruler:"
  racovita_mamluks_tooltip: "Electing a ruler from House §YRacovita§! grants the following bonuses:"
+ mamluk_cavalry_bonus_tooltip: "Gain §G3§! §YMamluk Cavalry§!."
  wal_rome_title: "The Heart of the Empire"
  wal_rome_desc: "[wal_rome_mission_full_desc]"
  wal_rome_desc_completed: "The Eternal City is ours. We have reclaimed the heart of the Empire, ending the Great Schism at its source. A new era has begun, with our Patriarch guiding the faithful from the First See of Christendom."
