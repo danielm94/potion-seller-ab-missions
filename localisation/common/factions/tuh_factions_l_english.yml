@@ -31,5 +31,5 @@
  racovita_faction_FACTION_DESC: "Noble Moldavian house known for brief Wallachian rule, strategic alliances, and diplomatic efforts amidst regional rivalries.\n\n§YRuler Bonus:§! §TThe §YPromote Dynastic Prerogative§! ability grants §G100%§! of our faction's bonus instead of §Y75%§!.§!"
  the_ten_houses_faction_tab: "The Ten Houses"
  the_ten_houses_faction_title: "The Ten Houses of [Root.GetName]"
- WAL_parliament_name: "Diet of the Ten"
- TUH_parliament_name: "Diet of the Ten"
+ WAL_parliament_name: "Sfatul Tarii"
+ TUH_parliament_name: "Sfatul Tarii"

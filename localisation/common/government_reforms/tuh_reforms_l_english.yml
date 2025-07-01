@@ -1,7 +1,7 @@
 ﻿l_english:
  dacian_elective_monarchy: "Dacian Elective Monarchy"
  dacian_elective_monarchy_desc: "The Kingdom of The United Houses of Dacia is born not of one will, but of ten. Forged in the struggle between the Voivode and the Boieri, this system enshrines the power of the great houses into the very foundation of the state. The Rege wears the crown, but sovereignty is a shared burden, held in trust by the Sfatul Domnesc. The monarch is chosen from among the great families, ensuring that no single dynasty can claim absolute authority. To govern Dacia is to navigate a labyrinth of favors, rivalries, and ancient loyalties, where the greatest threat to the state often comes from within the council chamber itself."
- empower_the_diet_of_the_ten: "Empower the Diet of the Ten Houses"
+ empower_the_diet_of_the_ten: "Empower the Sfatul Tarii"
  empower_the_diet_of_the_ten_desc: "By formalizing the rights and responsibilities of the Ten Houses in a Great Charter, we replace chaotic ambition with structured competition. This ensures stability and prevents the destructive infighting that has plagued our past, creating a predictable political order for generations to come."
  mechanic_rem_higher_legitimacy_candidates_yes: "Candidate princes will start with a base §YLegitimacy§! of §Y60§! instead of §Y50§!."
  mechanic_rem_no_pretenders_after_election_yes: "Pretender rebels will not spawn after a ruler is elected."
