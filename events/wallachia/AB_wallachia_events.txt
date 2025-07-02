@@ -476,7 +476,6 @@ country_event = {
 		}
 		hidden_effect = {
 			set_estate_privilege = estate_nobles_dominance_of_the_boierime
-			tuh_faction_initialization_effect = yes
 		}
 		set_country_flag = wal_elective_monarchy
 		if = {
@@ -500,6 +499,9 @@ country_event = {
 		}
 		else = {
 			add_government_reform = wallachian_elective_monarchy
+		}
+		hidden_effect = {
+			tuh_faction_initialization_effect = yes
 		}
 	}
 }
