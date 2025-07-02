@@ -154,7 +154,9 @@ ab_wal_boier_compromise_missions = {
 				always = yes
 			}
 			else = {
-				tag = TUH
+				is_or_was_tag = {
+					tag = TUH
+				}
 				custom_trigger_tooltip = {
 					tooltip = wal_sfatul_tarii_has_elected_new_candidate_tooltip
 					check_variable = {
