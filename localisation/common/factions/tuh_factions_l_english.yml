@@ -19,7 +19,7 @@
  movilesti_faction_FACTION_DESC: "Influential in Wallachia and Moldavia, renowned for strategic marriages, political maneuvering, and close ties with Byzantine nobility.\n\n§YRuler Bonus:§!§T The §YForge a Coalition§! ability will be §Gempowered§!.§!"
  cantacuzino_faction: "House Cantacuzino"
  cantacuzino_faction_influence: "Cantacuzino Influence"
- cantacuzino_faction_FACTION_DESC: "Byzantine-descended nobles famous for martial traditions, abundant levies, and their steadfast defense of Wallachia.\n\n§YRuler Bonus:§!§T If §YByzantium§! doesn't have an heir and we have a royal marriage with them, more §YPrestige§!, more §YLegitimacy§! and a more powerful army than them, then we may get a §YRestoration of Union§! casus beli on them. The same applies to §YNicaea§! if §YByzantium§! doesn't exist and we didn't claim §YByzantium's§! throne."
+ cantacuzino_faction_FACTION_DESC: "Byzantine-descended nobles famous for martial traditions, abundant levies, and their steadfast defense of Wallachia.\n\n§YRuler Bonus:§!§T Gain access to the §YPress Imperial Claim§! diplomatic action, which allows you to get a §YRestoration of Union§! casus belli against §YByzantium§!, other Roman successor states like §YNicaea§! or §YTrebizond§!, the Latin Crusader states occupying former imperial lands, and even rival claimants to the Roman legacy such as §YGreece§! or a restored §YRoman Empire§!.§!"
  ghica_faction: "House Ghica"
  ghica_faction_influence: "Ghica Influence"
  ghica_faction_FACTION_DESC: "Eminent administrators, celebrated for modernizing Wallachian governance, progressive policies, and significant reforms.\n\n\n§YRuler Bonus:§!§T §YCourthouse§! and §YTown Hall§! buildings grant §G-1§! §YLocal Unrest§!.§!"
