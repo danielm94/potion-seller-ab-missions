@@ -147,22 +147,30 @@ ab_wal_boier_compromise_missions = {
 			wal_the_great_feast
 		}
 		trigger = {
-			tag = TUH
-			custom_trigger_tooltip = {
-				tooltip = wal_sfatul_tarii_has_elected_new_candidate_tooltip
-				check_variable = {
-					which = rem_num_elected
-					value = 1
+			if = {
+				limit = {
+					has_country_flag = debug
 				}
+				always = yes
 			}
-			custom_trigger_tooltip = {
-				tooltip = wal_sfatul_tarii_parliament_issues_tooltip
-				check_variable = {
-					which = rem_parliament_issues_passed
-					value = 3
+			else = {
+				tag = TUH
+				custom_trigger_tooltip = {
+					tooltip = wal_sfatul_tarii_has_elected_new_candidate_tooltip
+					check_variable = {
+						which = rem_num_elected
+						value = 1
+					}
 				}
+				custom_trigger_tooltip = {
+					tooltip = wal_sfatul_tarii_parliament_issues_tooltip
+					check_variable = {
+						which = rem_parliament_issues_passed
+						value = 3
+					}
+				}
+				legitimacy = 90
 			}
-			legitimacy = 90
 		}
 		effect = {
 			custom_tooltip = can_construct_sfatul_tarii_tooltip
@@ -178,6 +186,61 @@ ab_wal_boier_compromise_missions = {
 			add_legitimacy_or_mil_power = {
 				amount = 20
 			}
+			custom_tooltip = AB_EMPTY
+			tuh_clear_government_mechanic_cooldowns = yes
+		}
+	}
+	wal_union_ascendant = {
+		icon = gfx_wal_union_ascendant
+		position = 5
+		required_missions = {
+			wal_foundation_for_the_union
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				is_great_power = yes
+				government_rank = 3
+				stability = 3
+				custom_trigger_tooltip = {
+					tooltip = rem_has_elected_3_rulers_tooltip
+					check_variable = {
+						which = rem_num_elected
+						value = 3
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = rem_has_passed_10_parliament_issues_tooltip
+					check_variable = {
+						which = rem_parliament_issues_passed
+						value = 10
+					}
+				}
+				161 = {
+					has_great_project = {
+						type = sfatul_tarii
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = wal_union_ascendant_parliament_legit_bonus
+			set_country_flag = legitimacy_on_parliament_issue_passed
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_union_ascendant_initial_legit_bonus_tooltip
+			set_country_flag = wal_union_ascendant_initial_legit_bonus
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = tuh_union_ascendant
+				duration = -1
+			}
+			
 		}
 	}
 }

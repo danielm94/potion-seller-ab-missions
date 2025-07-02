@@ -337,3 +337,10 @@ basarab_augustan_legacy = {
 	province_warscore_cost = -0.025
 	global_autonomy = -0.05
 }
+
+tuh_union_ascendant = {
+	max_absolutism = 5
+	legitimacy = 1
+	parliament_backing_chance = 0.1
+	num_of_parliament_issues = 1
+}

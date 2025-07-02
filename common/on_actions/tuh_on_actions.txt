@@ -84,8 +84,21 @@ on_battle_won_country = {
 }
 
 on_parliament_debate_succeeded = {
-	change_variable = {
-		which = rem_parliament_issues_passed
-		value = 1
+	if = {
+		limit = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		change_variable = {
+			which = rem_parliament_issues_passed
+			value = 1
+		}
+		if = {
+			limit = {
+				has_country_flag = legitimacy_on_parliament_issue_passed
+			}
+			add_legitimacy_or_mil_power = {
+				amount = 5
+			}
+		}
 	}
 }

@@ -55,4 +55,8 @@ spriteTypes = {
 		name = "gfx_wal_foundation_for_the_union"
 		texturefile = "gfx/interface/missions/wal/wal_foundation_for_the_union.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_union_ascendant"
+		texturefile = "gfx/interface/missions/wal/wal_union_ascendant.dds"
+	}
 }

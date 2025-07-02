@@ -1031,6 +1031,15 @@ tuh_precalculate_all_election_tooltips_effect = {
 	}
 	if = {
 		limit = {
+			has_country_flag = wal_union_ascendant_initial_legit_bonus
+		}
+		change_variable = {
+			which = initial_$house$_total_legitimacy
+			value = 10
+		}
+	}
+	if = {
+		limit = {
 			is_var_cantacuzino = {
 				var = house_id
 			}
