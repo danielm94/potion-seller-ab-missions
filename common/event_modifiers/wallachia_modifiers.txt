@@ -577,6 +577,11 @@ wallachia_carpathian_fort = {
 	local_garrison_damage = 0.5
 }
 
-wal_carpathian_fortifications_ramparts_bonus = {
+wallachia_carpathian_fortifications_ramparts_bonus = {
 	allowed_num_of_manufactories = 1
+}
+
+wallachia_shanhanshahanshah = {
+	core_creation = -0.1
+	prestige = 1
 }
