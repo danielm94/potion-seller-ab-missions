@@ -30,8 +30,8 @@ basarab_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		basarab_faction_influence = 0.02
-		local_unrest = -1
+		basarab_faction_influence = 0.01
+		local_autonomy = -0.03
 	}
 	ai_priority = {
 		factor = 2
@@ -69,8 +69,8 @@ bibescu_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		bibescu_faction_influence = 0.02
-		local_culture_conversion_cost = -0.05
+		bibescu_faction_influence = 0.01
+		local_culture_conversion_cost = -0.1
 	}
 	ai_priority = {
 		factor = 2
@@ -108,9 +108,9 @@ draculesti_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		draculesti_faction_influence = 0.02
+		draculesti_faction_influence = 0.01
 		local_garrison_size = 0.25
-		local_garrison_damage = 0.35
+		local_garrison_damage = 0.5
 	}
 	ai_priority = {
 		factor = 2
@@ -148,7 +148,7 @@ brancoveanu_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		brancoveanu_faction_influence = 0.02
+		brancoveanu_faction_influence = 0.01
 		local_development_cost = -0.05
 	}
 	ai_priority = {
@@ -187,8 +187,8 @@ movilesti_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		movilesti_faction_influence = 0.02
-		province_trade_power_modifier = 0.1
+		movilesti_faction_influence = 0.01
+		trade_goods_size_modifier = 0.1
 	}
 	ai_priority = {
 		factor = 2
@@ -226,7 +226,7 @@ danesti_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		danesti_faction_influence = 0.02
+		danesti_faction_influence = 0.01
 		local_defender_dice_roll_bonus = 1
 		local_fort_maintenance_modifier = -0.1
 	}
@@ -264,9 +264,9 @@ ghica_stronghold = {
 	}
 	modifier = {
 		local_tax_modifier = -0.85
-		local_governing_cost = -0.2
+		local_governing_cost = -0.25
 		local_state_maintenance_modifier = -0.75
-		ghica_faction_influence = 0.02
+		ghica_faction_influence = 0.01
 	}
 	ai_priority = {
 		factor = 2
@@ -304,8 +304,8 @@ racovita_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		racovita_faction_influence = 0.02
-		trade_goods_size_modifier = 0.1
+		racovita_faction_influence = 0.01
+		province_trade_power_modifier = 0.1
 	}
 	ai_priority = {
 		factor = 2
@@ -343,8 +343,8 @@ cantacuzino_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		cantacuzino_faction_influence = 0.02
-		local_manpower_modifier = 0.05
+		cantacuzino_faction_influence = 0.01
+		local_manpower_modifier = 0.075
 	}
 	ai_priority = {
 		factor = 2
@@ -382,8 +382,8 @@ mavrocordatos_stronghold = {
 		local_tax_modifier = -0.9
 		local_governing_cost = -0.15
 		local_state_maintenance_modifier = -0.5
-		mavrocordatos_faction_influence = 0.02
-		local_institution_spread = 0.4
+		mavrocordatos_faction_influence = 0.01
+		local_institution_spread = 0.75
 	}
 	ai_priority = {
 		factor = 2
