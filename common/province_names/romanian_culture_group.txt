@@ -537,7 +537,7 @@
 1864 = "Somoghi"
 1865 = "Gent"
 1869 = "Zurich"
-1870 = "Sfântul Gallen"
+1870 = "Sfantul Gallen"
 1871 = "Valais"
 1873 = "Coira"
 1874 = "Brema"
