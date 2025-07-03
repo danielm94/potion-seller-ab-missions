@@ -153,3 +153,7 @@
  rem_has_passed_10_parliament_issues_tooltip: "We have passed at least §Y10§! parliament issues. Currently: §Y[Root.rem_parliament_issues_passed.GetValue]§! / §Y10§!"
  wal_union_ascendant_parliament_legit_bonus: "We will gain §G+5§! §YLegitimacy§! or §G+10§! £mil£ power for each point of §YLegitimacy§! over §Y100§! whenever we pass parliament issues."
  wal_union_ascendant_initial_legit_bonus_tooltip: "The base §YLegitimacy§! of every candidate prince will be increased by §G+10§!."
+ wal_persia_title: "Beyond the Euphrates"
+ wal_persia_desc: "Alexander, Crassus, Trajan, Julian... the deserts of the East are littered with the ghosts of great conquerors who sought to permanently subdue Persia. For a thousand years, the Shahanshah has been our eternal rival, the one great power that has always resisted the might of the West.They believe us to be just another iteration of the Romans they have fought for centuries. They are mistaken. History has granted us the unique opportunity to finish the war that defined the ancient world. We must march east, shatter the armies of the Shah, and dismantle his ancient empire."
+ silk_parliament_issues_unlocked_tooltip: "We will unlock the §YRestrict the Export of Silk§! and the §YExpand the Production of Silk§! parliament issues."
+ if_we_still_have_monster_of_the_west_tooltip: "If our ruler still has the §YMonster of the West§! modifier from impaling @PER / @PRZ / @PRC / @PMN §YPersia§!'s ruler:"

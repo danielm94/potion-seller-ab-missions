@@ -1,0 +1,156 @@
+restrict_silk_exports_issue = {
+	# 1, 2, or 3; meaning mil, dip, or adm, respectively.
+	category = 2
+	# The conditions that allow the issue to be available.
+	allow = {
+		has_country_flag = restrict_silk_exports_issue_enabled
+	}
+	# Optional. Commands executed upon enacting the issue
+	effect = {
+		change_price = {
+			trade_goods = silk
+			key = restrict_silk_exports_key
+			value = 0.1
+			duration = -1
+		}
+		add_mercantilism = 3
+		custom_tooltip = restrict_silk_exports_province_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = tuh_silk_production_restrictions
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = silk
+				}
+				add_province_modifier = {
+					name = tuh_silk_production_restrictions
+					duration = 3650
+				}
+			}
+		}
+	}
+	# Optional. Modifier applied for the duration of the downtime between debates.
+	modifier = {
+		mercantilism_cost = -0.1
+	}
+	# Chance for issue to appear.
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			mercantilism = 25
+		}
+		modifier = {
+			factor = 2
+			mercantilism = 50
+		}
+		modifier = {
+			factor = 2
+			mercantilism = 75
+		}
+		modifier = {
+			factor = 2
+			mercantilism = 100
+		}
+	}
+	# Chance AI will enact it
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+expand_silk_production_issue = {
+	# 1, 2, or 3; meaning mil, dip, or adm, respectively.
+	category = 2
+	# The conditions that allow the issue to be available.
+	allow = {
+		has_country_flag = expand_silk_production_issue_enabled
+		wool = 1
+	}
+	# Optional. Commands executed upon enacting the issue
+	effect = {
+		change_price = {
+			trade_goods = silk
+			key = expand_silk_production_key
+			value = -0.1
+			duration = -1
+		}
+		custom_tooltip = expand_silk_production_issue_tooltip
+		tooltip = {
+			change_trade_goods = silk
+			add_base_production = 1
+			add_province_modifier = {
+				name = tuh_fledgling_silk_industry
+				duration = 7300
+			}
+		}
+		custom_tooltip = expand_silk_production_extra_provinces_tooltip
+		hidden_effect = {
+			tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+		}
+		if = {
+			limit = {
+				wool = 8
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+		if = {
+			limit = {
+				wool = 16
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+		if = {
+			limit = {
+				wool = 24
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+		if = {
+			limit = {
+				wool = 32
+			}
+			hidden_effect = {
+				tuh_convert_highest_trade_goods_wool_province_to_silk = yes
+			}
+		}
+	}
+	# Optional. Modifier applied for the duration of the downtime between debates.
+	modifier = {
+		expand_infrastructure_cost_modifier = -0.1
+	}
+	# Chance for issue to appear.
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 2
+			wool = 16
+		}
+		modifier = {
+			factor = 2
+			wool = 24
+		}
+		modifier = {
+			factor = 2
+			wool = 32
+		}
+		modifier = {
+			factor = 2
+			wool = 40
+		}
+	}
+	# Chance AI will enact it
+	ai_will_do = {
+		factor = 500
+	}
+}

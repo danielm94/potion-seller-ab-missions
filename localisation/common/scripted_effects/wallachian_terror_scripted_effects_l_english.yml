@@ -43,3 +43,4 @@
  pillage_naz_cities_tooltips: "For every @NAZ §Y[NAZ.GetAdjective]§! province occuped by §Y[impaler_country.GetName]§!:"
  pillage_egy_cities_tooltips: "For every @EGY §Y[EGY.GetAdjective]§! province occuped by §Y[impaler_country.GetName]§!:"
  wallachian_terror_events_niz_egy_execution_tooltip: "§Y[impaled_country.Monarch.GetName]§! and [impaled_country.Monarch.GetHerHis] heathen family are impaled on top of the pyramids."
+ wallachian_terror_events_persia_impaler_execution_tooltip: "The §Y[impaled_country.Monarch.GetTitle]§! is sealed within two boats, force-fed milk and honey until [impaled_country.Monarch.GetSheHe] is drowning in [impaled_country.Monarch.GetHerHis] own filth. Then, [impaled_country.Monarch.GetSheHe] is coated in more honey and set adrift on a stagnant pond, offering a week-long feast for every biting insect in Persia."

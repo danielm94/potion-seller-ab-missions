@@ -581,7 +581,12 @@ wallachia_carpathian_fortifications_ramparts_bonus = {
 	allowed_num_of_manufactories = 1
 }
 
-wallachia_shanhanshahanshah = {
+wallachia_shahanshahanshah = {
 	core_creation = -0.1
 	prestige = 1
+}
+
+wallachia_monster_of_the_west= {
+	province_warscore_cost = -0.05
+	fire_damage_received = -0.1
 }

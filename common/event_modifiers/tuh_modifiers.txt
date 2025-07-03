@@ -344,3 +344,16 @@ tuh_union_ascendant = {
 	parliament_backing_chance = 0.1
 	num_of_parliament_issues = 1
 }
+
+tuh_silk_production_restrictions = {
+	trade_goods_size_modifier = -0.5
+	local_production_efficiency = -0.5
+	local_unrest = 5
+}
+
+tuh_fledgling_silk_industry = {
+	local_production_efficiency = -0.25
+	trade_goods_size_modifier = -0.25
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+}

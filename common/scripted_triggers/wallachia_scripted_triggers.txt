@@ -29,6 +29,10 @@ is_special_impaled_country = {
 			tag = LOM			#Lombardy
 			tag = NAZ			#Nizzarids
 			tag = EGY			#Egypt
+			tag = PER			#Persia (Zoroastrian)
+			tag = PRZ			#Persia (Muslim)
+			tag = PRC			#Persia (Christian)
+			tag = PMN			#Persia (Mani)
 		}
 	}
 }
@@ -42,6 +46,10 @@ is_special_execution_country = {
 			tag = SIC			#Sicily
 			tag = NAZ			#Nizzarids
 			tag = EGY			#Egypt
+			tag = PER			#Persia (Zoroastrian)
+			tag = PRZ			#Persia (Muslim)
+			tag = PRC			#Persia (Christian)
+			tag = PMN			#Persia (Mani)
 		}
 	}
 }
@@ -156,5 +164,12 @@ has_impaled_pope = {
 	custom_trigger_tooltip = {
 		tooltip = has_impaled_pope_tooltip
 		has_country_flag = wallachia_impaled_pope
+	}
+}
+
+has_impaled_persia_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_persia_ruler_tooltip
+		has_country_flag = wallachia_impaled_persia
 	}
 }

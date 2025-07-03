@@ -195,6 +195,19 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_persia_impale
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = PER					#Persia (Zoroastrian)
+					tag = PRZ					#Persia (Muslim)
+					tag = PRC					#Persia (Christian)
+					tag = PMN					#Persia (Mani)
+				}
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -277,6 +290,19 @@ defined_text = {
 				OR = {
 					tag = NAZ
 					tag = EGY
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_persia_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = PER					#Persia (Zoroastrian)
+					tag = PRZ					#Persia (Muslim)
+					tag = PRC					#Persia (Christian)
+					tag = PMN					#Persia (Mani)
 				}
 			}
 		}
@@ -375,6 +401,19 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_persia_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				OR = {
+					tag = PER					#Persia (Zoroastrian)
+					tag = PRZ					#Persia (Muslim)
+					tag = PRC					#Persia (Christian)
+					tag = PMN					#Persia (Mani)
+				}
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -461,6 +500,38 @@ defined_text = {
 				OR = {
 					tag = NAZ
 					tag = EGY
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_impale_family_default_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = no
+			}
+			event_target:impaled_country = {
+				OR = {
+					tag = PER					#Persia (Zoroastrian)
+					tag = PRZ					#Persia (Muslim)
+					tag = PRC					#Persia (Christian)
+					tag = PMN					#Persia (Mani)
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_persia_impaler_execution_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = yes
+			}
+			event_target:impaled_country = {
+				OR = {
+					tag = PER					#Persia (Zoroastrian)
+					tag = PRZ					#Persia (Muslim)
+					tag = PRC					#Persia (Christian)
+					tag = PMN					#Persia (Mani)
 				}
 			}
 		}

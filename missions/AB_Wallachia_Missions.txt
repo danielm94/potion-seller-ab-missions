@@ -242,7 +242,6 @@ ab_wal_boier_compromise_missions = {
 				name = tuh_union_ascendant
 				duration = -1
 			}
-			
 		}
 	}
 }
@@ -2868,10 +2867,10 @@ ab_wal_5 = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = wal_carpathian_fortifications_ramparts_bonus_tooltip
+			custom_tooltip = wallachia_carpathian_fortifications_ramparts_bonus_tooltip
 			tooltip = {
 				add_province_modifier = {
-					name = wal_carpathian_fortifications_ramparts_bonus
+					name = wallachia_carpathian_fortifications_ramparts_bonus
 					duration = -1
 				}
 			}
@@ -2890,7 +2889,7 @@ ab_wal_5 = {
 						add_treasury = 50
 					}
 					add_province_modifier = {
-						name = wal_carpathian_fortifications_ramparts_bonus
+						name = wallachia_carpathian_fortifications_ramparts_bonus
 						duration = -1
 					}
 				}
@@ -3224,7 +3223,7 @@ ab_wal_5 = {
 				}
 			}
 			add_prestige_or_monarch_power = {
-				amount = 25
+				amount = 10
 			}
 		}
 	}
@@ -3263,6 +3262,38 @@ ab_wal_5 = {
 				target = mascat_area
 			}
 			custom_tooltip = tooltip_line_divider
+			add_ruler_modifier = {
+				name = wallachia_shahanshahanshah
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_still_have_monster_of_the_west_tooltip
+				first_limit = "has_ruler_modifier = wallachia_monster_of_the_west"
+				first_effect = "hidden_effect = {
+				remove_country_modifier = wallachia_monster_of_the_west
+			}
+			add_country_modifier = {
+				name = wallachia_monster_of_the_west
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = silk_parliament_issues_unlocked_tooltip
+			set_country_flag = restrict_silk_exports_issue_enabled
+			set_country_flag = expand_silk_production_issue_enabled"
+			}
 		}
 	}
 	wal_khorasan = {

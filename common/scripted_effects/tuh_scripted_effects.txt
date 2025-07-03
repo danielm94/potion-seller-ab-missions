@@ -1915,3 +1915,61 @@ tuh_clear_danesti_coastal_defences = {
 		remove_province_modifier = danesti_coastal_defences
 	}
 }
+
+tuh_calculate_province_trade_goods_score = {
+	export_to_variable = {
+		which = local_trade_goods_size
+		value = modifier:trade_goods_size
+	}
+	set_variable = {
+		which = local_production_score
+		which = local_trade_goods_size
+	}
+	export_to_variable = {
+		which = local_trade_goods_size_modifier
+		value = modifier:trade_goods_size_modifier
+	}
+	change_variable = {
+		which = local_trade_goods_size_modifier
+		value = 1
+	}
+	multiply_variable = {
+		which = local_production_score
+		which = local_trade_goods_size_modifier
+	}
+}
+
+tuh_convert_highest_trade_goods_wool_province_to_silk = {
+	every_owned_province = {
+		limit = {
+			trade_goods = wool
+		}
+		tuh_calculate_province_trade_goods_score = yes
+		if = {
+			limit = {
+				has_saved_global_event_target = highest_trade_goods_wool_province
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = local_production_score
+						which = event_target:highest_trade_goods_wool_province
+					}
+				}
+				save_global_event_target_as = highest_trade_goods_wool_province
+			}
+		}
+		else = {
+			save_global_event_target_as = highest_trade_goods_wool_province
+		}
+	}
+	event_target:highest_trade_goods_wool_province = {
+		change_trade_goods = silk
+		add_province_modifier = {
+			name = tuh_fledgling_silk_industry
+			duration = 7300
+		}
+		add_base_production = 1
+	}
+	clear_global_event_target = highest_trade_goods_wool_province
+}

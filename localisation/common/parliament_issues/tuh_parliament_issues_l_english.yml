@@ -1,0 +1,8 @@
+﻿l_english:
+ restrict_silk_exports_issue: "Restrict the Export of Silk"
+ restrict_silk_exports_key: "Dacian Silk Export Restrictions"
+ restrict_silk_exports_province_effect_tooltip: "Every owned province that produces §YSilk§! will receive:"
+ expand_silk_production_issue: "Expand the Production of Silk"
+ expand_silk_production_key: "Dacian Silk Production Expanded"
+ expand_silk_production_issue_tooltip: "Our §YWool§! province with the highest §YGoods Produced§! value will receive:"
+ expand_silk_production_extra_provinces_tooltip: "This effect will be applied to the next §YWool§! province that has the highest §YGoods Produced§! value for every §Y8§! provinces we own that produce §YWool§!, up to a total of §Y4§! times."

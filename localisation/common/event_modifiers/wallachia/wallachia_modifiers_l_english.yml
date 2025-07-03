@@ -181,3 +181,6 @@
  desc_wallachia_carpathian_fort: "This fortress stands as one of the great gates of the Carpathians. It commands a vital mountain pass, its cannons sweeping the narrow approaches below."
  wallachia_carpathian_fortifications_ramparts_bonus: "The Fortress-Foundry"
  desc_wallachia_carpathian_fortifications_ramparts_bonus: "The immense security provided by the new ramparts creates a safe zone for vital state industries. Within these fortified compounds, armories, foundries, and workshops can operate without fear of disruption, supplying our legions from the heart of the mountains."
+ wallachia_shahanshahanshah: "Shahanshahanshah"
+ desc_wallachia_shahanshahanshah: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] has done what no Roman Emperor has done before [Root.Monarch.GetHerHim]: defeat the Shahanshah and conquer Persia. With this historic triumph, [Root.Monarch.GetSheHe] has gained the moniker \"Shahanshahanshah\" or \"The King of the King of Kings\"."
+ wallachia_monster_of_the_west: "Monster of the West"
