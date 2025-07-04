@@ -604,6 +604,11 @@ wallachia_into_the_unknown = {
 }
 
 wallachia_build_navy = {
-	global_ship_cost = -0.25
+	global_ship_cost = -0.1
 	global_ship_recruit_speed = -0.25
+}
+
+wallachia_black_sea_fleet = {
+	galley_power = 0.1
+	light_ship_cost = -0.1
 }

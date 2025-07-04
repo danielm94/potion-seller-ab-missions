@@ -1332,9 +1332,17 @@ ab_wal_3 = {
 		icon = mission_landsknecht_soldier
 		position = 1
 		trigger = {
-			OR = {
-				army_size_percentage = 0.8
-				manpower_percentage = 1
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				OR = {
+					army_size_percentage = 0.8
+					manpower_percentage = 1
+				}
 			}
 		}
 		effect = {
@@ -3405,6 +3413,32 @@ ab_wal_5 = {
 			add_country_modifier = {
 				name = wallachia_build_navy
 				duration = 5475
+			}
+		}
+	}
+	wal_fleet = {
+		icon = overshadow_venice
+		position = 12
+		required_missions = {
+			wal_coast
+		}
+		trigger = {
+			if = {
+				limit = {
+					naval_forcelimit = 100
+				}
+				navy_size = 100
+			}
+			else = {
+				navy_size_percentage = 1
+			}
+			naval_forcelimit = 20
+		}
+		effect = {
+			add_navy_tradition = 15
+			add_country_modifier = {
+				name = wallachia_black_sea_fleet
+				duration = -1
 			}
 		}
 	}
