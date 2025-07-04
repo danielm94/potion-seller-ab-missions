@@ -591,8 +591,14 @@ wallachia_monster_of_the_west= {
 	fire_damage_received = -0.1
 }
 
-wallachia_anti_piracy_measures = {
+wallachia_pax_navalis = {
 	burghers_loyalty_modifier = 0.1
 	trade_efficiency = 0.1
 	global_naval_barrage_cost = -0.25
+}
+
+wallachia_into_the_unknown = {
+	colonists = 1
+	range = 0.5
+	may_explore = yes
 }

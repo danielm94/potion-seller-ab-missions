@@ -229,6 +229,23 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = tuh_bibescu_colonists
+			}
+			if = {
+				limit = {
+					has_country_modifier = wallachia_into_the_unknown
+				}
+				hidden_effect = {
+					remove_country_modifier = wallachia_into_the_unknown
+				}
+			}
+			add_ruler_modifier = {
+				name = wallachia_into_the_unknown
+				duration = -1
+			}
+		}
 	}
 	option = {
 		name = tuh_elections.0.c

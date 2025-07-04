@@ -2709,8 +2709,8 @@ ab_wal_4 = {
 				siege = 4
 			}
 			add_country_modifier = {
-				name = wallachia_anti_piracy_measures
-				duration = 18250
+				name = wallachia_pax_navalis
+				duration = 10950
 			}
 		}
 	}
@@ -2755,6 +2755,47 @@ ab_wal_4 = {
 		effect = {
 			add_permanent_claim_multi_provinces = {
 				target = iberia_region
+			}
+			add_country_modifier = {
+				name = wallachia_into_the_unknown
+				duration = 7300
+			}
+			define_explorer = {
+				shock = 3
+				fire = 3
+				manuever = 3
+				siege = 3
+			}
+			custom_tooltip = AB_EMPTY
+			1127 = {
+				add_siberian_construction = 0
+				hidden_effect = {
+					change_trade_goods = gold
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_still_have_the_pax_navalis_modifier
+				first_limit = "has_country_modifier = wallachia_pax_navalis"
+				first_effect = "hidden_effect = {
+				remove_country_modifier = wallachia_pax_navalis
+			}
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_bibescu_colonists
+			custom_tooltip = tuh_bibescu_colonists_tooltip"
+			}
+			tooltip = {
+				add_ruler_modifier = {
+					name = wallachia_into_the_unknown
+					duration = -1
+				}
 			}
 		}
 	}
