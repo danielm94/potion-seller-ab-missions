@@ -2806,6 +2806,7 @@ ab_wal_4 = {
 			wal_southern_france
 			wal_iberia
 			wal_north_africa
+			wal_coast
 		}
 		provinces_to_highlight = {
 			NOT = {
@@ -3388,6 +3389,22 @@ ab_wal_5 = {
 		effect = {
 			add_permanent_claim_multi_provinces = {
 				target = india_superregion
+			}
+		}
+	}
+	wal_coast = {
+		icon = mission_northumberland_coast
+		position = 11
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		effect = {
+			add_sailors = 750
+			add_country_modifier = {
+				name = wallachia_build_navy
+				duration = 5475
 			}
 		}
 	}
