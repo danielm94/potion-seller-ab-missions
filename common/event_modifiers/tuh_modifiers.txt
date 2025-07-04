@@ -357,3 +357,9 @@ tuh_fledgling_silk_industry = {
 	local_development_cost = -0.1
 	local_build_cost = -0.1
 }
+
+tuh_brancoveanu_great_works = {
+	build_cost = -0.1
+	great_project_upgrade_cost = -0.1
+	brancoveanu_faction_influence = 0.05
+}
