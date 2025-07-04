@@ -2700,6 +2700,19 @@ ab_wal_4 = {
 				target = high_plains_area
 			}
 			custom_tooltip = tooltip_line_divider
+			add_yearly_sailors = 1
+			add_navy_tradition = 15
+			define_admiral = {
+				shock = 4
+				fire = 4
+				manuever = 4
+				siege = 4
+
+			}
+			add_country_modifier = {
+				name = wallachia_anti_piracy_measures
+				duration = 18250
+			}
 		}
 	}
 	wal_north_africa = {

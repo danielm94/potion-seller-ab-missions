@@ -184,3 +184,5 @@
  wallachia_shahanshahanshah: "Shahanshahanshah"
  desc_wallachia_shahanshahanshah: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] has done what no Roman Emperor has done before [Root.Monarch.GetHerHim]: defeat the Shahanshah and conquer Persia. With this historic triumph, [Root.Monarch.GetSheHe] has gained the moniker \"Shahanshahanshah\" or \"The King of the King of Kings\"."
  wallachia_monster_of_the_west: "Monster of the West"
+ wallachia_anti_piracy_measures: "Pax Navalis"
+ desc_wallachia_anti_piracy_measures: "The pirate dens of North Africa have been purged. Our merchants can now ply the seas without fear, their gratitude filling our coffers. In the process, our navy has mastered the art of coastal assault, learning how to dismantle seaside fortresses with ruthless efficiency."
