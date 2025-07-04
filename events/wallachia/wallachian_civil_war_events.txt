@@ -1920,6 +1920,7 @@ country_event = {
 			scaled_with_gain_modifier = yes
 		}
 		custom_tooltip = wallachian_civil_war_victory_butcher_terror_bonus
+		set_country_flag = wallachia_civil_war_butcher_victory
 		add_country_modifier = {
 			name = wallachian_civil_war_victory_butcher
 			duration = -1

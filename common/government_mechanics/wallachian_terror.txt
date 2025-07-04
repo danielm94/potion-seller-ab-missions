@@ -27,11 +27,17 @@ wallachian_terror_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					has_country_modifier = wallachian_civil_war_victory_butcher
+					has_country_flag = wallachia_civil_war_butcher_victory
 				}
 				modifier = {
 					cavalry_shock = 0.3
 				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = tier3_targoviste_princely_court
+				}
+				modifier = { discipline = 0.025 }
 			}
 		}
 	}

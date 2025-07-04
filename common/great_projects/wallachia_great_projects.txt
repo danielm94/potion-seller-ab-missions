@@ -19,7 +19,9 @@ sfatul_tarii = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		owned_by = TUH
+		owner = {
+			has_government_mechanic = romanian_elective_monarchy_mechanic
+		}
 		owner = {
 			has_country_flag = can_construct_sfatul_tarii
 		}
@@ -32,11 +34,15 @@ sfatul_tarii = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		owned_by = TUH
+		owner = {
+			has_government_mechanic = romanian_elective_monarchy_mechanic
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		owned_by = TUH
+		owner = {
+			has_government_mechanic = romanian_elective_monarchy_mechanic
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -146,6 +152,245 @@ sfatul_tarii = {
 		on_upgraded = {
 			owner = {
 				tuh_clear_government_mechanic_cooldowns = yes
+			}
+		}
+	}
+}
+
+targoviste_princely_court = {
+	# province it starts in
+	start = 161
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1417.01.01
+	#time to build
+	time = {
+		months = 0
+	}
+	#how much to build one
+	build_cost = 0
+	#can we move it?
+	can_be_moved = no
+	#time to move the project one unit of distance, in days
+	move_days_per_unit_distance = 1
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 0
+	#project type
+	type = monument
+	#can we build it?
+	build_trigger = {
+		culture_group = romanian_culture_group
+		owner = {
+			culture_group = romanian_culture_group
+		}
+	}
+	#what to do when it's built
+	on_built = {
+	}
+	#what to do when it's destroyed
+	on_destroyed = {
+	}
+	#can our country use it?
+	can_use_modifiers_trigger = {
+		culture_group = romanian_culture_group
+		owner = {
+			culture_group = romanian_culture_group
+		}
+	}
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		culture_group = romanian_culture_group
+		owner = {
+			culture_group = romanian_culture_group
+		}
+	}
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+		}
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			monthly_terror_power = 0.025
+			terror_power_gain_modifier = 0.05
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = wallachian_terror_mechanic
+				}
+			}
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			owner = {
+				if = {
+					limit = {
+						has_government_mechanic = romanian_elective_monarchy_mechanic
+					}
+					add_faction_influence = {
+						faction = brancoveanu_faction
+						influence = 10
+					}
+					clean_add_country_modifier = {
+						name = tuh_brancoveanu_great_works
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 240
+		}
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			local_defensiveness = 0.2
+			local_fort_maintenance_modifier = -0.25
+		}
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			max_absolutism = 2.5
+			monthly_terror_power = 0.05
+			terror_power_gain_modifier = 0.1
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = wallachian_terror_mechanic
+				}
+			}
+			modifier = {
+				global_unrest = -2
+				max_absolutism_effect = 0.1
+			}
+		}
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			owner = {
+				if = {
+					limit = {
+						has_government_mechanic = romanian_elective_monarchy_mechanic
+					}
+					add_faction_influence = {
+						faction = brancoveanu_faction
+						influence = 10
+					}
+					clean_add_country_modifier = {
+						name = tuh_brancoveanu_great_works
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 480
+		}
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			local_defensiveness = 0.5
+			local_fort_maintenance_modifier = -0.5
+			fort_level = 1
+		}
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			max_absolutism = 5
+			monthly_terror_power = 0.08
+			terror_power_gain_modifier = 0.25
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = wallachian_terror_mechanic
+				}
+			}
+			modifier = {
+				global_unrest = -3
+				max_absolutism_effect = 0.15
+			}
+		}
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			owner = {
+				if = {
+					limit = {
+						has_government_mechanic = romanian_elective_monarchy_mechanic
+					}
+					add_faction_influence = {
+						faction = brancoveanu_faction
+						influence = 10
+					}
+					clean_add_country_modifier = {
+						name = tuh_brancoveanu_great_works
+						duration = 10950
+					}
+				}
+				if = {
+					limit = {
+						has_government_mechanic = wallachian_terror_mechanic
+					}
+					custom_tooltip = targoviste_princely_court_terror_bonus_tooltip
+					set_country_flag = tier3_targoviste_princely_court
+				}
 			}
 		}
 	}
