@@ -1936,3 +1936,18 @@ halve_province_base_manpower = {
 		}
 	}
 }
+
+clean_add_country_modifier = {
+	if = {
+		limit = {
+			has_country_modifier = $name$
+		}
+		hidden_effect = {
+			remove_country_modifier = $name$
+		}
+	}
+	add_country_modifier = {
+		name = $name$
+		duration = $duration$
+	}
+}
