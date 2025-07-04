@@ -1856,8 +1856,8 @@ ab_wal_3 = {
 		}
 	}
 	wal_iberia = {
-		icon = gfx_wal_iberia
-		position = 12
+		icon = mission_reclaim_andalucia
+		position = 11
 		provinces_to_highlight = {
 			region = iberia_region
 			NOT = {
@@ -2670,7 +2670,7 @@ ab_wal_4 = {
 		}
 		effect = {
 			add_permanent_claim_multi_provinces = {
-				target = high_plains_area
+				target = hautes_plaines_area
 			}
 			add_permanent_claim_multi_provinces = {
 				target = barbary_coast_area
@@ -2697,7 +2697,7 @@ ab_wal_4 = {
 				target = sus_area
 			}
 			add_permanent_claim_multi_provinces = {
-				target = high_plains_area
+				target = hautes_plaines_area
 			}
 			custom_tooltip = tooltip_line_divider
 			add_yearly_sailors = 1
@@ -2707,7 +2707,6 @@ ab_wal_4 = {
 				fire = 4
 				manuever = 4
 				siege = 4
-
 			}
 			add_country_modifier = {
 				name = wallachia_anti_piracy_measures
@@ -2723,7 +2722,7 @@ ab_wal_4 = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = high_plains_area
+				area = hautes_plaines_area
 				area = barbary_coast_area
 				area = algiers_area
 				area = tafilalt_area
@@ -2741,7 +2740,7 @@ ab_wal_4 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 28
 				OR = {
-					area = high_plains_area
+					area = hautes_plaines_area
 					area = barbary_coast_area
 					area = algiers_area
 					area = tafilalt_area
@@ -2757,6 +2756,24 @@ ab_wal_4 = {
 			add_permanent_claim_multi_provinces = {
 				target = iberia_region
 			}
+		}
+	}
+	wal_mare_nostrum = {
+		icon = mission_mare_nostrum
+		position = 12
+		required_missions = {
+			wal_southern_france
+			wal_iberia
+			wal_north_africa
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+		}
+		effect = {
 		}
 	}
 }
