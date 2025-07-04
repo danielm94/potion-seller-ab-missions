@@ -586,7 +586,7 @@ wallachia_shahanshahanshah = {
 	prestige = 1
 }
 
-wallachia_monster_of_the_west= {
+wallachia_monster_of_the_west = {
 	province_warscore_cost = -0.05
 	fire_damage_received = -0.1
 }
@@ -611,4 +611,46 @@ wallachia_build_navy = {
 wallachia_black_sea_fleet = {
 	galley_power = 0.1
 	light_ship_cost = -0.1
+}
+wallachia_buffed_marines = {
+	shock_damage_received = -0.1
+	is_marine_modifier = yes
+}
+wallachia_study_navy_venice = {
+	number_of_cannons_modifier = 0.075
+	sailor_maintenance_modifer = -0.05
+}
+
+wallachia_study_navy_genoa = {
+	light_ship_cost = -0.1
+	global_foreign_trade_power = 0.05
+}
+
+wallachia_study_navy_andalusia = {
+	heavy_ship_cost = -0.1
+	heavy_ship_power = 0.05
+}
+
+wallachia_study_navy_sicily = {
+	galley_cost = -0.1
+	galley_power = 0.05
+}
+
+wallachia_study_navy_hansa = {
+	global_ship_trade_power = 0.05
+	naval_tradition_from_trade = 0.1
+}
+
+wallachia_study_navy_denmark = {
+	global_naval_barrage_cost = -0.05
+	galley_power = 0.05
+}
+
+wallachia_study_navy_england = {
+	own_coast_naval_combat_bonus = 1
+}
+
+wallachia_study_navy_dutch = {
+	global_ship_trade_power = 0.075
+	light_ship_cost = -0.05
 }

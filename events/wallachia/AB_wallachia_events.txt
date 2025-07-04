@@ -2448,3 +2448,329 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = AB_wallachia_events.36
+	title = AB_wallachia_events.36.t
+	desc = AB_wallachia_events.36.d
+	picture = SHIP_SAILING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.36.a
+		trigger = {
+			num_of_marines = 40
+		}
+		add_country_modifier = {
+			name = wallachia_buffed_marines
+			duration = -1
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		custom_tooltip = AB_EMPTY
+		capital_scope = {
+			marine_infantry = ROOT
+			marine_infantry = ROOT
+			marine_infantry = ROOT
+			marine_infantry = ROOT
+		}
+		custom_tooltip = AB_EMPTY
+		add_army_professionalism = 0.05
+	}
+	option = {
+		name = AB_wallachia_events.36.ven
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = VEN
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_venice
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = VEN
+					}
+				}
+				save_event_target_as = ven_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:ven_target
+			religion = event_target:ven_target
+			skill = 3
+			name = "Andrea Foscari"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.gen
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = GEN
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_genoa
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = GEN
+					}
+				}
+				save_event_target_as = gen_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:gen_target
+			religion = event_target:gen_target
+			skill = 3
+			name = "Francesco di Fornari"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.adu
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = ADU
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_andalusia
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = ADU
+					}
+				}
+				save_event_target_as = adu_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:adu_target
+			religion = event_target:adu_target
+			skill = 3
+			name = "Sa'd Ibn Ishaq"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.sic
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = SIC
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_sicily
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = SIC
+					}
+				}
+				save_event_target_as = sic_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:sic_target
+			religion = event_target:sic_target
+			skill = 3
+			name = "Yunus Saber"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.has
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = HAS
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_hansa
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = HAS
+					}
+				}
+				save_event_target_as = has_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:has_target
+			religion = event_target:has_target
+			skill = 3
+			name = "Hermann Assman"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.dan
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = DAN
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_denmark
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = DAN
+					}
+				}
+				save_event_target_as = dan_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:dan_target
+			religion = event_target:dan_target
+			skill = 3
+			name = "Rikissa Pallesen"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.eng
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_england
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = ENG
+					}
+				}
+				save_event_target_as = eng_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:eng_target
+			religion = event_target:eng_target
+			skill = 3
+			name = "Cuthred Eastseaxe"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = AB_wallachia_events.36.dutch
+		trigger = {
+			any_country = {
+				is_or_was_tag = {
+					tag = HOL
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+		add_country_modifier = {
+			name = wallachia_study_navy_dutch
+			duration = -1
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = HOL
+					}
+				}
+				save_event_target_as = hol_target
+			}
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = event_target:hol_target
+			religion = event_target:hol_target
+			skill = 3
+			name = "Frans Haag"
+			cost_multiplier = 0.5
+		}
+		add_prestige = -10
+	}
+}

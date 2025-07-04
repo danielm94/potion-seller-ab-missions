@@ -1059,13 +1059,21 @@ ab_wal_2 = {
 				mission_completed = wal_break_the_republics
 				mission_completed = wal_conquer_sicily
 			}
-			lazio_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			central_italy_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					OR = {
+						mission_completed = wal_break_the_republics
+						mission_completed = wal_conquer_sicily
+					}
+				}
+				lazio_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				central_italy_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
@@ -1877,9 +1885,17 @@ ab_wal_3 = {
 				mission_completed = wal_southern_france
 				mission_completed = wal_north_africa
 			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 60
-				region = iberia_region
+			if = {
+				limit = {
+					OR = {
+						mission_completed = wal_southern_france
+						mission_completed = wal_north_africa
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 60
+					region = iberia_region
+				}
 			}
 		}
 		effect = {
@@ -3439,6 +3455,127 @@ ab_wal_5 = {
 			add_country_modifier = {
 				name = wallachia_black_sea_fleet
 				duration = -1
+			}
+		}
+	}
+	wal_study_navy = {
+		icon = mission_establish_high_seas_navy
+		position = 13
+		required_missions = {
+			wal_fleet
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 5
+				any_owned_province = {
+					has_building = impressment_offices
+				}
+			}
+			OR = {
+				num_of_marines = 40
+				any_country = {
+					OR = {
+						is_or_was_tag = {
+							tag = VEN
+						}
+						is_or_was_tag = {
+							tag = GEN
+						}
+						is_or_was_tag = {
+							tag = ADU
+						}
+						is_or_was_tag = {
+							tag = SIC
+						}
+						is_or_was_tag = {
+							tag = HAS
+						}
+						is_or_was_tag = {
+							tag = ENG
+						}
+						is_or_was_tag = {
+							tag = HOL
+						}
+						is_or_was_tag = {
+							tag = DAN
+						}
+					}
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_yearly_sailors = 2
+			add_navy_tradition = 20
+			country_event = {
+				id = AB_wallachia_events.36
+			}
+			custom_tooltip = wal_study_navy_event_insight_tooltip
+			custom_tooltip = wal_recruited_marines_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_buffed_marines
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_venice_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_venice
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_genoa_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_genoa
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_andalusia_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_andalusia
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_sicily_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_sicily
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_hansa_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_hansa
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_denmark_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_denmark
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_england_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_england
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_study_navy_dutch_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = wallachia_study_navy_dutch
+					duration = -1
+				}
 			}
 		}
 	}
