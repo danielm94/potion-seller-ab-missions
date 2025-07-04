@@ -3472,7 +3472,7 @@ ab_wal_5 = {
 				}
 			}
 			OR = {
-				num_of_marines = 40
+				num_of_marines = 25
 				any_country = {
 					OR = {
 						is_or_was_tag = {
