@@ -154,3 +154,87 @@ expand_silk_production_issue = {
 		factor = 500
 	}
 }
+
+finance_dacian_india_company_issue = {
+	# 1, 2, or 3; meaning mil, dip, or adm, respectively.
+	category = 2
+	# The conditions that allow the issue to be available.
+	allow = {
+		has_country_flag = finance_dacian_india_company_issue_enabled
+	}
+	# Optional. Commands executed upon enacting the issue
+	effect = {
+		custom_tooltip = finance_dacian_india_company_issue_advisor_tooltip
+		if = {
+			limit = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 95
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.1
+			}
+		}
+		else_if = {
+			limit = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 75
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+			}
+		}
+		else_if = {
+			limit = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 2
+				cost_multiplier = 0.5
+			}
+		}
+		else_if = {
+			limit = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 30
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 2
+				cost_multiplier = 0.75
+			}
+		}
+		else = {
+			define_advisor = {
+				type = trader
+				skill = 1
+			}
+		}
+	}
+	# Optional. Modifier applied for the duration of the downtime between debates.
+	modifier = {
+		trade_company_investment_cost = -0.35
+		center_of_trade_upgrade_cost = -0.35
+	}
+	# Chance for issue to appear.
+	chance = {
+		factor = 5
+	}
+	# Chance AI will enact it
+	ai_will_do = {
+		factor = 500
+	}
+}
