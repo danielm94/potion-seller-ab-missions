@@ -10049,7 +10049,19 @@ holy_city_jerusalem = {
 			church_power_modifier = 0.15
 			papal_influence = 1
 		}
-
+		# AB [[[
+		conditional_modifier = {
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = enable_korean_palace_tt
+					has_country_flag = koj_buff_great_project
+				}
+			}
+			modifier = {
+				all_power_cost = -0.03
+			}
+		}
+		# ]]]
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
@@ -11869,6 +11881,20 @@ dutch_polders = {
 			burghers_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
+		}
+		conditional_modifier = {
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = NED_COMPLETED_CANAL_WORKS_MISSION
+					owner = {
+						has_country_flag = ned_buff_dutch_polders_great_project_flag
+					}
+				}
+			}
+			modifier = {
+				global_trade_goods_size_modifier = 0.05
+				global_prov_trade_power_modifier = 0.2
+			}
 		}
 	}
 }

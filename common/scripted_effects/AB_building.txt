@@ -332,7 +332,6 @@ ab_building_fort_effect = {
 		add_province_modifier = {
 			name = hab_buffed_forts_modifier
 			duration = -1
-			hidden = yes
 		}
 	}
 	if = {
@@ -348,7 +347,6 @@ ab_building_fort_effect = {
 		add_province_modifier = {
 			name = ned_low_countries_fort_buff
 			duration = -1
-			hidden = yes
 		}
 	}
 	else_if = {
@@ -362,7 +360,6 @@ ab_building_fort_effect = {
 		add_province_modifier = {
 			name = ned_low_countries_fort_buff_buffed
 			duration = -1
-			hidden = yes
 		}
 	}
 	if = {

@@ -3178,7 +3178,6 @@ gendarmes_reform = {
 			has_country_flag = fra_unlock_gendarmes
 			# Missions that unlock this reform
 			has_mission = ivr_enlist_the_franks
-			has_mission = fra_form_gendarmes
 		}
 		# ]]]
 	}
@@ -5246,7 +5245,7 @@ seven_provinces_reform = {
 	allow_normal_conversion = yes
 
 	potential = {
-		tag = NED
+		has_country_flag = ab_is_ned_flag
 	}
 
 	modifiers = {
@@ -5267,7 +5266,6 @@ seven_provinces_reform = {
 				add_province_modifier = {
 					name = ned_seven_provinces_organization_positive_modifier
 					duration = -1
-					hidden = yes
 				}
 			}
 			every_owned_province = {
@@ -5278,7 +5276,6 @@ seven_provinces_reform = {
 				add_province_modifier = {
 					name = ned_seven_provinces_organization_negative_modifier
 					duration = -1
-					hidden = yes
 				}
 			}
 		}
@@ -5311,7 +5308,7 @@ modern_economics_reform = {
 	allow_normal_conversion = yes
 
 	potential = {
-		tag = NED
+		has_country_flag = ab_is_ned_flag
 	}
 
 	modifiers = {
@@ -5333,7 +5330,7 @@ support_state_reform = {
 	allow_normal_conversion = yes
 
 	potential = {
-		tag = NED
+		has_country_flag = ab_is_ned_flag
 		has_reform = dutch_republic
 	}
 
@@ -5355,7 +5352,7 @@ orangist_stadholders_reform = {
 	allow_normal_conversion = yes
 
 	potential = {
-		tag = NED
+		has_country_flag = ab_is_ned_flag
 		has_reform = dutch_republic
 	}
 

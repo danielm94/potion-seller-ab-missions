@@ -3766,6 +3766,100 @@ on_province_owner_change = {
 		}
 		remove_province_modifier = jap_gokaido_modifier
 	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = negate_unaccepted_levantine_culture }
+			culture_group = turko_semitic
+			has_owner_accepted_culture = no
+		}
+		add_province_modifier = {
+			name = hsn_ayyubid_tolerance
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = seven_provinces_organization
+			}
+		}
+		if = {
+			limit = {
+				region = low_countries_region
+				culture_group = ROOT
+			}
+			add_province_modifier = {
+				name = ned_seven_provinces_organization_positive_modifier
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { region = low_countries_region }
+				continent = europe
+			}
+			add_province_modifier = {
+				name = ned_seven_provinces_organization_negative_modifier
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = ned_buffed_forts_flag
+				NOT = {
+					full_idea_group = defensive_ideas
+				}
+			}
+			region = low_countries_region
+			has_fort_building_trigger = yes
+		}
+		add_province_modifier = {
+			name = ned_low_countries_fort_buff
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_country_flag = ned_buffed_forts_flag
+				full_idea_group = defensive_ideas
+			}
+			region = low_countries_region
+			has_fort_building_trigger = yes
+		}
+		add_province_modifier = {
+			name = ned_low_countries_fort_buff_buffed
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = ned_unlock_dutch_urbanization_flag
+			}
+			region = low_countries_region
+			development = 25
+		}
+		add_province_modifier = {
+			name = ned_dutch_urbanization
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = ned_unlock_flemish_urbanization_flag
+			}
+			region = low_countries_region
+			development = 25
+		}
+		add_province_modifier = {
+			name = ned_flemish_urbanization
+			duration = -1
+		}
+	}
 }
 
 # country

@@ -247,7 +247,7 @@ south_slavic = {
 			Lazar Ljudevit Luka Marko Marcus Martin Martin Matija Matthew Mihailo Mihovil Milorad 
 			Mircea Miroslav Miroslav Mislav Nenad Nikodim Nicodemus Nikola Nicholas
 			Ninoslav Petar Peter Porin Prvoslav Radoslav Rastko Ratomir Roman Serapion Simeon 
-			Sinisa Slavko Slobodan Stefan Stephen Teodosije Trajan Uros Visarion Vladimir Vladimir 
+			Sinisa Slavko Slobodan Stefan Stephen Teodosije Trajan Uros Visarion Volodymyr 
 			Vladislav Vladislav Vlastimir Milutin Krsto Djordje Bogdan Branko 
 			Vuk Lupo Vukan Vukasin Vukoman Zoran Zvonimir Simon Mladen
 		}
@@ -323,7 +323,7 @@ south_slavic = {
 		male_names = {
 			Ivan Asen Koloman Petar Todor Michael Aleksandar Kalojan Georgi Konstantin Stepan Stracimir 
 			Simeon Andon Andrei Angel Atanas Bogdan Bogomil Branimir Damyan Dimitar Emil Gavril Hristo Iordan 
-			Krasimir Lazar Marko Mikhail Miroslav Nikola Pavel Radomir Samuil Vasil Vladimir Zhivko
+			Krasimir Lazar Marko Mikhail Miroslav Nikola Pavel Radomir Samuil Vasil Volodymyr Zhivko
 			Aleksii Balin Bernardin Bernard Bertalan Bogoris Boril Bozidar Theodat Braslav Dan Dionisii 
 			Dionysus Dominik Dominic Dragoman Dragshan Drzislav Evtimii Frujin German Grgur Hranimir
 			Ioakim Ivan John Jerolim Kalojan Kocelj Kozma Kresimir Kulin Ljubomir Ljutomisl Marko 
@@ -536,7 +536,7 @@ west_slavic = {
 			Matej Jan Lukas Stefan Pavol Peter Juraj Jozef Marek Daniel Moric Samuel Martin Ondrej Anton Karol
 			Hugolín Tomas Ludovít Viliam Mikulas Ignac Jaroslav Jaromir Miroslav Drahoslav Svatopluk Mojmir
 			Dobroslav Radoslav Radomír Kazimír Vlastimil Vitazoslav Blahoslav Svetozar Bonifac Vratislav
-			Vladislav Vladimir Cyril Konstantin Metod Bohuslav Drahomir Prokop Jergus Tichomir Bartolomej
+			Vladislav Volodymyr Cyril Konstantin Metod Bohuslav Drahomir Prokop Jergus Tichomir Bartolomej
 			Luboslav Lubomir Levoslav Stanislav
 		}
 		female_names = {
@@ -839,6 +839,52 @@ west_slavic = {
 	Mazovian = {
 		graphical_culture = easterngfx
 		primary = MAZ
+		male_names = {
+			August Wladyslaw Stanislaw Kazimierz Aleksander Henryk Albert Kazimierz Michal Stefan 
+			August Aleksander Karol Kazimierz Krzysztof Fryderyk Olbracht Jan Karol Patryk
+			Ferdynand Olbracht Albert Aleksy Andrzej Bartlomiej Bogumil Bronislaw Dawid Dominik Emil Eugeniusz 
+			Ferdynand Gustaw Igor Iwan Krystian Lech Lucjusz Ludwik Lukasz Maksym Mariusz Mieszko Miroslaw 
+			Rafal Sylwester Szymon Zygfryd Oskar
+			Aleksander Alexander Andrzej Andrew Bartosz Bartolomeus Bezprym Boguchwal Bogumil Boleslaw 
+			Boleslav Boncza Bonifacius Borzyslaw Bozydar Theodat Borzywoj Borijov Budziwuj Czcibor 
+			Czyrzniech Dalimir Daniel Daniel Dobieslaw Dobrogost Dobromir Doman Domawuj Dytryk Thierry 
+			Eustachy Eustace Gaudenty Gierolt Gerald Gniewomir Gniewosz Gosciwuj Goszczon Henryk Henry 
+			Izbor Józef Joseph Jacek Hyacinth Jaksa Jacob Jakub Jacob Jakusz John Janislaw John 
+			John Janusz John Jaroslaw Jaroslav Jerzy George Karol Charles Kazimierz Konrad Konrad 
+			Christian Krzeslaw Lambert Lambert Leszek Ctibor
+			Maciej Matthew Macko Matthew Malowuj Marcin Martin Maslaw Mateusz Matthew Mieszko Mikolaj 
+			Nicholas Milobrat Milosz Milosz Miroslaw Miroslav Msciwoj Mszczuj Nadbor Niezamysl Odon 
+			Pawel Paul Pelka Piotr Peter Piskla Prendota Przemyslaw Premysl Przybor Sambor Sedziej 
+			Sieciech Siemomysl Siemowit Skarbimir Snowid Spytko Stanislaw Stanislav
+			Stefan Stephen Stoigniew Strasz Sulislaw Sulistryj Swietopelk Svatopluk Swietoslaw 
+			Szczesny Felix Tomasz Thomas Trojden Twardomir Usciech Waclaw Vaclav Wanko Vaclav 
+			Laurence Wielislaw Wieslaw Wincenty Vincent Wit Guy Witosz Wladyslaw Vladislav Wojciech 
+			Wojuta Wszebor Vsebor Zbigniew Zbynek Zbyszko Zbynek Zegota Ignatius Zelibrat
+			Zygmunt Sigmund Albert Wawrzyniec Sviatoslav Sedzimir Otto Krystyn Janko Imram
+		}
+		female_names = {
+			Adelajda Adleta Agnieszka Agnes Aldona Anastazja Anastasia Anna Anna Beata Bozena Danuta 
+			Dobrawa Dobronega Elzbieta Elisabeth Eufemia Euphemia Eufrozyna Gertruda Gertrude 
+			Helena Helen Jadwiga Jolanta Yolanda Judyta Judith Katarzyna Catherine Kazimiera Kenna 
+			Konstancja Constance Krystyna Christina Kunegunda Lucja Lucia Ludmila Magdalena Magdalena 
+			Malgorzata Maria Maria Kinga Grzymislawa Richeza Agafia
+			Matylda Matilda Milena Nadzieja Nawoja Pechna Rycheza Ryksa Salomea Samboja Scholastyka 
+			Smiechna Stanislawa Swietoslawa Wislawa Wojslawa
+			Wolislawa Wszebora Wszemila Zofia Sophia Zwinislawa
+		}
+		dynasty_names = {
+			Gryf Piast Jagiellon Wisniowiecki Sobieski Leszczynski 
+			Poniatowski Radziwill Zamoyski Potocki Lubomirski 
+			Premyslovci Podebrad 
+			Chodkiewicz Czartoryski Lanckoronski Mielzynski Oginski
+			Ostrogski Ostroróg Pac Sapieha Sanguszko Tarnowski Teczynski
+			Tyszkiewicz Kurnatowski Taczanowski Gosiewski Opalinski Lubelski
+			Brzeczyszczykiewicz
+		}
+	}
+	litvin_westslavic = {
+		graphical_culture = easterngfx
+		primary = POL
 		male_names = {
 			August Wladyslaw Stanislaw Kazimierz Aleksander Henryk Albert Kazimierz Michal Stefan 
 			August Aleksander Karol Kazimierz Krzysztof Fryderyk Olbracht Jan Karol Patryk
@@ -1252,7 +1298,7 @@ carpathian = {
 	
 east_slavic = {
 	graphical_culture = easterngfx
-	russian_culture = { #Muscovite - Vladimir-Suzdal dialects
+	russian_culture = { #Muscovite - Volodymyr-Suzdal dialects
 		primary = RUS
 		male_names = {
 			Vasiliy Ivan Dmitriy Yuriy Andrei Semen Fyodor Afanasiy Akim Aleksandr Alexei Anatoliy Arkadiy 
@@ -1268,7 +1314,7 @@ east_slavic = {
 			Rostislav Rurik 
 			Rurik Ruslan Simeon Simon Stanislav Stanislav Stepan Stephen Sudislav
 			Svetozar Sviatopolk Svatopluk Sviatoslav Sviatoslav Terentiy Trifon Vasiliy Basil Vasilko 
-			Viacheslav Vladimir Vladimir Vladislav Vladislav Voislav Volodar Vseslav
+			Viacheslav Volodymyr Vladislav Vladislav Voislav Volodar Vseslav
 			Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yemelyan Emil Yeremey 
 			Yevstafiy Yuriy George
 		}
@@ -1292,7 +1338,7 @@ east_slavic = {
 			Demidov Lopukhin Tolstoy "Lobanov-Rostovsky" Menshikov Obolensky
 		}
 	}
-	russian = { #Muscovite - Vladimir-Suzdal dialects
+	russian = { #Muscovite - Volodymyr-Suzdal dialects
 		primary = MOS
 		male_names = {
 			Vasiliy Ivan Dmitriy Yuriy Andrei Semen Fyodor Afanasiy Akim Aleksandr Alexei Anatoliy Arkadiy 
@@ -1308,7 +1354,7 @@ east_slavic = {
 			Rostislav Rurik 
 			Rurik Ruslan Simeon Simon Stanislav Stanislav Stepan Stephen Sudislav
 			Svetozar Sviatopolk Svatopluk Sviatoslav Sviatoslav Terentiy Trifon Vasiliy Basil Vasilko 
-			Viacheslav Vladimir Vladimir Vladislav Vladislav Voislav Volodar Vseslav
+			Viacheslav Volodymyr Vladislav Vladislav Voislav Volodar Vseslav
 			Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yemelyan Emil Yeremey 
 			Yevstafiy Yuriy George
 		}
@@ -1348,7 +1394,7 @@ east_slavic = {
 			Rostislav Rurik 
 			Rurik Ruslan Simeon Simon Stanislav Stanislav Stepan Stephen Sudislav
 			Svetozar Sviatopolk Svatopluk Sviatoslav Sviatoslav Terentiy Trifon Vasiliy Basil Vasilko 
-			Viacheslav Vladimir Vladimir Vladislav Vladislav Voislav Volodar Vseslav
+			Viacheslav Volodymyr Vladislav Vladislav Voislav Volodar Vseslav
 			Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yemelyan Emil Yeremey 
 			Yevstafiy Yuriy George
 		}
@@ -1388,7 +1434,7 @@ east_slavic = {
 			Rostislav Rurik 
 			Rurik Ruslan Simeon Simon Stanislav Stanislav Stepan Stephen Sudislav
 			Svetozar Sviatopolk Svatopluk Sviatoslav Sviatoslav Terentiy Trifon Vasiliy Basil Vasilko 
-			Viacheslav Vladimir Vladimir Vladislav Vladislav Voislav Volodar Vseslav
+			Viacheslav Volodymyr Vladislav Vladislav Voislav Volodar Vseslav
 			Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yemelyan Emil Yeremey 
 			Yevstafiy Yuriy George
 		}
@@ -1415,7 +1461,7 @@ east_slavic = {
 	byelorussian = {
 		primary = PLT
 		male_names = {
-			Andrei Lubko Olgierd Bryachislav Vasiliy Svyatoslav Vladimir Izyaslav Vseslav Boris Aleksandr Adrian 
+			Andrei Lubko Olgierd Bryachislav Vasiliy Svyatoslav Volodymyr Izyaslav Vseslav Boris Aleksandr Adrian 
 			Afanasiy Daniil Dmitriy Dorofey Faddey Feodosiy Feofil Foma Fyodor Gavriil Grigoriy Igor Ivan 
 			Mikhail Naum Nikita Nikolai Pankrati Prokhor Pyotr Radoslav Ruslan Semen Serafim Sevastian Stanislav 
 			Timofeiy Varfolomeiy Vikentiy Yaroslav Mefodiy
@@ -1480,7 +1526,7 @@ east_slavic = {
 			Rostislav Rurik 
 			Rurik Ruslan Simeon Simon Stanislav Stanislav Stepan Stephen Sudislav
 			Svetozar Sviatopolk Svatopluk Sviatoslav Sviatoslav Terentiy Trifon Vasiliy Basil Vasilko 
-			Viacheslav Vladimir Vladimir Vladislav Vladislav Voislav Volodar Vseslav
+			Viacheslav Volodymyr Vladislav Vladislav Voislav Volodar Vseslav
 			Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yemelyan Emil Yeremey 
 			Yevstafiy Yuriy George
 		}
@@ -1509,26 +1555,29 @@ east_slavic = {
 		Rurikovich Godunov Shuisky Romanov Sheremetev Golitsyn Naryshkin Khilkov Gorchakov
 		Belosselsky Chelyadnin Potyomkin Poloch Izbor Tversky Lukisky Pleskov Toropetsky Dukhovsky
 		Koroviev Woland Tyvertsky Buzhansky Slutsky Pinesky Zhytomyrsky Vynnytsky Polan Ulich Drevl 
-		Lyubech Roslavsky Turov
+		Lyubech Roslavsky Turov Dovhovytsky Hoysky Kostka Holubsky Petrushevych Petrunytsky Volsky
+		Butovych Zhyvotovsky Vyshnyatsky Klevetsky Chartoryisky Kosynsky Lopatitsky Stetsky
+		Ostrohsky Zaslavsky Sangushko Nemyrich Rohozynsky Vyshnevetsky Chortoryisky Zholkevsky
+		Tyshkevych Yablonovsky Voynylovych
 	}
 	male_names = {
 		# ILMENIAN / SEVERIAN / VOLHYNIAN
 		Briachislav Bretislaus Demid Dobrynia Fedot Theodat Gleb Igor Iliya Iziaslav Lev Leo Mitrofan 
-		Mstislav Mstislav Svetozar
-		Nikita Putiata Rodislav Rogvolod Rostislav Ruslan Stanislav Stanislav Sudislav 
-		Sviatopolk Svatopluk Sviatoslav Terentiy Trifon Viacheslav Vladimir Vladimir 
-		Vladislav Voislav Volodar Vseslav Vladislav
+		Mstislav Mstislav Svetozar Borys Roman Hryhorii Tymofii Leonid Kostiantyn Illia Pavlo
+		Nikita Putiata Rodislav Rogvolod Rostislav Ruslan Stanislav Sudislav Mykyta Ivan
+		Sviatopolk Svatopluk Sviatoslav Terentiy Trifon Viacheslav Volodymyr Nazar Mykhailo
+		Vladislav Voislav Volodar Vseslav Vladislav Oleh Zakhar Dmytro Andrii Oleksandr
 		Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yeremey Yevstafiy
 	}
 	female_names = {
 		# ILMENIAN / SEVERIAN / VOLHYNIAN
 		Boleslava Darya Dobrava Dobronega Dobroslava Yefimia Euphemia Yefrosinia Euphrosyne Fevronia 
-		Gorislava Gradislava Gremislava
+		Gorislava Gradislava Gremislava Oksana Anastasiia Viktoriia Yelyzaveta Liudmyla Nadiia
 		Liubava Liudmila Malfrida Malusha Maria Maria Marina Olena Helen Olga Pereyaslava Praskovya 
-		Prebrana Predslava Praxida
+		Prebrana Predslava Praxida Yevheniia Solomiia Domna Tetiana Vasylina Melaniia Paraska
 		Premyslava Pribislava Rogneda Rostislava Sbyslava Sviatoslava Tatyana Ulita Ulyana Varvara 
-		Veleslava Verkhoslava Vasilisa
-		Vseslava Viacheslava Yaroslava Zabava Zvenislava
+		Veleslava Verkhoslava Vasilisa Anna Sofiia Yevdokiia Olha Kateryna Mariia Zabava Zvenislava
+		Vseslava Viacheslava Yaroslava
 	}
 }
 
@@ -2071,7 +2120,7 @@ byzantine = {
 			Lazar Ljudevit Luka Marko Marcus Martin Martin Matija Matthew Mihailo Mihovil Milorad 
 			Mircea Miroslav Miroslav Mislav Nenad Nikodim Nicodemus Nikola Nicholas
 			Ninoslav Petar Peter Porin Prvoslav Radoslav Rastko Ratomir Roman Serapion Simeon 
-			Sinisa Slavko Slobodan Stefan Stephen Teodosije Trajan Uros Visarion Vladimir Vladimir 
+			Sinisa Slavko Slobodan Stefan Stephen Teodosije Trajan Uros Visarion Volodymyr 
 			Vladislav Vladislav Vlastimir Milutin Krsto Djordje Bogdan Branko 
 			Vuk Lupo Vukan Vukasin Vukoman Zoran Zvonimir Simon Mladen
 		}
