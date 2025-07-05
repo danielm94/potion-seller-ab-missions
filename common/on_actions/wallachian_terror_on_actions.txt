@@ -143,30 +143,3 @@ on_siege_won_province = {
 	wallachian_terror_remove_severed_command_modifier = yes
 	wallachian_terror_remove_leadership_in_exile_modifier = yes
 }
-
-on_new_monarch = {
-	if = {
-		limit = {
-			has_ruler_flag = impaler_heir
-		}
-		add_ruler_personality = impaler_personality
-		clr_ruler_flag = impaler_heir
-		change_dip = -1
-		change_ruler_stat = {
-			type = mil
-			amount = 1
-		}
-	}
-	else_if = {
-		limit = {
-			has_ruler_flag = zealot_heir
-		}
-		add_ruler_personality = zealot_personality
-	}
-	else_if = {
-		limit = {
-			has_ruler_flag = not_impaler_heir
-		}
-		clr_ruler_flag = impaler_Heir
-	}
-}
