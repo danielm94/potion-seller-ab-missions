@@ -171,7 +171,7 @@
  wal_study_navy_title: "Forging a Naval Tradition"
  wal_study_navy_desc: "A fleet is nothing without discipline and purpose. To transform our ships into a force to be reckoned with, we must cultivate a professional naval tradition—whether by developing our own formidable marine corps or by absorbing the lessons of experienced maritime powers. The result will be a navy admired by allies and feared by rivals."
  wal_study_navy_event_insight_tooltip: "§VThis event will allows us to choose between a mulititude of rewards, depending on how many requirements we satisfied.§!"
- wal_recruited_marines_tooltip: "If we recruited §Y40 Marines§!:"
+ wal_recruited_marines_tooltip: "If we recruited §Y25 Marines§!:"
  wal_study_navy_venice_tooltip: "If @VEN / @ITR §YVenice§! has §G100§! opinion of us:"
  wal_study_navy_genoa_tooltip: "If @GEN / @ITR §YGenoa§! has §G100§! opinion of us:"
  wal_study_navy_andalusia_tooltip: "If @ADU / @TCL §YAndalusia§! has §G100§! opinion of us:"
