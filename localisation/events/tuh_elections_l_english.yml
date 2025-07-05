@@ -83,6 +83,7 @@
  tuh_movilesti_won_last_election_tooltip: "Having also won the previous election, whispers now accuse §YHouse Movilesti§! of rigging the vote. Consequently, §Y[tuh_elections_movilesti.GetName]§! will lose §R[This.precalc_movilesti_consecutive_wins_loss.GetValue]§! §YLegitimacy§!."
  tuh_movilesti_low_influence_house_legitimacy_loss_tooltip: "As §YHouse Movilesti§! currently holds influence below the expected standard (less than 10), they are considered a lesser choice. §Y[tuh_elections_movilesti.GetName]§! will thus lose §R-20§! §YLegitimacy§!."
  tuh_movilesti_total_legitimacy_of_candidate: "With all factors considered, §Y[tuh_elections_movilesti.GetName]§! of §YHouse Movilesti§! is expected to have §Y[This.precalc_movilesti_total_legitimacy.GetValue]§! §YLegitimacy§! if elected."
+ movilesti_propagate_religion_tooltip: "We will be able to use the §YPropagate Religion§! trade policy until the death of §Y[tuh_elections_movilesti.GetName]§!." 
 
 # --- DANESTI Tooltips (house_id = 5, house = danesti) ---
  tuh_danesti_set_legitimacy_election_founding_house_bonus_tooltip: "Since §Y[tuh_elections_danesti.GetName]§! is a member of §YHouse Danesti§!, a founding house, they will gain §G+25§! §YLegitimacy§!."

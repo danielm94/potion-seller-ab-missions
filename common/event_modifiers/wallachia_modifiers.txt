@@ -654,3 +654,13 @@ wallachia_study_navy_dutch = {
 	global_ship_trade_power = 0.075
 	light_ship_cost = -0.05
 }
+
+wallachia_dacian_india_company = {
+	trade_company_governing_cost = -0.1
+	trade_efficiency = 0.05
+}
+wallachia_rise_of_the_dacian_india_company = {
+	trade_company_investment_cost = -0.25
+	global_trade_power = 0.1
+	global_heathen_missionary_strength = 0.03
+}

@@ -10,3 +10,6 @@
  conquer_persia_wargoal: "Show Superiority"
  conquer_persia_wargoal_desc: "We need to finish what the emperors before us have started!"
  roman_persian_war_name: "$ORDER$$FIRST$-$SECOND$ Roman - Persian War"
+ conquer_india_wargoal: "Secure Company Holdings"
+ conquer_india_wargoal_desc: "Show Superiority"
+ dacian_indian_war_name: "$ORDER$$FIRST$ Conquest of $SECOND_NAME$"

@@ -384,6 +384,19 @@ declarewar = {
 			}
 			add_war_exhaustion = -3
 		}
+		if = {
+			limit = {
+				FROM = {
+					is_in_war = {
+						casus_belli = cb_dacian_indian_campaign
+						defender_leader = THIS
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = in_cb_dacian_indian_campaign_war
+			}
+		}
 	}
 }
 

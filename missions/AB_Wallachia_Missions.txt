@@ -3411,8 +3411,44 @@ ab_wal_5 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
-				target = india_superregion
+			add_claim_multi_provinces = {
+				target = sindh_area
+			}
+			add_claim_multi_provinces = {
+				target = northern_sindh_area
+			}
+			add_claim_multi_provinces = {
+				target = multan_area
+			}
+			add_claim_multi_provinces = {
+				target = sind_sagar_area
+			}
+			add_claim_multi_provinces = {
+				target = kashmir_area
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = YEARS_OF_TRADE_INCOME_1
+			add_years_of_trade_income = {
+				years = 1
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_dacian_india_company
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_rise_of_the_dacian_india_company
+				duration = 7300
+			}
+			custom_tooltip = wallachia_rise_of_the_dacian_india_company_mechanics_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = movilesti_can_propagate_religion_bonus_tooltip
+			set_country_flag = movilesti_can_propagate_religion_bonus
+			custom_tooltip = finance_dacian_india_company_tooltip
+			set_country_flag = finance_dacian_india_company"
 			}
 		}
 	}

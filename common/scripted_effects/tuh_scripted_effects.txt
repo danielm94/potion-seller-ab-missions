@@ -1326,6 +1326,7 @@ romanian_elective_monarchy_on_dev_effect = {
 tuh_clear_dynasty_specific_bonuses = {
 	tuh_clear_ghica_bonuses = yes
 	tuh_clear_danesti_coastal_defences = yes
+	clr_country_flag = movilesti_can_propagate_religion_bonus
 }
 
 tuh_clear_ghica_bonuses = {

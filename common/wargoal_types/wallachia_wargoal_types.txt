@@ -110,3 +110,29 @@ punish_the_regicide = {
 	}
 	war_name = imperial_retribution
 }
+
+conquer_india_wargoal = {
+	type = superiority
+	attacker = {
+		badboy_factor = 0.9
+		prestige_factor = 1.0
+		peace_cost_factor = 0.9
+		allowed_provinces = {
+			superregion = india_superregion
+		}
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+	}
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1.25
+		peace_cost_factor = 0.333
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+	}
+	war_name = dacian_indian_war_name
+}
