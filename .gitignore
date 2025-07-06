@@ -81,3 +81,4 @@
 .cwtools/map/default_map.cwt
 .cwtools/map/tiles.cwt
 .cwtools/missions/missions.cwt
+.vscode/settings.json
