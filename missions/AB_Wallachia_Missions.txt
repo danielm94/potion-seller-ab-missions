@@ -1326,6 +1326,132 @@ ab_wal_2 = {
 			}
 		}
 	}
+	wal_seat_of_the_metropolitan = {
+		icon = gfx_wal_seat_of_the_metropolitan
+		position = 15
+		provinces_to_highlight = {
+			province_id = 161
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					num_of_times_improved = 3
+				}
+				NOT = {
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 161
+			161 = {
+				has_state_patriach = yes
+				has_tax_building_trigger = yes
+				num_of_times_improved = 3
+			}
+		}
+		effect = {
+			161 = {
+				add_province_modifier = {
+					name = wallachia_targoviste_metropolitan
+					duration = 5475
+				}
+			}
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+	}
+	wal_romanian_churches = {
+		icon = gfx_wal_romanian_churches
+		position = 16
+		required_missions = {
+			wal_seat_of_the_metropolitan
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+			OR = {
+				has_tax_building_trigger = no
+				NOT = {
+					num_of_times_improved = 6
+				}
+			}
+		}
+		trigger = {
+			161 = {
+				is_core = ROOT
+				has_tax_building_trigger = yes
+				num_of_times_improved = 6
+			}
+			calc_true_if = {
+				amount = 6
+				all_owned_province = {
+					culture_group = romanian_culture_group
+					has_tax_building_trigger = yes
+					num_of_times_improved = 6
+				}
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 15
+			}
+			161 = {
+				upgrade_tax_building = yes
+				add_province_modifier = {
+					name = wallachia_targoviste_metropolitan_cathedral
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_romanian_churches_province_reward_tooltip
+			tooltip = {
+				add_patriarch_authority = 0.01
+				add_province_modifier = {
+					name = wallachia_pillar_of_the_faith
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = {
+							province_id = 161
+						}
+						culture_group = romanian_culture_group
+						has_tax_building_trigger = yes
+						num_of_times_improved = 6
+					}
+					add_province_modifier = {
+						name = wallachia_pillar_of_the_faith
+						duration = -1
+					}
+					owner = {
+						add_patriarch_authority = 0.01
+					}
+				}
+			}
+			set_country_flag = buffed_development_of_temples
+			custom_tooltip = buffed_development_of_temples_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_province_modifier = estate_church_development_of_temples_mod
+					}
+					remove_province_modifier = estate_church_development_of_temples_mod
+					add_province_modifier = {
+						name = buffed_estate_church_development_of_temples_mod
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 }
 
 ab_wal_3 = {

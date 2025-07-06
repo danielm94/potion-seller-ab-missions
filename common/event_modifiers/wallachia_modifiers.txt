@@ -663,3 +663,29 @@ wallachia_rise_of_the_dacian_india_company = {
 	global_trade_power = 0.1
 	global_heathen_missionary_strength = 0.03
 }
+
+wallachia_targoviste_metropolitan = {
+	local_tax_modifier = 0.5
+	global_tax_income = 6
+	yearly_patriarch_authority = 0.001
+	religion = yes
+}
+
+wallachia_targoviste_metropolitan_cathedral = {
+	local_tax_modifier = 1
+	global_tax_income = 24
+	local_development_cost = -0.1
+	yearly_patriarch_authority = 0.001
+	religion = yes
+}
+wallachia_pillar_of_the_faith = {
+	local_development_cost = -0.05
+	local_tax_modifier = 0.5
+	local_unrest = -2
+	religion = yes
+}
+
+buffed_estate_church_development_of_temples_mod = {
+	local_development_cost = -0.1
+	religion = yes
+}

@@ -894,15 +894,32 @@ on_province_religion_converted_estate_privileges_effect = {
 					has_owner_secondary_religion = yes
 				}
 			}
-			add_province_modifier = {
-				name = estate_church_development_of_temples_mod
-				duration = -1
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = buffed_development_of_temples
+					}
+				}
+				add_province_modifier = {
+					name = buffed_estate_church_development_of_temples_mod
+					duration = -1
+				}
+			}
+			else = {
+				add_province_modifier = {
+					name = estate_church_development_of_temples_mod
+					duration = -1
+				}
 			}
 		}
 		else = {
 			if = {
 				limit = { has_province_modifier = estate_church_development_of_temples_mod }
 				remove_province_modifier = estate_church_development_of_temples_mod
+			}
+			if = {
+				limit = { has_province_modifier = buffed_estate_church_development_of_temples_mod }
+				remove_province_modifier = buffed_estate_church_development_of_temples_mod
 			}
 		}
 	}
@@ -1915,15 +1932,32 @@ on_province_owner_change_estate_privileges_effect = {
 					has_owner_secondary_religion = yes
 				}
 			}
-			add_province_modifier = {
-				name = estate_church_development_of_temples_mod
-				duration = -1
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = buffed_development_of_temples
+					}
+				}
+				add_province_modifier = {
+					name = buffed_estate_church_development_of_temples_mod
+					duration = -1
+				}
+			}
+			else = {
+				add_province_modifier = {
+					name = estate_church_development_of_temples_mod
+					duration = -1
+				}
 			}
 		}
 		else = {
 			if = {
 				limit = { has_province_modifier = estate_church_development_of_temples_mod }
 				remove_province_modifier = estate_church_development_of_temples_mod
+			}
+			if = {
+				limit = { has_province_modifier = buffed_estate_church_development_of_temples_mod }
+				remove_province_modifier = buffed_estate_church_development_of_temples_mod
 			}
 		}
 	}
@@ -2223,9 +2257,22 @@ on_province_tax_building_built_estate_privileges_effect = {
 				has_owner_secondary_religion = yes
 			}
 		}
-		add_province_modifier = {
-			name = estate_church_development_of_temples_mod
-			duration = -1
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = buffed_development_of_temples
+				}
+			}
+			add_province_modifier = {
+				name = buffed_estate_church_development_of_temples_mod
+				duration = -1
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = estate_church_development_of_temples_mod
+				duration = -1
+			}
 		}
 	}
 	if = {
@@ -2335,6 +2382,12 @@ on_province_tax_building_destroyed_estate_privileges_effect = {
 			has_province_modifier = estate_church_development_of_temples_mod
 		}
 		remove_province_modifier = estate_church_development_of_temples_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = buffed_estate_church_development_of_temples_mod
+		}
+		remove_province_modifier = buffed_estate_church_development_of_temples_mod
 	}
 	if = {
 		limit = {
