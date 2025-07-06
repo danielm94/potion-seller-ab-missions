@@ -50,7 +50,6 @@
 157 = "Oradea"
 158 = "Mures"
 159 = "Silistra"
-161 = "Targoviste"
 163 = "Creta"
 165 = "Berna"
 180 = "Poitou Superior"
