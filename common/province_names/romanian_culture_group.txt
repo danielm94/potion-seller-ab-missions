@@ -60,7 +60,6 @@
 210 = "Navara"
 224 = "Sevilia"
 227 = "Lisabona"
-232 = "Bragança"
 236 = "Londra"
 253 = "Hebridele Exterioare"
 257 = "Varsovia"
@@ -1529,7 +1528,7 @@
 4703 = "Croia"
 4704 = "Tirnovo"
 4705 = "Komotini"
-4706 = "Constanta"
+4706 = {"Constanta" "Constanta"}
 4709 = "Pasau"
 4710 = "Bregent"
 4711 = "Donauworth"
