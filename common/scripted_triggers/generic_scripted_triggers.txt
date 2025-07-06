@@ -57,10 +57,10 @@ is_great_project_destroyed = {
 can_use_bulgarian_great_projects = {
 	custom_trigger_tooltip = {
 		tooltip = can_use_bulgarian_great_projects_tooltip
-	}
-	OR = {
-		has_country_flag = can_use_bulgarian_great_projects_flag
-		has_country_flag = mva_unlocked_preslav_project
+		OR = {
+			has_country_flag = can_use_bulgarian_great_projects_flag
+			has_country_flag = mva_unlocked_preslav_project
+		}
 	}
 }
 
