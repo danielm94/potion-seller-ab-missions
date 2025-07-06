@@ -2304,61 +2304,88 @@ ab_wal_4 = {
 			wal_conquer_greece
 			wal_conquer_nicaea
 		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 151
+						province_id = 317
+						province_id = 148
+						province_id = 318
+						province_id = 146
+						province_id = 163
+					}
+					has_trade_building_trigger = no
+					NOT = {
+						OR = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+						}
+					}
+				}
+				AND = {
+					area = aegean_archipelago_area
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
 		trigger = {
 			aegean_archipelago_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			any_owned_province = {
+			151 = {
 				has_trade_building_trigger = yes
 				OR = {
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 				}
-				area = hudavendigar_area
 			}
-			any_owned_province = {
+			317 = {
 				has_trade_building_trigger = yes
 				OR = {
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 				}
-				area = aydin_area
 			}
-			any_owned_province = {
+			148 = {
 				has_trade_building_trigger = yes
 				OR = {
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 				}
-				area = thrace_area
 			}
-			any_owned_province = {
+			318 = {
 				has_trade_building_trigger = yes
 				OR = {
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 				}
-				area = macedonia_area
 			}
-			any_owned_province = {
+			146 = {
 				has_trade_building_trigger = yes
 				OR = {
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 				}
-				area = morea_area
+			}
+			163 = {
+				has_trade_building_trigger = yes
+				OR = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
 			}
 		}
 		effect = {
 			add_mercantilism = 5
 			custom_tooltip = wal_secure_the_straits_province_bonus_tooltip
 			tooltip = {
-				151 = {
-					add_province_modifier = {
-						name = wallachia_imperial_maratime_hub
-						duration = -1
-					}
+				add_province_modifier = {
+					name = wallachia_imperial_maratime_hub
+					duration = -1
 				}
 			}
 			hidden_effect = {
