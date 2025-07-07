@@ -238,3 +238,41 @@ finance_dacian_india_company_issue = {
 		factor = 500
 	}
 }
+
+deus_vult_parliament_issue = {
+	category = 1
+	allow = {
+		has_country_flag = deus_vult_parliament_issue_enabled
+	}
+	modifier = {
+		cb_on_religious_enemies = yes
+		extra_manpower_at_religious_war = yes
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_neighbor_country = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				all_neighbor_country = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
