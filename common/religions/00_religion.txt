@@ -1391,7 +1391,31 @@ christian = {
 				}
 			}
 
-			
+			icon_paul = {
+				core_creation = -0.05
+				missionaries = 1
+				
+				allow = {
+					religion = orthodox
+					118 = {
+						has_great_project = {
+							type = st_pauls_basilica
+							tier = 1
+						}
+						religion = orthodox
+						owner = {
+							religion = orthodox
+						}
+					}
+				}
+				visible = {
+					religion = orthodox
+				}
+				ai_will_do = {
+					factor = 100
+				}
+			}
+	
 			icon_nestorius = {
 				diplomatic_reputation = 1
 				ae_impact = -0.1
@@ -1685,7 +1709,32 @@ christian = {
 					factor = 0
 				}
 			}
-			
+						
+			icon_paul = {
+				core_creation = -0.05
+				missionaries = 1
+				
+				allow = {
+					religion = orthodox
+					118 = {
+						has_great_project = {
+							type = st_pauls_basilica
+							tier = 1
+						}
+						religion = orthodox
+						owner = {
+							religion = orthodox
+						}
+					}
+				}
+				visible = {
+					religion = orthodox
+				}
+				ai_will_do = {
+					factor = 100
+				}
+			}
+	
 			icon_nestorius = {
 				diplomatic_reputation = 1
 				ae_impact = -0.1
