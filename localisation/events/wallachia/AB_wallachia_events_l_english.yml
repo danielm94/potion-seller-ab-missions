@@ -127,6 +127,7 @@
  theodosian_walls_tooltip: "We will gain access to the §YTheodosian Walls§! great project in §Y[151.GetName]§!."
  rome_on_the_danube_upgrade_tooltip: "\nWe will receive an §Gupgraded§! version of the §YRome on the Danube§! province modifier, which gives us the following:\n"
  new_roman_identity_upgrade_tooltip: "\nWe will receive an §Gupgraded§! version of the §YA New Roman Identity§! country modifier, which gives us the following:\n"
+ wal_moved_capital_to_rome_romanianization_tooltip: "§V§YLatin§! cultured provinces in §YItaly§! of the §YOrthodox§! faith will slowly become §YRomanianized§! once we complete the mission §YItalia Mare§!.§!"
  AB_wallachia_events.36.t: "The Future of Our Fleet"
  AB_wallachia_events.36.d: "Our efforts to build a navy have borne fruit. We have either raised a formidable corps of marines or cultivated strong ties with the great sea powers. The time has come to formalize our naval strategy, to turn raw strength into refined doctrine. [Root.Monarch.GetTitle] [Root.Monarch.GetName] must now choose the path our fleet will follow. We can look inward, codifying the brutal and effective tactics of our own marines, or we can look outward, humbly inviting the masters of the world's navies to share their secrets with us."
  AB_wallachia_events.36.a: "Our marines are already the finest. We will make them unbreakable."

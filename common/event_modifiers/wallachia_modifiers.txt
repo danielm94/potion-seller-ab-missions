@@ -705,3 +705,12 @@ wallachia_basilica_buff = {
 	local_build_cost = -0.1
 	religion = yes
 }
+
+wallachia_italia_mare = {
+	administrative_efficiency = 0.05
+}
+
+wallachia_confront_franks = {
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+}

@@ -1221,7 +1221,7 @@ ab_wal_2 = {
 			set_country_flag = ab_trader_advisor_gives_trade_steering
 			custom_tooltip = AB_EMPTY
 			add_prestige_or_monarch_power = {
-				amount = 25
+				amount = 10
 			}
 			custom_tooltip = AB_EMPTY
 			define_advisor = {
@@ -1365,6 +1365,24 @@ ab_wal_2 = {
 				target = guyenne_area
 			}
 			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_italia_mare
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_confront_franks
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = {
+				amount = 40
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_moved_our_capital_to_rome_in_event_tooltip
+				first_limit = "has_country_flag = wal_moved_capital_to_rome"
+				first_effect = "custom_tooltip = romanianization_of_italy_tooltip
+			set_country_flag = romanianization_of_italy"
+			}
 		}
 	}
 	wal_southern_france = {
