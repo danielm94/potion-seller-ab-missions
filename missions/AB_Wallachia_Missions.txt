@@ -492,6 +492,118 @@ ab_wal_1 = {
 			}
 		}
 	}
+	wal_consecrate_dacia = {
+		icon = gfx_wal_consecrate_dacia
+		position = 16
+		required_missions = {
+			wal_seat_of_the_metropolitan
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = moldavia_area
+				area = bessarabia_area
+				area = southern_transylvania_area
+				area = transylvania_area
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				has_state_patriach = no
+				is_state = no
+			}
+		}
+		trigger = {
+			stability = 1
+			wallachia_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			moldavia_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			bessarabia_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = has_consecrated_metropolitan_trigger_tooltip
+					has_state_patriach = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					stability = 3
+				}
+				add_adm_power = 100
+			}
+			else = {
+				add_stability = 1
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				southern_transylvania_area = {
+					add_prosperity = 100
+					add_unrest = -10
+					add_nationalism = -10
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = wallachia_area
+							area = moldavia_area
+							area = bessarabia_area
+							area = southern_transylvania_area
+							area = transylvania_area
+						}
+					}
+					add_prosperity = 100
+					add_unrest = -10
+					add_nationalism = -10
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = theologian
+				skill = 2
+				cost_multiplier = 0.5
+				location = 161
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_consecrate_bonus
+			custom_tooltip = wal_consecrate_bonus_tooltip
+		}
+	}
 }
 
 ab_wal_2 = {
@@ -1341,6 +1453,7 @@ ab_wal_2 = {
 				NOT = {
 					has_tax_building_trigger = yes
 				}
+				has_state_patriach = no
 			}
 		}
 		trigger = {
@@ -3019,8 +3132,10 @@ ab_wal_5 = {
 			owned_by = ROOT
 		}
 		trigger = {
-			capital_scope = {
+			161 = {
+				owned_by = ROOT
 				has_fort_building_trigger = yes
+				grown_by_development = 3
 			}
 			num_of_owned_provinces_with = {
 				value = 2
@@ -3032,11 +3147,9 @@ ab_wal_5 = {
 		effect = {
 			custom_tooltip = for_every_province_that_meets_the_missions_requirements
 			tooltip = {
-				capital_scope = {
-					add_province_modifier = {
-						name = wallachia_danubian_fortifications
-						duration = -1
-					}
+				add_province_modifier = {
+					name = wallachia_danubian_fortifications
+					duration = -1
 				}
 			}
 			hidden_effect = {
@@ -3183,12 +3296,13 @@ ab_wal_5 = {
 			set_country_flag = wal_buffed_carpathian_forts
 			custom_tooltip = wal_buffed_carpathian_forts_tooltip
 			tooltip = {
-				4128 = {
+				custom_tooltip = wal_seal_the_carpathians_upgraded_fort_tooltip
+				hidden_effect = {
 					upgrade_fort_building = yes
-					add_province_modifier = {
-						name = wallachia_carpathian_defenses
-						duration = -1
-					}
+				}
+				add_province_modifier = {
+					name = wallachia_carpathian_defenses
+					duration = -1
 				}
 			}
 			hidden_effect = {

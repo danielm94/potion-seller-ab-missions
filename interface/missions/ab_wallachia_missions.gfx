@@ -67,4 +67,8 @@ spriteTypes = {
 		name = "gfx_wal_romanian_churches"
 		texturefile = "gfx/interface/missions/wal/wal_romanian_churches.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_consecrate_dacia"
+		texturefile = "gfx/interface/missions/wal/wal_consecrate_dacia.dds"
+	}
 }

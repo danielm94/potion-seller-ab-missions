@@ -348,3 +348,18 @@ on_war_ended = {
 	}
 	clr_country_flag = in_cb_dacian_indian_campaign_war
 }
+
+on_consecrate_patriarch = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = wal_consecrate_bonus
+			}
+		}
+		every_province_in_state = {
+			add_prosperity = 10
+			add_unrest = -5
+			add_nationalism = -5
+		}
+	}
+}
