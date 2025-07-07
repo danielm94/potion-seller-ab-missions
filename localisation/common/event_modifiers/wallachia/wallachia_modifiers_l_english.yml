@@ -222,3 +222,7 @@
  desc_wallachia_pillar_of_the_faith: "This province stands as a pillar of our national faith. Its magnificent church has become the center of community life, drawing pilgrims and inspiring commerce that fills the local coffers. The unwavering piety of the populace ensures stability and loyalty to the crown."
  buffed_estate_church_development_of_temples_mod: "§VDevelopment of Temples§!"
  desc_buffed_estate_church_development_of_temples_mod: "The state has guaranteed the development of the local temples."
+ wallachia_church_buff: "Parish Administration"
+ desc_wallachia_church_buff: "The local church now serves as a center for community administration, organizing public works and managing land for new development."
+ wallachia_basilica_buff: "Episcopal Oversight"
+ desc_wallachia_basilica_buff: "As a major episcopal see, the basilica's administration now oversees all significant construction in the region, its resources and planners streamlining development."

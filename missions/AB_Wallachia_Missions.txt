@@ -604,6 +604,86 @@ ab_wal_1 = {
 			custom_tooltip = wal_consecrate_bonus_tooltip
 		}
 	}
+	wal_mantle_of_constantine = {
+		icon = gfx_wal_mantle_of_constantine
+		position = 17
+		required_missions = {
+			wal_consecrate_dacia
+			wal_romanian_churches
+		}
+		trigger = {
+			is_defender_of_faith = yes
+			patriarch_authority = 0.8
+			government_rank = 3
+			151 = {
+				owned_by = root
+				has_great_project = {
+					type = hagia_sophia
+					tier = 3
+				}
+			}
+			calc_true_if = {
+				amount = 50
+				all_owned_province = {
+					custom_trigger_tooltip = {
+						tooltip = has_consecrated_metropolitan_trigger_tooltip
+						has_state_patriach = yes
+					}
+				}
+			}
+			calc_true_if = {
+				amount = 25
+				all_owned_province = {
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			add_patriarch_authority = 0.2
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_mantle_of_constantine_church_buff_tooltip
+			set_country_flag = wal_church_buff
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_tax_building_trigger = yes
+					}
+					if = {
+						limit = {
+							has_building = temple
+						}
+						add_province_modifier = {
+							name = wallachia_church_buff
+							duration = -1
+						}
+					}
+					else_if = {
+						limit = {
+							has_building = cathedral
+						}
+						add_province_modifier = {
+							name = wallachia_basilica_buff
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_religious_state_buff
+			custom_tooltip = wal_religious_state_buff_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
+				first_effect = "custom_tooltip = deus_vult_parliament_issue_tooltip
+			set_country_flag = deus_vult_parliament_issue_enabled"
+			}
+		}
+	}
 }
 
 ab_wal_2 = {
@@ -2102,12 +2182,17 @@ ab_wal_3 = {
 		}
 		effect = {
 			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 50
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = healing_the_schism
 				duration = -1
 			}
-			set_country_flag = pentarchy_religious_state_buff
-			custom_tooltip = pentarchy_religious_state_buff_tooltip
+			set_country_flag = wal_expansionist_zealotry_buff
+			custom_tooltip = wal_expansionist_zealotry_buff_tooltip
 		}
 	}
 	wal_iberia = {

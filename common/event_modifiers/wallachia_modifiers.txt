@@ -611,10 +611,12 @@ wallachia_black_sea_fleet = {
 	galley_power = 0.1
 	light_ship_cost = -0.1
 }
+
 wallachia_buffed_marines = {
 	shock_damage_received = -0.1
 	is_marine_modifier = yes
 }
+
 wallachia_study_navy_venice = {
 	number_of_cannons_modifier = 0.075
 	sailor_maintenance_modifer = -0.05
@@ -658,6 +660,7 @@ wallachia_dacian_india_company = {
 	trade_company_governing_cost = -0.1
 	trade_efficiency = 0.05
 }
+
 wallachia_rise_of_the_dacian_india_company = {
 	trade_company_investment_cost = -0.25
 	global_trade_power = 0.1
@@ -666,18 +669,19 @@ wallachia_rise_of_the_dacian_india_company = {
 
 wallachia_targoviste_metropolitan = {
 	local_tax_modifier = 0.5
-	global_tax_income = 6
+	tax_income = 6
 	yearly_patriarch_authority = 0.001
 	religion = yes
 }
 
 wallachia_targoviste_metropolitan_cathedral = {
 	local_tax_modifier = 1
-	global_tax_income = 24
+	tax_income = 24
 	local_development_cost = -0.1
 	yearly_patriarch_authority = 0.001
 	religion = yes
 }
+
 wallachia_pillar_of_the_faith = {
 	local_development_cost = -0.05
 	local_tax_modifier = 0.5
@@ -687,5 +691,17 @@ wallachia_pillar_of_the_faith = {
 
 buffed_estate_church_development_of_temples_mod = {
 	local_development_cost = -0.1
+	religion = yes
+}
+
+wallachia_church_buff = {
+	allowed_num_of_buildings = 1
+	local_build_cost = -0.05
+	religion = yes
+}
+
+wallachia_basilica_buff = {
+	allowed_num_of_buildings = 1
+	local_build_cost = -0.1
 	religion = yes
 }

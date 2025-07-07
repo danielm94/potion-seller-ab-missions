@@ -94,6 +94,7 @@ western_roman_empire_province_cb_trigger = {
 		area = east_anglia_area
 		area = wales_area
 		area = scottish_marches_area
+		area = cornwall_area
 		#Areas within South Germany
 		area = romandie_area
 		area = upper_rhineland_area

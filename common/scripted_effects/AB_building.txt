@@ -123,6 +123,31 @@ ab_building_tax_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = wal_church_buff
+			}
+		}
+		if = {
+			limit = {
+				has_building = temple
+			}
+			add_province_modifier = {
+				name = wallachia_church_buff
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_building = cathedral
+			}
+			add_province_modifier = {
+				name = wallachia_basilica_buff
+				duration = -1
+			}
+		}
+	}
 }
 
 ab_removing_tax_effect = {
@@ -144,6 +169,19 @@ ab_removing_tax_effect = {
 		}
 		remove_province_modifier = pol_slavic_holy_grounds
 	}
+	if = {
+		limit = {
+			has_province_modifier = wallachia_church_buff
+		}
+		remove_province_modifier = wallachia_church_buff
+	}
+	if = {
+		limit = {
+			has_province_modifier = wallachia_basilica_buff
+		}
+		remove_province_modifier = wallachia_basilica_buff
+	}
+
 }
 
 ab_building_production_effect = {
