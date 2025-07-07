@@ -10,14 +10,22 @@ country_decisions = {
 			}
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
+			NOT = {
+				is_or_was_tag = {
+					tag = WAL
+				}
+			}
 			NOT = { exists = RMN }
 			OR = {
 				primary_culture = Wallachian
 				primary_culture = Moldavian
 				primary_culture = transylvanian
-				primary_culture = morlach
+				primary_culture = morlaci
 				primary_culture = panonic
 				primary_culture = adriaticii
+				primary_culture = amiaza
+				primary_culture = cisalpini
+				primary_culture = latini
 			}
 			is_colonial_nation = no
 			OR = {
@@ -44,7 +52,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			current_age = age_of_imperialism #Romania as a concept didn't exist until the mid 19th century.
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no

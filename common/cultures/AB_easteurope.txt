@@ -1101,7 +1101,7 @@ romanian_culture_group = {
 			Valentina Vasilica Violeta Voica Zsofia Zsuzsanna
 		}
 	}
-	morlach = {
+	morlaci = {
 		primary = ILR
 		dynasty_names = {
 			"Basarab" "Brankovic" "Cantacuzino" "Dragovic" "Frankopan" "Ghica" 
@@ -1142,6 +1142,69 @@ romanian_culture_group = {
 			Ruxandra Sofia Teodora Valentina Veronica Vittoria
 		}
 	
+	}
+	amiaza = {
+		primary = TRC
+		dynasty_names = {
+			"Altavilla" "Basarab" "Bibescu" "Brancoveanu" "Cantacuzino" "Caracciolo" 
+			"Chiaramonte" "Draculesti" "Ghica" "Moncada" "Movilesti" "Racovita" 
+			"Ruffo" "Sanseverino" "Sturdza"
+		}
+		male_names = {
+			Alvise Andrei Bogdan Calogero Constantin Cornel Cosimo Daniele Dragan 
+			Dragos Florin Francesco Gennaro Gheorghe Giacomo Giovanni Guglielmo 
+			Ioan Jacopo Lorenzo Luca Marco Marin Matteo Mihai Mircea Nicolae 
+			Paolo Petru Pietro Radu Ruggero Salvatore Stefan Tancredi Teodor 
+			Vasile Vincenzo Vlad
+		}
+		female_names = {
+			Adriana Agata Alba Ana Anca Andreea Beatrice Bianca Camilla Caterina 
+			Chiara Concetta Costanza Cristina Elena Elisabetta Fiorenza Florica 
+			Francesca Giulia Ioana Isabella Laura Lucia Lucrezia Margherita Maria 
+			Marta Nicoletta Paola Rosalia Ruxandra Sofia Teodora Valentina 
+			Veronica Vittoria
+		}
+	}
+	cisalpini = {
+		primary = ITA
+		dynasty_names = {
+			"Basarab" "Bibescu" "Brancoveanu" "Cantacuzino" "d'Este" "della Scala" 
+			"Doria" "Draculesti" "Ghica" "Gonzaga" "Grimaldi" "Movilesti" 
+			"Racovita" "Savoia" "Sforza" "Sturdza" "Visconti"
+		}
+		male_names = {
+			Adalberto Alessandro Amedeo Andrea Andrei Bogdan Carlo Constantin 
+			Cornel Dragan Dragos Enrico Federico Filippo Florin Galeazzo 
+			Gheorghe Giovanni Giuseppe Guglielmo Ioan Ludovico Marco Mihai 
+			Mircea Nicolae Oddone Petru Pietro Radu Stefan Teodor Ugo 
+			Umberto Vasile Vlad
+		}
+		female_names = {
+			Adelaide Adelheid Ana Anca Andreea Beatrice Bianca Bianca-Maria 
+			Caterina Chiara Cristina Elena Florica Francesca Gisela Giulia 
+			Ioana Irmengard Isabella Laura Lucia Margherita Maria Matilde 
+			Ruxandra Sofia Teodora Valentina
+		}
+	}
+	latini = {
+		primary = ITA
+		dynasty_names = {
+			"Basarab" "Bibescu" "Borgia" "Brancoveanu" "Cantacuzino" "Colonna" 
+			"Draculesti" "Ghica" "Malatesta" "Medici" "Montefeltro" "Movilesti" 
+			"Orsini" "Pazzi" "Racovita" "Strozzi" "Sturdza"
+		}
+		male_names = {
+			Alessandro Andrea Andrei Augusto Bogdan Cesare Constantin Cornel 
+			Cosimo Dragan Dragos Fabio Flavio Florin Francesco Gheorghe 
+			Giuliano Giulio Ioan Lorenzo Lucio Marco Mihai Mircea Nicolae 
+			Paolo Petru Piero Pietro Radu Stefan Teodor Vasile Vlad
+		}
+		female_names = {
+			Ana Anca Andreea Aurelia Bianca Camilla Caterina Cecilia Chiara 
+			Clarice Cristina Elena Flavia Florica Francesca Giulia Ioana 
+			Isabella Laura Livia Lucrezia Margherita Maria Ottavia Ruxandra 
+			Sofia Teodora Valentina
+		}
 	}
 }
 

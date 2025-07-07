@@ -1376,7 +1376,7 @@ province_event = {
 		owner = {
 			set_country_flag = wal_romanianized_illyria_recently
 		}
-		change_culture = morlach
+		change_culture = morlaci
 	}
 }
 
