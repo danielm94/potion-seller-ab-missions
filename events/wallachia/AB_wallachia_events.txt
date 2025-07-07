@@ -722,6 +722,12 @@ country_event = {
 			}
 		}
 		custom_tooltip = bulgarian_underclass_culture_tooltip
+		if = {
+			limit = {
+				accepted_culture = bulgarian
+			}
+			remove_accepted_culture = bulgarian
+		}
 		custom_tooltip = bulgarian_underclass_parliament_tooltip
 		hidden_effect = {
 			every_owned_province = {
@@ -1882,7 +1888,6 @@ country_event = {
 		}
 		custom_tooltip = wal_italian_adriatic_romanianization_tooltip
 		set_country_flag = wal_romanianization_of_adriatic_italians
-		romanianization_of_adriatic_italy_mark_provinces = yes
 		custom_tooltip = AB_EMPTY
 		add_estate_loyalty = {
 			estate = estate_burghers
@@ -1898,7 +1903,7 @@ country_event = {
 	}
 }
 
-#Romanianization of Adriatic provinces
+#Romanianization of Italy
 province_event = {
 	id = AB_wallachia_events.32
 	title = AB_EMPTY
@@ -1922,20 +1927,51 @@ province_event = {
 	}
 	trigger = {
 		owner = {
-			has_country_flag = wal_romanianization_of_adriatic_italians
+			OR = {
+				has_country_flag = wal_romanianization_of_adriatic_italians
+				has_country_flag = romanianization_of_italy
+			}
 		}
 		NOT = {
 			culture_group = romanian_culture_group
 		}
-		has_province_flag = WAL_adriaticii_province
+		OR = {
+			any_neighbor_province = {
+				culture_group = romanian_culture_group
+			}
+			area = corsica_sardinia_area
+			province_id = 126
+			province_id = 112
+		}
+		OR = {
+			is_adriaticii_romanianization_province = yes
+			is_amiaza_romanianization_province = yes
+			is_cisalpini_romanianization_province = yes
+			is_latini_romanianization_province = yes
+		}
 		owner = {
 			OR = {
 				NOT = {
-					has_country_flag = tuh_romanianized_adriatic_recently
+					has_country_flag = tuh_romanianized_italians_recently
 				}
-				had_country_flag = {
-					flag = tuh_romanianized_adriatic_recently
-					days = 730
+				if = {
+					limit = {
+						#If player spared Venice, culture spreads faster
+						has_country_flag = wal_romanianization_of_adriatic_italians
+					}
+					had_country_flag = {
+						flag = tuh_romanianized_italians_recently
+						days = 730
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = romanianization_of_italy
+					}
+					had_country_flag = {
+						flag = tuh_romanianized_italians_recently
+						days = 1095
+					}
 				}
 			}
 		}
@@ -1947,9 +1983,49 @@ province_event = {
 			factor = 1
 		}
 		owner = {
-			set_country_flag = tuh_romanianized_adriatic_recently
+			set_country_flag = tuh_romanianized_italians_recently
 		}
-		change_culture = adriaticii
+		if = {
+			limit = {
+				OR = {
+					owner = {
+						has_country_flag = wal_romanianization_of_adriatic_italians
+						has_country_flag = romanianization_of_italy
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_adriaticii_romanianization_province = yes
+				}
+				change_culture = adriaticii
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = romanianization_of_italy
+				}
+			}
+			if = {
+				limit = {
+					is_amiaza_romanianization_province = yes
+				}
+				change_culture = amiaza
+			}
+			else_if = {
+				limit = {
+					is_cisalpini_romanianization_province = yes
+				}
+				change_culture = cisalpini
+			}
+			else_if = {
+				limit = {
+					is_latini_romanianization_province = yes
+				}
+				change_culture = latini
+			}
+		}
 	}
 }
 
@@ -2351,8 +2427,7 @@ country_event = {
 			}
 		}
 		set_country_flag = wal_moved_capital_to_rome
-		#TODO
-		#ADD TOOLTIP ABOUT HOW ONCE YOU COMPLETE X MISSION ITALY GETS ROMANIANIZED
+		custom_tooltip = wal_moved_capital_to_rome_romanianization_tooltip
 	}
 	option = {
 		name = AB_wallachia_events.35.b
@@ -2449,6 +2524,7 @@ country_event = {
 	}
 }
 
+#Study foreign navy event
 country_event = {
 	id = AB_wallachia_events.36
 	title = AB_wallachia_events.36.t
