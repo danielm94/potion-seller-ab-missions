@@ -7,4 +7,8 @@ spriteTypes = {
         name = "GFX_great_project_targoviste_princely_court"	
         texturefile = "gfx//interface//great_projects//great_project_targoviste_princely_court.dds"
     }
+	spriteType = {
+		name = "GFX_great_project_st_pauls_basilica"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_peters_cathedral.dds"
+	}
 }
