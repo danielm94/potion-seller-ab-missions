@@ -1,0 +1,11 @@
+constructed_st_pauls_basilica = {
+	opinion = 25
+	max = 100
+	yearly_decay = 1
+}
+
+evicted_papacy_from_st_peters = {
+	opinion = -100
+	min = -200
+	yearly_decay = 1
+}
