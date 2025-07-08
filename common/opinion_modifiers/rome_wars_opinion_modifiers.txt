@@ -9,3 +9,9 @@ evicted_papacy_from_st_peters = {
 	min = -200
 	yearly_decay = 1
 }
+
+restored_the_papacy_pap = {
+	opinion = 200
+	max = 999
+	yearly_decay = 1
+}
