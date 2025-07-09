@@ -406,7 +406,7 @@ st_pauls_basilica = {
 		months = 60
 	}
 	#how much to build one
-	build_cost = 2500
+	build_cost = 1500
 	#can we move it?
 	can_be_moved = no
 	#time to move the project one unit of distance, in days
@@ -435,7 +435,7 @@ st_pauls_basilica = {
 				estate = estate_church
 				loyalty = 50
 			}
-			add_patriarch_authority = 0.1
+			add_patriarch_authority = 0.25
 			custom_tooltip = st_pauls_basilica_relations_boost_tooltip
 			hidden_effect = {
 				every_country = {
@@ -459,6 +459,12 @@ st_pauls_basilica = {
 						modifier = evicted_papacy_from_st_peters
 					}
 				}
+				PAP = {
+					add_opinion = {
+						who = PREV
+						modifier = evicted_papacy_from_st_peters_pope
+					}
+				}
 				every_owned_province = {
 					limit = {
 						religion = catholic
@@ -469,11 +475,6 @@ st_pauls_basilica = {
 					}
 				}
 			}
-			set_religion_papacy_active = {
-				religion = catholic
-				active = no
-			}
-			set_global_flag = restore_papacy_cb_enabled
 		}
 		add_province_modifier = {
 			name = wallachia_patriarchate_of_rome
@@ -520,26 +521,34 @@ st_pauls_basilica = {
 		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
-			tooltip = {
-				add_province_modifier = {
-					name = wallachia_patriarchate_of_rome
-					duration = -1
-				}
-				owner = {
-					add_estate_loyalty = {
-						estate = estate_church
-						loyalty = 50
+			if = {
+				limit = {
+					NOT = {
+						has_great_project = {
+							type = st_pauls_basilica
+						}
 					}
-					add_patriarch_authority = 0.1
-					custom_tooltip = st_pauls_basilica_relations_boost_tooltip
 				}
-				custom_tooltip = AB_EMPTY
-				destroy_great_project = {
-					type = stpeters_cathedral
-				}
-				owner = {
-					custom_tooltip = disables_the_papacy_tooltip
-					custom_tooltip = st_pauls_basilica_catholic_reaction_tooltip
+				tooltip = {
+					add_province_modifier = {
+						name = wallachia_patriarchate_of_rome
+						duration = -1
+					}
+					owner = {
+						add_estate_loyalty = {
+							estate = estate_church
+							loyalty = 50
+						}
+						add_patriarch_authority = 0.25
+						custom_tooltip = st_pauls_basilica_relations_boost_tooltip
+					}
+					custom_tooltip = AB_EMPTY
+					destroy_great_project = {
+						type = stpeters_cathedral
+					}
+					owner = {
+						custom_tooltip = st_pauls_basilica_catholic_reaction_tooltip
+					}
 				}
 			}
 		}
@@ -601,6 +610,7 @@ st_pauls_basilica = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 			owner = {
+				add_patriarch_authority = 0.15
 				add_estate_loyalty = {
 					estate = estate_church
 					loyalty = 15
@@ -634,6 +644,7 @@ st_pauls_basilica = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 			owner = {
+				add_patriarch_authority = 0.2
 				add_estate_loyalty = {
 					estate = estate_church
 					loyalty = 20
