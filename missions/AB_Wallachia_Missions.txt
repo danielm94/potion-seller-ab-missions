@@ -389,7 +389,7 @@ ab_wal_1 = {
 			}
 		}
 	}
-	wal_st_pauls_basilica = {
+	wal_the_true_see_of_rome = {
 		icon = new_st_peters_basilica
 		position = 10
 		required_missions = {
@@ -407,16 +407,44 @@ ab_wal_1 = {
 			}
 		}
 		trigger = {
-			151 = {
+			118 = {
 				owned_by = ROOT
 				is_core = ROOT
+				religion = orthodox
+				has_great_project = {
+					type = st_pauls_basilica
+					tier = 1
+				}
 			}
-			religion = orthodox
-			treasury = 2500
 		}
 		effect = {
-			destroy_great_project = {
-				type = stpeters_cathedral
+			add_country_modifier = {
+				name = wallachia_legacy_of_st_paul
+				duration = 9125
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					118 = {
+						has_great_project = {
+							type = st_pauls_basilica
+							tier = 3
+						}
+					}
+				}
+				add_treasury = 1000
+				add_manpower = 50
+			}
+			else = {
+				118 = {
+					add_great_project_tier = {
+						type = st_pauls_basilica
+						tier = 1
+					}
+				}
 			}
 		}
 	}

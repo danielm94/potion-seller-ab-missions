@@ -713,3 +713,8 @@ wallachia_confront_franks = {
 	fire_damage_received = -0.1
 	shock_damage_received = -0.1
 }
+
+wallachia_legacy_of_st_paul = {
+	cb_on_religious_enemies = yes
+	extra_manpower_at_religious_war = yes
+}
