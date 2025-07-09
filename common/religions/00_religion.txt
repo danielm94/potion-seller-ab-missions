@@ -1397,14 +1397,27 @@ christian = {
 				
 				allow = {
 					religion = orthodox
-					118 = {
-						has_great_project = {
-							type = st_pauls_basilica
-							tier = 1
+					custom_trigger_tooltip = {
+						tooltip = st_pauls_has_been_constructed_tooltip
+						118 = {
+							has_great_project = {
+								type = st_pauls_basilica
+								tier = 1
+							}
 						}
-						religion = orthodox
-						owner = {
+					}
+					custom_trigger_tooltip = {
+						tooltip = rome_is_orthodox_toolip
+						118 = {
 							religion = orthodox
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = rome_owner_is_orthodox_toolip
+						118 = {
+							owner = {
+								religion = orthodox
+							}
 						}
 					}
 				}
@@ -1716,14 +1729,27 @@ christian = {
 				
 				allow = {
 					religion = orthodox
-					118 = {
-						has_great_project = {
-							type = st_pauls_basilica
-							tier = 1
+					custom_trigger_tooltip = {
+						tooltip = st_pauls_has_been_constructed_tooltip
+						118 = {
+							has_great_project = {
+								type = st_pauls_basilica
+								tier = 1
+							}
 						}
-						religion = orthodox
-						owner = {
+					}
+					custom_trigger_tooltip = {
+						tooltip = rome_is_orthodox_toolip
+						118 = {
 							religion = orthodox
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = rome_owner_is_orthodox_toolip
+						118 = {
+							owner = {
+								religion = orthodox
+							}
 						}
 					}
 				}

@@ -572,10 +572,11 @@ st_pauls_basilica = {
 		country_modifiers = {
 			reverse_relation_with_same_religion = 25
 			yearly_patriarch_authority = 0.001
-			global_heretic_missionary_strength = 0.01
+			global_missionary_strength = 0.01
 		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+			custom_tooltip = unlock_icon_of_st_paul_tooltip
 			owner = {
 				add_patriarch_authority = 0.1
 				add_estate_loyalty = {
@@ -604,7 +605,7 @@ st_pauls_basilica = {
 		country_modifiers = {
 			reverse_relation_with_same_religion = 25
 			yearly_patriarch_authority = 0.002
-			global_heretic_missionary_strength = 0.02
+			global_missionary_strength = 0.02
 			idea_cost = -0.05
 		}
 		#what effects happen when this tier is achieved
@@ -637,7 +638,7 @@ st_pauls_basilica = {
 		country_modifiers = {
 			reverse_relation_with_same_religion = 25
 			yearly_patriarch_authority = 0.005
-			global_heretic_missionary_strength = 0.03
+			global_missionary_strength = 0.03
 			idea_cost = -0.1
 			church_influence_modifier = 0.1
 		}
