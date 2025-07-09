@@ -2375,6 +2375,12 @@ country_event = {
 			}
 			custom_tooltip = AB_EMPTY
 		}
+		358 = {
+			add_province_modifier = {
+				name = wallachia_patriarchate_of_alexandria
+				duration = -1
+			}
+		}
 		add_country_modifier = {
 			name = wallachia_not_tolerating_the_copts
 			duration = -1
@@ -2383,10 +2389,6 @@ country_event = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 15
-		}
-		custom_tooltip = AB_EMPTY
-		add_prestige_or_monarch_power = {
-			amount = 10
 		}
 	}
 }

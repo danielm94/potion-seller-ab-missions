@@ -2970,12 +2970,6 @@ ab_wal_4 = {
 			set_country_flag = patriarch_of_alexandria
 			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
 			custom_tooltip = AB_EMPTY
-			358 = {
-				add_province_modifier = {
-					name = wallachia_patriarchate_of_alexandria
-					duration = -1
-				}
-			}
 			add_country_modifier = {
 				name = wallachia_granaries_of_egypt
 				duration = -1
