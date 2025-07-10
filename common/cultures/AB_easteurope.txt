@@ -1206,6 +1206,29 @@ romanian_culture_group = {
 			Sofia Teodora Valentina
 		}
 	}
+	provinciali = {
+		primary = AQT
+		dynasty_names = {
+			"Alaman" "Aubert" "Basarab" "Belmont" "Bertran" "Brancoveanu" 
+			"Cantacuzino" "Castel" "Coman" "Draculesti" "Fabron" "Garin" 
+			"Ghica" "Iancu" "Laur" "Marin" "Montfort" "Moraru" "Pons" 
+			"Racovita" "Raimond" "Roux" "Sabin" "Tudor" "Vidal"
+		}
+		male_names = {
+			Adelin Alin Armand Augustin Aurel Bernard Cezar Constantin 
+			Cornel Denis Dragos Emil Florin Gaston Gilbert Guilhem 
+			Honoré Ioan Laurentiu Loic Lucian Marius Mihai Mircea 
+			Olivier Pascal Petru Radu Raimond Remus Sabin Stefan 
+			Teodor Tristan Valentin Victor Vlad
+		}
+		female_names = {
+			Adela Adeline Amandine Ana Andreea Aurelia Beatrice Bianca 
+			Camille Caterina Cecilia Corina Cristina Eleonore Elena 
+			Esclarmonde Felicia Florica Ioana Isabelle Josiane Laura 
+			Livia Magdalena Margaux Maria Mirela Nicoleta Ruxandra 
+			Sabina Silvia Sofia Teodora Valentina
+		}
+	}
 }
 
 
