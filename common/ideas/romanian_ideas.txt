@@ -75,7 +75,7 @@ TUH_ideas = {
 	}
 	TUH_noble_self_governance = {
 		state_governing_cost = -0.15
-		global_prosperity_growth = 0.10
+		global_prosperity_growth = 0.1
 	}
 	TUH_danubian_compact = {
 		improve_relation_modifier = 0.1
@@ -126,5 +126,44 @@ DAC_ideas = {
 	DAC_citadels_of_faith = {
 		defensiveness = 0.2
 		global_missionary_strength = 0.015
+	}
+}
+
+AQA_ideas = {
+	free = yes
+	trigger = {
+		tag = AQA
+	}
+	start = {
+		discipline = 0.05
+		infantry_power = 0.2
+	}
+	bonus = {
+		military_tactics = 0.15
+	}
+	AQA_first = {
+		yearly_patriarch_authority = 0.005
+		global_heretic_missionary_strength = 0.02
+	}
+	AQA_second = {
+		production_efficiency = 0.2
+	}
+	AQA_third = {
+		land_morale = 0.15
+	}
+	AQA_fourth = {
+		infantry_cost = -0.1
+		global_manpower_modifier = 0.2
+	}
+	AQA_fifth = {
+		dip_advisor_cost = -0.25
+		improve_relation_modifier = 0.1
+	}
+	AQA_sixth = {
+		core_creation = -0.1
+	}
+	AQA_seventh = {
+		light_ship_cost = -0.25
+		global_trade_power = 0.05
 	}
 }

@@ -1207,7 +1207,7 @@ romanian_culture_group = {
 		}
 	}
 	provinciali = {
-		primary = AQT
+		primary = AQA
 		dynasty_names = {
 			"Alaman" "Aubert" "Basarab" "Belmont" "Bertran" "Brancoveanu" 
 			"Cantacuzino" "Castel" "Coman" "Draculesti" "Fabron" "Garin" 
