@@ -537,9 +537,20 @@ province_event = {
 				NOT = {
 					has_country_flag = wal_romanianized_hungary_recently
 				}
-				had_country_flag = {
-					flag = wal_romanianized_hungary_recently
-					days = 730
+				if = {
+					limit = {
+						has_country_flag = panonic_spread_extra
+					}
+					had_country_flag = {
+						flag = wal_romanianized_hungary_recently
+						days = 730
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_hungary_recently
+						days = 1460
+					}
 				}
 			}
 		}
@@ -1344,9 +1355,20 @@ province_event = {
 				NOT = {
 					has_country_flag = wal_romanianized_illyria_recently
 				}
-				had_country_flag = {
-					flag = wal_romanianized_illyria_recently
-					days = 1095
+				if = {
+					limit = {
+						has_country_flag = wal_faster_balkan_romanianization
+					}
+					had_country_flag = {
+						flag = wal_romanianized_illyria_recently
+						days = 913
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_illyria_recently
+						days = 1825
+					}
 				}
 			}
 		}
@@ -1469,7 +1491,7 @@ province_event = {
 				}
 				had_country_flag = {
 					flag = tuh_greeks_settled_recently
-					days = 730
+					days = 1825
 				}
 			}
 		}
@@ -1953,7 +1975,7 @@ province_event = {
 					}
 					had_country_flag = {
 						flag = tuh_romanianized_italians_recently
-						days = 1460
+						days = 2190
 					}
 				}
 			}
@@ -2886,7 +2908,7 @@ province_event = {
 				}
 				had_country_flag = {
 					flag = wal_romanianized_southern_france_recently
-					days = 1825
+					days = 2920
 				}
 			}
 		}
@@ -2898,6 +2920,7 @@ province_event = {
 			culture = gascon
 			culture = occitain
 			culture = aquitaine
+			culture = french_culture
 		}
 		OR = {
 			area = provence_area
@@ -2926,5 +2949,6 @@ province_event = {
 		owner = {
 			set_country_flag = wal_romanianized_southern_france_recently
 		}
+		change_culture = provinciali
 	}
 }

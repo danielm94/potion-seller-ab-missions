@@ -1506,6 +1506,24 @@ ab_wal_2 = {
 				target = iberia_region
 			}
 			custom_tooltip = tooltip_line_divider
+			add_country_modifier = {
+				name = wallachia_consolidate_french_gains
+				duration = 7300
+			}
+			add_adm_power = 100
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_romanianization_of_southern_french
+			custom_tooltip = wal_romanianization_of_southern_french_tooltip
+			custom_tooltip = AB_EMPTY
+				complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = allow_aqa_pu_decision
+				custom_tooltip = allow_aqt_pu_decision_tooltip"
+			}
 		}
 	}
 	wal_france = {
@@ -2140,6 +2158,9 @@ ab_wal_3 = {
 			add_prestige_or_monarch_power = {
 				amount = 25
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_faster_balkan_romanianization
+			custom_tooltip = wal_faster_balkan_romanianization_tooltip
 			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = wallachia_balkan_hegemon

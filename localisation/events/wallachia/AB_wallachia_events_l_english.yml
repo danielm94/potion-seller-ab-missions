@@ -89,7 +89,7 @@
  pissed_at_no_revenge_tooltip: "§RThe §YClerul§! will be outraged by this act of mercy towards the schismatics who desecrated our faith. They will see it as a betrayal of our ancestors and will incite rebellion to see justice done.§!"
  wal_every_catholic_opinion_tooltip: "We will gain §G25§! opinion and §G5§! trust with every §YCatholic§! country."
  wal_every_italian_opinion_tooltip: "We will gain §G25§! opinion and §G5§! trust with every §YItalian§! country."
- wal_italian_adriatic_romanianization_tooltip: "§YLatin§! cultured provinces of the §YOrthodox§! faith on the §YAdriatic§! coast will slowly become Romanianized."
+ wal_italian_adriatic_romanianization_tooltip: "§YLatin§! cultured provinces of the §YOrthodox§! faith on the §YAdriatic§! coast will slowly become Romanianized.\n§VThe rest of §YItaly§! will be Romanianized twice as quickly when we complete the mission §YItalia Mare§!.§!"
  tuh_galleass_gift_tooltip: "We will gain §Y5§! §YGalleasses§! in §Y[112.GetName]§! upon electing a new ruler."
  AB_wallachia_events.33.t: "The Chains of Sicily"
  AB_wallachia_events.33.d: "As our banners fly over Palermo, we confront the grim reality we knew we would find. The sprawling slave pens are filled with thousands of souls captured from across the sea. We see Christians from Italy and Greece, their bodies scarred by the lash and the oar. We also see Sunnis from Tunis and Egypt, captured in rival raids. The fate of these thousands now rests in [Root.Monarch.GetHerHis] hands."
