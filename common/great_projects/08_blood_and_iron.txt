@@ -743,6 +743,7 @@ royal_palace_of_arles = {
 			culture = occitain
 			culture = aquitaine
 			culture = french_culture
+			culture = provinciali
 		}
 		province_is_or_accepts_culture = yes	
 	}
