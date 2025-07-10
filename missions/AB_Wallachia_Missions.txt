@@ -1461,8 +1461,8 @@ ab_wal_2 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_moved_our_capital_to_rome_in_event_tooltip
 				first_limit = "has_country_flag = wal_moved_capital_to_rome"
-				first_effect = "custom_tooltip = romanianization_of_italy_tooltip
-			set_country_flag = romanianization_of_italy"
+				first_effect = "custom_tooltip = wal_romanianization_of_italy_tooltip
+			set_country_flag = wal_romanianization_of_italy"
 			}
 		}
 	}

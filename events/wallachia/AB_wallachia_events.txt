@@ -1929,7 +1929,7 @@ province_event = {
 		owner = {
 			OR = {
 				has_country_flag = wal_romanianization_of_adriatic_italians
-				has_country_flag = romanianization_of_italy
+				has_country_flag = wal_romanianization_of_italy
 			}
 		}
 		NOT = {
@@ -1966,7 +1966,7 @@ province_event = {
 				}
 				else_if = {
 					limit = {
-						has_country_flag = romanianization_of_italy
+						has_country_flag = wal_romanianization_of_italy
 					}
 					had_country_flag = {
 						flag = tuh_romanianized_italians_recently
@@ -1990,7 +1990,7 @@ province_event = {
 				OR = {
 					owner = {
 						has_country_flag = wal_romanianization_of_adriatic_italians
-						has_country_flag = romanianization_of_italy
+						has_country_flag = wal_romanianization_of_italy
 					}
 				}
 			}
@@ -2004,7 +2004,7 @@ province_event = {
 		if = {
 			limit = {
 				owner = {
-					has_country_flag = romanianization_of_italy
+					has_country_flag = wal_romanianization_of_italy
 				}
 			}
 			if = {
