@@ -474,6 +474,59 @@ ab_wal_1 = {
 			}
 		}
 		effect = {
+			custom_tooltip = wal_switzerland_swiss_fort_bonus_tooltip
+			tooltip = {
+				custom_tooltip = upgraded_fort_tooltip
+				add_province_modifier = {
+					name = wallachia_gate_of_the_alps
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = romandie_area
+							area = switzerland_area
+						}
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_gate_of_the_alps
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					which = swiss_religion
+					value = 0
+				}
+				165 = {
+					export_to_variable = {
+						which = swiss_religion
+						value = religion
+					}
+					PREV = {
+						set_variable = {
+							which = swiss_religion
+							which = PREV
+						}
+					}
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				religion = variable:swiss_religion
+				culture = swiss
+				location = 165
+				cost_multiplier = 0.5
+				skill = 2
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = fort_advisor_garrsion_damage_buff
+			custom_tooltip = fort_advisor_garrsion_damage_buff_tooltip
 		}
 	}
 	wal_lowlands = {
@@ -3421,7 +3474,7 @@ ab_wal_5 = {
 			set_country_flag = wal_buffed_carpathian_forts
 			custom_tooltip = wal_buffed_carpathian_forts_tooltip
 			tooltip = {
-				custom_tooltip = wal_seal_the_carpathians_upgraded_fort_tooltip
+				custom_tooltip = upgraded_fort_tooltip
 				hidden_effect = {
 					upgrade_fort_building = yes
 				}
@@ -3429,6 +3482,8 @@ ab_wal_5 = {
 					name = wallachia_carpathian_defenses
 					duration = -1
 				}
+				custom_tooltip = this_will_apply_to_all_new_forts_constructed_tooltip
+				custom_tooltip = AB_EMPTY
 			}
 			hidden_effect = {
 				every_owned_province = {

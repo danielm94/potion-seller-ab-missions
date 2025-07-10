@@ -718,3 +718,9 @@ wallachia_legacy_of_st_paul = {
 	cb_on_religious_enemies = yes
 	extra_manpower_at_religious_war = yes
 }
+
+wallachia_gate_of_the_alps = {
+	local_fort_maintenance_modifier = -0.25
+	local_hostile_attrition = 2
+	local_defender_dice_roll_bonus = 1
+}

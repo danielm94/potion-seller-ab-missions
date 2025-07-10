@@ -2332,6 +2332,16 @@ fortification_expert = {
 			garrison_size = 0.05
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = fort_advisor_garrsion_damage_buff
+			}
+		}
+		modifier = { 
+			garrison_damage = 0.2
+		}
+	}
 	chance = {
 		factor = 1
 	}
