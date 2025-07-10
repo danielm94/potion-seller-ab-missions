@@ -136,10 +136,10 @@ AQA_ideas = {
 	}
 	start = {
 		discipline = 0.05
-		infantry_power = 0.2
+		global_tax_modifier = 0.25
 	}
 	bonus = {
-		military_tactics = 0.15
+		military_tactics = 0.10
 	}
 	AQA_first = {
 		yearly_patriarch_authority = 0.005
