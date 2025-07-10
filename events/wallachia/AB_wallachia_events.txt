@@ -532,9 +532,22 @@ province_event = {
 		owner = {
 			has_country_flag = wal_romanianization_of_hungary
 		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_hungary_recently
+				}
+				had_country_flag = {
+					flag = wal_romanianized_hungary_recently
+					days = 730
+				}
+			}
+		}
 		NOT = {
 			culture_group = romanian_culture_group
 		}
+		religion = ROOT
+		region = carpathia_region
 		OR = {
 			culture_group = carpathian
 			AND = {
@@ -551,19 +564,6 @@ province_event = {
 			owned_by = ROOT
 			culture_group = romanian_culture_group
 		}
-		owner = {
-			OR = {
-				NOT = {
-					has_country_flag = wal_romanianized_hungary_recently
-				}
-				had_country_flag = {
-					flag = wal_romanianized_hungary_recently
-					days = 730
-				}
-			}
-		}
-		region = carpathia_region
-		religion = ROOT
 	}
 	option = {
 		name = AB_EMPTY
@@ -1339,17 +1339,6 @@ province_event = {
 		owner = {
 			has_country_flag = wal_romanianization_of_illyria
 		}
-		NOT = {
-			culture_group = romanian_culture_group
-		}
-		culture_group = south_slavic
-		NOT = {
-			culture = bulgarian
-		}
-		any_neighbor_province = {
-			owned_by = ROOT
-			culture_group = romanian_culture_group
-		}
 		owner = {
 			OR = {
 				NOT = {
@@ -1357,16 +1346,27 @@ province_event = {
 				}
 				had_country_flag = {
 					flag = wal_romanianized_illyria_recently
-					days = 730
+					days = 1095
 				}
 			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		culture_group = south_slavic
+		NOT = {
+			culture = bulgarian
 		}
 		OR = {
 			region = balkan_region
 			area = inner_austria_area
 			area = carinthia_area
 		}
-		religion = ROOT
+		any_neighbor_province = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+		}
 	}
 	option = {
 		name = AB_EMPTY
@@ -1932,23 +1932,6 @@ province_event = {
 				has_country_flag = wal_romanianization_of_italy
 			}
 		}
-		NOT = {
-			culture_group = romanian_culture_group
-		}
-		OR = {
-			any_neighbor_province = {
-				culture_group = romanian_culture_group
-			}
-			area = corsica_sardinia_area
-			province_id = 126
-			province_id = 112
-		}
-		OR = {
-			is_adriaticii_romanianization_province = yes
-			is_amiaza_romanianization_province = yes
-			is_cisalpini_romanianization_province = yes
-			is_latini_romanianization_province = yes
-		}
 		owner = {
 			OR = {
 				NOT = {
@@ -1961,7 +1944,7 @@ province_event = {
 					}
 					had_country_flag = {
 						flag = tuh_romanianized_italians_recently
-						days = 730
+						days = 1095
 					}
 				}
 				else_if = {
@@ -1970,12 +1953,29 @@ province_event = {
 					}
 					had_country_flag = {
 						flag = tuh_romanianized_italians_recently
-						days = 1095
+						days = 1460
 					}
 				}
 			}
 		}
 		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		OR = {
+			is_adriaticii_romanianization_province = yes
+			is_amiaza_romanianization_province = yes
+			is_cisalpini_romanianization_province = yes
+			is_latini_romanianization_province = yes
+		}
+		OR = {
+			any_neighbor_province = {
+				culture_group = romanian_culture_group
+			}
+			area = corsica_sardinia_area
+			province_id = 126
+			province_id = 112
+		}
 	}
 	option = {
 		name = AB_EMPTY
@@ -2850,5 +2850,81 @@ country_event = {
 			cost_multiplier = 0.5
 		}
 		add_prestige = -10
+	}
+}
+
+#Romanianization of Southern French
+province_event = {
+	id = AB_wallachia_events.37
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_southern_french
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_southern_france_recently
+				}
+				had_country_flag = {
+					flag = wal_romanianized_southern_france_recently
+					days = 1825
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		OR = {
+			culture = gascon
+			culture = occitain
+			culture = aquitaine
+		}
+		OR = {
+			area = provence_area
+			area = savoy_dauphine_area
+			area = languedoc_area
+			area = massif_central_area
+			area = pyrenees_area
+			area = guyenne_area
+		}
+		OR = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				culture_group = romanian_culture_group
+			}
+			province_id = 4696
+			province_id = 201
+			province_id = 200
+			province_id = 2753
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_southern_france_recently
+		}
 	}
 }
