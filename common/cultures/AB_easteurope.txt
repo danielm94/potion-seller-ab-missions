@@ -1229,6 +1229,51 @@ romanian_culture_group = {
 			Sabina Silvia Sofia Teodora Valentina
 		}
 	}
+	lusitanii = {
+		primary = POR
+		
+		dynasty_names = {
+			"Almeida" "Avis" "Basarab" "Bibescu" "Braganca" "Brancoveanu" 
+			"Cantacuzino" "Castro" "Cunha" "Draculesti" "Ghica" "Melo" 
+			"Movilesti" "Noronha" "Pereira" "Racovita" "Sousa" "Sturdza"
+			"Martins"
+		}
+		male_names = {
+			Afonso Andrei António Bogdan Constantin Diogo Dragos Duarte 
+			Fernando Francisco Gheorghe Goncalo Henrique Ion Joao Jorge 
+			Manuel Mihai Mircea Nicolae Pedro Petru Radu Stefan Vasco 
+			Vasile Vlad
+		}
+		female_names = {
+			Ana Anca Beatriz Branca Catarina Cristina Elena Filipa 
+			Florica Guiomar Ines Ioana Isabel Joana Leonor Maria 
+			Ruxandra Teodora Teresa
+		}
+		province = {
+			local_has_caravel = yes 
+			amount_of_caravel = 0.5
+		}
+	}
+	hispani = {
+		primary = ASU
+		dynasty_names = {
+			"Alvarez" "Basarab" "Brancoveanu" "Cantacuzino" "de la Cerda" "Draculesti" 
+			"Enriquez" "Ghica" "Guzman" "Mendoza" "Movilesti" "Pimentel" 
+			"Racovita" "Sturdza" "Trastamara" "Velasco"
+		}
+		male_names = {
+			Alfonso Andrei Bogdan Carlos Constantin Diego Dragos Enrique 
+			Felipe Fernando Francisco Gheorghe Gonzalo Juan Mihai Mircea 
+			Nicolae Pedro Radu Rodrigo Stefan Vasile Vlad
+		}
+		female_names = {
+			Ana Anca Catalina Constanza Cristina Elena Florica Ioana 
+			Isabel Juana Leonor Lucia Maria Ruxandra Teodora Teresa
+		}
+		province = {
+			local_has_tercio = yes
+		}
+	}
 }
 
 

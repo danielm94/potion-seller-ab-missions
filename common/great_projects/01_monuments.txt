@@ -4934,6 +4934,16 @@ alhambra = {
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
+			if = {
+				limit = {
+					owner = {
+						is_or_was_tag = {
+							tag = WAL
+						}
+					}
+				}
+				custom_tooltip = faster_romanianization_of_iberia_tooltip
+			}
 		}
 	}
 }
@@ -9201,7 +9211,10 @@ el_escorial = {
 
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
+		OR = {
+			culture_group = iberian
+			culture = hispani
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -9217,13 +9230,19 @@ el_escorial = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
+		OR = {
+			culture_group = iberian
+			culture = hispani
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
+		OR = {
+			culture_group = iberian
+			culture = hispani
+		}
 		province_is_or_accepts_culture = yes
 	}
 

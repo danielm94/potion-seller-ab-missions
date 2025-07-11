@@ -865,6 +865,16 @@ royal_palace_of_arles = {
 			owner = {
 				add_legitimacy = 50
 			}
+			if = {
+				limit = {
+					owner = {
+						is_or_was_tag = {
+							tag = WAL
+						}
+					}
+				}
+				custom_tooltip = faster_romanianization_of_southern_france_tooltip
+			}
 		}
 	}
 }
