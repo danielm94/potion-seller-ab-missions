@@ -29,6 +29,7 @@ is_special_impaled_country = {
 			tag = LOM			#Lombardy
 			tag = NAZ			#Nizzarids
 			tag = EGY			#Egypt
+			tag = ABS			#Abbasids
 			tag = PER			#Persia (Zoroastrian)
 			tag = PRZ			#Persia (Muslim)
 			tag = PRC			#Persia (Christian)
@@ -48,6 +49,7 @@ is_special_execution_country = {
 			tag = LOM			#Lombardy
 			tag = NAZ			#Nizzarids
 			tag = EGY			#Egypt
+			tag = ABS			#Abbasids
 			tag = PER			#Persia (Zoroastrian)
 			tag = PRZ			#Persia (Muslim)
 			tag = PRC			#Persia (Christian)
@@ -160,6 +162,13 @@ has_impaled_egypt_ruler = {
 	custom_trigger_tooltip = {
 		tooltip = has_impaled_egypt_ruler_tooltip
 		has_country_flag = wallachia_impaled_egypt
+	}
+}
+
+has_impaled_abbasids_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_abbasids_ruler_tooltip
+		has_country_flag = wallachia_impaled_abbasids
 	}
 }
 

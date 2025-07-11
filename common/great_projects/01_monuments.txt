@@ -7209,6 +7209,7 @@ pyramid_of_cheops = {
 					OR = {
 						has_impaled_nizzarids_ruler = yes 
 						has_impaled_egypt_ruler = yes
+						has_impaled_abbasids_ruler = yes
 					}
 				} 
 			}
@@ -7251,6 +7252,7 @@ pyramid_of_cheops = {
 					OR = {
 						has_impaled_nizzarids_ruler = yes 
 						has_impaled_egypt_ruler = yes
+						has_impaled_abbasids_ruler = yes
 					}
 				} 
 			}
@@ -7297,6 +7299,7 @@ pyramid_of_cheops = {
 					OR = {
 						has_impaled_nizzarids_ruler = yes 
 						has_impaled_egypt_ruler = yes
+						has_impaled_abbasids_ruler = yes
 					}
 				} 
 			}

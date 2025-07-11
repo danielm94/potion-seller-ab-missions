@@ -1518,7 +1518,7 @@ ab_wal_2 = {
 			set_country_flag = wal_romanianization_of_southern_french
 			custom_tooltip = wal_romanianization_of_southern_french_tooltip
 			custom_tooltip = AB_EMPTY
-				complex_dynamic_effect = {
+			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
 				first_effect = "set_country_flag = allow_aqa_pu_decision
@@ -2343,6 +2343,94 @@ ab_wal_3 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					mission_completed = wal_southern_france
+					mission_completed = wal_north_africa
+					NOT = {
+						mission_completed = wal_iberia
+					}
+				}
+				add_adm_power = 100
+			}
+			else_if = {
+				limit = {
+					mission_completed = wal_southern_france
+				}
+				add_permanent_claim_multi_provinces = {
+					target = maghreb_region
+				}
+			}
+			else_if = {
+				limit = {
+					mission_completed = wal_north_africa
+				}
+				add_permanent_claim_multi_provinces = {
+					target = france_region
+				}
+			}
+			else = {
+				custom_tooltip = wal_iberia_claims_tooltip
+			}
+			custom_tooltip = wal_iberia_claims_outside_europe_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owner = {
+							is_or_was_tag = {
+								tag = ADU
+							}
+						}
+						NOT = {
+							continent = europe
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim_multi_provinces = {
+				target = mexico_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = carribeans_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_america_region
+			}
+			custom_tooltip = tooltip_line_divider
+			set_country_flag = wal_romanianization_of_iberia
+			custom_tooltip = wal_romanianization_of_iberia_tooltip
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_restored_hispania
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_andalusia_tooltip
+				first_limit = "has_impaled_andalusia_ruler = yes"
+				first_effect = "add_power_projection = {
+				type = wallachia_slayed_the_bane_of_christendom_pp
+				amount = 30
+			}
+			change_terror = {
+				value = 20
+				scaled_with_gain_modifier = yes
+			}	
+			"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_bibescu_colonists
+			custom_tooltip = tuh_bibescu_colonists_tooltip"
+			}
+			tooltip = {
+				add_ruler_modifier = {
+					name = wallachia_into_the_unknown
+					duration = -1
+				}
+			}
 		}
 	}
 	wal_roman_empire = {
@@ -3077,10 +3165,11 @@ ab_wal_4 = {
 				duration = -1
 			}
 			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_have_impaled_naz_or_egy_tooltip
+				first_custom_tooltip = if_we_have_impaled_naz_abs_or_egy_tooltip
 				first_limit = "OR = {
 						has_impaled_egypt_ruler = yes
 						has_impaled_nizzarids_ruler = yes
+						has_impaled_abbasids_ruler = yes
 					}"
 				first_effect = "361 = {
 				add_province_modifier = {
@@ -3273,18 +3362,6 @@ ab_wal_4 = {
 				name = wallachia_pax_navalis
 				duration = -1
 			}"
-			}
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
-				first_limit = "has_government_attribute = romanian_elective_monarchy"
-				first_effect = "set_country_flag = tuh_bibescu_colonists
-			custom_tooltip = tuh_bibescu_colonists_tooltip"
-			}
-			tooltip = {
-				add_ruler_modifier = {
-					name = wallachia_into_the_unknown
-					duration = -1
-				}
 			}
 		}
 	}
