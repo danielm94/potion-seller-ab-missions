@@ -33,6 +33,7 @@ is_special_impaled_country = {
 			tag = PRZ			#Persia (Muslim)
 			tag = PRC			#Persia (Christian)
 			tag = PMN			#Persia (Mani)
+			tag = ADU
 		}
 	}
 }
@@ -50,6 +51,7 @@ is_special_execution_country = {
 			tag = PRZ			#Persia (Muslim)
 			tag = PRC			#Persia (Christian)
 			tag = PMN			#Persia (Mani)
+			tag = ADU
 		}
 	}
 }
@@ -228,4 +230,35 @@ is_cisalpini_romanianization_province = {
 		area = po_valley_area
 	}
 	culture_group = latin
+}
+
+is_lusitanii_romanianization_province = {
+	OR = {
+		area = galicia_area
+		area = beieras_area
+		area = alentejo_area
+		area = leon_area
+		area = extremadura_area
+		province_id = 4548
+		province_id = 224
+		province_id = 1749
+		province_id = 207
+	}
+}
+is_hispani_romanianization_province = {
+	OR = {
+		area = upper_andalucia_area
+		area = toledo_area
+		area = castille_area
+		area = basque_country
+		area = aragon_area
+		area = valencia_area
+		area = catalonia_area
+		area = baleares_area
+		province_id = 225
+		province_id = 1748
+		province_id = 4552
+		province_id = 1746
+		province_id = 1745
+	}
 }

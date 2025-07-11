@@ -2009,8 +2009,8 @@ province_event = {
 		}
 		if = {
 			limit = {
-				OR = {
-					owner = {
+				owner = {
+					OR = {
 						has_country_flag = wal_romanianization_of_adriatic_italians
 						has_country_flag = wal_romanianization_of_italy
 					}
@@ -2906,9 +2906,26 @@ province_event = {
 				NOT = {
 					has_country_flag = wal_romanianized_southern_france_recently
 				}
-				had_country_flag = {
-					flag = wal_romanianized_southern_france_recently
-					days = 2920
+				if = {
+					limit = {
+						any_owned_province = {
+							province_id = 201
+							has_great_project = {
+								type = royal_palace_of_arles
+								tier = 3
+							}
+						}
+					}
+					had_country_flag = {
+						flag = wal_romanianized_southern_france_recently
+						days = 1460
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_southern_france_recently
+						days = 2920
+					}
 				}
 			}
 		}
@@ -2921,6 +2938,7 @@ province_event = {
 			culture = occitain
 			culture = aquitaine
 			culture = french_culture
+			culture = basque
 		}
 		OR = {
 			area = provence_area
@@ -2950,5 +2968,98 @@ province_event = {
 			set_country_flag = wal_romanianized_southern_france_recently
 		}
 		change_culture = provinciali
+	}
+}
+
+#Romanianization of Iberia
+province_event = {
+	id = AB_wallachia_events.38
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_iberia
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_iberia_recently
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_id = 223
+							has_great_project = {
+								type = alhambra
+								tier = 3
+							}
+						}
+					}
+					had_country_flag = {
+						flag = wal_romanianized_iberia_recently
+						days = 1642
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_iberia_recently
+						days = 3285
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		OR = {
+			region = iberia_region
+		}
+		OR = {
+			area = baleares_area
+			province_id = 213
+			any_neighbor_province = {
+				owned_by = ROOT
+				culture_group = romanian_culture_group
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_iberia_recently
+		}
+		if = {
+			limit = {
+				is_lusitanii_romanianization_province = yes
+			}
+			change_culture = lusitanii
+		}
+		else_if = {
+			limit = {
+				is_hispani_romanianization_province = yes
+			}
+			change_culture = hispani
+		}
 	}
 }
