@@ -69,3 +69,14 @@ wallachian_terror_impaled_the_emperor = {
 	min = -1000
 	yearly_decay = 1
 }
+wallachia_desecrated_the_caliph_adu = {
+	opinion = -400
+	min = -999
+	yearly_decay = 0
+}
+
+wallachia_desecrated_the_caliph = {
+	opinion = -100
+	min = -999
+	yearly_decay = 0
+}
