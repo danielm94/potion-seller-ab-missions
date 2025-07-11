@@ -3029,9 +3029,8 @@ province_event = {
 		NOT = {
 			culture_group = romanian_culture_group
 		}
-		OR = {
-			region = iberia_region
-		}
+		region = iberia_region
+		culture_group = iberian
 		OR = {
 			area = baleares_area
 			province_id = 213
