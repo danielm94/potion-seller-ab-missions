@@ -8,3 +8,4 @@
  has_impaled_egypt_ruler_tooltip: "We have impaled @EGY §Y[EGY.GetName]§!'s ruler."
  has_impaled_pope_tooltip: "We have impaled @PAP §YThe Pope§!."
  has_impaled_persia_ruler_tooltip: "We have impaled @PER / @PRZ / @PRC / @PMN §YPersia§!'s ruler."
+ has_impaled_andalusia_ruler_tooltip: "We have impaled @ADU §Y[ADU.GetName]§!'s ruler." 

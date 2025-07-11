@@ -33,7 +33,7 @@ is_special_impaled_country = {
 			tag = PRZ			#Persia (Muslim)
 			tag = PRC			#Persia (Christian)
 			tag = PMN			#Persia (Mani)
-			tag = ADU
+			tag = ADU			#Andalusia
 		}
 	}
 }
@@ -45,13 +45,14 @@ is_special_execution_country = {
 			tag = BYZ			#Byzantium
 			tag = VEN			#Venice
 			tag = SIC			#Sicily
+			tag = LOM			#Lombardy
 			tag = NAZ			#Nizzarids
 			tag = EGY			#Egypt
 			tag = PER			#Persia (Zoroastrian)
 			tag = PRZ			#Persia (Muslim)
 			tag = PRC			#Persia (Christian)
 			tag = PMN			#Persia (Mani)
-			tag = ADU
+			tag = ADU			#Andalusia
 		}
 	}
 }
@@ -176,6 +177,13 @@ has_impaled_persia_ruler = {
 	}
 }
 
+has_impaled_andalusia_ruler = {
+	custom_trigger_tooltip = {
+		tooltip = has_impaled_andalusia_ruler_tooltip
+		has_country_flag = wallachia_impaled_andalusia
+	}
+}
+
 is_adriaticii_romanianization_province = {
 	OR = {
 		area = east_adriatic_coast_area
@@ -245,6 +253,7 @@ is_lusitanii_romanianization_province = {
 		province_id = 207
 	}
 }
+
 is_hispani_romanianization_province = {
 	OR = {
 		area = upper_andalucia_area
