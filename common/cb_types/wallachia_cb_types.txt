@@ -109,3 +109,26 @@ cb_imperial_retribution = {
 	is_triggered_only = yes
 	war_goal = punish_the_regicide
 }
+
+cb_jihad_against_dajjal = {
+	valid_for_subject = no
+	holy_war = yes
+
+	prerequisites_self = {
+		religion_group = muslim
+	}
+
+	prerequisites = {
+		FROM = {
+			has_country_flag = boiled_adu
+			NOT = {
+				had_country_flag = {
+					flag = boiled_adu
+					days = 43800 #120 years
+				}
+			}
+		}
+	}
+
+	war_goal = destroy_the_dajjal
+}
