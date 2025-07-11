@@ -3,4 +3,8 @@ spriteTypes= {
 		name = "GFX_wallachian_terror_events.12"
 		texturefile = "gfx/interface/events/wallachia/terror/wallachian_terror_events.12.dds"
 	}
+	spriteType = {
+		name = "GFX_event_boiling"
+		texturefile = "gfx/interface/events/wallachia/terror/event_boiling.dds"
+	}
 }
