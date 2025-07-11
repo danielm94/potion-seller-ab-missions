@@ -17,10 +17,3 @@ wallachian_terror_ruler_humiliated = {
 	yearly_decay = 2
 	min = -15
 }
-
-wallachia_unified_vlachs_pp = {
-	min = 1
-	max = 15
-	power = 1
-	yearly_decay = 1
-}

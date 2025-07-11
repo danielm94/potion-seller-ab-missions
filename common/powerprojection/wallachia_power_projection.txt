@@ -18,3 +18,17 @@ saved_the_hre_pp = {
 	power = 1
 	yearly_decay = 0.001
 }
+
+wallachia_unified_vlachs_pp = {
+	min = 1
+	max = 15
+	power = 1
+	yearly_decay = 1
+}
+
+wallachia_slayed_the_bane_of_christendom_pp = {
+	min = 1
+	max = 30
+	power = 1
+	yearly_decay = 1
+}
