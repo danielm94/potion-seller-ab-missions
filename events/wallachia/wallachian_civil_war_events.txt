@@ -116,7 +116,7 @@ country_event = {
 		capital_scope = {
 			spawn_large_scaled_rebels = {
 				type = wallachia_civil_war_brancoveanu_refused_ultimatum_rebels
-				leader = "Logofat Radu"
+				leader = "Radu"
 				leader_dynasty = "Brancoveanu"
 			}
 		}
