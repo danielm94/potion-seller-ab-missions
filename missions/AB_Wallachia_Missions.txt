@@ -530,7 +530,7 @@ ab_wal_1 = {
 		}
 	}
 	wal_lowlands = {
-		icon = conquer_burgundy
+		icon = mission_lowlands
 		position = 13
 		required_missions = {
 			wal_france
@@ -1554,43 +1554,75 @@ ab_wal_2 = {
 			add_permanent_claim_multi_provinces = {
 				target = lower_rhineland_area
 			}
-			add_permanent_claim_multi_provinces = {
-				target = wallonia_area
+			custom_tooltip = wal_perm_claim_belgium_tooltip
+			hidden_effect = {
+				add_permanent_claim_multi_provinces = {
+					target = wallonia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = flanders_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = brabant_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = north_brabant_area
+				}
 			}
-			add_permanent_claim_multi_provinces = {
-				target = flanders_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = brabant_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = north_brabant_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = east_midlands_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = west_midlands_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = yorkshire_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = wessex_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = home_counties_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = east_anglia_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = wales_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = scottish_marches_area
+			custom_tooltip = wal_perm_claim_england_tooltip
+			hidden_effect = {
+				add_permanent_claim_multi_provinces = {
+					target = east_midlands_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = west_midlands_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = cornwall_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = yorkshire_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = wessex_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = home_counties_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = east_anglia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = wales_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = scottish_marches_area
+				}
 			}
 			custom_tooltip = tooltip_line_divider
+			change_ruler_stat = {
+				type = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				type = dip
+				amount = 1
+			}
+			change_ruler_stat = {
+				type = mil
+				amount = 1
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_conquest_of_gaul
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_romanianization_of_france
+			custom_tooltip = wal_romanianization_of_france_tooltip
 		}
 	}
 	wal_england = {

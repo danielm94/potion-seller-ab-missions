@@ -203,6 +203,7 @@ wallachia_rome_on_the_danube = {
 	local_manpower_modifier = 0.5
 	local_tax_modifier = 0.5
 	nobles_loyalty_modifier = 0.1
+	local_great_project_upgrade_cost = -0.1
 }
 
 wallachia_vlach_resettlement = {
@@ -506,6 +507,8 @@ wallachia_rome_on_the_danube_upgraded = {
 	local_tax_modifier = 1
 	allowed_num_of_manufactories = 2
 	all_estate_loyalty_equilibrium = 0.15
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
 }
 
 wallachia_patriarchate_of_rome = {
@@ -691,4 +694,8 @@ wallachia_restored_hispania = {
 	has_caravel = yes
 	allowed_caravel_fraction = 0.1
 	allowed_tercio_fraction = 0.1
+}
+
+wallachia_conquest_of_gaul = {
+	core_creation = -0.1
 }
