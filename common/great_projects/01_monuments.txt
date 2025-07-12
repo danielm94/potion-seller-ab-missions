@@ -9026,7 +9026,10 @@ versailles = {
 
 	#can we build it?
 	build_trigger = {
-		culture_group = french
+		OR = {
+			culture_group = french
+			culture = galici
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -9042,13 +9045,19 @@ versailles = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = french
+		OR = {
+			culture_group = french
+			culture = galici
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = french
+		OR = {
+			culture_group = french
+			culture = galici
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -9181,6 +9190,16 @@ versailles = {
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
+			if = {
+				limit = {
+					owner = {
+						is_or_was_tag = {
+							tag = WAL
+						}
+					}
+				}
+				custom_tooltip = faster_romanianization_of_france_tooltip
+			}
 		}
 	}
 }

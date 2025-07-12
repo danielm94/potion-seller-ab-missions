@@ -3062,3 +3062,94 @@ province_event = {
 		}
 	}
 }
+
+#Romanianization of Northern France
+province_event = {
+	id = AB_wallachia_events.39
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = AB_LOTHAIR_eventPicture
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				nationalism = 1
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				local_autonomy = 10
+			}
+		}
+	}
+	trigger = {
+		owner = {
+			has_country_flag = wal_romanianization_of_france
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = wal_romanianized_france_recently
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_id = 183
+							has_great_project = {
+								type = versailles
+								tier = 3
+							}
+						}
+					}
+					had_country_flag = {
+						flag = wal_romanianized_france_recently
+						days = 1825 
+					}
+				}
+				else = {
+					had_country_flag = {
+						flag = wal_romanianized_france_recently
+						days = 3650
+					}
+				}
+			}
+		}
+		religion = ROOT
+		NOT = {
+			culture_group = romanian_culture_group
+		}
+		culture_group = french
+		NOT = {
+			culture = occitain
+		}
+		NOT = {
+			culture = gascon
+		}
+		NOT = {
+			culture = aquitaine
+		}
+		region = france_region
+		OR = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				OR = {
+					culture = provinciali
+					culture = galici
+				}
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			set_country_flag = wal_romanianized_france_recently
+		}
+		change_culture = galici
+	}
+}
