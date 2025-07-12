@@ -18,7 +18,7 @@ dacian_elective_monarchy = {
 		nobles_privilege_slots = 4
 		governing_capacity = 100
 		state_governing_cost = -0.1
-		max_absolutism = -35
+		max_absolutism = -50
 	}
 	custom_attributes = {
 		has_parliament = yes

@@ -158,7 +158,7 @@ wallachian_elective_monarchy = {
 		global_regiment_cost = -0.05
 		nobles_privilege_slots = 2
 		state_governing_cost = -0.05
-		max_absolutism = -40
+		max_absolutism = -50
 	}
 	custom_attributes = {
 		has_parliament = yes
