@@ -116,7 +116,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_bul_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = BUL
+				is_or_was_tag = {
+					tag = BUL
+				}
 			}
 		}
 	}
@@ -124,7 +126,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_mgy_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = MGY
+				is_or_was_tag = {
+					tag = MGY
+				}
 			}
 		}
 	}
@@ -132,7 +136,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_glh_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = GLH
+				is_or_was_tag = {
+					tag = GLH
+				}
 			}
 		}
 	}
@@ -140,7 +146,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_byz_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = BYZ
+				is_or_was_tag = {
+					tag = BYZ
+				}
 			}
 		}
 	}
@@ -148,7 +156,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_retribution_leader_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = event_target:retribution_leader
+				is_or_was_tag = {
+					tag = event_target:retribution_leader
+				}
 			}
 		}
 	}
@@ -156,7 +166,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_sel_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = SEL
+				is_or_was_tag = {
+					tag = SEL
+				}
 			}
 		}
 	}
@@ -164,7 +176,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_ven_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = VEN
+				is_or_was_tag = {
+					tag = VEN
+				}
 			}
 		}
 	}
@@ -172,7 +186,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_sic_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = SIC
+				is_or_was_tag = {
+					tag = SIC
+				}
 			}
 		}
 	}
@@ -180,7 +196,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_lom_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = LOM
+				is_or_was_tag = {
+					tag = LOM
+				}
 			}
 		}
 	}
@@ -189,9 +207,15 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = NAZ
-					tag = EGY
-					tag = ABS
+					is_or_was_tag = {
+						tag = NAZ
+					}
+					is_or_was_tag = {
+						tag = EGY
+					}
+					is_or_was_tag = {
+						tag = ABS
+					}
 				}
 			}
 		}
@@ -201,10 +225,18 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = PER					#Persia (Zoroastrian)
-					tag = PRZ					#Persia (Muslim)
-					tag = PRC					#Persia (Christian)
-					tag = PMN					#Persia (Mani)
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
 				}
 			}
 		}
@@ -213,7 +245,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_adu_impale
 		trigger = {
 			event_target:impaled_country = {
-				tag = ADU
+				is_or_was_tag = {
+					tag = ADU
+				}
 			}
 		}
 	}
@@ -232,7 +266,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_bul_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = BUL
+				is_or_was_tag = {
+					tag = BUL
+				}
 			}
 		}
 	}
@@ -240,7 +276,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_mgy_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = MGY
+				is_or_was_tag = {
+					tag = MGY
+				}
 			}
 		}
 	}
@@ -248,7 +286,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_glh_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = GLH
+				is_or_was_tag = {
+					tag = GLH
+				}
 			}
 		}
 	}
@@ -256,7 +296,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_byz_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = BYZ
+				is_or_was_tag = {
+					tag = BYZ
+				}
 			}
 		}
 	}
@@ -264,7 +306,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_sel_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = SEL
+				is_or_was_tag = {
+					tag = SEL
+				}
 			}
 		}
 	}
@@ -272,7 +316,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_ven_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = VEN
+				is_or_was_tag = {
+					tag = VEN
+				}
 			}
 		}
 	}
@@ -280,7 +326,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_sic_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = SIC
+				is_or_was_tag = {
+					tag = SIC
+				}
 			}
 		}
 	}
@@ -288,7 +336,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_lom_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = LOM
+				is_or_was_tag = {
+					tag = LOM
+				}
 			}
 		}
 	}
@@ -297,9 +347,15 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = NAZ
-					tag = EGY
-					tag = ABS
+					is_or_was_tag = {
+						tag = NAZ
+					}
+					is_or_was_tag = {
+						tag = EGY
+					}
+					is_or_was_tag = {
+						tag = ABS
+					}
 				}
 			}
 		}
@@ -309,10 +365,18 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = PER					#Persia (Zoroastrian)
-					tag = PRZ					#Persia (Muslim)
-					tag = PRC					#Persia (Christian)
-					tag = PMN					#Persia (Mani)
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
 				}
 			}
 		}
@@ -321,7 +385,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_adu_humiliate
 		trigger = {
 			event_target:impaled_country = {
-				tag = ADU
+				is_or_was_tag = {
+					tag = ADU
+				}
 			}
 		}
 	}
@@ -340,7 +406,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_bul_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = BUL
+				is_or_was_tag = {
+					tag = BUL
+				}
 			}
 		}
 	}
@@ -348,7 +416,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_mgy_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = MGY
+				is_or_was_tag = {
+					tag = MGY
+				}
 			}
 		}
 	}
@@ -356,7 +426,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_glh_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = GLH
+				is_or_was_tag = {
+					tag = GLH
+				}
 			}
 		}
 	}
@@ -364,7 +436,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_byz_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = BYZ
+				is_or_was_tag = {
+					tag = BYZ
+				}
 			}
 		}
 	}
@@ -372,7 +446,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_retribution_leader_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = event_target:retribution_leader
+				is_or_was_tag = {
+					tag = event_target:retribution_leader
+				}
 			}
 		}
 	}
@@ -380,7 +456,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_sel_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = SEL
+				is_or_was_tag = {
+					tag = SEL
+				}
 			}
 		}
 	}
@@ -388,7 +466,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_ven_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = VEN
+				is_or_was_tag = {
+					tag = VEN
+				}
 			}
 		}
 	}
@@ -396,7 +476,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_sic_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = SIC
+				is_or_was_tag = {
+					tag = SIC
+				}
 			}
 		}
 	}
@@ -404,7 +486,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_lom_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = LOM
+				is_or_was_tag = {
+					tag = LOM
+				}
 			}
 		}
 	}
@@ -413,9 +497,15 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = NAZ
-					tag = EGY
-					tag = ABS
+					is_or_was_tag = {
+						tag = NAZ
+					}
+					is_or_was_tag = {
+						tag = EGY
+					}
+					is_or_was_tag = {
+						tag = ABS
+					}
 				}
 			}
 		}
@@ -425,10 +515,18 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = PER					#Persia (Zoroastrian)
-					tag = PRZ					#Persia (Muslim)
-					tag = PRC					#Persia (Christian)
-					tag = PMN					#Persia (Mani)
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
 				}
 			}
 		}
@@ -437,7 +535,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_adu_impale_impaler_personality
 		trigger = {
 			event_target:impaled_country = {
-				tag = ADU
+				is_or_was_tag = {
+					tag = ADU
+				}
 			}
 		}
 	}
@@ -461,7 +561,9 @@ defined_text = {
 				is_ruler_impaler = yes
 			}
 			event_target:impaled_country = {
-				tag = VEN
+				is_or_was_tag = {
+					tag = VEN
+				}
 			}
 		}
 	}
@@ -472,7 +574,9 @@ defined_text = {
 				is_ruler_impaler = no
 			}
 			event_target:impaled_country = {
-				tag = VEN
+				is_or_was_tag = {
+					tag = VEN
+				}
 			}
 		}
 	}
@@ -483,7 +587,9 @@ defined_text = {
 				is_ruler_impaler = no
 			}
 			event_target:impaled_country = {
-				tag = BYZ
+				is_or_was_tag = {
+					tag = BYZ
+				}
 			}
 		}
 	}
@@ -494,7 +600,9 @@ defined_text = {
 				is_ruler_impaler = yes
 			}
 			event_target:impaled_country = {
-				tag = BYZ
+				is_or_was_tag = {
+					tag = BYZ
+				}
 			}
 		}
 	}
@@ -505,7 +613,9 @@ defined_text = {
 				is_ruler_impaler = no
 			}
 			event_target:impaled_country = {
-				tag = SIC
+				is_or_was_tag = {
+					tag = SIC
+				}
 			}
 		}
 	}
@@ -513,7 +623,9 @@ defined_text = {
 		localisation_key = wallachian_terror_events_lombardy_execution_tooltip
 		trigger = {
 			event_target:impaled_country = {
-				tag = LOM
+				is_or_was_tag = {
+					tag = LOM
+				}
 			}
 		}
 	}
@@ -524,7 +636,9 @@ defined_text = {
 				is_ruler_impaler = yes
 			}
 			event_target:impaled_country = {
-				tag = SIC
+				is_or_was_tag = {
+					tag = SIC
+				}
 			}
 		}
 	}
@@ -533,9 +647,15 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				OR = {
-					tag = NAZ
-					tag = EGY
-					tag = ABS
+					is_or_was_tag = {
+						tag = NAZ
+					}
+					is_or_was_tag = {
+						tag = EGY
+					}
+					is_or_was_tag = {
+						tag = ABS
+					}
 				}
 			}
 		}
@@ -548,10 +668,18 @@ defined_text = {
 			}
 			event_target:impaled_country = {
 				OR = {
-					tag = PER					#Persia (Zoroastrian)
-					tag = PRZ					#Persia (Muslim)
-					tag = PRC					#Persia (Christian)
-					tag = PMN					#Persia (Mani)
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
 				}
 			}
 		}
@@ -564,10 +692,18 @@ defined_text = {
 			}
 			event_target:impaled_country = {
 				OR = {
-					tag = PER					#Persia (Zoroastrian)
-					tag = PRZ					#Persia (Muslim)
-					tag = PRC					#Persia (Christian)
-					tag = PMN					#Persia (Mani)
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
 				}
 			}
 		}
@@ -579,7 +715,9 @@ defined_text = {
 				is_ruler_impaler = no
 			}
 			event_target:impaled_country = {
-				tag = ADU
+				is_or_was_tag = {
+					tag = ADU
+				}
 			}
 		}
 	}
@@ -590,7 +728,9 @@ defined_text = {
 				is_ruler_impaler = yes
 			}
 			event_target:impaled_country = {
-				tag = ADU
+				is_or_was_tag = {
+					tag = ADU
+				}
 			}
 		}
 	}

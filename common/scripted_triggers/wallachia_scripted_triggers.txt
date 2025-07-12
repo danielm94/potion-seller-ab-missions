@@ -18,23 +18,57 @@ has_vlad_2nd_or_3rd_ruling = {
 is_special_impaled_country = {
 	event_target:impaled_country = {
 		OR = {
-			tag = event_target:retribution_leader
-			tag = BUL			#Bulgaria
-			tag = MGY			#Magyars
-			tag = GLH			#Golden Horde
-			tag = BYZ			#Byzantium
-			tag = SEL			#Seljuks
-			tag = VEN			#Venice
-			tag = SIC			#Sicily
-			tag = LOM			#Lombardy
-			tag = NAZ			#Nizzarids
-			tag = EGY			#Egypt
-			tag = ABS			#Abbasids
-			tag = PER			#Persia (Zoroastrian)
-			tag = PRZ			#Persia (Muslim)
-			tag = PRC			#Persia (Christian)
-			tag = PMN			#Persia (Mani)
-			tag = ADU			#Andalusia
+			is_or_was_tag = {
+				tag = event_target:retribution_leader
+			}
+			is_or_was_tag = {
+				tag = BUL				#Bulgaria
+			}
+			is_or_was_tag = {
+				tag = MGY				#Magyars
+			}
+			is_or_was_tag = {
+				tag = GLH				#Golden Horde
+			}
+			is_or_was_tag = {
+				tag = BYZ				#Byzantium
+			}
+			is_or_was_tag = {
+				tag = SEL				#Seljuks
+			}
+			is_or_was_tag = {
+				tag = VEN				#Venice
+			}
+			is_or_was_tag = {
+				tag = SIC				#Sicily
+			}
+			is_or_was_tag = {
+				tag = LOM				#Lombardy
+			}
+			is_or_was_tag = {
+				tag = NAZ				#Nizzarids
+			}
+			is_or_was_tag = {
+				tag = EGY				#Egypt
+			}
+			is_or_was_tag = {
+				tag = ABS				#Abbasids
+			}
+			is_or_was_tag = {
+				tag = PER				#Persia (Zoroastrian)
+			}
+			is_or_was_tag = {
+				tag = PRZ				#Persia (Muslim)
+			}
+			is_or_was_tag = {
+				tag = PRC				#Persia (Christian)
+			}
+			is_or_was_tag = {
+				tag = PMN				#Persia (Mani)
+			}
+			is_or_was_tag = {
+				tag = ADU				#Andalusia
+			}
 		}
 	}
 }
@@ -43,18 +77,42 @@ is_special_impaled_country = {
 is_special_execution_country = {
 	event_target:impaled_country = {
 		OR = {
-			tag = BYZ			#Byzantium
-			tag = VEN			#Venice
-			tag = SIC			#Sicily
-			tag = LOM			#Lombardy
-			tag = NAZ			#Nizzarids
-			tag = EGY			#Egypt
-			tag = ABS			#Abbasids
-			tag = PER			#Persia (Zoroastrian)
-			tag = PRZ			#Persia (Muslim)
-			tag = PRC			#Persia (Christian)
-			tag = PMN			#Persia (Mani)
-			tag = ADU			#Andalusia
+			is_or_was_tag = {
+				tag = BYZ				#Byzantium
+			}
+			is_or_was_tag = {
+				tag = VEN				#Venice
+			}
+			is_or_was_tag = {
+				tag = SIC				#Sicily
+			}
+			is_or_was_tag = {
+				tag = LOM				#Lombardy
+			}
+			is_or_was_tag = {
+				tag = NAZ				#Nizzarids
+			}
+			is_or_was_tag = {
+				tag = EGY				#Egypt
+			}
+			is_or_was_tag = {
+				tag = ABS				#Abbasids
+			}
+			is_or_was_tag = {
+				tag = PER				#Persia (Zoroastrian)
+			}
+			is_or_was_tag = {
+				tag = PRZ				#Persia (Muslim)
+			}
+			is_or_was_tag = {
+				tag = PRC				#Persia (Christian)
+			}
+			is_or_was_tag = {
+				tag = PMN				#Persia (Mani)
+			}
+			is_or_was_tag = {
+				tag = ADU				#Andalusia
+			}
 		}
 	}
 }

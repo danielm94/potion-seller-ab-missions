@@ -1758,7 +1758,9 @@ wallachian_terror_special_country_impalement_effects = {
 	if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = BUL
+				is_or_was_tag = {
+					tag = BUL
+				}
 			}
 			has_impaled_bulgaria_ruler = no
 		}
@@ -1770,7 +1772,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = MGY
+				is_or_was_tag = {
+					tag = MGY
+				}
 			}
 			has_impaled_magyars_ruler = no
 		}
@@ -1782,7 +1786,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = GLH
+				is_or_was_tag = {
+					tag = GLH
+				}
 			}
 			has_impaled_golden_horde_ruler = no
 		}
@@ -1794,7 +1800,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = BYZ
+				is_or_was_tag = {
+					tag = BYZ
+				}
 			}
 			has_impaled_byzantium_ruler = no
 		}
@@ -1805,7 +1813,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = event_target:retribution_leader
+				is_or_was_tag = {
+					tag = event_target:retribution_leader
+				}
 			}
 			has_impaled_retribution_leader = no
 		}
@@ -1817,7 +1827,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = SEL
+				is_or_was_tag = {
+					tag = SEL
+				}
 			}
 			has_impaled_seljuks_ruler = no
 		}
@@ -1829,7 +1841,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = VEN
+				is_or_was_tag = {
+					tag = VEN
+				}
 			}
 			has_impaled_venice_ruler = no
 		}
@@ -1841,7 +1855,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = SIC
+				is_or_was_tag = {
+					tag = SIC
+				}
 			}
 			has_impaled_sicily_ruler = no
 		}
@@ -1853,7 +1869,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = LOM
+				is_or_was_tag = {
+					tag = LOM
+				}
 			}
 			has_impaled_lombardy_ruler = no
 		}
@@ -1864,7 +1882,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = NAZ
+				is_or_was_tag = {
+					tag = NAZ
+				}
 			}
 			has_impaled_nizzarids_ruler = no
 			has_impaled_egypt_ruler = no
@@ -1877,7 +1897,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = EGY
+				is_or_was_tag = {
+					tag = EGY
+				}
 			}
 			has_impaled_nizzarids_ruler = no
 			has_impaled_egypt_ruler = no
@@ -1890,7 +1912,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = ABS
+				is_or_was_tag = {
+					tag = ABS
+				}
 			}
 			has_impaled_nizzarids_ruler = no
 			has_impaled_egypt_ruler = no
@@ -1904,10 +1928,18 @@ wallachian_terror_special_country_impalement_effects = {
 		limit = {
 			event_target:impaled_country = {
 				OR = {
-					tag = PER
-					tag = PRZ
-					tag = PRC
-					tag = PMN
+					is_or_was_tag = {
+						tag = PER
+					}
+					is_or_was_tag = {
+						tag = PRZ
+					}
+					is_or_was_tag = {
+						tag = PRC
+					}
+					is_or_was_tag = {
+						tag = PMN
+					}
 				}
 			}
 		}
@@ -1918,7 +1950,9 @@ wallachian_terror_special_country_impalement_effects = {
 	else_if = {
 		limit = {
 			event_target:impaled_country = {
-				tag = ADU
+				is_or_was_tag = {
+					tag = ADU
+				}
 			}
 		}
 		if = {
