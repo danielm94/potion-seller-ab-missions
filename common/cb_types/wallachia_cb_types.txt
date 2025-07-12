@@ -120,7 +120,7 @@ cb_jihad_against_dajjal = {
 
 	prerequisites = {
 		FROM = {
-			has_country_flag = boiled_adu
+			has_boiled_andalusia_ruler = yes
 			NOT = {
 				had_country_flag = {
 					flag = boiled_adu

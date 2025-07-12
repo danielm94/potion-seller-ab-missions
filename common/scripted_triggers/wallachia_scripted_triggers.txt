@@ -193,6 +193,10 @@ has_impaled_andalusia_ruler = {
 	}
 }
 
+has_boiled_andalusia_ruler = {
+	has_country_flag = boiled_adu
+}
+
 is_adriaticii_romanianization_province = {
 	OR = {
 		area = east_adriatic_coast_area
