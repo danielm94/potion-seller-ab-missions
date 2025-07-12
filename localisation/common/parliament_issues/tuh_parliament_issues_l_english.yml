@@ -9,3 +9,5 @@
  finance_dacian_india_company_issue: "Finance the Dacian India Company"
  finance_dacian_india_company_issue_advisor_tooltip: "§TThe quality of the advisor scales with §YBresele§! loyalty:§!"
  deus_vult_parliament_issue: "The Orthodox Reclamation Act"
+ wine_parliament_issue: "Modernize Wine Production"
+ wine_parliament_issue_effect_tooltip: "Every owned province that produces §YWine§! will receive:"

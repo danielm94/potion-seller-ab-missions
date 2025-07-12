@@ -225,4 +225,5 @@
  wal_france_desc: "The lands of ancient Gaul are a fractured mosaic of petty kingdoms. The Franks, styling themselves Emperors, preside over this decay. Lotharingia stagnates. The Burgundian crowns are divided. Norman and Breton lords squabble over coastlines. They all cling to a faded Carolingian legacy, a pale imitation of true Roman authority. This disunity is an affront. The pretender Emperor in Aachen and his squabbling vassals must be swept aside. [Root.GetName] will impose order upon Gaul. We will extinguish these false claims and restore the province to its rightful place within a true, unified Empire."
  wal_romanianization_of_france_tooltip: "§YOrthodox§! provinces in §YFrance§! that are of §YFrancien§!, §YBurgundian§!, §YNorman§!, or §YWalloon§! culture will slowly be §YRomanianized§! if they border a §YProvinciali§! or §YGalici§! province."
  wal_perm_claim_england_tooltip: "§Y[Root.GetName]§! gains a permanent claim on §YEngland§!." 
- wal_perm_claim_belgium_tooltip: "§Y[Root.GetName]§! gains a permanent claim on §YBelgium§!." 
+ wal_perm_claim_belgium_tooltip: "§Y[Root.GetName]§! gains a permanent claim on §YBelgium§!."
+ wine_parliament_issue_enabled_tooltip: "Unlocks the §YModernize Wine Production§! parliament issue."  

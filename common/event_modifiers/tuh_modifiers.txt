@@ -363,3 +363,9 @@ tuh_brancoveanu_great_works = {
 	great_project_upgrade_cost = -0.1
 	brancoveanu_faction_influence = 0.05
 }
+
+tuh_french_wine_production_techniques = {
+	trade_goods_size = 1
+	local_production_efficiency = 0.25
+	local_development_cost_modifier = -0.1
+}

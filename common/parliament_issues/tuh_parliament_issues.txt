@@ -276,3 +276,52 @@ deus_vult_parliament_issue = {
 		factor = 500
 	}
 }
+
+wine_parliament_issue = {
+	category = 3
+	allow = {
+		has_country_flag = wine_parliament_issue_enabled
+	}
+	effect = {
+		custom_tooltip = wine_parliament_issue_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+					name = tuh_french_wine_production_techniques
+					duration = 3650
+				}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = wine
+				}
+				add_province_modifier = {
+					name = tuh_french_wine_production_techniques
+					duration = 3650
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 2
+			wine = 20
+		}
+		modifier = {
+			factor = 2
+			wine = 30
+		}
+		modifier = {
+			factor = 2
+			wine = 40
+		}
+		modifier = {
+			factor = 2
+			wine = 50
+		}
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

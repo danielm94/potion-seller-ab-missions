@@ -1623,6 +1623,13 @@ ab_wal_2 = {
 			custom_tooltip = AB_EMPTY
 			set_country_flag = wal_romanianization_of_france
 			custom_tooltip = wal_romanianization_of_france_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = wine_parliament_issue_enabled
+				custom_tooltip = wine_parliament_issue_enabled_tooltip"
+			}
 		}
 	}
 	wal_england = {
