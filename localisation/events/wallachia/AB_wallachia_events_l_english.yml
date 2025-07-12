@@ -67,7 +67,7 @@
  AB_wallachia_events_bulgar_advisor_accept_demands: "Their concerns are valid. He is dismissed."
  AB_wallachia_events_bulgar_advisor_reject_demands: "It's not for them to decide who I keep in my court!"
  AB_wallachia_events.27.t: "The Fate of the Serbian Church"
- AB_wallachia_events.27.d: "With our conquest of the Serbian lands, the historic Patriarchate of Peć now falls under our authority. For centuries, the Serbian Church has maintained its independence, a bastion of Orthodoxy in the western Balkans. Now, we must decide its fate. Shall we subsume their church entirely under our own Patriarchate to centralize our religious authority, or shall we grant them autonomy, honoring their traditions to ensure their loyalty as a shield against the Catholic powers?"
+ AB_wallachia_events.27.d: "With our conquest of the Serbian lands, the historic Patriarchate of Pec now falls under our authority. For centuries, the Serbian Church has maintained its independence, a bastion of Orthodoxy in the western Balkans. Now, we must decide its fate. Shall we subsume their church entirely under our own Patriarchate to centralize our religious authority, or shall we grant them autonomy, honoring their traditions to ensure their loyalty as a shield against the Catholic powers?"
  AB_wallachia_events.27.a: "Subsume the Patriarchate"
  AB_wallachia_events.27.b: "Protect their Autonomy"
  AB_wallachia_events_27_province_bonus_tooltip: "Every owned Serbian §YOrthodox§! province will gain:"
@@ -139,3 +139,4 @@
  AB_wallachia_events.36.dan: "The Danes will teach us to use our fleet as a key, unlocking any coastal fortress."
  AB_wallachia_events.36.eng: "We shall adopt the English strategy: turning our own coastline into an impenetrable fortress."
  AB_wallachia_events.36.dutch: "The Dutch have perfected the art of the trade fleet. Their knowledge will be ours."
+ adu_blind_fury_ends_when_at_peace_with_wal_tooltip: "§VThis modifier will be removed once we are at peace with §Y[impaler_country.GetName]§!.§!" 

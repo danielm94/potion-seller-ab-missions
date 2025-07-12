@@ -2401,6 +2401,11 @@ ab_wal_3 = {
 			set_country_flag = wal_romanianization_of_iberia
 			custom_tooltip = wal_romanianization_of_iberia_tooltip
 			custom_tooltip = AB_EMPTY
+			add_power_projection = {
+				type = wallachia_slayed_the_bane_of_christendom_pp
+				amount = 30
+			}
+			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = wallachia_restored_hispania
 				duration = -1
@@ -2408,15 +2413,7 @@ ab_wal_3 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_impaled_andalusia_tooltip
 				first_limit = "has_impaled_andalusia_ruler = yes"
-				first_effect = "add_power_projection = {
-				type = wallachia_slayed_the_bane_of_christendom_pp
-				amount = 30
-			}
-			change_terror = {
-				value = 20
-				scaled_with_gain_modifier = yes
-			}	
-			"
+				first_effect = "impaled_andalusia_mission_bonus_effect = yes"
 			}
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {

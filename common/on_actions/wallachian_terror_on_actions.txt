@@ -143,3 +143,65 @@ on_siege_won_province = {
 	wallachian_terror_remove_severed_command_modifier = yes
 	wallachian_terror_remove_leadership_in_exile_modifier = yes
 }
+
+#Clear blind fury modifier from Andalusia when the war ends
+on_main_war_won = {
+	if = {
+		limit = {
+			has_country_modifier = adu_blind_fury
+			NOT = {
+				any_country = {
+					war_with = PREV
+					has_boiled_andalusia_ruler = yes
+				}
+			}
+		}
+		remove_country_modifier = adu_blind_fury
+	}
+	FROM = {
+		if = {
+			limit = {
+				has_country_modifier = adu_blind_fury
+				NOT = {
+					any_country = {
+						war_with = PREV
+						has_boiled_andalusia_ruler = yes
+					}
+				}
+			}
+			remove_country_modifier = adu_blind_fury
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			has_province_flag = adu_reprisals_against_christians_flag
+			owner = {
+				religion_group = christian
+			}
+		}
+		add_province_modifier = {
+			name = liberated_christains_from_adu 
+			duration = -1
+		}
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_boiled_andalusia_ruler = yes
+			}
+			religion_group = muslim
+		}
+		add_province_modifier = {
+			name = wallachia_muslim_conquest_penalty 
+			duration = 10950
+		}
+	}
+}
+
+

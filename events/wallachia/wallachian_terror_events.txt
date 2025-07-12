@@ -212,52 +212,7 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				event_target:impaler_country = {
-					is_rival = event_target:impaled_country
-				}
-			}
-			custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
-			hidden_effect = {
-				wallachian_terror_convert_humiliated_rival_to_prestige_or_monarch_power = yes
-			}
-			custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
-			hidden_effect = {
-				wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = yes
-			}
-			custom_tooltip = wallachian_terror_events_humiliated_rival_terror_tooltip
-			hidden_effect = {
-				wallachian_terror_convert_humiliated_rival_to_terror = yes
-			}
-			if = {
-				limit = {
-					is_rival = event_target:impaled_country
-				}
-				add_humiliation_reward = yes
-			}
-		}
-		else = {
-			custom_tooltip = wallachian_terror_events_humiliated_ruler_prestige_tooltip
-			hidden_effect = {
-				wallachian_terror_convert_humiliated_ruler_to_prestige_or_monarch_power = yes
-			}
-			custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
-			hidden_effect = {
-				wallachian_terror_convert_humiliated_ruler_to_legitimacy_or_equivalent = yes
-			}
-			custom_tooltip = wallachian_terror_events_humiliated_ruler_terror_tooltip
-			hidden_effect = {
-				wallachian_terror_convert_humiliated_ruler_to_terror = yes
-			}
-		}
-		hidden_effect = {
-			event_target:impaled_country = {
-				country_event = {
-					id = wallachian_terror_events.8
-				}
-			}
-		}
+		wallachian_terror_humiliation_effect = yes
 	}
 	option = {
 		name = wallachian_terror_events.2.c
@@ -266,6 +221,27 @@ country_event = {
 		}
 		highlight = yes
 		wallachian_terror_impalement_effect = yes
+		# Normally I'd just put the special flavor for impaling certain countries in wallachian_terror_special_country_impalement_effects,
+		# but the flavor I want to implement takes up so much space in a tooltip that I need to put it inside of an event. Unfortunately, calling an event
+		# from a scripted effect causes the game to shit itself. Maybe it's because I'm calling it like this: event -> scripted effect -> event? Anyway, I know
+		# this shit isn't an elegant solution but it's the only way it'll work lol.
+		if = {
+			limit = {
+				event_target:impaled_country = {
+					is_or_was_tag = {
+						tag = ADU
+					}
+				}
+			}
+			country_event = {
+				id = wallachian_terror_events.15
+			}
+			event_target:impaled_country = {
+				country_event = {
+					id = wallachian_terror_events.14
+				}
+			}
+		}
 	}
 }
 
@@ -1208,6 +1184,198 @@ country_event = {
 			event_target:retribution_leader = {
 				country_event = {
 					id = imperial_retribution_events.0
+				}
+			}
+		}
+	}
+}
+
+#Boiled Andalusia's Leader Event
+country_event = {
+	id = wallachian_terror_events.14
+	title = wallachian_terror_events.14.t
+	desc = wallachian_terror_events.14.d
+	picture = GFX_event_boiling
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					controlled_by = event_target:impaled_country
+					if = {
+						limit = {
+							owner = {
+								any_owned_province = {
+									controlled_by = owner
+									continent = europe
+								}
+							}
+						}
+						continent = europe
+					}
+				}
+				save_event_target_as = adu_volunteer_spawn_province
+			}
+		}
+	}
+	option = {
+		name = wallachian_terror_events.14.a
+		add_stability = -1
+		add_prestige = -10
+		add_yearly_manpower = 10
+		add_piety = 2
+		custom_tooltip = adu_volunteers_spawn_tooltip
+		hidden_effect = {
+			event_target:adu_volunteer_spawn_province = {
+				for = {
+					amount = 10
+					effect = "janissary_infantry = owner"
+				}
+				for = {
+					amount = 10
+					effect = "mamluks_infantry = owner"
+				}
+				for = {
+					amount = 10
+					effect = "mamluks_cavalry = owner"
+				}
+				for = {
+					amount = 15
+					effect = "artillery = owner"
+				}
+			}
+		}
+		add_country_modifier = {
+			name = adu_istishhad
+			duration = -1
+		}
+		add_country_modifier = {
+			name = adu_blind_fury
+			duration = 10950
+		}
+		custom_tooltip = adu_blind_fury_ends_when_at_peace_with_wal_tooltip
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_andalusia_christian_reprisals = yes
+	}
+}
+
+country_event = {
+	id = wallachian_terror_events.15
+	title = wallachian_terror_events.15.t
+	desc = wallachian_terror_events.15.d
+	picture = GFX_event_boiling
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = wallachian_terror_events.15.a
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		change_terror = {
+			value = 30
+			scaled_with_gain_modifier = yes
+		}
+		add_country_modifier = {
+			name = wallachia_boiled_adu
+			duration = -1
+		}
+		event_target:impaled_country = {
+			add_opinion = {
+				who = PREV
+				modifier = wallachia_desecrated_the_caliph_adu
+			}
+			add_trust = {
+				who = PREV
+				value = -100
+			}
+		}
+		custom_tooltip = wal_pissed_off_islam_tooltip
+		custom_tooltip = AB_EMPTY
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion_group = muslim
+					NOT = {
+						tag = event_target:impaled_country
+					}
+				}
+				add_opinion = {
+					who = PREV
+					modifier = wallachia_desecrated_the_caliph
+				}
+				add_trust = {
+					who = PREV
+					value = -100
+				}
+			}
+		}
+		set_country_flag = boiled_adu
+		custom_tooltip = jihad_against_dajjal_tooltip
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = muslim_conquest_penalty_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = wallachia_muslim_conquest_penalty
+				duration = 10950
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					religion_group = muslim
+				}
+			}
+			custom_tooltip = owned_muslim_province_penalty_tooltip
+			tooltip = {
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = sunni
+				}
+				spawn_rebels = {
+					size = 1
+					type = sunni_rebels
+				}
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+			every_owned_province = {
+				limit = {
+					religion = shiite
+				}
+				spawn_rebels = {
+					size = 1
+					type = shiite_rebels
+				}
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
+				}
+			}
+			every_owned_province = {
+				limit = {
+					religion = ibadi
+				}
+				spawn_rebels = {
+					size = 1
+					type = ibadi_rebels
+				}
+				add_unrest = 10
+				add_province_modifier = {
+					name = wallachia_owned_muslim_province_penalty
+					duration = 10950
 				}
 			}
 		}

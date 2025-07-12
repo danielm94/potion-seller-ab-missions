@@ -1750,12 +1750,7 @@ wallachian_terror_impalement_effect = {
 			duration = 3650
 		}
 	}
-	if = {
-		limit = {
-			is_special_impaled_country = yes
-		}
-		wallachian_terror_special_country_impalement_effects = yes
-	}
+	wallachian_terror_special_country_impalement_effects = yes
 }
 
 #Effect that handles the effects of impalement on certain tags.
@@ -1872,9 +1867,11 @@ wallachian_terror_special_country_impalement_effects = {
 				tag = NAZ
 			}
 			has_impaled_nizzarids_ruler = no
+			has_impaled_egypt_ruler = no
+			has_impaled_abbasids_ruler = no
 		}
-		wallachian_terror_nizzarids_egypt_impaler_effects = yes
-		wallachian_terror_nizzarids_egypt_impaled_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = yes
 		set_country_flag = wallachia_impaled_nizzarids
 	}
 	else_if = {
@@ -1882,11 +1879,26 @@ wallachian_terror_special_country_impalement_effects = {
 			event_target:impaled_country = {
 				tag = EGY
 			}
+			has_impaled_nizzarids_ruler = no
 			has_impaled_egypt_ruler = no
+			has_impaled_abbasids_ruler = no
 		}
-		wallachian_terror_nizzarids_egypt_impaler_effects = yes
-		wallachian_terror_nizzarids_egypt_impaled_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = yes
 		set_country_flag = wallachia_impaled_egypt
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = ABS
+			}
+			has_impaled_nizzarids_ruler = no
+			has_impaled_egypt_ruler = no
+			has_impaled_abbasids_ruler = no
+		}
+		wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = yes
+		wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = yes
+		set_country_flag = wallachia_abbasids_egypt
 	}
 	else_if = {
 		limit = {
@@ -1903,34 +1915,71 @@ wallachian_terror_special_country_impalement_effects = {
 		wallachian_terror_persia_impaled_effects = yes
 		set_country_flag = wallachia_impaled_persia
 	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = ADU
+			}
+		}
+		if = {
+			limit = {
+				is_ruler_impaler = no
+			}
+			wallachian_terror_andalusia_impaler_effects = yes
+			wallachian_terror_andalusia_impaled_effects = yes
+		}
+		set_country_flag = wallachia_impaled_andalusia
+	}
 }
 
-wallachian_terror_persia_impaler_effects = {
-	add_prestige_or_monarch_power = {
-		amount = 20
+wallachian_terror_andalusia_impaler_effects = {
+	add_ruler_modifier = {
+		name = wallachia_impaled_andalusia
+		duration = -1
+	}
+	custom_tooltip = muslims_countries_angry_impaled_caliph_tooltip
+	hidden_effect = {
+		every_country = {
+			limit = {
+				religion_group = muslim
+			}
+			add_opinion = {
+				who = PREV
+				modifier = wallachia_impaled_the_caliph
+			}
+			add_trust = {
+				who = PREV
+				value = -50
+			}
+		}
 	}
 	if = {
 		limit = {
-			is_ruler_impaler = yes
+			any_owned_province = {
+				religion_group = muslim
+			}
 		}
-		change_terror = {
-			value = 15
-			scaled_with_gain_modifier = yes
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = muslim_provinces_angry_impaled_caliph_tooltip
+		tooltip = {
+			add_unrest = 10
 		}
-	}
-	add_country_modifier = {
-		name = wallachia_monster_of_the_west
-		duration = 7300
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion_group = muslim
+				}
+				add_unrest = 10
+			}
+		}
 	}
 }
 
-wallachian_terror_persia_impaled_effects = {
+wallachian_terror_andalusia_impaled_effects = {
 	event_target:impaled_country = {
-		add_prestige_or_monarch_power = {
-			amount = -20
-		}
-		add_stability = -6
-		add_legitimacy = -100
+		custom_tooltip = muslim_volunteers_adu_tooltip
+		add_yearly_manpower = 7
+		add_prestige = -20
 	}
 }
 
@@ -2244,7 +2293,7 @@ wallachian_terror_emperor_impalement_effect = {
 	}
 }
 
-wallachian_terror_nizzarids_egypt_impaler_effects = {
+wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = {
 	custom_tooltip = impaling_on_pyramids_cost_tooltip
 	add_treasury = -500
 	add_prestige_or_monarch_power = {
@@ -2254,7 +2303,7 @@ wallachian_terror_nizzarids_egypt_impaler_effects = {
 	custom_tooltip = pyramids_monument_bonus_tooltip
 }
 
-wallachian_terror_nizzarids_egypt_impaled_effects = {
+wallachian_terror_nizzarids_abbasids_egypt_impaled_effects = {
 	event_target:impaled_country = {
 		add_prestige = -20
 		add_legitimacy = -100
@@ -2323,6 +2372,35 @@ wallachian_terror_lombardy_impaled_effects = {
 	}
 }
 
+wallachian_terror_persia_impaler_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 20
+	}
+	if = {
+		limit = {
+			is_ruler_impaler = yes
+		}
+		change_terror = {
+			value = 15
+			scaled_with_gain_modifier = yes
+		}
+	}
+	add_country_modifier = {
+		name = wallachia_monster_of_the_west
+		duration = 7300
+	}
+}
+
+wallachian_terror_persia_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige_or_monarch_power = {
+			amount = -20
+		}
+		add_stability = -6
+		add_legitimacy = -100
+	}
+}
+
 wallachian_terror_convert_impaled_emperor_to_mana = {
 	wallachian_terror_calculate_ruler_mana_sum = yes
 	multiply_variable = {
@@ -2359,6 +2437,113 @@ wallachian_terror_convert_impaled_emperor_to_terror = {
 	}
 	change_terror_var = {
 		var = mana_sum
+		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_humiliation_effect = {
+	if = {
+		limit = {
+			event_target:impaler_country = {
+				is_rival = event_target:impaled_country
+			}
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_prestige_or_monarch_power = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_rival_terror_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_rival_to_terror = yes
+		}
+		if = {
+			limit = {
+				is_rival = event_target:impaled_country
+			}
+			add_humiliation_reward = yes
+		}
+	}
+	else = {
+		custom_tooltip = wallachian_terror_events_humiliated_ruler_prestige_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_ruler_to_prestige_or_monarch_power = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_ruler_to_legitimacy_or_equivalent = yes
+		}
+		custom_tooltip = wallachian_terror_events_humiliated_ruler_terror_tooltip
+		hidden_effect = {
+			wallachian_terror_convert_humiliated_ruler_to_terror = yes
+		}
+	}
+	hidden_effect = {
+		event_target:impaled_country = {
+			country_event = {
+				id = wallachian_terror_events.8
+			}
+		}
+	}
+}
+
+wallachian_terror_andalusia_christian_reprisals = {
+	custom_tooltip = adu_christians_scapegoat_tooltip
+	custom_tooltip = every_owned_and_controlled_christian_province_tooltip
+	tooltip = {
+		add_base_tax = -1
+		add_base_production = -1
+		add_base_manpower = -1
+		add_devastation = 50
+		add_estate_loyalty = {
+			estate = estate_dhimmi
+			loyalty = -10
+		}
+		add_province_modifier = {
+			name = adu_reprisals_against_christians
+			duration = 7300
+		}
+		custom_tooltip = adu_christian_liberator_bonus_tooltip
+		add_province_modifier = {
+			name = liberated_christains_from_adu
+			duration = -1
+		}
+	}
+	hidden_effect = {
+		add_estate_loyalty = {
+			estate = estate_dhimmi
+			loyalty = -10
+		}
+		every_owned_province = {
+			limit = {
+				controlled_by = owner
+				religion_group = christian
+			}
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			add_devastation = 50
+			add_province_modifier = {
+				name = adu_reprisals_against_christians
+				duration = 7300
+			}
+			set_province_flag = adu_reprisals_against_christians_flag
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_dhimmi
+					loyalty = -10
+				}
+			}
+		}
+	}
+}
+
+impaled_andalusia_mission_bonus_effect = {
+	change_terror = {
+		value = 20
 		scaled_with_gain_modifier = yes
 	}
 }
