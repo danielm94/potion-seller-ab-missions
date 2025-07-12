@@ -1229,6 +1229,31 @@ romanian_culture_group = {
 			Sabina Silvia Sofia Teodora Valentina
 		}
 	}
+	galici = {
+		primary = FRA
+		dynasty_names = {
+			"Basarab" "Brancoveanu" "Bourbon" "Cantacuzino" "Draculesti" "Ghica" 
+			"de Guise" "de Lorraine" "Montmorency" "Movilesti" "Racovita" "de Rohan" 
+			"Sturdza" "Valois" "d'Anjou" "de Foix"
+		}
+		male_names = {
+			Andrei Antoine Bogdan Charles Constantin Dragos François Gheorghe 
+			Guillaume Henri Jean Louis Mihai Mircea Nicolae Olivier 
+			Philippe Pierre Radu Stefan Vasile Vlad
+		}
+		female_names = {
+			Ana Anca Anne Blanche Catherine Charlotte Elena Eleonore 
+			Florica Genevieve Ioana Isabelle Jeanne Marguerite Maria Ruxandra 
+			Sophie Teodora
+		}
+		province = {
+			local_has_musketeers = yes
+			amount_of_musketeers = 0.1
+		}
+		country = {
+			has_musketeer = yes
+		}
+	}
 	lusitanii = {
 		primary = POR
 		
@@ -1253,6 +1278,9 @@ romanian_culture_group = {
 			local_has_caravel = yes 
 			amount_of_caravel = 0.5
 		}
+		country = {
+			has_caravel = yes
+		}
 	}
 	hispani = {
 		primary = ASU
@@ -1272,6 +1300,9 @@ romanian_culture_group = {
 		}
 		province = {
 			local_has_tercio = yes
+		}
+		country = {
+			has_tercio = yes
 		}
 	}
 }
