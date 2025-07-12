@@ -152,26 +152,6 @@ wallachia_cut_down_the_moldavian_nobility = {
 	local_development_cost_modifier = 0.1
 }
 
-bulgaria_impaled_mod = {
-	morale_damage_received = 0.1
-	land_morale = -0.05
-}
-
-wallachia_impaled_bulgaria_mod = {
-	prestige_from_land = 0.5
-	prestige_decay = -0.01
-}
-
-magyars_impaled_mod = {
-	cavalry_power = -0.1
-	land_morale = -0.05
-}
-
-wallachia_impaled_magyars_mod = {
-	shock_damage_received = -0.1
-	cavalry_cost = -0.05
-}
-
 wallachia_unifier_of_the_vlachs = {
 	core_creation = -0.1
 	prestige = 1
@@ -411,11 +391,6 @@ wallachia_prepare_to_land_in_sicily = {
 	landing_penalty = -1
 }
 
-wallachia_impaled_venice_modifier = {
-	galley_power = 0.25
-	light_ship_cost = -0.25
-}
-
 wallachia_great_liberator = {
 	improve_relation_modifier = 0.1
 	diplomatic_reputation = 1
@@ -449,11 +424,6 @@ wallachia_pirates_bane = {
 	block_slave_raid = yes
 }
 
-sicily_impaled_mod = {
-	galley_power = -0.2
-	naval_morale = -0.1
-}
-
 wallachia_milanese_armaments = {
 	infantry_fire = 0.05
 	infantry_power = 0.05
@@ -461,16 +431,6 @@ wallachia_milanese_armaments = {
 
 wallachia_broke_the_iron_crown = {
 	local_core_creation = -0.1
-}
-
-wallachia_impaled_lombardy_mod = {
-	mercenary_cost = -0.1
-	mercenary_discipline = 0.05
-}
-
-lombardy_impaled_mod = {
-	mercenary_manpower = -0.5
-	mercenary_cost = 0.5
 }
 
 wallachia_patriarchate_of_alexandria = {
@@ -518,11 +478,6 @@ wallachia_not_tolerating_the_copts = {
 	religion = yes
 }
 
-wallachia_impaled_pyramids_bonus = {
-	local_great_project_upgrade_cost = -0.25
-	local_great_project_upgrade_time = -0.25
-}
-
 wallachia_rebuilding_rome = {
 	local_tax_modifier = -0.9
 	local_monthly_devastation = -0.1
@@ -558,10 +513,6 @@ wallachia_patriarchate_of_rome = {
 	legitimacy = 0.5
 	local_great_project_upgrade_cost = -0.1
 	prestige = 0.5
-}
-
-wallachia_impaled_pope_mission_bonus = {
-	global_heretic_missionary_strength = 0.02
 }
 
 wallachia_danubian_fortifications = {
@@ -732,4 +683,12 @@ wallachia_consolidate_french_gains = {
 
 wallachia_loyal_aqa = {
 	liberty_desire = -30
+}
+
+wallachia_restored_hispania = {
+	governing_capacity_modifier = 0.1
+	has_tercio = yes
+	has_caravel = yes
+	allowed_caravel_fraction = 0.1
+	allowed_tercio_fraction = 0.1
 }
