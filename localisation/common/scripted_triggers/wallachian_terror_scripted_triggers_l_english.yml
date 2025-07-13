@@ -1,0 +1,9 @@
+﻿l_english:
+ has_wallachia_purged_the_estates_tooltip: "We have used the §Y'Purge the Elite' Terror§! interaction."
+ is_ruler_impaler_tooltip: "[Root.Monarch.GetName] has the §YImpaler§! personality."
+ has_impaled_nizzarids_ruler_tooltip: "We have impaled the @NAZ §Y[NAZ.GetName]§!' ruler."
+ has_impaled_egypt_ruler_tooltip: "We have impaled @EGY §Y[EGY.GetName]§!'s ruler."
+ has_impaled_abbasids_ruler_tooltip: "We have impaled the @ABS §Y[ABS.GetName]§!' ruler."
+ has_impaled_pope_tooltip: "We have impaled @PAP §YThe Pope§!."
+ has_impaled_persia_ruler_tooltip: "We have impaled @PER / @PRZ / @PRC / @PMN §YPersia§!'s ruler."
+ has_impaled_andalusia_ruler_tooltip: "We have impaled @ADU §Y[ADU.GetName]§!'s ruler." 
