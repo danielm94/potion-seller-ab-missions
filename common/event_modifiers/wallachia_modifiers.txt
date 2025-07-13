@@ -699,3 +699,13 @@ wallachia_restored_hispania = {
 wallachia_conquest_of_gaul = {
 	core_creation = -0.1
 }
+
+wallachia_mare_nostrum = {
+	navy_tradition = 1
+	global_ship_trade_power = 0.25
+}
+
+wallachia_mare_nostrum_trade_post = {
+	province_trade_power_modifier = 0.5
+	local_center_of_trade_upgrade_cost = -0.5
+}

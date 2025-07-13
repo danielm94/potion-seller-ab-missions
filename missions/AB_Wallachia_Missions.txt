@@ -1624,7 +1624,6 @@ ab_wal_2 = {
 			set_country_flag = wal_romanianization_of_france
 			custom_tooltip = wal_romanianization_of_france_tooltip
 			custom_tooltip = AB_EMPTY
-			
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_impaled_french_ruler_tooltip
 				first_limit = "OR = {
@@ -3423,13 +3422,45 @@ ab_wal_4 = {
 			wal_coast
 		}
 		provinces_to_highlight = {
+			is_mare_nostrum_province = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
+			owns_all_mare_nostrum_provinces = yes
 		}
 		effect = {
+			add_navy_tradition = 25
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_mare_nostrum
+				duration = -1
+			}
+			custom_tooltip = wallachia_mare_nostrum_trade_post_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_mare_nostrum_trade_post
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_mare_nostrum_province = yes
+					province_has_center_of_trade_of_level = 1
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = wallachia_mare_nostrum_trade_post
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = NED_HALVE_THE_NAVAL_HEGEMONY_REQUIREMENTS
+			set_country_flag = jap_halve_naval_hegemony_requirements
 		}
 	}
 }
