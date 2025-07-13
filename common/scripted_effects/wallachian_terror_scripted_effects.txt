@@ -1986,23 +1986,15 @@ wallachian_terror_special_country_impalement_effects = {
 		wallachian_terror_francia_impaled_effects = yes
 		set_country_flag = wallachia_impaled_france
 	}
-}
-
-wallachian_terror_francia_impaler_effects = {
-	clean_add_country_modifier = {
-		name = wallachia_i_am_the_state
-		duration = 10950
-	}
-	add_prestige_or_monarch_power = {
-		amount = 25
-	}
-}
-
-wallachian_terror_francia_impaled_effects = {
-	event_target:impaled_country = {
-		add_prestige = -25
-		add_stability = -3
-		add_legitimacy = -50
+	else_if = {
+		limit = {
+			is_or_was_tag = {
+				tag = ENG
+			}
+		}
+		wallachian_terror_england_impaler_effects = yes
+		wallachian_terror_england_impaled_effects = yes
+		set_country_flag = wallachia_impaled_england
 	}
 }
 
@@ -2491,6 +2483,30 @@ wallachian_terror_andalusia_impaled_effects = {
 		add_yearly_manpower = 7
 		add_prestige = -20
 	}
+}
+
+wallachian_terror_francia_impaler_effects = {
+	clean_add_country_modifier = {
+		name = wallachia_i_am_the_state
+		duration = 10950
+	}
+	add_prestige_or_monarch_power = {
+		amount = 25
+	}
+}
+
+wallachian_terror_francia_impaled_effects = {
+	event_target:impaled_country = {
+		add_prestige = -25
+		add_stability = -3
+		add_legitimacy = -50
+	}
+}
+
+wallachian_terror_england_impaler_effects = {
+}
+
+wallachian_terror_england_impaled_effects = {
 }
 
 wallachian_terror_convert_impaled_emperor_to_mana = {
