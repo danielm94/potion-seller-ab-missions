@@ -369,3 +369,7 @@ tuh_french_wine_production_techniques = {
 	local_production_efficiency = 0.25
 	local_development_cost_modifier = -0.1
 }
+tuh_land_reclamation_project = {
+	local_development_cost = -0.2
+	local_build_cost = -0.1
+}

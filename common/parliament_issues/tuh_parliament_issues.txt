@@ -155,64 +155,11 @@ finance_dacian_india_company_issue = {
 		}
 	}
 	effect = {
-		custom_tooltip = finance_dacian_india_company_issue_advisor_tooltip
-		if = {
-			limit = {
-				estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 95
-				}
-			}
-			define_advisor = {
-				type = trader
-				skill = 3
-				cost_multiplier = 0.1
-			}
-		}
-		else_if = {
-			limit = {
-				estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 75
-				}
-			}
-			define_advisor = {
-				type = trader
-				skill = 3
-				cost_multiplier = 0.25
-			}
-		}
-		else_if = {
-			limit = {
-				estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 50
-				}
-			}
-			define_advisor = {
-				type = trader
-				skill = 2
-				cost_multiplier = 0.5
-			}
-		}
-		else_if = {
-			limit = {
-				estate_loyalty = {
-					estate = estate_burghers
-					loyalty = 30
-				}
-			}
-			define_advisor = {
-				type = trader
-				skill = 2
-				cost_multiplier = 0.75
-			}
-		}
-		else = {
-			define_advisor = {
-				type = trader
-				skill = 1
-			}
+		define_advisor_scaling_with_estate_attribute = {
+			tooltip = advisor_quality_scales_with_bresele_loyalty_tooltip
+			advisor_type = trader
+			estate = estate_burghers
+			attribute = loyalty
 		}
 	}
 	modifier = {
@@ -541,5 +488,50 @@ tuh_the_spice_act = {
 	}
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+land_reclamation_issue = {
+	category = 3
+	allow = {
+		has_issue_unlocked = {
+			issue = land_reclamation_issue
+		}
+	}
+	effect = {
+		add_years_of_income = -0.33
+		define_advisor_scaling_with_estate_attribute = {
+			tooltip = advisor_quality_scales_with_bresele_loyalty_tooltip
+			advisor_type = planner
+			estate = estate_burghers
+			attribute = loyalty
+		}
+		custom_tooltip = land_reclamation_issue_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = tuh_land_reclamation_project
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_port = yes
+						has_terrain = marsh
+					}
+				}
+				add_province_modifier = {
+					name = tuh_land_reclamation_project
+					duration = 3650
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 10
 	}
 }

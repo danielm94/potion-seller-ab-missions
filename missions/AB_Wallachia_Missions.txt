@@ -571,6 +571,27 @@ ab_wal_1 = {
 			add_permanent_claim_multi_provinces = {
 				target = low_countries_region
 			}
+			add_country_modifier = {
+				name = wallachia_architects_of_belgica
+				duration = -1
+			}
+			set_country_flag = ven_scaling_planner
+			custom_tooltip = VEN_SCALING_PLANNER
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = planner
+				skill = 3
+				cost_multiplier = 0.5
+				culture = wallonian
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
+				first_effect = "simple_unlock_issue = {
+				issue = land_reclamation_issue
+			}"
+			}
 		}
 	}
 	wal_consecrate_dacia = {

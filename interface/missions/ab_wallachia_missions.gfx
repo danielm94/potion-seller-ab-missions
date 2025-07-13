@@ -75,4 +75,8 @@ spriteTypes = {
 		name = "gfx_wal_mantle_of_constantine"
 		texturefile = "gfx/interface/missions/wal/wal_mantle_of_constantine.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_rome_mania"
+		texturefile = "gfx/interface/missions/wal/wal_rome_mania.dds"
+	}
 }

@@ -720,3 +720,7 @@ wallachia_integrating_the_english_province = {
 	local_unrest = -2
 	local_core_creation = -0.1
 }
+
+wallachia_architects_of_belgica = {
+	development_cost = -0.1
+}

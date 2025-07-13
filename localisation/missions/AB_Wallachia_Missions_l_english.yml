@@ -238,7 +238,6 @@
  claims_on_british_overseas_territories_tooltip: "§Y[Root.GetName]§! gains a permanent claims on all provinces outside of §YEurope§! owned by @ENG / @GBR §YÆngland§! or their colonies."
  if_we_have_largest_navy_in_europe_tooltip: "If we have the largest navy in §YEurope§!:"
  every_owned_english_province_tooltip: "All owned and future provinces of §YÆnglish§! or §YEnglish§! culture will receive:"
-
  unlock_issue_tuh_the_tea_act_tt: "Unlocks the §YThe Tea Act§! parliament issue."
  unlock_issue_tuh_the_witchcraft_act_tt: "Unlocks the §YThe Witchcraft Act§! parliament issue."
  unlock_issue_tuh_the_black_act_tt: "Unlocks the §YThe Black Act§! parliament issue."
@@ -246,4 +245,7 @@
  unlock_issue_tuh_the_sugar_act_tt: "Unlocks the §YThe Sugar Act§! parliament issue."
  unlock_issue_tuh_the_gold_act_tt: "Unlocks the §YThe Gold Act§! parliament issue."
  unlock_issue_tuh_the_spice_act_tt: "Unlocks the §YThe Spice Act§! parliament issue."
- if_we_impaled_english_ruler_tooltip: "If we impaled the @ENG / @GBR §YÆngland§!'s ruler:" 
+ if_we_impaled_english_ruler_tooltip: "If we impaled the @ENG / @GBR §YÆngland§!'s ruler:"
+ wal_lowlands_title: "The Belgic Reclamation"
+ wal_lowlands_desc: "The Romans knew these lands as Gallia Belgica. Today, they are a morass of wealthy trading cities and merchant leagues who jealously guard their 'privileges.' Their decentralized nature and obsession with coin make them a source of corruption and instability on our new Gallic frontier. This will not be tolerated. We will march north, dismantle their leagues, and bring these lands back into the imperial fold. Their wealth will serve the Empire, and their people will learn the value of order."
+ unlock_issue_land_reclamation_issue_tt: "Unlocks the §YFinance Land Reclamation Projects§! parliament issue."

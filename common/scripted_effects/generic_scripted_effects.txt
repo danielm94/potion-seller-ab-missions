@@ -1958,3 +1958,65 @@ simple_unlock_issue = {
 		set_country_flag = unlocked_issue_$issue$
 	}
 }
+
+define_advisor_scaling_with_estate_attribute = {
+	custom_tooltip = $tooltip$
+	if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 95
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 3
+			cost_multiplier = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 75
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+	else_if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 50
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+	else_if = {
+		limit = {
+			estate_$attribute$ = {
+				estate = $estate$
+				$attribute$ = 30
+			}
+		}
+		define_advisor = {
+			type = $advisor_type$
+			skill = 2
+			cost_multiplier = 0.75
+		}
+	}
+	else = {
+		define_advisor = {
+			type = $advisor_type$
+			skill = 1
+		}
+	}
+}
