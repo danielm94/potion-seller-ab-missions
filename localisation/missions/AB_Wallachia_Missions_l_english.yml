@@ -237,8 +237,8 @@
  wal_england_desc: "With Gaul restored to the imperial fold, our gaze turns north, across the narrow sea. The island we once called Britannia is now a fractured land known as 'Ængland,' ruled by the descendants of Saxon warlords. Their history is one of failure and endless internal squabbles, proving them unworthy custodians of a Roman province. The time has come to finish what Caesar started. The legions will cross the sea again, extinguish the petty kingdoms of the Heptarchy, and restore order to the island. Britannia will be returned to the Empire."
  claims_on_british_overseas_territories_tooltip: "§Y[Root.GetName]§! gains a permanent claims on all provinces outside of §YEurope§! owned by @ENG / @GBR §YÆngland§! or their colonies."
  if_we_have_largest_navy_in_europe_tooltip: "If we have the largest navy in §YEurope§!:"
- every_owned_english_province_tooltip: "Every owned §YÆnglish§! or §YEnglish§! province will receive:"
- applies_to_future_english_provinces_conquered_tooltip: "§VThe modifier will be applied to any §YÆnglish§! or §YEnglish§! provinces we conquer in the future.§!"
+ every_owned_english_province_tooltip: "All owned and future provinces of §YÆnglish§! or §YEnglish§! culture will receive:"
+
  unlock_issue_tuh_the_tea_act_tt: "Unlocks the §YThe Tea Act§! parliament issue."
  unlock_issue_tuh_the_witchcraft_act_tt: "Unlocks the §YThe Witchcraft Act§! parliament issue."
  unlock_issue_tuh_the_black_act_tt: "Unlocks the §YThe Black Act§! parliament issue."
@@ -246,3 +246,4 @@
  unlock_issue_tuh_the_sugar_act_tt: "Unlocks the §YThe Sugar Act§! parliament issue."
  unlock_issue_tuh_the_gold_act_tt: "Unlocks the §YThe Gold Act§! parliament issue."
  unlock_issue_tuh_the_spice_act_tt: "Unlocks the §YThe Spice Act§! parliament issue."
+ if_we_impaled_english_ruler_tooltip: "If we impaled the @ENG / @GBR §YÆngland§!'s ruler:" 

@@ -1734,7 +1734,6 @@ ab_wal_2 = {
 					dip_reward = yes
 				}
 			}
-			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = wallachia_integrating_the_english
 				duration = -1
@@ -1745,7 +1744,6 @@ ab_wal_2 = {
 					name = wallachia_integrating_the_english_province
 					duration = -1
 				}
-				custom_tooltip = applies_to_future_english_provinces_conquered_tooltip
 			}
 			hidden_effect = {
 				every_owned_province = {
@@ -1762,7 +1760,6 @@ ab_wal_2 = {
 				}
 				set_country_flag = integrating_the_english_flag
 			}
-			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_largest_navy_in_europe_tooltip
 				first_limit = "NOT = {
@@ -1783,6 +1780,14 @@ ab_wal_2 = {
 			change_government_reform_progress = 50"
 			}
 			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_english_ruler_tooltip
+				first_limit = "has_impaled_england_ruler = yes"
+				first_effect = "clean_add_country_modifier = {
+				name = wallachia_destroyed_the_wooden_wall
+				duration = -1
+			}"
+			}
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
@@ -1809,7 +1814,6 @@ ab_wal_2 = {
 				issue = tuh_the_spice_act
 			}"
 			}
-			
 		}
 	}
 	wal_seat_of_the_metropolitan = {
@@ -4137,7 +4141,12 @@ ab_wal_5 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
-				first_effect = ""
+				first_effect = "simple_unlock_issue = {
+				issue = restrict_silk_exports_issue
+			}
+			simple_unlock_issue = {
+				issue = expand_silk_production_issue
+			}"
 			}
 		}
 	}

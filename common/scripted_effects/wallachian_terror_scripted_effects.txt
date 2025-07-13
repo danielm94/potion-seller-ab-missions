@@ -1988,9 +1988,12 @@ wallachian_terror_special_country_impalement_effects = {
 	}
 	else_if = {
 		limit = {
-			is_or_was_tag = {
-				tag = ENG
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
 			}
+			has_impaled_england_ruler = no
 		}
 		wallachian_terror_england_impaler_effects = yes
 		wallachian_terror_england_impaled_effects = yes
@@ -2504,9 +2507,43 @@ wallachian_terror_francia_impaled_effects = {
 }
 
 wallachian_terror_england_impaler_effects = {
+	if ={
+		limit = {
+			is_ruler_impaler = yes
+		}
+		change_terror = {
+			value = 20
+			scaled_with_gain_modifier = yes
+		}
+	}
+	add_navy_tradition = 25
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	add_country_modifier = {
+		name = wallachia_destroyed_the_wooden_wall
+		duration = 10950
+	}
 }
 
 wallachian_terror_england_impaled_effects = {
+	event_target:impaled_country = {
+		if = {
+			limit = {
+				PREV = {
+					is_ruler_impaler = yes
+				}
+			}
+			add_sailors = -100
+			add_stability = -1
+		}
+		add_navy_tradition = -25
+		add_prestige = -20
+		add_country_modifier = {
+			name = eng_wooden_wall_destroyed
+			duration = 10950
+		}
+	}
 }
 
 wallachian_terror_convert_impaled_emperor_to_mana = {
@@ -2670,19 +2707,42 @@ wallachian_terror_special_humiliation_effects = {
 		wallachian_terror_francia_impaler_humiliation_effects = yes
 		wallachian_terror_francia_impaled_humiliation_effects = yes
 	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
+			}
+		}
+		custom_tooltip = england_dunked_in_channel_tooltip
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_england_impaler_humiliation_effects = yes
+		wallachian_terror_england_impaled_humiliation_effects = yes
+		custom_tooltip = AB_EMPTY
+	}
 }
 
 wallachian_terror_francia_impaler_humiliation_effects = {
 	add_prestige_or_monarch_power = {
 		amount = 10
 	}
-	capital_scope = {
-		add_province_modifier = {
-			name = wallachia_the_kings_balls
-			duration = -1
+	if = {
+		limit = {
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = wallachia_the_kings_balls
+				}
+			}
 		}
+		capital_scope = {
+			add_province_modifier = {
+				name = wallachia_the_kings_balls
+				duration = -1
+			}
+		}
+		custom_tooltip = kings_balls_tooltip
 	}
-	custom_tooltip = kings_balls_tooltip
 }
 
 wallachian_terror_francia_impaled_humiliation_effects = {
@@ -2709,5 +2769,20 @@ wallachian_terror_francia_impaled_humiliation_effects = {
 			name = frc_castrated_king
 			duration = -1
 		}
+	}
+}
+
+wallachian_terror_england_impaler_humiliation_effects = {
+	add_navy_tradition = 5
+	add_prestige_or_monarch_power = {
+		amount = 5
+	}
+}
+
+wallachian_terror_england_impaled_humiliation_effects = {
+	event_target:impaled_country = {
+		add_navy_tradition = 5
+		add_prestige = -10
+		add_legitimacy = -25
 	}
 }

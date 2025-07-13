@@ -269,6 +269,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_eng_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = ENG
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -437,6 +445,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_eng_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = ENG
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -600,6 +616,14 @@ defined_text = {
 		trigger = {
 			event_target:impaled_country = {
 				tag = FRA
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_eng_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = ENG
 			}
 		}
 	}
@@ -815,6 +839,32 @@ defined_text = {
 			}
 			event_target:impaled_country = {
 				tag = FRC
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_england_impaler_execution_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = yes
+			}
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_impale_family_default_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = no
+			}
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = ENG
+				}
 			}
 		}
 	}

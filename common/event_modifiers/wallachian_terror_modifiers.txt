@@ -227,3 +227,12 @@ frc_castrated_king = {
 wallachia_the_kings_balls = {
 	prestige = 0.5
 }
+
+wallachia_destroyed_the_wooden_wall = {
+	global_naval_engagement_modifier = 0.25
+	global_naval_barrage_cost = -0.25
+}
+
+eng_wooden_wall_destroyed = {
+	own_coast_naval_combat_bonus = -1
+}

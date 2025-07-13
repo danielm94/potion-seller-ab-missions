@@ -45,3 +45,4 @@
  muslim_volunteers_adu_tooltip: "§VThe barbaric impalement of the Caliph has outraged the faithful. Volunteers from across the Islamic world will arrive to help us seek retribution.§!"
  francia_castration_tooltip: "§V§Y[impaled_country.Monarch.GetName]§! is castrated in front of everyone in §Y[impaled_country.Capital.GetCapitalName]§!, and his family jewels are taken back to §Y[Root.Capital.GetCapitalName]§!.§!"
  kings_balls_tooltip: "§VThis modifier will be removed if §Y[impaled_country.Monarch.GetName]§! somehow manages to get an heir.§!"
+ england_dunked_in_channel_tooltip: "§Y[impaled_country.Monarch.GetName]§! is taken to the coast, stripped, and repeatedly dunked into the cold waters of the English Channel until nearly drowned. [impaled_country.Monarch.GetSheHeCap] is then left shivering on the beach."

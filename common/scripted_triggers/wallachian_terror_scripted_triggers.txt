@@ -76,6 +76,9 @@ is_special_impaled_country = {
 			is_or_was_tag = {
 				tag = FRA				#France
 			}
+			is_or_was_tag = {
+				tag = ENG				#England
+			}
 		}
 	}
 }
@@ -121,6 +124,9 @@ is_special_execution_country = {
 				tag = ADU				#Andalusia
 			}
 			tag = FRC			#Francia
+			is_or_was_tag = {
+				tag = ENG				#England
+			}
 		}
 	}
 }
@@ -213,4 +219,8 @@ has_impaled_francia_ruler = {
 
 has_impaled_france_ruler = {
 	has_country_flag = wallachia_impaled_france
+}
+
+has_impaled_england_ruler = {
+	has_country_flag = wallachia_impaled_england
 }
