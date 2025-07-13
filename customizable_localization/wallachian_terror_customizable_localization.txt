@@ -251,6 +251,24 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = wallachian_terror_events_frc_impale
+		trigger = {
+			event_target:impaled_country = {
+				tag = FRC
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_impale
+		trigger = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = FRA
+				}
+			}
+		}
+	}
 }
 
 defined_text = {
@@ -387,6 +405,34 @@ defined_text = {
 			event_target:impaled_country = {
 				is_or_was_tag = {
 					tag = ADU
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_frc_humiliate_male
+		trigger = {
+			event_target:impaled_country = {
+				tag = FRC
+				is_female = no
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				tag = FRC
+				is_female = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_humiliate
+		trigger = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = FRA
 				}
 			}
 		}
@@ -538,6 +584,22 @@ defined_text = {
 				is_or_was_tag = {
 					tag = ADU
 				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_frc_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = FRC
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_impale_impaler_personality
+		trigger = {
+			event_target:impaled_country = {
+				tag = FRA
 			}
 		}
 	}
@@ -731,6 +793,28 @@ defined_text = {
 				is_or_was_tag = {
 					tag = ADU
 				}
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_francia_execution_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = no
+			}
+			event_target:impaled_country = {
+				tag = FRC
+			}
+		}
+	}
+	text = {
+		localisation_key = wallachian_terror_events_lombardy_execution_tooltip
+		trigger = {
+			event_target:impaler_country = {
+				is_ruler_impaler = yes
+			}
+			event_target:impaled_country = {
+				tag = FRC
 			}
 		}
 	}

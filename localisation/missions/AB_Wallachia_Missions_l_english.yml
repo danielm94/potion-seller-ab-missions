@@ -226,4 +226,5 @@
  wal_romanianization_of_france_tooltip: "§YOrthodox§! provinces in §YFrance§! that are of §YFrancien§!, §YBurgundian§!, §YNorman§!, or §YWalloon§! culture will slowly be §YRomanianized§! if they border a §YProvinciali§! or §YGalici§! province."
  wal_perm_claim_england_tooltip: "§Y[Root.GetName]§! gains a permanent claim on §YEngland§!." 
  wal_perm_claim_belgium_tooltip: "§Y[Root.GetName]§! gains a permanent claim on §YBelgium§!."
- wine_parliament_issue_enabled_tooltip: "Unlocks the §YModernize Wine Production§! parliament issue."  
+ wine_parliament_issue_enabled_tooltip: "Unlocks the §YModernize Wine Production§! parliament issue."
+ if_we_impaled_french_ruler_tooltip: "If we impaled @FRC §Y[FRC.GetName]§!'s or @FRA §Y[FRA.GetName]§!'s ruler:"

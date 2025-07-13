@@ -1964,56 +1964,45 @@ wallachian_terror_special_country_impalement_effects = {
 		}
 		set_country_flag = wallachia_impaled_andalusia
 	}
-}
-
-wallachian_terror_andalusia_impaler_effects = {
-	add_ruler_modifier = {
-		name = wallachia_impaled_andalusia
-		duration = -1
-	}
-	custom_tooltip = muslims_countries_angry_impaled_caliph_tooltip
-	hidden_effect = {
-		every_country = {
-			limit = {
-				religion_group = muslim
-			}
-			add_opinion = {
-				who = PREV
-				modifier = wallachia_impaled_the_caliph
-			}
-			add_trust = {
-				who = PREV
-				value = -50
-			}
-		}
-	}
-	if = {
+	else_if = {
 		limit = {
-			any_owned_province = {
-				religion_group = muslim
+			event_target:impaled_country = {
+				tag = FRC
 			}
 		}
-		custom_tooltip = AB_EMPTY
-		custom_tooltip = muslim_provinces_angry_impaled_caliph_tooltip
-		tooltip = {
-			add_unrest = 10
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					religion_group = muslim
+		wallachian_terror_francia_impaler_effects = yes
+		wallachian_terror_francia_impaled_effects = yes
+		set_country_flag = wallachia_impaled_francia
+	}
+	else_if = {
+		limit = {
+			event_target:impaled_country = {
+				is_or_was_tag = {
+					tag = FRA
 				}
-				add_unrest = 10
 			}
 		}
+		wallachian_terror_francia_impaler_effects = yes
+		wallachian_terror_francia_impaled_effects = yes
+		set_country_flag = wallachia_impaled_france
 	}
 }
 
-wallachian_terror_andalusia_impaled_effects = {
+wallachian_terror_francia_impaler_effects = {
+	clean_add_country_modifier = {
+		name = wallachia_i_am_the_state
+		duration = 10950
+	}
+	add_prestige_or_monarch_power = {
+		amount = 25
+	}
+}
+
+wallachian_terror_francia_impaled_effects = {
 	event_target:impaled_country = {
-		custom_tooltip = muslim_volunteers_adu_tooltip
-		add_yearly_manpower = 7
-		add_prestige = -20
+		add_prestige = -25
+		add_stability = -3
+		add_legitimacy = -50
 	}
 }
 
@@ -2325,6 +2314,24 @@ wallachian_terror_emperor_impalement_effect = {
 		name = legacy_of_the_antichrist
 		duration = -1
 	}
+	if = {
+		limit = {
+			OR = {
+				tag = FRC
+			}
+		}
+		set_country_flag = wallachia_impaled_francia
+	}
+	if = {
+		limit = {
+			OR = {
+				is_or_was_tag = {
+					tag = FRA
+				}
+			}
+		}
+		set_country_flag = wallachia_impaled_france
+	}
 }
 
 wallachian_terror_nizzarids_abbasids_egypt_impaler_effects = {
@@ -2435,6 +2442,57 @@ wallachian_terror_persia_impaled_effects = {
 	}
 }
 
+wallachian_terror_andalusia_impaler_effects = {
+	add_ruler_modifier = {
+		name = wallachia_impaled_andalusia
+		duration = -1
+	}
+	custom_tooltip = muslims_countries_angry_impaled_caliph_tooltip
+	hidden_effect = {
+		every_country = {
+			limit = {
+				religion_group = muslim
+			}
+			add_opinion = {
+				who = PREV
+				modifier = wallachia_impaled_the_caliph
+			}
+			add_trust = {
+				who = PREV
+				value = -50
+			}
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				religion_group = muslim
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = muslim_provinces_angry_impaled_caliph_tooltip
+		tooltip = {
+			add_unrest = 10
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion_group = muslim
+				}
+				add_unrest = 10
+			}
+		}
+	}
+}
+
+wallachian_terror_andalusia_impaled_effects = {
+	event_target:impaled_country = {
+		custom_tooltip = muslim_volunteers_adu_tooltip
+		add_yearly_manpower = 7
+		add_prestige = -20
+	}
+}
+
 wallachian_terror_convert_impaled_emperor_to_mana = {
 	wallachian_terror_calculate_ruler_mana_sum = yes
 	multiply_variable = {
@@ -2476,6 +2534,7 @@ wallachian_terror_convert_impaled_emperor_to_terror = {
 }
 
 wallachian_terror_humiliation_effect = {
+	wallachian_terror_special_humiliation_effects = yes
 	if = {
 		limit = {
 			event_target:impaler_country = {
@@ -2579,5 +2638,60 @@ impaled_andalusia_mission_bonus_effect = {
 	change_terror = {
 		value = 20
 		scaled_with_gain_modifier = yes
+	}
+}
+
+wallachian_terror_special_humiliation_effects = {
+	if = {
+		limit = {
+			event_target:impaled_country = {
+				tag = FRC
+				is_female = no
+			}
+		}
+		custom_tooltip = francia_castration_tooltip
+		custom_tooltip = AB_EMPTY
+		wallachian_terror_francia_impaler_humiliation_effects = yes
+		wallachian_terror_francia_impaled_humiliation_effects = yes
+	}
+}
+
+wallachian_terror_francia_impaler_humiliation_effects = {
+	add_prestige_or_monarch_power = {
+		amount = 10
+	}
+	capital_scope = {
+		add_province_modifier = {
+			name = wallachia_the_kings_balls
+			duration = -1
+		}
+	}
+	custom_tooltip = kings_balls_tooltip
+}
+
+wallachian_terror_francia_impaled_humiliation_effects = {
+	event_target:impaled_country = {
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			remove_heir = {
+				allow_new_heir = no
+			}
+		}
+		add_opinion = {
+			who = event_target:impaler_country
+			modifier = wallachia_castrated_our_king
+		}
+		add_trust = {
+			who = event_target:impaler_country
+			value = -100
+		}
+		add_prestige = -50
+		add_legitimacy = -50
+		add_ruler_modifier = {
+			name = frc_castrated_king
+			duration = -1
+		}
 	}
 }

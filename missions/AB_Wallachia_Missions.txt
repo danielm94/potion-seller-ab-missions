@@ -1624,6 +1624,18 @@ ab_wal_2 = {
 			set_country_flag = wal_romanianization_of_france
 			custom_tooltip = wal_romanianization_of_france_tooltip
 			custom_tooltip = AB_EMPTY
+			
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_french_ruler_tooltip
+				first_limit = "OR = {
+						has_impaled_francia_ruler = yes
+						has_impaled_france_ruler = yes
+					}"
+				first_effect = "clean_add_country_modifier = {
+				name = wallachia_i_am_the_state
+				duration = -1
+			}"
+			}
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"

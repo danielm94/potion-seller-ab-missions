@@ -86,3 +86,8 @@ wallachia_impaled_the_caliph = {
 	min = -999
 	yearly_decay = 2
 }
+wallachia_castrated_our_king = {
+	opinion = -100
+	min = -999
+	yearly_decay = 1
+}

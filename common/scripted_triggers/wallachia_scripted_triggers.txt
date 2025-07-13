@@ -69,6 +69,10 @@ is_special_impaled_country = {
 			is_or_was_tag = {
 				tag = ADU				#Andalusia
 			}
+			tag = FRC			#Francia
+			is_or_was_tag = {
+				tag = FRA				#France
+			}
 		}
 	}
 }
@@ -113,6 +117,7 @@ is_special_execution_country = {
 			is_or_was_tag = {
 				tag = ADU				#Andalusia
 			}
+			tag = FRC			#Francia
 		}
 	}
 }
@@ -253,6 +258,14 @@ has_impaled_andalusia_ruler = {
 
 has_boiled_andalusia_ruler = {
 	has_country_flag = boiled_adu
+}
+
+has_impaled_francia_ruler = {
+	has_country_flag = wallachia_impaled_francia
+}
+
+has_impaled_france_ruler = {
+	has_country_flag = wallachia_impaled_france
 }
 
 is_adriaticii_romanianization_province = {

@@ -205,3 +205,17 @@ on_province_owner_change = {
 }
 
 
+on_new_heir = {
+	if = {
+		limit = {
+			has_ruler_modifier = frc_castrated_king
+		}
+
+		every_province = {
+			limit = {
+				has_province_modifier = wallachia_the_kings_balls
+			}
+			remove_province_modifier = wallachia_the_kings_balls
+		}
+	}
+}

@@ -213,3 +213,17 @@ wallachia_owned_muslim_province_penalty = {
 	local_unrest = 5
 	local_missionary_strength = -0.08
 }
+
+wallachia_i_am_the_state = {
+	max_absolutism = 5
+}
+
+frc_castrated_king = {
+	heir_chance = -90.01
+	prestige = -1
+	legitimacy = -1
+}
+
+wallachia_the_kings_balls = {
+	prestige = 0.5
+}
