@@ -1951,3 +1951,10 @@ clean_add_country_modifier = {
 		duration = $duration$
 	}
 }
+
+simple_unlock_issue = {
+	custom_tooltip = unlock_issue_$issue$_tt
+	hidden_effect = {
+		set_country_flag = unlocked_issue_$issue$
+	}
+}

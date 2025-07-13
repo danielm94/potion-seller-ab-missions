@@ -760,8 +760,9 @@ ab_wal_1 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_mechanic = romanian_elective_monarchy_mechanic"
-				first_effect = "custom_tooltip = deus_vult_parliament_issue_tooltip
-			set_country_flag = deus_vult_parliament_issue_enabled"
+				first_effect = "simple_unlock_issue = {
+				issue = deus_vult_parliament_issue
+			}"
 			}
 		}
 	}
@@ -1638,8 +1639,9 @@ ab_wal_2 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
-				first_effect = "set_country_flag = wine_parliament_issue_enabled
-				custom_tooltip = wine_parliament_issue_enabled_tooltip"
+				first_effect = "simple_unlock_issue = {
+				issue = wine_parliament_issue
+			}"
 			}
 		}
 	}
@@ -1683,6 +1685,131 @@ ab_wal_2 = {
 			add_permanent_claim_multi_provinces = {
 				target = british_isles_region
 			}
+			custom_tooltip = claims_on_british_overseas_territories_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_or_was_tag = {
+							tag = ENG
+						}
+					}
+					save_event_target_as = england_tag
+				}
+				every_province = {
+					limit = {
+						NOT = {
+							continent = europe
+						}
+						OR = {
+							owned_by = event_target:england_tag
+							owner = {
+								has_colonial_parent = event_target:england_tag
+							}
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = tooltip_line_divider
+			add_navy_tradition = 20
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = english
+					}
+				}
+				add_accepted_culture_or_dip_power_stated = {
+					culture = english
+					dip_reward = yes
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_province = {
+						culture = english_new
+					}
+				}
+				add_accepted_culture_or_dip_power_stated = {
+					culture = english_new
+					dip_reward = yes
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_integrating_the_english
+				duration = -1
+			}
+			custom_tooltip = every_owned_english_province_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_integrating_the_english_province
+					duration = -1
+				}
+				custom_tooltip = applies_to_future_english_provinces_conquered_tooltip
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = english
+							culture = english_new
+						}
+					}
+					add_province_modifier = {
+						name = wallachia_integrating_the_english_province
+						duration = -1
+					}
+				}
+				set_country_flag = integrating_the_english_flag
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_largest_navy_in_europe_tooltip
+				first_limit = "NOT = {
+			any_country = {
+				capital_scope = {
+					continent = europe
+				}
+				navy_size = ROOT
+			}
+		}"
+				first_effect = "add_country_modifier = {
+				name = thalassocracy
+				duration = -1
+			}
+			unlock_government_reform = {
+				government_reform = thalassocracy_reform
+			}
+			change_government_reform_progress = 50"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "halves_parliament_bribe_costs = yes
+			simple_unlock_issue = {
+				issue = tuh_the_tea_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_witchcraft_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_black_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_act_of_representation
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_sugar_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_gold_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_spice_act
+			}"
+			}
+			
 		}
 	}
 	wal_seat_of_the_metropolitan = {
@@ -4010,9 +4137,7 @@ ab_wal_5 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
-				first_effect = "custom_tooltip = silk_parliament_issues_unlocked_tooltip
-			set_country_flag = restrict_silk_exports_issue_enabled
-			set_country_flag = expand_silk_production_issue_enabled"
+				first_effect = ""
 			}
 		}
 	}
@@ -4071,8 +4196,9 @@ ab_wal_5 = {
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
 				first_effect = "custom_tooltip = movilesti_can_propagate_religion_bonus_tooltip
 			set_country_flag = movilesti_can_propagate_religion_bonus
-			custom_tooltip = finance_dacian_india_company_tooltip
-			set_country_flag = finance_dacian_india_company"
+			simple_unlock_issue = {
+				issue = finance_dacian_india_company_issue
+			}"
 			}
 		}
 	}

@@ -1,0 +1,7 @@
+free_slot_for_english = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_english_new = {
+	num_accepted_cultures = 1
+}

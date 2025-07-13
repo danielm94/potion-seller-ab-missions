@@ -363,3 +363,21 @@ on_consecrate_patriarch = {
 		}
 	}
 }
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = integrating_the_english_flag
+			}
+			OR = {
+				culture = english
+				culture = english_new
+			}
+		}
+		add_province_modifier = {
+			name = wallachia_integrating_the_english_province
+			duration = -1
+		}
+	}
+}

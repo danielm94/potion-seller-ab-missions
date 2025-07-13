@@ -1,11 +1,10 @@
 restrict_silk_exports_issue = {
-	# 1, 2, or 3; meaning mil, dip, or adm, respectively.
 	category = 2
-	# The conditions that allow the issue to be available.
 	allow = {
-		has_country_flag = restrict_silk_exports_issue_enabled
+		has_issue_unlocked = {
+			issue = restrict_silk_exports_issue
+		}
 	}
-	# Optional. Commands executed upon enacting the issue
 	effect = {
 		change_price = {
 			trade_goods = silk
@@ -33,11 +32,9 @@ restrict_silk_exports_issue = {
 			}
 		}
 	}
-	# Optional. Modifier applied for the duration of the downtime between debates.
 	modifier = {
 		mercantilism_cost = -0.1
 	}
-	# Chance for issue to appear.
 	chance = {
 		factor = 3
 		modifier = {
@@ -57,21 +54,19 @@ restrict_silk_exports_issue = {
 			mercantilism = 100
 		}
 	}
-	# Chance AI will enact it
 	ai_will_do = {
 		factor = 500
 	}
 }
 
 expand_silk_production_issue = {
-	# 1, 2, or 3; meaning mil, dip, or adm, respectively.
 	category = 2
-	# The conditions that allow the issue to be available.
 	allow = {
-		has_country_flag = expand_silk_production_issue_enabled
+		has_issue_unlocked = {
+			issue = expand_silk_production_issue
+		}
 		wool = 1
 	}
-	# Optional. Commands executed upon enacting the issue
 	effect = {
 		change_price = {
 			trade_goods = silk
@@ -125,11 +120,9 @@ expand_silk_production_issue = {
 			}
 		}
 	}
-	# Optional. Modifier applied for the duration of the downtime between debates.
 	modifier = {
 		expand_infrastructure_cost_modifier = -0.1
 	}
-	# Chance for issue to appear.
 	chance = {
 		factor = 3
 		modifier = {
@@ -149,20 +142,18 @@ expand_silk_production_issue = {
 			wool = 40
 		}
 	}
-	# Chance AI will enact it
 	ai_will_do = {
 		factor = 500
 	}
 }
 
 finance_dacian_india_company_issue = {
-	# 1, 2, or 3; meaning mil, dip, or adm, respectively.
 	category = 2
-	# The conditions that allow the issue to be available.
 	allow = {
-		has_country_flag = finance_dacian_india_company_issue_enabled
+		has_issue_unlocked = {
+			issue = finance_dacian_india_company_issue
+		}
 	}
-	# Optional. Commands executed upon enacting the issue
 	effect = {
 		custom_tooltip = finance_dacian_india_company_issue_advisor_tooltip
 		if = {
@@ -224,16 +215,13 @@ finance_dacian_india_company_issue = {
 			}
 		}
 	}
-	# Optional. Modifier applied for the duration of the downtime between debates.
 	modifier = {
 		trade_company_investment_cost = -0.35
 		center_of_trade_upgrade_cost = -0.35
 	}
-	# Chance for issue to appear.
 	chance = {
 		factor = 5
 	}
-	# Chance AI will enact it
 	ai_will_do = {
 		factor = 500
 	}
@@ -242,7 +230,9 @@ finance_dacian_india_company_issue = {
 deus_vult_parliament_issue = {
 	category = 1
 	allow = {
-		has_country_flag = deus_vult_parliament_issue_enabled
+		has_issue_unlocked = {
+			issue = deus_vult_parliament_issue
+		}
 	}
 	modifier = {
 		cb_on_religious_enemies = yes
@@ -280,15 +270,17 @@ deus_vult_parliament_issue = {
 wine_parliament_issue = {
 	category = 3
 	allow = {
-		has_country_flag = wine_parliament_issue_enabled
+		has_issue_unlocked = {
+			issue = wine_parliament_issue
+		}
 	}
 	effect = {
 		custom_tooltip = wine_parliament_issue_effect_tooltip
 		tooltip = {
 			add_province_modifier = {
-					name = tuh_french_wine_production_techniques
-					duration = 3650
-				}
+				name = tuh_french_wine_production_techniques
+				duration = 3650
+			}
 		}
 		hidden_effect = {
 			every_owned_province = {
@@ -323,5 +315,231 @@ wine_parliament_issue = {
 	}
 	ai_will_do = {
 		factor = 10
+	}
+}
+
+tuh_the_tea_act = {
+	category = 4
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_tea_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_tea_act
+		}
+		tea = 2
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_tea_act
+		}
+		change_price = {
+			trade_goods = tea
+			key = the_tea_act
+			value = 0.5
+			duration = -1
+		}
+		add_mercantilism = 5
+	}
+	modifier = {
+		trade_efficiency = 0.33
+	}
+	effect_duration = 5
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_witchcraft_act = {
+	category = 4
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = the_witchcraft_act
+		}
+		religion_group = christian
+		has_issue_unlocked = {
+			issue = tuh_the_witchcraft_act
+		}
+		NOT = {
+			current_age = age_of_discovery
+		}
+		NOT = {
+			current_age = age_of_revolutions
+		}
+		NOT = {
+			current_age = age_of_imperialism
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = the_witchcraft_act
+		}
+	}
+	modifier = {
+		tolerance_own = 2
+		global_heretic_missionary_strength = 0.05
+		missionaries = 1
+	}
+	effect_duration = 20
+	chance = {
+		factor = 2
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_black_act = {
+	category = 4
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = the_black_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_black_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = the_black_act
+		}
+		add_stability_or_adm_power = yes
+	}
+	modifier = {
+		harsh_treatment_cost = -0.5
+		stability_cost_modifier = -0.33
+		global_rebel_suppression_efficiency = 0.5
+	}
+	effect_duration = 20
+	chance = {
+		factor = 2
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_act_of_representation = {
+	category = 4
+	allow = {
+		has_issue_unlocked = {
+			issue = tuh_act_of_representation
+		}
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_act_of_representation
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_act_of_representation
+		}
+		add_country_modifier = {
+			name = act_of_representation_parliament
+			duration = -1
+		}
+	}
+	backing_percentage = 0
+	modifier = {
+		diplomatic_reputation = 2
+		diplomatic_annexation_cost = -0.15
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_sugar_act = {
+	category = 2
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_sugar_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_sugar_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_sugar_act
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = sugar
+		}
+	}
+	modifier = {
+		colony_development_boost = 1
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_gold_act = {
+	category = 2
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_gold_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_gold_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_gold_act
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = gold
+		}
+	}
+	modifier = {
+		colony_development_boost = 1
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tuh_the_spice_act = {
+	category = 2
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = tuh_the_spice_act
+		}
+		has_issue_unlocked = {
+			issue = tuh_the_spice_act
+		}
+	}
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = tuh_the_spice_act
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = spices
+		}
+		increase_trade_goods_discovery = {
+			trade_goods = cloves
+		}
+	}
+	modifier = {
+		colony_development_boost = 1
+	}
+	chance = {
+		factor = 5
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
