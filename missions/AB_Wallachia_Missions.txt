@@ -789,6 +789,63 @@ ab_wal_1 = {
 	}
 }
 
+ab_wal_locked_timed_mission = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		NOT = {
+			has_country_flag = wal_unlocked_timed
+		}
+		NOT = {
+			has_country_flag = wal_failed_timed
+		}
+	}
+	has_country_shield = yes
+	wal_rome_mania_locked_mission = {
+		icon = mission_timed
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = wal_rome_mania_locked_mission_desc
+				has_country_flag = crn_you_cant_get_this
+			}
+		}
+		effect = {
+			custom_tooltip = wal_rome_mania_locked_mission_desc
+		}
+	}
+}
+
+ab_wal_timed_mission = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		has_country_flag = wal_unlocked_timed
+		NOT = {
+			has_country_flag = wal_failed_timed
+		}
+	}
+	has_country_shield = yes
+	wal_rome_mania = {
+		icon = GFX_wal_rome_mania
+		position = 1
+		trigger = {
+			mission_completed = wal_roman_empire
+			mission_completed = wal_mare_nostrum
+			NOT = {
+				is_date = 1600.1.1
+			}
+		}
+		effect = {
+			custom_tooltip = wal_rome_mania_locked_mission_desc
+		}
+	}
+}
+
 ab_wal_2 = {
 	slot = 2
 	generic = no
@@ -2650,6 +2707,12 @@ ab_wal_3 = {
 			}
 		}
 		trigger = {
+			owns_all_provinces = {
+				OR = {
+					eastern_roman_empire_province_cb_trigger = yes
+					western_roman_empire_province_cb_trigger = yes
+				}
+			}
 		}
 		effect = {
 		}
@@ -2949,6 +3012,12 @@ ab_wal_4 = {
 			}
 			country_event = {
 				id = AB_wallachia_events.21
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_unlocked_rome_mania_tooltip
+			set_country_flag = wal_unlocked_timed
+			hidden_effect = {
+				swap_non_generic_missions = yes
 			}
 		}
 	}
