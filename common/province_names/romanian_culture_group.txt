@@ -427,6 +427,7 @@
 1119 = "Coasta Granelor"
 1120 = "Bambuc"
 1126 = "Coasta de Fildes"
+1127 = "Pasajul de Aur"
 1130 = "Tadmeca"
 1131 = "Masina"
 1134 = "Jene"
