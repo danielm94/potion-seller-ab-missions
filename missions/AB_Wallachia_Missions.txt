@@ -2707,10 +2707,21 @@ ab_wal_3 = {
 			}
 		}
 		trigger = {
-			owns_all_provinces = {
-				OR = {
-					eastern_roman_empire_province_cb_trigger = yes
-					western_roman_empire_province_cb_trigger = yes
+			#Only check triggers if mission isn't completed for performance.
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = wal_roman_empire
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = wal_roman_empire_trigger_tooltip
+					owns_all_provinces = {
+						OR = {
+							eastern_roman_empire_province_cb_trigger = yes
+							western_roman_empire_province_cb_trigger = yes
+						}
+					}
 				}
 			}
 		}
@@ -3132,50 +3143,58 @@ ab_wal_4 = {
 			}
 		}
 		trigger = {
-			aegean_archipelago_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			151 = {
-				has_trade_building_trigger = yes
-				OR = {
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
+			#Only check triggers if mission isn't completed for performance.
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = wal_secure_the_straits
+					}
 				}
-			}
-			317 = {
-				has_trade_building_trigger = yes
-				OR = {
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
+				aegean_archipelago_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-			}
-			148 = {
-				has_trade_building_trigger = yes
-				OR = {
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
+				151 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
 				}
-			}
-			318 = {
-				has_trade_building_trigger = yes
-				OR = {
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
+				317 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
 				}
-			}
-			146 = {
-				has_trade_building_trigger = yes
-				OR = {
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
+				148 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
 				}
-			}
-			163 = {
-				has_trade_building_trigger = yes
-				OR = {
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
+				318 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				146 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+				}
+				163 = {
+					has_trade_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
 				}
 			}
 		}
@@ -3649,7 +3668,15 @@ ab_wal_4 = {
 			}
 		}
 		trigger = {
-			owns_all_mare_nostrum_provinces = yes
+			#Only check triggers if mission isn't completed for performance.
+			if = {
+				limit = {
+					NOT = {
+						mission_completed = wal_mare_nostrum
+					}
+				}
+				owns_all_mare_nostrum_provinces = yes
+			}
 		}
 		effect = {
 			add_navy_tradition = 25
