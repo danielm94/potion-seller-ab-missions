@@ -496,11 +496,6 @@ country_event = {
 				value = 0
 			}
 		}
-		change_dip = -1
-		change_ruler_stat = {
-			type = mil
-			amount = 1
-		}
 	}
 	option = {
 		name = humane_personality
