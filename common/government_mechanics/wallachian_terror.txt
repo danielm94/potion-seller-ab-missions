@@ -37,7 +37,9 @@ wallachian_terror_mechanic = {
 				trigger = {
 					has_country_flag = tier3_targoviste_princely_court
 				}
-				modifier = { discipline = 0.025 }
+				modifier = {
+					discipline = 0.025
+				}
 			}
 		}
 	}
@@ -216,6 +218,7 @@ wallachian_terror_mechanic = {
 			gui = wallachian_terror_gov_interaction
 			icon = GFX_wallachian_terror_awaken_the_butcher_button
 			trigger = {
+				has_regency = no
 				if = {
 					limit = {
 						is_ruler_impaler = no
@@ -261,9 +264,7 @@ wallachian_terror_mechanic = {
 					limit = {
 						is_ruler_impaler = no
 					}
-					custom_tooltip = can_remove_personality_tooltip
 					hidden_effect = {
-						#This variable declaration is just so the tooltip doesn't shit itself.
 						set_variable = {
 							which = num_of_ruler_personalities
 							value = 0
@@ -279,26 +280,50 @@ wallachian_terror_mechanic = {
 								value = 3
 							}
 						}
-						country_event = {
-							id = wallachian_terror_events.10
+						hidden_effect = {
+							country_event = {
+								id = wallachian_terror_events.10
+							}
 						}
 					}
-					else = {
-						change_dip = -1
-						change_ruler_stat = {
-							type = mil
-							amount = 1
+					custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
+					tooltip = {
+						add_ruler_modifier = {
+							name = impaler_tier_1_tooltip
+							duration = -1
 						}
-						custom_tooltip = awaken_the_butcher_impaler_personality_tooltip
+					}
+					change_dip = -1
+					change_ruler_stat = {
+						type = mil
+						amount = 1
+					}
+					if = {
+						limit = {
+							NOT = {
+								check_variable = {
+									which = num_of_ruler_personalities
+									value = 3
+								}
+							}
+						}
 						change_terror = {
 							value = -30
 							scaled_with_gain_modifier = no
 						}
-						hidden_effect = {
-							#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
-							country_event = {
-								id = AB_wallachia_events.1
+					}
+					else = {
+						tooltip = {
+							change_terror = {
+								value = -30
+								scaled_with_gain_modifier = no
 							}
+						}
+					}
+					hidden_effect = {
+						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
+						country_event = {
+							id = AB_wallachia_events.1
 						}
 					}
 				}
@@ -307,37 +332,11 @@ wallachian_terror_mechanic = {
 						ruler_has_personality = impaler_personality
 					}
 					custom_tooltip = tier2_impaler_upgrade_tooltip
-					if = {
-						limit = {
-							OR = {
-								religion = orthodox
-								religion = nestorian
-							}
+					tooltip = {
+						add_ruler_modifier = {
+							name = impaler_tier_2_tooltip
+							duration = -1
 						}
-						custom_tooltip = tier2_impaler_upgrade_patriarch_tooltip
-					}
-					else_if = {
-						limit = {
-							religion = catholic
-						}
-						custom_tooltip = tier2_impaler_upgrade_papal_tooltip
-					}
-					else_if = {
-						limit = {
-							OR = {
-								religion = anglican
-								religion = protestant
-								religion = hussite
-								religion = gaelic_ab
-							}
-						}
-						custom_tooltip = tier2_impaler_upgrade_church_power_tooltip
-					}
-					else_if = {
-						limit = {
-							religion = reformed
-						}
-						custom_tooltip = tier2_impaler_upgrade_fervor_tooltip
 					}
 					change_terror = {
 						value = -50
@@ -355,6 +354,12 @@ wallachian_terror_mechanic = {
 						ruler_has_personality = impaler2_personality
 					}
 					custom_tooltip = tier3_impaler_upgrade_tooltip
+					tooltip = {
+						add_ruler_modifier = {
+							name = impaler_tier_3_tooltip
+							duration = -1
+						}
+					}
 					custom_tooltip = tier3_bonus_ability_tooltip
 					change_terror = {
 						value = -75
@@ -366,6 +371,14 @@ wallachian_terror_mechanic = {
 							id = AB_wallachia_events.1
 						}
 					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							ruler_has_personality = impaler3_personality
+						}
+					}
+					custom_tooltip = impaler_warning_tooltip
 				}
 			}
 			cooldown_years = 0
