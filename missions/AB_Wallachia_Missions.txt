@@ -835,13 +835,12 @@ ab_wal_timed_mission = {
 		position = 1
 		trigger = {
 			mission_completed = wal_roman_empire
-			mission_completed = wal_mare_nostrum
 			NOT = {
 				is_date = 1600.1.1
 			}
 		}
 		effect = {
-			custom_tooltip = wal_rome_mania_locked_mission_desc
+			set_country_flag = always_augustus
 		}
 	}
 }
@@ -2708,6 +2707,7 @@ ab_wal_3 = {
 		}
 		trigger = {
 			#Only check triggers if mission isn't completed for performance.
+			mission_completed = wal_mare_nostrum
 			if = {
 				limit = {
 					NOT = {
@@ -2726,6 +2726,74 @@ ab_wal_3 = {
 			}
 		}
 		effect = {
+			custom_tooltip = permanent_claim_on_europe_tooltip
+			hidden_effect = {
+				europe = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						is_wasteland = no
+						is_sea = no
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = AB_EMPTY
+			add_power_projection = {
+				type = wallachia_roman_empire_pp
+				amount = 30
+			}
+			custom_tooltip = PERMANENT_POWER_PROJECTION_TT
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_pax_romana
+				duration = 21900
+			}
+			hidden_effect = {
+				set_variable = {
+					which = num_of_ruler_personalities
+					value = 0
+				}
+				get_number_of_ruler_personalities = {
+					var_name = num_of_ruler_personalities
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = num_of_ruler_personalities
+						value = 3
+					}
+				}
+				tooltip = {
+					add_ruler_personality = augustus_personality
+					add_ruler_modifier = {
+						name = augustus_personality_tooltip
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = AB_wallachia_events.40
+					}
+				}
+			}
+			else = {
+				add_ruler_personality = augustus_personality
+				tooltip = {
+					add_ruler_modifier = {
+						name = augustus_personality_tooltip
+						duration = -1
+					}
+				}
+			}
+			set_country_flag = allow_augustus_personality
+			custom_tooltip = allow_augustus_personality_tooltip
 		}
 	}
 }

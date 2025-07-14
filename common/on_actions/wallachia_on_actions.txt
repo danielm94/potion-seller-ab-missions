@@ -381,3 +381,30 @@ on_province_owner_change = {
 		}
 	}
 }
+
+on_new_monarch = {
+	if = {
+		limit = {
+			has_country_flag = always_augustus
+		}
+		add_ruler_personality = augustus_personality
+	}
+}
+
+on_new_heir = {
+	if = {
+		limit = {
+			has_country_flag = always_augustus
+		}
+		add_heir_personality = augustus_personality
+	}
+}
+
+on_new_consort = {
+	if = {
+		limit = {
+			has_country_flag = always_augustus
+		}
+		add_queen_personality  = augustus_personality
+	}
+}

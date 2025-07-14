@@ -32,3 +32,10 @@ wallachia_slayed_the_bane_of_christendom_pp = {
 	power = 1
 	yearly_decay = 1
 }
+
+wallachia_roman_empire_pp = {
+	min = 1
+	max = 30
+	power = 1
+	yearly_decay = 0.001
+}

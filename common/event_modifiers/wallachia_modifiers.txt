@@ -709,6 +709,7 @@ wallachia_mare_nostrum_trade_post = {
 	province_trade_power_modifier = 0.5
 	local_center_of_trade_upgrade_cost = -0.5
 }
+
 wallachia_integrating_the_english = {
 	num_of_parliament_issues = 2
 	has_man_of_war = yes
@@ -723,4 +724,13 @@ wallachia_integrating_the_english_province = {
 
 wallachia_architects_of_belgica = {
 	development_cost = -0.1
+}
+
+wallachia_pax_romana = {
+	all_power_cost = -0.05
+}
+
+augustus_personality_tooltip = {
+	core_creation = -0.2
+	province_warscore_cost = -0.1
 }

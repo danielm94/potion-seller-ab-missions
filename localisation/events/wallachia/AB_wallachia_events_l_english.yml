@@ -140,3 +140,4 @@
  AB_wallachia_events.36.eng: "We shall adopt the English strategy: turning our own coastline into an impenetrable fortress."
  AB_wallachia_events.36.dutch: "The Dutch have perfected the art of the trade fleet. Their knowledge will be ours."
  adu_blind_fury_ends_when_at_peace_with_wal_tooltip: "§VThis modifier will be removed once we are at peace with §Y[impaler_country.GetName]§!.§!" 
+ AB_wallachia_events.40.d: "Your ruler currently has three personality traits. You can remove one of them to make room for the Augustus trait."
