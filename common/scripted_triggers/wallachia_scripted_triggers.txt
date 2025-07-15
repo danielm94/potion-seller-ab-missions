@@ -36,8 +36,6 @@ are_bulgars_an_underclass = {
 	has_country_flag = wal_bulgarian_underclass
 }
 
-
-
 has_bran_castle_bonus = {
 	custom_trigger_tooltip = {
 		tooltip = has_bran_castle_bonus_tooltip
@@ -471,5 +469,17 @@ owns_all_mare_nostrum_provinces = {
 		owns = 5152
 		owns = 5209
 		owns = 5153
+	}
+}
+
+has_all_imperiul_roman_provinces = {
+	custom_trigger_tooltip = {
+		tooltip = has_all_imperiul_roman_provinces_tooltip
+		owns_all_provinces = {
+			OR = {
+				eastern_roman_empire_province_cb_trigger = yes
+				western_roman_empire_province_cb_trigger = yes
+			}
+		}
 	}
 }

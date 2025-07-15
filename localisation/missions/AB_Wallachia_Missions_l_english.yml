@@ -255,6 +255,5 @@
  wal_rome_mania_title: "Rome Mania"
  wal_roman_empire_title: "Imperiul Roman"
  wal_roman_empire_desc: "The final task awaits. The heartlands of the West have been reclaimed, the ancient rivals of the East subjugated. Yet, the work of the Caesars is not complete. From the sands of Mesopotamia to the shores of the Atlantic, former Roman lands remain outside our dominion. Every last province that once knew the peace of Rome must be brought back into the imperial fold. We will finish the work of Trajan and Augustus. We will restore the Empire to its greatest extent and usher in an eternal Pax Romana."
- wal_roman_empire_trigger_tooltip: "We must hold all the lands that constituted the Roman Empire at its zenith."
  permanent_claim_on_europe_tooltip: "§Y[Root.GetName]§! gains a permanent claim on the whole continent of §YEurope§!"
  allow_augustus_personality_tooltip: "§VFuture §Yrulers§!, §Yheirs§!, and §Yconsorts§! can receive this personality trait. Having a §Y6§! £adm£, §Y6§! £dip£, or §Y6§! £mil£ skill increases the odds of receiving this trait, as does having the §YConqueror§! or §YLegendary Conqueror§! personality trait.§! " 

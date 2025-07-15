@@ -2714,15 +2714,7 @@ ab_wal_3 = {
 						mission_completed = wal_roman_empire
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = wal_roman_empire_trigger_tooltip
-					owns_all_provinces = {
-						OR = {
-							eastern_roman_empire_province_cb_trigger = yes
-							western_roman_empire_province_cb_trigger = yes
-						}
-					}
-				}
+				has_all_imperiul_roman_provinces = yes
 			}
 		}
 		effect = {
