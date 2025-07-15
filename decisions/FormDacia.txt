@@ -101,14 +101,6 @@ country_decisions = {
 					has_won_wallachian_civil_war = yes
 				}
 				add_government_reform = dacian_autocracy
-				hidden_effect = {
-					variable_government_power_effect = {
-						var = terror_power_amount
-						mechanic_type = wallachian_terror_mechanic
-						power_type = terror_power
-						scaled_with_gain_modifier = no
-					}
-				}
 			}
 			else_if = {
 				limit = {
@@ -116,13 +108,13 @@ country_decisions = {
 					has_voivode_lost_wallachian_civil_war = no
 				}
 				add_government_reform = dacian_kingdom
-				hidden_effect = {
-					variable_government_power_effect = {
-						var = terror_power_amount
-						mechanic_type = wallachian_terror_mechanic
-						power_type = terror_power
-						scaled_with_gain_modifier = no
-					}
+			}
+			hidden_effect = {
+				variable_government_power_effect = {
+					var = terror_power_amount
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					scaled_with_gain_modifier = no
 				}
 			}
 			country_event = {
