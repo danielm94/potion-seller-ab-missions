@@ -836,13 +836,77 @@ ab_wal_timed_mission = {
 		trigger = {
 			mission_completed = wal_roman_empire
 			NOT = {
-				is_date = 1600.1.1
+				is_year = 1600
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = {
+						ruler_has_personality = augustus_personality
+					}
+				}
+				hidden_effect = {
+					set_variable = {
+						which = num_of_ruler_personalities
+						value = 0
+					}
+					get_number_of_ruler_personalities = {
+						var_name = num_of_ruler_personalities
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = num_of_ruler_personalities
+							value = 3
+						}
+					}
+					tooltip = {
+						add_ruler_personality = augustus_personality
+						custom_tooltip = augustus_personality_explained_tooltip
+						add_ruler_modifier = {
+							name = augustus_personality_tooltip
+							duration = -1
+						}
+					}
+					hidden_effect = {
+						country_event = {
+							id = AB_wallachia_events.40
+						}
+					}
+				}
+				else = {
+					add_ruler_personality = augustus_personality
+					custom_tooltip = augustus_personality_explained_tooltip
+					tooltip = {
+						add_ruler_modifier = {
+							name = augustus_personality_tooltip
+							duration = -1
+						}
+					}
+				}
+			}
 			set_country_flag = always_augustus
+			custom_tooltip = always_augustus_tooltip
+			custom_tooltip = AB_EMPTY
+			clean_add_country_modifier = {
+				name = wallachia_pax_romana
+				duration = -1
+			}
 		}
 	}
+}
+
+ab_wal_failed_timed_mission = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_access_to_wallachian_missions = yes
+		has_country_flag = wal_failed_timed
+	}
+	has_country_shield = yes
 }
 
 ab_wal_2 = {

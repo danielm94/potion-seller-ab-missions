@@ -3726,3 +3726,30 @@ country_event = {
 		}
 	}
 }
+
+#Rome Mania timed mission failed
+country_event = {
+	id = AB_wallachia_events.42
+	title = AB_wallachia_events.42.t
+	desc = AB_wallachia_events.42.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	trigger = {
+		has_country_flag = wal_unlocked_timed
+		is_year = 1600
+		NOT = {
+			mission_completed = wal_rome_mania
+		}
+
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = wal_unlocked_timed
+			set_country_flag = wal_failed_timed
+			swap_non_generic_missions = yes
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = AB_wallachia_events.42.a
+	}
+}
