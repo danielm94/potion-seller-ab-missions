@@ -110,6 +110,72 @@ dacian_kingdom = {
 		can_provoke_coalition = yes
 	}
 }
+dacian_roman_empire = {
+	icon = "dacian_roman_empire"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	fixed_rank = 3
+	potential = {
+		tag = ROD
+		is_or_was_wallachia = yes
+		has_won_wallachian_civil_war = no
+		has_voivode_lost_wallachian_civil_war = no
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.1
+		global_autonomy = -0.15
+		governing_capacity = 500
+		num_accepted_cultures = 1
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.1
+		max_absolutism = 5
+	}
+	government_abilities = {
+		wallachian_terror_mechanic
+	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
+		can_provoke_coalition = yes
+		enables_pronoias = yes
+	}
+}
+dacian_roman_autocracy = {
+	icon = "dacian_roman_autocracy"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	fixed_rank = 3
+	potential = {
+		tag = ROD
+		is_or_was_wallachia = yes
+		has_won_wallachian_civil_war = yes
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		global_autonomy = -0.15
+		all_estate_influence_modifier = -0.2
+		governing_capacity = 500
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.1
+		years_of_nationalism = -10
+		max_absolutism = 10
+		max_absolutism_effect = 0.1
+	}
+	government_abilities = {
+		wallachian_terror_mechanic
+	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
+		can_provoke_coalition = yes
+		enables_pronoias = yes
+	}
+}
 
 #Won the civil war
 dacian_autocracy = {

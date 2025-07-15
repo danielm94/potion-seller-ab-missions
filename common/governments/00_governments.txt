@@ -210,6 +210,9 @@ monarchy = {
 				dacian_autocracy
 				wallachian_elective_monarchy
 				dacian_elective_monarchy
+				roman_elective_monarchy
+				dacian_roman_empire
+				dacian_roman_autocracy
 			}
 		}
 		hereditary_vs_nobility = {

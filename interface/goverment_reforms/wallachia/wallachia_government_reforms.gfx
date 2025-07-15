@@ -28,6 +28,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/government_reform_icons/dacian_elective_monarchy.dds"
 	}
 	spriteType = {
+		name = "government_reform_roman_elective_monarchy"
+		texturefile = "gfx/interface/government_reform_icons/roman_elective_monarchy.dds"
+	}
+	spriteType = {
+		name = "government_reform_dacian_roman_empire"
+		texturefile = "gfx/interface/government_reform_icons/dacian_roman_empire.dds"
+	}
+	spriteType = {
+		name = "government_reform_dacian_roman_autocracy"
+		texturefile = "gfx/interface/government_reform_icons/dacian_roman_autocracy.dds"
+	}
+	spriteType = {
 		name = "government_reform_dominance_of_the_ruling_house"
 		texturefile = "gfx/interface/government_reform_icons/dominance_of_the_ruling_house.dds"
 	}
