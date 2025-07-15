@@ -7,6 +7,9 @@ country_decisions = {
 				has_country_flag = formed_dacia
 			}
 			NOT = {
+				tag = ROD
+			}
+			NOT = {
 				tag = HLR
 			}
 			NOT = {

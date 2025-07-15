@@ -8,6 +8,9 @@ country_decisions = {
 				has_country_flag = formed_the_united_houses
 			}
 			NOT = {
+				tag = ROD
+			}
+			NOT = {
 				tag = HLR
 			}
 			NOT = {
