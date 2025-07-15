@@ -480,6 +480,15 @@ country_event = {
 		set_country_flag = wal_elective_monarchy
 		if = {
 			limit = {
+				tag = ROD
+			}
+			country_event = {
+				id = AB_wallachia_events.41
+			}
+			add_government_reform = roman_elective_monarchy
+		}
+		else_if = {
+			limit = {
 				tag = DAC
 			}
 			set_country_flag = formed_the_united_houses
@@ -3683,5 +3692,37 @@ country_event = {
 		}
 		remove_ruler_personality = impaler3_personality
 		add_ruler_personality = augustus_personality
+	}
+}
+
+#New traditions and ambitions for Dacia
+country_event = {
+	id = AB_wallachia_events.41
+	title = AB_wallachia_events.41.t
+	desc = {
+		desc = AB_wallachia_events.41_rem_desc
+		trigger = {
+			has_country_flag = wal_elective_monarchy
+		}
+	}
+	desc = {
+		desc = AB_wallachia_events.41_terror_desc
+		trigger = {
+			NOT = {
+				has_country_flag = wal_elective_monarchy
+			}
+		}
+	}
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = AB_wallachia_events.10.a
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = AB_wallachia_events.10.b
+		ai_chance = {
+			factor = 0
+		}
 	}
 }

@@ -1796,6 +1796,12 @@ country_event = {
 			}
 			if = {
 				limit = {
+					tag = ROD
+				}
+				add_government_reform = dacian_roman_autocracy
+			}
+			else_if = {
+				limit = {
 					tag = DAC
 				}
 				add_government_reform = dacian_autocracy
@@ -1865,7 +1871,21 @@ country_event = {
 		}
 		remove_estate_privilege = estate_nobles_dominance_of_the_boierime
 		tooltip = {
-			add_government_reform = wallachian_autocracy
+			if = {
+				limit = {
+					tag = ROD
+				}
+				add_government_reform = dacian_roman_autocracy
+			}
+			else_if = {
+				limit = {
+					tag = DAC
+				}
+				add_government_reform = dacian_autocracy
+			}
+			else = {
+				add_government_reform = wallachian_autocracy
+			}
 		}
 	}
 	option = {
@@ -1930,7 +1950,21 @@ country_event = {
 			set_country_flag = disabled_rebels_from_seized_land_for_estate_nobles
 		}
 		tooltip = {
-			add_government_reform = wallachian_autocracy
+			if = {
+				limit = {
+					tag = ROD
+				}
+				add_government_reform = dacian_roman_autocracy
+			}
+			else_if = {
+				limit = {
+					tag = DAC
+				}
+				add_government_reform = dacian_autocracy
+			}
+			else = {
+				add_government_reform = wallachian_autocracy
+			}
 		}
 	}
 }

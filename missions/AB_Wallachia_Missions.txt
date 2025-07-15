@@ -2786,6 +2786,9 @@ ab_wal_3 = {
 			}
 			set_country_flag = allow_augustus_personality
 			custom_tooltip = allow_augustus_personality_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = allow_form_imperiul_roman
+			custom_tooltip = allow_form_imperiul_roman_tooltip
 		}
 	}
 }

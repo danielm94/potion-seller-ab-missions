@@ -255,7 +255,7 @@ ROD_rem_ideas = {
 		development_cost_modifier = -0.05
 	}
 	ROD_rem_sixth = {
-		state_governing_cost = -0.1
+		state_governing_cost = -0.15
 		administrative_efficiency = 0.025
 	}
 	ROD_rem_seventh = {

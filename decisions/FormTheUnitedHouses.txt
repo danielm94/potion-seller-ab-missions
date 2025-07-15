@@ -82,6 +82,12 @@ country_decisions = {
 				id = AB_wallachia_events.12
 			}
 			add_government_reform = dacian_elective_monarchy
+			hidden_effect = {
+				tuh_balance_faction_influence_effect = yes
+				tuh_add_faction_influence_based_on_ruler_dynasty_effect = yes
+				tuh_house_influence_ruler_modifier_effect = yes
+				tuh_set_current_ruling_house_variable_effect = yes
+			}
 		}
 		ai_will_do = {
 			factor = 1
