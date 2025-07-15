@@ -266,6 +266,15 @@ get_number_of_ruler_personalities = {
 	check_for_personality = {
 		ruler_personality = impaler_personality
 	}
+	check_for_personality = {
+		ruler_personality = impaler2_personality
+	}
+	check_for_personality = {
+		ruler_personality = impaler3_personality
+	}
+	check_for_personality = {
+		ruler_personality = augustus_personality
+	}
 }
 
 # Checks for individual personalities
