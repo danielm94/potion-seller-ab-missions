@@ -413,6 +413,7 @@ estate_nobles = {
 		# ]]]
 		#Potion Seller's mission pack
 		estate_nobles_dominance_of_the_boierime
+		estate_nobles_integrate_german_nobility
 	}
 
 	agendas = {

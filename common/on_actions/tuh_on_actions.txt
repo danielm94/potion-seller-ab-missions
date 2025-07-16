@@ -102,3 +102,41 @@ on_parliament_debate_succeeded = {
 		}
 	}
 }
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_nobles_integrate_german_nobility
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+		}
+		add_province_modifier = {
+			name = tuh_integrated_germanic_nobility
+			duration = -1
+		}
+		hidden_effect = {
+			export_to_variable = {
+				which = province_dev_var
+				value = development
+			}
+			multiply_variable = {
+				which = province_dev_var
+				value = 0.05
+			}
+			owner = {
+				set_variable = {
+					which = province_dev_var
+					which = PREV
+				}
+				variable_change_estate_land_share = {
+					estate = estate_nobles
+					var = province_dev_var
+				}
+			}
+		}
+	}
+}

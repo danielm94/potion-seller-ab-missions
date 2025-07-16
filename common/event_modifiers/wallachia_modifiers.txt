@@ -739,3 +739,13 @@ wallachia_true_empire = {
 	legitimacy = 1
 	ae_impact = -0.05
 }
+wallachia_germanic_legions = {
+	infantry_power = 0.05
+	mercenary_cost = -0.25
+	mercenary_manpower = 0.25
+}
+
+wallachia_german_printing_press = {
+	global_institution_spread = 0.1
+	embracement_cost = -0.1
+}

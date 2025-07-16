@@ -764,3 +764,202 @@ variable_add_prestige_or_monarch_power = {
 		}
 	}
 }
+
+#Usage:
+#Scope: Country
+#var: Variable
+#estate: The estate to give or take crownland from
+#Do not use values > +100.000 or < -100.000
+variable_change_estate_land_share = {
+	set_variable = {
+		which = num
+		which = $var$
+	}
+	set_variable = {
+		which = is_negative
+		value = 0
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = num
+					value = 0
+				}
+			}
+		}
+		set_variable = {
+			which = is_negative
+			value = 1
+		}
+		multiply_variable = {
+			which = num
+			value = -1
+		}
+	}
+	set_variable = {
+		which = fraction
+		which = num
+	}
+	set_variable = {
+		which = integer
+		which = num
+	}
+	#-1 rounds down, effectively truncating the decimal
+	round_variable = {
+		which = integer
+		value = -1
+	}
+	subtract_variable = {
+		which = fraction
+		which = integer
+	}
+	change_estate_land_share_fraction_effect = {
+		var = fraction
+		estate = $estate$
+		increment = 0.1
+	}
+	change_estate_land_share_fraction_effect = {
+		var = fraction
+		estate = $estate$
+		increment = 0.01
+	}
+	change_estate_land_share_fraction_effect = {
+		var = fraction
+		estate = $estate$
+		increment = 0.001
+	}
+	change_estate_land_share_integer_effect = {
+		var = integer
+		estate = $estate$
+		increment = 1
+	}
+	change_estate_land_share_integer_effect = {
+		var = integer
+		estate = $estate$
+		increment = 10
+	}
+	change_estate_land_share_integer_effect = {
+		var = integer
+		estate = $estate$
+		increment = 100
+	}
+}
+
+change_estate_land_share_integer_effect = {
+	if = {
+		limit = {
+			var_greater_than_0 = {
+				var = $var$
+			}
+		}
+		set_variable = {
+			which = modulo
+			which = $var$
+		}
+		modulo_variable = {
+			which = modulo
+			value = 10
+		}
+		divide_variable = {
+			which = $var$
+			value = 10
+		}
+		#-1 rounds down, effectively truncating the decimal
+		round_variable = {
+			which = $var$
+			value = -1
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = modulo
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = is_negative
+						value = 1
+					}
+				}
+				change_estate_land_share = {
+					estate = $estate$
+					share = -$increment$
+				}
+			}
+			else = {
+				change_estate_land_share = {
+					estate = $estate$
+					share = $increment$
+				}
+			}
+			subtract_variable = {
+				which = modulo
+				value = 1
+			}
+		}
+	}
+}
+
+change_estate_land_share_fraction_effect = {
+	if = {
+		limit = {
+			var_greater_than_0 = {
+				var = $var$
+			}
+		}
+		multiply_variable = {
+			which = $var$
+			value = 10
+		}
+		set_variable = {
+			which = temp_fraction
+			which = $var$
+		}
+		set_variable = {
+			which = temp_integer
+			which = $var$
+		}
+		#-1 rounds down, effectively truncating the decimal
+		round_variable = {
+			which = temp_integer
+			value = -1
+		}
+		subtract_variable = {
+			which = $var$
+			which = temp_integer
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = temp_integer
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = is_negative
+						value = 1
+					}
+				}
+				change_estate_land_share = {
+					estate = $estate$
+					share = -$increment$
+				}
+			}
+			else = {
+				change_estate_land_share = {
+					estate = $estate$
+					share = $increment$
+				}
+			}
+			subtract_variable = {
+				which = temp_integer
+				value = 1
+			}
+		}
+	}
+}

@@ -72,3 +72,86 @@ estate_nobles_dominance_of_the_boierime = {
 		factor = -1000
 	}
 }
+
+estate_nobles_integrate_german_nobility = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -15	#Change in max absolutism while this privilege is enacted
+	loyalty = -0.05
+	influence = 0.1
+	is_valid = {
+		has_country_flag = unlock_integrating_german_nobility_privilege
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = every_owned_germanic_province_tooltip
+		tooltip = {
+				add_province_modifier = {
+				name = tuh_integrated_germanic_nobility
+				duration = -1
+			}
+			custom_tooltip = integrate_german_nobility_crownland_tooltip
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = this_will_apply_to_all_german_provinces_conquered_tooltip
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					culture_group = germanic
+					culture_group = united_germanic
+				}
+			}
+			add_province_modifier = {
+				name = tuh_integrated_germanic_nobility
+				duration = -1
+			}
+			hidden_effect = {
+				export_to_variable = {
+					which = province_dev_var
+					value = development
+				}
+				multiply_variable = {
+					which = province_dev_var
+					value = 0.05
+				}
+				owner = {
+					set_variable = {
+						which = province_dev_var
+						which = PREV
+					}
+					variable_change_estate_land_share = {
+						estate = estate_nobles
+						var = province_dev_var
+					}
+				}
+			}
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = tuh_integrated_germanic_nobility
+			}
+			remove_province_modifier = tuh_integrated_germanic_nobility
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_attribute = no_absolutism_from_boier_privileges
+		}
+		modifier = {
+			max_absolutism = 15
+		}
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
