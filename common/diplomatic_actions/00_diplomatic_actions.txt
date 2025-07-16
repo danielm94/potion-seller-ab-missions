@@ -185,21 +185,38 @@ abandon_union = {
 
 form_coalition = {
 	condition = {
-		tooltip = MINAGGRESSIVEEXPANSION
+		tooltip = form_coalition_tooltip
 		potential = {	
 		}
 		allow = {
 			has_opinion_modifier = {
 				modifier = aggressive_expansion
 				who = FROM
-			}		
-			NOT = {
-				has_opinion_modifier = {
-					modifier = aggressive_expansion
-					who = FROM
-					value = -49
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = wal_increased_coalition_threshold
+					}
+				}
+				NOT = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+						value = -74
+					}
 				}
 			}
+			else = {
+				NOT = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+						value = -49
+					}
+				}
+			}
+			
 		}
 	}
 }

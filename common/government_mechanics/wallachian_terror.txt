@@ -41,6 +41,12 @@ wallachian_terror_mechanic = {
 					discipline = 0.025
 				}
 			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag =  wallachian_terror_ae_bonus
+				}
+				modifier = { ae_impact = -0.1 }
+			}
 		}
 	}
 	interactions = {

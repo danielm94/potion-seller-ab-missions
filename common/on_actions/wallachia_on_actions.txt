@@ -408,3 +408,7 @@ on_new_consort = {
 		add_queen_personality  = augustus_personality
 	}
 }
+
+on_hre_dismantled = {
+	set_country_flag = dismantled_hre_old_fashioned_way
+}

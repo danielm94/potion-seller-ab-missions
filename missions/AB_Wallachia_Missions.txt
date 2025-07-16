@@ -2447,16 +2447,6 @@ ab_wal_3 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
-				target = inner_austria_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = austria_proper_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = tirol_area
-			}
-			custom_tooltip = tooltip_line_divider
 			complex_dynamic_effect = {
 				first_custom_tooltip = has_vlad_2nd_or_3rd_ruling_tooltip
 				first_limit = "has_vlad_2nd_or_3rd_ruling = yes"
@@ -2493,11 +2483,84 @@ ab_wal_3 = {
 			}
 		}
 	}
-	wal_austria = {
-		icon = end_the_habsburgs
+	wal_dismantle_hre = {
+		icon = mission_dismantle_hre
 		position = 7
 		required_missions = {
 			wal_balkan_hegemony
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = hre_was_dismantled_trigger_tooltip
+				NOT = {
+					hre_size = 1
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = inner_austria_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = austria_proper_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = tirol_area
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = wal_dismantle_hre_ae_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							continent = europe
+						}
+					}
+					add_aggressive_expansion = {
+						who = PREV
+						value = -15
+						apply_calc = no
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_dismantled_the_hre_the_old_fashioned_way_tooltip
+				first_limit = "has_country_flag = dismantled_hre_old_fashioned_way"
+				first_effect = "add_country_modifier = {
+				name = wallachia_true_empire
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_hre_dismantled_because_of_schism_tooltip
+				first_limit = "has_global_flag = imperial_schism_hre_dismantled"
+				first_effect = "add_power_projection = {
+				type = wallachia_caused_hre_collapse_pp
+				amount = 10
+			}
+			custom_tooltip = HAB_BUFF_DIPLOMAT_ADVISOR
+			set_country_flag = hab_diplomat_advisor_buff_flag
+			add_country_modifier = {
+				name = wallachia_true_empire
+				duration = -1
+			}"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_impaled_emperor_and_defeated_the_coalition_tooltip
+				first_limit = "has_country_flag = antichrist_victorius"
+				first_effect = "custom_tooltip  = wallachian_terror_ae_bonus_tooltip
+			set_country_flag = wallachian_terror_ae_bonus
+			custom_tooltip = wal_increased_coalition_threshold_tooltip
+			set_country_flag = wal_increased_coalition_threshold"
+			}
+		}
+	}
+	wal_austria = {
+		icon = end_the_habsburgs
+		position = 8
+		required_missions = {
+			wal_dismantle_hre
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -2549,7 +2612,7 @@ ab_wal_3 = {
 	}
 	wal_south_germany = {
 		icon = interfere_in_germany
-		position = 8
+		position = 9
 		required_missions = {
 			wal_austria
 		}

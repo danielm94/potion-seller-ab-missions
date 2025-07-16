@@ -734,3 +734,8 @@ augustus_personality_tooltip = {
 	core_creation = -0.2
 	province_warscore_cost = -0.1
 }
+
+wallachia_true_empire = {
+	legitimacy = 1
+	ae_impact = -0.05
+}

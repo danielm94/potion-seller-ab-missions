@@ -39,3 +39,10 @@ wallachia_roman_empire_pp = {
 	power = 1
 	yearly_decay = 0.001
 }
+
+wallachia_caused_hre_collapse_pp = {
+	min = 1
+	max = 10
+	power = 1
+	yearly_decay = 1
+}

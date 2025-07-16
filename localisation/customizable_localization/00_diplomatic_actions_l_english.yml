@@ -1,0 +1,3 @@
+﻿l_english:
+ form_coalition_tooltip: "[form_coalition_customizable_localization]"
+ min_aggresive_expansion_75: "You must have at least §Y75§! aggressive expansion opinion penalty towards §Y[From.GetName]§! to join a coalition against them."
