@@ -445,6 +445,7 @@ country_event = {
 	major = yes
 	immediate = {
 		hidden_effect = {
+			set_global_flag = imperial_schism_hre_dismantled
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -792,10 +793,15 @@ country_event = {
 			name = architect_of_sovereignty
 			duration = -1
 		}
-		add_power_projection = {
-			type = dismantled_the_hre_pp
-			amount = 10
+		add_prestige_or_monarch_power = {
+			amount = 100
 		}
+		add_splendor = 200
+		add_power_projection = {
+			type = dismantled_the_hre
+			amount = 25
+		}
+		
 		custom_tooltip = imperial_schism_events.8_opinion_tooltip
 		hidden_effect = {
 			every_country = {
@@ -811,9 +817,6 @@ country_event = {
 					value = 5
 				}
 			}
-		}
-		add_prestige_or_monarch_power = {
-			amount = 50
 		}
 	}
 }
@@ -1150,6 +1153,9 @@ country_event = {
 			duration = 36500
 		}
 		dismantle_hre = yes
+		hidden_effect = {
+			set_global_flag = imperial_schism_hre_dismantled
+		}
 	}
 }
 
