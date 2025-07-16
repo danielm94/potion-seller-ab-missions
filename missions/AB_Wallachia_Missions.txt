@@ -2668,21 +2668,6 @@ ab_wal_3 = {
 				name = wallachia_germanic_legions
 				duration = -1
 			}
-			random_owned_area = {
-				limit = {
-					is_capital = yes
-				}
-				log = "[This.GetName]"
-			}
-			capital_scope = {
-				area_for_scope_province = {
-					type = all
-					add_institution_embracement = {
-						which = printing_press
-						value = 100
-					}
-				}
-			}
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_printing_press_enabled_and_dont_have_tooltip
 				first_limit = "NOT = {
