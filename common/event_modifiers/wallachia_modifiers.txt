@@ -749,3 +749,9 @@ wallachia_german_printing_press = {
 	global_institution_spread = 0.1
 	embracement_cost = -0.1
 }
+
+wallachia_prospering = {
+	local_production_efficiency = 0.15
+	local_prosperity_growth = 1
+	trade_goods_size = 0.5
+}
