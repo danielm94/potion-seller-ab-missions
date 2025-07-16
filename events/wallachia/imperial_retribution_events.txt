@@ -297,15 +297,24 @@ country_event = {
 	picture = IMPALED_SOLDIERS_eventPicture
 	is_triggered_only = yes
 	major = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = antichrist_victorius
+		}
+	}
 	option = {
 		name = imperial_retribution_events.5.a
-		set_country_flag = antichrist_victorius
 		custom_tooltip = antichrist_mil_hegemon_tooltip
 		add_country_modifier = {
 			name = wallachia_antichrist_victorius
 			duration = -1
 		}
 		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		add_splendor = 200
+		add_power_projection = {
+			type = dismantled_the_hre
 			amount = 25
 		}
 		change_terror = {
