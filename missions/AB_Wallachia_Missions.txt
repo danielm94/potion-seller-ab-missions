@@ -831,7 +831,7 @@ ab_wal_timed_mission = {
 	}
 	has_country_shield = yes
 	wal_rome_mania = {
-		icon = GFX_wal_rome_mania
+		icon = gfx_wal_rome_mania
 		position = 1
 		trigger = {
 			mission_completed = wal_roman_empire
@@ -3952,6 +3952,51 @@ ab_wal_4 = {
 			}
 			custom_tooltip = NED_HALVE_THE_NAVAL_HEGEMONY_REQUIREMENTS
 			set_country_flag = jap_halve_naval_hegemony_requirements
+		}
+	}
+	wal_develop_wallachia = {
+		icon = gfx_wal_develop_wallachia
+		position = 15
+		provinces_to_highlight = {
+			area = wallachia_area
+			OR = {
+				NOT = {
+					num_of_times_improved = 5
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				devastation = 1
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+				num_of_times_improved = 5
+				NOT = {
+					devastation = 1
+				}
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			wallachia_area = {
+				add_prosperity = 25
+				add_province_modifier = {
+					name = wallachia_prospering
+					duration = 9125
+				}
+			}
+			define_advisor = {
+				type = planner
+				skill = 1
+				cost_multiplier = 0.5
+			}
 		}
 	}
 }

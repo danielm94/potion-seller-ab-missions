@@ -280,4 +280,6 @@
  unlock_integrating_german_nobility_privilege_tooltip: "We will unlock the §YIntegrate the German Nobility [This.GetNobilityName]§! estate privilege."
  if_printing_press_enabled_and_dont_have_tooltip: "If we haven't embraced the §YPrinting Press§!:"
  if_already_embraced_printing_press_tooltip: "If we have already embraced the §YPrinting Press§!:"
+ wal_develop_wallachia_title: "Develop Wallachia"
+ wal_develop_wallachia_desc: "Power is not measured only by the size of our armies, but by the strength of the land that feeds them. Wallachia is our heartland, the source of our strength. Before we can look outwards to our destiny, we must first look inwards. We will turn our fields into granaries, our towns into centers of commerce, and our homeland into a fortress of prosperity. A strong Wallachia is the foundation upon which all future ambitions will be built."
  
