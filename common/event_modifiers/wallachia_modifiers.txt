@@ -779,3 +779,18 @@ wallachia_moldavian_wine_monopolies = {
 	trade_goods_size = 1
 	trade_goods_size_modifier = 0.25
 }
+
+wallachia_thriving_carpathian_settlement = {
+	local_production_efficiency = 0.15
+	local_prosperity_growth = 1
+}
+
+wallachia_carpathian_mountain_expansion = {
+	local_development_cost = -0.35
+}
+wallachia_carpathian_highlands_expansion = {
+	local_development_cost = -0.2
+}
+wallachia_carpathian_hills_expansion = {
+	local_development_cost = -0.25
+}

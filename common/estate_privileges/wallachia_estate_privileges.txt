@@ -92,7 +92,7 @@ estate_nobles_integrate_german_nobility = {
 	on_granted = {
 		custom_tooltip = every_owned_germanic_province_tooltip
 		tooltip = {
-				add_province_modifier = {
+			add_province_modifier = {
 				name = tuh_integrated_germanic_nobility
 				duration = -1
 			}
@@ -153,5 +153,119 @@ estate_nobles_integrate_german_nobility = {
 	}
 	ai_will_do = {
 		factor = 10
+	}
+}
+
+estate_burghers_wal_carpathian_expansion = {
+	icon = privilege_dev_cost
+	max_absolutism = -10
+	influence = 0.1
+	loyalty = 0.05
+	land_share = 5
+	is_valid = {
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_burghers_wal_carpathian_expansion
+		}
+	}
+	can_select = {
+		any_owned_province = {
+			region = carpathia_region
+			OR = {
+				has_terrain = highlands
+				has_terrain = mountain
+				has_terrain = hills
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = carpathian_expansion_on_granted_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_terrain = mountain
+				region = carpathia_region
+			}
+			add_province_modifier = {
+				name = wallachia_carpathian_mountain_expansion
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_terrain = highlands
+				region = carpathia_region
+			}
+			add_province_modifier = {
+				name = wallachia_carpathian_highlands_expansion
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_terrain = hills
+				region = carpathia_region
+			}
+			add_province_modifier = {
+				name = wallachia_carpathian_hills_expansion
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = carpathian_expansion_on_revoked_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = wallachia_carpathian_mountain_expansion
+					has_province_modifier = wallachia_carpathian_highlands_expansion
+					has_province_modifier = wallachia_carpathian_hills_expansion
+				}
+			}
+			remove_province_modifier = wallachia_carpathian_mountain_expansion
+			remove_province_modifier = wallachia_carpathian_highlands_expansion
+			remove_province_modifier = wallachia_carpathian_hills_expansion
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = wallachia_carpathian_mountain_expansion
+					has_province_modifier = wallachia_carpathian_highlands_expansion
+					has_province_modifier = wallachia_carpathian_hills_expansion
+				}
+			}
+			remove_province_modifier = wallachia_carpathian_mountain_expansion
+			remove_province_modifier = wallachia_carpathian_highlands_expansion
+			remove_province_modifier = wallachia_carpathian_hills_expansion
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = highlands
+					has_terrain = hills
+				}
+				region = carpathia_region
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
 	}
 }

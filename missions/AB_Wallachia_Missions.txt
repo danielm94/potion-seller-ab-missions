@@ -4982,4 +4982,70 @@ ab_wal_5 = {
 			}
 		}
 	}
+	wal_mountain_infrastructure = {
+		icon = gfx_wal_mountain_infrastructure
+		position = 16
+		required_missions = {
+			wal_develop_wallachia
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			OR = {
+				has_road_building_trigger = no
+				NOT = {
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				region = carpathia_region
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+				has_road_building_trigger = yes
+				development = 10
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_prosperity = 25
+				add_province_modifier = {
+					name = wallachia_thriving_carpathian_settlement
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = carpathia_region
+						OR = {
+							has_terrain = mountain
+							has_terrain = hills
+							has_terrain = highlands
+						}
+						has_road_building_trigger = yes
+						development = 10
+					}
+					add_prosperity = 25
+					add_province_modifier = {
+						name = wallachia_thriving_carpathian_settlement
+						duration = 10950
+					}
+				}
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_wal_carpathian_expansion
+			}
+		}
+	}
 }

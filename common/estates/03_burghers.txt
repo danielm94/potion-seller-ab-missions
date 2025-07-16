@@ -355,6 +355,9 @@ estate_burghers = {
 		estate_burghers_saxon_woods_expansion
 		estate_burghers_german_woods_expansion
 		# ]]]
+		# Potion Seller [[[
+		estate_burghers_wal_carpathian_expansion
+		# ]]]
 	}
 
 	agendas = {

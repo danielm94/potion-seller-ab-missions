@@ -91,4 +91,8 @@ spriteTypes = {
 		name = "gfx_wal_moldavian_wineries"
 		texturefile = "gfx/interface/missions/wal/wal_moldavian_wineries.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_mountain_infrastructure"
+		texturefile = "gfx/interface/missions/wal/wal_mountain_infrastructure.dds"
+	}
 }
