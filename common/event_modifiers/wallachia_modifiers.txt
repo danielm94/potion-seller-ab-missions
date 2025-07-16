@@ -763,3 +763,19 @@ wallachia_nexus_of_the_danube = {
 	local_build_cost = -0.25
 	local_regiment_cost = -0.25
 }
+
+wallachia_finest_wine_in_the_east = {
+	prestige = 0.25
+	diplomatic_reputation = 0.5
+}
+
+wallachia_moldavian_winery = {
+	local_production_efficiency = 0.5
+	trade_goods_size_modifier = 0.25
+	local_manpower_modifier = 0.25
+}
+
+wallachia_moldavian_wine_monopolies = {
+	trade_goods_size = 1
+	trade_goods_size_modifier = 0.25
+}

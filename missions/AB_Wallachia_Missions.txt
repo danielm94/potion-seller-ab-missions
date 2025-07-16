@@ -4078,8 +4078,24 @@ ab_wal_4 = {
 			wal_develop_wallachia
 		}
 		provinces_to_highlight = {
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				province_id = 4529
+				province_id = 4530
+				province_id = 4962
+				province_id = 2405
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					base_production = 8
+				}
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
 			}
 		}
 		trigger = {
@@ -4087,28 +4103,103 @@ ab_wal_4 = {
 				country_or_non_sovereign_subject_holds = root
 				base_production = 8
 				has_production_building_trigger = yes
+				has_road_building_trigger = yes
 				num_of_times_expanded_infrastructure = 1
 			}
 			4530 = {
 				country_or_non_sovereign_subject_holds = root
 				base_production = 8
 				has_production_building_trigger = yes
+				has_road_building_trigger = yes
 				num_of_times_expanded_infrastructure = 1
 			}
 			4962 = {
 				country_or_non_sovereign_subject_holds = root
 				base_production = 8
 				has_production_building_trigger = yes
+				has_road_building_trigger = yes
 				num_of_times_expanded_infrastructure = 1
 			}
 			2405 = {
 				country_or_non_sovereign_subject_holds = root
 				base_production = 8
 				has_production_building_trigger = yes
+				has_road_building_trigger = yes
 				num_of_times_expanded_infrastructure = 1
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = wallachia_finest_wine_in_the_east
+				duration = -1
+			}
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_moldavian_winery
+					duration = -1
+				}
+				custom_tooltip = upgrade_workshop_if_has_farm_estate_tooltip
+			}
+			hidden_effect = {
+				4529 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+				4530 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+				4962 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+				2405 = {
+					add_province_modifier = {
+						name = wallachia_moldavian_winery
+						duration = -1
+					}
+					if = {
+						limit = {
+							has_building = farm_estate
+						}
+						upgrade_production_building = yes
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_buffed_wine_monopoly
+			custom_tooltip = wal_buffed_wine_monopoly_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_moldavian_wine_monopolies
+					duration = 4380
+				}
+			}
 		}
 	}
 }
