@@ -2557,7 +2557,7 @@ ab_wal_3 = {
 		}
 	}
 	wal_austria = {
-		icon = end_the_habsburgs
+		icon = prosper_in_piedmont
 		position = 8
 		required_missions = {
 			wal_dismantle_hre
@@ -2608,10 +2608,21 @@ ab_wal_3 = {
 				target = palatinate_area
 			}
 			custom_tooltip = tooltip_line_divider
+			add_army_tradition = 20
+			add_country_modifier = {
+				name = "boh_borders"
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "custom_tooltip = unlock_schonbrunn_bonus_tooltip
+				set_country_flag = rem_unlock_schonbrunn_bonus"
+			}
 		}
 	}
 	wal_south_germany = {
-		icon = interfere_in_germany
+		icon = end_the_habsburgs
 		position = 9
 		required_missions = {
 			wal_austria
@@ -2652,9 +2663,6 @@ ab_wal_3 = {
 			}
 			add_permanent_claim_multi_provinces = {
 				target = south_german_region
-			}
-			add_permanent_claim_multi_provinces = {
-				target = wendia_region
 			}
 			custom_tooltip = tooltip_line_divider
 		}

@@ -19901,10 +19901,18 @@ schonbrunn_palace = {
 		# AB [[[
 		conditional_modifier = {
 			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = TIR_SCHONBRUNN_CONDITION
-					owner = {
-						has_country_flag = tir_unlock_schonbrunn_flag
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TIR_SCHONBRUNN_CONDITION
+						owner = {
+							has_country_flag = tir_unlock_schonbrunn_flag
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = rem_SCHONBRUNN_CONDITION
+						owner = {
+							has_country_flag = unlock_schonbrunn_bonus
+						}
 					}
 				}
 			}
@@ -19931,10 +19939,18 @@ schonbrunn_palace = {
 		# AB [[[
 		conditional_modifier = {
 			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = TIR_SCHONBRUNN_CONDITION
-					owner = {
-						has_country_flag = tir_unlock_schonbrunn_flag
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TIR_SCHONBRUNN_CONDITION
+						owner = {
+							has_country_flag = tir_unlock_schonbrunn_flag
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = rem_SCHONBRUNN_CONDITION
+						owner = {
+							has_country_flag = unlock_schonbrunn_bonus
+						}
 					}
 				}
 			}

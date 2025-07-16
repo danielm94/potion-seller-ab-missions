@@ -270,3 +270,6 @@
  if_we_impaled_emperor_and_defeated_the_coalition_tooltip: "If we ended the §YEmpire§! by impaling its §YEmperor§! and shattering the coalition that came for retribution:"
  wallachian_terror_ae_bonus_tooltip: "§YTerror§! will now grant a scaling §G-5.0%§! Aggressive Expansion Impact modifier instead of §R+5.0%§!."
  wal_increased_coalition_threshold_tooltip: "Countries will now need to have at least §G75§! aggressive expansion opinion penalty towards you join a coalition against you."
+ wal_austria_title: "The Danubian Frontier"
+ wal_austria_desc: "For centuries, these lands were the Roman provinces of Noricum and Pannonia, a bulwark of the Empire's Danubian frontier. After the Western Empire fell, this imperial soil was overrun by generations of barbarian usurpers. The fraudulent 'Holy Roman Empire' gave these petty lords a veneer of legitimacy, an illusion we have now shattered. With their false authority broken, it is time to finish the task. The legions will march north to cleanse these provinces of their squabbling chieftains and restore the Danube as the rightful, undisputed border of the Roman world."
+ unlock_schonbrunn_bonus_tooltip: "We will unlock the §Yconditional modifier§! of §YSchönbrunn Palace§! great project in §Y[134.GetName]§!." 
