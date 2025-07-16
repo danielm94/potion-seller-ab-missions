@@ -755,3 +755,11 @@ wallachia_prospering = {
 	local_prosperity_growth = 1
 	trade_goods_size = 0.5
 }
+
+wallachia_nexus_of_the_danube = {
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_governing_cost = -0.5
+	local_build_cost = -0.25
+	local_regiment_cost = -0.25
+}

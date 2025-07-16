@@ -2029,3 +2029,14 @@ define_advisor_scaling_with_estate_attribute = {
 		}
 	}
 }
+
+#Scope: Province
+enable_bonus_development_on_dev_click_for_province = {
+	hidden_effect = {
+		set_province_flag = bonus_dev_click_province
+		set_variable = {
+			which = bonus_chance
+			value = $chance$
+		}
+	}
+}

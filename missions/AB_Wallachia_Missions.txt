@@ -2971,6 +2971,78 @@ ab_wal_3 = {
 			custom_tooltip = allow_form_imperiul_roman_tooltip
 		}
 	}
+	wal_scaunul_domnesc = {
+		icon = gfx_wal_scaunul_domnesc
+		position = 16
+		required_missions = {
+			wal_seat_of_the_metropolitan
+			wal_develop_wallachia
+		}
+		provinces_to_highlight = {
+			province_id = 161
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_manpower_building_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			161 = {
+				country_or_non_sovereign_subject_holds = root
+				development = 30
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+				province_has_center_of_trade_of_level = 2
+				num_of_times_expanded_infrastructure = 2
+			}
+		}
+		effect = {
+			161 = {
+				change_trade_goods = iron
+				custom_tooltip = bonus_development_on_dev_click_targoviste_tooltip
+				enable_bonus_development_on_dev_click_for_province = {
+					chance = 20
+				}
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					owner = {
+						add_treasury = 1000
+					}
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+				add_province_modifier = {
+					name = wallachia_nexus_of_the_danube
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = architect
+				skill = 2
+				cost_multiplier = 0.5
+			}
+		}
+	}
 }
 
 ab_wal_4 = {
@@ -3997,6 +4069,46 @@ ab_wal_4 = {
 				skill = 1
 				cost_multiplier = 0.5
 			}
+		}
+	}
+	wal_moldavian_wineries = {
+		icon = gfx_wal_moldavian_wineries
+		position = 16
+		required_missions = {
+			wal_develop_wallachia
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4529 = {
+				country_or_non_sovereign_subject_holds = root
+				base_production = 8
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+			4530 = {
+				country_or_non_sovereign_subject_holds = root
+				base_production = 8
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+			4962 = {
+				country_or_non_sovereign_subject_holds = root
+				base_production = 8
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+			2405 = {
+				country_or_non_sovereign_subject_holds = root
+				base_production = 8
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
 		}
 	}
 }

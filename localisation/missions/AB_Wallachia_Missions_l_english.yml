@@ -282,4 +282,6 @@
  if_already_embraced_printing_press_tooltip: "If we have already embraced the §YPrinting Press§!:"
  wal_develop_wallachia_title: "Develop Wallachia"
  wal_develop_wallachia_desc: "Power is not measured only by the size of our armies, but by the strength of the land that feeds them. Wallachia is our heartland, the source of our strength. Before we can look outwards to our destiny, we must first look inwards. We will turn our fields into granaries, our towns into centers of commerce, and our homeland into a fortress of prosperity. A strong Wallachia is the foundation upon which all future ambitions will be built."
- 
+ wal_scaunul_domnesc_title: "Scanul Domensc"
+ wal_scaunul_domnesc_desc: "A ruler's authority emanates from his seat of power. Târgoviște must be transformed into the true Scaunul Domnesc, the undeniable throne of our nation. We will raise its markets, fill its workshops, and pave its roads until the city itself becomes a monument to our will. It must be developed into a bustling metropolis, a center of trade and industry worthy of projecting our power across the Danube and beyond."
+ bonus_development_on_dev_click_targoviste_tooltip: "Developing §Y[This.GetName]§! has a §Y20%§! chance to grant §G+1§! §Ydevelopment§!."
