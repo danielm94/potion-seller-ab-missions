@@ -2609,6 +2609,14 @@ ab_wal_3 = {
 			}
 			custom_tooltip = tooltip_line_divider
 			add_army_tradition = 20
+			134 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = dominate_danubian_trade_key
+				}
+			}
 			add_country_modifier = {
 				name = "boh_borders"
 				duration = -1
