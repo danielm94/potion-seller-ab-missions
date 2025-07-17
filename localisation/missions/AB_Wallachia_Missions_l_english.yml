@@ -301,5 +301,9 @@
  wal_mare_dacia_desc: "The Vlach lands are united under a single banner. The work of conquest is done; the work of construction begins. We must now forge these disparate regions into a single, thriving, and interconnected heartland. Every road paved, every workshop built, and every field developed strengthens the whole. This is the vision of Mare Dacia: a powerful and prosperous nation, the solid foundation upon which all our future ambitions will be built."
  wal_mare_dacia_buildings_trigger_tooltip: "Has at least §Y2§! buildings."
  wal_road_bonus_tooltip: "Road buildings now providing a scaling §G-5.0%§! §YLocal Construction Cost§! and §YLocal Construction Time§! bonus, depending on their tier."
+ wal_balkan_infrastructure_title: "Balkan Infrastructure"
+ wal_balkan_infrastructure_desc: "Our authority now extends over the Balkans. The region is scarred by centuries of conflict and neglect under its former masters. A grand project of road-building and development is necessary. We will connect these lands to our economic heart, transforming this conquered frontier into a prosperous, integrated part of the realm."
+ gain_25_prosperity: "The province will gain §G+25§! §YProsperity§!"
+ mountain_expansion_in_balkans_tooltip: "The estate privilege §YMountain Expansion§! will also negate the development penalties in the §YBalkans§! region." 
 
 

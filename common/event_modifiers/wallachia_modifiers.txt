@@ -786,15 +786,15 @@ wallachia_thriving_carpathian_settlement = {
 	local_prosperity_growth = 1
 }
 
-wallachia_carpathian_mountain_expansion = {
+wallachia_mountain_expansion = {
 	local_development_cost = -0.35
 }
 
-wallachia_carpathian_highlands_expansion = {
+wallachia_highlands_expansion = {
 	local_development_cost = -0.2
 }
 
-wallachia_carpathian_hills_expansion = {
+wallachia_hills_expansion = {
 	local_development_cost = -0.25
 }
 
@@ -811,7 +811,7 @@ wallachia_patriarchate_of_dacia = {
 
 wallachia_pillar_of_the_realm = {
 	local_governing_cost = -0.2
-	local_governing_cost_increase = -30
+	local_governing_cost_increase = -20
 	local_production_efficiency = 0.1
 	local_tax_modifier = 0.1
 	local_manpower_modifier = 0.1
@@ -842,4 +842,9 @@ wallachia_road_4_bonus = {
 wallachia_road_5_bonus = {
 	local_build_cost = -0.25
 	local_build_time = -0.25
+}
+
+wallachia_thriving_balkan_community = {
+	local_production_efficiency = 0.15
+	local_prosperity_growth = 1
 }

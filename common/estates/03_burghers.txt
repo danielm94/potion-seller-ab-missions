@@ -356,7 +356,7 @@ estate_burghers = {
 		estate_burghers_german_woods_expansion
 		# ]]]
 		# Potion Seller [[[
-		estate_burghers_wal_carpathian_expansion
+		estate_burghers_wal_mountain_expansion
 		# ]]]
 	}
 

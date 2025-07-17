@@ -4456,7 +4456,7 @@ ab_wal_4 = {
 				center_of_trade = 1
 				change_trade_goods = cloth
 			}
-			1756= {
+			1756 = {
 				center_of_trade = 1
 				change_trade_goods = cloth
 			}
@@ -5282,9 +5282,7 @@ ab_wal_5 = {
 		effect = {
 			custom_tooltip = for_every_province_that_meets_the_missions_requirements
 			tooltip = {
-				4128 = {
-					add_prosperity = 25
-				}
+				custom_tooltip = gain_25_prosperity
 				add_province_modifier = {
 					name = wallachia_thriving_carpathian_settlement
 					duration = 10950
@@ -5310,8 +5308,60 @@ ab_wal_5 = {
 				}
 			}
 			unlock_estate_privilege = {
-				estate_privilege = estate_burghers_wal_carpathian_expansion
+				estate_privilege = estate_burghers_wal_mountain_expansion
 			}
+		}
+	}
+	wal_balkan_infrastructure = {
+		icon = gfx_wal_balkan_infrastructure
+		position = 18
+		required_missions = {
+			wal_mare_dacia
+			wal_mountain_infrastructure
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = balkan_region
+			OR = {
+				NOT = {
+					num_of_times_improved = 3
+				}
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				region = balkan_region
+				num_of_times_improved = 3
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				custom_tooltip = gain_25_prosperity
+				add_province_modifier = {
+					name = wallachia_thriving_balkan_community
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = balkan_region
+						num_of_times_improved = 3
+						has_road_building_trigger = yes
+					}
+					add_prosperity = 25
+					add_province_modifier = {
+						name = wallachia_thriving_balkan_community
+						duration = 10950
+					}
+				}
+			}
+			custom_tooltip = mountain_expansion_in_balkans_tooltip
+			set_country_flag = mountain_expansion_in_balkans
 		}
 	}
 }
