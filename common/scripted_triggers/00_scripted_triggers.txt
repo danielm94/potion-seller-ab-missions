@@ -1256,6 +1256,8 @@ has_orthodox_religious_icon_trigger = {
 			# AB [[[
 			# Orthodox (unlockable for BUL, MVA, and LUD)
 			current_icon = icon_rostislav
+			# PotionSeller
+			current_icon = icon_paul
 			# Nestorian icons
 			current_icon = icon_nestorius
 			current_icon = icon_shemon
