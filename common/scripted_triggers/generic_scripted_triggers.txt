@@ -196,3 +196,16 @@ is_heretic_hre_prince = {
 		}
 	}
 }
+
+#Scope - Province
+is_most_developed_orthodox_province = {
+	custom_trigger_tooltip = {
+		tooltip = is_most_developed_orthodox_province_tooltip
+		NOT = {
+			any_province = {
+				religion = orthodox
+				higher_development_than = PREV
+			}
+		}
+	}
+}

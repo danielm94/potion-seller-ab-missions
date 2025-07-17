@@ -2260,6 +2260,7 @@ ab_wal_3 = {
 		}
 		provinces_to_highlight = {
 			OR = {
+				area = wallachia_area
 				area = transylvania_area
 				area = southern_transylvania_area
 				area = moldavia_area
@@ -2269,34 +2270,39 @@ ab_wal_3 = {
 			NOT = {
 				AND = {
 					is_core = ROOT
-					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = ROOT
 				}
 			}
 		}
 		trigger = {
+			wallachia_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
 			transylvania_area = {
 				type = all
 				is_core = ROOT
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			southern_transylvania_area = {
 				type = all
 				is_core = ROOT
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			moldavia_area = {
 				type = all
 				is_core = ROOT
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			bessarabia_area = {
 				type = all
 				is_core = ROOT
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			4706 = {
 				is_core = ROOT
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -3079,6 +3085,65 @@ ab_wal_3 = {
 				type = architect
 				skill = 2
 				cost_multiplier = 0.5
+			}
+		}
+	}
+	wal_heart_of_orthodox_world = {
+		icon = gfx_wal_heart_of_orthodox_world
+		position = 17
+		required_missions = {
+			wal_romanian_churches
+			wal_scaunul_domnesc
+		}
+		provinces_to_highlight = {
+			religion = orthodox
+			higher_development_than = 161
+		}
+		trigger = {
+			161 = {
+				development = 45
+				num_free_building_slots = 0
+				num_of_times_expanded_infrastructure = 3
+				has_building = cathedral
+				has_great_project = {
+					type = targoviste_princely_court
+					tier = 1
+				}
+				is_most_developed_orthodox_province = yes
+			}
+			has_orthodox_religious_icon_trigger = yes
+			patriarch_authority = 0.5
+		}
+		effect = {
+			161 = {
+				if = {
+					limit = {
+						has_great_project = {
+							type = targoviste_princely_court
+							tier = 3
+						}
+					}
+					owner = {
+						add_treasury = 4500
+					}
+				}
+				else = {
+					add_great_project_tier = {
+						type = targoviste_princely_court
+						tier = 1
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_dacia
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = patriarch
+				skill = 2
+				cost_multiplier = 0.25
+				location = 161
 			}
 		}
 	}
@@ -4237,6 +4302,121 @@ ab_wal_4 = {
 				add_province_modifier = {
 					name = wallachia_moldavian_wine_monopolies
 					duration = 4380
+				}
+			}
+		}
+	}
+	wal_mare_dacia = {
+		icon = gfx_wal_mare_dacia
+		position = 17
+		required_missions = {
+			wal_moldavian_wineries
+			wal_mountain_infrastructure
+			wal_scaunul_domnesc
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = moldavia_area
+				area = bessarabia_area
+				province_id = 4706
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			moldavia_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			bessarabia_area = {
+				type = all
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+			4706 = {
+				owned_by = ROOT
+				development = 15
+				num_of_times_expanded_infrastructure = 1
+				custom_trigger_tooltip = {
+					tooltip = wal_mare_dacia_buildings_trigger_tooltip
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_we_expanded_infrastructure_in_tooltip
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = wallachia_area
+						area = transylvania_area
+						area = southern_transylvania_area
+						area = moldavia_area
+						area = bessarabia_area
+						province_id = 4706
+						num_of_times_expanded_infrastructure = 1
+					}
+				}
+				owner = {
+					add_adm_power = 5
+				}
+				add_province_modifier = {
+					name = wallachia_negate_expand_infrastructure_penalty
+					duration = -1
+					hidden = yes
 				}
 			}
 		}

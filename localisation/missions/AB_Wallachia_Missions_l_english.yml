@@ -295,5 +295,9 @@
  wal_renaissance_title: "The Vlach Renaissance"
  wal_renaissance_desc: "A new spirit of art and learning is sweeping across the world. In our lands, this spirit will be channeled through our deep Orthodox faith. Our artists will perfect the sacred art of iconography, and our architects will raise magnificent churches to the heavens. Tîrgoviste  will become the heart of this holy flourishing, a beacon of faith and culture that will define our age."
  church_prestige_bonus_tooltip: "§VWhile this modifier is active, we will gain §G+2§! §YPrestige§! for each §YChurch§! built and §G+5§! §YPrestige§! for every §YBasilica§! built.§!"
+ wal_heart_of_orthodox_world_title: "The Heart of Orthodoxy"
+ wal_heart_of_orthodox_world_desc: "Tîrgoviste must become more than the seat of our temporal power; it must become the spiritual heart of the entire Orthodox world. We will raise its spires to pierce the heavens, fill its scriptoriums with learned men, and expand its walls until it is a true megalopolis of faith. Our capital must eclipse all other cities of our religion in splendor, wealth, and devotion. When the world thinks of Orthodoxy, they will think of Tîrgoviste."
+ wal_mare_dacia_buildings_trigger_tooltip: "Has at least §Y2§! buildings."
+ for_every_province_that_we_expanded_infrastructure_in_tooltip: "For" 
 
 

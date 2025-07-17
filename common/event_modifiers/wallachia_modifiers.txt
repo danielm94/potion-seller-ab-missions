@@ -739,6 +739,7 @@ wallachia_true_empire = {
 	legitimacy = 1
 	ae_impact = -0.05
 }
+
 wallachia_germanic_legions = {
 	infantry_power = 0.05
 	mercenary_cost = -0.25
@@ -788,13 +789,31 @@ wallachia_thriving_carpathian_settlement = {
 wallachia_carpathian_mountain_expansion = {
 	local_development_cost = -0.35
 }
+
 wallachia_carpathian_highlands_expansion = {
 	local_development_cost = -0.2
 }
+
 wallachia_carpathian_hills_expansion = {
 	local_development_cost = -0.25
 }
 
 wallachia_renaissance = {
 	institution_spread_from_true_faith = 0.25
+}
+
+wallachia_patriarchate_of_dacia = {
+	yearly_patriarch_authority = 0.001
+	local_great_project_upgrade_cost = -0.25
+	prestige = 0.25
+	manpower_in_culture_group_provinces = 0.25
+}
+
+wallachia_negate_expand_infrastructure_penalty = {
+	local_governing_cost = -0.1
+	local_governing_cost_increase = -15
+}
+
+wallachia_dacian_infrastructure = {
+	
 }

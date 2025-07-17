@@ -99,4 +99,8 @@ spriteTypes = {
 		name = "gfx_wal_renaissance"
 		texturefile = "gfx/interface/missions/wal/wal_renaissance.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_heart_of_orthodox_world"
+		texturefile = "gfx/interface/missions/wal/wal_heart_of_orthodox_world.dds"
+	}
 }
