@@ -3739,7 +3739,6 @@ country_event = {
 		NOT = {
 			mission_completed = wal_rome_mania
 		}
-
 	}
 	immediate = {
 		hidden_effect = {
@@ -3751,5 +3750,83 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = AB_wallachia_events.42.a
+	}
+}
+
+province_event = {
+	id = AB_wallachia_events.43
+	title = AB_wallachia_events.43.t
+	desc = AB_wallachia_events.43.d
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = monthly_income_var
+				value = trigger_value:monthly_income
+				who = owner
+			}
+			set_variable = {
+				which = establish_mine_cost
+				which = monthly_income_var
+			}
+			multiply_variable = {
+				which = establish_mine_cost
+				value = 0.6				# 5% of yearly income = monthly_income * 12 * 0.05. 0.6 = 12 * 0.05
+			}
+			set_variable = {
+				which = salt_money_collected
+				which = monthly_income_var
+			}
+			multiply_variable = {
+				which = salt_money_collected
+				value = 0.3				# 2.5% of yearly income = monthly_income * 12 * 0.025. 0.3 = 12 * 0.025
+			}
+			set_province_flag = salt_event_fired
+		}
+	}
+	option = {
+		name = AB_wallachia_events.43.a
+		change_trade_goods = salt
+		add_province_modifier = {
+			name = wallachia_newly_established_salt_mine
+			duration = 1825
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = five_percent_yearly_income
+					value = 200
+				}
+			}
+			owner = {
+				add_treasury = -200
+			}
+		}
+		else = {
+			owner = {
+				add_years_of_income = -0.05
+			}
+		}
+	}
+	option = {
+		name = AB_wallachia_events.43.b
+		if = {
+			limit = {
+				check_variable = {
+					which = salt_money_collected
+					value = 100
+				}
+			}
+			owner = {
+				add_treasury = 100
+			}
+		}
+		else = {
+			owner = {
+				add_years_of_income = 0.025
+			}
+		}
+		custom_tooltip = no_more_salt_events_tooltip
 	}
 }

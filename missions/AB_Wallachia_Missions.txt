@@ -3124,7 +3124,7 @@ ab_wal_3 = {
 						}
 					}
 					owner = {
-						add_treasury = 4500
+						add_treasury = 3000
 					}
 				}
 				else = {
@@ -3145,6 +3145,86 @@ ab_wal_3 = {
 				cost_multiplier = 0.25
 				location = 161
 			}
+		}
+	}
+	wal_salt_trade = {
+		icon = gfx_wal_salt_trade
+		position = 18
+		required_missions = {
+			wal_mare_dacia
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = salt
+			OR = {
+				NOT = {
+					base_production = 10
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					has_building = wharf
+				}
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			trading_part = {
+				trade_goods = salt
+				value = 0.25
+			}
+			natural_scientist = 3
+			num_of_owned_provinces_with = {
+				value = 10
+				trade_goods = salt
+				base_production = 10
+				num_of_times_expanded_infrastructure = 1
+				has_building = wharf
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_imperial_logistics_system
+				duration = -1
+			}
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				custom_tooltip = upgrade_production_building_generic_tooltip
+				add_province_modifier = {
+					name = wallachia_white_gold_mine
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = salt
+						base_production = 10
+						num_of_times_expanded_infrastructure = 1
+						has_building = wharf
+						has_production_building_trigger = yes
+						has_road_building_trigger = yes
+					}
+					upgrade_production_building = yes
+					add_province_modifier = {
+						name = wallachia_white_gold_mine
+						duration = -1
+					}
+				}
+			}
+			change_price = {
+				trade_goods = salt
+				key = dacian_salt_cartel_key
+				value = 0.25
+				duration = -1
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = can_discover_salt_mines
+			custom_tooltip = can_discover_salt_mines_tooltip
 		}
 	}
 }
@@ -4478,7 +4558,7 @@ ab_wal_5 = {
 	}
 	wal_danubian_fortifications = {
 		icon = protect_against_the_turks
-		position = 2
+		position = 1
 		provinces_to_highlight = {
 			OR = {
 				has_fort_building_trigger = no
@@ -5362,6 +5442,50 @@ ab_wal_5 = {
 			}
 			custom_tooltip = mountain_expansion_in_balkans_tooltip
 			set_country_flag = mountain_expansion_in_balkans
+			hidden_effect = {
+				if = {
+					limit = {
+						has_estate_privilege = estate_burghers_wal_mountain_expansion
+					}
+					every_owned_province = {
+						limit = {
+							region = balkan_region
+							OR = {
+								has_terrain = mountain
+								has_terrain = hills
+								has_terrain = highlands
+							}
+						}
+						if = {
+							limit = {
+								has_terrain = mountain
+							}
+							add_province_modifier = {
+								name = wallachia_mountain_expansion
+								duration = -1
+							}
+						}
+						else_if = {
+							limit = {
+								has_terrain = highlands
+							}
+							add_province_modifier = {
+								name = wallachia_highlands_expansion
+								duration = -1
+							}
+						}
+						else_if = {
+							limit = {
+								has_terrain = hills
+							}
+							add_province_modifier = {
+								name = wallachia_hills_expansion
+								duration = -1
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

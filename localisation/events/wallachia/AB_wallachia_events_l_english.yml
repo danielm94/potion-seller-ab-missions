@@ -147,3 +147,8 @@
  AB_wallachia_events.42.t: "Mission Failed"
  AB_wallachia_events.42.d: "We have failed to complete the mission “Rome Mania” before the year 1600. As a result, the mission will be permanently removed."
  AB_wallachia_events.42.a: "We'll get em next time!"
+ AB_wallachia_events.43.t: "Salt Vein Discovered in [This.GetName]!"
+ AB_wallachia_events.43.d: "Your Grace, our investment in [This.GetName] has yielded an unexpected dividend! While expanding the local infrastructure, work crews have unearthed a massive, deep-running vein of rock salt of exceptional purity. Our engineers confirm that this is no mere surface deposit; it appears to be one of the largest untapped salt domes in the entire region. We have the expertise to establish a full-scale mining operation, a costly and long-term endeavor, or we could simply strip the easily accessible salt for a quick profit. The decision is yours."
+ AB_wallachia_events.43.a: "Have them start digging immediately."
+ AB_wallachia_events.43.b: "It's not worth the cost."
+ no_more_salt_events_tooltip: "§RYou will not get another opportunity to change this province's trade good to §YSalt§!.§!"

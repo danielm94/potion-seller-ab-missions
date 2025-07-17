@@ -499,3 +499,84 @@ on_mil_development = {
 		}
 	}
 }
+
+on_adm_development = {
+	if = {
+		limit = {
+			NOT = {
+				trade_goods = salt
+			}
+			NOT = {
+				has_province_flag = salt_event_fired
+			}
+			owner = {
+				can_discover_salt_mines = yes
+			}
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
+			}
+		}
+		random = {
+			chance = 10
+			province_event = {
+				id = AB_wallachia_events.43
+			}
+		}
+	}
+}
+
+on_dip_development = {
+	if = {
+		limit = {
+			NOT = {
+				trade_goods = salt
+			}
+			NOT = {
+				has_province_flag = salt_event_fired
+			}
+			owner = {
+				can_discover_salt_mines = yes
+			}
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
+			}
+		}
+		random = {
+			chance = 10
+			province_event = {
+				id = AB_wallachia_events.43
+			}
+		}
+	}
+}
+
+on_mil_development = {
+	if = {
+		limit = {
+			NOT = {
+				trade_goods = salt
+			}
+			NOT = {
+				has_province_flag = salt_event_fired
+			}
+			owner = {
+				can_discover_salt_mines = yes
+			}
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
+			}
+		}
+		random = {
+			chance = 10
+			province_event = {
+				id = AB_wallachia_events.43
+			}
+		}
+	}
+}

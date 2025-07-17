@@ -111,4 +111,8 @@ spriteTypes = {
 		name = "gfx_wal_balkan_infrastructure"
 		texturefile = "gfx/interface/missions/wal/wal_balkan_infrastructure.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_salt_trade"
+		texturefile = "gfx/interface/missions/wal/wal_salt_trade.dds"
+	}
 }

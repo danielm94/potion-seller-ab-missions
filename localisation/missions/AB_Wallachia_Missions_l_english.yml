@@ -304,6 +304,9 @@
  wal_balkan_infrastructure_title: "Balkan Infrastructure"
  wal_balkan_infrastructure_desc: "Our authority now extends over the Balkans. The region is scarred by centuries of conflict and neglect under its former masters. A grand project of road-building and development is necessary. We will connect these lands to our economic heart, transforming this conquered frontier into a prosperous, integrated part of the realm."
  gain_25_prosperity: "The province will gain §G+25§! §YProsperity§!"
- mountain_expansion_in_balkans_tooltip: "The estate privilege §YMountain Expansion§! will also negate the development penalties in the §YBalkans§! region." 
-
-
+ mountain_expansion_in_balkans_tooltip: "The estate privilege §YMountain Expansion§! will also negate the development penalties in the §YBalkans§! region."
+ wal_salt_trade_title: "The Imperial Saltworks"
+ wal_salt_trade_desc: "Salt fuels preservation and drives our economy. This initiative will position our nation at the forefront of extraction and refinement techniques, turning our salt mines into paragons of industrial efficiency. Guided by our leading experts and backed bysignificant infrastructure investment, we will establish a new global benchmark. Our ambition is to create an industry whose productivity alone reflects the realm’s unmatched organizational and economic strength."
+ upgrade_production_building_generic_tooltip: "The province gets their §YProduction Building§! upgraded. If a §YFactory§! is present, gain §G2§! £dip£ development."
+ dacian_salt_cartel_key: "Dacian Salt Cartel"
+ can_discover_salt_mines_tooltip: "Everytime you develop a §YMountain§!, §YHills§!, or §YHighland§! province there's a §Y10%§! chance §YSalt§! will be discovered in the province. You can choose whether or not you want the province start producing §YSalt§! when it happens."

@@ -487,3 +487,7 @@ has_all_imperiul_roman_provinces = {
 is_wallachian_mountain_expansion_privilege_extended_to_balkans = {
 	has_country_flag = mountain_expansion_in_balkans
 }
+
+can_discover_salt_mines = {
+	has_country_flag = can_discover_salt_mines
+}

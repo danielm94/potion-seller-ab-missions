@@ -848,3 +848,20 @@ wallachia_thriving_balkan_community = {
 	local_production_efficiency = 0.15
 	local_prosperity_growth = 1
 }
+
+wallachia_white_gold_mine = {
+	local_production_efficiency = 0.25
+	trade_goods_size = 0.25
+	trade_goods_size_modifier = 0.25
+	province_trade_power_modifier = 0.25
+}
+
+wallachia_imperial_logistics_system = {
+	land_attrition = -0.1
+	global_supply_limit_modifier = 0.25
+}
+
+wallachia_newly_established_salt_mine = {
+	trade_goods_size_modifier = -0.5
+	local_production_efficiency = -0.5
+}
