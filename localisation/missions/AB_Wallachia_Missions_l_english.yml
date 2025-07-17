@@ -297,7 +297,9 @@
  church_prestige_bonus_tooltip: "§VWhile this modifier is active, we will gain §G+2§! §YPrestige§! for each §YChurch§! built and §G+5§! §YPrestige§! for every §YBasilica§! built.§!"
  wal_heart_of_orthodox_world_title: "The Heart of Orthodoxy"
  wal_heart_of_orthodox_world_desc: "Tîrgoviste must become more than the seat of our temporal power; it must become the spiritual heart of the entire Orthodox world. We will raise its spires to pierce the heavens, fill its scriptoriums with learned men, and expand its walls until it is a true megalopolis of faith. Our capital must eclipse all other cities of our religion in splendor, wealth, and devotion. When the world thinks of Orthodoxy, they will think of Tîrgoviste."
+ wal_mare_dacia_title: "Mare Dacia"
+ wal_mare_dacia_desc: "The Vlach lands are united under a single banner. The work of conquest is done; the work of construction begins. We must now forge these disparate regions into a single, thriving, and interconnected heartland. Every road paved, every workshop built, and every field developed strengthens the whole. This is the vision of Mare Dacia: a powerful and prosperous nation, the solid foundation upon which all our future ambitions will be built."
  wal_mare_dacia_buildings_trigger_tooltip: "Has at least §Y2§! buildings."
- for_every_province_that_we_expanded_infrastructure_in_tooltip: "For" 
+ wal_road_bonus_tooltip: "Road buildings now providing a scaling §G-5.0%§! §YLocal Construction Cost§! and §YLocal Construction Time§! bonus, depending on their tier."
 
 

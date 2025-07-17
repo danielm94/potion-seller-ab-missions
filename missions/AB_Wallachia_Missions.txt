@@ -4327,6 +4327,16 @@ ab_wal_4 = {
 				NOT = {
 					owned_by = ROOT
 				}
+				NOT = {
+					development = 15
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = no
 			}
 		}
 		trigger = {
@@ -4397,27 +4407,62 @@ ab_wal_4 = {
 			}
 		}
 		effect = {
-			custom_tooltip = for_every_province_that_we_expanded_infrastructure_in_tooltip
-			every_owned_province = {
-				limit = {
-					OR = {
-						area = wallachia_area
-						area = transylvania_area
-						area = southern_transylvania_area
-						area = moldavia_area
-						area = bessarabia_area
-						province_id = 4706
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_adm_power = 5
+				add_province_modifier = {
+					name = wallachia_pillar_of_the_realm
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = wallachia_area
+							area = transylvania_area
+							area = southern_transylvania_area
+							area = moldavia_area
+							area = bessarabia_area
+							province_id = 4706
+						}
+						development = 15
 						num_of_times_expanded_infrastructure = 1
+						num_of_buildings_in_province = 2
+						has_road_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_pillar_of_the_realm
+						duration = -1
+					}
+					owner = {
+						add_adm_power = 5
 					}
 				}
-				owner = {
-					add_adm_power = 5
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_road_bonus_tooltip
+			set_country_flag = wal_road_bonus
+			hidden_effect = {
+				every_province = {
+					limit = {
+						has_road_building_trigger = yes
+					}
+					ab_building_road_effect = yes
 				}
-				add_province_modifier = {
-					name = wallachia_negate_expand_infrastructure_penalty
-					duration = -1
-					hidden = yes
-				}
+			}
+			custom_tooltip = AB_EMPTY
+			156 = {
+				center_of_trade = 1
+				change_trade_goods = cloth
+			}
+			1756= {
+				center_of_trade = 1
+				change_trade_goods = cloth
+			}
+			4706 = {
+				center_of_trade = 1
+				change_trade_goods = cloth
 			}
 		}
 	}
