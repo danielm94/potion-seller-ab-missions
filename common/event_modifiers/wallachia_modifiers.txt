@@ -806,7 +806,7 @@ wallachia_patriarchate_of_dacia = {
 	yearly_patriarch_authority = 0.001
 	local_great_project_upgrade_cost = -0.25
 	prestige = 0.25
-	manpower_in_culture_group_provinces = 0.25
+	development_cost_in_primary_culture = -0.1
 }
 
 wallachia_pillar_of_the_realm = {
