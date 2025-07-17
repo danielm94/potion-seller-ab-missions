@@ -889,3 +889,8 @@ wallachia_a_princely_court = {
 	advisor_cost = -0.25
 	monthly_splendor = 1
 }
+
+wallachia_vlach_supremacy = {
+	manpower_in_culture_group_provinces = 0.25
+	culture_conversion_time = -0.1
+}

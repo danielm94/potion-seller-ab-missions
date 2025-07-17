@@ -784,6 +784,29 @@ ab_wal_1 = {
 			}
 		}
 	}
+	wal_vlach_culture = {
+		icon = gfx_wal_vlach_culture
+		position = 19
+		required_missions = {
+			wal_curtea_domneasca
+		}
+		trigger = {
+			prestige = 80
+			num_of_owned_provinces_with = {
+				value = 50
+				culture_group = romanian_culture_group
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_vlach_supremacy
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+		}
+	}
 }
 
 ab_wal_locked_timed_mission = {
