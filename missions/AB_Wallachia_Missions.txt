@@ -784,6 +784,32 @@ ab_wal_1 = {
 			}
 		}
 	}
+	wal_curtea_domneasca = {
+		icon = gfx_wal_curtea_domneasca
+		position = 18
+		trigger = {
+			has_institution = renaissance
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+			OR = {
+				prestige = 30
+				has_government_power = {
+					value = 30
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+				}
+			}
+			legitimacy = 100
+		}
+		effect = {
+			change_government_reform_progress = 30
+			add_country_modifier = {
+				name = wallachia_a_princely_court
+				duration = 7300
+			}
+		}
+	}
 	wal_vlach_culture = {
 		icon = gfx_wal_vlach_culture
 		position = 19
@@ -2100,32 +2126,6 @@ ab_wal_2 = {
 			}
 		}
 	}
-	wal_curtea_domneasca = {
-		icon = gfx_wal_curtea_domneasca
-		position = 18
-		trigger = {
-			has_institution = renaissance
-			has_adm_advisor_2 = yes
-			has_dip_advisor_2 = yes
-			has_mil_advisor_2 = yes
-			OR = {
-				prestige = 30
-				has_government_power = {
-					value = 30
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
-				}
-			}
-			legitimacy = 100
-		}
-		effect = {
-			change_government_reform_progress = 30
-			add_country_modifier = {
-				name = wallachia_a_princely_court
-				duration = 7300
-			}
-		}
-	}
 	wal_reform_admin = {
 		icon = gfx_wal_reform_admin
 		position = 19
@@ -2170,7 +2170,6 @@ ab_wal_2 = {
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
 				first_effect = "tuh_clear_government_mechanic_cooldowns = yes"
 			}
-			
 		}
 	}
 }
