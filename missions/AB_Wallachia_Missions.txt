@@ -4217,9 +4217,9 @@ ab_wal_4 = {
 			wal_fleet
 		}
 		provinces_to_highlight = {
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			owned_by = ROOT
+			has_dock_building_trigger = no
+			has_shipyard_building_trigger = no
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
