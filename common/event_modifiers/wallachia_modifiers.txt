@@ -884,3 +884,8 @@ wallachia_productive_port = {
 	local_ship_cost = -0.1
 	ship_recruit_speed = -0.1
 }
+
+wallachia_a_princely_court = {
+	advisor_cost = -0.25
+	monthly_splendor = 1
+}

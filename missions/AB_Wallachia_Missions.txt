@@ -2,7 +2,6 @@ ab_wal_boier_compromise_missions = {
 	slot = 1
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 		has_wallachia_purged_the_estates = no
@@ -250,7 +249,6 @@ ab_wal_slayed_the_boieri_missions = {
 	slot = 1
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 		has_wallachia_purged_the_estates = yes
@@ -261,7 +259,6 @@ ab_wal_1 = {
 	slot = 1
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 	}
@@ -802,7 +799,6 @@ ab_wal_locked_timed_mission = {
 			has_country_flag = wal_failed_timed
 		}
 	}
-	has_country_shield = yes
 	wal_rome_mania_locked_mission = {
 		icon = mission_timed
 		position = 1
@@ -829,7 +825,6 @@ ab_wal_timed_mission = {
 			has_country_flag = wal_failed_timed
 		}
 	}
-	has_country_shield = yes
 	wal_rome_mania = {
 		icon = gfx_wal_rome_mania
 		position = 1
@@ -906,14 +901,12 @@ ab_wal_failed_timed_mission = {
 		has_access_to_wallachian_missions = yes
 		has_country_flag = wal_failed_timed
 	}
-	has_country_shield = yes
 }
 
 ab_wal_2 = {
 	slot = 2
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 	}
@@ -2084,13 +2077,38 @@ ab_wal_2 = {
 			}
 		}
 	}
+	wal_curtea_domneasca = {
+		icon = gfx_wal_curtea_domneasca
+		position = 18
+		trigger = {
+			has_institution = renaissance
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+			OR = {
+				prestige = 30
+				has_government_power = {
+					value = 30
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+				}
+			}
+			legitimacy = 100
+		}
+		effect = {
+			change_government_reform_progress = 30
+			add_country_modifier = {
+				name = wallachia_a_princely_court
+				duration = 7300
+			}
+		}
+	}
 }
 
 ab_wal_3 = {
 	slot = 3
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 	}
@@ -3233,7 +3251,6 @@ ab_wal_4 = {
 	slot = 4
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 	}
@@ -4650,7 +4667,6 @@ ab_wal_5 = {
 	slot = 5
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		has_access_to_wallachian_missions = yes
 	}
