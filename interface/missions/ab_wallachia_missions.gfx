@@ -123,4 +123,8 @@ spriteTypes = {
 		name = "gfx_wal_vlach_culture"
 		texturefile = "gfx/interface/missions/wal/wal_vlach_culture.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_reform_admin"
+		texturefile = "gfx/interface/missions/wal/wal_reform_admin.dds"
+	}
 }

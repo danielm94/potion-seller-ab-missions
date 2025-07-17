@@ -894,3 +894,8 @@ wallachia_vlach_supremacy = {
 	manpower_in_culture_group_provinces = 0.25
 	culture_conversion_time = -0.1
 }
+
+wallachia_reforms = {
+	min_autonomy_in_territories = -0.1
+	monthly_reform_progress_modifier = 0.1
+}
