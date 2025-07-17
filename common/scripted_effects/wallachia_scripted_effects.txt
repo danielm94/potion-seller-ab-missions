@@ -169,3 +169,18 @@ wallachia_remove_road_bonus = {
 		remove_province_modifier = wallachia_road_5_bonus
 	}
 }
+
+test = {
+	for = {
+		amount = 20
+		effect = "random_owned_province = {
+		limit = {
+			has_production_building_trigger = no
+		}
+		add_base_tax = 12
+		add_base_manpower = 12
+		add_base_production = 12
+		add_building = workshop
+	}"
+	}
+}

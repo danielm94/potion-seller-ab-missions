@@ -865,3 +865,22 @@ wallachia_newly_established_salt_mine = {
 	trade_goods_size_modifier = -0.5
 	local_production_efficiency = -0.5
 }
+
+wallachia_industrial_boom = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+wallachia_industrial_empire = {
+	development_cost_modifier = -0.05
+	expand_infrastructure_cost_modifier = -0.1
+}
+
+wallachia_naval_infrastructure = {
+	naval_forcelimit_modifier = 0.1
+}
+
+wallachia_productive_port = {
+	local_sailors_modifier = 0.1
+	local_ship_cost = -0.1
+	ship_recruit_speed = -0.1
+}

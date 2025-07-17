@@ -310,3 +310,5 @@
  upgrade_production_building_generic_tooltip: "The province gets their §YProduction Building§! upgraded. If a §YFactory§! is present, gain §G2§! £dip£ development."
  dacian_salt_cartel_key: "Dacian Salt Cartel"
  can_discover_salt_mines_tooltip: "Everytime you develop a §YMountain§!, §YHills§!, or §YHighland§! province there's a §Y10%§! chance §YSalt§! will be discovered in the province. You can choose whether or not you want the province start producing §YSalt§! when it happens."
+ wal_industrialize_the_empire_title: "Industrialize the Empire"
+ wal_industrialize_the_empire_desc: "We have developed our heartlands and mastered individual industries. Now, we must apply these lessons on an imperial scale. A coordinated, state-directed program will transform key provinces across the realm into centers of production, linking them with modern infrastructure and equipping them with the finest manufactories. This endeavor will create a self-sustaining economic engine, ensuring our dominance for generations and laying the foundation for a new age of industrial might."

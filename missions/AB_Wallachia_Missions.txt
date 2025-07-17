@@ -4210,6 +4210,51 @@ ab_wal_4 = {
 			set_country_flag = jap_halve_naval_hegemony_requirements
 		}
 	}
+	wal_naval_infrastructure = {
+		icon = mission_aragonese_navy
+		position = 13
+		required_missions = {
+			wal_fleet
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_naval_infrastructure
+				duration = 14600
+			}
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_productive_port
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_productive_port
+						duration = -1
+					}
+				}
+			}
+			add_navy_tradition = 10
+		}
+	}
 	wal_develop_wallachia = {
 		icon = gfx_wal_develop_wallachia
 		position = 15
@@ -4544,6 +4589,59 @@ ab_wal_4 = {
 				center_of_trade = 1
 				change_trade_goods = cloth
 			}
+		}
+	}
+	wal_industrialize_the_empire = {
+		icon = mission_rb_central_belt_coal_mining
+		position = 19
+		required_missions = {
+			wal_mare_dacia
+			wal_balkan_infrastructure
+			wal_salt_trade
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				trade_goods = gold
+			}
+			OR = {
+				NOT = {
+					base_production = 12
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_manufactory_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				base_production = 12
+				num_of_times_expanded_infrastructure = 2
+				has_manufactory_trigger = yes
+				has_production_building_trigger = yes
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_industrial_boom
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = wallachia_industrial_empire
+				duration = -1
+			}
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				custom_tooltip = earlier_coal_available_tt
+			}
+			set_country_flag = earlier_coal_available
 		}
 	}
 }
