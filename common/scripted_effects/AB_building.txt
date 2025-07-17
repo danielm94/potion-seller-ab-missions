@@ -148,6 +148,33 @@ ab_building_tax_effect = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_country_modifier = wallachia_renaissance
+			}
+		}
+		if = {
+			limit = {
+			  has_building = temple
+			}
+			owner = {
+				add_prestige_or_monarch_power = {
+					amount = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_building = cathedral
+			}
+			owner = {
+				add_prestige_or_monarch_power = {
+					amount = 5
+				}
+			}
+		}
+	}
 }
 
 ab_removing_tax_effect = {

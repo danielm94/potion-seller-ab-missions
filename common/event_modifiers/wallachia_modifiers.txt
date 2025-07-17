@@ -770,7 +770,7 @@ wallachia_finest_wine_in_the_east = {
 }
 
 wallachia_moldavian_winery = {
-	local_production_efficiency = 0.5
+	local_production_efficiency = 0.25
 	trade_goods_size_modifier = 0.25
 	local_manpower_modifier = 0.25
 }
@@ -793,4 +793,8 @@ wallachia_carpathian_highlands_expansion = {
 }
 wallachia_carpathian_hills_expansion = {
 	local_development_cost = -0.25
+}
+
+wallachia_renaissance = {
+	institution_spread_from_true_faith = 0.25
 }
