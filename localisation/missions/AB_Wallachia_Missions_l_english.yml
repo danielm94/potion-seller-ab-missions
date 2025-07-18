@@ -336,3 +336,6 @@
  add_25_mil_per_privilege_cossacks: "Gain §G25§! £mil£ per privilege given to the §Y[Root.GetCossacksName]§!."
  wal_cavalry_title: "The Iron Host"
  wal_cavalry_desc: "The discipline of our Armata provides the structure; the ferocity of the Host provides the spirit. The time has come to forge these two elements together. We must instill our professional standards into the Cossack riders to create a new breed of cavalry, a perfect synthesis of tactical precision and raw martial prowess. Let us unleash a storm of steel upon our enemies."
+ wal_military_infrastructure_title: "Foundations of the Armata"
+ wal_military_infrastructure_desc: "A professional army requires a permanent home: barracks for its soldiers, armories for its weapons, and training grounds for its drills. We must systematically develop our most populous lands into dedicated military centers. This will create a deep and reliable wellspring of manpower to sustain our ambitions and ensure the Armata is always ready for war."
+ wal_soldiers_household_bonus_tooltip: "If the province has a §YSoldier's Household§!, then the province will gain §G+1§! £mil£ and its §YBarracks§! will be upgraded to §YTraining Fields§!. If it already has §YTraining Fields§!, the province will gain §G+1§! £dip£ and §G+2§! £mil£."  
