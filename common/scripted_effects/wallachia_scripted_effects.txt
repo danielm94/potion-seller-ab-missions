@@ -170,17 +170,149 @@ wallachia_remove_road_bonus = {
 	}
 }
 
-test = {
-	for = {
-		amount = 20
-		effect = "random_owned_province = {
+define_radu_cel_frumos_advisor = {
+	if = {
 		limit = {
-			has_production_building_trigger = no
+			ruler_age = 100
 		}
-		add_base_tax = 12
-		add_base_manpower = 12
-		add_base_production = 12
-		add_building = workshop
-	}"
+		define_radu_cel_frumos_advisor_helper = {
+			age = 95
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 95
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 90
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 90
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 85
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 85
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 80
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 80
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 75
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 75
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 70
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 70
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 65
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 65
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 60
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 60
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 55
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 55
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 50
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 50
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 45
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 45
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 40
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 40
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 35
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 35
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 30
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 30
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 25
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_age = 25
+		}
+		define_radu_cel_frumos_advisor_helper = {
+			age = 20
+		}
+	}
+	else = {
+		define_radu_cel_frumos_advisor_helper = {
+			age = 15
+		}
+	}
+}
+
+
+define_radu_cel_frumos_advisor_helper = {
+	define_advisor = {
+		type = army_reformer
+		name = "Radu cel Frumos"
+		skill = 1
+		cost_multiplier = 0.25
+		age = $age$
 	}
 }

@@ -4947,12 +4947,29 @@ ab_wal_5 = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = transdanubia_area
-				area = slovakia_area
-				area = moravia_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				AND = {
+					OR = {
+						area = transdanubia_area
+						area = slovakia_area
+						area = moravia_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					OR = {
+						area = slovakia_area
+						area = eastslovakia_area
+					}
+					OR = {
+						has_fort_building_trigger = no
+						NOT = {
+							num_of_times_improved = 5
+						}
+					}
+				}
 			}
 		}
 		trigger = {
@@ -4967,6 +4984,16 @@ ab_wal_5 = {
 			moravia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
+			}
+			any_owned_province = {
+				area = slovakia_area
+				has_fort_building_trigger = yes
+				num_of_times_improved = 5
+			}
+			any_owned_province = {
+				area = eastslovakia_area
+				has_fort_building_trigger = yes
+				num_of_times_improved = 5
 			}
 		}
 		effect = {
@@ -5724,6 +5751,52 @@ ab_wal_5 = {
 						}
 					}
 				}
+			}
+		}
+	}
+	wal_vlach_army = {
+		icon = gfx_wal_vlach_army
+		position = 20
+		trigger = {
+			army_size = 30
+			army_professionalism = 0.1
+			OR = {
+				army_tradition = 40
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 40
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_vlad_iii_is_ruler_tooltip
+				first_limit = "has_ruler = \"Vlad III\""
+				first_effect = "define_ruler_to_general = {
+				fire = 3
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = cruel_tactician_personality
+			}
+			custom_tooltip = vlad_iii_brother_tooltip
+			define_radu_cel_frumos_advisor = yes"
+				second_custom_tooltip = if_vlad_iii_isnt_ruler_tooltip
+				second_limit = "NOT = { has_ruler = \"Vlad III\" }"
+				second_effect = "define_advisor = {
+				type = army_reformer
+				skill = 1
+				cost_multiplier = 0.75
+			}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
+			add_country_modifier_for_age = {
+				name = wallachia_professional_army
+				age = age_of_discovery
+				else = "add_army_tradition = 10
+			add_army_professionalism = 0.05"
 			}
 		}
 	}

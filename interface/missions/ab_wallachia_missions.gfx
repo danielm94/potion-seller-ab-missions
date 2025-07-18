@@ -131,4 +131,8 @@ spriteTypes = {
 		name = "gfx_wal_education"
 		texturefile = "gfx/interface/missions/wal/wal_education.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_vlach_army"
+		texturefile = "gfx/interface/missions/wal/wal_vlach_army.dds"
+	}
 }

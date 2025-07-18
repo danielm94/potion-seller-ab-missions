@@ -910,3 +910,8 @@ wallachia_academia_vasiliana = {
 	idea_cost = -0.05
 	technology_cost = -0.05
 }
+
+wallachia_professional_army = {
+	yearly_army_professionalism = 0.005
+	army_tradition_decay = -0.005
+}
