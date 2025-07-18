@@ -856,6 +856,62 @@ ab_wal_1 = {
 			}
 		}
 	}
+	wal_education = {
+		icon = gfx_wal_education
+		position = 20
+		required_missions = {
+			wal_reform_admin
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = ROOT
+					NOT = {
+						has_building = university
+					}
+				}
+				AND = {
+					province_id = 4529
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							has_building = university
+						}
+						NOT = {
+							development = 25
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			4529 = {
+				owned_by = ROOT
+				has_building = university
+				development = 25
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				has_building = university
+			}
+		}
+		effect = {
+			change_innovativeness = 5
+			4529 = {
+				add_province_modifier = {
+					name = wallachia_academia_vasiliana
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_in_advisor_bonus_tooltip
+			set_country_flag = wal_in_advisor_bonus
+		}
+	}
 }
 
 ab_wal_locked_timed_mission = {

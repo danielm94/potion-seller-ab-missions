@@ -127,4 +127,8 @@ spriteTypes = {
 		name = "gfx_wal_reform_admin"
 		texturefile = "gfx/interface/missions/wal/wal_reform_admin.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_education"
+		texturefile = "gfx/interface/missions/wal/wal_education.dds"
+	}
 }

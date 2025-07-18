@@ -905,3 +905,8 @@ wallachia_reforms = {
 	min_autonomy_in_territories = -0.1
 	monthly_reform_progress_modifier = 0.1
 }
+
+wallachia_academia_vasiliana = {
+	idea_cost = -0.05
+	technology_cost = -0.05
+}

@@ -322,3 +322,6 @@
  desc_wallachia_vlach_supremacy: "Our culture is now ascendant. The prestige of our court and the victories of our armies have established the Vlach identity as the pinnacle of civilization in the region."
  wal_reform_admin_title: "Îndreptarea Legii"
  wal_reform_admin_desc: "A great realm cannot be governed by tradition and the sword alone. The time has come for the 'Straightening of the Law.' We will establish a unified legal code and a network of courthouses to administer it, ensuring that the authority of the state is felt in every province. This great reform will require a ruler of immense skill and the political will to forge a modern, centralized bureaucracy, creating a government worthy of our name."
+ wal_education_title: "Academia Vasiliana"
+ wal_education_desc: "Steel and gold may forge an empire's might, but it is knowledge that sustains its greatness. To shape a prosperous future, we will invest in the intellect of our people by founding a network of universities throughout the realm. At its heart will stand a grand academy in Iasi, a symbol of our commitment to education. This national endeavor will nurture skilled advisors and visionary thinkers, transforming our nation into a lasting center of learning and innovation."
+ wal_in_advisor_bonus_tooltip: "§YInnovator§! advisors now grant a scaling §G-2.0%§! §YIdea Cost§!"
