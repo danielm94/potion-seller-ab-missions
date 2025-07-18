@@ -4833,6 +4833,23 @@ ab_wal_4 = {
 			set_country_flag = earlier_coal_available
 		}
 	}
+	wal_cavalry = {
+		icon = mission_cossack_cavalry
+		position = 21
+		required_missions = {
+			wal_armata
+			wal_cossacks
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+		}
+		effect = {
+		}
+	}
 }
 
 ab_wal_5 = {
@@ -5801,8 +5818,8 @@ ab_wal_5 = {
 			}
 		}
 	}
-	wal_vlach_army = {
-		icon = gfx_wal_vlach_army
+	wal_armata = {
+		icon = gfx_wal_armata
 		position = 20
 		trigger = {
 			army_size = 30
