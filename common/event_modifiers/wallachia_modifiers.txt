@@ -140,7 +140,7 @@ wallachia_integrating_the_moldavian_nobility = {
 }
 
 wallachia_cut_a_deal_with_the_cossacks = {
-	allowed_cossack_fraction = 0.3
+	allowed_cossack_fraction = 0.1
 	cossacks_loyalty_modifier = 0.15
 	cossacks_influence_modifier = 0.05
 	cavalry_shock = 0.1
@@ -914,4 +914,8 @@ wallachia_academia_vasiliana = {
 wallachia_professional_army = {
 	yearly_army_professionalism = 0.005
 	army_tradition_decay = -0.005
+}
+
+wallachia_integrating_the_cossacks = {
+	can_recruit_cossacks = yes
 }

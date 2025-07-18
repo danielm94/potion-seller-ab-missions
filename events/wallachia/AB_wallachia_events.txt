@@ -269,6 +269,7 @@ country_event = {
 				no_defined_leader = yes
 			}
 		}
+		set_country_flag = wal_empowered_cossacks
 	}
 	option = {
 		name = AB_wallachia_events.9.c

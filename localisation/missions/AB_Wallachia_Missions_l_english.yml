@@ -330,3 +330,7 @@
  if_vlad_iii_is_ruler_tooltip: "If §YVlad III§! is our ruler:"
  if_vlad_iii_isnt_ruler_tooltip: "If §YVlad III§! isn't our ruler:"
  vlad_iii_brother_tooltip: "§V§YRadu cel Frumos§!, brother to §YVlad III§!, joins his cause as a loyal advisor.§!"
+ wal_cossacks_title: "A Necessary Bargain"
+ wal_cossacks_desc: "The free riders of the steppe are a force of nature, a tide of horse and steel that cannot be easily broken. To fight them is to bleed for every inch of barren land. A wiser path lies before us. By granting them the privileges they crave, we can bind their interests to our own. Their legendary ferocity, once a threat to our borders, will be unleashed upon our enemies."
+ wal_sided_with_cossacks_in_event_tooltip: "We sided with the §YCossacks§! in the §Y“The Fate of Moldavia's Boieri”§! event."
+ add_25_mil_per_privilege_cossacks: "Gain §G25§! £mil£ per privilege given to the §Y[Root.GetCossacksName]§!."

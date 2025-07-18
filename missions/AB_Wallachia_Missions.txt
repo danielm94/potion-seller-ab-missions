@@ -3370,6 +3370,53 @@ ab_wal_3 = {
 			custom_tooltip = can_discover_salt_mines_tooltip
 		}
 	}
+	wal_cossacks = {
+		icon = mission_recruit_the_cossacks
+		position = 20
+		trigger = {
+			has_estate = estate_cossacks
+			estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 60
+			}
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_cossacks
+					value = 3
+				}
+				custom_trigger_tooltip = {
+					tooltip = wal_sided_with_cossacks_in_event_tooltip
+					has_country_flag = wal_empowered_cossacks
+				}
+			}
+			num_of_estate_privileges = {
+				estate = estate_cossacks
+				value = 3
+			}
+		}
+		effect = {
+			custom_tooltip = add_25_mil_per_privilege_cossacks
+			hidden_effect = {
+				for_privilege_given_to_estate = {
+					estate = cossacks
+					max_privileges = 6
+					effect = "add_mil_power = 25"
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_integrating_the_cossacks
+				duration = -1
+			}
+
+			define_advisor = {
+				type = dragoon
+				skill = 1
+				culture = ruthenian
+				religion = orthodox
+				cost_multiplier = 0.5
+			}
+		}
+	}
 }
 
 ab_wal_4 = {
