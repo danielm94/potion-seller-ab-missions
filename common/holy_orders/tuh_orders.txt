@@ -110,7 +110,7 @@ draculesti_stronghold = {
 		local_state_maintenance_modifier = -0.5
 		draculesti_faction_influence = 0.01
 		local_garrison_size = 0.25
-		local_garrison_damage = 0.5
+		local_garrison_damage = 0.25
 	}
 	ai_priority = {
 		factor = 2
