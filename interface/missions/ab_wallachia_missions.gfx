@@ -139,4 +139,8 @@ spriteTypes = {
 		name = "gfx_wal_military_infrastructure"
 		texturefile = "gfx/interface/missions/wal/wal_military_infrastructure.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_adopt_gunpowder"
+		texturefile = "gfx/interface/missions/wal/wal_adopt_gunpowder.dds"
+	}
 }

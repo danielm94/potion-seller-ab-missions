@@ -934,3 +934,8 @@ wallachia_disciplined_cossacks = {
 wallachia_local_military_infrastructure = {
 	local_manpower_modifier = 0.3
 }
+
+wallachia_gunpowder = {
+	backrow_artillery_damage = 0.1
+	fire_damage = 0.1
+}
