@@ -205,9 +205,7 @@ country_event = {
 	option = {
 		name = AB_wallachia_events.9.a
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -241,9 +239,7 @@ country_event = {
 	option = {
 		name = AB_wallachia_events.9.b
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		add_country_modifier = {
 			name = wallachia_cut_a_deal_with_the_cossacks
@@ -694,9 +690,7 @@ country_event = {
 	option = {
 		name = AB_wallachia_events.22.a
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		country_event = {
 			id = AB_wallachia_events.23
@@ -714,9 +708,7 @@ country_event = {
 	option = {
 		name = AB_wallachia_events.22.c
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		set_country_flag = wal_bulgarian_underclass
 		custom_tooltip = bulgarian_underclass_every_province_tooltip

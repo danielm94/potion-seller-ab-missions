@@ -9,9 +9,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events_attempt_to_capture
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		#effect
 		custom_tooltip = wallachian_terror_events_impaled_will_try_to_escape_tooltip
@@ -25,9 +23,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events_dont_capture
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		#effect
 		event_target:impaled_country = {
@@ -194,18 +190,14 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.2.a
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		wallachian_terror_impalement_effect = yes
 	}
 	option = {
 		name = wallachian_terror_events.2.b
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 			NOT = {
 				event_target:impaled_country = {
 					tag = event_target:retribution_leader
@@ -255,9 +247,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events_they_escaped
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		add_prestige = -10
 		change_terror = {
@@ -1329,9 +1319,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.11.a
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		custom_tooltip = wallachian_terror_events_emperor_capture_tooltip
 		if = {
@@ -1351,9 +1339,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.11.b
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		event_target:impaled_country = {
 			capital_scope = {
@@ -1422,9 +1408,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.13.a
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		wallachian_terror_emperor_impalement_effect = yes
 		custom_tooltip = emperor_impalement_concequences_tooltip
@@ -1442,9 +1426,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.13.b
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		custom_tooltip = wallachian_terror_events_humiliated_rival_prestige_tooltip
 		hidden_effect = {

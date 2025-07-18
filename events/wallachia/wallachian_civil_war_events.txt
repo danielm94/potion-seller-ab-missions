@@ -9,9 +9,7 @@ country_event = {
 	option = {
 		name = wallachian_civil_war_accept_the_ultimatum
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		set_country_flag = wallachian_civil_war_voivode_backded_down
 		remove_country_modifier = wallachian_terror_purging_the_estate_elites
@@ -43,9 +41,7 @@ country_event = {
 	option = {
 		name = wallachian_civil_war_reject_the_ultimatum
 		trigger = {
-			NOT = {
-				is_ruler_impaler = yes
-			}
+			is_ruler_impaler = no
 		}
 		add_legitimacy = 5
 		add_estate_loyalty = {
