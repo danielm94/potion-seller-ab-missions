@@ -195,6 +195,7 @@ wallachia_patriarchate_of_constantinople = {
 	legitimacy = 0.5
 	prestige_decay = -0.01
 	local_great_project_upgrade_cost = -0.1
+	religion = yes
 }
 
 wallachia_rome_on_the_danube = {
@@ -364,6 +365,7 @@ wallachia_patriarchate_of_antiohia = {
 	local_development_cost = -0.1
 	local_build_cost = -0.1
 	local_missionary_strength = 0.03
+	religion = yes
 }
 
 wallachia_patriarchate_of_ierusalim = {
@@ -371,6 +373,7 @@ wallachia_patriarchate_of_ierusalim = {
 	local_missionary_strength = 0.04
 	local_great_project_upgrade_cost = -0.25
 	local_great_project_upgrade_time = -0.25
+	religion = yes
 }
 
 wallachia_prepare_persia_invasion = {
@@ -438,6 +441,7 @@ wallachia_patriarchate_of_alexandria = {
 	tolerance_own = 1
 	local_missionary_strength = 0.05
 	yearly_patriarch_authority = 0.001
+	religion = yes
 }
 
 wallachia_granaries_of_egypt = {
@@ -516,6 +520,7 @@ wallachia_patriarchate_of_rome = {
 	legitimacy = 0.5
 	local_great_project_upgrade_cost = -0.1
 	prestige = 0.5
+	religion = yes
 }
 
 wallachia_danubian_fortifications = {
@@ -807,6 +812,7 @@ wallachia_patriarchate_of_dacia = {
 	local_great_project_upgrade_cost = -0.25
 	prestige = 0.25
 	development_cost_in_primary_culture = -0.1
+	religion = yes
 }
 
 wallachia_pillar_of_the_realm = {
