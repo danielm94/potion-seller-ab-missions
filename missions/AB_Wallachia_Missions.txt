@@ -810,26 +810,49 @@ ab_wal_1 = {
 			}
 		}
 	}
-	wal_vlach_culture = {
-		icon = gfx_wal_vlach_culture
+	wal_reform_admin = {
+		icon = gfx_wal_reform_admin
 		position = 19
 		required_missions = {
 			wal_curtea_domneasca
 		}
 		trigger = {
-			prestige = 80
+			reform_level = 7
+			monthly_adm = 12
+			OR = {
+				government_reform_progress = 120
+				AND = {
+					dynasty = "Ghica"
+					has_country_modifier = ghica_in_power
+				}
+			}
 			num_of_owned_provinces_with = {
-				value = 50
-				culture_group = romanian_culture_group
+				value = 20
+				has_courthouse_building_trigger = yes
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							dynasty = "Ghica"
+						}
+						NOT = {
+							has_country_modifier = ghica_in_power
+						}
+					}
+				}
+				change_government_reform_progress = -120
+			}
 			add_country_modifier = {
-				name = wallachia_vlach_supremacy
+				name = wallachia_reforms
 				duration = -1
 			}
-			add_prestige_or_monarch_power = {
-				amount = 20
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "tuh_clear_government_mechanic_cooldowns = yes"
 			}
 		}
 	}
@@ -2126,49 +2149,26 @@ ab_wal_2 = {
 			}
 		}
 	}
-	wal_reform_admin = {
-		icon = gfx_wal_reform_admin
+	wal_vlach_culture = {
+		icon = gfx_wal_vlach_culture
 		position = 19
 		required_missions = {
 			wal_curtea_domneasca
 		}
 		trigger = {
-			reform_level = 7
-			monthly_adm = 12
-			OR = {
-				government_reform_progress = 120
-				AND = {
-					dynasty = "Ghica"
-					has_country_modifier = ghica_in_power
-				}
-			}
+			prestige = 80
 			num_of_owned_provinces_with = {
-				value = 20
-				has_courthouse_building_trigger = yes
+				value = 50
+				culture_group = romanian_culture_group
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					OR = {
-						NOT = {
-							dynasty = "Ghica"
-						}
-						NOT = {
-							has_country_modifier = ghica_in_power
-						}
-					}
-				}
-				change_government_reform_progress = -120
-			}
 			add_country_modifier = {
-				name = wallachia_reforms
+				name = wallachia_vlach_supremacy
 				duration = -1
 			}
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
-				first_limit = "has_government_attribute = romanian_elective_monarchy"
-				first_effect = "tuh_clear_government_mechanic_cooldowns = yes"
+			add_prestige_or_monarch_power = {
+				amount = 20
 			}
 		}
 	}
