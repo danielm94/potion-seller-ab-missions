@@ -3407,7 +3407,6 @@ ab_wal_3 = {
 				name = wallachia_integrating_the_cossacks
 				duration = -1
 			}
-
 			define_advisor = {
 				type = dragoon
 				skill = 1
@@ -4840,14 +4839,63 @@ ab_wal_4 = {
 			wal_armata
 			wal_cossacks
 		}
-		provinces_to_highlight = {
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+		trigger = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				OR = {
+					is_year = 1500
+					AND = {
+						num_of_cavalry = 20
+						num_of_cossacks = 10
+						has_global_modifier_value = {
+							which = cavalry_power
+							value = 0.3
+						}
+						army_professionalism = 0.3
+						OR = {
+							army_tradition = 60
+							has_government_power = {
+								mechanic_type = wallachian_terror_mechanic
+								power_type = terror_power
+								value = 60
+							}
+						}
+					}
+				}
+			}
+			else = {
+				num_of_cavalry = 20
+				num_of_cossacks = 10
+				has_global_modifier_value = {
+					which = cavalry_power
+					value = 0.3
+				}
+				army_professionalism = 0.3
+				OR = {
+					army_tradition = 60
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 60
+					}
+				}
 			}
 		}
-		trigger = {
-		}
 		effect = {
+			add_country_modifier = {
+				name = wallachia_cavalry_mod
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_disciplined_cossacks
+				duration = -1
+			}
+			add_mil_power = 100
+			add_army_tradition_or_mil_power = {
+				amount = 5
+			}
 		}
 	}
 }

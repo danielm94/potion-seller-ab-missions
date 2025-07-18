@@ -334,3 +334,5 @@
  wal_cossacks_desc: "The free riders of the steppe are a force of nature, a tide of horse and steel that cannot be easily broken. To fight them is to bleed for every inch of barren land. A wiser path lies before us. By granting them the privileges they crave, we can bind their interests to our own. Their legendary ferocity, once a threat to our borders, will be unleashed upon our enemies."
  wal_sided_with_cossacks_in_event_tooltip: "We sided with the §YCossacks§! in the §Y“The Fate of Moldavia's Boieri”§! event."
  add_25_mil_per_privilege_cossacks: "Gain §G25§! £mil£ per privilege given to the §Y[Root.GetCossacksName]§!."
+ wal_cavalry_title: "The Iron Host"
+ wal_cavalry_desc: "The discipline of our Armata provides the structure; the ferocity of the Host provides the spirit. The time has come to forge these two elements together. We must instill our professional standards into the Cossack riders to create a new breed of cavalry, a perfect synthesis of tactical precision and raw martial prowess. Let us unleash a storm of steel upon our enemies."

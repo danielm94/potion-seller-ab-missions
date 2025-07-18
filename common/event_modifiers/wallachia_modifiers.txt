@@ -919,3 +919,14 @@ wallachia_professional_army = {
 wallachia_integrating_the_cossacks = {
 	can_recruit_cossacks = yes
 }
+
+wallachia_cavalry_mod = {
+	cavalry_flanking = 0.5
+	cav_to_inf_ratio = 0.2
+}
+
+wallachia_disciplined_cossacks = {
+	drill_gain_modifier = 0.5
+	drill_decay_modifier = -0.25
+	is_cossack_modifier = yes
+}
