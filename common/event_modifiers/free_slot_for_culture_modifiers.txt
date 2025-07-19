@@ -1,3 +1,10 @@
+free_slot_for_serbian = {
+	num_accepted_cultures = 1
+}
+free_slot_for_greek = {
+	num_accepted_cultures = 1
+}
+
 free_slot_for_english = {
 	num_accepted_cultures = 1
 }

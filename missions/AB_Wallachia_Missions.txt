@@ -1983,6 +1983,7 @@ ab_wal_2 = {
 				add_accepted_culture_or_dip_power_stated = {
 					culture = english
 					dip_reward = yes
+					free = yes
 				}
 			}
 			else_if = {
@@ -1994,6 +1995,7 @@ ab_wal_2 = {
 				add_accepted_culture_or_dip_power_stated = {
 					culture = english_new
 					dip_reward = yes
+					free = yes
 				}
 			}
 			add_country_modifier = {
@@ -3943,6 +3945,7 @@ ab_wal_4 = {
 			add_accepted_culture_or_dip_power_stated = {
 				culture = greek
 				dip_reward = yes
+				free = yes
 			}
 		}
 	}
@@ -5547,6 +5550,7 @@ ab_wal_5 = {
 			add_accepted_culture_or_dip_power_stated = {
 				culture = georgian
 				dip_reward = yes
+				free = yes
 			}
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = wal_fort_advisor_buff_flag_tooltip

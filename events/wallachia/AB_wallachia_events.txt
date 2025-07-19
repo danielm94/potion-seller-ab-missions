@@ -1299,6 +1299,7 @@ country_event = {
 		add_accepted_culture_or_dip_power_stated = {
 			culture = serbian
 			dip_reward = yes
+			free = yes
 		}
 		add_estate_loyalty = {
 			estate = estate_church
