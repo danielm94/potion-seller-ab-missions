@@ -2263,6 +2263,11 @@ ab_wal_2 = {
 			}
 		}
 		effect = {
+			add_estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 20
+			}
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = for_every_province_that_meets_the_missions_requirements
 			tooltip = {
 				add_province_modifier = {

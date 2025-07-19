@@ -349,3 +349,4 @@
  brancoveanu_election_bonus_tooltip: "Electing a candidate from house §YBrancoveanu§! grants the following bonus:"
  wal_civilize_the_steppe_title: "Civilize the Steppe"
  wal_civilize_the_steppe_desc: "The steppes are a vast, untamed sea of grass, home to riders and little else. To truly control these lands, we must do more than bargain with the Host. We must plant the seeds of civilization itself: building roads, founding towns, and raising churches. We will transform these wild plains into productive, integrated provinces that will strengthen the realm for centuries to come."
+ unlock_privilege_estate_cossacks_monopoly_on_steppe_herds_tt: "We will unlock the §Y[Root.GetCossacksName]§! estate privilege §YMonopoly on Steppe Herds§!." 
