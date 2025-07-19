@@ -956,6 +956,6 @@ estate_cossacks_monopoly_on_steppe_herds_mod = {
 }
 
 estate_cossacks_monopoly_on_steppe_herds_mod_bonus = {
-	trade_goods_size_modifier = 0.25
+	trade_goods_size_modifier = 0.20
 	trade_goods_size = 0.25
 }
