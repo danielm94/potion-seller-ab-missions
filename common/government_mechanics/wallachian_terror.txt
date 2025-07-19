@@ -43,15 +43,19 @@ wallachian_terror_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					has_country_flag =  wallachian_terror_ae_bonus
+					has_country_flag = wallachian_terror_ae_bonus
 				}
-				modifier = { ae_impact = -0.1 }
+				modifier = {
+					ae_impact = -0.1
+				}
 			}
 			scaled_modifier = {
 				trigger = {
 					has_country_flag = wal_draco_legions_terror_buff
 				}
-				modifier = { drill_gain_modifier = 0.5 }
+				modifier = {
+					drill_gain_modifier = 0.5
+				}
 			}
 		}
 	}
@@ -155,10 +159,22 @@ wallachian_terror_mechanic = {
 			icon = GFX_wallachian_terror_brutalize_the_enemy_button
 			cost_type = terror_power
 			trigger = {
-				has_government_power = {
-					mechanic_type = wallachian_terror_mechanic
-					power_type = terror_power
-					value = 30
+				if = {
+					limit = {
+						has_country_flag = cheaper_brutalize_the_enemy
+					}
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 40
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 50
+					}
 				}
 			}
 			effect = {
@@ -216,9 +232,20 @@ wallachian_terror_mechanic = {
 						days = 3650
 					}
 				}
-				change_terror = {
-					value = -30
-					scaled_with_gain_modifier = no
+				if = {
+					limit = {
+						has_country_flag = cheaper_brutalize_the_enemy
+					}
+					change_terror = {
+						value = -40
+						scaled_with_gain_modifier = no
+					}
+				}
+				else = {
+					change_terror = {
+						value = -50
+						scaled_with_gain_modifier = no
+					}
 				}
 			}
 			cooldown_years = 10

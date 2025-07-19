@@ -956,6 +956,18 @@ estate_cossacks_monopoly_on_steppe_herds_mod = {
 }
 
 estate_cossacks_monopoly_on_steppe_herds_mod_bonus = {
-	trade_goods_size_modifier = 0.20
+	trade_goods_size_modifier = 0.2
 	trade_goods_size = 0.25
+}
+
+wallachia_integrated_cossacks = {
+	can_recruit_cossacks = yes
+	cossacks_privilege_slots = 1
+	cossacks_loyalty_modifier = 0.1
+	allowed_cossack_fraction = 0.1
+}
+
+wallachia_buffed_cossacks = {
+	cavalry_flanking = 0.5
+	is_cossack_modifier = yes
 }

@@ -293,3 +293,7 @@ impaler_tier_3_tooltip = {
 	monthly_fervor_increase = -0.5
 	advisor_cost = 0.25
 }
+
+cossack_raiding_tactics = {
+	raze_power_gain = 0.25
+}

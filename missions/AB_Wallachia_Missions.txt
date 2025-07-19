@@ -2293,7 +2293,6 @@ ab_wal_2 = {
 			}
 			set_country_flag = hun_upgrade_cossack_priv
 			custom_tooltip = hun_upgrade_cossack_priv_tt
-
 			unlock_estate_privilege = {
 				estate_privilege = estate_cossacks_monopoly_on_steppe_herds
 			}
@@ -3460,24 +3459,32 @@ ab_wal_3 = {
 		icon = mission_recruit_the_cossacks
 		position = 20
 		trigger = {
-			has_estate = estate_cossacks
-			estate_loyalty = {
-				estate = estate_cossacks
-				loyalty = 60
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
 			}
-			OR = {
-				num_of_estate_agendas_completed = {
+			else = {
+				has_estate = estate_cossacks
+				estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 60
+				}
+				OR = {
+					num_of_estate_agendas_completed = {
+						estate = estate_cossacks
+						value = 3
+					}
+					custom_trigger_tooltip = {
+						tooltip = wal_sided_with_cossacks_in_event_tooltip
+						has_country_flag = wal_empowered_cossacks
+					}
+				}
+				num_of_estate_privileges = {
 					estate = estate_cossacks
 					value = 3
 				}
-				custom_trigger_tooltip = {
-					tooltip = wal_sided_with_cossacks_in_event_tooltip
-					has_country_flag = wal_empowered_cossacks
-				}
-			}
-			num_of_estate_privileges = {
-				estate = estate_cossacks
-				value = 3
 			}
 		}
 		effect = {
@@ -3499,6 +3506,64 @@ ab_wal_3 = {
 				culture = ruthenian
 				religion = orthodox
 				cost_multiplier = 0.5
+			}
+		}
+	}
+	wal_integrate_cossacks = {
+		icon = mission_raid_hosts
+		position = 22
+		required_missions = {
+			wal_civilize_the_steppe
+			wal_cavalry
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_cossacks = 50
+				num_of_estate_agendas_completed = {
+					estate = estate_cossacks
+					value = 6
+				}
+				estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 80
+				}
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 20
+			}
+			remove_country_modifier = wallachia_integrating_the_cossacks
+			add_country_modifier = {
+				name = wallachia_integrated_cossacks
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_buffed_cossacks
+				duration = -1
+			}
+			add_accepted_culture_or_dip_power_stated = {
+				culture = ruthenian
+				free = yes
+				dip_reward = yes
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = cheaper_brutalize_the_enemy_tooltip
+								add_country_modifier = {
+									name = cossack_raiding_tactics
+									duration = -1
+								}
+								set_country_flag = cheaper_brutalize_the_enemy"
 			}
 		}
 	}

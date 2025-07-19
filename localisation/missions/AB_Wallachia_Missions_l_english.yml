@@ -349,4 +349,7 @@
  brancoveanu_election_bonus_tooltip: "Electing a candidate from house §YBrancoveanu§! grants the following bonus:"
  wal_civilize_the_steppe_title: "Civilize the Steppe"
  wal_civilize_the_steppe_desc: "The steppes are a vast, untamed sea of grass, home to riders and little else. To truly control these lands, we must do more than bargain with the Host. We must plant the seeds of civilization itself: building roads, founding towns, and raising churches. We will transform these wild plains into productive, integrated provinces that will strengthen the realm for centuries to come."
- unlock_privilege_estate_cossacks_monopoly_on_steppe_herds_tt: "We will unlock the §Y[Root.GetCossacksName]§! estate privilege §YMonopoly on Steppe Herds§!." 
+ wal_integrate_cossacks_title: "The Union of the Host"
+ wal_integrate_cossacks_desc: "The Cossacks have bled for our cause, upheld our laws, and proven their loyalty beyond any doubt. The old bargains and charters no longer reflect the reality of our union. The time has come to erase the last lines between our peoples, formally recognizing the Host as a foundational pillar of the realm and welcoming their culture into our own."
+ unlock_privilege_estate_cossacks_monopoly_on_steppe_herds_tt: "We will unlock the §Y[Root.GetCossacksName]§! estate privilege §YMonopoly on Steppe Herds§!."
+ cheaper_brutalize_the_enemy_tooltip: "The §YTerror§! interaction §YBrutalize the Enemy§! will only cost §G40§! §YTerror§! instead of §R50§! §YTerror§!." 
