@@ -139,12 +139,17 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = basarab_augustan_bonus
+				OR = {
+					has_country_flag = basarab_augustan_bonus
+					has_country_flag = tuh_galleass_gift
+				}
 			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
 			add_ruler_modifier = {
 				name = basarab_augustan_legacy
 				duration = -1
 			}
+			tuh_galleass_gift_effect = yes
 		}
 	}
 	option = {
@@ -231,8 +236,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = tuh_bibescu_colonists
+				OR = {
+					has_country_flag = tuh_bibescu_colonists
+					has_country_flag = tuh_galleass_gift
+				}
 			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
 			if = {
 				limit = {
 					has_country_modifier = wallachia_into_the_unknown
@@ -245,6 +254,7 @@ country_event = {
 				name = wallachia_into_the_unknown
 				duration = -1
 			}
+			tuh_galleass_gift_effect = yes
 		}
 	}
 	option = {
@@ -320,6 +330,20 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = tuh_draculesti_election_bonus_tooltip
+					has_country_flag = tuh_galleass_gift
+				}
+			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
+			add_yearly_manpower = 0.5
+			create_general = {
+				tradition = 80
+			}
+			tuh_galleass_gift_effect = yes
+		}
 	}
 	option = {
 		name = tuh_elections.0.dee
@@ -393,6 +417,14 @@ country_event = {
 				var = precalc_brancoveanu_total_legitimacy
 				effect = add_legitimacy
 			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = tuh_galleass_gift
+				}
+			}
+			tuh_galleass_gift_effect = yes
 		}
 	}
 	option = {
@@ -470,6 +502,16 @@ country_event = {
 		}
 		if = {
 			limit = {
+				OR = {
+					has_country_flag = movilesti_election_bonus
+					has_country_flag = movilesti_can_propagate_religion_bonus
+					has_country_flag = tuh_galleass_gift
+				}
+			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
+		}
+		if = {
+			limit = {
 				has_country_flag = movilesti_election_bonus
 			}
 			define_advisor = {
@@ -489,6 +531,7 @@ country_event = {
 			custom_tooltip = movilesti_propagate_religion_tooltip
 			set_country_flag = can_use_propagate_religion
 		}
+		tuh_galleass_gift_effect = yes
 	}
 	option = {
 		name = tuh_elections.0.f
@@ -565,9 +608,14 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = danesti_no_raids
+				OR = {
+					has_country_flag = danesti_no_raids
+					has_country_flag = tuh_galleass_gift
+				}
 			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
 			tuh_set_danesti_coastal_defences = yes
+			tuh_galleass_gift_effect = yes
 		}
 	}
 	option = {
@@ -655,12 +703,17 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = ghica_lombard_banking
+				OR = {
+					has_country_flag = ghica_lombard_banking
+					has_country_flag = tuh_galleass_gift
+				}
 			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
 			add_ruler_modifier = {
 				name = ghica_lombard_banking
 				duration = -1
 			}
+			tuh_galleass_gift_effect = yes
 		}
 	}
 	option = {
@@ -738,8 +791,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = racovita_mamluks_bonus
+				OR = {
+					has_country_flag = racovita_mamluks_bonus
+					has_country_flag = tuh_galleass_gift
+				}
 			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
 			add_ruler_modifier = {
 				name = racovita_mamluk_contacts
 				duration = -1
@@ -761,6 +818,7 @@ country_event = {
 					mamluks_cavalry = ROOT
 				}
 			}
+			tuh_galleass_gift_effect = yes
 		}
 	}
 	option = {
@@ -836,6 +894,43 @@ country_event = {
 				effect = add_legitimacy
 			}
 		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = tuh_anatolia_greek_resettlement
+						any_owned_province = {
+							region = anatolia_region
+							NOT = {
+								culture_group = byzantine
+							}
+						}
+					}
+					capital = 151
+					has_country_flag = tuh_galleass_gift
+				}
+			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
+		}
+		if = {
+			limit = {
+				has_country_flag = tuh_anatolia_greek_resettlement
+				any_owned_province = {
+					region = anatolia_region
+					NOT = {
+						culture_group = byzantine
+					}
+				}
+			}
+			custom_tooltip = tuh_greek_resettlement_tooltip
+		}
+		if = {
+			limit = {
+				capital = 151
+			}
+			custom_tooltip = tuh_cantacuzino_no_pretender_rebels_tooltip
+		}
+		tuh_galleass_gift_effect = yes
 	}
 	option = {
 		name = tuh_elections.0.j
@@ -912,6 +1007,24 @@ country_event = {
 		}
 		if = {
 			limit = {
+				OR = {
+					has_country_flag = mavrocordatos_candidate_buff
+					AND = {
+						has_country_flag = tuh_anatolia_greek_resettlement
+						any_owned_province = {
+							region = anatolia_region
+							NOT = {
+								culture_group = byzantine
+							}
+						}
+					}
+					has_country_flag = tuh_galleass_gift
+				}
+			}
+			custom_tooltip = tuh_candidate_bonus_tooltip
+		}
+		if = {
+			limit = {
 				has_country_flag = mavrocordatos_candidate_buff
 			}
 			define_advisor = {
@@ -922,6 +1035,19 @@ country_event = {
 				religion = ROOT
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = tuh_anatolia_greek_resettlement
+				any_owned_province = {
+					region = anatolia_region
+					NOT = {
+						culture_group = byzantine
+					}
+				}
+			}
+			custom_tooltip = tuh_greek_resettlement_tooltip
+		}
+		tuh_galleass_gift_effect = yes
 	}
 	after = {
 		change_variable = {
@@ -947,35 +1073,6 @@ country_event = {
 				}
 			}
 			tuh_fire_pretender_event_based_on_legitimacy = yes
-		}
-		if = {
-			limit = {
-				has_country_flag = tuh_galleass_gift
-			}
-			if = {
-				limit = {
-					owns = 112
-				}
-				112 = {
-					galleass_galley = owner
-					galleass_galley = owner
-					galleass_galley = owner
-					galleass_galley = owner
-					galleass_galley = owner
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						has_port = yes
-					}
-					galleass_galley = owner
-					galleass_galley = owner
-					galleass_galley = owner
-					galleass_galley = owner
-					galleass_galley = owner
-				}
-			}
 		}
 	}
 }

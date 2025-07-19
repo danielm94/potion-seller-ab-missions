@@ -1974,3 +1974,41 @@ tuh_convert_highest_trade_goods_wool_province_to_silk = {
 	}
 	clear_global_event_target = highest_trade_goods_wool_province
 }
+
+tuh_galleass_gift_effect = {
+	if = {
+		limit = {
+			has_country_flag = tuh_galleass_gift
+		}
+		if = {
+			limit = {
+				owns = 112
+			}
+			112 = {
+				custom_tooltip = tuh_galleass_tooltip
+				hidden_effect = {
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				custom_tooltip = tuh_galleass_tooltip
+				hidden_effect = {
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+					galleass_galley = owner
+				}
+			}
+		}
+	}
+}

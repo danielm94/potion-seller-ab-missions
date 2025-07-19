@@ -124,3 +124,6 @@
  tuh_mavrocordatos_won_last_election_tooltip: "Having also won the previous election, whispers now accuse §YHouse Mavrocordatos§! of rigging the vote. Consequently, §Y[tuh_elections_mavrocordatos.GetName]§! will lose §R[This.precalc_mavrocordatos_consecutive_wins_loss.GetValue]§! §YLegitimacy§!."
  tuh_mavrocordatos_low_influence_house_legitimacy_loss_tooltip: "As §YHouse Mavrocordatos§! currently holds influence below the expected standard (less than 10), they are considered a lesser choice. §Y[tuh_elections_mavrocordatos.GetName]§! will thus lose §R-20§! §YLegitimacy§!."
  tuh_mavrocordatos_total_legitimacy_of_candidate: "With all factors considered, §Y[tuh_elections_mavrocordatos.GetName]§! of §YHouse Mavrocordatos§! is expected to have §Y[This.precalc_mavrocordatos_total_legitimacy.GetValue]§! §YLegitimacy§! if elected."
+ tuh_candidate_bonus_tooltip: "§GCandidate Bonus:§!"
+ tuh_greek_resettlement_tooltip: "Provinces in §YAnatolia§! that are not §YRomanian§! will slowly be resettled by the §YGreeks§!."
+ tuh_cantacuzino_no_pretender_rebels_tooltip: "Since our capital is §Y[151.GetName]§!, no pretender rebels will spawn after the election." 
