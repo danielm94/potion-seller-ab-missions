@@ -380,6 +380,7 @@ ab_wal_1 = {
 				first_effect = "set_country_flag = danesti_no_raids
 				custom_tooltip = danesti_raid_coast_tooltip"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			custom_tooltip = AB_EMPTY
 			country_event = {
 				id = AB_wallachia_events.33
@@ -589,6 +590,7 @@ ab_wal_1 = {
 				issue = land_reclamation_issue
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_consecrate_dacia = {
@@ -782,6 +784,7 @@ ab_wal_1 = {
 				issue = deus_vult_parliament_issue
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_curtea_domneasca = {
@@ -1506,6 +1509,7 @@ ab_wal_2 = {
 				}
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			add_mil_power = 100
 		}
 	}
@@ -1660,6 +1664,7 @@ ab_wal_2 = {
 			}
 			set_country_flag = basarab_augustan_bonus"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			country_event = {
 				id = AB_wallachia_events.35
 			}
@@ -1787,6 +1792,7 @@ ab_wal_2 = {
 				first_effect = "set_country_flag = allow_aqa_pu_decision
 				custom_tooltip = allow_aqt_pu_decision_tooltip"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_france = {
@@ -1905,6 +1911,7 @@ ab_wal_2 = {
 				issue = wine_parliament_issue
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_england = {
@@ -2078,6 +2085,7 @@ ab_wal_2 = {
 				issue = tuh_the_spice_act
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_seat_of_the_metropolitan = {
@@ -2848,6 +2856,7 @@ ab_wal_3 = {
 				first_effect = "custom_tooltip = unlock_schonbrunn_bonus_tooltip
 				set_country_flag = rem_unlock_schonbrunn_bonus"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_south_germany = {
@@ -2927,6 +2936,7 @@ ab_wal_3 = {
 				first_effect = "custom_tooltip = unlock_integrating_german_nobility_privilege_tooltip
 			set_country_flag = unlock_integrating_german_nobility_privilege"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			custom_tooltip = AB_EMPTY
 			add_adm_power = 50
 			add_dip_power = 50
@@ -3081,6 +3091,7 @@ ab_wal_3 = {
 				first_effect = "set_country_flag = tuh_bibescu_colonists
 			custom_tooltip = tuh_bibescu_colonists_tooltip"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			tooltip = {
 				add_ruler_modifier = {
 					name = wallachia_into_the_unknown
@@ -3316,6 +3327,7 @@ ab_wal_3 = {
 									custom_tooltip = rem_bonus_not_retroactive_tooltip
 								}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_heart_of_orthodox_world = {
@@ -3940,8 +3952,15 @@ ab_wal_4 = {
 				}
 			}"
 			}
-			set_country_flag = mavrocordatos_candidate_buff
-			custom_tooltip = mavrocordatos_candidate_buff_tooltip
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = mavrocordatos_candidate_buff
+			custom_tooltip = mavrocordatos_candidate_buff_tooltip"
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
+			custom_tooltip = AB_EMPTY
 			add_accepted_culture_or_dip_power_stated = {
 				culture = greek
 				dip_reward = yes
@@ -4093,6 +4112,7 @@ ab_wal_4 = {
 				add_mercantilism = 5
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			set_country_flag = movilesti_election_bonus
 		}
 	}
@@ -4319,6 +4339,7 @@ ab_wal_4 = {
 			}
 			set_country_flag = racovita_mamluks_bonus"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 			country_event = {
 				id = AB_wallachia_events.34
 			}
@@ -5091,9 +5112,9 @@ ab_wal_4 = {
 				create_general = {
 					tradition = 80
 				}
+			}"
 			}
-			custom_tooltip = rem_bonus_not_retroactive_tooltip"
-			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 }
@@ -5477,6 +5498,7 @@ ab_wal_5 = {
 				first_effect = "set_country_flag = tuh_anatolia_greek_resettlement
 			custom_tooltip = tuh_greek_resettlement_anatolia"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_caucasus = {
@@ -5677,6 +5699,7 @@ ab_wal_5 = {
 				issue = expand_silk_production_issue
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_khorasan = {
@@ -5738,6 +5761,7 @@ ab_wal_5 = {
 				issue = finance_dacian_india_company_issue
 			}"
 			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
 	}
 	wal_coast = {

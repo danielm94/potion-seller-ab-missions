@@ -69,7 +69,7 @@
  wal_conquer_greece_desc: "The Roman world cannot be considered whole while the Hellenic provinces languish under the rule of petty Latin crusaders, grasping Venetian merchants, and the scattered remnants of the old regime. We will march south, sweep these schismatic pretenders into the sea, and restore true Roman order to the lands of Greece."
  artists_help_with_great_projects_tooltip: "§YArtist§! advisors now grant §G-5.0%§! §YGreat Project Upgrade Cost§! per skill level.\n"
  mavrocordatos_ruler_tooltip: "\nIf our ruler's dynasty is §YMavrocordatos§!, every owned §YGreek§! province will gain:"
- mavrocordatos_candidate_buff_tooltip: "\n@TUH Electing a candidate from §YHouse Mavrocordatos§! now grants an §YInnovator§! advisor for §G50%§! of the cost.\n"
+ mavrocordatos_candidate_buff_tooltip: "@TUH Electing a candidate from §YHouse Mavrocordatos§! now grants an §YInnovator§! advisor for §G50%§! of the cost."
  wal_balkan_hegemony_title: "Balkan Hegemon"
  wal_balkan_hegemony_desc: "The Balkans remain a patchwork of feuding lords, false crowns, and foreign meddlers. If we are to secure our realm and assert the true might of the Roman legacy, we must bring these lands under one banner."
  wal_faster_balkan_romanianization_tooltip: "§YIllyria§! will be Romanianized twice as quickly."
