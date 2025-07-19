@@ -47,6 +47,12 @@ wallachian_terror_mechanic = {
 				}
 				modifier = { ae_impact = -0.1 }
 			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = wal_draco_legions_terror_buff
+				}
+				modifier = { drill_gain_modifier = 0.5 }
+			}
 		}
 	}
 	interactions = {

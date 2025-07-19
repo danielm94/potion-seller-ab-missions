@@ -897,7 +897,7 @@ wallachia_a_princely_court = {
 }
 
 wallachia_vlach_supremacy = {
-	manpower_in_culture_group_provinces = 0.25
+	culture_conversion_cost = -0.1
 	culture_conversion_time = -0.1
 }
 
@@ -938,4 +938,9 @@ wallachia_local_military_infrastructure = {
 wallachia_gunpowder = {
 	backrow_artillery_damage = 0.1
 	fire_damage = 0.1
+}
+
+wallachia_draco_legions = {
+	manpower_in_culture_group_provinces = 0.25
+	discipline = 0.05
 }

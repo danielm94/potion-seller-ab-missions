@@ -4840,46 +4840,19 @@ ab_wal_4 = {
 			wal_cossacks
 		}
 		trigger = {
-			if = {
-				limit = {
-					ai = yes
-				}
-				OR = {
-					is_year = 1500
-					AND = {
-						num_of_cavalry = 20
-						num_of_cossacks = 10
-						has_global_modifier_value = {
-							which = cavalry_power
-							value = 0.3
-						}
-						army_professionalism = 0.3
-						OR = {
-							army_tradition = 60
-							has_government_power = {
-								mechanic_type = wallachian_terror_mechanic
-								power_type = terror_power
-								value = 60
-							}
-						}
-					}
-				}
+			num_of_cavalry = 20
+			num_of_cossacks = 10
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.3
 			}
-			else = {
-				num_of_cavalry = 20
-				num_of_cossacks = 10
-				has_global_modifier_value = {
-					which = cavalry_power
-					value = 0.3
-				}
-				army_professionalism = 0.3
-				OR = {
-					army_tradition = 60
-					has_government_power = {
-						mechanic_type = wallachian_terror_mechanic
-						power_type = terror_power
-						value = 60
-					}
+			army_professionalism = 0.3
+			OR = {
+				army_tradition = 60
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 60
 				}
 			}
 		}
@@ -4895,6 +4868,77 @@ ab_wal_4 = {
 			add_mil_power = 100
 			add_army_tradition_or_mil_power = {
 				amount = 5
+			}
+		}
+	}
+	wal_draco_legions = {
+		icon = gfx_wal_draco_legions
+		position = 23
+		required_missions = {
+			wal_cavalry
+			wal_adopt_gunpowder
+		}
+		trigger = {
+			monthly_mil = 12
+			army_size = 150
+			army_professionalism = 0.75
+			OR = {
+				army_tradition = 80
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 80
+				}
+			}
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.15
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				OR = {
+					holy_order = wal_order_of_the_dragon_order
+					holy_order = draculesti_stronghold
+					holy_order = danesti_stronghold
+					holy_order = cantacuzino_stronghold
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = boh_biggest_eu_army
+				NOT = {
+					any_country = {
+						capital_scope = {
+							continent = europe
+						}
+						army_size = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_draco_legions
+				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = wal_draco_legions_terror_buff_tooltip
+			set_country_flag = wal_draco_legions_terror_buff"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = tuh_draculesti_election_bonus
+					custom_tooltip = tuh_draculesti_election_bonus_tooltip
+			tooltip = {
+				add_yearly_manpower = 0.5
+				create_general = {
+					tradition = 80
+				}
+			}
+			custom_tooltip = rem_bonus_not_retroactive_tooltip"
 			}
 		}
 	}
@@ -5969,14 +6013,12 @@ ab_wal_5 = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-	
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
 				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
 				first_effect = "custom_tooltip = wal_unlock_order_of_dragon_tooltip
 			set_country_flag = wal_unlock_order_of_dragon"
 			}
-			
 		}
 	}
 	wal_adopt_gunpowder = {
