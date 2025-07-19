@@ -5968,6 +5968,15 @@ ab_wal_5 = {
 					}
 				}
 			}
+			custom_tooltip = AB_EMPTY
+	
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_terror_mechanics_enabled_tooltip
+				first_limit = "has_government_mechanic = wallachian_terror_mechanic"
+				first_effect = "custom_tooltip = wal_unlock_order_of_dragon_tooltip
+			set_country_flag = wal_unlock_order_of_dragon"
+			}
+			
 		}
 	}
 	wal_adopt_gunpowder = {

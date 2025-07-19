@@ -339,6 +339,7 @@
  wal_military_infrastructure_title: "Foundations of the Armata"
  wal_military_infrastructure_desc: "A professional army requires a permanent home: barracks for its soldiers, armories for its weapons, and training grounds for its drills. We must systematically develop our most populous lands into dedicated military centers. This will create a deep and reliable wellspring of manpower to sustain our ambitions and ensure the Armata is always ready for war."
  wal_soldiers_household_bonus_tooltip: "If the province has a §YSoldier's Household§!, then the province will gain §G+1§! £mil£ and its §YBarracks§! will be upgraded to §YTraining Fields§!. If it already has §YTraining Fields§!, the province will gain §G+1§! £dip£ and §G+2§! £mil£."
+ wal_unlock_order_of_dragon_tooltip: "Unlocks the §YOrder of the Dragon§! local organization, giving all affected provinces §G+25.0%§! Garrison Size and §G+25.0%§! Local Garrison Army Damage."
  wal_adopt_gunpowder_title: "The Powder Edict"
  wal_adopt_gunpowder_desc: "The age of sword and shield is ending. Victory on the modern battlefield will be decided by disciplined fire and the roar of cannon. We must embrace this revolution, investing in artillery and retraining our soldiers in the art of gunpowder warfare. Under the guidance of a true military innovator, our Armata will master this new technology and wield it to devastating effect." 
  employed_skill_3_army_reformer_tooltip: "A §Yskill 3 Army Reformer§! advisor is currently employed."
