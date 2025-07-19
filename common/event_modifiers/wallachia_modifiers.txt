@@ -944,3 +944,18 @@ wallachia_draco_legions = {
 	manpower_in_culture_group_provinces = 0.25
 	discipline = 0.05
 }
+
+wallachia_thriving_steppe = {
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.1
+	local_development_cost = -0.05
+}
+
+estate_cossacks_monopoly_on_steppe_herds_mod = {
+	local_production_efficiency = -100
+}
+
+estate_cossacks_monopoly_on_steppe_herds_mod_bonus = {
+	trade_goods_size_modifier = 0.25
+	trade_goods_size = 0.25
+}

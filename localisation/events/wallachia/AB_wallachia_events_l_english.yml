@@ -152,3 +152,5 @@
  AB_wallachia_events.43.a: "Have them start digging immediately."
  AB_wallachia_events.43.b: "It's not worth the cost."
  no_more_salt_events_tooltip: "§RYou will not get another opportunity to change this province's trade good to §YSalt§!.§!"
+ AB_wallachia_events.44.t: "Extension of the Monopoly on Steppe Herds"
+ AB_wallachia_events.44.d: "Your Grace, the ten-year charter granting the §Y[Root.GetCossacksName]§! exclusive control over the herds of the steppe has concluded. Our tax collectors stand ready to resume their duties, and the wealth of the grasslands can once again flow directly into our state coffers.\n\nHowever, a delegation from the Host has just arrived. Their Ataman reports that the arrangement was immensely profitable and has proposed renewing the contract under the same terms. They are prepared to offer another significant upfront payment in exchange for another decade of exclusive control.\n\nThe immediate influx of ducats is tempting, but it comes at the cost of long-term revenue from those now-thriving provinces. How shall we proceed?"

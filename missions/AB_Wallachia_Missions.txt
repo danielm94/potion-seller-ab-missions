@@ -2228,6 +2228,72 @@ ab_wal_2 = {
 			}
 		}
 	}
+	wal_civilize_the_steppe = {
+		icon = mission_lit_harness_steppes
+		position = 21
+		required_missions = {
+			wal_cossacks
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_terrain = steppe
+			OR = {
+				NOT = {
+					religion = ROOT
+				}
+				NOT = {
+					development = 15
+				}
+				NOT = {
+					is_state_core = THIS
+				}
+				has_tax_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_terrain = steppe
+				religion = ROOT
+				development = 15
+				is_state_core = THIS
+				has_tax_building_trigger = yes
+				has_road_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_thriving_steppe
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_terrain = steppe
+						region = ROOT
+						development = 15
+						is_state_core = THIS
+						has_tax_building_trigger = yes
+						has_road_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_thriving_steppe
+						duration = -1
+					}
+				}
+			}
+			set_country_flag = hun_upgrade_cossack_priv
+			custom_tooltip = hun_upgrade_cossack_priv_tt
+
+			unlock_estate_privilege = {
+				estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+			}
+		}
+	}
 }
 
 ab_wal_3 = {
@@ -4874,7 +4940,7 @@ ab_wal_4 = {
 		effect = {
 			add_country_modifier = {
 				name = wallachia_cavalry_mod
-				duration = -1
+				duration = 10950
 			}
 			add_country_modifier = {
 				name = wallachia_disciplined_cossacks

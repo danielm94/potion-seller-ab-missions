@@ -3823,3 +3823,26 @@ province_event = {
 		custom_tooltip = no_more_salt_events_tooltip
 	}
 }
+
+country_event = {
+	id = AB_wallachia_events.44
+	title =  AB_wallachia_events.44.t
+	desc =  AB_wallachia_events.44.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+		}
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		set_estate_privilege = estate_cossacks_monopoly_on_steppe_herds
+	}
+	option = {
+		name = monopoly_privileges.1.b
+	}
+}

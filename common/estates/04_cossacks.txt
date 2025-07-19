@@ -167,6 +167,7 @@ estate_cossacks = {
 		estate_cossacks_exempt_from_bureaucracy
 		estate_cossacks_military_service
 		estate_cossacks_expand_cossacks_raiders
+		estate_cossacks_monopoly_on_steppe_herds
 	}
 
 	agendas = {

@@ -12,3 +12,8 @@
  carpathian_expansion_on_granted_tooltip: "§G-35%§! Local Development Cost in all §YMountain§! provinces in the §YCarpathia§! region\n§G-20%§! Local Development Cost in all §YHighlands§! provinces in the §YCarpathia§! region\n§G-25%§! Local Development Cost in all §YHills§! provinces in the §YCarpathia§! region"
  carpathia_and_balkan_expansion_on_granted_tooltip: "§G-35%§! Local Development Cost in all §YMountain§! provinces in the §YCarpathia§! and §YBalkan§! regions\n§G-20%§! Local Development Cost in all §YHighlands§! provinces in the §YCarpathia§! and §YBalkan§! regions\n§G-25%§! Local Development Cost in all §YHills§! provinces in the §YCarpathia§! and §YBalkan§! regions"
  carpathian_expansion_on_revoked_tooltip: "The development penalties will no longer be negated."
+ estate_cossacks_monopoly_on_steppe_herds: "Monopoly on Steppe Herds"
+ estate_cossacks_monopoly_on_steppe_herds_desc: "The vast herds of the Pontic Steppe are its greatest treasure. By granting the Host an exclusive charter over this wealth, we recognize their unparalleled expertise in animal husbandry. This arrangement secures the productivity of the grasslands and ensures their mastery of the horse continues to serve our armies."
+ monopoly_income_steppe_herdes_desc: "from §YLivestock§! and §YWool§! in §YSteppe§! provinces in §YEurope§!"
+ estate_cossacks_monopoly_on_steppe_herds_effect_tooltip: "§RNo income from §YLivestock§! and §YWool§! in §YSteppe§! provinces in §YEurope§!.§!"
+ estate_cossacks_monopoly_on_steppe_revoke_tooltip: "Production from §YLivestock§! and §YWool§! in §YSteppe§! provinces in §YEurope§! is restored." 

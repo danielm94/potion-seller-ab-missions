@@ -346,4 +346,6 @@
  wal_draco_legions_terror_buff_tooltip: "§YTerror§! now grants us up to §G+50.0%§! §YArmy Drill Gain Modifier§!"
  tuh_draculesti_election_bonus_tooltip: "Electing a candidate from House §YDraculesti§! will now provide:"
  rem_bonus_not_retroactive_tooltip: "§RThis bonus will not be available if you aren't a §YRomanian Elective Monarchy§! when you claim this reward!§!"
- brancoveanu_election_bonus_tooltip: "Electing a candidate from house §YBrancoveanu§! grants the following bonus:" 
+ brancoveanu_election_bonus_tooltip: "Electing a candidate from house §YBrancoveanu§! grants the following bonus:"
+ wal_civilize_the_steppe_title: "Civilize the Steppe"
+ wal_civilize_the_steppe_desc: "The steppes are a vast, untamed sea of grass, home to riders and little else. To truly control these lands, we must do more than bargain with the Host. We must plant the seeds of civilization itself: building roads, founding towns, and raising churches. We will transform these wild plains into productive, integrated provinces that will strengthen the realm for centuries to come."

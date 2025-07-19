@@ -1960,6 +1960,20 @@ clean_add_country_modifier = {
 		duration = $duration$
 	}
 }
+clean_add_province_modifier = {
+	if = {
+		limit = {
+			has_province_modifier = $name$
+		}
+		hidden_effect = {
+			remove_province_modifier = $name$
+		}
+	}
+	add_province_modifier = {
+		name = $name$
+		duration = $duration$
+	}
+}
 
 simple_unlock_issue = {
 	custom_tooltip = unlock_issue_$issue$_tt
