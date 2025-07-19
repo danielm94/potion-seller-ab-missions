@@ -422,10 +422,22 @@ country_event = {
 			limit = {
 				OR = {
 					has_country_flag = tuh_galleass_gift
+					has_country_flag = brancoveanu_election_bonus
 				}
 			}
-			tuh_galleass_gift_effect = yes
+			custom_tooltip = tuh_candidate_bonus_tooltip
 		}
+		if = {
+			limit = {
+				has_country_flag = brancoveanu_election_bonus
+			}
+			add_ruler_modifier = {
+				name = tuh_brancoveanu_patronage
+				duration = -1
+			}
+			custom_tooltip = tuh_brancoveanu_patronage_tooltip
+		}
+		tuh_galleass_gift_effect = yes
 	}
 	option = {
 		name = tuh_elections.0.e

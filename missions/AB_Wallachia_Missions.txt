@@ -3229,6 +3229,21 @@ ab_wal_3 = {
 				skill = 2
 				cost_multiplier = 0.5
 			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
+				first_limit = "has_government_attribute = romanian_elective_monarchy"
+				first_effect = "set_country_flag = brancoveanu_election_bonus
+								custom_tooltip = brancoveanu_election_bonus_tooltip
+								tooltip = {
+									add_ruler_modifier = {
+										name = tuh_brancoveanu_patronage
+										duration = -1
+									}
+									custom_tooltip = tuh_brancoveanu_patronage_tooltip
+									custom_tooltip = rem_bonus_not_retroactive_tooltip
+								}"
+			}
 		}
 	}
 	wal_heart_of_orthodox_world = {

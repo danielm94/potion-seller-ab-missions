@@ -126,4 +126,5 @@
  tuh_mavrocordatos_total_legitimacy_of_candidate: "With all factors considered, §Y[tuh_elections_mavrocordatos.GetName]§! of §YHouse Mavrocordatos§! is expected to have §Y[This.precalc_mavrocordatos_total_legitimacy.GetValue]§! §YLegitimacy§! if elected."
  tuh_candidate_bonus_tooltip: "§GCandidate Bonus:§!"
  tuh_greek_resettlement_tooltip: "Provinces in §YAnatolia§! that are not §YRomanian§! will slowly be resettled by the §YGreeks§!."
- tuh_cantacuzino_no_pretender_rebels_tooltip: "Since our capital is §Y[151.GetName]§!, no pretender rebels will spawn after the election." 
+ tuh_cantacuzino_no_pretender_rebels_tooltip: "Since our capital is §Y[151.GetName]§!, no pretender rebels will spawn after the election."
+ tuh_brancoveanu_patronage_tooltip: "§VWhile this modifier is active, developing §YRomanian§! culture group provinces has a §G10%§! chance of granting an §Gextra point of development§!.§!"  

@@ -345,4 +345,5 @@
  wal_draco_legions_desc: "Our Armata is disciplined, our cavalry is peerless, and our cannons roar. The final step is to synthesize these elements into a singular, perfect war machine. We must organize our forces into new legions, inspired by the discipline of Rome and the ferocity of the ancient Dacian Draco. When our banner is the most feared in all of Europe, we will know our work is complete."
  wal_draco_legions_terror_buff_tooltip: "§YTerror§! now grants us up to §G+50.0%§! §YArmy Drill Gain Modifier§!"
  tuh_draculesti_election_bonus_tooltip: "Electing a candidate from House §YDraculesti§! will now provide:"
- rem_bonus_not_retroactive_tooltip: "§RThis bonus will not be available if you decide to become a §YRomanian Elective Monarchy§! at a later date!§!" 
+ rem_bonus_not_retroactive_tooltip: "§RThis bonus will not be available if you aren't a §YRomanian Elective Monarchy§! when you claim this reward!§!"
+ brancoveanu_election_bonus_tooltip: "Electing a candidate from house §YBrancoveanu§! grants the following bonus:" 

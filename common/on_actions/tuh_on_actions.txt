@@ -140,3 +140,46 @@ on_province_owner_change = {
 		}
 	}
 }
+
+on_adm_development = {
+	if = {
+		limit = {
+			owner = {
+				has_ruler_modifier = tuh_brancoveanu_patronage
+			}
+			culture_group = romanian_culture_group
+		}
+		random = {
+			chance = 10
+			add_base_tax = 1
+		}
+	}
+}
+on_dip_development = {
+	if = {
+		limit = {
+			owner = {
+				has_ruler_modifier = tuh_brancoveanu_patronage
+			}
+			culture_group = romanian_culture_group
+		}
+		random = {
+			chance = 10
+			add_base_production = 1
+		}
+	}
+}
+on_mil_development = {
+	if = {
+		limit = {
+			owner = {
+				has_ruler_modifier = tuh_brancoveanu_patronage
+			}
+			culture_group = romanian_culture_group
+		}
+		random = {
+			chance = 10
+			add_base_manpower = 1
+		}
+	}
+}
