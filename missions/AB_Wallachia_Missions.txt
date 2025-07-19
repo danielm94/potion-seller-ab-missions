@@ -109,6 +109,7 @@ ab_wal_boier_compromise_missions = {
 			}
 		}
 		effect = {
+			set_country_flag = block_wallachian_terror_purge
 			custom_tooltip = cant_form_dacia_tooltip
 			custom_tooltip = tooltip_line_divider
 			custom_tooltip = form_tuh_tooltip
@@ -136,6 +137,7 @@ ab_wal_boier_compromise_missions = {
 			}
 			country_event = {
 				id = AB_wallachia_events.13
+				days = 5
 			}
 		}
 	}
@@ -252,6 +254,22 @@ ab_wal_slayed_the_boieri_missions = {
 	potential = {
 		has_access_to_wallachian_missions = yes
 		has_wallachia_purged_the_estates = yes
+		has_voivode_lost_wallachian_civil_war = no
+	}
+	wal_war_of_the_ten_houses = {
+		icon = gfx_wal_war_of_the_ten_houses
+		position = 1
+		trigger = {
+			has_won_wallachian_civil_war = yes
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					devastation = 1
+				}
+				add_devastation = -25
+			}
+		}
 	}
 }
 

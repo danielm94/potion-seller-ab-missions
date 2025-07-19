@@ -65,6 +65,11 @@ wallachian_terror_mechanic = {
 			icon = "GFX_wallachian_terror_impale_the_privileged_button"
 			cost_type = terror_power
 			trigger = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = block_wallachian_terror_purge
+					}
+				}
 				has_government_power = {
 					mechanic_type = wallachian_terror_mechanic
 					power_type = terror_power
@@ -142,11 +147,15 @@ wallachian_terror_mechanic = {
 					hidden_effect = {
 						swap_non_generic_missions = yes
 					}
-					#TODO Remove modifiers/bonuses from placating nobility missions.
 				}
 				change_estate_land_share = {
 					estate = all
 					share = -10
+				}
+				hidden_effect = {
+					remove_country_modifier = wallachia_placating_the_boieri
+					clr_country_flag = wal_compromised_with_the_boieri
+					remove_country_modifier = boier_compact
 				}
 			}
 			cooldown_years = 20

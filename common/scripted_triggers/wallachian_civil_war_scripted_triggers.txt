@@ -160,5 +160,8 @@ has_voivode_lost_wallachian_civil_war = {
 }
 
 has_won_wallachian_civil_war = {
-	has_country_flag = wallachian_civil_war_victory
+	custom_trigger_tooltip = {
+		tooltip = has_won_wallachian_civil_war_trigger
+		has_country_flag = wallachian_civil_war_victory
+	}
 }
