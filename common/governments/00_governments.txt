@@ -1004,6 +1004,8 @@ monarchy = {
 				polthirdrome
 				polonenationunderthegods
 				# ]]]
+				#PotionSeller
+				absolute_control_reform
 			}
 		}
 	}

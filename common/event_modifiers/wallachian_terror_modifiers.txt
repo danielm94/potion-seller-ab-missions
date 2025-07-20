@@ -303,3 +303,8 @@ reign_of_terror = {
 	discipline = 0.05
 	terror_power_gain_modifier = 0.1
 }
+
+wallachia_absolute_control = {
+	max_absolutism = 5
+	free_concentrate_development = yes
+}

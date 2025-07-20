@@ -402,6 +402,45 @@ ab_wal_slayed_the_boieri_missions = {
 			custom_tooltip = enable_provoke_coalition_tooltip
 		}
 	}
+	wal_absolute_control = {
+		icon = gfx_wal_absolute_control
+		position = 4
+		required_missions = {
+			wal_the_butcher
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				absolutism = 100
+				crown_land_share = 95
+				legitimacy = 100
+				stability = 3
+				NOT = {
+					average_autonomy_above_min = 5
+				}
+			}
+		}
+		effect = {
+			add_country_modifier_until_end_of_current_age = {
+				name = wallachia_absolute_control
+			}
+			custom_tooltip = wal_absolute_control_princely_court_bonus_tooltip
+			set_country_flag = wal_absolute_control_princely_court_bonus
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = terror_on_exploit_tooltip
+			set_country_flag = terror_on_exploit
+			custom_tooltip = AB_EMPTY
+			unlock_government_reform = {
+				government_reform = absolute_control_reform
+				tooltip = yes
+			}
+		}
+	}
 }
 
 ab_wal_1 = {

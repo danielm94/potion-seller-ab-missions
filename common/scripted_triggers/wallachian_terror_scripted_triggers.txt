@@ -252,3 +252,11 @@ has_razed_n_provinces_using_terror_mechanics = {
 		value = $n$
 	}
 }
+
+
+has_tirgoviste_princely_court_absolute_control_bonus = {
+	custom_trigger_tooltip = {
+		tooltip = has_tirgoviste_princely_court_absolute_control_bonus_tooltip
+		has_country_flag = wal_absolute_control_princely_court_bonus
+	}
+}

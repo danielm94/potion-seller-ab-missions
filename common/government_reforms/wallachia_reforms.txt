@@ -383,3 +383,32 @@ wallachia_establish_the_pandurs_reform = {
 		factor = 1
 	}
 }
+
+# Tier 11 - Separation of Power -
+
+absolute_control_reform = {
+	icon = "absolute_control_reform"
+	allow_normal_conversion = yes
+		potential = {
+		is_or_was_wallachia = yes
+		NOT = {
+			has_government_attribute = romanian_elective_monarchy
+		}
+		has_country_flag = wallachian_terror_purged_estates
+	}
+	trigger = {
+		has_unlocked_government_reform = {
+			government_reform = absolute_control_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = 10
+		administrative_efficiency = 0.05
+		core_creation = -0.05
+		all_estate_possible_privileges = -1
+		all_estate_loyalty_equilibrium = -0.1
+	}
+	ai = {
+		factor = 100
+	}
+}

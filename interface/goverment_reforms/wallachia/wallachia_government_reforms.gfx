@@ -87,4 +87,8 @@ spriteTypes = {
 		name = "government_reform_abolition_of_the_boiermiea"
 		texturefile = "gfx/interface/government_reform_icons/abolition_of_the_boiermiea.dds"
 	}
+	spriteType = {
+		name = "government_reform_absolute_control_reform"
+		texturefile = "gfx/interface/government_reform_icons/absolute_control_reform.dds"
+	}
 }

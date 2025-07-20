@@ -259,6 +259,16 @@ tirgoviste_princely_court = {
 				terror_power_gain_modifier = 0.05
 			}
 		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_tirgoviste_princely_court_absolute_control_bonus = yes
+				}
+			}
+			modifier = {
+				max_absolutism_effect = 0.05
+			}
+		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 			owner = {
@@ -303,16 +313,6 @@ tirgoviste_princely_court = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_government_mechanic = wallachian_terror_mechanic
-				}
-			}
-			modifier = {
-				max_absolutism_effect = 0.1
-			}
-		}
-		conditional_modifier = {
-			trigger = {
-				owner = {
 					has_tirgoviste_princely_court_take_control_bonus = yes
 				}
 			}
@@ -320,6 +320,16 @@ tirgoviste_princely_court = {
 				global_unrest = -1
 				monthly_terror_power = 0.05
 				terror_power_gain_modifier = 0.1
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_tirgoviste_princely_court_absolute_control_bonus = yes
+				}
+			}
+			modifier = {
+				max_absolutism_effect = 0.1
 			}
 		}
 		#what effects happen when this tier is achieved
@@ -369,16 +379,6 @@ tirgoviste_princely_court = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_government_mechanic = wallachian_terror_mechanic
-				}
-			}
-			modifier = {
-				max_absolutism_effect = 0.15
-			}
-		}
-		conditional_modifier = {
-			trigger = {
-				owner = {
 					has_tirgoviste_princely_court_take_control_bonus = yes
 				}
 			}
@@ -386,6 +386,16 @@ tirgoviste_princely_court = {
 				global_unrest = -2
 				monthly_terror_power = 0.08
 				terror_power_gain_modifier = 0.25
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_tirgoviste_princely_court_absolute_control_bonus = yes
+				}
+			}
+			modifier = {
+				max_absolutism_effect = 0.15
 			}
 		}
 		#what effects happen when this tier is achieved
