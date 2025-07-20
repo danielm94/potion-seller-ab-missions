@@ -155,4 +155,8 @@ spriteTypes = {
 		name = "gfx_wal_take_control"
 		texturefile = "gfx/interface/missions/wal/wal_take_control.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_the_butcher"
+		texturefile = "gfx/interface/missions/wal/wal_the_butcher.dds"
+	}
 }

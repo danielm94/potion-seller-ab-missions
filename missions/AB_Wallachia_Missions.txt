@@ -260,7 +260,15 @@ ab_wal_slayed_the_boieri_missions = {
 		icon = gfx_wal_war_of_the_ten_houses
 		position = 1
 		trigger = {
-			has_won_wallachian_civil_war = yes
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				has_won_wallachian_civil_war = yes
+			}
 		}
 		effect = {
 			add_yearly_manpower = 1
@@ -288,26 +296,39 @@ ab_wal_slayed_the_boieri_missions = {
 			wal_war_of_the_ten_houses
 		}
 		trigger = {
-			crown_land_share = 50
-			NOT = {
-				average_autonomy_above_min = 10
-			}
-			stability = 3
-			OR = {
-				NOT = {
-					has_estate = estate_nobles
+			if = {
+				limit = {
+					has_country_flag = debug
 				}
-				custom_trigger_tooltip = {
-					tooltip = no_privileges_granted_to_nobles_trigger_tooltip
+				always = yes
+			}
+			else = {
+				crown_land_share = 50
+				NOT = {
+					average_autonomy_above_min = 10
+				}
+				stability = 3
+				OR = {
 					NOT = {
-						num_of_estate_privileges = {
-							estate = estate_nobles
-							value = 1
+						has_estate = estate_nobles
+					}
+					custom_trigger_tooltip = {
+						tooltip = no_privileges_granted_to_nobles_trigger_tooltip
+						NOT = {
+							num_of_estate_privileges = {
+								estate = estate_nobles
+								value = 1
+							}
 						}
 					}
 				}
+				custom_trigger_tooltip = {
+					tooltip = has_purged_the_elites_3_times_tooltip
+					has_purged_the_elites_n_times = {
+						n = 3
+					}
+				}
 			}
-			has_purged_the_elites_3_times = yes
 		}
 		effect = {
 			add_country_modifier = {
@@ -322,6 +343,63 @@ ab_wal_slayed_the_boieri_missions = {
 			custom_tooltip = wal_take_control_princely_court_bonus_tooltip
 			custom_tooltip = AB_EMPTY
 			upgrade_impaler_personality_reward = yes
+		}
+	}
+	wal_the_butcher = {
+		icon = gfx_wal_the_butcher
+		position = 3
+		required_missions = {
+			wal_take_control
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = ruler_has_second_or_third_tier_impaler_trigger_tooltip
+					OR = {
+						ruler_has_personality = impaler2_personality
+						ruler_has_personality = impaler3_personality
+					}
+				}
+				OR = {
+					has_government_power = {
+						mechanic_type = wallachian_terror_mechanic
+						power_type = terror_power
+						value = 60
+					}
+					has_butchered_the_boiermiea = yes
+				}
+				NOT = {
+					diplomatic_reputation = -10
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_impaled_10_rulers_tooltip
+					has_impaled_n_rulers = {
+						n = 10
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_razed_50_provinces_tooltip
+					has_razed_n_provinces_using_terror_mechanics = {
+						n = 50
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = refund_terror
+			custom_tooltip = refund_terror_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = enable_provoke_coalition
+			custom_tooltip = enable_provoke_coalition_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = wal_more_terror_from_razing
+			custom_tooltip = wal_more_terror_from_razing_tooltip
 		}
 	}
 }

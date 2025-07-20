@@ -20,7 +20,14 @@ set_variable = {
 	which = rem_parliament_issues_passed
 	value = 0
 }
-
+set_variable = {
+	which = number_of_rulers_impaled
+	value = 0
+}
+set_variable = {
+	which = wal_number_of_provinces_razed
+	value = 0
+}
 1436.12.1 = {
 	monarch = {
 		name = "Vlad II"

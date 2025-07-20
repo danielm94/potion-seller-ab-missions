@@ -475,6 +475,7 @@ country_event = {
 				value = -30
 				scaled_with_gain_modifier = no
 			}
+			refund_terror_effect = yes
 		}
 	}
 	is_triggered_only = yes
