@@ -147,4 +147,8 @@ spriteTypes = {
 		name = "gfx_wal_draco_legions"
 		texturefile = "gfx/interface/missions/wal/wal_draco_legions.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_war_of_the_ten_houses"
+		texturefile = "gfx/interface/missions/wal/wal_war_of_the_ten_houses.dds"
+	}
 }

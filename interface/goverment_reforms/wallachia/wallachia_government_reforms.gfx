@@ -75,8 +75,16 @@ spriteTypes = {
 		name = "government_reform_great_concordat"
 		texturefile = "gfx/interface/government_reform_icons/great_concordat.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "government_reform_state_appropriation_of_the_robie"
 		texturefile = "gfx/interface/government_reform_icons/state_appropriation_of_the_robie.dds"
+	}
+	spriteType = {
+		name = "government_reform_supremacy_of_the_armasie"
+		texturefile = "gfx/interface/government_reform_icons/supremacy_of_the_armasie.dds"
+	}
+	spriteType = {
+		name = "government_reform_abolition_of_the_boiermiea"
+		texturefile = "gfx/interface/government_reform_icons/abolition_of_the_boiermiea.dds"
 	}
 }

@@ -263,11 +263,21 @@ ab_wal_slayed_the_boieri_missions = {
 			has_won_wallachian_civil_war = yes
 		}
 		effect = {
-			every_owned_province = {
-				limit = {
-					devastation = 1
+			add_yearly_manpower = 1
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_devastation_post_civil_war_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						devastation = 1
+					}
+					add_devastation = -25
 				}
-				add_devastation = -25
+			}
+			custom_tooltip = AB_EMPTY
+			unlock_government_reform = {
+				government_reform = abolition_of_the_boiermiea
+				tooltip = yes
 			}
 		}
 	}
