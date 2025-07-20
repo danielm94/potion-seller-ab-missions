@@ -384,6 +384,23 @@ wallachia_establish_the_pandurs_reform = {
 	}
 }
 
+#-----Tier 5-----#
+bulwark_of_the_faith = {
+	icon = "bulwark_of_the_faith"
+	allow_normal_conversion = yes
+	potential = {
+		is_or_was_wallachia = yes
+	}
+	modifiers = {
+		global_missionary_strength = 0.02
+		yearly_patriarch_authority = 0.005
+		manpower_in_true_faith_provinces = 0.05
+	}
+	custom_attributes = {
+		improved_defender_of_faith = yes
+	}
+}
+
 # Tier 11 - Separation of Power -
 
 absolute_control_reform = {

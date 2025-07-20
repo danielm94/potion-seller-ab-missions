@@ -170,23 +170,6 @@ recognize_dniester_host = {
 	}
 }
 
-#-----Tier 5-----#
-bulwark_of_the_faith = {
-	icon = "bulwark_of_the_faith"
-	allow_normal_conversion = yes
-	potential = {
-		has_government_attribute = romanian_elective_monarchy
-	}
-	modifiers = {
-		global_missionary_strength = 0.02
-		yearly_patriarch_authority = 0.005
-		manpower_in_true_faith_provinces = 0.05
-	}
-	custom_attributes = {
-		improved_defender_of_faith = yes
-	}
-}
-
 #------Tier 6------#
 phanariot_cadre = {
 	icon = "phanariot_cadre"
