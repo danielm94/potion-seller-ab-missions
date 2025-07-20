@@ -2507,7 +2507,7 @@ wallachian_terror_francia_impaled_effects = {
 }
 
 wallachian_terror_england_impaler_effects = {
-	if ={
+	if = {
 		limit = {
 			is_ruler_impaler = yes
 		}
@@ -2784,5 +2784,41 @@ wallachian_terror_england_impaled_humiliation_effects = {
 		add_navy_tradition = 5
 		add_prestige = -10
 		add_legitimacy = -25
+	}
+}
+
+upgrade_impaler_personality_reward = {
+	custom_tooltip = upgrade_impaler_personality_reward_tooltip
+	if = {
+		limit = {
+			is_ruler_impaler = no
+		}
+		change_terror = {
+			value = 30
+			scaled_with_gain_modifier = no
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = impaler_personality
+		}
+		remove_ruler_personality = impaler_personality
+		add_ruler_personality = impaler2_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = impaler2_personality
+		}
+		remove_ruler_personality = impaler2_personality
+		add_ruler_personality = impaler3_personality
+	}
+	else_if = {
+		limit = {
+			ruler_has_personality = impaler3_personality
+		}
+		change_terror = {
+			value = 75
+			scaled_with_gain_modifier = no
+		}
 	}
 }

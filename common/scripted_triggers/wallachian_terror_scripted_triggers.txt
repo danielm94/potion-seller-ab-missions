@@ -224,3 +224,20 @@ has_impaled_france_ruler = {
 has_impaled_england_ruler = {
 	has_country_flag = wallachia_impaled_england
 }
+
+has_purged_the_elites_3_times = {
+custom_trigger_tooltip = {
+	tooltip = has_purged_the_elites_3_times_tooltip
+	check_variable = {
+			which = estate_purges_amount
+			value = 3
+		}
+	}
+}
+
+has_targoviste_princely_court_take_control_bonus = {
+	custom_trigger_tooltip = {
+		tooltip = has_targoviste_princely_court_take_control_bonus_tooltip
+		has_country_flag = wal_take_control_princely_court_bonus
+	}
+}

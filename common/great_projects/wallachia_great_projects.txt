@@ -246,17 +246,17 @@ targoviste_princely_court = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			monthly_terror_power = 0.025
-			terror_power_gain_modifier = 0.05
+			yearly_corruption = -0.1
 		}
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_government_mechanic = wallachian_terror_mechanic
+					has_targoviste_princely_court_take_control_bonus = yes
 				}
 			}
 			modifier = {
-				global_unrest = -1
+				monthly_terror_power = 0.025
+				terror_power_gain_modifier = 0.05
 			}
 		}
 		#what effects happen when this tier is achieved
@@ -289,17 +289,16 @@ targoviste_princely_court = {
 		}
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			local_defensiveness = 0.2
-			local_fort_maintenance_modifier = -0.25
 		}
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
+			local_defensiveness = 0.2
+			local_fort_maintenance_modifier = -0.25
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			yearly_corruption = -0.25
 			max_absolutism = 2.5
-			monthly_terror_power = 0.05
-			terror_power_gain_modifier = 0.1
 		}
 		conditional_modifier = {
 			trigger = {
@@ -308,8 +307,19 @@ targoviste_princely_court = {
 				}
 			}
 			modifier = {
-				global_unrest = -2
 				max_absolutism_effect = 0.1
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_targoviste_princely_court_take_control_bonus = yes
+				}
+			}
+			modifier = {
+				global_unrest = -1
+				monthly_terror_power = 0.05
+				terror_power_gain_modifier = 0.1
 			}
 		}
 		#what effects happen when this tier is achieved
@@ -342,20 +352,19 @@ targoviste_princely_court = {
 		}
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			local_defensiveness = 0.5
-			local_fort_maintenance_modifier = -0.5
 			fort_level = 1
 		}
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
+			local_defensiveness = 0.5
+			local_fort_maintenance_modifier = -0.5
 		}
 		region_modifier = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			max_absolutism = 5
-			monthly_terror_power = 0.08
-			terror_power_gain_modifier = 0.25
+			yearly_corruption = -0.5
 		}
 		conditional_modifier = {
 			trigger = {
@@ -364,8 +373,19 @@ targoviste_princely_court = {
 				}
 			}
 			modifier = {
-				global_unrest = -3
 				max_absolutism_effect = 0.15
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_targoviste_princely_court_take_control_bonus = yes
+				}
+			}
+			modifier = {
+				global_unrest = -2
+				monthly_terror_power = 0.08
+				terror_power_gain_modifier = 0.25
 			}
 		}
 		#what effects happen when this tier is achieved

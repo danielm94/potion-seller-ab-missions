@@ -297,3 +297,9 @@ impaler_tier_3_tooltip = {
 cossack_raiding_tactics = {
 	raze_power_gain = 0.25
 }
+
+reign_of_terror = {
+	drill_gain_modifier = 1
+	discipline = 0.05
+	terror_power_gain_modifier = 0.1
+}
