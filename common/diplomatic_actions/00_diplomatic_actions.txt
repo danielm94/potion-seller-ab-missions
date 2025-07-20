@@ -197,6 +197,24 @@ form_coalition = {
 				limit = {
 					FROM = {
 						has_country_flag = wal_increased_coalition_threshold
+						has_country_flag = wal_the_final_lesson_coalition_threshold
+					}
+				}
+				NOT = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+						value = -99
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						OR = {
+							has_country_flag = wal_increased_coalition_threshold
+							has_country_flag = wal_the_final_lesson_coalition_threshold
+						}
 					}
 				}
 				NOT = {
@@ -216,7 +234,6 @@ form_coalition = {
 					}
 				}
 			}
-			
 		}
 	}
 }

@@ -869,3 +869,35 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = wal_current_ae_threshold
+	random = no
+	text = {
+		localisation_key = wal_ae_threshold_100
+		trigger = {
+			has_country_flag = wal_increased_coalition_threshold
+			has_country_flag = wal_the_final_lesson_coalition_threshold
+		}
+	}
+	text = {
+		localisation_key = wal_ae_threshold_75
+		trigger = {
+			OR = {
+				has_country_flag = wal_increased_coalition_threshold
+				has_country_flag = wal_the_final_lesson_coalition_threshold
+			}
+		}
+	}
+	text = {
+		localisation_key = wal_ae_threshold_50
+		trigger = {
+			NOT = {
+				has_country_flag = wal_increased_coalition_threshold
+			}
+			NOT = {
+				has_country_flag = wal_the_final_lesson_coalition_threshold
+			}
+		}
+	}
+}
