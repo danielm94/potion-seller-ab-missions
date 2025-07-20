@@ -35,7 +35,7 @@ wallachian_terror_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					has_country_flag = tier3_targoviste_princely_court
+					has_country_flag = tier3_tirgoviste_princely_court
 				}
 				modifier = {
 					discipline = 0.025

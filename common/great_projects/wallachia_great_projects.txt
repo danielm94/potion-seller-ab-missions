@@ -157,7 +157,7 @@ sfatul_tarii = {
 	}
 }
 
-targoviste_princely_court = {
+tirgoviste_princely_court = {
 	# province it starts in
 	start = 161
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
@@ -251,7 +251,7 @@ targoviste_princely_court = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_targoviste_princely_court_take_control_bonus = yes
+					has_tirgoviste_princely_court_take_control_bonus = yes
 				}
 			}
 			modifier = {
@@ -313,7 +313,7 @@ targoviste_princely_court = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_targoviste_princely_court_take_control_bonus = yes
+					has_tirgoviste_princely_court_take_control_bonus = yes
 				}
 			}
 			modifier = {
@@ -379,7 +379,7 @@ targoviste_princely_court = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_targoviste_princely_court_take_control_bonus = yes
+					has_tirgoviste_princely_court_take_control_bonus = yes
 				}
 			}
 			modifier = {
@@ -408,8 +408,8 @@ targoviste_princely_court = {
 					limit = {
 						has_government_mechanic = wallachian_terror_mechanic
 					}
-					custom_tooltip = targoviste_princely_court_terror_bonus_tooltip
-					set_country_flag = tier3_targoviste_princely_court
+					custom_tooltip = tirgoviste_princely_court_terror_bonus_tooltip
+					set_country_flag = tier3_tirgoviste_princely_court
 				}
 			}
 		}

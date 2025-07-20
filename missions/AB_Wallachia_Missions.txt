@@ -2188,7 +2188,7 @@ ab_wal_2 = {
 		effect = {
 			161 = {
 				add_province_modifier = {
-					name = wallachia_targoviste_metropolitan
+					name = wallachia_tirgoviste_metropolitan
 					duration = 5475
 				}
 			}
@@ -2239,7 +2239,7 @@ ab_wal_2 = {
 			161 = {
 				upgrade_tax_building = yes
 				add_province_modifier = {
-					name = wallachia_targoviste_metropolitan_cathedral
+					name = wallachia_tirgoviste_metropolitan_cathedral
 					duration = -1
 				}
 			}
@@ -3358,7 +3358,7 @@ ab_wal_3 = {
 		effect = {
 			161 = {
 				change_trade_goods = iron
-				custom_tooltip = bonus_development_on_dev_click_targoviste_tooltip
+				custom_tooltip = bonus_development_on_dev_click_tirgoviste_tooltip
 				enable_bonus_development_on_dev_click_for_province = {
 					chance = 20
 				}
@@ -3419,7 +3419,7 @@ ab_wal_3 = {
 				num_of_times_expanded_infrastructure = 3
 				has_building = cathedral
 				has_great_project = {
-					type = targoviste_princely_court
+					type = tirgoviste_princely_court
 					tier = 1
 				}
 				is_most_developed_orthodox_province = yes
@@ -3432,7 +3432,7 @@ ab_wal_3 = {
 				if = {
 					limit = {
 						has_great_project = {
-							type = targoviste_princely_court
+							type = tirgoviste_princely_court
 							tier = 3
 						}
 					}
@@ -3442,7 +3442,7 @@ ab_wal_3 = {
 				}
 				else = {
 					add_great_project_tier = {
-						type = targoviste_princely_court
+						type = tirgoviste_princely_court
 						tier = 1
 					}
 				}

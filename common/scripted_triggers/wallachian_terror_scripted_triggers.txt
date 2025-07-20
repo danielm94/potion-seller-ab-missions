@@ -235,9 +235,9 @@ custom_trigger_tooltip = {
 	}
 }
 
-has_targoviste_princely_court_take_control_bonus = {
+has_tirgoviste_princely_court_take_control_bonus = {
 	custom_trigger_tooltip = {
-		tooltip = has_targoviste_princely_court_take_control_bonus_tooltip
+		tooltip = has_tirgoviste_princely_court_take_control_bonus_tooltip
 		has_country_flag = wal_take_control_princely_court_bonus
 	}
 }
