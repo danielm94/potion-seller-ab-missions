@@ -743,256 +743,271 @@ sell_crownland_modified_by_purges = {
 }
 
 wallachian_terror_spawn_rebels_from_purge = {
-	random_owned_province = {
+	if = {
 		limit = {
-			has_rebels_in_province = no
+			has_estate = estate_church
 		}
-		owner = {
-			trigger_switch = {
-				on_trigger = religion
-				anglican = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = anglican_rebels
+		random_owned_province = {
+			limit = {
+				has_rebels_in_province = no
+			}
+			owner = {
+				trigger_switch = {
+					on_trigger = religion
+					anglican = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = anglican_rebels
+							}
 						}
 					}
-				}
-				hussite = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = hussite_rebels
+					hussite = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = hussite_rebels
+							}
 						}
 					}
-				}
-				animism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = animism_rebels
+					animism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = animism_rebels
+							}
 						}
 					}
-				}
-				buddhism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = buddhism_rebels
+					buddhism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = buddhism_rebels
+							}
 						}
 					}
-				}
-				catholic = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = catholic_rebels
+					catholic = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = catholic_rebels
+							}
 						}
 					}
-				}
-				confucianism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = confucianism_rebels
+					confucianism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = confucianism_rebels
+							}
 						}
 					}
-				}
-				coptic = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = coptic_rebels
+					coptic = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = coptic_rebels
+							}
 						}
 					}
-				}
-				hinduism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = hinduism_rebels
+					hinduism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = hinduism_rebels
+							}
 						}
 					}
-				}
-				ibadi = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = ibadi_rebels
+					ibadi = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = ibadi_rebels
+							}
 						}
 					}
-				}
-				inti = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = inti_rebels
+					inti = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = inti_rebels
+							}
 						}
 					}
-				}
-				jewish = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = jewish_rebels
+					jewish = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = jewish_rebels
+							}
 						}
 					}
-				}
-				mahayana = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = mahayana_rebels
+					mahayana = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = mahayana_rebels
+							}
 						}
 					}
-				}
-				mesoamerican_religion = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = maya_rebels
+					mesoamerican_religion = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = maya_rebels
+							}
 						}
 					}
-				}
-				nahuatl = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = nahuatl_rebels
+					nahuatl = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = nahuatl_rebels
+							}
 						}
 					}
-				}
-				norse_pagan_reformed = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = norse_pagan_reformed_rebels
+					norse_pagan_reformed = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = norse_pagan_reformed_rebels
+							}
 						}
 					}
-				}
-				orthodox = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = orthodox_rebels
+					orthodox = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = orthodox_rebels
+							}
 						}
 					}
-				}
-				protestant = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = protestant_rebels
+					protestant = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = protestant_rebels
+							}
 						}
 					}
-				}
-				reformed = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = reformed_rebels
+					reformed = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = reformed_rebels
+							}
 						}
 					}
-				}
-				shamanism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = shamanism_rebels
+					shamanism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = shamanism_rebels
+							}
 						}
 					}
-				}
-				shiite = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = shiite_rebels
+					shiite = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = shiite_rebels
+							}
 						}
 					}
-				}
-				shinto = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = shinto_rebels
+					shinto = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = shinto_rebels
+							}
 						}
 					}
-				}
-				sikhism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = sikhism_rebels
+					sikhism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = sikhism_rebels
+							}
 						}
 					}
-				}
-				sunni = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = sunni_rebels
+					sunni = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = sunni_rebels
+							}
 						}
 					}
-				}
-				tengri_pagan_reformed = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = tengri_pagan_reformed_rebels
+					tengri_pagan_reformed = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = tengri_pagan_reformed_rebels
+							}
 						}
 					}
-				}
-				totemism = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = totemism_rebels
+					totemism = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = totemism_rebels
+							}
 						}
 					}
-				}
-				vajrayana = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = vajrayana_rebels
+					vajrayana = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = vajrayana_rebels
+							}
 						}
 					}
-				}
-				zoroastrian = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = zoroastrian_rebels
+					zoroastrian = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = zoroastrian_rebels
+							}
 						}
 					}
-				}
-				dreamtime = {
-					PREV = {
-						spawn_small_scaled_rebels = {
-							no_defined_leader = yes
-							type = dreamtime_rebels
+					dreamtime = {
+						PREV = {
+							spawn_small_scaled_rebels = {
+								no_defined_leader = yes
+								type = dreamtime_rebels
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-	random_owned_province = {
+	if = {
 		limit = {
-			has_rebels_in_province = no
+			has_estate = estate_nobles
 		}
-		spawn_small_scaled_rebels = {
-			no_defined_leader = yes
-			type = noble_rebels
+		random_owned_province = {
+			limit = {
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				no_defined_leader = yes
+				type = noble_rebels
+			}
 		}
 	}
-	random_owned_province = {
+	if = {
 		limit = {
-			has_rebels_in_province = no
+			has_estate = estate_burghers
 		}
-		spawn_small_scaled_rebels = {
-			no_defined_leader = yes
-			type = particularist_rebels
+		random_owned_province = {
+			limit = {
+				has_rebels_in_province = no
+			}
+			spawn_small_scaled_rebels = {
+				no_defined_leader = yes
+				type = particularist_rebels
+			}
 		}
 	}
 	if = {
