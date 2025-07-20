@@ -395,11 +395,11 @@ ab_wal_slayed_the_boieri_missions = {
 			set_country_flag = refund_terror
 			custom_tooltip = refund_terror_tooltip
 			custom_tooltip = AB_EMPTY
-			set_country_flag = enable_provoke_coalition
-			custom_tooltip = enable_provoke_coalition_tooltip
-			custom_tooltip = AB_EMPTY
 			set_country_flag = wal_more_terror_from_razing
 			custom_tooltip = wal_more_terror_from_razing_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = enable_provoke_coalition
+			custom_tooltip = enable_provoke_coalition_tooltip
 		}
 	}
 }
