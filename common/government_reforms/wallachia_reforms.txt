@@ -303,8 +303,8 @@ abolition_of_the_boiermiea ={
 	}
 	modifiers = {
 		max_absolutism_effect = 0.1
-		global_tax_modifier = 0.1
-		global_manpower_modifier = 0.1
+		country_military_power = 1
+		global_manpower_modifier = 0.05
 	}
 	custom_attributes = {
 		disables_estate_nobles = yes
