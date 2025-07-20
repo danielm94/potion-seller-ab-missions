@@ -265,3 +265,24 @@ on_mil_exploited = {
 		}
 	}
 }
+
+#ROOT = winner
+#FROM = loser
+on_main_war_won = {
+	if = {
+		limit = {
+			has_ae_reduced_from_winning_coalition_wars = yes
+		}
+		every_country = {
+			limit = {
+				has_country_flag = reduce_ae_with_coalition_target_if_lose
+			}
+			clr_country_flag = reduce_ae_with_coalition_target_if_lose
+			add_aggressive_expansion = {
+				who = ROOT
+				value = -50
+				apply_calc = no
+			}
+		}
+	}
+}

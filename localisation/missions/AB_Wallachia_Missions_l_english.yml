@@ -377,4 +377,6 @@
  unlock_absolute_control_reform_tt: "We will unlock the government reform §YAbsolute Control§!."
  has_impaled_25_rulers_tooltip: "We have impaled at least §Y25§! rulers. Currently: §Y[Root.number_of_rulers_impaled.GetValue]§! / §Y25§!"
  has_razed_125_provinces_tooltip: "We have razed at least §Y125§! provinces. Currently: §Y[Root.wal_number_of_provinces_razed.GetValue]§! / §Y125§!"
- wal_the_final_lesson_coalition_threshold_tooltip: ""
+ winning_coalition_war_ae_reduced_tooltip: "Defeating a coalition that has declared a §YCoalition War§! (Punitive War) against you reduces the aggressive expansion with all of the coalition members by §G-40§!."
+ wal_the_final_lesson_title: "The Final Lesson"
+ wal_the_final_lesson_desc: "There are those out there who never learn. I've done everything I could to teach them, yet still, they... they — THEY NEVER FUCKING LISTEN TO ME. They think they can hide behind the old order, the old rules, even after the example that was made of the [Root.GetNobilityName] and every other sovereign that stood in my way. They think their coalitions can stop me, but they're all rats at the end of the day. What difference does it make stepping over one rat or a pack of them? It seems like my work never ends, but that's fine because they'll learn eventually, one way or another. Everyone does."

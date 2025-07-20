@@ -382,7 +382,28 @@ declarewar = {
 			limit = {
 				ruler_has_personality = impaler3_personality
 			}
-			add_war_exhaustion = -3
+			hidden_effect = {
+				export_to_variable = {
+					which = stab_cost_for_war
+					value = modifier:stability_cost_to_declare_war
+					who = ROOT
+				}
+				while = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = stab_cost_for_war
+								value = 0
+							}
+						}
+					}
+					add_war_exhaustion = -1
+					change_variable = {
+						which = stab_cost_for_war
+						value = 1
+					}
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -395,6 +416,20 @@ declarewar = {
 			}
 			FROM = {
 				set_country_flag = in_cb_dacian_indian_campaign_war
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ae_reduced_from_winning_coalition_wars = yes
+				}		
+			}
+			every_country = {
+				limit = {
+					war_with = FROM
+					is_in_coalition_war = yes
+				}
+				set_country_flag = reduce_ae_with_coalition_target_if_lose
 			}
 		}
 	}

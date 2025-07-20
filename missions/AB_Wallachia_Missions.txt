@@ -441,6 +441,61 @@ ab_wal_slayed_the_boieri_missions = {
 			}
 		}
 	}
+	wal_the_final_lesson = {
+		icon = gfx_wal_the_final_lesson
+		position = 5
+		required_missions = {
+			wal_absolute_control
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				NOT = {
+					great_power_rank = 2
+				}
+				government_rank = 3
+				ruler_has_personality = impaler3_personality
+				has_government_power = {
+					mechanic_type = wallachian_terror_mechanic
+					power_type = terror_power
+					value = 80
+				}
+				OR = {
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = has_impaled_25_rulers_tooltip
+							has_impaled_n_rulers = {
+								n = 25
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = has_razed_125_provinces_tooltip
+							has_razed_n_provinces_using_terror_mechanics = {
+								n = 125
+							}
+						}
+					}
+					has_defeated_imperial_retribution_coalition = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_the_lesson
+				duration = -1
+			}
+			set_country_flag = wal_the_final_lesson_coalition_threshold
+			custom_tooltip = wal_increased_coalition_threshold_tooltip
+			custom_tooltip = AB_EMPTY
+			set_country_flag = winning_coalition_war_ae_reduced
+			custom_tooltip = winning_coalition_war_ae_reduced_tooltip
+		}
+	}
 }
 
 ab_wal_1 = {
@@ -2965,7 +3020,7 @@ ab_wal_3 = {
 			}
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_impaled_emperor_and_defeated_the_coalition_tooltip
-				first_limit = "has_country_flag = antichrist_victorius"
+				first_limit = "has_defeated_imperial_retribution_coalition = yes"
 				first_effect = "custom_tooltip  = wallachian_terror_ae_bonus_tooltip
 			set_country_flag = wallachian_terror_ae_bonus
 			custom_tooltip = wal_increased_coalition_threshold_tooltip

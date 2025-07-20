@@ -308,3 +308,8 @@ wallachia_absolute_control = {
 	max_absolutism = 5
 	free_concentrate_development = yes
 }
+
+wallachia_the_lesson = {
+	stability_cost_to_declare_war = -3
+	ae_impact = -0.1
+}

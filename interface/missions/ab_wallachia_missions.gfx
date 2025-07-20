@@ -163,4 +163,8 @@ spriteTypes = {
 		name = "gfx_wal_absolute_control"
 		texturefile = "gfx/interface/missions/wal/wal_absolute_control.dds"
 	}
+	spriteType = {
+		name = "gfx_wal_the_final_lesson"
+		texturefile = "gfx/interface/missions/wal/wal_the_final_lesson.dds"
+	}
 }

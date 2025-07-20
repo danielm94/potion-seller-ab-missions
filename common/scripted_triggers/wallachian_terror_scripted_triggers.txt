@@ -260,3 +260,17 @@ has_tirgoviste_princely_court_absolute_control_bonus = {
 		has_country_flag = wal_absolute_control_princely_court_bonus
 	}
 }
+
+has_defeated_imperial_retribution_coalition = {
+	custom_trigger_tooltip = {
+		tooltip = has_defeated_imperial_retribution_coalition_trigger_tooltip
+		has_country_flag = antichrist_victorius
+	}
+}
+
+has_ae_reduced_from_winning_coalition_wars = {
+	custom_trigger_tooltip = {
+		tooltip = has_ae_reduced_from_winning_coalition_wars_tooltip
+		has_country_flag = winning_coalition_war_ae_reduced
+	}
+}

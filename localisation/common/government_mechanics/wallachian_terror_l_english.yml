@@ -21,7 +21,7 @@
  tier2_impaler_upgrade_church_power_tooltip: "Church Power: §R-10.0%§!\n"
  tier2_impaler_upgrade_fervor_tooltip: "Monthly Fervor: §R-0.50%§!\n"
  tier3_impaler_upgrade_tooltip: "Upgrades [Root.Monarch.GetName]'s §YImpaler§! personality trait to the third tier, which provides the following:"
- tier3_bonus_ability_tooltip: "§GBonus§!: Reduces war exhaustion by §G3§! when declaring a new war.\n"
+ tier3_bonus_ability_tooltip: "§GBonus§!: Our war exhaustion will be reduced by the amount of §YStability Hit to Declare War§! we have when declaring a new war.\n"
  cant_upgrade_impaler_further_tooltip: "You are already at the highest tier and cannot upgrade your ruler's trait any further."
  brutalize_the_enemy_razing_tooltip: "We will be able to §Graze provinces§! for the duration of this effect. Provinces that we raze will experience unimaginable cruelty, and as a result will have the following effect:\nGain §G+0.025§! §YTerror§! for §Y1§! development in the province before razing."
  brutalize_the_enemy_dead_enemies_gives_terror_tooltip: "Winning a battle while at war will grant §G+0.15§! §YTerror§! for every §Y1000§! enemy units killed by you. If the battle happened on an enemy province, the owner will gain §R+0.25 - +1.00§! war exhaustion depending on how much §YTerror§! we have and the province gains the following modifier for §Y6 - 24 months§!, depending on how much §YTerror§! we have after the battle:"
