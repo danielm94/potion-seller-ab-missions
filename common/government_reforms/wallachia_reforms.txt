@@ -26,7 +26,6 @@ wallachian_voivodate = {
 	}
 	custom_attributes = {
 		blocks_humanist_ideas = yes
-		can_provoke_coalition = yes
 	}
 }
 
@@ -53,7 +52,6 @@ wallachian_autocracy = {
 	}
 	custom_attributes = {
 		blocks_humanist_ideas = yes
-		can_provoke_coalition = yes
 	}
 }
 
@@ -108,7 +106,6 @@ dacian_kingdom = {
 	}
 	custom_attributes = {
 		blocks_humanist_ideas = yes
-		can_provoke_coalition = yes
 	}
 }
 
@@ -142,7 +139,6 @@ dacian_roman_empire = {
 	}
 	custom_attributes = {
 		blocks_humanist_ideas = yes
-		can_provoke_coalition = yes
 		enables_pronoias = yes
 	}
 }
@@ -173,7 +169,6 @@ dacian_autocracy = {
 	}
 	custom_attributes = {
 		blocks_humanist_ideas = yes
-		can_provoke_coalition = yes
 	}
 }
 
@@ -205,7 +200,6 @@ dacian_roman_autocracy = {
 	}
 	custom_attributes = {
 		blocks_humanist_ideas = yes
-		can_provoke_coalition = yes
 		enables_pronoias = yes
 	}
 }

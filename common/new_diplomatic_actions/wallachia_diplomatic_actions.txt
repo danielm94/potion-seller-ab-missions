@@ -3,7 +3,7 @@ provoke_coalition = {
 	require_acceptance = no
 	# Determines when the action is visible
 	is_visible = {
-		has_government_attribute = can_provoke_coalition
+		has_country_flag = enable_provoke_coalition
 		FROM = {
 			coalition_target = ROOT
 		}

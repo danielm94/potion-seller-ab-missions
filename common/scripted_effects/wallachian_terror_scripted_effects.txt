@@ -509,6 +509,14 @@ wallachian_terror_on_raze_effect = {
 				has_country_modifier = wallachian_terror_brutalize_the_enemy
 			}
 		}
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = wal_number_of_provinces_razed
+					value = 1
+				}
+			}
+		}
 		if = {
 			limit = {
 				owner = {
@@ -532,9 +540,22 @@ wallachian_terror_on_raze_effect = {
 			which = dev
 			value = development
 		}
-		divide_variable = {
-			which = dev
-			value = 40
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = wal_more_terror_from_razing
+				}
+			}
+			multiply_variable = {
+				which = dev
+				value = 0.05
+			}
+		}
+		else = {
+			multiply_variable = {
+				which = dev
+				value = 0.025
+			}
 		}
 		owner = {
 			set_variable = {
@@ -1688,6 +1709,12 @@ wallachian_terror_convert_humiliated_rival_to_legitimacy_or_equivalent = {
 }
 
 wallachian_terror_impalement_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = number_of_rulers_impaled
+			value = 1
+		}
+	}
 	custom_tooltip = wallachian_terror_events_impale_family_tooltip
 	custom_tooltip = AB_EMPTY
 	custom_tooltip = wallachian_terror_events_convert_ruler_to_mana_tooltip
@@ -2247,6 +2274,12 @@ wallachian_terror_sicily_impaler_effects = {
 }
 
 wallachian_terror_emperor_impalement_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = number_of_rulers_impaled
+			value = 1
+		}
+	}
 	custom_tooltip = wallachian_terror_emperor_impaled_tooltip
 	custom_tooltip = AB_EMPTY
 	custom_tooltip = wallachian_terror_events_convert_emperor_to_mana_tooltip
@@ -2317,7 +2350,7 @@ wallachian_terror_emperor_impalement_effect = {
 		}
 		set_country_flag = wallachia_impaled_francia
 	}
-	if = {
+	else_if = {
 		limit = {
 			OR = {
 				is_or_was_tag = {
@@ -2818,6 +2851,18 @@ upgrade_impaler_personality_reward = {
 		}
 		change_terror = {
 			value = 75
+			scaled_with_gain_modifier = no
+		}
+	}
+}
+
+refund_terror_effect = {
+	if = {
+		limit = {
+			has_country_flag = refund_terror
+		}
+		change_terror = {
+			value = 5
 			scaled_with_gain_modifier = no
 		}
 	}

@@ -131,6 +131,7 @@ wallachian_terror_mechanic = {
 					value = -40
 					scaled_with_gain_modifier = no
 				}
+				refund_terror_effect = yes
 				if = {
 					limit = {
 						has_estate_privilege = estate_nobles_dominance_of_the_boierime
@@ -256,6 +257,7 @@ wallachian_terror_mechanic = {
 						scaled_with_gain_modifier = no
 					}
 				}
+				refund_terror_effect = yes
 			}
 			cooldown_years = 10
 			ai_chance = {
@@ -359,6 +361,7 @@ wallachian_terror_mechanic = {
 							value = -30
 							scaled_with_gain_modifier = no
 						}
+						refund_terror_effect = yes
 					}
 					else = {
 						tooltip = {
@@ -366,6 +369,7 @@ wallachian_terror_mechanic = {
 								value = -30
 								scaled_with_gain_modifier = no
 							}
+							refund_terror_effect = yes
 						}
 					}
 					hidden_effect = {
@@ -390,6 +394,7 @@ wallachian_terror_mechanic = {
 						value = -50
 						scaled_with_gain_modifier = no
 					}
+					refund_terror_effect = yes
 					hidden_effect = {
 						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
 						country_event = {
@@ -413,6 +418,7 @@ wallachian_terror_mechanic = {
 						value = -75
 						scaled_with_gain_modifier = no
 					}
+					refund_terror_effect = yes
 					hidden_effect = {
 						#For some reason, you can't add ruler personalities through government mechanic interactions, so we have to use an event instead.
 						country_event = {

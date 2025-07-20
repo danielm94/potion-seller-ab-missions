@@ -225,13 +225,10 @@ has_impaled_england_ruler = {
 	has_country_flag = wallachia_impaled_england
 }
 
-has_purged_the_elites_3_times = {
-custom_trigger_tooltip = {
-	tooltip = has_purged_the_elites_3_times_tooltip
+has_purged_the_elites_n_times = {
 	check_variable = {
-			which = estate_purges_amount
-			value = 3
-		}
+		which = estate_purges_amount
+		value = $n$
 	}
 }
 
@@ -239,5 +236,19 @@ has_tirgoviste_princely_court_take_control_bonus = {
 	custom_trigger_tooltip = {
 		tooltip = has_tirgoviste_princely_court_take_control_bonus_tooltip
 		has_country_flag = wal_take_control_princely_court_bonus
+	}
+}
+
+has_impaled_n_rulers = {
+	check_variable = {
+		which = number_of_rulers_impaled
+		value = $n$
+	}
+}
+
+has_razed_n_provinces_using_terror_mechanics = {
+	check_variable = {
+		which = wal_number_of_provinces_razed
+		value = $n$
 	}
 }
