@@ -1,0 +1,35 @@
+assign_parliament_seat_to_highest_dev_province = {
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				can_province_be_given_a_parliament_seat = yes
+			}
+			export_to_variable = {
+				which = province_dev_var
+				value = development
+				who = THIS
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = highest_dev_province
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = province_dev_var
+							which = event_target:highest_dev_province
+						}
+					}
+					save_global_event_target_as = highest_dev_province
+				}
+			}
+			else = {
+				save_global_event_target_as = highest_dev_province
+			}
+		}
+		event_target:highest_dev_province = {
+			set_seat_in_parliament = yes
+		}
+		clear_global_event_target = highest_dev_province
+	}
+}
