@@ -25,7 +25,7 @@ country_event = {
 				limit = {
 					can_province_be_given_a_parliament_seat = yes
 				}
-				set_seat_in_parliament = yes
+				assign_parliament_seat_to_province_macro_effect = yes
 			}
 		}
 	}
