@@ -2,7 +2,7 @@
  ability_wallachian_terror_mechanic: "Wallachian Terror"
  wallachian_terror_mechanic: "Wallachian Terror"
  terror_power: "Terror"
- terror_power_desc: "Terror represents the fear our state strikes into the hearts of everyone around us."
+ terror_power_desc: "Terror represents the fear our state strikes into the hearts of everyone around us.\n§VYou can gain Terror by impaling your enemies while at war, completing missions, or through events.§!"
  terror_power_gain_modifier: "Terror Gain Modifier"
  monthly_terror_power: "Monthly Terror"
  impale_the_privileged: "Purge the Elite"
