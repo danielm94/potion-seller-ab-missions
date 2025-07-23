@@ -11,6 +11,7 @@
  wallachian_terror_impaled_our_enemy_effect_tooltip: "We will gain §G+25§! opinion with all the enemies and countries that are at war against §Y[impaled_country.GetName]§!."
  wallachian_terror_impaled_our_rival_effect_tooltip: "We will gain §G+50§! opinion and §G+5§! trust with all the rivals of §Y[impaled_country.GetName]§!."
  wallachian_terror_impalement_variable_opinion_effect: "For every other country that knows about §Y[impaled_country.GetName]§!, we will §Rlose opinion§! with them, equal to §R-33%§! of their opinion of §Y[impaled_country.GetName]§!, if their opinion of them was positive."
+ wallachian_terror_impalement_impaled_country_ae_effect_tooltip: "We will gain §R+25§! aggressive expansion with §Y[impaled_country.GetName]§!" 
  wallachian_terror_impalement_variable_ae_gain_effect_tooltip: "For every country that knows about §Y[impaled_country.GetName]§!, we will §Rgain aggressive expansion§!, equal to §R10%§! of their opinion of §Y[impaled_country.GetName]§!, if their opinion of them was positive."
  wallachian_terror_events_convert_ruler_to_mana_tooltip: "We will gain §G2.5x§! the sum of §Y[impaled_country.Monarch.GetName]§!'s monarch power as §Ymonarch power§!."
  wallachian_terror_events_convert_emperor_to_mana_tooltip: "We will gain §G5x§! the sum of §Y[Emperor.Monarch.GetName]'s§! monarch power as §Ymonarch power§!."

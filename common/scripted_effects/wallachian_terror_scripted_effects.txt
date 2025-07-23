@@ -1299,6 +1299,19 @@ wallachian_terror_variable_opinion_loss_effect = {
 	}
 }
 
+wallachian_terror_impalement_impaled_country_ae_effect = {
+	custom_tooltip = wallachian_terror_impalement_impaled_country_ae_effect_tooltip
+	hidden_effect = {
+		event_target:impaled_country = {
+			add_aggressive_expansion = {
+				who = PREV
+				value = 25
+				apply_calc = no
+			}
+		}
+	}
+}
+
 wallachian_terror_impalement_variable_ae_gain_effect = {
 	custom_tooltip = wallachian_terror_impalement_variable_ae_gain_effect_tooltip
 	hidden_effect = {
@@ -1329,7 +1342,7 @@ wallachian_terror_impalement_variable_ae_gain_effect = {
 				}
 				wallachian_terror_variable_ae_gain_effect = {
 					opinion_var = opinion_of_impaled
-					ae_gain_divisor = 10					#10% of opinion is gained as AE, if the result is positive
+					ae_gain_multiplier = 0.1					#10% of opinion is gained as AE, if the result is positive
 				}
 			}
 		}
@@ -1341,9 +1354,9 @@ wallachian_terror_variable_ae_gain_effect = {
 		which = ae_gain
 		which = $opinion_var$
 	}
-	divide_variable = {
+	multiply_variable = {
 		which = ae_gain
-		value = $ae_gain_divisor$
+		value = $ae_gain_multiplier$
 	}
 	if = {
 		limit = {
@@ -1380,6 +1393,7 @@ wallachian_terror_country_reaction_effect = {
 	wallachian_terror_impaled_our_enemy_effect = yes
 	wallachian_terror_impaled_our_rival_effect = yes
 	wallachian_terror_impalement_variable_opinion_effect = yes
+	wallachian_terror_impalement_impaled_country_ae_effect = yes
 	wallachian_terror_impalement_variable_ae_gain_effect = yes
 }
 
@@ -2319,11 +2333,15 @@ wallachian_terror_emperor_impalement_effect = {
 		every_country = {
 			limit = {
 				is_part_of_hre = yes
-				is_emperor = no
 			}
-			add_opinion = {
-				who = event_target:impaler_country
-				modifier = wallachian_terror_impaled_the_emperor
+			if = {
+				limit = {
+					is_emperor = no
+				}
+				add_opinion = {
+					who = event_target:impaler_country
+					modifier = wallachian_terror_impaled_the_emperor
+				}
 			}
 			add_aggressive_expansion = {
 				who = event_target:impaler_country
