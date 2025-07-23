@@ -1483,7 +1483,7 @@ country_event = {
 	}
 }
 
-#Boiled Andalusia's Leader Event
+#Boiled Andalusia's Leader: Andalusia's Event
 country_event = {
 	id = wallachian_terror_events.14
 	title = wallachian_terror_events.14.t
@@ -1553,6 +1553,7 @@ country_event = {
 	}
 }
 
+#Boiled Andalusia's Leader: Impaler's Event
 country_event = {
 	id = wallachian_terror_events.15
 	title = wallachian_terror_events.15.t
@@ -1671,6 +1672,126 @@ country_event = {
 					duration = 10950
 				}
 			}
+		}
+	}
+}
+
+#Capture of Papal Capital Event
+country_event = {
+	id = wallachian_terror_events.16
+	title = wallachian_terror_events.16.t
+	desc = wallachian_terror_events.16.d
+	picture = GFX_wallachian_terror_events.16
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.16.a
+	}
+}
+
+#Execution of the Pope Event Page 1
+country_event = {
+	id = wallachian_terror_events.17
+	title = wallachian_terror_events.17.t
+	desc = wallachian_terror_events.17.d
+	picture = GFX_wallachian_terror_events.17
+	is_triggered_only = yes
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.18
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_tldr
+		highlight = yes
+	}
+}
+
+#Execution of the Pope Event Page 2
+country_event = {
+	id = wallachian_terror_events.18
+	title = wallachian_terror_events.18.t
+	desc = wallachian_terror_events.18.d
+	picture = GFX_wallachian_terror_events.18
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.17
+		}
+	}
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.19
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_tldr
+		highlight = yes
+	}
+}
+
+#Execution of the Pope Event Page 3
+country_event = {
+	id = wallachian_terror_events.19
+	title = wallachian_terror_events.19.t
+	desc = wallachian_terror_events.19.d
+	picture = GFX_wallachian_terror_events.19
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.18
+		}
+	}
+	option = {
+		name = next_page
+		country_event = {
+			id = wallachian_terror_events.20
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_tldr
+		highlight = yes
+	}
+}
+
+#Execution of the Pope Event Page 4 (Impaler)
+country_event = {
+	id = wallachian_terror_events.20
+	title = wallachian_terror_events.20.t
+	desc = {
+		desc = wallachian_terror_events.20.desc_impaler
+		trigger = {
+			is_ruler_impaler = yes
+		}
+	}
+	desc = {
+		desc = wallachian_terror_events.20.desc_non_impaler
+		trigger = {
+			is_ruler_impaler = no
+		}
+	}
+	picture = GFX_wallachian_terror_events.20
+	is_triggered_only = yes
+	option = {
+		name = previous_page
+		country_event = {
+			id = wallachian_terror_events.19
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_impaler_option
+		highlight = yes
+		trigger = {
+			is_ruler_impaler = yes
+		}
+	}
+	option = {
+		name = wallachian_terror_events.pope_non_impaler_option
+		trigger = {
+			is_ruler_impaler = no
 		}
 	}
 }
