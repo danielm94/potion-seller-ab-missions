@@ -274,7 +274,7 @@
  wal_austria_desc: "For centuries, these lands were the Roman provinces of Noricum and Pannonia, a bulwark of the Empire's Danubian frontier. After the Western Empire fell, this imperial soil was overrun by generations of barbarian usurpers. The fraudulent 'Holy Roman Empire' gave these petty lords a veneer of legitimacy, an illusion we have now shattered. With their false authority broken, it is time to finish the task. The legions will march north to cleanse these provinces of their squabbling chieftains and restore the Danube as the rightful, undisputed border of the Roman world."
  unlock_schonbrunn_bonus_tooltip: "We will unlock the §Yconditional modifier§! of §YSchönbrunn Palace§! great project in §Y[134.GetName]§!."
  dominate_danubian_trade_key: "Dominating Danubian Trade"
- wal_south_germany_title: "Secure the Rhine Frontier"
+ wal_south_germany_title: "The Rhine Frontier"
  wal_south_germany_desc: "The Danube flows once more within imperial territory, but the frontier is incomplete. The lands between the Danube and the Rhine, once the fortified Limes of the Empire, are a patchwork of petty fiefdoms ruled by the descendants of the very barbarians who once threw themselves against our borders. This chaos cannot be tolerated. The Rhine was, and must be again, the western bulwark of civilization."
  printing_press_in_capital_area_tooltip: "The §YPrinting Press§! will be §Gembraced§! in our capital area." 
  unlock_integrating_german_nobility_privilege_tooltip: "We will unlock the §YIntegrate the German Nobility [This.GetNobilityName]§! estate privilege."
