@@ -286,3 +286,100 @@ on_main_war_won = {
 		}
 	}
 }
+
+on_main_war_won = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_modifier = catholic_fury
+					NOT = {
+						war_with = event_target:impaler_country
+					}
+				}
+				FROM = {
+					AND = {
+						has_country_modifier = catholic_fury
+						NOT = {
+							war_with = event_target:impaler_country
+						}
+					}
+				}
+			}
+		}
+		remove_country_modifier = catholic_fury
+		FROM = {
+			remove_country_modifier = catholic_fury
+		}
+	}
+}
+on_main_war_won = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_modifier = catholic_avenge_pope_mod
+					NOT = {
+						war_with = event_target:impaler_country
+					}
+				}
+				FROM = {
+					AND = {
+						has_country_modifier = catholic_avenge_pope_mod
+						NOT = {
+							war_with = event_target:impaler_country
+						}
+					}
+				}
+			}
+		}
+		remove_country_modifier = catholic_avenge_pope_mod
+		FROM = {
+			remove_country_modifier = catholic_avenge_pope_mod
+		}
+	}
+}
+
+on_monarch_death = {
+	if = {
+		limit = {
+			has_impaled_pope = yes
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = resisting_the_antathema
+			}
+			remove_province_modifier = resisting_the_antathema
+		}
+	}
+}
+
+on_province_religion_changed = {
+	if = {
+		limit = {
+			has_province_modifier = resisting_the_antathema
+			NOT = {
+				religion = catholic
+			}
+		}
+		remove_province_modifier = resisting_the_antathema
+	}
+}
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			religion = catholic
+			owner = {
+				has_ruler_modifier = wallachia_antathema
+			}
+		}
+		add_nationalism = 10
+		add_unrest = 5
+		add_province_modifier = {
+			name = resisting_the_antathema
+			duration = -1
+			desc = resisting_the_antathema_province_desc
+		}
+	}
+}

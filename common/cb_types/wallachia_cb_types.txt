@@ -132,3 +132,20 @@ cb_jihad_against_dajjal = {
 
 	war_goal = destroy_the_dajjal
 }
+
+cb_avenge_pope = {
+	valid_for_subject = no
+	holy_war = yes
+
+	prerequisites_self = {
+		religion = catholic
+	}
+
+	prerequisites = {
+		FROM = {
+			has_impaled_pope = yes
+		}
+	}
+
+	war_goal = destroy_the_dajjal
+}
