@@ -48,15 +48,6 @@ on_battle_lost_province = {
 	}
 }
 
-on_bi_yearly_pulse = {
-	every_country = {
-		limit = {
-			is_wallachian_terror_dynamic_country_color_enabled = yes
-		}
-		change_color_based_on_terror = yes
-	}
-}
-
 #ROOT = winner country
 #FROM = location
 on_siege_won_country = {
