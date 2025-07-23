@@ -1704,6 +1704,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.pope_tldr
 		highlight = yes
+		wallachian_terror_pope_impalement_effect = yes
 	}
 }
 
@@ -1729,6 +1730,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.pope_tldr
 		highlight = yes
+		wallachian_terror_pope_impalement_effect = yes
 	}
 }
 
@@ -1754,6 +1756,7 @@ country_event = {
 	option = {
 		name = wallachian_terror_events.pope_tldr
 		highlight = yes
+		wallachian_terror_pope_impalement_effect = yes
 	}
 }
 
@@ -1787,6 +1790,10 @@ country_event = {
 		trigger = {
 			is_ruler_impaler = yes
 		}
+		add_ruler_modifier = {
+			name = banquet_of_blood_well_read
+			duration = -1
+		}
 		wallachian_terror_pope_impalement_effect = yes
 	}
 	option = {
@@ -1794,6 +1801,60 @@ country_event = {
 		trigger = {
 			is_ruler_impaler = no
 		}
+		add_ruler_modifier = {
+			name = banquet_of_blood_well_read
+			duration = -1
+		}
 		wallachian_terror_pope_impalement_effect = yes
+	}
+}
+
+#Capture of Papal Capital
+country_event = {
+	id = wallachian_terror_events.21
+	title = wallachian_terror_events.21.t
+	desc = wallachian_terror_events.21.d
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = wallachian_terror_events.21_capture_pope
+		trigger = {
+			is_ruler_impaler = no
+		}
+		custom_tooltip = wallachian_terror_impale_pope_consequences_tooltip
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = wallachian_terror_events.17
+			days = 1
+		}
+	}
+	option = {
+		name = wallachian_terror_events.21_dont_capture_pope
+		trigger = {
+			is_ruler_impaler = no
+		}
+		PAP = {
+			capital_scope = {
+				add_province_modifier = {
+					name = wallachian_terror_severed_command
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = wallachian_terror_events_capital_penalty_mechanics_tooltip
+	}
+	option = {
+		#If ruler has Impaler personality, this is the only option lol
+		name = wallachian_terror_events.21_capture_pope_impaler
+		trigger = {
+			is_ruler_impaler = yes
+		}
+		highlight = yes
+		custom_tooltip = wallachian_terror_impale_pope_consequences_tooltip
+		custom_tooltip = AB_EMPTY
+		country_event = {
+			id = wallachian_terror_events.17
+			days = 1
+		}
 	}
 }

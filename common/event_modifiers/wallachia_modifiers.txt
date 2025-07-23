@@ -24,7 +24,7 @@ banquet_of_blood_permanent_modifier = {
 }
 
 banquet_of_blood_well_read = {
-	technology_cost = -0.01
+	technology_cost = -0.005
 }
 
 peasants_cave_to_traitors = {
