@@ -451,67 +451,6 @@ country_event = {
 		}
 	}
 }
-
-#The great feast page 1
-country_event = {
-	id = AB_wallachia_events.13
-	title = AB_wallachia_events.13.t
-	desc = AB_wallachia_events.13.d
-	picture = GFX_AB_wallachia_events.13
-	is_triggered_only = yes
-	option = {
-		name = NEXT
-	}
-	option = {
-		name = AB_wallachia_events.13.tldr
-		hidden_effect = {
-			remove_estate_privilege = estate_nobles_dominance_of_the_boierime
-		}
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -20
-		}
-		hidden_effect = {
-			set_estate_privilege = estate_nobles_dominance_of_the_boierime
-		}
-		set_country_flag = wal_elective_monarchy
-		if = {
-			limit = {
-				tag = ROD
-			}
-			country_event = {
-				id = AB_wallachia_events.41
-			}
-			add_government_reform = roman_elective_monarchy
-		}
-		else_if = {
-			limit = {
-				tag = DAC
-			}
-			set_country_flag = formed_the_united_houses
-			change_tag = TUH
-			if = {
-				limit = {
-					NOT = {
-						government_rank = 2
-					}
-				}
-				set_government_rank = 2
-			}
-			country_event = {
-				id = AB_wallachia_events.12
-			}
-			add_government_reform = dacian_elective_monarchy
-		}
-		else = {
-			add_government_reform = wallachian_elective_monarchy
-		}
-		hidden_effect = {
-			tuh_faction_initialization_effect = yes
-		}
-	}
-}
-
 #Romanianization of Hungary & Transylvania
 province_event = {
 	id = AB_wallachia_events.20

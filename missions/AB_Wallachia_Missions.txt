@@ -109,10 +109,14 @@ ab_wal_boier_compromise_missions = {
 			}
 		}
 		effect = {
-			set_country_flag = block_wallachian_terror_purge
 			custom_tooltip = cant_form_dacia_tooltip
 			custom_tooltip = tooltip_line_divider
-			custom_tooltip = form_tuh_tooltip
+			if = {
+				limit = {
+					tag = WAL
+				}
+				custom_tooltip = form_tuh_tooltip
+			}
 			if = {
 				limit = {
 					has_country_modifier = wallachia_placating_the_boieri
@@ -135,9 +139,50 @@ ab_wal_boier_compromise_missions = {
 					}
 				}
 			}
-			country_event = {
-				id = AB_wallachia_events.13
-				days = 5
+			hidden_effect = {
+				remove_estate_privilege = estate_nobles_dominance_of_the_boierime
+			}
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -20
+			}
+			hidden_effect = {
+				set_estate_privilege = estate_nobles_dominance_of_the_boierime
+			}
+			set_country_flag = wal_elective_monarchy
+			if = {
+				limit = {
+					tag = ROD
+				}
+				country_event = {
+					id = AB_wallachia_events.41
+				}
+				add_government_reform = roman_elective_monarchy
+			}
+			else_if = {
+				limit = {
+					tag = DAC
+				}
+				set_country_flag = formed_the_united_houses
+				change_tag = TUH
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+						}
+					}
+					set_government_rank = 2
+				}
+				country_event = {
+					id = AB_wallachia_events.12
+				}
+				add_government_reform = dacian_elective_monarchy
+			}
+			else = {
+				add_government_reform = wallachian_elective_monarchy
+			}
+			hidden_effect = {
+				tuh_faction_initialization_effect = yes
 			}
 		}
 	}

@@ -65,11 +65,6 @@ wallachian_terror_mechanic = {
 			icon = "GFX_wallachian_terror_impale_the_privileged_button"
 			cost_type = terror_power
 			trigger = {
-				hidden_trigger = {
-					NOT = {
-						has_country_flag = block_wallachian_terror_purge
-					}
-				}
 				has_government_power = {
 					mechanic_type = wallachian_terror_mechanic
 					power_type = terror_power
