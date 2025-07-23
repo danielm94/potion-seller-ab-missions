@@ -1,3 +1,11 @@
+# PotionSeller's AB Mission Pack
+
+Adds missions and new features to AnteBellum. Currently there is new content for:
+
+- Wallachia
+
+I plan to add more missions. Don't ask me when though lmao.
+
 ### How to Install
 1. Download a release or clone this repository to your machine.
 2. Navigate to `C:\Users\<user>\Documents\Paradox Interactive\Europa Universalis IV\mod`
