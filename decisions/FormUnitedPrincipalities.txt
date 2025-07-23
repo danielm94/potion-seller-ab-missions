@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture_group = romanian_culture_group
+			is_or_was_wallachia = no
 			is_colonial_nation = no
 			NOT = { exists = UNP }
 			NOT = { was_tag = UNP }
