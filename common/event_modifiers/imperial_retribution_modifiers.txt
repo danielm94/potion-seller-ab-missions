@@ -50,8 +50,8 @@ slayer_of_the_antichrist_theocracy = {
 
 antichrist = {
 	diplomatic_reputation = -50
-	reverse_relation_with_same_religion = -100
-	reverse_relation_with_heretic_religion = -100
+	reverse_relation_with_same_religion = -75
+	reverse_relation_with_heretic_religion = -75
 	improve_relation_modifier = -0.2
 	monthly_terror_power = 0.1
 	terror_power_gain_modifier = 1
