@@ -334,7 +334,7 @@ racovita_mamluk_contacts = {
 }
 
 basarab_augustan_legacy = {
-	province_warscore_cost = -0.05
+	province_warscore_cost = -0.025
 	global_autonomy = -0.05
 }
 
