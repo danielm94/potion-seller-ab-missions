@@ -119,7 +119,7 @@
 427 = "Aspadana"
 428 = "Ecbatana Megale"
 429 = "Spahana"
-430 = "Bișapura"
+430 = "Bisapura"
 431 = "Organe"
 432 = "Carmania"
 433 = "Iazde"
