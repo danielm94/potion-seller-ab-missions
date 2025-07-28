@@ -47,6 +47,15 @@ parliamentary_reform = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 		NOT = { has_government_attribute = english_parliament }
 		NOT = { has_government_attribute = romanian_elective_monarchy }
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_roman_autocracy
+		}
 		NOT = { #has a special "senate" themed reform
 			OR = {
 				tag = BYZ

@@ -6422,6 +6422,18 @@ states_general_reform = {
 		NOT = {
 			has_government_attribute = romanian_elective_monarchy
 		}
+		NOT = {
+			has_reform = appointive_voivodate
+		}
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_roman_autocracy
+		}
 	}
 	trigger = {
 		NOT = { is_lesser_in_union = yes }
@@ -6475,6 +6487,15 @@ general_estates_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_roman_autocracy
+		}
 	}
 	modifiers = {
 		monthly_reform_progress_modifier = 0.1
@@ -6948,6 +6969,15 @@ become_a_republic_reform = {
 		NOT = {
 			has_government_attribute = romanian_elective_monarchy
 		}
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_roman_autocracy
+		}
 	}
 	trigger = {
 		NOT = { has_government_attribute_short_desc = locked_government_type }
@@ -6984,6 +7014,15 @@ install_theocratic_government_reform = {
 		is_revolutionary = no
 		NOT = {
 			has_government_attribute = romanian_elective_monarchy
+		}
+		NOT = {
+			has_reform = wallachian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_autocracy
+		}
+		NOT = {
+			has_reform = dacian_roman_autocracy
 		}
 	}
 	trigger = {
