@@ -53,6 +53,7 @@ estate_nobles_dominance_of_the_boierime = {
 			min_autonomy = 15
 			global_tax_modifier = -0.15
 			autonomy_change_time = 1
+			yearly_army_professionalism = -0.005
 		}
 	}
 	conditional_modifier = {
