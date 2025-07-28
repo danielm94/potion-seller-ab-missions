@@ -626,15 +626,15 @@ wallachia_rise_of_the_dacian_india_company = {
 }
 
 wallachia_tirgoviste_metropolitan = {
-	local_tax_modifier = 0.5
+	local_tax_modifier = 0.25
 	tax_income = 6
 	yearly_patriarch_authority = 0.001
 	religion = yes
 }
 
 wallachia_tirgoviste_metropolitan_cathedral = {
-	local_tax_modifier = 1
-	tax_income = 24
+	local_tax_modifier = 0.5
+	tax_income = 12
 	local_development_cost = -0.1
 	yearly_patriarch_authority = 0.001
 	religion = yes
