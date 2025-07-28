@@ -4868,6 +4868,7 @@ ab_wal_4 = {
 		}
 		provinces_to_highlight = {
 			owned_by = ROOT
+			has_port = yes
 			has_dock_building_trigger = no
 			has_shipyard_building_trigger = no
 		}
