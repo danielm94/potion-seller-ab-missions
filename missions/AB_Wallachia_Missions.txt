@@ -3612,7 +3612,6 @@ ab_wal_3 = {
 										duration = -1
 									}
 									custom_tooltip = tuh_brancoveanu_patronage_tooltip
-									custom_tooltip = rem_bonus_not_retroactive_tooltip
 								}"
 			}
 			custom_tooltip = rem_bonus_not_retroactive_tooltip
