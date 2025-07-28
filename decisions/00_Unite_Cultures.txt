@@ -96,10 +96,14 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
-					culture_group = romanian_culture_group
+					OR = {
+						culture = Wallachian
+						culture = transylvanian
+						culture = Moldavian
+					}
 				}
 				change_primary_culture = romanian
-				custom_tooltip = UNITE_ROMANIAN_CULTURE
+				custom_tooltip = UNITE_ORIGINAL_ROMANIAN_CULTURE
 			}
 			else_if = {
 				limit = {
