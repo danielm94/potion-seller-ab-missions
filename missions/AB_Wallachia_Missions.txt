@@ -3703,7 +3703,7 @@ ab_wal_3 = {
 		trigger = {
 			trading_part = {
 				trade_goods = salt
-				value = 0.25
+				value = 0.1
 			}
 			natural_scientist = 3
 			num_of_owned_provinces_with = {
