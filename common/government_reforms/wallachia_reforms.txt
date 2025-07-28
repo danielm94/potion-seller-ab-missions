@@ -228,6 +228,7 @@ wallachian_elective_monarchy = {
 		no_absolutism_from_boier_privileges = yes
 		election_on_death = yes
 		romanian_elective_monarchy = yes
+		can_only_marry_subjects = yes
 		locked_government_type = yes
 	}
 	factions = {

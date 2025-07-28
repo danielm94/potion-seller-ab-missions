@@ -13,6 +13,7 @@
  wallachian_elective_monarchy_desc: "The Voivode's ambition has been checked. In the face of a united Boiermiea, the crown has been forced to concede, forging a new and precarious order. Hereditary right is abolished, replaced by the deliberation of the Sfatul Domnesc, where the Ten Houses now hold the true power of the state. Henceforth, the Voivode will be chosen from among their ranks, ensuring their interests are forever intertwined with the fate of Wallachia. This is not a partnership of equals; it is a leash, a constant reminder that the Voivode rules only with the consent of the very nobles they once sought to command."
  mechanic_romanian_elective_monarchy_yes: "Upon the ruler's death, select a successor from one of the Ten Houses.\nThe §YDominance of the Boierime§! privilege no longer has any penalties."
  mechanic_no_absolutism_from_boier_privileges_yes: "§YBoiermiea§! privileges no longer reduce §YAbsolutism§!."
+ mechanic_can_only_marry_subjects_yes: "We can only form royal marriages with our subjects."
  wallachia_codification_of_the_pravila_reform: "Codification of the Pravila"
  wallachia_codification_of_the_pravila_reform_desc: "The realm is a patchwork of ancient customs and boyar privileges. To forge a true state, we must establish a single, unified legal code—a Pravila—for all our subjects. This will centralize justice under the voivode's authority, but the estates will see it as a direct assault on their traditional rights."
  dacian_roman_empire: "Dacian Roman Empire"

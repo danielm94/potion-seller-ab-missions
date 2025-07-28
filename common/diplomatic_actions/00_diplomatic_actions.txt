@@ -98,6 +98,34 @@ royal_marriage = {
 			NOT = { war_with = FROM }
 		}
 	}
+	condition = {
+		tooltip = tuh_from_cant_marry_tooltip
+		potential = { 
+			FROM = {
+				has_government_attribute = can_only_marry_subjects
+			}
+			NOT = {
+				is_subject_of = FROM
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = tuh_root_cant_marry_tooltip
+		potential = { 
+			has_government_attribute = can_only_marry_subjects
+			NOT = {
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
 	effect = {
 	}
 }
