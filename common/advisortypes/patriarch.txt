@@ -77,7 +77,7 @@ patriarch = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			NOT = {
 				religion = orthodox
 			}
