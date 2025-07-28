@@ -394,6 +394,7 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					controlled_by = ROOT
+					religion = catholic
 				}
 				add_unrest = 10
 				add_province_modifier = {
@@ -464,6 +465,7 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					controlled_by = ROOT
+					religion = catholic
 				}
 				add_unrest = 10
 				add_province_modifier = {
