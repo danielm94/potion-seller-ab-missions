@@ -1341,10 +1341,11 @@ wallachian_terror_convert_humiliated_rival_to_terror = {
 	}
 }
 
-wallachian_terror_convert_humiliated_ruler_to_prestige_or_monarch_power = {
+wallachian_terror_convert_humiliated_ruler_to_prestige = {
 	wallachian_terror_calculate_ruler_mana_sum = yes
-	variable_add_prestige_or_monarch_power = {
+	variable_effect = {
 		var = mana_sum
+		effect = add_prestige
 	}
 }
 
@@ -2185,7 +2186,7 @@ wallachian_terror_emperor_impalement_effect = {
 	}
 	custom_tooltip = wallachian_terror_emperor_converted_to_prestige_tooltip
 	hidden_effect = {
-		wallachian_terror_convert_humiliated_ruler_to_prestige_or_monarch_power = yes
+		wallachian_terror_convert_humiliated_ruler_to_prestige = yes
 	}
 	wallachian_terror_country_reaction_effect = yes
 	custom_tooltip = hre_emperor_impaled_empire_reaction
@@ -2542,7 +2543,7 @@ wallachian_terror_humiliation_effect = {
 	else = {
 		custom_tooltip = wallachian_terror_events_humiliated_ruler_prestige_tooltip
 		hidden_effect = {
-			wallachian_terror_convert_humiliated_ruler_to_prestige_or_monarch_power = yes
+			wallachian_terror_convert_humiliated_ruler_to_prestige = yes
 		}
 		custom_tooltip = wallachian_terror_events_humiliated_legitimacy_tooltip
 		hidden_effect = {
