@@ -30,3 +30,8 @@
  unlocked_absolute_control_reform_tt: "We have completed the mission §YAbsolute Control§!."
  bulwark_of_the_faith: "Bulwark of the Faith"
  bulwark_of_the_faith_desc: "In a world of heretics and heathens, our Orthodox faith is our greatest shield and sharpest sword. We shall declare ourselves the ultimate defenders of the faith, placing the Church at the heart of our state. This holy alliance will grant us divine legitimacy and a zealous populace, but it will make the clergy a power unto themselves."
+ state_appropriation_of_the_robie: "State Appropriation of the Robie"
+ state_appropriation_of_the_robie_desc: "For centuries, since their arrival in our lands, the Romani people have been held in a state of enslavement known as Robie. This institution has made them the property of boieri, monasteries, and the Crown itself, their labor forming the bedrock of our economy. We will now perfect this system by appropriating all enslaved persons as exclusive property of the state, creating a centralized workforce to fuel an unprecedented economic boom at the cost of enraging the elites whose 'assets' we have seized."
+ mechanic_blocks_humanist_ideas_yes: "We cannot take §YHumanist§! ideas with this reform active."
+ state_appropriation_of_the_robie_warning_tooltip: "§RWARNING: TAKING THIS REFORM WILL REMOVE THE HUMANIST IDEA GROUP!§!"
+ has_not_abolished_slavery_tooltip: "We have not abolished slavery."
