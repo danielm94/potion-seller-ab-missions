@@ -1348,6 +1348,8 @@ kill_advisor_by_category_effect = {
 			planner = { kill_advisor = planner }
 			scholar = { kill_advisor = scholar }
 			missionary = { kill_advisor = missionary }
+			#PotionSeller
+			patriarch = { kill_advisor = patriarch }
 		}
 	]
 	[[DIP]

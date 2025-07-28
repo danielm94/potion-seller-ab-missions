@@ -104,6 +104,8 @@ has_adm_advisor = {
 			advisor = in_advisor
 			advisor = magistrate
 			# }}}
+			#PotionSeller
+			advisor = patriarch
 		}
 	}
 }
@@ -130,6 +132,8 @@ has_adm_advisor_2 = {
 			in_advisor = 2
 			magistrate = 2
 			# }}}
+			#PotionSeller
+			patriarch = 2
 		}
 	}
 }
@@ -156,6 +160,8 @@ has_adm_advisor_3 = {
 			in_advisor = 3
 			magistrate = 3
 			# ]]]
+			#PotionSeller
+			patriarch = 3
 		}
 	}
 }
@@ -178,6 +184,7 @@ has_adm_advisor_of_level = {
 		papal_advisor = $level$
 		in_advisor = $level$
 		magistrate = $level$
+		patriarch = $level$
 	}
 }
 
