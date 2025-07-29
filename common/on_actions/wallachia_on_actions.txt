@@ -591,3 +591,83 @@ on_new_age = {
 		remove_country_modifier = wallachia_professional_army
 	}
 }
+
+#Remove permanent opinion malace from destroying st peters if this nation is no longer catholic
+on_religion_change = {
+	if = {
+		limit = {
+			NOT = {
+				religion = catholic
+			}
+			any_country = {
+				has_country_flag = destroyed_st_peters
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = destroyed_st_peters
+			}
+			save_global_event_target_as = country_that_destroyed_st_peters
+		}
+		remove_opinion = {
+			who = event_target:country_that_destroyed_st_peters
+			modifier = evicted_papacy_from_st_peters
+		}
+		clear_global_event_target = country_that_destroyed_st_peters
+	}
+}
+
+#Remove permanent opinion malace from impaling the pope if this nation is no longer catholic
+on_religion_change = {
+	if = {
+		limit = {
+			NOT = {
+				religion = catholic
+			}
+			any_country = {
+				has_impaled_pope = yes
+			}
+		}
+		random_country = {
+			limit = {
+				has_impaled_pope = yes
+			}
+			save_global_event_target_as = country_that_impaled_pope
+		}
+		remove_opinion = {
+			who = event_target:country_that_impaled_pope
+			modifier = wallachia_impaled_the_pope
+		}
+		clear_global_event_target = country_that_impaled_pope
+	}
+}
+
+#Remove permanent opinion malace from boiling caliph if this country is no longer muslim.
+on_religion_change = {
+	if = {
+		limit = {
+			NOT = {
+				religion_group = muslim
+			}
+			NOT = {
+				is_or_was_tag = {
+					tag = ADU					#ADU will never forgive, even if not Muslim anymore.
+				}
+			}
+			any_country = {
+				has_boiled_andalusia_ruler = yes
+			}
+		}
+		random_country = {
+			limit = {
+				has_boiled_andalusia_ruler = yes
+			}
+			save_global_event_target_as = country_that_boiled_caliph
+		}
+		remove_opinion = {
+			who = event_target:country_that_boiled_caliph
+			modifier = wallachia_desecrated_the_caliph
+		}
+		clear_global_event_target = country_that_boiled_caliph
+	}
+}

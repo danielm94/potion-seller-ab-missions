@@ -461,6 +461,9 @@ st_pauls_basilica = {
 			type = stpeters_cathedral
 		}
 		owner = {
+			hidden_effect = {
+				set_country_flag = destroyed_st_peters
+			}
 			add_estate_loyalty = {
 				estate = estate_church
 				loyalty = 50
