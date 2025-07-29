@@ -580,3 +580,14 @@ on_mil_development = {
 		}
 	}
 }
+
+on_new_age = {
+	if = {
+		limit = {
+			NOT = {
+				current_age = age_of_discovery
+			}
+		}
+		remove_country_modifier = wallachia_professional_army
+	}
+}
