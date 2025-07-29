@@ -181,11 +181,7 @@ country_event = {
 	id = wallachian_terror_events.2
 	title = wallachian_terror_events.2.t
 	desc = wallachian_terror_events.2.d
-	picture = {
-		picture = dev
-		trigger = {
-		}
-	}
+	picture = GFX_wallachian_terror_events.2
 	is_triggered_only = yes
 	option = {
 		name = wallachian_terror_events.2.a
