@@ -6306,7 +6306,7 @@ ab_wal_5 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 20
 				region = balkan_region
 				num_of_times_improved = 3
 				has_road_building_trigger = yes
