@@ -145,9 +145,14 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-			add_ruler_modifier = {
-				name = basarab_augustan_legacy
-				duration = -1
+			if = {
+				limit = {
+					has_country_flag = basarab_augustan_bonus
+				}
+				add_ruler_modifier = {
+					name = basarab_augustan_legacy
+					duration = -1
+				}
 			}
 			tuh_galleass_gift_effect = yes
 		}
@@ -244,15 +249,20 @@ country_event = {
 			custom_tooltip = tuh_candidate_bonus_tooltip
 			if = {
 				limit = {
-					has_country_modifier = wallachia_into_the_unknown
+					has_country_flag = tuh_bibescu_colonists
 				}
-				hidden_effect = {
-					remove_country_modifier = wallachia_into_the_unknown
+				if = {
+					limit = {
+						has_country_modifier = wallachia_into_the_unknown
+					}
+					hidden_effect = {
+						remove_country_modifier = wallachia_into_the_unknown
+					}
 				}
-			}
-			add_ruler_modifier = {
-				name = wallachia_into_the_unknown
-				duration = -1
+				add_ruler_modifier = {
+					name = wallachia_into_the_unknown
+					duration = -1
+				}
 			}
 			tuh_galleass_gift_effect = yes
 		}
@@ -338,9 +348,14 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-			add_yearly_manpower = 0.5
-			create_general = {
-				tradition = 80
+			if = {
+				limit = {
+					has_country_flag = tuh_draculesti_election_bonus_tooltip
+				}
+				add_yearly_manpower = 0.5
+				create_general = {
+					tradition = 80
+				}
 			}
 			tuh_galleass_gift_effect = yes
 		}
@@ -426,18 +441,18 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-		}
-		if = {
-			limit = {
-				has_country_flag = brancoveanu_election_bonus
+			if = {
+				limit = {
+					has_country_flag = brancoveanu_election_bonus
+				}
+				add_ruler_modifier = {
+					name = tuh_brancoveanu_patronage
+					duration = -1
+				}
+				custom_tooltip = tuh_brancoveanu_patronage_tooltip
 			}
-			add_ruler_modifier = {
-				name = tuh_brancoveanu_patronage
-				duration = -1
-			}
-			custom_tooltip = tuh_brancoveanu_patronage_tooltip
+			tuh_galleass_gift_effect = yes
 		}
-		tuh_galleass_gift_effect = yes
 	}
 	option = {
 		name = tuh_elections.0.e
@@ -521,29 +536,29 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-		}
-		if = {
-			limit = {
-				has_country_flag = movilesti_election_bonus
+			if = {
+				limit = {
+					has_country_flag = movilesti_election_bonus
+				}
+				define_advisor = {
+					type = trader
+					skill = 2
+					cost_multiplier = 0.35
+					age = 20
+					culture = ROOT
+					religion = ROOT
+				}
+				add_mercantilism = 5
 			}
-			define_advisor = {
-				type = trader
-				skill = 2
-				cost_multiplier = 0.35
-				age = 20
-				culture = ROOT
-				religion = ROOT
+			if = {
+				limit = {
+					has_country_flag = movilesti_can_propagate_religion_bonus
+				}
+				custom_tooltip = movilesti_propagate_religion_tooltip
+				set_country_flag = can_use_propagate_religion
 			}
-			add_mercantilism = 5
+			tuh_galleass_gift_effect = yes
 		}
-		if = {
-			limit = {
-				has_country_flag = movilesti_can_propagate_religion_bonus
-			}
-			custom_tooltip = movilesti_propagate_religion_tooltip
-			set_country_flag = can_use_propagate_religion
-		}
-		tuh_galleass_gift_effect = yes
 	}
 	option = {
 		name = tuh_elections.0.f
@@ -626,7 +641,12 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-			tuh_set_danesti_coastal_defences = yes
+			if = {
+				limit = {
+					has_country_flag = danesti_no_raids
+				}
+				tuh_set_danesti_coastal_defences = yes
+			}
 			tuh_galleass_gift_effect = yes
 		}
 	}
@@ -721,9 +741,14 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-			add_ruler_modifier = {
-				name = ghica_lombard_banking
-				duration = -1
+			if = {
+				limit = {
+					has_country_flag = ghica_lombard_banking
+				}
+				add_ruler_modifier = {
+					name = ghica_lombard_banking
+					duration = -1
+				}
 			}
 			tuh_galleass_gift_effect = yes
 		}
@@ -809,25 +834,30 @@ country_event = {
 				}
 			}
 			custom_tooltip = tuh_candidate_bonus_tooltip
-			add_ruler_modifier = {
-				name = racovita_mamluk_contacts
-				duration = -1
-			}
 			if = {
 				limit = {
-					owns = 361
+					has_country_flag = racovita_mamluks_bonus
 				}
-				361 = {
-					mamluks_cavalry = ROOT
-					mamluks_cavalry = ROOT
-					mamluks_cavalry = ROOT
+				add_ruler_modifier = {
+					name = racovita_mamluk_contacts
+					duration = -1
 				}
-			}
-			else = {
-				capital_scope = {
-					mamluks_cavalry = ROOT
-					mamluks_cavalry = ROOT
-					mamluks_cavalry = ROOT
+				if = {
+					limit = {
+						owns = 361
+					}
+					361 = {
+						mamluks_cavalry = ROOT
+						mamluks_cavalry = ROOT
+						mamluks_cavalry = ROOT
+					}
+				}
+				else = {
+					capital_scope = {
+						mamluks_cavalry = ROOT
+						mamluks_cavalry = ROOT
+						mamluks_cavalry = ROOT
+					}
 				}
 			}
 			tuh_galleass_gift_effect = yes
