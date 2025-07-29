@@ -1246,7 +1246,11 @@ country_event = {
 				dynasty = "Draculesti"
 			}
 		}
-		add_years_of_income = -0.30
+		add_years_of_income = -0.25
+		define_advisor = {
+			type = inquisitor
+			skill = 1
+		}
 	}
 	option = {
 		name = tuh_faction_events.10.b
@@ -1256,8 +1260,8 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = festering_paranoia
-			duration = 3650
+			name = increased_witchcraft
+			duration = 1825
 		}
 	}
 	option = {
@@ -1279,6 +1283,6 @@ country_event = {
 			}
 			add_devastation = 10
 		}
-		add_yearly_manpower = -0.5
+		add_yearly_manpower = -0.25
 	}
 }

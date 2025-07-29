@@ -302,7 +302,7 @@ bibescu_court_ascendant = {
 	legitimacy = -0.5
 }
 
-festering_paranoia = {
+increased_witchcraft = {
 	global_unrest = 1
 	stability_cost_modifier = 0.1
 }
