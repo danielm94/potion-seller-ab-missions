@@ -122,6 +122,12 @@ wallachian_terror_mechanic = {
 						add_devastation = 5
 					}
 				}
+				if = {
+					limit = {
+						is_absolutism_active = yes
+					}
+					add_absolutism = 10
+				}	
 				change_terror = {
 					value = -40
 					scaled_with_gain_modifier = no

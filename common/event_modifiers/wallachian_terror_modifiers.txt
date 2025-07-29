@@ -3,6 +3,7 @@ wallachian_terror_purging_the_estate_elites = {
 	all_estate_influence_modifier = -0.15
 	free_land_leader_pool = -1
 	allow_free_estate_privilege_revocation = yes
+	yearly_absolutism = 0.5
 }
 
 wallachian_terror_brutalize_the_enemy = {
