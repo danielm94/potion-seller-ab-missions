@@ -45,8 +45,14 @@ country_decisions = {
 			set_country_flag = released_aquitania_as_personal_union
 			custom_tooltip = release_aquitania_effect_tooltip
 			hidden_effect = {
-				every_owned_province = {
+				every_province = {
 					limit = {
+						OR = {
+							owned_by = root
+							owner = {
+								is_subject_of = ROOT
+							}
+						}
 						OR = {
 							area = languedoc_area
 							area = massif_central_area
@@ -61,6 +67,12 @@ country_decisions = {
 				create_subject = {
 					subject_type = personal_union
 					subject = AQA
+				}
+				every_province = {
+					limit = {
+						is_core = AQA
+					}
+					cede_province = AQA
 				}
 			}
 			hidden_effect = {
