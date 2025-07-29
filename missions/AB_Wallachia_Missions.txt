@@ -6445,7 +6445,7 @@ ab_wal_5 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 15
+				value = 10
 				has_manpower_building_trigger = yes
 				has_forcelimit_building_trigger = yes
 				base_manpower = 5
