@@ -4164,10 +4164,16 @@ ab_wal_4 = {
 				id = AB_wallachia_events.21
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = wal_unlocked_rome_mania_tooltip
+			complex_dynamic_effect = {
+				first_custom_tooltip = wal_rome_mania_is_before_1600_tooltip
+				first_limit = "NOT = {
+				is_year = 1600
+			}"
+				first_effect = "custom_tooltip = wal_unlocked_rome_mania_tooltip
 			set_country_flag = wal_unlocked_timed
 			hidden_effect = {
 				swap_non_generic_missions = yes
+			}"
 			}
 		}
 	}
