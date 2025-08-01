@@ -2704,6 +2704,10 @@ ab_wal_3 = {
 			}
 			add_core = 4706
 			custom_tooltip = tooltip_line_divider
+			4706 = {
+				add_nationalism = -30
+				add_unrest = -20
+			}
 			if = {
 				limit = {
 					has_vlad_2nd_or_3rd_ruling = yes
@@ -3142,7 +3146,7 @@ ab_wal_3 = {
 				first_custom_tooltip = if_we_have_romanian_elective_monarchy_tooltip
 				first_limit = "has_government_attribute = romanian_elective_monarchy"
 				first_effect = "custom_tooltip = unlock_schonbrunn_bonus_tooltip
-				set_country_flag = rem_unlock_schonbrunn_bonus"
+				set_country_flag = unlock_schonbrunn_bonus"
 			}
 			custom_tooltip = rem_bonus_not_retroactive_tooltip
 		}
@@ -6107,11 +6111,9 @@ ab_wal_5 = {
 			wal_fleet
 		}
 		trigger = {
-			calc_true_if = {
-				amount = 5
-				any_owned_province = {
-					has_building = impressment_offices
-				}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_building = impressment_offices
 			}
 			OR = {
 				num_of_marines = 25
