@@ -118,7 +118,12 @@ western_roman_empire_province_cb_trigger = {
 		area = upper_swabia_area
 		area = lower_swabia_area
 		area = switzerland_area
-		region = maghreb_region
+		AND = {
+			region = maghreb_region
+			NOT = {
+				area = macaronesia_area
+			}
+		}
 	}
 	NOT = {
 		area = tripolitania_area
