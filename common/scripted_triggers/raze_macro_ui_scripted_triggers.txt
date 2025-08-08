@@ -10,6 +10,7 @@ can_province_be_razed = {
 	}
 	owned_by = FROM
 	controlled_by = FROM
+	is_colony = no
 	NOT = {
 		is_core = FROM
 	}
