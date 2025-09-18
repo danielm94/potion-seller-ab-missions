@@ -2,7 +2,7 @@ version="1.0"
 tags={
 	"Gameplay"
 }
-name="PotionSeller's AB Mission Pack"
+name="PotionSeller's Ante Bellum Mission Pack"
 dependencies={
 	"Ante Bellum"
 }
