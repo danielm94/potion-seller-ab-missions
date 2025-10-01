@@ -1,0 +1,4 @@
+change_variable = {
+	which = wal_number_of_provinces_razed
+	value = 50
+}
