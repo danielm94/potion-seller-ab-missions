@@ -105,6 +105,9 @@ dlc102_wal_sprite_pack = {
 			tag = WAL
 			tag = MOL
 			tag = RMN
+			tag = TUH
+			tag = DAC
+			tag = ROD
 		}
 	}
 
