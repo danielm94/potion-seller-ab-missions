@@ -51,7 +51,7 @@ estate_razesi = {
 	base_influence = 10
 
 	privileges = {
-		#TODO
+		estate_razesi_land_rights
 	}
 	agendas = {
 		#TODO
