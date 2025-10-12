@@ -1,0 +1,21 @@
+# = Tier 1 =
+moldavian_voivodate = {
+	icon = "moldavian_voivodate"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	potential = {
+		tag = MOL
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		stability_cost_modifier = 0.1
+		
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_estate_razesi = yes
+	}
+}

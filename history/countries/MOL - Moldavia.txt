@@ -5,7 +5,47 @@ primary_culture = Moldavian
 religion = orthodox
 technology_group = eastern
 capital = 268 # Suceava
-
+add_government_reform = moldavian_voivodate
+change_estate_land_share = {
+    estate = estate_church
+    share = -100
+}
+change_estate_land_share = {
+    estate = estate_burghers
+    share = -100
+}
+change_estate_land_share = {
+    estate = estate_nobles
+    share = -100
+}
+change_estate_land_share = {
+    estate = estate_cossacks
+    share = -100
+}
+change_estate_land_share = {
+    estate = estate_razesi
+    share = -100
+}
+change_estate_land_share = {
+	estate = estate_razesi
+	share = 20
+}
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 20
+}
+change_estate_land_share = {
+	estate = estate_church
+	share = 15
+}
+change_estate_land_share = {
+	estate = estate_cossacks
+	share = 5
+}
+change_estate_land_share = {
+	estate = estate_burghers
+	share = 10
+}
 1400.1.1 = {
 	monarch = {
 		name = "Alexandru III cel Bun"

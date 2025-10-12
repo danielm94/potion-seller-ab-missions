@@ -201,8 +201,8 @@ monarchy = {
 				est_council_of_chiefs
 				krz_tsardom_of_krievzeme
 				# ]]]
-				#-PotionSeller#
-				#Romania:
+				#PotionSeller#
+				#Wallachia:
 				wallachian_voivodate
 				wallachian_autocracy
 				appointive_voivodate
@@ -213,6 +213,8 @@ monarchy = {
 				roman_elective_monarchy
 				dacian_roman_empire
 				dacian_roman_autocracy
+				#Moldavia
+				moldavian_voivodate
 			}
 		}
 		hereditary_vs_nobility = {
