@@ -1,0 +1,41 @@
+#Idea groups for Moldavia and all derivative nations
+MOL_ideas = {
+	start = {
+		land_morale = 0.10
+		improve_relation_modifier = 0.33
+	}
+	bonus = {
+		defensiveness = 0.10
+	}
+	trigger = {
+		tag = MOL
+	}
+	free = yes		#will be added at load
+
+	first_dismounting = {
+		prestige = 1
+	}
+	razesi_peasants = {
+		manpower_recovery_speed = 0.1
+		razesi_loyalty_modifier = 0.05
+	}
+	upper_boyars = {
+		land_forcelimit_modifier = 0.25
+	}
+	moldavia_hospodar = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	moldavia_metropoly = {
+		global_missionary_strength = 0.02
+	}
+	vlach_shepherds = {
+		culture_conversion_cost = -0.1
+	}
+	moldavian_trade = {
+		trade_efficiency = 0.1
+	}
+}
