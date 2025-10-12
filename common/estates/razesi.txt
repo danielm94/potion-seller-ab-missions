@@ -1,0 +1,60 @@
+estate_razesi = {
+	icon = 19
+	color = {
+		245
+		222
+		179
+	}
+	# If true, country will get estate
+	trigger = {
+		has_government_attribute = enables_estate_razesi
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		global_unrest = -2
+		global_manpower_modifier = 0.2
+		global_tax_modifier = 0.1
+	}
+	country_modifier_neutral = {
+		global_unrest = -1
+		global_manpower_modifier = 0.1
+	}
+	country_modifier_angry = {
+		global_unrest = 2
+		global_manpower_modifier = 0.2
+		global_tax_modifier = 0.1
+	}
+	land_ownership_modifier = {
+		razesi_loyalty_modifier = 0.2
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = wool
+				trade_goods = wine
+			}
+		}
+	}
+	# Influence modifiers
+	base_influence = 10
+
+	privileges = {
+		#TODO
+	}
+	agendas = {
+		#TODO
+	}
+	influence_from_dev_modifier = 1	#Determines percent influence from development
+}

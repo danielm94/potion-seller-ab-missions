@@ -1,0 +1,23 @@
+estate_razesi = {
+	modifier_definition = {
+		type = loyalty
+		key = razesi_loyalty_modifier
+		trigger = {
+			has_estate = estate_razesi
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = razesi_influence_modifier
+		trigger = {
+			has_estate = estate_razesi
+		}
+	}
+	modifier_definition = {
+		type = privileges
+		key = razesi_privilege_slots
+		trigger = {
+			has_estate = estate_razesi
+		}
+	}
+}
