@@ -1,3 +1,4 @@
+#Idea groups for Wallachia and all derivative nations
 WAL_ideas = {
 	start = {
 		defensiveness = 0.2
