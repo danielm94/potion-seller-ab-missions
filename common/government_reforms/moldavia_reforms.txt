@@ -11,8 +11,10 @@ moldavian_voivodate = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
+		manpower_recovery_speed = 0.05
 		stability_cost_modifier = 0.1
-		
+		razesi_influence_modifier = 0.1
+		nobles_influence_modifier = 0.1
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
