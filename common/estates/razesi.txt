@@ -1,5 +1,5 @@
 estate_razesi = {
-	icon = 19
+	icon = 16
 	color = {
 		245
 		222
