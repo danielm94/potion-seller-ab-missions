@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_boieri_vs_razesi_frame"
+		texturefile = "gfx/interface/government_mechanics/boieri_vs_razesi/boieri_vs_razesi_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_boieri_vs_razesi_progressbar"
+		color = {
+			1
+			1
+			1
+		}
+		colortwo = {
+			1 0 0
+		}
+		textureFile1 = "gfx/interface/government_mechanics/boieri_vs_razesi/boieri_vs_razesi_progress.dds"
+		textureFile2 = "gfx/interface/government_mechanics/boieri_vs_razesi/boieri_vs_razesi_progress_empty.dds"
+		size = {
+			x = 232
+			y = 20
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+}
