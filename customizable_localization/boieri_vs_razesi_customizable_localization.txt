@@ -1,0 +1,11 @@
+defined_text = {
+	name = less_than_0_razesi_power_tt
+	text = { 
+		localisation_key = less_than_0_razesi_power_tooltip_text
+		trigger = {
+			has_boieri_vs_razesi_power = {
+				value = 0
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+has_boieri_vs_razesi_power = {
+	has_government_power = {
+		mechanic_type = boieri_vs_razesi_mechanic
+		power_type = boieri_vs_razesi_power
+		value = $value$
+	}
+}
