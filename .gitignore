@@ -82,4 +82,4 @@
 .cwtools/map/tiles.cwt
 .cwtools/missions/missions.cwt
 .vscode/settings.json
-q.txt
+q*.txt
