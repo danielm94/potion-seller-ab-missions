@@ -11,5 +11,57 @@ on_mil_development = {
 }
 
 on_province_owner_change = {
-	on_province_owner_change_conquest_mol = yes
+	if = {
+		limit = {
+			MOL = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+		}
+		export_to_variable = {
+			which = province_dev_var
+			value = development
+		}
+		multiply_variable = {
+			which = province_dev_var
+			value = 0.25
+		}
+		if = {
+			limit = {
+				is_province_a_boieri_province = yes
+			}
+			multiply_variable = {
+				which = province_dev_var
+				value = -1
+			}
+			MOL = {
+				set_variable = {
+					which = province_dev_var
+					which = PREV
+				}
+				variable_government_power_effect = {
+					var = province_dev_var
+					mechanic_type = boieri_vs_razesi_mechanic
+					power_type = boieri_vs_razesi_power
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_province_a_razesi_province = yes
+			}
+			MOL = {
+				set_variable = {
+					which = province_dev_var
+					which = PREV
+				}
+				variable_government_power_effect = {
+					var = province_dev_var
+					mechanic_type = boieri_vs_razesi_mechanic
+					power_type = boieri_vs_razesi_power
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+	}
 }
