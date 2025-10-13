@@ -16,9 +16,6 @@ is_province_a_boieri_province = {
 			NOT = {
 				area = bessarabia_area
 			}
-			NOT = {
-				area = moldavia_area
-			}
 		}
 	}
 }
@@ -27,7 +24,6 @@ is_province_a_boieri_province = {
 is_province_a_razesi_province = {
 	OR = {
 		area = bessarabia_area
-		area = moldavia_area
 		region = crimea_region
 	}
 }
