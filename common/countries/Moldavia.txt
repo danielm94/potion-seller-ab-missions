@@ -169,10 +169,10 @@ army_names = {
 	"Oastea Mare"
 	"Armata Domneasca"
 	"Armata Tarii"
-	"Armata Munteniei"
-	"Armata Olteniei"
+	"Armata Basarabiei"
+	"Armata Nistrului"
 	"Armata Moldovei"
-	"Armata Ardealului"
+	"Armata Razeseasca"
 	"Armata Carpatilor"
 	"Armata Dunarii"
 }
