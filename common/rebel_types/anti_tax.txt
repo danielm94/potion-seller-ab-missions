@@ -35,6 +35,12 @@ anti_tax_rebels = {
 	spawn_chance = {
 		factor = 2
 		modifier = {
+			factor = 1000
+			owner = {
+				has_country_flag = placeholder_for_support_peasants_mechanic
+			}
+		}
+		modifier = {
 			factor = 100.0
 			has_province_modifier = rus_discontent_peasantry
 		}
@@ -191,6 +197,15 @@ anti_tax_rebels = {
 		}
 		else = {
 			add_prestige = -50
+		}
+		#PotionSeller
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			change_razesi_power = {
+				value = 100
+			}
 		}
 	}
 }
