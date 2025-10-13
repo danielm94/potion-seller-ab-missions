@@ -13,7 +13,7 @@ on_mil_development = {
 on_province_owner_change = {
 	if = {
 		limit = {
-			MOL = {
+			owner = {
 				has_government_mechanic = boieri_vs_razesi_mechanic
 			}
 		}
@@ -33,7 +33,7 @@ on_province_owner_change = {
 				which = province_dev_var
 				value = -1
 			}
-			MOL = {
+			owner = {
 				set_variable = {
 					which = province_dev_var
 					which = PREV
@@ -50,7 +50,7 @@ on_province_owner_change = {
 			limit = {
 				is_province_a_razesi_province = yes
 			}
-			MOL = {
+			owner = {
 				set_variable = {
 					which = province_dev_var
 					which = PREV
