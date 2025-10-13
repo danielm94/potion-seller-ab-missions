@@ -1,10 +1,10 @@
-government = monarchy
-add_government_reform = moldavian_voivodate
+government = republic
+add_government_reform = peasants_republic
 government_rank = 1
 primary_culture = Moldavian
 religion = orthodox
 technology_group = eastern
-capital = 268 # Suceava
+capital = 1756 # Basarabia
 
 change_estate_land_share = {
     estate = estate_church
@@ -28,11 +28,7 @@ change_estate_land_share = {
 }
 change_estate_land_share = {
 	estate = estate_razesi
-	share = 20
-}
-change_estate_land_share = {
-	estate = estate_nobles
-	share = 20
+	share = 30
 }
 change_estate_land_share = {
 	estate = estate_church
@@ -40,32 +36,9 @@ change_estate_land_share = {
 }
 change_estate_land_share = {
 	estate = estate_cossacks
-	share = 5
+	share = 15
 }
 change_estate_land_share = {
 	estate = estate_burghers
 	share = 10
-}
-1400.1.1 = {
-	monarch = {
-		name = "Alexandru III cel Bun"
-		dynasty = "Racovita"
-		birth_date = 1380.1.1
-		adm = 3
-		dip = 4
-		mil = 2
-	}
-}
-
-1434.5.5 = {
-	monarch = {
-		name = "Alexandru IV"
-		dynasty = "Racovita"
-		birth_date = 1414.08.09
-		adm = 2
-		dip = 5
-		mil = 3
-	}
-	add_ruler_personality = careful_personality
-	add_ruler_personality = secretive_personality
 }
