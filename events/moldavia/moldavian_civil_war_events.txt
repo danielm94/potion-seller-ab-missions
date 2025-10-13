@@ -1,0 +1,20 @@
+namespace = moldavian_civil_war_events
+
+#Disaster Start - Voivod is killed by boyars
+country_event = {
+	id = moldavian_civil_war_events.1
+	title = moldavian_civil_war_events.1.t
+	desc = moldavian_civil_war_events.1.d
+	picture = KING_ASSASSINATION_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		kill_ruler = yes
+	}
+	option = {
+		name = moldavian_civil_war_events.1.a
+		kill_ruler = yes
+		every_owned_province = {
+			limit = {}
+		}
+	}
+}
