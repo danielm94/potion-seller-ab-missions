@@ -275,6 +275,12 @@ country_event = {
 				}
 				generate_estate_agenda = estate_janissaries
 			}
+			if = {
+				limit = {
+					has_estate = estate_razesi
+				}
+				generate_estate_agenda = estate_razesi
+			}
 		}
 	}
 
@@ -407,6 +413,15 @@ country_event = {
 		trigger = { has_estate = estate_eunuchs }
 		start_estate_agenda = estate_eunuchs
 		goto = estate_eunuchs
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.razesi
+		trigger = { has_estate = estate_razesi }
+		start_estate_agenda = estate_razesi
+		goto = estate_razesi
 		ai_chance = {
 			factor = 1
 		}

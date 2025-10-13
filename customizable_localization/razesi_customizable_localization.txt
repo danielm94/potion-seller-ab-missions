@@ -1,0 +1,6 @@
+defined_text = {
+	name = get_razesi_name
+	text = { 
+		localisation_key = estate_razesi
+	}
+}

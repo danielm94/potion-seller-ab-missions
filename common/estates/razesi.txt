@@ -54,7 +54,7 @@ estate_razesi = {
 		estate_razesi_land_rights
 	}
 	agendas = {
-		#TODO
+		estate_razesi_spy_on_threats
 	}
 	influence_from_dev_modifier = 1	#Determines percent influence from development
 }

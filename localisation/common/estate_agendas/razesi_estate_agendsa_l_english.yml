@@ -1,0 +1,3 @@
+﻿l_english:
+ estate_razesi_spy_on_threats: "Infiltrate [spy_agenda_target.GetName]"
+ estate_razesi_spy_on_threats_desc: "The [get_razesi_name] feel threatened by [spy_agenda_target.GetName] and want us to infiltrate their lands to see what their next move is."
