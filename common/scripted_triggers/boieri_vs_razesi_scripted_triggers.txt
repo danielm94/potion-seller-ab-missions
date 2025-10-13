@@ -1,7 +1,33 @@
+#SCOPE = COUNTRY
 has_boieri_vs_razesi_power = {
 	has_government_power = {
 		mechanic_type = boieri_vs_razesi_mechanic
 		power_type = boieri_vs_razesi_power
 		value = $value$
+	}
+}
+
+#SCOPE = PROVINCE
+is_province_a_boieri_province = {
+	OR = {
+		region = balkan_region
+		AND = {
+			region = carpathia_region
+			NOT = {
+				area = bessarabia_area
+			}
+			NOT = {
+				area = moldavia_area
+			}
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+is_province_a_razesi_province = {
+	OR = {
+		area = bessarabia_area
+		area = moldavia_area
+		region = crimea_region
 	}
 }

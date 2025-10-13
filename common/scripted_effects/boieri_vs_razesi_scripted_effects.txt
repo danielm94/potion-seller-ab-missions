@@ -1,0 +1,39 @@
+#SCOPE = COUNTRY
+change_razesi_power = {
+	add_government_power = {
+		mechanic_type = boieri_vs_razesi_mechanic
+		power_type = boieri_vs_razesi_power
+		value = $value$
+	}
+}
+
+#SCOPE = COUNTRY
+boieri_vs_razesi_on_development_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+		}
+		if = {
+			limit = {
+				is_province_a_boieri_province = yes
+			}
+			owner = {
+				change_razesi_power = {
+					value = -0.1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_province_a_razesi_province = yes
+			}
+			owner = {
+				change_razesi_power = {
+					value = 0.1
+				}
+			}
+		}
+	}
+}

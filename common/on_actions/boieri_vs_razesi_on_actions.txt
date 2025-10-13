@@ -1,0 +1,9 @@
+on_adm_development = {
+	boieri_vs_razesi_on_development_effect = yes
+}
+on_dip_development = {
+	boieri_vs_razesi_on_development_effect = yes
+}
+on_mil_development = {
+	boieri_vs_razesi_on_development_effect = yes
+}
