@@ -53,7 +53,6 @@ vanilla_on_raze_effect = {
 	}
 }
 
-
 #Basically remove_loot effect gives a province's loot to anyone except the owner... So we have to do the following:
 #1 find another tag
 #2 loot the province and give them the money
