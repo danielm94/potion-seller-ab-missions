@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "government_reform_moldavian_voivodate"
 		texturefile = "gfx/interface/government_reform_icons/moldavian_voivodate.dds"
 	}
+	spriteType = {
+		name = "government_reform_sfatul_tarii"
+		texturefile = "gfx/interface/government_reform_icons/sfatul_tarii.dds"
+	}
 }

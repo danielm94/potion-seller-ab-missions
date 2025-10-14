@@ -2,10 +2,11 @@
 setup_MOP_effect = {
 	MOP = {
 		set_country_flag = started_moldavian_civil_war
+		set_country_flag = in_moldavian_civil_war
 		change_religion = PREV
 		remove_country_modifier = conversion_zeal
 		change_primary_culture = Moldavian
-		add_government_reform = peasants_republic
+		add_government_reform = sfatul_tarii
 	}
 	every_owned_province = {
 		limit = {

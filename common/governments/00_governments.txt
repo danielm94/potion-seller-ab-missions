@@ -1254,6 +1254,8 @@ republic = {
 				ab_tuscan_peasants_reform
 				rhl_confederation_reform
 				# ]]]
+				#PotionSeller
+				sfatul_tarii
 			}
 		}
 		republican_virtues = {
