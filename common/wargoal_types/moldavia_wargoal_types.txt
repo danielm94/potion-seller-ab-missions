@@ -1,0 +1,25 @@
+moldavian_civil_war_wargoal = {
+	type = take_capital
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 1.25
+		peace_cost_factor = 0.5
+		allowed_provinces = {
+			is_core = ROOT
+		}
+		peace_options = {
+			po_return_cores
+			po_punish_the_razesi
+		}
+	}
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1.25
+		peace_cost_factor = 0.5
+		peace_options = {
+			po_return_cores
+			po_punish_the_boieri
+		}
+	}
+	war_name = moldavian_civil_war_name
+}

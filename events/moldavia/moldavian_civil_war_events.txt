@@ -20,7 +20,6 @@ country_event = {
 		add_ruler_personality = impaler_personality
 		add_prestige = -25
 		add_legitimacy = -50
-		declare_war = MOP
 		hidden_effect = {
 			if = {
 				limit = {
@@ -31,7 +30,6 @@ country_event = {
 				add_ruler_modifier = {
 					name = moldavian_civil_war_anti_cheese
 					duration = -1
-					
 				}
 				capital_scope = {
 					artillery = owner
@@ -76,6 +74,10 @@ country_event = {
 				add_mil_power = 200
 			}
 		}
+		declare_war_with_cb = {
+			casus_belli = cb_moldavia_civil_war
+			who = MOP
+		}
 		switch_tag = MOP
 	}
 }
@@ -103,6 +105,9 @@ country_event = {
 			add_prestige = -25
 			add_legitimacy = -50
 		}
-		declare_war = MOP
+		declare_war_with_cb = {
+			casus_belli = cb_moldavia_civil_war
+			who = MOP
+		}
 	}
 }
