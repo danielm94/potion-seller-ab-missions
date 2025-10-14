@@ -48,6 +48,22 @@ boieri_vs_razesi_mechanic = {
 				start_value = -100
 				end_value = 0
 			}
+			on_max_reached = {
+				custom_tooltip = boieri_vs_razesi_civil_war_tt
+				hidden_effect = {
+					country_event = {
+						id = moldavian_civil_war_events.1
+					}
+				}
+			}
+			on_min_reached = {
+				custom_tooltip = boieri_vs_razesi_civil_war_tt
+				hidden_effect = {
+					country_event = {
+						id = moldavian_civil_war_events.2
+					}
+				}
+			}
 		}
 	}
 }

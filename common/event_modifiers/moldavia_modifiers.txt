@@ -1,0 +1,8 @@
+#If player decides to cheese civil war by deleting their army
+moldavian_civil_war_anti_cheese = {
+	manpower_recovery_speed = 0.2
+	global_manpower_modifier = 0.2
+	discipline = 0.05
+	defensiveness = 0.25
+	siege_ability = 0.1
+}

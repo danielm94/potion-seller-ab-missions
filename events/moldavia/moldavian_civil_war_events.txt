@@ -1,5 +1,4 @@
 namespace = moldavian_civil_war_events
-
 #Disaster Start - Voivod is killed by boyars
 country_event = {
 	id = moldavian_civil_war_events.1
@@ -8,13 +7,87 @@ country_event = {
 	picture = KING_ASSASSINATION_eventPicture
 	is_triggered_only = yes
 	immediate = {
-		kill_ruler = yes
+		hidden_effect = {
+			set_country_flag = started_moldavian_civil_war
+			kill_ruler = yes
+			setup_MOP_effect = yes
+			setup_boyar_MOL_effect = yes
+		}
 	}
 	option = {
 		name = moldavian_civil_war_events.1.a
-		kill_ruler = yes
-		every_owned_province = {
-			limit = {}
+		add_ruler_personality = impaler_personality
+		add_prestige = -25
+		add_legitimacy = -50
+		declare_war = MOP
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						army_size_percentage = 0.2
+					}
+				}
+				add_ruler_modifier = {
+					name = moldavian_civil_war_anti_cheese
+					duration = -1
+					
+				}
+				capital_scope = {
+					artillery = owner
+					artillery = owner
+					artillery = owner
+				}
+				define_advisor = {
+					type = commandant
+					cost_multiplier = 0.05
+					skill = 3
+					name = "Shouldn't Have Cheesed LMAO"
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						army_size_percentage = 1
+					}
+				}
+				while = {
+					limit = {
+						NOT = {
+							army_size_percentage = 1
+						}
+					}
+					capital_scope = {
+						infantry = owner
+					}
+				}
+			}
 		}
+		switch_tag = MOP
+	}
+}
+
+#Disaster Start - Voivod is killed by peasants
+country_event = {
+	id = moldavian_civil_war_events.2
+	title = moldavian_civil_war_events.2.t
+	desc = moldavian_civil_war_events.2.d
+	picture = KING_ASSASSINATION_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = started_moldavian_civil_war
+			kill_ruler = yes
+			setup_MOP_effect = yes
+			setup_boyar_MOL_effect = yes
+		}
+	}
+	option = {
+		name = moldavian_civil_war_events.2.a
+		MOP = {
+			add_ruler_personality = impaler_personality
+			add_prestige = -25
+			add_legitimacy = -50
+		}
+		declare_war = MOP
 	}
 }
