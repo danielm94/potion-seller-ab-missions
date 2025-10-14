@@ -28,8 +28,8 @@ moldavian_voivodate = {
 	}
 }
 
-sfatul_tarii ={
-	icon = "sfatul_tarii"
+sfatul_tarii_reform ={
+	icon = "sfatul_tarii_reform"
 	allow_convert = no
 	allow_normal_conversion = no
 	lock_level_when_selected = yes

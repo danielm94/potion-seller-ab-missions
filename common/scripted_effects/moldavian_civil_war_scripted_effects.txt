@@ -6,7 +6,7 @@ setup_MOP_effect = {
 		change_religion = PREV
 		remove_country_modifier = conversion_zeal
 		change_primary_culture = Moldavian
-		add_government_reform = sfatul_tarii
+		add_government_reform = sfatul_tarii_reform
 	}
 	every_owned_province = {
 		limit = {

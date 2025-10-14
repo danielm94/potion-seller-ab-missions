@@ -1255,7 +1255,7 @@ republic = {
 				rhl_confederation_reform
 				# ]]]
 				#PotionSeller
-				sfatul_tarii
+				sfatul_tarii_reform
 			}
 		}
 		republican_virtues = {
