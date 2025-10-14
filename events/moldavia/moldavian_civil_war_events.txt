@@ -62,6 +62,19 @@ country_event = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					is_bankrupt = yes
+				}
+				remove_country_modifier = bankruptcy
+				add_stability = 6
+				add_war_exhaustion = -20
+				add_legitimacy = 100
+				add_prestige = 200
+				add_adm_power = 200
+				add_dip_power = 200
+				add_mil_power = 200
+			}
 		}
 		switch_tag = MOP
 	}
