@@ -37,7 +37,7 @@ setup_MOP_effect = {
 		while = {
 			limit = {
 				NOT = {
-					army_size_percentage = 0.8
+					army_size_percentage = 1.8
 				}
 			}
 			capital_scope = {
@@ -47,7 +47,7 @@ setup_MOP_effect = {
 		while = {
 			limit = {
 				NOT = {
-					army_size_percentage = 1.05
+					army_size_percentage = 2
 				}
 			}
 			capital_scope = {
