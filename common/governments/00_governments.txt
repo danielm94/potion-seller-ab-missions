@@ -1256,6 +1256,7 @@ republic = {
 				# ]]]
 				#PotionSeller
 				sfatul_tarii_reform
+				moldavian_commune_reform
 			}
 		}
 		republican_virtues = {

@@ -28,7 +28,7 @@ moldavian_voivodate = {
 	}
 }
 
-sfatul_tarii_reform ={
+sfatul_tarii_reform = {
 	icon = "sfatul_tarii_reform"
 	allow_convert = no
 	allow_normal_conversion = no
@@ -51,5 +51,37 @@ sfatul_tarii_reform ={
 		enables_aristocratic_idea_group = no
 		disables_estate_nobles = yes
 		enables_estate_razesi = yes
+		election_on_death = yes
+	}
+}
+
+moldavian_commune_reform = {
+	icon = "sfatul_tarii_reform"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = peasants_republic_legacy
+	potential = {
+		tag = MOP
+		has_country_flag = moldavian_civil_war_victory
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		core_creation = 3
+		diplomatic_annexation_cost = 3
+		governing_capacity_modifier = -0.5
+		land_morale = 0.1
+		idea_cost = -0.1
+		development_cost = -0.1
+		razesi_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		disables_estate_nobles = yes
+		enables_estate_razesi = yes
+		has_parliament = yes
+		election_on_death = yes
 	}
 }

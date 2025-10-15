@@ -31,6 +31,7 @@ po_punish_the_boieri = {
 	}
 	effect = {
 		clr_country_flag = in_moldavian_civil_war
+		set_country_flag = moldavian_civil_war_victory
 		FROM = {
 			clr_country_flag = in_moldavian_civil_war
 		}
@@ -44,9 +45,6 @@ po_punish_the_boieri = {
 				name = boieri_purged
 				duration = 3650
 			}
-		}
-		country_event = {
-			id = moldavian_civil_war_events.3
 		}
 	}
 	ai_weight = {
