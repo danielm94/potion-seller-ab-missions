@@ -1,5 +1,5 @@
 ﻿l_english:
  po_punish_the_boieri: "Crush the Boieri"
- po_punish_the_boieri_desc: "All provinces that we have a core on will be returned to us. The Boieri’ power will be broken."
+ po_punish_the_boieri_desc: "Every core province of @MOP §Y[MOP.GetName]§! owned by @MOL §Y[MOL.GetName]§! will be returned to @MOP §Y[MOP.GetName]§!.\n\nEvery province owned by @MOL §Y[MOL.GetName]§! will receive for §Y10 years§!:\n §R+10§! Devastation\n §R-50.0%§! Local Tax Modifier\n §R-50.0%§! Local Manpower Modifier\n §R-50.0%§! Fort Defense"
  CB_ALLOWED_po_punish_the_boieri: "Crush the Boieri"
  PEACE_po_punish_the_boieri: "Crush the Boieri"

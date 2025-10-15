@@ -40,6 +40,10 @@ po_punish_the_boieri = {
 			}
 			add_devastation = 10
 			cede_province = ROOT
+			add_province_modifier = {
+				name = boieri_purged
+				duration = 3650
+			}
 		}
 	}
 	ai_weight = {

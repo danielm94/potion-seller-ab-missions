@@ -6,3 +6,14 @@ moldavian_civil_war_anti_cheese = {
 	defensiveness = 0.25
 	siege_ability = 0.1
 }
+
+boieri_purged = {
+	local_manpower_modifier = -0.5
+	local_tax_modifier = -0.5
+	local_defensiveness = -0.5
+}
+razesi_purged = {
+	local_manpower_modifier = -0.5
+	trade_goods_size_modifier = -0.5
+	local_production_efficiency = -0.5
+}

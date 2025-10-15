@@ -1,5 +1,5 @@
 ﻿l_english:
  po_punish_the_razesi: "Crush the Razesi"
- po_punish_the_razesi_desc: "All provinces that we have a core on will be returned to us. The rebellious Razesi will be subdued."
+ po_punish_the_razesi_desc: "Every core province of @MOL §Y[MOL.GetName]§! owned by @MOP §Y[MOP.GetName]§! will be returned to @MOL §Y[MOL.GetName]§!.\n\nEvery province owned by @MOP §Y[MOP.GetName]§! will receive for §Y10 years§!:\n §R+10§! Devastation\n §R-50.0%§! Local Goods Produced Modifier\n §R-50.0%§! Local Manpower Modifier\n §R-50.0%§! Local Production Efficiency"
  CB_ALLOWED_po_punish_the_razesi: "Crush the Razesi"
  PEACE_po_punish_the_razesi: "Crush the Razesi"

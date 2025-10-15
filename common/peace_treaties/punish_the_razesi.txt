@@ -40,6 +40,10 @@ po_punish_the_razesi = {
 			}
 			add_devastation = 10
 			cede_province = ROOT
+			add_province_modifier = {
+				name = razesi_purged
+				duration = 3650
+			}
 		}
 	}
 	ai_weight = {
