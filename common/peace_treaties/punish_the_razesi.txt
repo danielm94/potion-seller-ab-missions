@@ -1,8 +1,8 @@
 po_punish_the_razesi = {
 	# Show in treaties tab
 	category = 6
-	prestige_base = 1
-	ae_base = 0
+	prestige_base = 0.25
+	ae_base = 0.25
 	power_projection = humiliated_rival
 	power_cost_base = 1
 	# Warscore cost scales directly according to the warscore cost of the provinces that the owner retains
