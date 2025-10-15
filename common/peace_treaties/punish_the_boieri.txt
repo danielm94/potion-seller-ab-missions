@@ -38,6 +38,7 @@ po_punish_the_boieri = {
 			limit = {
 				owned_by = FROM
 			}
+			add_devastation = 10
 			cede_province = ROOT
 		}
 	}
