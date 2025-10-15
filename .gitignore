@@ -83,4 +83,4 @@
 .cwtools/missions/missions.cwt
 .vscode/settings.json
 q*.txt
-todo*
+.docs/*
