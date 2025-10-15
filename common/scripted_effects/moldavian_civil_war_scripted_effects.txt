@@ -33,6 +33,7 @@ setup_MOP_effect = {
 		add_core = MOP
 	}
 	MOP = {
+		add_stability = -1
 		set_capital = 1756
 		while = {
 			limit = {

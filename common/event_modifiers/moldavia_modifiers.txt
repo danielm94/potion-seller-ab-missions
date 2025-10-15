@@ -17,3 +17,9 @@ razesi_purged = {
 	trade_goods_size_modifier = -0.5
 	local_production_efficiency = -0.5
 }
+
+moldavia_civil_war_recovery = {
+	development_cost = 0.1
+	global_tax_modifier = -0.2
+	global_monthly_devastation = -0.05
+}

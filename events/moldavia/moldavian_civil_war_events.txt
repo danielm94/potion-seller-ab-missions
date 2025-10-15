@@ -111,3 +111,30 @@ country_event = {
 		}
 	}
 }
+
+#Civil War End - Razesi Victory
+country_event = {
+	id = moldavian_civil_war_events.3
+	title = moldavian_civil_war_events.3.t
+	desc = moldavian_civil_war_events.3.d
+	picture = GFX_moldavian_civil_war_events.3
+	is_triggered_only = yes
+	option = {
+		name = moldavian_civil_war_events.3.a
+		add_stability = 2
+		add_ruler_personality = peasant_revolt_leader_personality
+		add_country_modifier = {
+			name = moldavia_civil_war_recovery
+			duration = 3650
+		}
+	}
+	option = {
+		name = moldavian_civil_war_events.3.b
+		add_stability = 2
+		add_ruler_personality = peasant_revolt_leader_personality
+		add_country_modifier = {
+			name = moldavia_civil_war_recovery
+			duration = 3650
+		}
+	}
+}
