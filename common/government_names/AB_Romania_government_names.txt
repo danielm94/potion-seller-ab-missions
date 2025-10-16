@@ -1,6 +1,7 @@
-romanian_government_name = {
+romanian_monarchy_government_name = {
 	trigger = {
 		culture_group = romanian_culture_group
+		government = monarchy
 	}
 	rank = {
 		1 = romanian_duchy
