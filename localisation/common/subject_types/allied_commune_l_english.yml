@@ -1,0 +1,7 @@
+﻿l_english:
+ allied_commune: "Allied Commune"
+ allied_commune_long_desc: "$TODO$"
+ allied_commune_is_our: "$NAME|Y$ is an allied commune."
+ allied_commune_title: "Allied Commune"
+ allied_commune_title_plural: "Allied Communes"
+ is_allied_commune: "Is Allied Commune"
