@@ -12,7 +12,8 @@ peasant_zealotry = {
 			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
-					
+					morale_damage_received = -0.1
+					manpower_recovery_speed = 0.20
 				}
 			}
 		}
