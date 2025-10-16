@@ -1,0 +1,78 @@
+allied_commune = {
+	copy_from = default
+	
+	# Triggers:
+	is_potential_overlord = {
+		always = yes
+	}
+
+	# Properties:
+	can_fight_independence_war = no
+	is_voluntary = yes
+	joins_overlords_wars = no
+	can_be_co_belligerented = yes
+	must_accept_cta_from_overlord = yes
+	favors_cost_to_join_offensive_wars = 10
+	overlord_can_attack = no
+	can_have_subjects_of_other_types = yes
+	takes_diplo_slot = no
+	uses_military_focus = no
+	can_set_mil_focus = no
+	overlord_protects_external = yes
+	counts_for_borders = no
+	overlord_enforce_peace_attacking = yes
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_send_missionary_to_subject = no
+	overlord_can_fabricate_for = no
+	does_overlord_size_count_for_warscore_cost = no
+	can_concentrate_development = no
+	can_have_great_projects_moved_by_overlord = no
+	can_gain_favors = yes
+
+	base_liberty_desire = -100.0
+	liberty_desire_development_ratio = 0.175
+	annex_cost_per_development = 50.0
+	should_quit_wars_on_activation = no
+
+	# Diplomatic Permissions
+	can_fight = {
+		independent_nations = yes
+		same_overlord = allied_commune
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = allied_commune 
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = allied_commune
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = allied_commune
+		other_overlord = all
+	}
+
+	# Subject Interactions:
+	# (continuous)
+	embargo_rivals = no
+	support_loyalists = yes
+	
+	# (immediate)
+	enforce_religion = no
+	grant_province = no
+	grant_core_claim = no
+	bestow_gifts = yes
+	send_additional_troops = yes
+	block_settlement_growth = no
+	allow_settlement_growth = no
+
+	# Modifiers:
+	# Note: This entire block is needed to explicitly clear the 'subject_nation' modifier inherited from default.
+	modifier_subject = clear
+	modifier_overlord = clear
+}
