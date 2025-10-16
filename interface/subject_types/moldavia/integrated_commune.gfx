@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_integrated_commune_icon"
+		texturefile = "gfx/interface/subject_types/moldavia/integrated_commune/integrated_commune_icon.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_integrated_commune_am"
+		texturefile = "gfx/interface/subject_types/moldavia/integrated_commune/integrated_commune_am.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_integrated_commune_lead"
+		texturefile = "gfx/interface/subject_types/moldavia/integrated_commune/integrated_commune_lead.dds"
+		loadType = "INGAME"
+	}
+}

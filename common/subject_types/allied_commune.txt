@@ -1,11 +1,12 @@
 allied_commune = {
 	copy_from = default
-	
+	sprite = GFX_allied_commune_icon
+	diplomacy_overlord_sprite = GFX_allied_commune_lead
+	diplomacy_subject_sprite = GFX_allied_commune_am
 	# Triggers:
 	is_potential_overlord = {
 		always = yes
 	}
-
 	# Properties:
 	can_fight_independence_war = no
 	is_voluntary = yes
@@ -30,15 +31,13 @@ allied_commune = {
 	can_concentrate_development = no
 	can_have_great_projects_moved_by_overlord = no
 	can_gain_favors = yes
-
-	base_liberty_desire = -100.0
+	base_liberty_desire = -100
 	liberty_desire_development_ratio = 0.175
 	liberty_desire_revolution = 0
-	annex_cost_per_development = 50.0
+	annex_cost_per_development = 50
 	should_quit_wars_on_activation = no
-	military_focus = 10.0
+	military_focus = 10
 	trust_on_start = 0
-
 	# Diplomatic Permissions
 	can_fight = {
 		independent_nations = yes
@@ -47,7 +46,7 @@ allied_commune = {
 	}
 	can_rival = {
 		independent_nations = yes
-		same_overlord = allied_commune 
+		same_overlord = allied_commune
 	}
 	can_ally = {
 		independent_nations = yes
@@ -59,12 +58,10 @@ allied_commune = {
 		same_overlord = allied_commune
 		other_overlord = all
 	}
-
 	# Subject Interactions:
 	# (continuous)
 	embargo_rivals = no
 	support_loyalists = yes
-	
 	# (immediate)
 	enforce_religion = no
 	grant_province = no
@@ -73,7 +70,6 @@ allied_commune = {
 	send_additional_troops = yes
 	block_settlement_growth = no
 	allow_settlement_growth = no
-
 	# Modifiers:
 	# Note: This entire block is needed to explicitly clear the 'subject_nation' modifier inherited from default.
 	modifier_subject = clear

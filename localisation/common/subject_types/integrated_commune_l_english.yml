@@ -1,0 +1,7 @@
+﻿l_english:
+ integrated_commune: "Integrated Commune"
+ integrated_commune_long_desc: "$TODO$"
+ integrated_commune_is_our: "$NAME|Y$ is an integrated commune."
+ integrated_commune_title: "Integrated Commune"
+ integrated_commune_title_plural: "Integrated Communes"
+ is_integrated_commune: "Is an Integrated Commune"
