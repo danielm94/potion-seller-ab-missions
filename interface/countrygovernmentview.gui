@@ -81,6 +81,12 @@ guiTypes = {
 			position = { x= 8 y = 218 }
 			scripted = yes
 		}
+		iconType = {
+			name ="peasant_zealotry_bg"
+			spriteType = "GFX_peasant_zealotry_bg"
+			position = { x= 8 y = 218 }
+			scripted = yes
+		}
 
 		### ------- Government -------
 

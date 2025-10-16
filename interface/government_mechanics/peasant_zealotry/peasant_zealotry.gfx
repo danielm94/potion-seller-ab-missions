@@ -1,0 +1,47 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_peasant_zealotry_frame"
+		texturefile = "gfx\interface\government_mechanics\peasant_zealotry\peasant_zealotry_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_peasant_zealotry_progress_bar"
+		color = {
+			1
+			0
+			0
+		}
+		colortwo = {
+			1
+			1
+			1
+		}
+		textureFile1 = "gfx/interface/government_mechanics/peasant_zealotry/peasant_zealotry_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/peasant_zealotry/peasant_zealotry_progress_bar_empty.dds"
+		size = {
+			x = 261
+			y = 20
+		}
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_wallachian_terror_impale_the_privileged_button"
+		texturefile = "gfx\interface\government_mechanics\wallachian_terror\wallachian_terror_impale_the_privileged_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_peasant_zealotry_bg"
+		texturefile = "gfx/interface/government_mechanics/peasant_zealotry/peasant_zealotry_frame_background.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_peasant_zealotry_alert_icon"
+		texturefile = "gfx\interface\alert_icons\wallachian_terror_alert_icon.dds"
+		noOfFrames = 1
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
+}

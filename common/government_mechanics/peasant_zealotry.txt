@@ -1,0 +1,64 @@
+peasant_zealotry = {
+	alert_icon_gfx = GFX_peasant_zeal_alert_icon
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Domination"
+	}
+	powers = {
+		peasant_zeal = {
+			gui = peasant_zealotry_gov_mech
+			show_before_interactions = yes
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					
+				}
+			}
+		}
+	}
+	interactions = {
+		peasant_zeal_interaction_1 = {
+			gui = peasant_zealotry_gov_interaction
+			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			cost_type = peasant_zeal
+			center = no
+			trigger = {
+			}
+			effect = { 
+			}
+			cooldown_years = 0
+			ai_chance = {
+				
+			}
+		}
+		peasant_zeal_interaction_2 = {
+			gui = peasant_zealotry_gov_interaction
+			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			cost_type = peasant_zeal
+			center = no
+			trigger = {
+			}
+			effect = { 
+			}
+			cooldown_years = 0
+			ai_chance = {
+				
+			}
+		}
+		peasant_zeal_interaction_3 = {
+			gui = peasant_zealotry_gov_interaction
+			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			cost_type = peasant_zeal
+			center = no
+			trigger = {
+			}
+			effect = { 
+			}
+			cooldown_years = 0
+			ai_chance = {
+				
+			}
+		}
+	}
+}

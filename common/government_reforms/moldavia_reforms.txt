@@ -84,4 +84,7 @@ moldavian_commune_reform = {
 		has_parliament = yes
 		election_on_death = yes
 	}
+	government_abilities = {
+		peasant_zealotry
+	}
 }

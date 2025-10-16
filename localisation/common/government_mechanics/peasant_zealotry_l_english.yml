@@ -1,0 +1,7 @@
+l_english:
+ ability_peasant_zealotry: "Peasant Zealotry"
+ peasant_zealotry: "Peasant Zealotry"
+ peasant_zeal: "Peasant Zeal"
+ peasant_zeal_desc: "Represents how much communism the country wants"
+ peasant_zeal_gain_modifier: "Peasant Zeal Gain Modifier"
+ monthly_peasant_zeal: "Monthly Peasant Zeal Gain"

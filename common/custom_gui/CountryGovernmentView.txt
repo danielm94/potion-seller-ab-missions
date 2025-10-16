@@ -4,3 +4,9 @@ custom_icon = {
 		has_government_mechanic = romanian_elective_monarchy_mechanic
 	}
 }
+custom_icon = {
+	name = peasant_zealotry_bg
+	potential = {
+		has_government_mechanic = peasant_zealotry
+	}
+}
