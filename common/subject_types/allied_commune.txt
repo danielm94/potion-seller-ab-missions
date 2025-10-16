@@ -33,8 +33,11 @@ allied_commune = {
 
 	base_liberty_desire = -100.0
 	liberty_desire_development_ratio = 0.175
+	liberty_desire_revolution = 0
 	annex_cost_per_development = 50.0
 	should_quit_wars_on_activation = no
+	military_focus = 10.0
+	trust_on_start = 0
 
 	# Diplomatic Permissions
 	can_fight = {
