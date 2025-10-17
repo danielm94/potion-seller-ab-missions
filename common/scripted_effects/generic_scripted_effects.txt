@@ -1960,6 +1960,7 @@ clean_add_country_modifier = {
 		duration = $duration$
 	}
 }
+
 clean_add_province_modifier = {
 	if = {
 		limit = {
@@ -2052,5 +2053,15 @@ enable_bonus_development_on_dev_click_for_province = {
 			which = bonus_chance
 			value = $chance$
 		}
+	}
+}
+
+remove_all_rebels_in_country = {
+	every_owned_province = {
+		limit = {
+			has_rebels_in_province = yes
+		}
+		remove_all_rebels_in_province = yes
+		change_controller = ROOT
 	}
 }
