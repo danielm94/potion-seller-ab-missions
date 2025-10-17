@@ -214,3 +214,1230 @@ is_most_developed_orthodox_province = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+is_a_peasant_government = {
+	custom_trigger_tooltip = {
+		tooltip = is_a_peasant_government_tooltip
+		OR = {
+			has_reform = peasants_republic
+			has_reform = sfatul_tarii_reform
+			has_reform = moldavian_commune_reform
+		}
+	}
+}
+
+spy_action_cost_trigger = {
+	if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 100
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 100
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 99
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 99
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 98
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 98
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 97
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 97
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 96
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 96
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 95
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 95
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 94
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 94
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 93
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 93
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 92
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 92
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 91
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 91
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 90
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 90
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 89
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 89
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 88
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 88
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 87
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 87
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 86
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 86
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 85
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 85
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 84
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 84
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 83
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 83
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 82
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 82
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 81
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 81
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 80
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 80
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 79
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 79
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 78
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 78
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 77
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 77
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 76
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 76
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 75
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 75
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 74
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 74
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 73
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 73
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 72
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 72
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 71
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 71
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 70
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 70
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 69
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 69
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 68
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 68
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 67
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 67
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 66
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 66
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 65
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 65
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 64
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 64
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 63
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 63
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 62
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 62
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 61
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 61
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 60
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 60
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 59
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 59
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 58
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 58
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 57
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 57
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 56
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 56
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 55
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 55
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 54
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 54
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 53
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 53
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 52
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 52
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 51
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 51
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 50
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 50
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 49
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 49
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 48
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 48
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 47
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 47
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 46
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 46
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 45
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 45
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 44
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 44
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 43
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 43
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 42
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 42
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 41
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 41
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 40
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 40
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 39
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 39
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 38
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 38
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 37
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 37
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 36
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 36
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 35
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 35
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 34
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 34
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 33
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 33
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 32
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 32
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 31
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 31
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 30
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 30
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 29
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 29
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 28
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 28
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 27
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 27
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 26
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 26
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 25
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 25
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 24
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 24
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 23
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 23
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 22
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 22
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 21
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 21
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 20
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 20
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 19
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 19
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 18
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 18
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 17
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 17
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 16
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 16
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 15
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 15
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 14
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 14
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 13
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 13
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 12
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 12
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 11
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 11
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 10
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 10
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 9
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 9
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 8
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 8
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 7
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 7
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 6
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 6
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 5
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 5
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 4
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 3
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 3
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 2
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 2
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 1
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = $spy_action_cost_var$
+				value = 0
+			}
+		}
+		has_spy_network_in = {
+			who = $who$
+			value = 0
+		}
+	}
+}
