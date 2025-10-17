@@ -18,7 +18,10 @@ incite_peasants = {
 		custom_trigger_tooltip = {
 			tooltip = incite_peasants_on_cooldown_tt
 			FROM = {
-				NOT = {
+				OR = {
+					NOT = {
+						has_country_flag = incited_peasants
+					}
 					had_country_flag = {
 						flag = incited_peasants
 						days = 3650
