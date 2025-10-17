@@ -432,6 +432,19 @@ declarewar = {
 				set_country_flag = reduce_ae_with_coalition_target_if_lose
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					is_in_war = {
+						casus_belli = cb_great_peasant_uprising
+						defender_leader = THIS
+					}
+				}
+			}
+			FROM = {
+				clr_country_flag = incited_peasants
+			}
+		}
 	}
 }
 

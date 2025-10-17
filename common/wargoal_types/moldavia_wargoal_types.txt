@@ -23,3 +23,29 @@ moldavian_civil_war_wargoal = {
 	}
 	war_name = moldavian_civil_war_name
 }
+
+overthrow_the_nobility_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_install_peasant_government
+		}
+	}
+		
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1		
+	
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = great_peasant_uprising_war_name
+}
