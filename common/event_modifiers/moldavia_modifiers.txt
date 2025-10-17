@@ -23,3 +23,8 @@ moldavia_civil_war_recovery = {
 	global_tax_modifier = -0.2
 	global_monthly_devastation = -0.05
 }
+
+incited_peasantry = {
+	global_unrest = 2
+	global_tax_modifier = -0.1
+}

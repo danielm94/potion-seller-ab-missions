@@ -1,0 +1,7 @@
+#SCOPE = COUNTRY
+can_incite_rebels = {
+	spy_action_cost_trigger = {
+		spy_action_cost_var = incite_rebels_cost_var
+		who = $who$
+	}
+}

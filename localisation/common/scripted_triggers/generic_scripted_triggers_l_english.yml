@@ -5,4 +5,5 @@
  has_more_prestige_than_default_tooltip: "We have more §YPrestige§! than them."
  is_most_developed_orthodox_province_tooltip: "§Y[This.GetName]§! is the most developed §YOrthodox§! province in the world."
  unlocked_superiority_of_the_state_reform_tt: "We have unlocked §YSuperiority of the State§! as a reward." 
- 
+ is_a_peasant_government_tooltip: "Is governed by peasants."
+ has_spy_network_in_cost_trigger_tt: "We have a spy network of at least [Root.action_cost_var.GetValue]."

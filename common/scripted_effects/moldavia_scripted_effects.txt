@@ -1,0 +1,18 @@
+calculate_spy_action_cost_values = {
+	calculate_incite_rebels_cost = yes
+}
+
+calculate_incite_rebels_cost = {
+	export_to_variable = {
+		which = incite_rebels_cost_var
+		value = modifier:spy_action_cost_modifier
+	}
+	change_variable = {
+		which = incite_rebels_cost_var
+		value = 1
+	}
+	multiply_variable = {
+		which = incite_rebels_cost_var
+		value = 30
+	}
+}

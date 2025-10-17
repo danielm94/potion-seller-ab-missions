@@ -1,0 +1,61 @@
+incite_peasants = {
+	category = covert
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		has_government_attribute = can_incite_peasants
+		FROM = {
+			is_a_peasant_government = no
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = incite_peasants_spy_network_size_tt
+			can_incite_rebels = {
+				who = FROM
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = incite_peasants_on_cooldown_tt
+			FROM = {
+				NOT = {
+					had_country_flag = {
+						flag = incited_peasants
+						days = 3650
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		calculate_incite_rebels_cost = yes
+		set_variable = {
+			which = spy_network_deduction_var
+			which = incite_rebels_cost_var
+		}
+		multiply_variable = {
+			which = spy_network_deduction_var
+			value = -1
+		}
+		variable_change_spy_network_in = {
+			who = FROM
+			var = spy_network_deduction_var
+		}
+		FROM = {
+			set_country_flag = incited_peasants
+			add_country_modifier = {
+				name = incited_peasantry
+				duration = 3650
+			}
+			random_owned_province = {
+				add_unrest = 15
+			}
+			country_event = {
+				id = moldavia_diplomatic_actions_events.1
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

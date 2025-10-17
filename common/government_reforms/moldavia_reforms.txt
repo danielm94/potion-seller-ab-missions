@@ -85,6 +85,7 @@ moldavian_commune_reform = {
 		enables_estate_razesi = yes
 		has_parliament = yes
 		election_on_death = yes
+		can_incite_peasants = yes
 	}
 	government_abilities = {
 		peasant_zealotry

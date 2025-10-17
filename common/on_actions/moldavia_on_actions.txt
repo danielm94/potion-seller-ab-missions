@@ -1,0 +1,17 @@
+on_monthly_pulse = {
+	every_country = {
+		limit = {
+			ai = no
+		}
+		calculate_spy_action_cost_values = yes
+	}
+}
+
+on_startup = {
+	every_country = {
+		limit = {
+			ai = no
+		}
+		calculate_spy_action_cost_values = yes
+	}
+}

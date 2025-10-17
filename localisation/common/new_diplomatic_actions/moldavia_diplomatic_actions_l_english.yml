@@ -1,0 +1,8 @@
+﻿l_english:
+ incite_peasants_on_cooldown_tt: "We haven't incited the peasants against them in the last §Y10§! years." 
+ incite_peasants: "Incite Peasants"
+ incite_peasants_title: "Incite Peasants"
+ incite_peasants_desc: "Description"
+ incite_peasants_tooltip: "Description"
+ incite_peasants_alert_tooltip: "Incite Peasants"
+ incite_peasants_spy_network_size_tt: "§RHave a Spy Network in §Y[From.GetName]§! of at least size §Y[Root.incite_rebels_cost_var.GetValue]§!.§!"
