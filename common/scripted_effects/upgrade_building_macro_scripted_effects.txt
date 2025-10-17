@@ -1678,6 +1678,7 @@ set_upgrade_building_quantity = {
 setup_upgrade_building_macro = {
 	if = {
 		limit = {
+			ai = no
 			NOT = {
 				has_country_flag = initialized_upgrade_building_macro
 			}

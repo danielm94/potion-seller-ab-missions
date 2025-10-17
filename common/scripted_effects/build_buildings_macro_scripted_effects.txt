@@ -13,6 +13,7 @@ set_build_building_quantity = {
 setup_build_building_macro = {
 	if = {
 		limit = {
+			ai = no
 			NOT = {
 				has_country_flag = initialized_building_macro
 			}
