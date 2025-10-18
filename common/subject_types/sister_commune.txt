@@ -12,6 +12,7 @@ sister_commune = {
 	overlord_protects_external = yes
 	counts_for_borders = no
 	overlord_enforce_peace_attacking = yes
+	can_have_subjects_of_other_types = yes
 	gets_help_with_rebels = yes
 	share_rebel_popup = no
 	can_transfer_in_peace = no
