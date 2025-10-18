@@ -23,6 +23,7 @@ integrated_commune = {
 	must_accept_cta_from_overlord = yes
 	can_gain_favors = no
 	can_send_tribute = yes
+	can_have_subjects_of_other_types = yes
 
 	liberty_desire_development_ratio = 0.075
 	pays_overlord = 1.5
