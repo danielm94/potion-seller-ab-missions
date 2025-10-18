@@ -805,6 +805,13 @@ guiTypes = {
 			fixedsize = yes
 		}
 
+		iconType = {
+			name ="commune_integration_progress"
+			spriteType = "GFX_commune_integration_progress_bar"
+			position = { x= 235 y = 124 }
+			scripted = yes
+		}
+		
 		# End of country stats
 
 

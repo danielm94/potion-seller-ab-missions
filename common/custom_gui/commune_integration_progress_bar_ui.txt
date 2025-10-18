@@ -1,0 +1,142 @@
+custom_icon = {
+	name = commune_integration_progress
+	tooltip = commune_integration_progress_tt
+	potential = {
+		is_commune_subject_being_integrated = yes
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.1
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.1
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.2
+				}
+			}
+		}
+	}
+	frame = {
+		number = 3
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.2
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.3
+				}
+			}
+		}
+	}
+	frame = {
+		number = 4
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.3
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.4
+				}
+			}
+		}
+	}
+	frame = {
+		number = 5
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.4
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.5
+				}
+			}
+		}
+	}
+	frame = {
+		number = 6
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.5
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.6
+				}
+			}
+		}
+	}
+	frame = {
+		number = 7
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.6
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.7
+				}
+			}
+		}
+	}
+	frame = {
+		number = 8
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.7
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.8
+				}
+			}
+		}
+	}
+	frame = {
+		number = 9
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.8
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 0.9
+				}
+			}
+		}
+	}
+	frame = {
+		number = 10
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 0.9
+			}
+			NOT = {
+				is_commune_integration_progress_greater_or_equal_to = {
+					decimal_percentage = 1
+				}
+			}
+		}
+	}
+	frame = {
+		number = 11
+		trigger = {
+			is_commune_integration_progress_greater_or_equal_to = {
+				decimal_percentage = 1
+			}
+		}
+	}
+}

@@ -17,10 +17,30 @@ is_commune_subject = {
 
 #SCOPE = COUNTRY
 is_commune_subject_being_integrated = {
-    has_country_flag = commune_is_being_integrated_subject
+	has_country_flag = commune_is_being_integrated_subject
 }
 
 #SCOPE = COUNTRY
 is_integrating_commune_subject = {
-    has_country_flag = commune_is_being_integrated_overlord
+	has_country_flag = commune_is_being_integrated_overlord
+}
+
+is_commune_integration_progress_greater_or_equal_to = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			which = curr_integration_progress
+			value = trigger_value:always
+		}
+		change_variable = {
+			which = curr_integration_progress
+			which = commune_integration_progress
+		}
+		divide_variable = {
+			which = curr_integration_progress
+			which = commune_integration_cost
+		}
+		check_variable = {
+			curr_integration_progress = $decimal_percentage$
+		}
+	}
 }
