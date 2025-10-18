@@ -7,7 +7,7 @@ sister_commune = {
 
 	# Properties
 	overlord_can_attack = no
-	takes_diplo_slot = no
+	takes_diplo_slot = yes
 	uses_military_focus = no
 	overlord_protects_external = yes
 	counts_for_borders = no
