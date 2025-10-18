@@ -1,0 +1,180 @@
+#SCOPE = COUNTRY
+enable_commune_integration_subject = {
+	set_country_flag = commune_is_being_integrated_subject
+}
+
+#SCOPE = COUNTRY
+enable_commune_integration_overlord = {
+	set_country_flag = commune_is_being_integrated_overlord
+}
+
+#SCOPE = COUNTRY
+disable_commune_integration_subject = {
+	clr_country_flag = commune_is_being_integrated_subject
+}
+
+#SCOPE = COUNTRY
+disable_commune_integration_overlord = {
+	clr_country_flag = commune_is_being_integrated_overlord
+}
+
+#SCOPE = COUNTRY
+initialize_commune_subject = {
+	initialize_commune_integration_progress = yes
+	calculate_commune_integration_cost = yes
+}
+
+#SCOPE = COUNTRY
+initialize_commune_integration_progress = {
+	if = {
+		limit = {
+			NOT = {
+				is_subject_of_type = integrated_commune
+			}
+		}
+		set_variable = {
+			which = commune_integration_progress
+			value = 0
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_every_commune_subject_integration_cost = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		every_subject_country = {
+			limit = {
+				NOT = {
+					is_subject_of_type = integrated_commune
+				}
+			}
+			calculate_commune_integration_cost = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_commune_integration_cost = {
+	export_to_variable = {
+		which = dev_var
+		value = total_development
+	}
+	set_variable = {
+		which = commune_integration_cost
+		which = dev_var
+	}
+	if = {
+		limit = {
+			is_subject_of_type = allied_commune
+		}
+		multiply_variable = {
+			which = commune_integration_cost
+			value = 3
+		}
+	}
+	else_if = {
+		limit = {
+			is_subject_of_type = sister_commune
+		}
+		multiply_variable = {
+			which = commune_integration_cost
+			value = 5
+		}
+	}
+	else = {
+		#Converting other subjects to allied communes
+		multiply_variable = {
+			which = commune_integration_cost
+			value = 6
+		}
+	}
+	# Moldavian Commune and other varients will have steep penalties for diplo annexation cost.
+	# This should not apply to commune subjects, just regular subjects, so we negate the penalty here.
+	set_variable = {
+		which = diplo_annex_cost_negation
+		value = 0
+	}
+	if = {
+		limit = {
+			overlord = {
+				has_reform = moldavian_commune_reform
+			}
+		}
+		change_variable = {
+			which = diplo_annex_cost_negation
+			value = -0.7
+		}
+	}
+	export_to_variable = {
+		which = diplo_annex_cost_mod
+		value = modifier:diplomatic_annexation_cost
+		who = overlord
+	}
+	change_variable = {
+		which = diplo_annex_cost_mod
+		which = diplo_annex_cost_negation
+	}
+	change_variable = {
+		which = diplo_annex_cost_mod
+		value = 1
+	}
+	multiply_variable = {
+		which = commune_integration_cost
+		which = diplo_annex_cost_mod
+	}
+}
+
+#SCOPE = COUNTRY
+change_commune_integration_progress = {
+	change_variable = {
+		which = commune_integration_progress
+		value = $amount$
+	}
+}
+
+#SCOPE = COUNTRY
+variable_change_commune_integration_progress = {
+	change_variable = {
+		which = commune_integration_progress
+		which = $var$
+	}
+}
+
+#SCOPE = COUNTRY
+commune_subject_progress_change_pulse_effect = {
+	if = {
+		limit = {
+			is_commune_subject_being_integrated = yes
+		}
+		set_variable = {
+			which = peasant_zeal_amount
+			value = 0
+		}
+		overlord = {
+			export_government_power_to_variable = {
+				mechanic_type = peasant_zealotry
+				power_type = peasant_zeal
+			}
+			PREV = {
+				change_variable = {
+					which = peasant_zeal_amount
+					which = PREV
+				}
+			}
+		}
+		set_variable = {
+			which = integration_progress_change
+			which = peasant_zeal_amount
+		}
+		divide_variable = {
+			which = integration_progress_change
+			value = 200
+		}
+		variable_change_commune_integration_progress = {
+			var = integration_progress_change
+		}
+	}
+}

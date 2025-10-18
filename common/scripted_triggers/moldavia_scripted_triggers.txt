@@ -5,3 +5,22 @@ can_incite_rebels = {
 		who = $who$
 	}
 }
+
+#SCOPE = COUNTRY
+is_commune_subject = {
+	OR = {
+		is_subject_of_type = allied_commune
+		is_subject_of_type = sister_commune
+		is_subject_of_type = integrated_commune
+	}
+}
+
+#SCOPE = COUNTRY
+is_commune_subject_being_integrated = {
+    has_country_flag = commune_is_being_integrated_subject
+}
+
+#SCOPE = COUNTRY
+is_integrating_commune_subject = {
+    has_country_flag = commune_is_being_integrated_overlord
+}

@@ -62,3 +62,90 @@ incite_peasants = {
 		always = no
 	}
 }
+
+integrate_commune = {
+	category = influence
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			OR = {
+				is_subject_of_type = allied_commune
+				is_subject_of_type = sister_commune
+			}
+			is_commune_subject_being_integrated = no
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		is_integrating_commune_subject = no
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of_type = allied_commune
+				}
+			}
+			FROM = {
+				trust = {
+					who = PREV
+					value = 70
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					is_subject_of_type = sister_commune
+				}
+			}
+			FROM = {
+				trust = {
+					who = PREV
+					value = 100
+				}
+			}
+		}
+	}
+	on_accept = {
+		enable_commune_integration_overlord = yes
+		FROM = {
+			enable_commune_integration_subject = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+cancel_commune_integration = {
+	category = influence
+	require_acceptance = no
+	# Determines when the action is visible
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		always = yes
+	}
+	on_accept = {
+		disable_commune_integration_overlord = yes
+		FROM = {
+			disable_commune_integration_subject = yes
+			initialize_commune_integration_progress = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

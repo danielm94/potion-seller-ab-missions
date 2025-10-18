@@ -1,5 +1,16 @@
 on_monthly_pulse = {
-	every_country = {
+	if = {
+		limit = {
+			ai = no
+		}
+		calculate_spy_action_cost_values = yes
+	}
+	calculate_every_commune_subject_integration_cost = yes
+	commune_subject_progress_change_pulse_effect = yes
+}
+
+on_startup = {
+	if = {
 		limit = {
 			ai = no
 		}
@@ -7,11 +18,15 @@ on_monthly_pulse = {
 	}
 }
 
-on_startup = {
-	every_country = {
+on_dependency_gained = {
+	if = {
 		limit = {
-			ai = no
+			FROM = {
+				is_commune_subject = yes
+			}
 		}
-		calculate_spy_action_cost_values = yes
+		FROM = {
+			initialize_commune_subject = yes
+		}
 	}
 }

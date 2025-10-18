@@ -1,7 +1,9 @@
+#SCOPE = COUNTRY
 calculate_spy_action_cost_values = {
 	calculate_incite_rebels_cost = yes
 }
 
+#SCOPE = COUNTRY
 calculate_incite_rebels_cost = {
 	export_to_variable = {
 		which = incite_rebels_cost_var
