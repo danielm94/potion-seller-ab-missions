@@ -129,17 +129,87 @@ calculate_commune_integration_cost = {
 
 #SCOPE = COUNTRY
 change_commune_integration_progress = {
-	change_variable = {
+	set_variable = {
+		which = integration_progress_temp
 		which = commune_integration_progress
+	}
+	change_variable = {
+		which = integration_progress_temp
 		value = $amount$
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					integration_progress_temp = 0
+				}
+			}
+		}
+		set_variable = {
+			which = commune_integration_progress
+			value = 0
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = integration_progress_temp
+				which = commune_integration_cost
+			}
+		}
+		set_variable = {
+			which = commune_integration_progress
+			which = commune_integration_cost
+		}
+	}
+	else = {
+		change_variable = {
+			which = commune_integration_progress
+			value = $amount$
+		}
 	}
 }
 
 #SCOPE = COUNTRY
 variable_change_commune_integration_progress = {
-	change_variable = {
+	set_variable = {
+		which = integration_progress_temp
 		which = commune_integration_progress
+	}
+	change_variable = {
+		which = integration_progress_temp
 		which = $var$
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					integration_progress_temp = 0
+				}
+			}
+		}
+		set_variable = {
+			which = commune_integration_progress
+			value = 0
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = integration_progress_temp
+				which = commune_integration_cost
+			}
+		}
+		set_variable = {
+			which = commune_integration_progress
+			which = commune_integration_cost
+		}
+	}
+	else = {
+		change_variable = {
+			which = commune_integration_progress
+			which = $var$
+		}
 	}
 }
 
