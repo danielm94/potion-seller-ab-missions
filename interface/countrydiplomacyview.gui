@@ -805,10 +805,24 @@ guiTypes = {
 			fixedsize = yes
 		}
 
+		#PotionSeller
 		iconType = {
-			name ="commune_integration_progress"
-			spriteType = "GFX_commune_integration_progress_bar"
-			position = { x= 235 y = 124 }
+			name ="commune_integration_bg"
+			spriteType = "GFX_relation_bg"
+			position = { x= 309 y = 221 }
+			scripted = yes
+		}
+
+		instantTextBoxType = {
+			name = "commune_integration_amount"
+			position = { x = 304 y = 221 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}
+			text = "ERROR"
+			maxWidth = 44
+			maxHeight = 26
+			format = center
 			scripted = yes
 		}
 		
