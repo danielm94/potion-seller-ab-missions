@@ -11,6 +11,7 @@ integrated_commune = {
 	joins_overlords_wars = yes
 	can_be_annexed = yes
 	has_power_projection = no
+	transfer_subjects_when_made = yes
 	gets_help_with_rebels = yes
 	forms_trade_companies = yes
 	uses_military_focus = no
@@ -23,7 +24,7 @@ integrated_commune = {
 	must_accept_cta_from_overlord = yes
 	can_gain_favors = no
 	can_send_tribute = yes
-	can_have_subjects_of_other_types = yes
+	can_have_subjects_of_other_types = no
 
 	liberty_desire_development_ratio = 0.075
 	pays_overlord = 1.5
