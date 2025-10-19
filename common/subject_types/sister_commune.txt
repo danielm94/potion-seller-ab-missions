@@ -11,6 +11,7 @@ sister_commune = {
 	uses_military_focus = no
 	overlord_protects_external = yes
 	counts_for_borders = no
+	can_be_annexed = no
 	overlord_enforce_peace_attacking = yes
 	can_have_subjects_of_other_types = yes
 	gets_help_with_rebels = yes
