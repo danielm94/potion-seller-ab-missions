@@ -72,7 +72,7 @@ MOP_ideas = {
         global_unrest = -1
     }
     MOP_communes_united = {
-        reduced_liberty_desire_on_same_continent = 0.2
+        reduced_liberty_desire_on_same_continent = 20
     }
 }
 
