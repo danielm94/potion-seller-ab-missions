@@ -2,16 +2,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_allied_commune_icon"
 		texturefile = "gfx/interface/subject_types/moldavia/allied_commune/allied_commune_icon.dds"
-		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_allied_commune_am"
 		texturefile = "gfx/interface/subject_types/moldavia/allied_commune/allied_commune_am.dds"
-		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_allied_commune_lead"
 		texturefile = "gfx/interface/subject_types/moldavia/allied_commune/allied_commune_lead.dds"
-		loadType = "INGAME"
 	}
 }

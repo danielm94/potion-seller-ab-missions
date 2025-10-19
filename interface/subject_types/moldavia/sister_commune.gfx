@@ -2,16 +2,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sister_commune_icon"
 		texturefile = "gfx/interface/subject_types/moldavia/sister_commune/sister_commune_icon.dds"
-		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sister_commune_am"
 		texturefile = "gfx/interface/subject_types/moldavia/sister_commune/sister_commune_am.dds"
-		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_sister_commune_lead"
 		texturefile = "gfx/interface/subject_types/moldavia/sister_commune/sister_commune_lead.dds"
-		loadType = "INGAME"
 	}
 }
