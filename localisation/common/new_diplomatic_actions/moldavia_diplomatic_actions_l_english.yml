@@ -16,4 +16,3 @@
  cancel_commune_integration_desc: "Description"
  cancel_commune_integration_tooltip: "Current Integration Progress: §Y[From.commune_integration_progress.GetValue]§! / §Y[From.commune_integration_cost.GetValue]§!"
  cancel_commune_integration_alert_tooltip: "Cancel Commune Integration"
- commune_integration_progress_tt: "§Y[This.GetName]§! is currently being integrated.\n\nIntegration Progress: §Y[This.commune_integration_progress.GetValue]§! / §Y[This.commune_integration_cost.GetValue]§!\nMonthly Integration Progress: §Y[This.integration_progress_change.GetValue]§! "

@@ -44,10 +44,4 @@ spriteTypes = {
 		loadType = "INGAME"
 		alwaystransparent = yes
 	}
-	spriteType = {
-		name = "GFX_commune_integration_progress_bar"
-		texturefile = "gfx/interface/government_mechanics/peasant_zealotry/commune_integration_progress_bar.dds"
-		noOfFrames = 11
-		loadType = "INGAME"
-	}
 }

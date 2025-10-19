@@ -248,3 +248,36 @@ commune_subject_progress_change_pulse_effect = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+initialize_integration_progress_percentage_variable = {
+	set_variable = {
+		which = commune_integration_progress_percentage
+		value = 0
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_integration_progress_percentage = {
+	if = {
+		limit = {
+			is_commune_subject_being_integrated = yes
+		}
+		set_variable = {
+			which = commune_integration_progress_percentage
+			which = commune_integration_progress
+		}
+		divide_variable = {
+			which = commune_integration_progress_percentage
+			which = commune_integration_cost
+		}
+		multiply_variable = {
+			which = commune_integration_progress_percentage
+			value = 100
+		}
+		round_variable = {
+			which = commune_integration_progress_percentage
+			value = 0
+		}
+	}
+}

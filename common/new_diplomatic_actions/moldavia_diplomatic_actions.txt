@@ -117,6 +117,7 @@ integrate_commune = {
 	on_accept = {
 		enable_commune_integration_overlord = yes
 		FROM = {
+			initialize_integration_progress_percentage_variable = yes
 			enable_commune_integration_subject = yes
 		}
 	}
@@ -143,6 +144,7 @@ cancel_commune_integration = {
 		FROM = {
 			disable_commune_integration_subject = yes
 			initialize_commune_integration_progress = yes
+			initialize_integration_progress_percentage_variable = yes
 		}
 	}
 	ai_will_do = {
