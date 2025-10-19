@@ -241,7 +241,7 @@ commune_subject_progress_change_pulse_effect = {
 		}
 		divide_variable = {
 			which = integration_progress_change
-			value = 200
+			value = 400
 		}
 		variable_change_commune_integration_progress = {
 			var = integration_progress_change
