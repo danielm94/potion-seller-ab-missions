@@ -214,7 +214,7 @@ variable_change_commune_integration_progress = {
 }
 
 #SCOPE = COUNTRY
-commune_subject_progress_change_pulse_effect = {
+calculate_monthly_commune_integration_progress = {
 	if = {
 		limit = {
 			is_commune_subject_being_integrated = yes

@@ -6,7 +6,7 @@ on_monthly_pulse = {
 		calculate_spy_action_cost_values = yes
 	}
 	calculate_every_commune_subject_integration_cost = yes
-	commune_subject_progress_change_pulse_effect = yes
+	calculate_monthly_commune_integration_progress = yes
 	calculate_integration_progress_percentage = yes
 }
 
@@ -18,7 +18,7 @@ on_startup = {
 		calculate_spy_action_cost_values = yes
 	}
 	calculate_every_commune_subject_integration_cost = yes
-	commune_subject_progress_change_pulse_effect = yes
+	calculate_monthly_commune_integration_progress = yes
 	calculate_integration_progress_percentage = yes
 }
 
