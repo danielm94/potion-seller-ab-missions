@@ -44,6 +44,7 @@ country_event = {
 			disable_commune_integration_overlord = yes
 			event_target:integrated_commune_subject = {
 				disable_commune_integration_subject = yes
+				set_country_flag = commune_integrated_recently
 			}
 			if = {
 				limit = {

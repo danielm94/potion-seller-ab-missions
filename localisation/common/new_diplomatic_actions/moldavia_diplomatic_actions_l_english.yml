@@ -16,3 +16,5 @@
  cancel_commune_integration_desc: "Description"
  cancel_commune_integration_tooltip: "Current Integration Progress: §Y[From.commune_integration_progress.GetValue]§! / §Y[From.commune_integration_cost.GetValue]§!"
  cancel_commune_integration_alert_tooltip: "Cancel Commune Integration"
+ has_not_integrated_commune_recently_tt: "We haven't integrated this commune in the last §Y10 years§!."
+ not_currently_integrating_a_commune_subject: "We are not currently integrating a commune subject."

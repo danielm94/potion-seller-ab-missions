@@ -82,7 +82,37 @@ integrate_commune = {
 		FROM = {
 			is_at_war = no
 		}
-		is_integrating_commune_subject = no
+		NOT = {
+			FROM = {
+				liberty_desire = 10
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = not_currently_integrating_a_commune_subject
+			is_integrating_commune_subject = no
+		}
+		NOT = {
+			truce_with = FROM
+		}
+		NOT = {
+			FROM = {
+				truce_with = PREV
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_not_integrated_commune_recently_tt
+			FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = commune_integrated_recently
+					}
+					had_country_flag = {
+						flag = commune_integrated_recently
+						days = 3650
+					}
+				}
+			}
+		}
 		reverse_has_opinion = {
 			who = FROM
 			value = 190
@@ -119,6 +149,7 @@ integrate_commune = {
 		FROM = {
 			initialize_integration_progress_percentage_variable = yes
 			enable_commune_integration_subject = yes
+			calculate_monthly_commune_integration_progress = yes
 		}
 	}
 	ai_will_do = {
