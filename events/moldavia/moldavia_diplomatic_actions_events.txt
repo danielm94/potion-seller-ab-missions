@@ -1,6 +1,4 @@
 namespace = moldavia_diplomatic_actions_events
-
-
 #ALERT FOR INCITE PEASANTRY
 country_event = {
 	id = moldavia_diplomatic_actions_events.1
@@ -16,5 +14,73 @@ country_event = {
 				duration = 3650
 			}
 		}
+	}
+}
+
+#Country Finished Integrating
+country_event = {
+	id = moldavia_diplomatic_actions_events.2
+	title = moldavia_diplomatic_actions_events.2.t
+	desc = moldavia_diplomatic_actions_events.2.d
+	picture = GFX_moldavia_diplomatic_actions_events.2
+	trigger = {
+		is_integrating_commune_subject = yes
+		any_subject_country = {
+			is_commune_subject_being_integrated = yes
+			check_variable = {
+				which = commune_integration_progress
+				which = commune_integration_cost
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_commune_subject_being_integrated = yes
+				}
+				save_event_target_as = integrated_commune_subject
+			}
+			disable_commune_integration_overlord = yes
+			event_target:integrated_commune_subject = {
+				disable_commune_integration_subject = yes
+			}
+			if = {
+				limit = {
+					event_target:integrated_commune_subject = {
+						is_subject_of_type = sister_commune
+					}
+				}
+				create_subject = {
+					subject_type = integrated_commune
+					who = event_target:integrated_commune_subject
+				}
+				event_target:integrated_commune_subject = {
+					change_country_color = {
+						country = overlord
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					event_target:integrated_commune_subject = {
+						is_subject_of_type = allied_commune
+					}
+				}
+				create_subject = {
+					subject_type = sister_commune
+					who = event_target:integrated_commune_subject
+				}
+			}
+			else = {
+				create_subject = {
+					subject_type = allied_commune
+					who = event_target:integrated_commune_subject
+				}
+			}
+		}
+	}
+	option = {
+		name = moldavia_diplomatic_actions_events.2.a
 	}
 }
