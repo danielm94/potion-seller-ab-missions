@@ -6,3 +6,7 @@ investing_dip_commune = {
 	diplomats = -1
 	diplomatic_upkeep = -1
 }
+investing_mil_commune = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}

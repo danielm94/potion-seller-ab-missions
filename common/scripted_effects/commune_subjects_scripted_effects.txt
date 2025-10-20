@@ -40,23 +40,6 @@ initialize_commune_integration_progress = {
 }
 
 #SCOPE = COUNTRY
-calculate_every_commune_subject_integration_cost = {
-	if = {
-		limit = {
-			has_government_mechanic = peasant_zealotry
-		}
-		every_subject_country = {
-			limit = {
-				NOT = {
-					is_subject_of_type = integrated_commune
-				}
-			}
-			calculate_commune_integration_cost = yes
-		}
-	}
-}
-
-#SCOPE = COUNTRY
 calculate_commune_integration_cost = {
 	export_to_variable = {
 		which = overlord_admin_efficiency
@@ -314,26 +297,6 @@ variable_change_commune_integration_progress = {
 	}
 }
 
-#SCOPE = COUNTRY 
-#Race conditions lmao
-calculate_monthly_commune_integration_progress_pulse_effect = {
-	if = {
-		limit = {
-			is_commune_subject_being_integrated = yes
-		}
-		calculate_monthly_commune_integration_progress = yes
-		overlord = {
-			calculate_overlord_adm_investment_integration_progress_gain = yes
-			apply_overlord_adm_investment_costs = yes
-			calculate_overlord_dip_investment_integration_progress_gain = yes
-			apply_overlord_dip_investment_costs = yes
-		}
-		variable_change_commune_integration_progress = {
-			var = commune_integration_progress_change
-		}
-	}
-}
-
 #SCOPE = COUNTRY
 calculate_monthly_commune_integration_progress = {
 	if = {
@@ -571,6 +534,88 @@ calculate_overlord_dip_investment_integration_progress_gain = {
 }
 
 #SCOPE = COUNTRY
+calculate_overlord_mil_investment_integration_progress_gain = {
+	if = {
+		limit = {
+			is_investing_mil_power_in_commune = yes
+		}
+		get_base_mil_investment_monthly_cost = {
+			var = commune_mil_investment_monthly_cost
+		}
+		export_to_variable = {
+			which = army_prof
+			value = trigger_value:army_professionalism
+		}
+		multiply_variable = {
+			army_prof = 10
+		}
+		round_variable = {
+			which = army_prof
+			value = -1
+		}
+		change_variable = {
+			which = commune_mil_investment_monthly_cost
+			which = army_prof
+		}
+		if = {
+			limit = {
+				mil_power = 0
+			}
+			export_to_variable = {
+				which = mil_power_var
+				value = trigger_value:mil_power
+			}
+		}
+		else = {
+			set_variable = {
+				mil_power_var = 0
+			}
+		}
+		#If you don't have enough mil points for monthly cost, the amount deducted will be what you have.
+		if = {
+			limit = {
+				check_variable = {
+					which = commune_mil_investment_monthly_cost
+					which = mil_power_var
+				}
+			}
+			set_variable = {
+				which = commune_mil_investment_monthly_cost
+				which = mil_power_var
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					commune_mil_investment_monthly_cost = 1
+				}
+			}
+			set_variable = {
+				which = progress_from_mil_investment
+				which = commune_mil_investment_monthly_cost
+			}
+			get_mil_to_integration_progress_exchange_rate = {
+				var = mil_to_integration_progress_exchange_rate
+			}
+			multiply_variable = {
+				which = progress_from_mil_investment
+				which = mil_to_integration_progress_exchange_rate
+			}
+			set_variable = {
+				which = commune_integration_progress_change
+				which = progress_from_mil_investment
+			}
+			event_target:commune_being_integrated = {
+				change_variable = {
+					which = commune_integration_progress_change
+					which = PREV
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
 apply_overlord_adm_investment_costs = {
 	if = {
 		limit = {
@@ -613,6 +658,27 @@ apply_overlord_dip_investment_costs = {
 }
 
 #SCOPE = COUNTRY
+apply_overlord_mil_investment_costs = {
+	if = {
+		limit = {
+			is_investing_mil_power_in_commune = yes
+		}
+		set_variable = {
+			which = commune_mil_cost
+			which = commune_mil_investment_monthly_cost
+		}
+		multiply_variable = {
+			which = commune_mil_cost
+			value = -1
+		}
+		variable_effect = {
+			var = commune_mil_cost
+			effect = add_mil_power
+		}
+	}
+}
+
+#SCOPE = COUNTRY
 initialize_integration_progress_percentage_variable = {
 	set_variable = {
 		which = commune_integration_progress_percentage
@@ -622,26 +688,21 @@ initialize_integration_progress_percentage_variable = {
 
 #SCOPE = COUNTRY
 calculate_integration_progress_percentage = {
-	if = {
-		limit = {
-			is_commune_subject_being_integrated = yes
-		}
-		set_variable = {
-			which = commune_integration_progress_percentage
-			which = commune_integration_progress
-		}
-		divide_variable = {
-			which = commune_integration_progress_percentage
-			which = commune_integration_cost
-		}
-		multiply_variable = {
-			which = commune_integration_progress_percentage
-			value = 100
-		}
-		round_variable = {
-			which = commune_integration_progress_percentage
-			value = 0
-		}
+	set_variable = {
+		which = commune_integration_progress_percentage
+		which = commune_integration_progress
+	}
+	divide_variable = {
+		which = commune_integration_progress_percentage
+		which = commune_integration_cost
+	}
+	multiply_variable = {
+		which = commune_integration_progress_percentage
+		value = 100
+	}
+	round_variable = {
+		which = commune_integration_progress_percentage
+		value = 0
 	}
 }
 
@@ -694,9 +755,8 @@ get_base_mil_investment_monthly_cost = {
 clear_commune_integration_investments = {
 	clr_country_flag = investing_adm_in_commune
 	clr_country_flag = investing_dip_in_commune
+	clr_country_flag = investing_mil_in_commune
 	remove_country_modifier = investing_admin_commune
 	remove_country_modifier = investing_dip_commune
-	FROM = {
-		calculate_monthly_commune_integration_progress = yes
-	}
+	remove_country_modifier = investing_mil_commune
 }

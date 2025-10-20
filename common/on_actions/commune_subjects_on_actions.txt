@@ -1,27 +1,59 @@
 on_monthly_pulse = {
 	if = {
 		limit = {
-			ai = no
+			overlord = {
+				has_government_mechanic = peasant_zealotry
+			}
+			NOT = {
+				is_subject_of_type = integrated_commune
+			}
 		}
-		calculate_spy_action_cost_values = yes
+		calculate_commune_integration_cost = yes
+		if = {
+			limit = {
+				is_commune_subject_being_integrated = yes
+			}
+			calculate_monthly_commune_integration_progress = yes
+			overlord = {
+				calculate_overlord_adm_investment_integration_progress_gain = yes
+				apply_overlord_adm_investment_costs = yes
+				calculate_overlord_dip_investment_integration_progress_gain = yes
+				apply_overlord_dip_investment_costs = yes
+				calculate_overlord_mil_investment_integration_progress_gain = yes
+				apply_overlord_mil_investment_costs = yes
+			}
+			variable_change_commune_integration_progress = {
+				var = commune_integration_progress_change
+			}
+			calculate_integration_progress_percentage = yes
+		}
 	}
-	calculate_every_commune_subject_integration_cost = yes
-	calculate_monthly_commune_integration_progress_pulse_effect = yes
-	calculate_integration_progress_percentage = yes
 }
 
 on_startup = {
 	if = {
 		limit = {
-			ai = no
+			overlord = {
+				has_government_mechanic = peasant_zealotry
+			}
+			NOT = {
+				is_subject_of_type = integrated_commune
+			}
 		}
-		calculate_spy_action_cost_values = yes
+		calculate_commune_integration_cost = yes
+		if = {
+			limit = {
+				is_commune_subject_being_integrated = yes
+			}
+			calculate_monthly_commune_integration_progress = yes
+			overlord = {
+				calculate_overlord_adm_investment_integration_progress_gain = yes
+				calculate_overlord_dip_investment_integration_progress_gain = yes
+				calculate_overlord_mil_investment_integration_progress_gain = yes
+			}
+			calculate_integration_progress_percentage = yes
+		}
 	}
-	calculate_every_commune_subject_integration_cost = yes
-	calculate_monthly_commune_integration_progress = yes
-	calculate_overlord_adm_investment_integration_progress_gain = yes
-	calculate_overlord_dip_investment_integration_progress_gain = yes
-	calculate_integration_progress_percentage = yes
 }
 
 on_dependency_gained = {

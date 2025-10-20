@@ -1,0 +1,17 @@
+on_monthly_pulse = {
+	if = {
+		limit = {
+			ai = no
+		}
+		calculate_spy_action_cost_values = yes
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			ai = no
+		}
+		calculate_spy_action_cost_values = yes
+	}
+}

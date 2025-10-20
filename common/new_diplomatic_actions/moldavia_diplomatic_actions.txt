@@ -149,8 +149,6 @@ integrate_commune = {
 			initialize_integration_progress_percentage_variable = yes
 			enable_commune_integration_subject = yes
 			calculate_monthly_commune_integration_progress = yes
-			calculate_overlord_adm_investment_integration_progress_gain = yes
-			calculate_overlord_dip_investment_integration_progress_gain = yes
 		}
 	}
 	ai_will_do = {
@@ -180,6 +178,9 @@ cancel_commune_integration = {
 		}
 		clear_global_event_target = commune_being_integrated
 		clear_commune_integration_investments = yes
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
 	}
 	ai_will_do = {
 		always = no
@@ -227,7 +228,6 @@ invest_adm_commune_integration = {
 			calculate_monthly_commune_integration_progress = yes
 		}
 		calculate_overlord_adm_investment_integration_progress_gain = yes
-		calculate_overlord_dip_investment_integration_progress_gain = yes
 	}
 	ai_will_do = {
 		always = no
@@ -249,6 +249,9 @@ cancel_invest_adm_commune_integration = {
 	}
 	on_accept = {
 		clear_commune_integration_investments = yes
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
 	}
 	ai_will_do = {
 		always = no
@@ -286,7 +289,6 @@ invest_dip_commune_integration = {
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
-		calculate_overlord_adm_investment_integration_progress_gain = yes
 		calculate_overlord_dip_investment_integration_progress_gain = yes
 	}
 	ai_will_do = {
@@ -309,6 +311,70 @@ cancel_invest_dip_commune_integration = {
 	}
 	on_accept = {
 		clear_commune_integration_investments = yes
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+invest_mil_commune_integration = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		is_investing_mil_power_in_commune = no
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = not_investing_mana_in_commune_tt
+			is_investing_mana_in_commune = no
+		}
+		mil_power = 1
+		num_of_diplomats = 1
+		FROM = {
+			is_commune_loyal_enough_to_integrate = yes
+		}
+	}
+	on_accept = {
+		set_country_flag = investing_mil_in_commune
+		add_country_modifier = {
+			name = investing_mil_commune
+			duration = -1
+		}
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
+		calculate_overlord_mil_investment_integration_progress_gain = yes
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+cancel_invest_mil_commune_integration = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		is_investing_mil_power_in_commune = yes
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		always = yes
+	}
+	on_accept = {
+		clear_commune_integration_investments = yes
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
 	}
 	ai_will_do = {
 		always = no
