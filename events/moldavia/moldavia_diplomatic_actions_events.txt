@@ -35,28 +35,22 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			random_subject_country = {
-				limit = {
-					is_commune_subject_being_integrated = yes
-				}
-				save_event_target_as = integrated_commune_subject
-			}
 			disable_commune_integration_overlord = yes
-			event_target:integrated_commune_subject = {
+			event_target:commune_being_integrated = {
 				disable_commune_integration_subject = yes
 				set_country_flag = commune_integrated_recently
 			}
 			if = {
 				limit = {
-					event_target:integrated_commune_subject = {
+					event_target:commune_being_integrated = {
 						is_subject_of_type = sister_commune
 					}
 				}
 				create_subject = {
 					subject_type = integrated_commune
-					who = event_target:integrated_commune_subject
+					who = event_target:commune_being_integrated
 				}
-				event_target:integrated_commune_subject = {
+				event_target:commune_being_integrated = {
 					change_country_color = {
 						country = overlord
 					}
@@ -64,21 +58,22 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					event_target:integrated_commune_subject = {
+					event_target:commune_being_integrated = {
 						is_subject_of_type = allied_commune
 					}
 				}
 				create_subject = {
 					subject_type = sister_commune
-					who = event_target:integrated_commune_subject
+					who = event_target:commune_being_integrated
 				}
 			}
 			else = {
 				create_subject = {
 					subject_type = allied_commune
-					who = event_target:integrated_commune_subject
+					who = event_target:commune_being_integrated
 				}
 			}
+			clear_global_event_target = commune_being_integrated
 		}
 	}
 	option = {

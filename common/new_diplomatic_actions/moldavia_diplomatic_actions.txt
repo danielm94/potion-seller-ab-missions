@@ -82,10 +82,8 @@ integrate_commune = {
 		FROM = {
 			is_at_war = no
 		}
-		NOT = {
-			FROM = {
-				liberty_desire = 10
-			}
+		FROM = {
+			is_commune_loyal_enough_to_integrate = yes
 		}
 		custom_trigger_tooltip = {
 			tooltip = not_currently_integrating_a_commune_subject
@@ -147,6 +145,7 @@ integrate_commune = {
 	on_accept = {
 		enable_commune_integration_overlord = yes
 		FROM = {
+			save_global_event_target_as = commune_being_integrated
 			initialize_integration_progress_percentage_variable = yes
 			enable_commune_integration_subject = yes
 			calculate_monthly_commune_integration_progress = yes
@@ -177,8 +176,32 @@ cancel_commune_integration = {
 			initialize_commune_integration_progress = yes
 			initialize_integration_progress_percentage_variable = yes
 		}
+		clear_global_event_target = commune_being_integrated
 	}
 	ai_will_do = {
 		always = no
 	}
 }
+
+invest_adm_commune_integration = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		adm_power = 1
+		FROM = {
+			is_commune_loyal_enough_to_integrate = yes
+		}
+	}
+	on_accept = {
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+

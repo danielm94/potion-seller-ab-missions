@@ -8,6 +8,12 @@ on_monthly_pulse = {
 	calculate_every_commune_subject_integration_cost = yes
 	calculate_monthly_commune_integration_progress = yes
 	calculate_integration_progress_percentage = yes
+	if = {
+		limit = {
+			has_country_flag = in_adm_to_integration_points_event
+		}
+		calculate_adm_points_to_integration_progress_exchange_variables = yes
+	}
 }
 
 on_startup = {
@@ -20,6 +26,12 @@ on_startup = {
 	calculate_every_commune_subject_integration_cost = yes
 	calculate_monthly_commune_integration_progress = yes
 	calculate_integration_progress_percentage = yes
+	if = {
+		limit = {
+			has_country_flag = in_adm_to_integration_points_event
+		}
+		calculate_adm_points_to_integration_progress_exchange_variables = yes
+	}
 }
 
 on_dependency_gained = {
