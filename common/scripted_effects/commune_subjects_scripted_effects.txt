@@ -281,3 +281,27 @@ calculate_integration_progress_percentage = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+get_adm_to_integration_progress_exchange_rate = {
+	set_variable = {
+		which = $var$
+		value = 0.5
+	}
+}
+
+#SCOPE = COUNTRY
+get_dip_to_integration_progress_exchange_rate = {
+	set_variable = {
+		which = $var$
+		value = 0.75
+	}
+}
+
+#SCOPE = COUNTRY
+get_dip_to_integration_progress_exchange_rate = {
+	set_variable = {
+		which = $var$
+		value = 0.4
+	}
+}
