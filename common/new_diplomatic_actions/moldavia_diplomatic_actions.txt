@@ -380,3 +380,42 @@ cancel_invest_mil_commune_integration = {
 		always = no
 	}
 }
+
+invest_republican_tradition_commune_integration = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		republican_tradition = 10
+		custom_trigger_tooltip = {
+			tooltip = invest_republican_tradition_commune_cooldown_tt
+			OR = {
+				NOT = {
+					has_country_flag = invested_republican_tradition_in_commune_recently
+				}
+				had_country_flag = {
+					flag = invested_republican_tradition_in_commune_recently
+					days = 1825
+				}
+			}
+		}
+	}
+	on_accept = {
+		set_country_flag = invested_republican_tradition_in_commune_recently
+		add_republican_tradition = -10
+		FROM = {
+			calculate_commune_integration_cost = yes
+			change_commune_integration_progress_as_percentage_of_cost = {
+				percentage = 0.1
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

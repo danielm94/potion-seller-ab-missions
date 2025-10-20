@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_text_integrated_commune"
 		texturefile = "gfx/interface/text_icons/integrated_commune_text_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_text_republican_tradition"
+		texturefile = "gfx/interface/text_icons/republican_tradition_text_icon.dds"
+	}
 }

@@ -298,6 +298,20 @@ variable_change_commune_integration_progress = {
 }
 
 #SCOPE = COUNTRY
+change_commune_integration_progress_as_percentage_of_cost = {
+	set_variable = {
+		which = integration_cost_temp
+		which = commune_integration_cost
+	}
+	multiply_variable = {
+		which = integration_cost_temp
+		value = $percentage$
+	}
+	variable_change_commune_integration_progress = {
+		var = integration_cost_temp
+	}
+}
+#SCOPE = COUNTRY
 calculate_monthly_commune_integration_progress = {
 	if = {
 		limit = {
