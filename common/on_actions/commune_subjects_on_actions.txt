@@ -66,5 +66,29 @@ on_dependency_gained = {
 		FROM = {
 			initialize_commune_subject = yes
 		}
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of_type = integrated_commune
+				}
+			}
+			FROM = {
+				change_country_color = {
+					country = overlord
+				}
+			}
+		}
+	}
+}
+
+on_dependency_lost = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+
+		FROM = {
+			restore_country_color = yes
+		}
 	}
 }

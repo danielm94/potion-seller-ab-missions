@@ -51,11 +51,6 @@ country_event = {
 					subject_type = integrated_commune
 					who = event_target:commune_being_integrated
 				}
-				event_target:commune_being_integrated = {
-					change_country_color = {
-						country = overlord
-					}
-				}
 			}
 			else_if = {
 				limit = {
