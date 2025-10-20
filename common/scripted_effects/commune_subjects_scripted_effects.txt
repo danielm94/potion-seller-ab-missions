@@ -59,43 +59,35 @@ calculate_every_commune_subject_integration_cost = {
 #SCOPE = COUNTRY
 calculate_commune_integration_cost = {
 	export_to_variable = {
-		which = dev_var
-		value = total_development
+		which = overlord_admin_efficiency
+		value = modifier:administrative_efficiency
+		who = overlord
 	}
 	set_variable = {
-		which = commune_integration_cost
-		which = dev_var
+		overlord_admin_efficiency_multiplier = 1
+	}
+	subtract_variable = {
+		which = overlord_admin_efficiency_multiplier
+		which = overlord_admin_efficiency
 	}
 	if = {
 		limit = {
-			is_subject_of_type = allied_commune
+			NOT = {
+				check_variable = {
+					overlord_admin_efficiency_multiplier = 0.1
+				}
+			}
 		}
-		multiply_variable = {
-			which = commune_integration_cost
-			value = 3
-		}
-	}
-	else_if = {
-		limit = {
-			is_subject_of_type = sister_commune
-		}
-		multiply_variable = {
-			which = commune_integration_cost
-			value = 5
+		set_variable = {
+			overlord_admin_efficiency_multiplier = 0.1
 		}
 	}
-	else = {
-		#Converting other subjects to allied communes
-		multiply_variable = {
-			which = commune_integration_cost
-			value = 6
-		}
-	}
-	# Moldavian Commune and other varients will have steep penalties for diplo annexation cost.
+	# Moldavian Commune and other variants will have steep penalties for diplo annexation cost.
 	# This should not apply to commune subjects, just regular subjects, so we negate the penalty here.
-	set_variable = {
-		which = diplo_annex_cost_negation
-		value = 0
+	export_to_variable = {
+		which = overlord_diplo_annex_multiplier
+		value = modifier:diplomatic_annexation_cost
+		who = overlord
 	}
 	if = {
 		limit = {
@@ -104,26 +96,135 @@ calculate_commune_integration_cost = {
 			}
 		}
 		change_variable = {
-			which = diplo_annex_cost_negation
+			which = overlord_diplo_annex_multiplier
 			value = -0.7
 		}
 	}
+	change_variable = {
+		which = overlord_diplo_annex_multiplier
+		value = 1
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					overlord_diplo_annex_multiplier = 0.1
+				}
+			}
+		}
+		set_variable = {
+			overlord_diplo_annex_multiplier = 0.1
+		}
+	}
 	export_to_variable = {
-		which = diplo_annex_cost_mod
-		value = modifier:diplomatic_annexation_cost
+		which = overlord_all_powers_cost
+		value = modifier:all_power_cost
 		who = overlord
 	}
 	change_variable = {
-		which = diplo_annex_cost_mod
-		which = diplo_annex_cost_negation
-	}
-	change_variable = {
-		which = diplo_annex_cost_mod
+		which = overlord_all_powers_cost
 		value = 1
 	}
-	multiply_variable = {
+	# Subject type multiplier
+	if = {
+		limit = {
+			is_subject_of_type = allied_commune
+		}
+		set_variable = {
+			subject_type_annexation_cost_multiplier = 3
+		}
+	}
+	else_if = {
+		limit = {
+			is_subject_of_type = sister_commune
+		}
+		set_variable = {
+			subject_type_annexation_cost_multiplier = 5
+		}
+	}
+	else = {
+		set_variable = {
+			subject_type_annexation_cost_multiplier = 6
+		}
+	}
+	set_variable = {
+		commune_integration_cost = 0
+	}
+	every_owned_province = {
+		export_to_variable = {
+			which = commune_integration_cost
+			value = development
+		}
+		# === bring in out-of-scope variables from PREV ===
+		set_variable = {
+			which = subject_type_annexation_cost_multiplier
+			which = PREV
+		}
+		set_variable = {
+			which = overlord_diplo_annex_multiplier
+			which = PREV
+		}
+		set_variable = {
+			which = overlord_admin_efficiency_multiplier
+			which = PREV
+		}
+		set_variable = {
+			which = overlord_all_powers_cost
+			which = PREV
+		}
+		# === apply multipliers ===
+		multiply_variable = {
+			which = commune_integration_cost
+			which = subject_type_annexation_cost_multiplier
+		}
+		multiply_variable = {
+			which = commune_integration_cost
+			which = overlord_diplo_annex_multiplier
+		}
+		multiply_variable = {
+			which = commune_integration_cost
+			which = overlord_admin_efficiency_multiplier
+		}
+		multiply_variable = {
+			which = commune_integration_cost
+			which = overlord_all_powers_cost
+		}
+		# === local coring cost ===
+		export_to_variable = {
+			which = local_coring_cost
+			value = modifier:local_core_creation
+		}
+		change_variable = {
+			which = local_coring_cost
+			value = 1
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						local_coring_cost = 0.2
+					}
+				}
+			}
+			set_variable = {
+				local_coring_cost = 0.2
+			}
+		}
+		multiply_variable = {
+			which = commune_integration_cost
+			which = local_coring_cost
+		}
+		# === push result back up to country ===
+		PREV = {
+			change_variable = {
+				which = commune_integration_cost
+				which = PREV
+			}
+		}
+	}
+	round_variable = {
 		which = commune_integration_cost
-		which = diplo_annex_cost_mod
+		value = -1
 	}
 }
 
