@@ -44,3 +44,8 @@ is_commune_loyal_enough_to_integrate = {
 		liberty_desire = 10
 	}
 }
+
+#SCOPE = COUNTRY
+is_investing_adm_power_in_commune = {
+	has_country_flag = investing_adm_in_commune
+}

@@ -314,6 +314,24 @@ variable_change_commune_integration_progress = {
 	}
 }
 
+#SCOPE = COUNTRY 
+#Race conditions lmao
+calculate_monthly_commune_integration_progress_pulse_effect = {
+	if = {
+		limit = {
+			is_commune_subject_being_integrated = yes
+		}
+		calculate_monthly_commune_integration_progress = yes
+		overlord = {
+			calculate_overlord_adm_investment_integration_progress_gain = yes
+			apply_overlord_adm_investment_costs = yes
+		}
+		variable_change_commune_integration_progress = {
+			var = commune_integration_progress_change
+		}
+	}
+}
+
 #SCOPE = COUNTRY
 calculate_monthly_commune_integration_progress = {
 	if = {
@@ -337,15 +355,112 @@ calculate_monthly_commune_integration_progress = {
 			}
 		}
 		set_variable = {
-			which = integration_progress_change
+			which = commune_integration_progress_change
 			which = peasant_zeal_amount
 		}
 		divide_variable = {
-			which = integration_progress_change
+			which = commune_integration_progress_change
 			value = 400
 		}
-		variable_change_commune_integration_progress = {
-			var = integration_progress_change
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_overlord_adm_investment_integration_progress_gain = {
+	if = {
+		limit = {
+			is_investing_adm_power_in_commune = yes
+		}
+		get_base_adm_investment_monthly_cost = {
+			var = commune_adm_investment_monthly_cost
+		}
+		export_to_variable = {
+			which = adm_eff
+			value = modifier:administrative_efficiency
+		}
+		#+1/-1 adm spent per month for every 10% admin efficiency above or below 0.
+		if = {
+			limit = {
+				check_variable = {
+					adm_eff = -0.39
+				}
+			}
+			multiply_variable = {
+				adm_eff = 10
+			}
+			round_variable = {
+				which = adm_eff
+				value = -1
+			}
+			change_variable = {
+				which = commune_adm_investment_monthly_cost
+				which = adm_eff
+			}
+		}
+		export_to_variable = {
+			which = admin_power_var
+			value = trigger_value:adm_power
+		}
+		#If you don't have enough adm points for monthly cost, the amount deducted will be what you have.
+		if = {
+			limit = {
+				check_variable = {
+					which = commune_adm_investment_monthly_cost
+					which = admin_power_var
+				}
+			}
+			set_variable = {
+				which = commune_adm_investment_monthly_cost
+				which = admin_power_var
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					commune_adm_investment_monthly_cost = 1
+				}
+			}
+			set_variable = {
+				which = progress_from_adm_investment
+				which = commune_adm_investment_monthly_cost
+			}
+			get_adm_to_integration_progress_exchange_rate = {
+				var = adm_to_integration_progress_exchange_rate
+			}
+			multiply_variable = {
+				which = progress_from_adm_investment
+				which = adm_to_integration_progress_exchange_rate
+			}
+			set_variable = {
+				which = commune_integration_progress_change
+				which = progress_from_adm_investment
+			}
+			event_target:commune_being_integrated = {
+				change_variable = {
+					which = commune_integration_progress_change
+					which = PREV
+				}
+			}
+		}
+	}
+}
+
+apply_overlord_adm_investment_costs = {
+	if = {
+		limit = {
+			is_investing_adm_power_in_commune = yes
+		}
+		set_variable = {
+			which = commune_adm_cost
+			which = commune_adm_investment_monthly_cost
+		}
+		multiply_variable = {
+			which = commune_adm_cost
+			value = -1
+		}
+		variable_effect = {
+			var = commune_adm_cost
+			effect = add_adm_power
 		}
 	}
 }
@@ -405,4 +520,20 @@ get_dip_to_integration_progress_exchange_rate = {
 		which = $var$
 		value = 0.4
 	}
+}
+
+#SCOPE = COUNTRY
+get_base_adm_investment_monthly_cost = {
+	set_variable = {
+		$var$ = 4
+	}
+}
+
+clear_commune_integration_investments = {
+	clr_country_flag = investing_adm_in_commune
+	remove_country_modifier = investing_admin_commune
+	FROM = {
+		calculate_monthly_commune_integration_progress = yes
+	}
+	calculate_overlord_adm_investment_integration_progress_gain = yes
 }

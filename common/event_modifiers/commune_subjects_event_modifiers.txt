@@ -1,0 +1,4 @@
+investing_admin_commune = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
