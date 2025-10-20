@@ -3,3 +3,4 @@
 q*.txt
 .docs/*
 console_history.txt
+*debug.txt
