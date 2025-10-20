@@ -150,6 +150,7 @@ integrate_commune = {
 			enable_commune_integration_subject = yes
 			calculate_monthly_commune_integration_progress = yes
 			calculate_overlord_adm_investment_integration_progress_gain = yes
+			calculate_overlord_dip_investment_integration_progress_gain = yes
 		}
 	}
 	ai_will_do = {
@@ -196,6 +197,10 @@ invest_adm_commune_integration = {
 		}
 	}
 	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = not_investing_mana_in_commune_tt
+			is_investing_mana_in_commune = no
+		}
 		adm_power = 1
 		variable_arithmetic_trigger = {
 			custom_tooltip = adm_efficiency_at_least_40_tt
@@ -222,6 +227,7 @@ invest_adm_commune_integration = {
 			calculate_monthly_commune_integration_progress = yes
 		}
 		calculate_overlord_adm_investment_integration_progress_gain = yes
+		calculate_overlord_dip_investment_integration_progress_gain = yes
 	}
 	ai_will_do = {
 		always = no
@@ -233,6 +239,66 @@ cancel_invest_adm_commune_integration = {
 	require_acceptance = no
 	is_visible = {
 		is_investing_adm_power_in_commune = yes
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		always = yes
+	}
+	on_accept = {
+		clear_commune_integration_investments = yes
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+invest_dip_commune_integration = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		is_investing_dip_power_in_commune = no
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = not_investing_mana_in_commune_tt
+			is_investing_mana_in_commune = no
+		}
+		dip_power = 1
+		diplomatic_reputation = -3
+		num_of_diplomats = 1
+		FROM = {
+			is_commune_loyal_enough_to_integrate = yes
+		}
+	}
+	on_accept = {
+		set_country_flag = investing_dip_in_commune
+		add_country_modifier = {
+			name = investing_dip_commune
+			duration = -1
+		}
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
+		calculate_overlord_adm_investment_integration_progress_gain = yes
+		calculate_overlord_dip_investment_integration_progress_gain = yes
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+cancel_invest_dip_commune_integration = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		is_investing_dip_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
 			is_commune_subject_being_integrated = yes

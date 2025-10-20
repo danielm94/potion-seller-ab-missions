@@ -20,6 +20,7 @@ on_startup = {
 	calculate_every_commune_subject_integration_cost = yes
 	calculate_monthly_commune_integration_progress = yes
 	calculate_overlord_adm_investment_integration_progress_gain = yes
+	calculate_overlord_dip_investment_integration_progress_gain = yes
 	calculate_integration_progress_percentage = yes
 }
 

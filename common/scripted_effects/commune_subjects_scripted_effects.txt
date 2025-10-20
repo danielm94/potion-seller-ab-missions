@@ -325,6 +325,8 @@ calculate_monthly_commune_integration_progress_pulse_effect = {
 		overlord = {
 			calculate_overlord_adm_investment_integration_progress_gain = yes
 			apply_overlord_adm_investment_costs = yes
+			calculate_overlord_dip_investment_integration_progress_gain = yes
+			apply_overlord_dip_investment_costs = yes
 		}
 		variable_change_commune_integration_progress = {
 			var = commune_integration_progress_change
@@ -379,39 +381,56 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 			value = modifier:administrative_efficiency
 		}
 		#+1/-1 adm spent per month for every 10% admin efficiency above or below 0.
+		multiply_variable = {
+			adm_eff = 10
+		}
+		round_variable = {
+			which = adm_eff
+			value = -1
+		}
+		change_variable = {
+			which = commune_adm_investment_monthly_cost
+			which = adm_eff
+		}
 		if = {
 			limit = {
-				check_variable = {
-					adm_eff = -0.39
-				}
-			}
-			multiply_variable = {
-				adm_eff = 10
-			}
-			round_variable = {
-				which = adm_eff
-				value = -1
-			}
-			change_variable = {
-				which = commune_adm_investment_monthly_cost
-				which = adm_eff
-			}
-		}
-		export_to_variable = {
-			which = admin_power_var
-			value = trigger_value:adm_power
-		}
-		#If you don't have enough adm points for monthly cost, the amount deducted will be what you have.
-		if = {
-			limit = {
-				check_variable = {
-					which = commune_adm_investment_monthly_cost
-					which = admin_power_var
+				NOT = {
+					check_variable = {
+						commune_adm_investment_monthly_cost = 1
+					}
 				}
 			}
 			set_variable = {
-				which = commune_adm_investment_monthly_cost
-				which = admin_power_var
+				commune_adm_investment_monthly_cost = 0
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					adm_power = 0
+				}
+				export_to_variable = {
+					which = adm_power_var
+					value = trigger_value:adm_power
+				}
+			}
+			else = {
+				set_variable = {
+					adm_power_var = 0
+				}
+			}
+			#If you don't have enough adm points for monthly cost, the amount deducted will be what you have.
+			if = {
+				limit = {
+					check_variable = {
+						which = commune_adm_investment_monthly_cost
+						which = adm_power_var
+					}
+				}
+				set_variable = {
+					which = commune_adm_investment_monthly_cost
+					which = adm_power_var
+				}
 			}
 		}
 		if = {
@@ -445,6 +464,113 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 	}
 }
 
+#SCOPE = COUNTRY
+calculate_overlord_dip_investment_integration_progress_gain = {
+	if = {
+		limit = {
+			is_investing_dip_power_in_commune = yes
+		}
+		get_base_dip_investment_monthly_cost = {
+			var = commune_dip_investment_monthly_cost
+		}
+		export_to_variable = {
+			which = diplo_rep
+			value = modifier:diplomatic_reputation
+		}
+		if = {
+			limit = {
+				check_variable = {
+					diplo_rep = 0
+				}
+			}
+			round_variable = {
+				which = diplo_rep
+				value = -1
+			}
+		}
+		else = {
+			round_variable = {
+				which = diplo_rep
+				value = 1
+			}
+		}
+		change_variable = {
+			which = commune_dip_investment_monthly_cost
+			which = diplo_rep
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						commune_dip_investment_monthly_cost = 1
+					}
+				}
+			}
+			set_variable = {
+				commune_dip_investment_monthly_cost = 0
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					dip_power = 0
+				}
+				export_to_variable = {
+					which = dip_power_var
+					value = trigger_value:dip_power
+				}
+			}
+			else = {
+				set_variable = {
+					dip_power_var = 0
+				}
+			}
+			#If you don't have enough dip points for monthly cost, the amount deducted will be what you have.
+			if = {
+				limit = {
+					check_variable = {
+						which = commune_dip_investment_monthly_cost
+						which = dip_power_var
+					}
+				}
+				set_variable = {
+					which = commune_dip_investment_monthly_cost
+					which = dip_power_var
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					commune_dip_investment_monthly_cost = 1
+				}
+			}
+			set_variable = {
+				which = progress_from_dip_investment
+				which = commune_dip_investment_monthly_cost
+			}
+			get_dip_to_integration_progress_exchange_rate = {
+				var = dip_to_integration_progress_exchange_rate
+			}
+			multiply_variable = {
+				which = progress_from_dip_investment
+				which = dip_to_integration_progress_exchange_rate
+			}
+			set_variable = {
+				which = commune_integration_progress_change
+				which = progress_from_dip_investment
+			}
+			event_target:commune_being_integrated = {
+				change_variable = {
+					which = commune_integration_progress_change
+					which = PREV
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
 apply_overlord_adm_investment_costs = {
 	if = {
 		limit = {
@@ -461,6 +587,27 @@ apply_overlord_adm_investment_costs = {
 		variable_effect = {
 			var = commune_adm_cost
 			effect = add_adm_power
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+apply_overlord_dip_investment_costs = {
+	if = {
+		limit = {
+			is_investing_dip_power_in_commune = yes
+		}
+		set_variable = {
+			which = commune_dip_cost
+			which = commune_dip_investment_monthly_cost
+		}
+		multiply_variable = {
+			which = commune_dip_cost
+			value = -1
+		}
+		variable_effect = {
+			var = commune_dip_cost
+			effect = add_dip_power
 		}
 	}
 }
@@ -515,7 +662,7 @@ get_dip_to_integration_progress_exchange_rate = {
 }
 
 #SCOPE = COUNTRY
-get_dip_to_integration_progress_exchange_rate = {
+get_mil_to_integration_progress_exchange_rate = {
 	set_variable = {
 		which = $var$
 		value = 0.4
@@ -529,11 +676,27 @@ get_base_adm_investment_monthly_cost = {
 	}
 }
 
+#SCOPE = COUNTRY
+get_base_dip_investment_monthly_cost = {
+	set_variable = {
+		$var$ = 4
+	}
+}
+
+#SCOPE = COUNTRY
+get_base_mil_investment_monthly_cost = {
+	set_variable = {
+		$var$ = 4
+	}
+}
+
+#SCOPE = COUNTRY
 clear_commune_integration_investments = {
 	clr_country_flag = investing_adm_in_commune
+	clr_country_flag = investing_dip_in_commune
 	remove_country_modifier = investing_admin_commune
+	remove_country_modifier = investing_dip_commune
 	FROM = {
 		calculate_monthly_commune_integration_progress = yes
 	}
-	calculate_overlord_adm_investment_integration_progress_gain = yes
 }

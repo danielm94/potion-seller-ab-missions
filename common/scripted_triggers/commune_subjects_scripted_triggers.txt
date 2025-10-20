@@ -49,3 +49,14 @@ is_commune_loyal_enough_to_integrate = {
 is_investing_adm_power_in_commune = {
 	has_country_flag = investing_adm_in_commune
 }
+#SCOPE = COUNTRY
+is_investing_dip_power_in_commune = {
+	has_country_flag = investing_dip_in_commune
+}
+
+is_investing_mana_in_commune = {
+	OR = {
+		is_investing_adm_power_in_commune = yes
+		is_investing_dip_power_in_commune = yes
+	}
+}
