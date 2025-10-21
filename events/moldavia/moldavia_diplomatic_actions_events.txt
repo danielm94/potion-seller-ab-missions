@@ -22,7 +22,7 @@ country_event = {
 	id = moldavia_diplomatic_actions_events.2
 	title = moldavia_diplomatic_actions_events.2.t
 	desc = moldavia_diplomatic_actions_events.2.d
-	picture = GFX_moldavia_diplomatic_actions_events.2
+	picture = DEBATE_REPUBLICAN_eventPicture
 	trigger = {
 		is_integrating_commune_subject = yes
 		any_subject_country = {
@@ -74,5 +74,16 @@ country_event = {
 	}
 	option = {
 		name = moldavia_diplomatic_actions_events.2.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = no_integrate_penalty
+				}
+			}
+			add_country_modifier = {
+				name = "annexers_legacy"
+				duration = 3650
+			}
+		}
 	}
 }
