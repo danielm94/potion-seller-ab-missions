@@ -74,4 +74,12 @@ allied_commune = {
 	# Note: This entire block is needed to explicitly clear the 'subject_nation' modifier inherited from default.
 	modifier_subject = clear
 	modifier_overlord = clear
+	overlord_opinion_modifier = allied_commune_opinion
+	subject_opinion_modifier = allied_commune_opinion
+	modifier_subject = {
+		modifier = allied_commune_subject
+	}
+	modifier_overlord = {
+		modifier = allied_commune_overlord
+	}
 }

@@ -2,11 +2,60 @@ investing_admin_commune = {
 	diplomats = -1
 	diplomatic_upkeep = -1
 }
+
 investing_dip_commune = {
 	diplomats = -1
 	diplomatic_upkeep = -1
 }
+
 investing_mil_commune = {
 	diplomats = -1
 	diplomatic_upkeep = -1
+}
+
+allied_commune_overlord = {
+	monthly_peasant_zeal = 0.01
+}
+
+sister_commune_overlord = {
+	monthly_peasant_zeal = 0.02
+}
+
+integrated_commune_overlord = {
+	monthly_peasant_zeal = 0.03
+	peasant_zeal_gain_modifier = 0.05
+}
+
+large_integrated_commune_bonus_1 = {
+	merchants = 1
+}
+large_integrated_commune_bonus_2 = {
+	merchants = 1
+	monthly_peasant_zeal = 0.02
+}
+large_integrated_commune_bonus_3 = {
+	merchants = 1
+	monthly_peasant_zeal = 0.02
+	peasant_zeal_gain_modifier = 0.05
+}
+integrated_commune_subject = {
+	global_manpower = -5
+	land_forcelimit = -5
+	global_regiment_recruit_speed = 0.25
+	core_creation = 0.1
+	province_warscore_cost = 0.25
+}
+
+sister_commune_subject = {
+	global_regiment_recruit_speed = 0.25
+	core_creation = 0.1
+	diplomatic_annexation_cost = 0.1
+	province_warscore_cost = 0.25
+}
+
+allied_commune_subject = {
+	global_regiment_recruit_speed = 0.25
+	core_creation = 0.1
+	diplomatic_annexation_cost = 0.1
+	province_warscore_cost = 0.25
 }

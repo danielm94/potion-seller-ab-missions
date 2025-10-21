@@ -1,11 +1,9 @@
 integrated_commune = {
 	copy_from = default
-	
 	# Graphics:
 	sprite = GFX_integrated_commune_icon
 	diplomacy_overlord_sprite = GFX_integrated_commune_lead
-	diplomacy_subject_sprite = GFX_integrated_commune_am	
-
+	diplomacy_subject_sprite = GFX_integrated_commune_am
 	# Properties:
 	transfer_trade_power = yes
 	joins_overlords_wars = yes
@@ -25,22 +23,19 @@ integrated_commune = {
 	can_gain_favors = no
 	can_send_tribute = yes
 	can_have_subjects_of_other_types = no
-
 	liberty_desire_development_ratio = 0.075
 	pays_overlord = 1.5
-	forcelimit_to_overlord = 0.2						# Percent of subject FL to use as base for modifiers
-	naval_forcelimit_to_overlord = 0.2					# Percent of subject FL to use as base for modifiers
-	manpower_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
-	sailors_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
-    base_liberty_desire = -100
+	forcelimit_to_overlord = 0.2	# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.2	# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.2	# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.2	# Percent of subject FL to use as base for modifiers
+	base_liberty_desire = -100
 	liberty_desire_revolution = 0
 	military_focus = 10
 	annex_cost_per_development = 50
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
-
 	restoration_cb = cb_disloyal_eyalet
-
 	# (continuous)
 	support_loyalists = yes
 	subsidize_armies = yes
@@ -50,9 +45,8 @@ integrated_commune = {
 	bestow_gifts = yes
 	send_additional_troops = yes
 	seize_territory = yes
-
 	# Modifiers:
-	modifier_subject = clear # Use this to clear after copy_from.
+	modifier_subject = clear	# Use this to clear after copy_from.
 	modifier_subject = {
 		modifier = subject_tax_modifier
 		trigger = {
@@ -61,7 +55,30 @@ integrated_commune = {
 			}
 		}
 	}
-	
-	overlord_opinion_modifier = is_eyalet
-	subject_opinion_modifier = is_eyalet
+	overlord_opinion_modifier = integrated_commune_opinion
+	subject_opinion_modifier = integrated_commune_opinion
+	modifier_subject = {
+		modifier = integrated_commune_subject
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_overlord
+	}
+	modifier_overlord = {
+		modifier = large_integrated_commune_bonus_1
+		trigger = {
+			total_development = 250
+		}
+	}
+	modifier_overlord = {
+		modifier = large_integrated_commune_bonus_2
+		trigger = {
+			total_development = 500
+		}
+	}
+	modifier_overlord = {
+		modifier = large_integrated_commune_bonus_3
+		trigger = {
+			total_development = 1000
+		}
+	}
 }

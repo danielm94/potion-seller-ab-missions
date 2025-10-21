@@ -1,10 +1,8 @@
 sister_commune = {
 	copy_from = default
-
 	sprite = GFX_sister_commune_icon
 	diplomacy_overlord_sprite = GFX_sister_commune_lead
-	diplomacy_subject_sprite = GFX_sister_commune_am	
-
+	diplomacy_subject_sprite = GFX_sister_commune_am
 	# Properties
 	overlord_can_attack = no
 	takes_diplo_slot = yes
@@ -26,14 +24,12 @@ sister_commune = {
 	trust_on_start = 0
 	should_quit_wars_on_activation = no
 	can_send_tribute = yes
-
 	# Liberty Desire & Contributions
 	base_liberty_desire = -100
 	liberty_desire_development_ratio = 0.125
 	liberty_desire_revolution = 0
 	military_focus = 10
 	annex_cost_per_development = 50
-
 	# Diplomatic Actions
 	can_fight = {
 		same_overlord = allied_commune
@@ -54,7 +50,6 @@ sister_commune = {
 		same_overlord = sister_commune
 		other_overlord = all
 	}
-
 	# Subject Interactions:
 	# (continuous)
 	support_loyalists = yes
@@ -65,14 +60,15 @@ sister_commune = {
 	enforce_religion = no
 	bestow_gifts = yes
 	send_additional_troops = yes
-
 	# Modifiers:
-	modifier_subject = clear # Clears the "subject_nation" modifier inherited from default
+	modifier_subject = clear	# Clears the "subject_nation" modifier inherited from default
 	modifier_subject = {
 		modifier = tributary_state_behind_overlord_tech_adm
 		trigger = {
 			ROOT = {
-				NOT = { adm_tech = FROM }
+				NOT = {
+					adm_tech = FROM
+				}
 			}
 		}
 	}
@@ -80,7 +76,9 @@ sister_commune = {
 		modifier = tributary_state_behind_overlord_tech_dip
 		trigger = {
 			ROOT = {
-				NOT = { dip_tech = FROM }
+				NOT = {
+					dip_tech = FROM
+				}
 			}
 		}
 	}
@@ -88,8 +86,18 @@ sister_commune = {
 		modifier = tributary_state_behind_overlord_tech_mil
 		trigger = {
 			ROOT = {
-				NOT = { mil_tech = FROM }
+				NOT = {
+					mil_tech = FROM
+				}
 			}
 		}
+	}
+	overlord_opinion_modifier = sister_commune_opinion
+	subject_opinion_modifier = sister_commune_opinion
+	modifier_subject = {
+		modifier = sister_commune_subject
+	}
+	modifier_overlord = {
+		modifier = sister_commune_overlord
 	}
 }

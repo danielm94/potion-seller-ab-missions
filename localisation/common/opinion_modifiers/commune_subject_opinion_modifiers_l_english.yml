@@ -1,3 +1,6 @@
 ﻿l_english:
  commune_staged_coup_against_us: "Staged a Coup Against Us"
  commune_staged_coup_against_another_commune: "Staged a Coup Against Another Commune"
+ allied_commune_opinion: "Allied Commune"
+ sister_commune_opinion: "Sister Commune"
+ integrated_commune_opinion: "Integrated Commune"
