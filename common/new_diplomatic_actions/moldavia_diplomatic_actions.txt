@@ -1,9 +1,13 @@
 incite_peasants = {
 	category = covert
 	require_acceptance = no
-	# Determines when the action is visible
 	is_visible = {
 		has_government_attribute = can_incite_peasants
+		NOT = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
 		FROM = {
 			is_a_peasant_government = no
 		}
@@ -31,7 +35,7 @@ incite_peasants = {
 		}
 	}
 	on_accept = {
-		calculate_incite_rebels_cost = yes
+		calculate_spy_action_cost_values = yes
 		set_variable = {
 			which = spy_network_deduction_var
 			which = incite_rebels_cost_var
@@ -66,7 +70,6 @@ incite_peasants = {
 integrate_commune = {
 	category = influence
 	require_acceptance = no
-	# Determines when the action is visible
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
@@ -159,7 +162,6 @@ integrate_commune = {
 cancel_commune_integration = {
 	category = influence
 	require_acceptance = no
-	# Determines when the action is visible
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
@@ -412,6 +414,112 @@ invest_republican_tradition_commune_integration = {
 			calculate_commune_integration_cost = yes
 			change_commune_integration_progress_as_percentage_of_cost = {
 				percentage = 0.1
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+stage_coup_commune_integration = {
+	category = covert
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_commune_subject_being_integrated = yes
+			is_subject_of = ROOT
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = stage_coup_spy_network_size_tt
+			can_stage_coup = {
+				who = FROM
+			}
+		}
+		variable_arithmetic_trigger = {
+			custom_tooltip = has_enough_ducats_for_coup_tt
+			export_to_variable = {
+				which = target_dev
+				value = total_development
+				who = FROM
+			}
+			export_to_variable = {
+				which = ducats
+				value = treasury
+			}
+			check_variable = {
+				which = ducats
+				which = target_dev
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = coup_leader_still_alive_tt
+			FROM = {
+				NOT = {
+					has_ruler_flag = commune_coup_leader
+				}
+			}
+		}
+	}
+	on_accept = {
+		calculate_spy_action_cost_values = yes
+		set_variable = {
+			which = spy_network_deduction_var
+			which = stage_coup_cost_var
+		}
+		multiply_variable = {
+			which = spy_network_deduction_var
+			value = -1
+		}
+		variable_change_spy_network_in = {
+			who = FROM
+			var = spy_network_deduction_var
+		}
+		export_to_variable = {
+			which = total_dev
+			value = total_development
+			who = FROM
+		}
+		multiply_variable = {
+			total_dev = -1
+		}
+		variable_effect = {
+			var = total_dev
+			effect = add_treasury
+		}
+		FROM = {
+			kill_ruler = yes
+			set_ruler_flag = commune_coup_leader
+			change_commune_integration_progress_as_percentage_of_cost = {
+				percentage = 0.2
+			}
+			add_liberty_desire = 40
+			add_opinion = {
+				who = overlord
+				modifier = commune_staged_coup_against_us
+			}
+			add_trust = {
+				who = overlord
+				value = -40
+			}
+		}
+		every_subject_country = {
+			limit = {
+				NOT = {
+					tag = FROM
+				}
+			}
+			add_liberty_desire = 20
+			add_trust = {
+				who = overlord
+				value = -20
+			}
+			add_opinion = {
+				who = overlord
+				modifier = commune_staged_coup_against_another_commune
 			}
 		}
 	}

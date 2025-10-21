@@ -1,20 +1,56 @@
 #SCOPE = COUNTRY
 calculate_spy_action_cost_values = {
 	calculate_incite_rebels_cost = yes
+	calculate_stage_coup_cost = yes
+}
+
+#SCOPE = COUNTRY
+get_incite_rebels_base_cost_var = {
+	set_variable = {
+		$var$ = 30
+	}
+}
+
+#SCOPE = COUNTRY
+get_stage_coup_base_cost_var = {
+	set_variable = {
+		$var$ = 70
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_spy_action_cost_var = {
+	export_to_variable = {
+		which = $spy_action_cost_var$
+		value = modifier:spy_action_cost_modifier
+	}
+	change_variable = {
+		which = $spy_action_cost_var$
+		value = 1
+	}
+	multiply_variable = {
+		which = $spy_action_cost_var$
+		which = $spy_action_base_cost$
+	}
 }
 
 #SCOPE = COUNTRY
 calculate_incite_rebels_cost = {
-	export_to_variable = {
-		which = incite_rebels_cost_var
-		value = modifier:spy_action_cost_modifier
+	get_incite_rebels_base_cost_var = {
+		var = incite_rebels_base_cost_var
 	}
-	change_variable = {
-		which = incite_rebels_cost_var
-		value = 1
+	calculate_spy_action_cost_var = {
+		spy_action_cost_var = incite_rebels_cost_var
+		spy_action_base_cost = incite_rebels_base_cost_var
 	}
-	multiply_variable = {
-		which = incite_rebels_cost_var
-		value = 30
+}
+#SCOPE = COUNTRY
+calculate_stage_coup_cost = {
+	get_stage_coup_base_cost_var = {
+		var = stage_coup_base_cost_var
+	}
+	calculate_spy_action_cost_var = {
+		spy_action_cost_var = stage_coup_cost_var
+		spy_action_base_cost = stage_coup_base_cost_var
 	}
 }

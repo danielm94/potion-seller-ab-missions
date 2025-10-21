@@ -5,3 +5,10 @@ can_incite_rebels = {
 		who = $who$
 	}
 }
+
+can_stage_coup = {
+	spy_action_cost_trigger = {
+		spy_action_cost_var = stage_coup_cost_var
+		who = $who$
+	}
+}

@@ -1,0 +1,10 @@
+commune_staged_coup_against_us = {
+	opinion = -100
+	min = -200
+	yearly_decay = 2
+}
+commune_staged_coup_against_another_commune = {
+	opinion = -50
+	min = -200
+	yearly_decay = 2
+}

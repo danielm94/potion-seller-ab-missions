@@ -8,6 +8,10 @@ on_monthly_pulse = {
 				is_subject_of_type = integrated_commune
 			}
 		}
+		export_to_variable = {
+			which = subject_dev
+			value = total_development
+		}
 		calculate_commune_integration_cost = yes
 		if = {
 			limit = {
@@ -39,6 +43,10 @@ on_startup = {
 			NOT = {
 				is_subject_of_type = integrated_commune
 			}
+		}
+		export_to_variable = {
+			which = subject_dev
+			value = total_development
 		}
 		calculate_commune_integration_cost = yes
 		if = {
@@ -86,7 +94,6 @@ on_dependency_lost = {
 		limit = {
 			has_government_mechanic = peasant_zealotry
 		}
-
 		FROM = {
 			restore_country_color = yes
 		}
