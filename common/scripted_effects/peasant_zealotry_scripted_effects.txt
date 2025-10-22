@@ -1,0 +1,8 @@
+change_peasant_zeal = {
+	add_government_power = {
+		mechanic_type = peasant_zealotry
+		power_type = peasant_zeal
+		value = $value$
+		scaled_with_gain_modifier = $scaled_with_gain_modifier$
+	}
+}

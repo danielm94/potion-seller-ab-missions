@@ -44,4 +44,22 @@ spriteTypes = {
 		loadType = "INGAME"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_pz_cultivate_the_land"
+		texturefile = "gfx/interface/government_mechanics/peasant_zealotry/pz_cultivate_the_land.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_pz_rally_the_communes"
+		texturefile = "gfx/interface/government_mechanics/peasant_zealotry/pz_rally_the_communes.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_pz_continue_the_liberation"
+		texturefile = "gfx/interface/government_mechanics/peasant_zealotry/pz_continue_the_liberation.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 }

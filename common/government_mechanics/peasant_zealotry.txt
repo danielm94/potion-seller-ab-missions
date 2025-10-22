@@ -13,52 +13,117 @@ peasant_zealotry = {
 			scaled_modifier = {
 				modifier = {
 					morale_damage_received = -0.1
-					manpower_recovery_speed = 0.20
+					manpower_recovery_speed = 0.2
+					reduced_liberty_desire = 25
+					monthly_peasant_zeal = -1
 				}
 			}
 		}
 	}
 	interactions = {
-		peasant_zeal_interaction_1 = {
+		pz_cultivate_the_land = {
 			gui = peasant_zealotry_gov_interaction
-			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			icon = "GFX_pz_cultivate_the_land"
 			cost_type = peasant_zeal
 			center = no
 			trigger = {
+				NOT = {
+					has_country_modifier = peasant_expansion_mod
+				}
+				has_government_power = {
+					mechanic_type = peasant_zealotry
+					power_type = peasant_zeal
+					value = 50
+				}
 			}
-			effect = { 
+			effect = {
+				change_peasant_zeal = {
+					value = -50
+					scaled_with_gain_modifier = no
+				}
+				add_country_modifier = {
+					name = peasant_development_mod
+					duration = 3650
+				}
 			}
-			cooldown_years = 0
+			cooldown_years = 10
 			ai_chance = {
-				
 			}
 		}
-		peasant_zeal_interaction_2 = {
+		pz_rally_the_communes = {
 			gui = peasant_zealotry_gov_interaction
-			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			icon = "GFX_pz_rally_the_communes"
 			cost_type = peasant_zeal
 			center = no
 			trigger = {
+				has_government_power = {
+					mechanic_type = peasant_zealotry
+					power_type = peasant_zeal
+					value = 50
+				}
 			}
-			effect = { 
+			effect = {
+				change_peasant_zeal = {
+					value = -50
+					scaled_with_gain_modifier = no
+				}
+				add_country_modifier = {
+					name = peasant_diplomacy_mod
+					duration = 3650
+				}
+				add_subjects_development_manpower = {
+					multiplier = 0.05
+				}
 			}
-			cooldown_years = 0
+			cooldown_years = 10
 			ai_chance = {
-				
 			}
 		}
-		peasant_zeal_interaction_3 = {
+		pz_continue_the_liberation = {
 			gui = peasant_zealotry_gov_interaction
-			icon = "GFX_wallachian_terror_impale_the_privileged_button"
+			icon = "GFX_pz_continue_the_liberation"
 			cost_type = peasant_zeal
 			center = no
 			trigger = {
+				NOT = {
+					has_country_modifier = peasant_development_mod
+				}
+				has_government_power = {
+					mechanic_type = peasant_zealotry
+					power_type = peasant_zeal
+					value = 50
+				}
 			}
-			effect = { 
+			effect = {
+				change_peasant_zeal = {
+					value = -50
+					scaled_with_gain_modifier = no
+				}
+				add_country_modifier = {
+					name = peasant_expansion_mod
+					duration = 3650
+				}
+				custom_tooltip = every_commune_subject_negate_penalty_tt
+				tooltip = {
+					add_country_modifier = {
+						name = negate_commune_subject_penalty
+						duration = 3650
+					}
+				}
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							is_commune_subject = yes
+						}
+						add_country_modifier = {
+							name = negate_commune_subject_penalty
+							duration = 3650
+						}
+					}
+				}
 			}
-			cooldown_years = 0
+			cooldown_years = 10
 			ai_chance = {
-				
 			}
 		}
 	}
