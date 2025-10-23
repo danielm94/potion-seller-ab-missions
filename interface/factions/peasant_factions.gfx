@@ -1,0 +1,29 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_abolitionists_faction"
+		texturefile = "gfx/interface/faction/moldavia/faction_abolitionists.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_abolitionists_faction"
+		texturefile = "gfx/interface/faction/moldavia/faction_abolitionists_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_exemplarists_faction"
+		texturefile = "gfx/interface/faction/moldavia/faction_exemplarists.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_exemplarists_faction"
+		texturefile = "gfx/interface/faction/moldavia/faction_exemplarists_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_leaguists_faction"
+		texturefile = "gfx/interface/faction/moldavia/faction_leaguists.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_leaguists_faction"
+		texturefile = "gfx/interface/faction/moldavia/faction_leaguists_frame.dds"
+		transparencecheck = yes
+	}
+}

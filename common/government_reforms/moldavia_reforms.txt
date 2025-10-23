@@ -87,6 +87,11 @@ moldavian_commune_reform = {
 		election_on_death = yes
 		can_incite_peasants = yes
 	}
+	factions = {
+		exemplarists_faction
+		leaguists_faction
+		abolitionists_faction
+	}
 	government_abilities = {
 		peasant_zealotry
 	}

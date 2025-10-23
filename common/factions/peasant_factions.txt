@@ -1,0 +1,26 @@
+exemplarists_faction = {
+	monarch_power = ADM
+	always = yes
+	modifier = {
+		development_cost = -0.05
+		same_culture_advisor_cost = -0.1
+	}
+}
+
+leaguists_faction = {
+	monarch_power = DIP
+	always = yes
+	modifier = {
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.1
+	}
+}
+
+abolitionists_faction = {
+	monarch_power = MIL
+	always = yes
+	modifier = {
+		spy_offence = 0.25
+		recover_army_morale_speed = 0.15
+	}
+}
