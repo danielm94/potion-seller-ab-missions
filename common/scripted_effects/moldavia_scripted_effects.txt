@@ -19,22 +19,6 @@ get_stage_coup_base_cost_var = {
 }
 
 #SCOPE = COUNTRY
-calculate_spy_action_cost_var = {
-	export_to_variable = {
-		which = $spy_action_cost_var$
-		value = modifier:spy_action_cost_modifier
-	}
-	change_variable = {
-		which = $spy_action_cost_var$
-		value = 1
-	}
-	multiply_variable = {
-		which = $spy_action_cost_var$
-		which = $spy_action_base_cost$
-	}
-}
-
-#SCOPE = COUNTRY
 calculate_incite_rebels_cost = {
 	get_incite_rebels_base_cost_var = {
 		var = incite_rebels_base_cost_var

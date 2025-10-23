@@ -2065,3 +2065,19 @@ remove_all_rebels_in_country = {
 		change_controller = ROOT
 	}
 }
+
+#SCOPE = COUNTRY
+calculate_spy_action_cost_var = {
+	export_to_variable = {
+		which = $spy_action_cost_var$
+		value = modifier:spy_action_cost_modifier
+	}
+	change_variable = {
+		which = $spy_action_cost_var$
+		value = 1
+	}
+	multiply_variable = {
+		which = $spy_action_cost_var$
+		which = $spy_action_base_cost$
+	}
+}
