@@ -41,6 +41,10 @@ peasant_zealotry = {
 					value = -50
 					scaled_with_gain_modifier = no
 				}
+				add_faction_influence = {
+					faction = exemplarists_faction
+					influence = 20
+				}
 				add_country_modifier = {
 					name = peasant_development_mod
 					duration = 3650
@@ -66,6 +70,10 @@ peasant_zealotry = {
 				change_peasant_zeal = {
 					value = -50
 					scaled_with_gain_modifier = no
+				}
+				add_faction_influence = {
+					faction = leaguists_faction
+					influence = 20
 				}
 				add_country_modifier = {
 					name = peasant_diplomacy_mod
@@ -98,6 +106,10 @@ peasant_zealotry = {
 				change_peasant_zeal = {
 					value = -50
 					scaled_with_gain_modifier = no
+				}
+				add_faction_influence = {
+					faction = abolitionists_faction
+					influence = 20
 				}
 				add_country_modifier = {
 					name = peasant_expansion_mod
