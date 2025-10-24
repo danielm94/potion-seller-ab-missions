@@ -80,7 +80,33 @@ country_event = {
 		custom_tooltip = protector_of_the_little_folk_bonus_tt
 		custom_tooltip = AB_EMPTY
 		add_protector_little_folk_personality_on_election_effect = yes
-		# If they are abolitionist candidate, add influence to that faction. Etc, etc.
+		if = {
+			limit = {
+				has_ruler_flag = exemplarist_ruler
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+		else_if = {
+			limit = {
+				has_ruler_flag = leaguist_ruler
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+		}
+		else_if = {
+			limit = {
+				has_ruler_flag = abolitionist_ruler
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
 	}
 	option = {
 		name = moldavia_peasant_elections_events.1.keep_protector
@@ -95,7 +121,33 @@ country_event = {
 			value = 5
 			scaled_with_gain_modifier = yes
 		}
-		# If they are abolitionist candidate, add influence to that faction. Etc, etc.
+		if = {
+			limit = {
+				has_ruler_flag = exemplarist_ruler
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+		else_if = {
+			limit = {
+				has_ruler_flag = leaguist_ruler
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+		}
+		else_if = {
+			limit = {
+				has_ruler_flag = abolitionist_ruler
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
 	}
 	option = {
 		name = moldavia_peasant_election_events.1.exemplarists_candidate
@@ -103,6 +155,7 @@ country_event = {
 		custom_tooltip = candidate_gets_exemplarist_trait_tt
 		hidden_effect = {
 			add_ruler_personality = exemplarist_personality
+			set_ruler_flag = exemplarist_ruler
 		}
 		add_faction_influence = {
 			faction = exemplarists_faction
@@ -152,6 +205,7 @@ country_event = {
 		custom_tooltip = candidate_gets_leaguist_trait_tt
 		hidden_effect = {
 			add_ruler_personality = leaguist_personality
+			set_ruler_flag = leaguist_ruler
 		}
 		add_faction_influence = {
 			faction = leaguists_faction
@@ -208,6 +262,7 @@ country_event = {
 		custom_tooltip = candidate_gets_abolitionist_trait_tt
 		hidden_effect = {
 			add_ruler_personality = abolitionist_personality
+			set_ruler_flag = abolitionist_ruler
 		}
 		add_faction_influence = {
 			faction = abolitionists_faction
@@ -256,6 +311,6 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_abolitionist_tt
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
-		add_protector_little_folk_personality_on_election_effect = yes	
+		add_protector_little_folk_personality_on_election_effect = yes
 	}
 }
