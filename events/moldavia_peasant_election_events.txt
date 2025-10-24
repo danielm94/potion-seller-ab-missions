@@ -1,10 +1,10 @@
-namespace = moldavia_peasant_election_events
+namespace = peasant_election_events
 #Election
 country_event = {
-	id = moldavia_peasant_election_events.1
-	title = moldavia_peasant_election_events.1.t
-	desc = moldavia_peasant_election_events.1.d
-	picture = GFX_moldavia_peasant_election_events.1
+	id = peasant_election_events.1
+	title = peasant_election_events.1.t
+	desc = peasant_election_events.1.d
+	picture = GFX_peasant_election_events.1
 	is_triggered_only = yes
 	trigger = {
 		has_government_mechanic = peasant_zealotry
@@ -66,7 +66,7 @@ country_event = {
 	}
 	#Keep non protector of little folk
 	option = {
-		name = moldavia_peasant_election_events.1.keep
+		name = peasant_election_events.1.keep
 		trigger = {
 			NOT = {
 				ruler_has_personality = peasant_revolt_leader_personality
@@ -109,7 +109,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = moldavia_peasant_election_events.1.keep_protector
+		name = peasant_election_events.1.keep_protector
 		highlight = yes
 		trigger = {
 			ruler_has_personality = peasant_revolt_leader_personality
@@ -150,7 +150,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = moldavia_peasant_election_events.1.exemplarists_candidate
+		name = peasant_election_events.1.exemplarists_candidate
 		set_ruler = peasant_exemplarists_candidate
 		custom_tooltip = candidate_gets_exemplarist_trait_tt
 		hidden_effect = {
@@ -200,7 +200,7 @@ country_event = {
 		add_protector_little_folk_personality_on_election_effect = yes
 	}
 	option = {
-		name = moldavia_peasant_election_events.1.leaguists_candidate
+		name = peasant_election_events.1.leaguists_candidate
 		set_ruler = peasant_leaguists_candidate
 		custom_tooltip = candidate_gets_leaguist_trait_tt
 		hidden_effect = {
@@ -257,7 +257,7 @@ country_event = {
 		add_protector_little_folk_personality_on_election_effect = yes
 	}
 	option = {
-		name = moldavia_peasant_election_events.1.abolitionists_candidate
+		name = peasant_election_events.1.abolitionists_candidate
 		set_ruler = peasant_abolitionists_candidate
 		custom_tooltip = candidate_gets_abolitionist_trait_tt
 		hidden_effect = {
