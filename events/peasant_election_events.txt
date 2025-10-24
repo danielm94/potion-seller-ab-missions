@@ -33,35 +33,23 @@ country_event = {
 				exiled_as = peasant_exemplarists_candidate
 				min_age = 15
 				max_age = 75
-				option = 0
+				option = 1
 				adm = 2
 				dip = 1
 				mil = 0
 			}
-			random_list = {
-				50 = {
-					define_exiled_ruler = {
-						exiled_as = peasant_leaguists_candidate
-						min_age = 15
-						max_age = 75
-						option = 0
-						adm = 0
-						dip = 2
-						mil = 1
-					}
-				}
-				50 = {
-					define_exiled_ruler = {
-						exiled_as = peasant_leaguists_candidate
-						min_age = 15
-						max_age = 75
-						option = 0
-						adm = 1
-						dip = 2
-						mil = 0
-					}
-				}
+			define_exiled_ruler = {
+				exiled_as = peasant_leaguists_candidate
+				min_age = 15
+				max_age = 75
+				option = 2
+				adm = 1
+				dip = 2
+				mil = 0
 			}
+			calculate_exemplarist_candidate_after_stats_effect = yes
+			calculate_leaguist_candidate_after_stats_effect = yes
+			calculate_abolitionist_candidate_after_stats_effect = yes
 		}
 	}
 	#Keep non protector of little folk
@@ -161,29 +149,18 @@ country_event = {
 			faction = exemplarists_faction
 			influence = 10
 		}
+		custom_tooltip = exemplarists_stats_after_tt
 		hidden_effect = {
-			set_variable = {
-				which = total_stat_change
-				which = stat_gain_from_average_dev
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_republican_tradition
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_peasant_zeal
-			}
 			variable_effect = {
-				var = total_stat_change
+				var = exemplarist_total_stat_change
 				effect = change_adm
 			}
 			variable_effect = {
-				var = total_stat_change
+				var = exemplarist_total_stat_change
 				effect = change_dip
 			}
 			variable_effect = {
-				var = total_stat_change
+				var = exemplarist_total_stat_change
 				effect = change_mil
 			}
 		}
@@ -211,33 +188,18 @@ country_event = {
 			faction = leaguists_faction
 			influence = 10
 		}
+		custom_tooltip = leaguists_stats_after_tt
 		hidden_effect = {
-			set_variable = {
-				which = total_stat_change
-				which = stat_gain_from_commune_development
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_prestige
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_republican_tradition
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_peasant_zeal
-			}
 			variable_effect = {
-				var = total_stat_change
+				var = leaguist_total_stat_change
 				effect = change_adm
 			}
 			variable_effect = {
-				var = total_stat_change
+				var = leaguist_total_stat_change
 				effect = change_dip
 			}
 			variable_effect = {
-				var = total_stat_change
+				var = leaguist_total_stat_change
 				effect = change_mil
 			}
 		}
@@ -268,33 +230,18 @@ country_event = {
 			faction = abolitionists_faction
 			influence = 10
 		}
+		custom_tooltip = abolitionists_stats_after_tt
 		hidden_effect = {
-			set_variable = {
-				which = total_stat_change
-				which = stat_gain_from_army_prof
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_power_proj
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_republican_tradition
-			}
-			change_variable = {
-				which = total_stat_change
-				which = stat_gain_from_peasant_zeal
-			}
 			variable_effect = {
-				var = total_stat_change
+				var = abolitionist_total_stat_change
 				effect = change_adm
 			}
 			variable_effect = {
-				var = total_stat_change
+				var = abolitionist_total_stat_change
 				effect = change_dip
 			}
 			variable_effect = {
-				var = total_stat_change
+				var = abolitionist_total_stat_change
 				effect = change_mil
 			}
 		}
