@@ -1074,3 +1074,33 @@ change_spy_network_in_effect = {
 		}
 	}
 }
+
+#SCOPE = country/province
+variable_limit_max = {
+	if = {
+		limit = {
+			check_variable = {
+				$var$ = $max$
+			}
+		}
+		set_variable = {
+			$var$ = $max$
+		}
+	}
+}
+
+#SCOPE = country/province
+variable_limit_min = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					$var$ = $min$
+				}
+			}
+		}
+		set_variable = {
+			$var$ = $min$
+		}
+	}
+}

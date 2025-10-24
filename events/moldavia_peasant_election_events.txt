@@ -1,0 +1,252 @@
+namespace = moldavia_peasant_election_events
+#Election
+country_event = {
+	id = moldavia_peasant_elections_events.1
+	title = moldavia_peasant_elections_events.1.t
+	desc = moldavia_peasant_elections_events.1.d
+	picture = GFX_moldavia_peasant_elections_events.1
+	is_triggered_only = yes
+	trigger = {
+		has_government_mechanic = peasant_zealotry
+	}
+	immediate = {
+		hidden_effect = {
+			# We calculate everything in the immediate block so the player can't cheese it 
+			# by deving provinces, increasing army prof, etc, during the event. Also tooltips
+			# look nicer this way.
+			calculate_protector_little_folk_personality_chances_effect = yes
+			calculate_exemplarist_candidate_stat_gain_effect = yes
+			calculate_leaguist_candidate_stat_gain_effect = yes
+			calculate_abolitionist_candidate_stat_gain_effect = yes
+			calculate_stat_gain_from_republican_tradition_effect = yes
+			calculate_stat_gain_from_peasant_zeal_effect = yes
+			define_exiled_ruler = {
+				exiled_as = peasant_abolitionists_candidate
+				min_age = 15
+				max_age = 75
+				option = 0
+				adm = 0
+				dip = 1
+				mil = 2
+			}
+			define_exiled_ruler = {
+				exiled_as = peasant_exemplarists_candidate
+				min_age = 15
+				max_age = 75
+				option = 0
+				adm = 2
+				dip = 1
+				mil = 0
+			}
+			random_list = {
+				50 = {
+					define_exiled_ruler = {
+						exiled_as = peasant_leaguists_candidate
+						min_age = 15
+						max_age = 75
+						option = 0
+						adm = 0
+						dip = 2
+						mil = 1
+					}
+				}
+				50 = {
+					define_exiled_ruler = {
+						exiled_as = peasant_leaguists_candidate
+						min_age = 15
+						max_age = 75
+						option = 0
+						adm = 1
+						dip = 2
+						mil = 0
+					}
+				}
+			}
+		}
+	}
+	#Keep non protector of little folk
+	option = {
+		name = moldavia_peasant_elections_events.1.keep
+		trigger = {
+			NOT = {
+				ruler_has_personality = peasant_revolt_leader_personality
+			}
+		}
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		add_scaled_republican_tradition = -10
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = protector_of_the_little_folk_bonus_tt
+		custom_tooltip = AB_EMPTY
+		add_protector_little_folk_personality_on_election_effect = yes
+		# If they are abolitionist candidate, add influence to that faction. Etc, etc.
+	}
+	option = {
+		name = moldavia_peasant_elections_events.1.keep_protector
+		highlight = yes
+		trigger = {
+			ruler_has_personality = peasant_revolt_leader_personality
+		}
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		change_peasant_zeal = {
+			value = 5
+			scaled_with_gain_modifier = yes
+		}
+		# If they are abolitionist candidate, add influence to that faction. Etc, etc.
+	}
+	option = {
+		name = moldavia_peasant_election_events.1.exemplarists_candidate
+		set_ruler = peasant_exemplarists_candidate
+		add_faction_influence = {
+			faction = exemplarists_faction
+			influence = 10
+		}
+		#Ruler gains exemplarist personality trait
+		hidden_effect = {
+			set_variable = {
+				which = total_stat_change
+				which = stat_gain_from_average_dev
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_republican_tradition
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_peasant_zeal
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_adm
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_dip
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_mil
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = stat_gain_from_average_dev_tt
+		custom_tooltip = stat_gain_from_average_dev_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_republican_tradition_exemplarist_tt
+		custom_tooltip = stat_gain_from_republican_tradition_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_peasant_zeal_exemplarist_tt
+		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
+		custom_tooltip = tooltip_line_divider
+		add_protector_little_folk_personality_on_election_effect = yes
+	}
+	option = {
+		name = moldavia_peasant_election_events.1.leaguists_candidate
+		set_ruler = peasant_leaguists_candidate
+		add_faction_influence = {
+			faction = leaguists_faction
+			influence = 10
+		}
+		#Ruler gains exemplarist personality trait
+		hidden_effect = {
+			set_variable = {
+				which = total_stat_change
+				which = stat_gain_from_commune_development
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_prestige
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_republican_tradition
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_peasant_zeal
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_adm
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_dip
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_mil
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = stat_gain_from_commune_dev_tt
+		custom_tooltip = stat_gain_from_commune_dev_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_prestige_tt
+		custom_tooltip = stat_gain_from_prestige_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_republican_tradition_leaguist_tt
+		custom_tooltip = stat_gain_from_republican_tradition_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_peasant_zeal_leaguist_tt
+		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
+		custom_tooltip = tooltip_line_divider
+		add_protector_little_folk_personality_on_election_effect = yes
+	}
+	option = {
+		name = moldavia_peasant_elections_events.1.abolitionists_candidate
+		set_ruler = peasant_abolitionists_candidate
+		add_faction_influence = {
+			faction = abolitionists_faction
+			influence = 10
+		}
+		#Ruler gains abolitionist personality trait (You can add this later if you have one)
+		hidden_effect = {
+			set_variable = {
+				which = total_stat_change
+				which = stat_gain_from_army_prof
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_power_proj
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_republican_tradition
+			}
+			change_variable = {
+				which = total_stat_change
+				which = stat_gain_from_peasant_zeal
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_adm
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_dip
+			}
+			variable_effect = {
+				var = total_stat_change
+				effect = change_mil
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = stat_gain_from_army_prof_tt
+		custom_tooltip = stat_gain_from_army_prof_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_power_proj_tt
+		custom_tooltip = stat_gain_from_power_proj_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_republican_tradition_abolitionist_tt
+		custom_tooltip = stat_gain_from_republican_tradition_math_tt
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = stat_gain_from_peasant_zeal_abolitionist_tt
+		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
+		custom_tooltip = tooltip_line_divider
+		add_protector_little_folk_personality_on_election_effect = yes	
+	}
+}

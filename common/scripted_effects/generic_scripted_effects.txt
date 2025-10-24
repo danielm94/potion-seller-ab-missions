@@ -2056,6 +2056,7 @@ enable_bonus_development_on_dev_click_for_province = {
 	}
 }
 
+#SCOPE = COUNTRY
 remove_all_rebels_in_country = {
 	every_owned_province = {
 		limit = {
@@ -2079,5 +2080,37 @@ calculate_spy_action_cost_var = {
 	multiply_variable = {
 		which = $spy_action_cost_var$
 		which = $spy_action_base_cost$
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_average_province_development_effect = {
+	export_to_variable = {
+		which = total_dev
+		value = total_development
+	}
+	export_to_variable = {
+		which = state_provinces
+		value = trigger_value:num_of_provinces_in_states
+	}
+	export_to_variable = {
+		which = territory_provinces
+		value = trigger_value:num_of_provinces_in_territories
+	}
+	set_variable = {
+		which = number_of_provinces
+		which = state_provinces
+	}
+	change_variable = {
+		which = number_of_provinces
+		which = territory_provinces
+	}
+	set_variable = {
+		which = $var_name$
+		which = total_dev
+	}
+	divide_variable = {
+		which = $var_name$
+		which = number_of_provinces
 	}
 }

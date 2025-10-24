@@ -84,6 +84,7 @@ moldavian_commune_reform = {
 		disables_estate_nobles = yes
 		enables_estate_razesi = yes
 		has_parliament = yes
+		has_peasant_elections = yes
 	}
 	factions = {
 		exemplarists_faction

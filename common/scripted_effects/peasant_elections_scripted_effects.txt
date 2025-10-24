@@ -1,0 +1,292 @@
+
+#SCOPE = COUNTRY
+calculate_protector_little_folk_personality_chances_effect = {
+	hidden_effect = {
+		set_variable = {
+			num_allied_communes = 0
+		}
+		set_variable = {
+			num_sister_communes = 0
+		}
+		set_variable = {
+			num_integrated_communes = 0
+		}
+		every_subject_country = {
+			if = {
+				limit = {
+					is_subject_of_type = allied_commune
+				}
+				overlord = {
+					change_variable = {
+						num_allied_communes = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_subject_of_type = sister_commune
+				}
+				overlord = {
+					change_variable = {
+						num_sister_communes = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_subject_of_type = integrated_commune
+				}
+				overlord = {
+					change_variable = {
+						num_integrated_communes = 1
+					}
+				}
+			}
+		}
+		set_variable = {
+			which = chance_gain_from_allied_communes
+			which = num_allied_communes
+		}
+		set_variable = {
+			which = total_chance_of_little_folk_personality
+			which = chance_gain_from_allied_communes
+		}
+		set_variable = {
+			which = chance_gain_from_sister_communes
+			which = num_sister_communes
+		}
+		multiply_variable = {
+			chance_gain_from_sister_communes = 1.5
+		}
+		change_variable = {
+			which = total_chance_of_little_folk_personality
+			which = chance_gain_from_sister_communes
+		}
+		set_variable = {
+			which = chance_gain_from_integrated_communes
+			which = num_integrated_communes
+		}
+		multiply_variable = {
+			chance_gain_from_integrated_communes = 2
+		}
+		change_variable = {
+			which = total_chance_of_little_folk_personality
+			which = chance_gain_from_integrated_communes
+		}
+		if = {
+			limit = {
+				allied_commune = 5
+				check_variable = {
+					total_chance_of_little_folk_personality = 100
+				}
+			}
+			set_variable = {
+				total_chance_of_little_folk_personality = 100
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+add_protector_little_folk_personality_on_election_effect = {
+	custom_tooltip = chance_of_getting_protector_little_folk_personality_tt
+	custom_tooltip = chance_of_getting_protector_little_folk_personality_math_tt
+	hidden_effect = {
+		random_variable = {
+			which = personality_roll
+			value = 100
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						check_variable = {
+							which = personality_roll
+							which = total_chance_of_little_folk_personality
+						}
+					}
+					is_variable_equal = {
+						which = personality_roll
+						which = total_chance_of_little_folk_personality
+					}
+				}
+			}
+			add_ruler_personality = peasant_revolt_leader_personality
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_exemplarist_candidate_stat_gain_effect = {
+	calculate_average_province_development_effect = {
+		var_name = average_dev
+	}
+	set_variable = {
+		which = stat_gain_from_average_dev
+		which = average_dev
+	}
+	divide_variable = {
+		stat_gain_from_average_dev = 10
+	}
+	round_variable = {
+		which = stat_gain_from_average_dev
+		value = -1
+	}
+	variable_limit_max = {
+		var = stat_gain_from_average_dev
+		max = 6
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_stat_gain_from_republican_tradition_effect = {
+	set_variable = {
+		which = stat_gain_from_republican_tradition
+		value = 0
+	}
+	if = {
+		limit = {
+			republican_tradition = 95
+		}
+		change_variable = {
+			stat_gain_from_republican_tradition = 1
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_stat_gain_from_peasant_zeal_effect = {
+	export_government_power_to_variable = {
+		mechanic_type = peasant_zealotry
+		power_type = peasant_zeal
+	}
+	set_variable = {
+		stat_gain_from_peasant_zeal = 0
+	}
+	if = {
+		limit = {
+			check_variable = {
+				peasant_zeal_amount = 90
+			}
+		}
+		change_variable = {
+			stat_gain_from_peasant_zeal = 1
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_leaguist_candidate_stat_gain_effect = {
+	calculate_leaguist_stat_gain_from_commune_development_effect = yes
+	calculate_leaguist_stat_gain_from_prestige_effect = yes
+}
+
+#SCOPE = COUNTRY
+calculate_leaguist_stat_gain_from_commune_development_effect = {
+	set_variable = {
+		total_commune_development = 0
+	}
+	every_subject_country = {
+		limit = {
+			is_commune_subject = yes
+		}
+		export_to_variable = {
+			which = total_commune_development
+			value = total_development
+		}
+		overlord = {
+			change_variable = {
+				which = total_commune_development
+				which = PREV
+			}
+		}
+	}
+	set_variable = {
+		which = stat_gain_from_commune_development
+		which = total_commune_development
+	}
+	divide_variable = {
+		stat_gain_from_commune_development = 300
+	}
+	round_variable = {
+		which = stat_gain_from_commune_development
+		value = -1
+	}
+	variable_limit_max = {
+		var = stat_gain_from_commune_development
+		max = 6
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_leaguist_stat_gain_from_prestige_effect = {
+	export_to_variable = {
+		which = prestige_var
+		value = prestige
+	}
+	set_variable = {
+		which = stat_gain_from_prestige
+		which = prestige_var
+	}
+	divide_variable = {
+		stat_gain_from_prestige = 33
+	}
+	round_variable = {
+		which = stat_gain_from_prestige
+		value = -1
+	}
+	variable_limit_max = {
+		var = stat_gain_from_prestige
+		max = 6
+	}
+	variable_limit_min = {
+		var = stat_gain_from_prestige
+		min = 0
+	}
+}
+
+calculate_abolitionist_candidate_stat_gain_effect = {
+	calculate_abolitionist_stat_gain_from_army_professionalism_effect = yes
+	calculate_abolition_stat_gain_from_power_projection = yes
+}
+#SCOPE = COUNTRY
+calculate_abolitionist_stat_gain_from_army_professionalism_effect = {
+	export_to_variable = {
+		which = army_prof
+		value = trigger_value:army_professionalism
+	}
+	multiply_variable = {
+		army_prof = 100
+	}
+	set_variable = {
+		which = stat_gain_from_army_prof
+		which = army_prof
+	}
+	divide_variable = {
+		which = stat_gain_from_army_prof
+		value = 33
+	}
+	round_variable = {
+		which = stat_gain_from_army_prof
+		value = -1
+	}
+}
+
+calculate_abolition_stat_gain_from_power_projection = {
+	export_to_variable = {
+		which = power_proj
+		value = trigger_value:power_projection
+	}
+	set_variable = {
+		which = stat_gain_from_power_proj
+		which = power_proj
+	}
+	divide_variable = {
+		which = stat_gain_from_power_proj
+		value = 25
+	}
+	round_variable = {
+		which = stat_gain_from_power_proj
+		value = -1
+	}
+}
