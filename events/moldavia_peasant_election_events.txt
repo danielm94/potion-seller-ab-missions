@@ -100,11 +100,14 @@ country_event = {
 	option = {
 		name = moldavia_peasant_election_events.1.exemplarists_candidate
 		set_ruler = peasant_exemplarists_candidate
+		custom_tooltip = candidate_gets_exemplarist_trait_tt
+		hidden_effect = {
+			add_ruler_personality = exemplarist_personality
+		}
 		add_faction_influence = {
 			faction = exemplarists_faction
 			influence = 10
 		}
-		#Ruler gains exemplarist personality trait
 		hidden_effect = {
 			set_variable = {
 				which = total_stat_change
@@ -146,11 +149,14 @@ country_event = {
 	option = {
 		name = moldavia_peasant_election_events.1.leaguists_candidate
 		set_ruler = peasant_leaguists_candidate
+		custom_tooltip = candidate_gets_leaguist_trait_tt
+		hidden_effect = {
+			add_ruler_personality = leaguist_personality
+		}
 		add_faction_influence = {
 			faction = leaguists_faction
 			influence = 10
 		}
-		#Ruler gains exemplarist personality trait
 		hidden_effect = {
 			set_variable = {
 				which = total_stat_change
@@ -199,11 +205,14 @@ country_event = {
 	option = {
 		name = moldavia_peasant_elections_events.1.abolitionists_candidate
 		set_ruler = peasant_abolitionists_candidate
+		custom_tooltip = candidate_gets_abolitionist_trait_tt
+		hidden_effect = {
+			add_ruler_personality = abolitionist_personality
+		}
 		add_faction_influence = {
 			faction = abolitionists_faction
 			influence = 10
 		}
-		#Ruler gains abolitionist personality trait (You can add this later if you have one)
 		hidden_effect = {
 			set_variable = {
 				which = total_stat_change

@@ -25,3 +25,6 @@
  stat_gain_from_power_proj_math_tt: "§g- §YAbolitionist§! candidates gain §G+1§! £allmana£ in all stats for every §Y25§! Power Projection. We have §Y[Root.power_proj.GetValue]§! Power Projection.§!"
  stat_gain_from_republican_tradition_abolitionist_tt: "[peasant_abolitionists_candidate.GetName] will gain §G[Root.stat_gain_from_republican_tradition.GetValue]§! £allmana£ in all stats from our Republican Tradition."
  stat_gain_from_peasant_zeal_abolitionist_tt: "[peasant_abolitionists_candidate.GetName] will gain §G[Root.stat_gain_from_peasant_zeal.GetValue]§! £allmana£ in all stats from our Peasant Zeal."
+ candidate_gets_exemplarist_trait_tt: "[peasant_exemplarists_candidate.GetName] will gain the §YExemplarist§! personality trait."
+ candidate_gets_leaguist_trait_tt: "[peasant_leaguists_candidate.GetName] will gain the §YLeaguist§! personality trait."
+ candidate_gets_abolitionist_trait_tt: "[peasant_abolitionists_candidate.GetName] will gain the §YAbolitionist§! personality trait."
