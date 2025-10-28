@@ -96,8 +96,9 @@ variable_effect = {
 decimal_decomposition_integers_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		set_variable = {
@@ -147,8 +148,9 @@ decimal_decomposition_integers_effect = {
 decimal_decomposition_fractions_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		multiply_variable = {
@@ -255,8 +257,9 @@ variable_province_modifier = {
 decimal_decomposition_extend_modifier_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		set_variable = {
@@ -416,8 +419,9 @@ variable_government_power_effect = {
 decimal_decomposition_fractions_government_power_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		multiply_variable = {
@@ -481,8 +485,9 @@ decimal_decomposition_fractions_government_power_effect = {
 decimal_decomposition_integers_government_power_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		set_variable = {
@@ -612,8 +617,9 @@ variable_add_agressive_expansion = {
 decimal_decomposition_integers_add_agressive_expansion_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		set_variable = {
@@ -849,8 +855,9 @@ variable_change_estate_land_share = {
 change_estate_land_share_integer_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		set_variable = {
@@ -906,8 +913,9 @@ change_estate_land_share_integer_effect = {
 change_estate_land_share_fraction_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		multiply_variable = {
@@ -1021,8 +1029,9 @@ variable_change_spy_network_in = {
 change_spy_network_in_effect = {
 	if = {
 		limit = {
-			var_greater_than_0 = {
+			is_variable_greater_than = {
 				var = $var$
+				value = 0
 			}
 		}
 		set_variable = {
@@ -1080,11 +1089,23 @@ variable_limit_max = {
 	if = {
 		limit = {
 			check_variable = {
-				$var$ = $max$
+				which = $var$
+				[[max]
+				value = $max$
+				]
+				[[var_max]
+				which = $var_max$
+				]
 			}
 		}
 		set_variable = {
-			$var$ = $max$
+			which = $var$
+			[[max]
+			value = $max$
+			]
+			[[var_max]
+			which = $var_max$
+			]
 		}
 	}
 }
@@ -1095,12 +1116,1140 @@ variable_limit_min = {
 		limit = {
 			NOT = {
 				check_variable = {
-					$var$ = $min$
+					which = $var$
+					[[min]
+					value = $min$
+					]
+					[[var_min]
+					which = $var_min$
+					]
 				}
 			}
 		}
 		set_variable = {
-			$var$ = $min$
+			which = $var$
+			[[min]
+			value = $min$
+			]
+			[[var_min]
+			which = $var_min$
+			]
+		}
+	}
+}
+
+# Usage:
+# export_faction_influence_to_variable = {
+#   faction = <faction_key>
+#   var = <variable_name>
+# }
+#
+# This effect checks the influence of a given faction ($faction$) and saves it to a variable ($var$).
+# It checks every integer value from 100 down to 0.
+export_faction_influence_to_variable = {
+	if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 100
+			}
+		}
+		set_variable = {
+			$var$ = 100
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 99
+			}
+		}
+		set_variable = {
+			$var$ = 99
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 98
+			}
+		}
+		set_variable = {
+			$var$ = 98
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 97
+			}
+		}
+		set_variable = {
+			$var$ = 97
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 96
+			}
+		}
+		set_variable = {
+			$var$ = 96
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 95
+			}
+		}
+		set_variable = {
+			$var$ = 95
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 94
+			}
+		}
+		set_variable = {
+			$var$ = 94
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 93
+			}
+		}
+		set_variable = {
+			$var$ = 93
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 92
+			}
+		}
+		set_variable = {
+			$var$ = 92
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 91
+			}
+		}
+		set_variable = {
+			$var$ = 91
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 90
+			}
+		}
+		set_variable = {
+			$var$ = 90
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 89
+			}
+		}
+		set_variable = {
+			$var$ = 89
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 88
+			}
+		}
+		set_variable = {
+			$var$ = 88
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 87
+			}
+		}
+		set_variable = {
+			$var$ = 87
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 86
+			}
+		}
+		set_variable = {
+			$var$ = 86
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 85
+			}
+		}
+		set_variable = {
+			$var$ = 85
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 84
+			}
+		}
+		set_variable = {
+			$var$ = 84
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 83
+			}
+		}
+		set_variable = {
+			$var$ = 83
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 82
+			}
+		}
+		set_variable = {
+			$var$ = 82
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 81
+			}
+		}
+		set_variable = {
+			$var$ = 81
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 80
+			}
+		}
+		set_variable = {
+			$var$ = 80
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 79
+			}
+		}
+		set_variable = {
+			$var$ = 79
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 78
+			}
+		}
+		set_variable = {
+			$var$ = 78
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 77
+			}
+		}
+		set_variable = {
+			$var$ = 77
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 76
+			}
+		}
+		set_variable = {
+			$var$ = 76
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 75
+			}
+		}
+		set_variable = {
+			$var$ = 75
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 74
+			}
+		}
+		set_variable = {
+			$var$ = 74
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 73
+			}
+		}
+		set_variable = {
+			$var$ = 73
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 72
+			}
+		}
+		set_variable = {
+			$var$ = 72
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 71
+			}
+		}
+		set_variable = {
+			$var$ = 71
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 70
+			}
+		}
+		set_variable = {
+			$var$ = 70
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 69
+			}
+		}
+		set_variable = {
+			$var$ = 69
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 68
+			}
+		}
+		set_variable = {
+			$var$ = 68
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 67
+			}
+		}
+		set_variable = {
+			$var$ = 67
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 66
+			}
+		}
+		set_variable = {
+			$var$ = 66
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 65
+			}
+		}
+		set_variable = {
+			$var$ = 65
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 64
+			}
+		}
+		set_variable = {
+			$var$ = 64
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 63
+			}
+		}
+		set_variable = {
+			$var$ = 63
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 62
+			}
+		}
+		set_variable = {
+			$var$ = 62
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 61
+			}
+		}
+		set_variable = {
+			$var$ = 61
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 60
+			}
+		}
+		set_variable = {
+			$var$ = 60
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 59
+			}
+		}
+		set_variable = {
+			$var$ = 59
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 58
+			}
+		}
+		set_variable = {
+			$var$ = 58
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 57
+			}
+		}
+		set_variable = {
+			$var$ = 57
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 56
+			}
+		}
+		set_variable = {
+			$var$ = 56
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 55
+			}
+		}
+		set_variable = {
+			$var$ = 55
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 54
+			}
+		}
+		set_variable = {
+			$var$ = 54
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 53
+			}
+		}
+		set_variable = {
+			$var$ = 53
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 52
+			}
+		}
+		set_variable = {
+			$var$ = 52
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 51
+			}
+		}
+		set_variable = {
+			$var$ = 51
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 50
+			}
+		}
+		set_variable = {
+			$var$ = 50
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 49
+			}
+		}
+		set_variable = {
+			$var$ = 49
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 48
+			}
+		}
+		set_variable = {
+			$var$ = 48
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 47
+			}
+		}
+		set_variable = {
+			$var$ = 47
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 46
+			}
+		}
+		set_variable = {
+			$var$ = 46
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 45
+			}
+		}
+		set_variable = {
+			$var$ = 45
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 44
+			}
+		}
+		set_variable = {
+			$var$ = 44
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 43
+			}
+		}
+		set_variable = {
+			$var$ = 43
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 42
+			}
+		}
+		set_variable = {
+			$var$ = 42
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 41
+			}
+		}
+		set_variable = {
+			$var$ = 41
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 40
+			}
+		}
+		set_variable = {
+			$var$ = 40
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 39
+			}
+		}
+		set_variable = {
+			$var$ = 39
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 38
+			}
+		}
+		set_variable = {
+			$var$ = 38
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 37
+			}
+		}
+		set_variable = {
+			$var$ = 37
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 36
+			}
+		}
+		set_variable = {
+			$var$ = 36
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 35
+			}
+		}
+		set_variable = {
+			$var$ = 35
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 34
+			}
+		}
+		set_variable = {
+			$var$ = 34
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 33
+			}
+		}
+		set_variable = {
+			$var$ = 33
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 32
+			}
+		}
+		set_variable = {
+			$var$ = 32
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 31
+			}
+		}
+		set_variable = {
+			$var$ = 31
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 30
+			}
+		}
+		set_variable = {
+			$var$ = 30
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 29
+			}
+		}
+		set_variable = {
+			$var$ = 29
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 28
+			}
+		}
+		set_variable = {
+			$var$ = 28
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 27
+			}
+		}
+		set_variable = {
+			$var$ = 27
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 26
+			}
+		}
+		set_variable = {
+			$var$ = 26
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 25
+			}
+		}
+		set_variable = {
+			$var$ = 25
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 24
+			}
+		}
+		set_variable = {
+			$var$ = 24
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 23
+			}
+		}
+		set_variable = {
+			$var$ = 23
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 22
+			}
+		}
+		set_variable = {
+			$var$ = 22
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 21
+			}
+		}
+		set_variable = {
+			$var$ = 21
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 20
+			}
+		}
+		set_variable = {
+			$var$ = 20
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 19
+			}
+		}
+		set_variable = {
+			$var$ = 19
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 18
+			}
+		}
+		set_variable = {
+			$var$ = 18
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 17
+			}
+		}
+		set_variable = {
+			$var$ = 17
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 16
+			}
+		}
+		set_variable = {
+			$var$ = 16
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 15
+			}
+		}
+		set_variable = {
+			$var$ = 15
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 14
+			}
+		}
+		set_variable = {
+			$var$ = 14
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 13
+			}
+		}
+		set_variable = {
+			$var$ = 13
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 12
+			}
+		}
+		set_variable = {
+			$var$ = 12
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 11
+			}
+		}
+		set_variable = {
+			$var$ = 11
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 10
+			}
+		}
+		set_variable = {
+			$var$ = 10
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 9
+			}
+		}
+		set_variable = {
+			$var$ = 9
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 8
+			}
+		}
+		set_variable = {
+			$var$ = 8
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 7
+			}
+		}
+		set_variable = {
+			$var$ = 7
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 6
+			}
+		}
+		set_variable = {
+			$var$ = 6
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 5
+			}
+		}
+		set_variable = {
+			$var$ = 5
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 4
+			}
+		}
+		set_variable = {
+			$var$ = 4
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 3
+			}
+		}
+		set_variable = {
+			$var$ = 3
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 2
+			}
+		}
+		set_variable = {
+			$var$ = 2
+		}
+	}
+	else_if = {
+		limit = {
+			faction_influence = {
+				faction = $faction$
+				influence = 1
+			}
+		}
+		set_variable = {
+			$var$ = 1
+		}
+	}
+	else = {
+		set_variable = {
+			$var$ = 0
 		}
 	}
 }

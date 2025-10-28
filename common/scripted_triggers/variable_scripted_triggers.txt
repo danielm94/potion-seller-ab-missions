@@ -1,6 +1,47 @@
-var_greater_than_0 ={
+is_variable_less_than_or_equal_to = {
+	OR = {
+		is_variable_equal = {
+			which = $var$
+			[[value]
+			value = $value$
+			]
+			[[which]
+			which = $which$
+			]
+		}
+		NOT = {
+			check_variable = {
+				which = $var$
+				[[value]
+				value = $value$
+				]
+				[[which]
+				which = $which$
+				]
+			}
+		}
+	}
+}
+
+is_variable_greater_than = {
+	NOT = {
+		is_variable_equal = {
+			which = $var$
+			[[value]
+			value = $value$
+			]
+			[[which]
+			which = $which$
+			]
+		}
+	}
 	check_variable = {
 		which = $var$
-		value = 0.001
+		[[value]
+		value = $value$
+		]
+		[[which]
+		which = $which$
+		]
 	}
 }
