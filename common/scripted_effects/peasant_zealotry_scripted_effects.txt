@@ -3,7 +3,9 @@ change_peasant_zeal = {
 		mechanic_type = peasant_zealotry
 		power_type = peasant_zeal
 		value = $value$
+		[[scaled_with_gain_modifier]
 		scaled_with_gain_modifier = $scaled_with_gain_modifier$
+		]
 	}
 }
 
