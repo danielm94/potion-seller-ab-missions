@@ -94,4 +94,17 @@ moldavian_commune_reform = {
 	government_abilities = {
 		peasant_zealotry
 	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = faction_fatigue_variables_initialized
+					}
+				}
+				faction_fatigue_initialize_faction_fatigue_variables = yes
+				set_country_flag = faction_fatigue_variables_initialized
+			}
+		}
+	}
 }

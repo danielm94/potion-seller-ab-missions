@@ -1,0 +1,323 @@
+#SCOPE = COUNTRY
+faction_fatigue_initialize_faction_fatigue_variables = {
+	set_variable = {
+		new_exemplarists_count = 0
+	}
+	set_variable = {
+		new_leaguists_count = 0
+	}
+	set_variable = {
+		new_abolitionists_count = 0
+	}
+	set_variable = {
+		churn_min = 1
+	}
+	set_variable = {
+		churn_max = 2
+	}
+	set_variable = {
+		churn_new_candidate_change = 0.1
+	}
+	set_variable = {
+		churn_reelect_candidate_change = -0.1
+	}
+	set_variable = {
+		min_fatction_fatigue_new_candidate_change = 0.2
+	}
+	set_variable = {
+		min_fatction_fatigue_reelect_candidate_change = -0.3
+	}
+	set_variable = {
+		which = current_churn
+		which = churn_min
+	}
+	set_variable = {
+		faction_fatigue_min = 0
+	}
+	set_variable = {
+		faction_fatigue_max = 10
+	}
+	set_variable = {
+		base_corruption_penalty = 0.5
+	}
+	set_variable = {
+		base_stability_penalty = -0.6
+	}
+	set_variable = {
+		base_unrest_penalty = 3
+	}
+	set_variable = {
+		base_peasant_zeal_penalty = -1.5
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_increment_exemplarists_new_candidate_victories = {
+	change_variable = {
+		new_exemplarists_count = 1
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_increment_leaguists_new_candidate_victories = {
+	change_variable = {
+		new_leaguists_count = 1
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_increment_abolitionists_new_candidate_victories = {
+	change_variable = {
+		new_abolitionists_count = 1
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_change_churn = {
+	change_variable = {
+		which = current_churn
+		which = $var$
+	}
+	variable_clamp = {
+		var = current_churn
+		var_min = churn_min
+		var_max = churn_max
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_change_minimum_faction_fatigue = {
+	change_variable = {
+		which = faction_fatigue_min
+		which = $var$
+	}
+	variable_limit_min = {
+		var = faction_fatigue_min
+		min = 0
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_new_candidate_equilibrium = {
+	set_variable = {
+		which = $var_name$
+		which = new_exemplarists_count
+	}
+	change_variable = {
+		which = $var_name$
+		which = new_leaguists_count
+	}
+	change_variable = {
+		which = $var_name$
+		which = new_abolitionists_count
+	}
+	divide_variable = {
+		$var_name$ = 3
+	}
+}
+
+# SCOPE = COUNTRY
+# Excess = faction new candidates - (total number of new candidates / 3)
+# If excess < 0, excess = 0
+faction_fatigue_calculate_faction_excess = {
+	faction_fatigue_calculate_new_candidate_equilibrium = {
+		var_name = new_candidate_equilibrium
+	}
+	set_variable = {
+		which = $var_name$
+		which = new_$faction$_count
+	}
+	subtract_variable = {
+		which = $var_name$
+		which = new_candidate_equilibrium
+	}
+	variable_limit_min = {
+		which = $var_name$
+		min = 0
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_faction_fatigue = {
+	faction_fatigue_calculate_faction_excess = {
+		var_name = faction_excess
+		faction = $faction$
+	}
+	set_variable = {
+		which = $var_name$
+		which = faction_excess
+	}
+	multiply_variable = {
+		which = $var_name$
+		which = current_churn
+	}
+	variable_clamp = {
+		var = $var_name$
+		var_min = faction_fatigue_min
+		var_max = faction_fatigue_max
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_candidate_penalties = {
+	faction_fatigue_calculate_candidate_corruption_penalty = {
+		faction = $faction$
+		faction_fatigue_var = $faction_fatigue_var$
+	}
+	faction_fatigue_calculate_candidate_stability_penalty = {
+		faction = $faction$
+		faction_fatigue_var = $faction_fatigue_var$
+	}
+	faction_fatigue_calculate_candidate_unrest_penalty = {
+		faction = $faction$
+		faction_fatigue_var = $faction_fatigue_var$
+	}
+	faction_fatigue_calculate_candidate_peasant_zeal_penalty = {
+		faction = $faction$
+		faction_fatigue_var = $faction_fatigue_var$
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_candidate_corruption_penalty = {
+	set_variable = {
+		which = $faction$_candidate_corruption_penalty
+		which = base_corruption_penalty
+	}
+	multiply_variable = {
+		which = $faction$_candidate_corruption_penalty
+		which = $faction_fatigue_var$
+	}
+	variable_limit_min = {
+		var = $faction$_candidate_corruption_penalty
+		min = 0
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_candidate_stability_penalty = {
+	set_variable = {
+		which = $faction$_candidate_stability_penalty
+		which = base_stability_penalty
+	}
+	multiply_variable = {
+		which = $faction$_candidate_stability_penalty
+		which = $faction_fatigue_var$
+	}
+	round_variable = {
+		which = $faction$_candidate_stability_penalty
+		value = 1
+	}
+	variable_limit_max = {
+		var = $faction$_candidate_stability_penalty
+		max = 0
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_candidate_unrest_penalty = {
+	set_variable = {
+		which = $faction$_candidate_unrest_penalty
+		which = base_unrest_penalty
+	}
+	multiply_variable = {
+		which = $faction$_candidate_unrest_penalty
+		which = $faction_fatigue_var$
+	}
+	variable_limit_min = {
+		var = $faction$_candidate_unrest_penalty
+		min = 0
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_calculate_candidate_peasant_zeal_penalty = {
+	set_variable = {
+		which = $faction$_candidate_peasant_zeal_penalty
+		which = base_peasant_zeal_penalty
+	}
+	multiply_variable = {
+		which = $faction$_candidate_peasant_zeal_penalty
+		which = $faction_fatigue_var$
+	}
+	variable_limit_max = {
+		var = $faction$_candidate_peasant_zeal_penalty
+		max = 0
+	}
+}
+
+#SCOPE = COUNTRY
+faction_fatigue_apply_candidate_penalties = {
+	if = {
+		limit = {
+			is_variable_greater_than = {
+				var = $faction$_candidate_corruption_penalty
+				value = 0
+			}
+		}
+		custom_tooltip = $faction$_candidate_corruption_penalty_tt
+		hidden_effect = {
+			variable_effect = {
+				var = $faction$_candidate_corruption_penalty
+				effect = add_corruption
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = $faction$_candidate_stability_penalty
+					value = 0
+				}
+			}
+		}
+		custom_tooltip = $faction$_candidate_stability_penalty_tt
+		hidden_effect = {
+			variable_effect = {
+				var = $faction$_candidate_stability_penalty
+				effect = add_stability
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_variable_greater_than = {
+				var = $faction$_candidate_unrest_penalty
+				value = 0
+			}
+		}
+		custom_tooltip = $faction$_candidate_unrest_penalty_tt
+		hidden_effect = {
+			every_owned_province = {
+				set_variable = {
+					which = $faction$_candidate_unrest_penalty
+					which = PREV
+				}
+				variable_effect = {
+					var = $faction$_candidate_unrest_penalty
+					effect = add_unrest
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = $faction$_candidate_peasant_zeal_penalty
+					value = 0
+				}
+			}
+		}
+		custom_tooltip = $faction$_candidate_peasant_zeal_penalty_tt
+		hidden_effect = {
+			variable_government_power_effect = {
+				var = $faction$_candidate_peasant_zeal_penalty
+				mechanic_type = peasant_zealotry
+				power_type = peasant_zeal
+				scaled_with_gain_modifier = no
+			}
+		}
+	}
+}

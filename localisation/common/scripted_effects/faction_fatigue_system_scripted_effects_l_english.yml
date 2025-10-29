@@ -1,0 +1,13 @@
+﻿l_english:
+ exemplarists_candidate_corruption_penalty_tt: "We will gain §R[Root.exemplarists_candidate_corruption_penalty.GetValue]§! Corruption."
+ exemplarists_candidate_stability_penalty_tt: "We will lose §R[Root.exemplarists_candidate_stability_penalty.GetValue]§! Stability."
+ exemplarists_candidate_unrest_penalty_tt: "Every owned province will gain §R[Root.exemplarists_candidate_unrest_penalty.GetValue]§! Unrest."
+ exemplarists_candidate_peasant_zeal_penalty_tt: "We will lose §R[Root.exemplarists_candidate_peasant_zeal_penalty.GetValue]§! Peasant Zeal."
+ leaguists_candidate_corruption_penalty_tt: "We will gain §R[Root.leaguists_candidate_corruption_penalty.GetValue]§! Corruption."
+ leaguists_candidate_stability_penalty_tt: "We will lose §R[Root.leaguists_candidate_stability_penalty.GetValue]§! Stability."
+ leaguists_candidate_unrest_penalty_tt: "Every owned province will gain §R[Root.leaguists_candidate_unrest_penalty.GetValue]§! Unrest."
+ leaguists_candidate_peasant_zeal_penalty_tt: "We will lose §R[Root.leaguists_candidate_peasant_zeal_penalty.GetValue]§! Peasant Zeal."
+ abolitionists_candidate_corruption_penalty_tt: "We will gain §R[Root.abolitionists_candidate_corruption_penalty.GetValue]§! Corruption."
+ abolitionists_candidate_stability_penalty_tt: "We will lose §R[Root.abolitionists_candidate_stability_penalty.GetValue]§! Stability."
+ abolitionists_candidate_unrest_penalty_tt: "Every owned province will gain §R[Root.abolitionists_candidate_unrest_penalty.GetValue]§! Unrest."
+ abolitionists_candidate_peasant_zeal_penalty_tt: "We will lose §R[Root.abolitionists_candidate_peasant_zeal_penalty.GetValue]§! Peasant Zeal."

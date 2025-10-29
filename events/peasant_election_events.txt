@@ -14,12 +14,6 @@ country_event = {
 			# We calculate everything in the immediate block so the player can't cheese it 
 			# by deving provinces, increasing army prof, etc, during the event. Also tooltips
 			# look nicer this way.
-			calculate_protector_little_folk_personality_chances_effect = yes
-			calculate_exemplarist_candidate_stat_gain_effect = yes
-			calculate_leaguist_candidate_stat_gain_effect = yes
-			calculate_abolitionist_candidate_stat_gain_effect = yes
-			calculate_stat_gain_from_republican_tradition_effect = yes
-			calculate_stat_gain_from_peasant_zeal_effect = yes
 			define_exiled_ruler = {
 				exiled_as = peasant_abolitionists_candidate
 				min_age = 15
@@ -47,9 +41,39 @@ country_event = {
 				dip = 2
 				mil = 0
 			}
+			calculate_protector_little_folk_personality_chances_effect = yes
+			calculate_exemplarist_candidate_stat_gain_effect = yes
+			calculate_leaguist_candidate_stat_gain_effect = yes
+			calculate_abolitionist_candidate_stat_gain_effect = yes
+			calculate_stat_gain_from_republican_tradition_effect = yes
+			calculate_stat_gain_from_peasant_zeal_effect = yes
 			calculate_exemplarist_candidate_after_stats_effect = yes
 			calculate_leaguist_candidate_after_stats_effect = yes
 			calculate_abolitionist_candidate_after_stats_effect = yes
+			faction_fatigue_calculate_faction_fatigue = {
+				var_name = faction_fatigue_exemplarists
+				faction = exemplarists
+			}
+			faction_fatigue_calculate_faction_fatigue = {
+				var_name = faction_fatigue_leaguists
+				faction = leaguists
+			}
+			faction_fatigue_calculate_faction_fatigue = {
+				var_name = faction_fatigue_abolitionists
+				faction = abolitionists
+			}
+			faction_fatigue_calculate_candidate_penalties = {
+				faction_fatigue_var = faction_fatigue_exemplarists
+				faction = exemplarists
+			}
+			faction_fatigue_calculate_candidate_penalties = {
+				faction_fatigue_var = faction_fatigue_leaguists
+				faction = leaguists
+			}
+			faction_fatigue_calculate_candidate_penalties = {
+				faction_fatigue_var = faction_fatigue_abolitionists
+				faction = abolitionists
+			}
 		}
 	}
 	#Keep non protector of little folk
@@ -58,6 +82,14 @@ country_event = {
 		trigger = {
 			NOT = {
 				ruler_has_personality = peasant_revolt_leader_personality
+			}
+		}
+		hidden_effect = {
+			faction_fatigue_change_churn = {
+				var = churn_reelect_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_fatction_fatigue_reelect_candidate_change
 			}
 		}
 		change_adm = 1
@@ -101,6 +133,14 @@ country_event = {
 		highlight = yes
 		trigger = {
 			ruler_has_personality = peasant_revolt_leader_personality
+		}
+		hidden_effect = {
+			faction_fatigue_change_churn = {
+				var = churn_reelect_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_fatction_fatigue_reelect_candidate_change
+			}
 		}
 		change_adm = 1
 		change_dip = 1
@@ -175,6 +215,28 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
+		if = {
+			limit = {
+				is_variable_greater_than = {
+					var = faction_fatigue_exemplarists
+					value = 0
+				}
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = faction_fatigue_exemplarists_tt
+			faction_fatigue_apply_candidate_penalties = {
+				faction = exemplarists
+			}
+		}
+		hidden_effect = {
+			faction_fatigue_change_churn = {
+				var = churn_new_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_fatction_fatigue_new_candidate_change
+			}
+			faction_fatigue_increment_exemplarists_new_candidate_victories = yes
+		}
 	}
 	option = {
 		name = peasant_election_events.1.leaguists_candidate
@@ -217,6 +279,28 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
+		if = {
+			limit = {
+				is_variable_greater_than = {
+					var = faction_fatigue_leaguists
+					value = 0
+				}
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = faction_fatigue_leaguists_tt
+			faction_fatigue_apply_candidate_penalties = {
+				faction = leaguists
+			}
+		}
+		hidden_effect = {
+			faction_fatigue_change_churn = {
+				var = churn_new_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_fatction_fatigue_new_candidate_change
+			}
+			faction_fatigue_increment_leaguists_new_candidate_victories = yes
+		}
 	}
 	option = {
 		name = peasant_election_events.1.abolitionists_candidate
@@ -259,5 +343,27 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
+		if = {
+			limit = {
+				is_variable_greater_than = {
+					var = faction_fatigue_abolitionists
+					value = 0
+				}
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = faction_fatigue_abolitionists_tt
+			faction_fatigue_apply_candidate_penalties = {
+				faction = abolitionists
+			}
+		}
+		hidden_effect = {
+			faction_fatigue_change_churn = {
+				var = churn_new_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_fatction_fatigue_new_candidate_change
+			}
+			faction_fatigue_increment_abolitionists_new_candidate_victories = yes
+		}
 	}
 }

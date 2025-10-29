@@ -1,6 +1,6 @@
 ﻿l_english:
  peasant_election_events.1.t: "Election!"
- peasant_election_events.1.d: "$TODO$"
+ peasant_election_events.1.d: "New Exemplarists = [Root.new_exemplarists_count.GetValue]\nNew Leaguists = [Root.new_leaguists_count.GetValue]\nNew Abolitionists = [Root.new_abolitionists_count.GetValue]\nCurrent Faction Fatigue Scale = [Root.current_churn.GetValue]\nFaction Excess: [Root.faction_excess.GetValue]"
  peasant_election_events.1.keep: "Keep [Root.Monarch.GetName]."
  peasant_election_events.1.keep_protector: "[Root.Monarch.GetName] will continue the revolution!"
  protector_of_the_little_folk_bonus_tt: "§gIf our ruler had the §YProtector of the Little Folk§! personality, it would not cost any Republican Tradition to reelect them, and we would also gain §G+5§! Peasant Zeal.§!"
@@ -31,3 +31,6 @@
  exemplarists_stats_after_tt: "The final stats of §Y[peasant_exemplarists_candidate.GetName]§! will be ([Root.exemplarist_adm_after.GetValue]/[Root.exemplarist_dip_after.GetValue]/[Root.exemplarist_mil_after.GetValue])"
  leaguists_stats_after_tt: "The final stats of §Y[peasant_leaguists_candidate.GetName]§! will be ([Root.leaguist_adm_after.GetValue]/[Root.leaguist_dip_after.GetValue]/[Root.leaguist_mil_after.GetValue])"
  abolitionists_stats_after_tt: "The final stats of §Y[peasant_abolitionists_candidate.GetName]§! will be ([Root.abolitionist_adm_after.GetValue]/[Root.abolitionist_dip_after.GetValue]/[Root.abolitionist_mil_after.GetValue])"
+ faction_fatigue_exemplarists_tt: "Faction Fatigue for Exemplarists: [Root.faction_fatigue_exemplarists.GetValue]"
+ faction_fatigue_leaguists_tt: "Faction Fatigue for Leaguists: [Root.faction_fatigue_leaguists.GetValue]"
+ faction_fatigue_abolitionists_tt: "Faction Fatigue for Abolitionists: [Root.faction_fatigue_abolitionists.GetValue]"
