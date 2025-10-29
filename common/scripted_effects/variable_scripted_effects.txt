@@ -1138,6 +1138,56 @@ variable_limit_min = {
 	}
 }
 
+#SCOPE = country/province
+variable_clamp = {
+	if = {
+		limit = {
+			check_variable = {
+				which = $var$
+				[[max]
+				value = $max$
+				]
+				[[var_max]
+				which = $var_max$
+				]
+			}
+		}
+		set_variable = {
+			which = $var$
+			[[max]
+			value = $max$
+			]
+			[[var_max]
+			which = $var_max$
+			]
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = $var$
+					[[min]
+					value = $min$
+					]
+					[[var_min]
+					which = $var_min$
+					]
+				}
+			}
+		}
+		set_variable = {
+			which = $var$
+			[[min]
+			value = $min$
+			]
+			[[var_min]
+			which = $var_min$
+			]
+		}
+	}
+}
+
 # Usage:
 # export_faction_influence_to_variable = {
 #   faction = <faction_key>
