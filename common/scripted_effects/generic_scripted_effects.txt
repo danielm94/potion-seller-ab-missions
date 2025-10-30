@@ -275,6 +275,15 @@ get_number_of_ruler_personalities = {
 	check_for_personality = {
 		ruler_personality = augustus_personality
 	}
+	check_for_personality = {
+		ruler_personality = exemplarist_personality
+	}
+	check_for_personality = {
+		ruler_personality = leaguist_personality
+	}
+	check_for_personality = {
+		ruler_personality = abolitionist_personality
+	}
 }
 
 # Checks for individual personalities
