@@ -10,26 +10,26 @@ faction_fatigue_initialize_faction_fatigue_variables = {
 		new_abolitionists_count = 0
 	}
 	set_variable = {
-		churn_min = 1
+		fatigue_gain_modifier_min = 1
 	}
 	set_variable = {
-		churn_max = 2
+		fatigue_gain_modifier_max = 2
 	}
 	set_variable = {
-		churn_new_candidate_change = 0.1
+		fatigue_gain_modifier_new_candidate_change = 0.1
 	}
 	set_variable = {
-		churn_reelect_candidate_change = -0.1
+		fatigue_gain_modifier_reelect_candidate_change = -0.1
 	}
 	set_variable = {
-		min_fatction_fatigue_new_candidate_change = 0.2
+		min_faction_fatigue_new_candidate_change = 0.15
 	}
 	set_variable = {
-		min_fatction_fatigue_reelect_candidate_change = -0.3
+		min_faction_fatigue_reelect_candidate_change = -0.25
 	}
 	set_variable = {
-		which = current_churn
-		which = churn_min
+		which = current_fatigue_gain_modifier
+		which = fatigue_gain_modifier_min
 	}
 	set_variable = {
 		faction_fatigue_min = 0
@@ -73,15 +73,15 @@ faction_fatigue_increment_abolitionists_new_candidate_victories = {
 }
 
 #SCOPE = COUNTRY
-faction_fatigue_change_churn = {
+faction_fatigue_change_fatigue_gain_modifier = {
 	change_variable = {
-		which = current_churn
+		which = current_fatigue_gain_modifier
 		which = $var$
 	}
 	variable_clamp = {
-		var = current_churn
-		var_min = churn_min
-		var_max = churn_max
+		var = current_fatigue_gain_modifier
+		var_min = fatigue_gain_modifier_min
+		var_max = fatigue_gain_modifier_max
 	}
 }
 
@@ -140,16 +140,16 @@ faction_fatigue_calculate_faction_excess = {
 #SCOPE = COUNTRY
 faction_fatigue_calculate_faction_fatigue = {
 	faction_fatigue_calculate_faction_excess = {
-		var_name = faction_excess
+		var_name = $faction$_excess
 		faction = $faction$
 	}
 	set_variable = {
 		which = $var_name$
-		which = faction_excess
+		which = $faction$_excess
 	}
 	multiply_variable = {
 		which = $var_name$
-		which = current_churn
+		which = current_fatigue_gain_modifier
 	}
 	variable_clamp = {
 		var = $var_name$
