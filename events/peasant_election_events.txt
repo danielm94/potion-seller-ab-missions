@@ -74,7 +74,11 @@ country_event = {
 				faction_fatigue_var = faction_fatigue_abolitionists
 				faction = abolitionists
 			}
+			set_country_flag = in_peasant_elections_event
 		}
+	}
+	after = {
+		clr_country_flag = in_peasant_elections_event
 	}
 	#Keep non protector of little folk
 	option = {
@@ -84,6 +88,7 @@ country_event = {
 				ruler_has_personality = peasant_revolt_leader_personality
 			}
 		}
+		toggle_verbose_election_event_tooltip_effect = yes
 		change_adm = 1
 		change_dip = 1
 		change_mil = 1
@@ -126,8 +131,9 @@ country_event = {
 			}
 		}
 		custom_tooltip = tooltip_line_divider
-		custom_tooltip = protector_of_the_little_folk_bonus_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = protector_of_the_little_folk_bonus_tt
+		}
 		add_protector_little_folk_personality_on_election_effect = yes
 	}
 	option = {
@@ -136,6 +142,7 @@ country_event = {
 		trigger = {
 			ruler_has_personality = peasant_revolt_leader_personality
 		}
+		toggle_verbose_election_event_tooltip_effect = yes
 		hidden_effect = {
 			faction_fatigue_change_fatigue_gain_modifier = {
 				var = fatigue_gain_modifier_reelect_candidate_change
@@ -191,6 +198,7 @@ country_event = {
 	}
 	option = {
 		name = peasant_election_events.1.exemplarists_candidate
+		toggle_verbose_election_event_tooltip_effect = yes
 		set_ruler = peasant_exemplarists_candidate
 		custom_tooltip = candidate_gets_exemplarist_trait_tt
 		hidden_effect = {
@@ -218,13 +226,17 @@ country_event = {
 		}
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = stat_gain_from_average_dev_tt
-		custom_tooltip = stat_gain_from_average_dev_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_average_dev_math_tt
+		}
 		custom_tooltip = stat_gain_from_republican_tradition_exemplarist_tt
-		custom_tooltip = stat_gain_from_republican_tradition_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_republican_tradition_math_tt
+		}
 		custom_tooltip = stat_gain_from_peasant_zeal_exemplarist_tt
-		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_peasant_zeal_math_tt
+		}
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
 		custom_tooltip = tooltip_line_divider
@@ -236,7 +248,10 @@ country_event = {
 					which = new_candidate_equilibrium
 				}
 			}
-			custom_tooltip = exemplarists_excess_tooltip
+
+			display_verbose_election_event_tooltip_if_toggled = {
+				tooltip = exemplarists_excess_tooltip
+			}
 		}
 		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
 		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
@@ -263,6 +278,7 @@ country_event = {
 	}
 	option = {
 		name = peasant_election_events.1.leaguists_candidate
+		toggle_verbose_election_event_tooltip_effect = yes
 		set_ruler = peasant_leaguists_candidate
 		custom_tooltip = candidate_gets_leaguist_trait_tt
 		hidden_effect = {
@@ -290,16 +306,21 @@ country_event = {
 		}
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = stat_gain_from_commune_dev_tt
-		custom_tooltip = stat_gain_from_commune_dev_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_commune_dev_math_tt
+		}
 		custom_tooltip = stat_gain_from_prestige_tt
-		custom_tooltip = stat_gain_from_prestige_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_prestige_math_tt
+		}
 		custom_tooltip = stat_gain_from_republican_tradition_leaguist_tt
-		custom_tooltip = stat_gain_from_republican_tradition_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_republican_tradition_math_tt
+		}
 		custom_tooltip = stat_gain_from_peasant_zeal_leaguist_tt
-		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_peasant_zeal_math_tt
+		}
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
 		custom_tooltip = tooltip_line_divider
@@ -311,7 +332,10 @@ country_event = {
 					which = new_candidate_equilibrium
 				}
 			}
-			custom_tooltip = leaguists_excess_tooltip
+
+			display_verbose_election_event_tooltip_if_toggled = {
+				tooltip = leaguists_excess_tooltip
+			}
 		}
 		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
 		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
@@ -338,6 +362,7 @@ country_event = {
 	}
 	option = {
 		name = peasant_election_events.1.abolitionists_candidate
+		toggle_verbose_election_event_tooltip_effect = yes
 		set_ruler = peasant_abolitionists_candidate
 		custom_tooltip = candidate_gets_abolitionist_trait_tt
 		hidden_effect = {
@@ -365,16 +390,21 @@ country_event = {
 		}
 		custom_tooltip = tooltip_line_divider
 		custom_tooltip = stat_gain_from_army_prof_tt
-		custom_tooltip = stat_gain_from_army_prof_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_army_prof_math_tt
+		}
 		custom_tooltip = stat_gain_from_power_proj_tt
-		custom_tooltip = stat_gain_from_power_proj_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_power_proj_math_tt
+		}
 		custom_tooltip = stat_gain_from_republican_tradition_abolitionist_tt
-		custom_tooltip = stat_gain_from_republican_tradition_math_tt
-		custom_tooltip = AB_EMPTY
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_republican_tradition_math_tt
+		}
 		custom_tooltip = stat_gain_from_peasant_zeal_abolitionist_tt
-		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
+		display_verbose_election_event_tooltip_if_toggled = {
+			tooltip = stat_gain_from_peasant_zeal_math_tt
+		}
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
 		custom_tooltip = tooltip_line_divider
@@ -386,7 +416,10 @@ country_event = {
 					which = new_candidate_equilibrium
 				}
 			}
-			custom_tooltip = abolitionists_excess_tooltip
+
+			display_verbose_election_event_tooltip_if_toggled = {
+				tooltip = abolitionists_excess_tooltip
+			}
 		}
 		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
 		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt

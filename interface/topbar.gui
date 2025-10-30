@@ -16,6 +16,18 @@ guiTypes = {
 		animation_type = "decelerated"
 		animation_time = 600
 
+		#PotionSeller
+		guiButtonType = {
+			name = "toggle_peasant_election_verbose_tooltips"
+			quadTextureSprite ="GFX_autonomy_macro_empty_button"
+			position = { x= -5 y = 2 }
+			Orientation = "UPPER_LEFT"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			shortcut = "CTRL+t"
+			scripted = yes
+		}
 
 		iconType = {
 			name = "brown_bg"

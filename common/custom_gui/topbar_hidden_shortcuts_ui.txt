@@ -1,0 +1,30 @@
+custom_button = {
+	name = toggle_peasant_election_verbose_tooltips
+	tooltip = AB_EMPTY
+	potential = {
+		FROM = {
+			has_country_flag = in_peasant_elections_event
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = hide_peasant_election_verbose_tooltips
+				}
+			}
+			FROM = {
+				clr_country_flag = hide_peasant_election_verbose_tooltips
+				play_sound = lock_mapmode
+			}
+		}
+		else = {
+			FROM = {
+				set_country_flag = hide_peasant_election_verbose_tooltips
+				play_sound = unlock_mapmode
+			}
+		}
+	}
+}

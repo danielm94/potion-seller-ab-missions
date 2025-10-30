@@ -89,7 +89,9 @@ calculate_protector_little_folk_personality_chances_effect = {
 #SCOPE = COUNTRY
 add_protector_little_folk_personality_on_election_effect = {
 	custom_tooltip = chance_of_getting_protector_little_folk_personality_tt
-	custom_tooltip = chance_of_getting_protector_little_folk_personality_math_tt
+	display_verbose_election_event_tooltip_if_toggled = {
+		tooltip = chance_of_getting_protector_little_folk_personality_math_tt
+	}
 	hidden_effect = {
 		random_variable = {
 			which = personality_roll
@@ -453,4 +455,29 @@ calculate_abolitionist_candidate_after_stats_effect = {
 		var = abolitionist_mil_after
 		max = 6
 	}
+}
+
+#SCOPE = COUNTRY
+display_verbose_election_event_tooltip_if_toggled = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = hide_peasant_election_verbose_tooltips
+			}
+		}
+		custom_tooltip = $tooltip$
+	}
+}
+
+toggle_verbose_election_event_tooltip_effect = {
+	if = {
+		limit = {
+			has_country_flag = hide_peasant_election_verbose_tooltips
+		}
+		custom_tooltip = show_peasant_election_verbose_tooltips_tt
+	}
+	else = {
+		custom_tooltip = hide_peasant_election_verbose_tooltips_tt
+	}
+	custom_tooltip = tooltip_line_divider
 }
