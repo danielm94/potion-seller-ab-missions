@@ -4,6 +4,20 @@ country_event = {
 	id = peasant_election_events.1
 	title = peasant_election_events.1.t
 	desc = peasant_election_events.1.d
+	desc = {
+		desc = peasant_election_events.1.d
+		trigger = {
+			NOT = {
+				has_country_flag = death_election
+			}
+		}
+	}
+	desc = {
+		desc = peasant_election_events.1.d.death
+		trigger = {
+			has_country_flag = death_election
+		}
+	}
 	picture = ELECTION_REPUBLICAN_eventPicture
 	is_triggered_only = yes
 	trigger = {
@@ -248,7 +262,6 @@ country_event = {
 					which = new_candidate_equilibrium
 				}
 			}
-
 			display_verbose_election_event_tooltip_if_toggled = {
 				tooltip = exemplarists_excess_tooltip
 			}
@@ -332,7 +345,6 @@ country_event = {
 					which = new_candidate_equilibrium
 				}
 			}
-
 			display_verbose_election_event_tooltip_if_toggled = {
 				tooltip = leaguists_excess_tooltip
 			}
@@ -416,7 +428,6 @@ country_event = {
 					which = new_candidate_equilibrium
 				}
 			}
-
 			display_verbose_election_event_tooltip_if_toggled = {
 				tooltip = abolitionists_excess_tooltip
 			}

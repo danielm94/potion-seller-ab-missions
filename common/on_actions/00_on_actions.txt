@@ -697,6 +697,7 @@ on_new_term_election = {
 		elections.720		# Dutch Republic
 		elections.800	# Lottery election
 		pirates.1
+		peasant_election_events.1
 	}
 }
 
@@ -712,6 +713,13 @@ on_death_election = {
 		}
 		set_country_flag = pirate_death_election
 		country_event = { id = pirates.1 }
+	}
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		set_country_flag = death_election
+		country_event = { id = peasant_election_events.1 }
 	}
 	events = {
 		701		# Election event

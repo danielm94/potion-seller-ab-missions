@@ -29,6 +29,7 @@ country_event = {
 		NOT = { has_states_general_mechanic = yes }
 		NOT = { has_government_attribute = lottery_election }
 		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = { has_government_mechanic = peasant_zealotry } #PotionSeller
 		NOT = { has_reform = military_dictatorship_reform }
 		NOT = { has_reform = admiralty_reform }
 		NOT = { has_reform = prussian_republic_reform }
@@ -373,7 +374,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_government_attribute = romanian_elective_monarchy }
+		NOT = { has_government_attribute = romanian_elective_monarchy } # PotionSeller
+		NOT = { has_government_mechanic = peasant_zealotry } # PotionSeller
 		NOT = { has_states_general_mechanic = yes }
 		NOT = { has_government_attribute = lottery_election }
 		NOT = { has_government_attribute = is_pirate_republic_reform }
