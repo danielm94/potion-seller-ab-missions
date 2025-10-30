@@ -84,22 +84,10 @@ country_event = {
 				ruler_has_personality = peasant_revolt_leader_personality
 			}
 		}
-		hidden_effect = {
-			faction_fatigue_change_churn = {
-				var = churn_reelect_candidate_change
-			}
-			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_fatction_fatigue_reelect_candidate_change
-			}
-		}
 		change_adm = 1
 		change_dip = 1
 		change_mil = 1
 		add_scaled_republican_tradition = -10
-		custom_tooltip = AB_EMPTY
-		custom_tooltip = protector_of_the_little_folk_bonus_tt
-		custom_tooltip = AB_EMPTY
-		add_protector_little_folk_personality_on_election_effect = yes
 		if = {
 			limit = {
 				has_ruler_flag = exemplarist_ruler
@@ -127,6 +115,20 @@ country_event = {
 				influence = 10
 			}
 		}
+		custom_tooltip = fatigue_gain_modifier_reelect_candidate_change_tt
+		custom_tooltip = min_faction_fatigue_reelect_candidate_change_tt
+		hidden_effect = {
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_reelect_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_faction_fatigue_reelect_candidate_change
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = protector_of_the_little_folk_bonus_tt
+		custom_tooltip = AB_EMPTY
+		add_protector_little_folk_personality_on_election_effect = yes
 	}
 	option = {
 		name = peasant_election_events.1.keep_protector
@@ -135,11 +137,11 @@ country_event = {
 			ruler_has_personality = peasant_revolt_leader_personality
 		}
 		hidden_effect = {
-			faction_fatigue_change_churn = {
-				var = churn_reelect_candidate_change
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_reelect_candidate_change
 			}
 			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_fatction_fatigue_reelect_candidate_change
+				var = min_faction_fatigue_reelect_candidate_change
 			}
 		}
 		change_adm = 1
@@ -174,6 +176,16 @@ country_event = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+		}
+		custom_tooltip = fatigue_gain_modifier_reelect_candidate_change_tt
+		custom_tooltip = min_faction_fatigue_reelect_candidate_change_tt
+		hidden_effect = {
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_reelect_candidate_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_faction_fatigue_reelect_candidate_change
 			}
 		}
 	}
@@ -215,6 +227,19 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = faction_fatigue_exemplarists_tt
+		if = {
+			limit = {
+				is_variable_greater_than = {
+					var = new_exemplarists_count
+					which = new_candidate_equilibrium
+				}
+			}
+			custom_tooltip = exemplarists_excess_tooltip
+		}
+		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
+		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
 		if = {
 			limit = {
 				is_variable_greater_than = {
@@ -222,18 +247,16 @@ country_event = {
 					value = 0
 				}
 			}
-			custom_tooltip = tooltip_line_divider
-			custom_tooltip = faction_fatigue_exemplarists_tt
 			faction_fatigue_apply_candidate_penalties = {
 				faction = exemplarists
 			}
 		}
 		hidden_effect = {
-			faction_fatigue_change_churn = {
-				var = churn_new_candidate_change
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_new_candidate_change
 			}
 			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_fatction_fatigue_new_candidate_change
+				var = min_faction_fatigue_new_candidate_change
 			}
 			faction_fatigue_increment_exemplarists_new_candidate_victories = yes
 		}
@@ -279,6 +302,19 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = faction_fatigue_leaguists_tt
+		if = {
+			limit = {
+				is_variable_greater_than = {
+					var = new_leaguists_count
+					which = new_candidate_equilibrium
+				}
+			}
+			custom_tooltip = leaguists_excess_tooltip
+		}
+		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
+		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
 		if = {
 			limit = {
 				is_variable_greater_than = {
@@ -286,18 +322,16 @@ country_event = {
 					value = 0
 				}
 			}
-			custom_tooltip = tooltip_line_divider
-			custom_tooltip = faction_fatigue_leaguists_tt
 			faction_fatigue_apply_candidate_penalties = {
 				faction = leaguists
 			}
 		}
 		hidden_effect = {
-			faction_fatigue_change_churn = {
-				var = churn_new_candidate_change
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_new_candidate_change
 			}
 			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_fatction_fatigue_new_candidate_change
+				var = min_faction_fatigue_new_candidate_change
 			}
 			faction_fatigue_increment_leaguists_new_candidate_victories = yes
 		}
@@ -343,6 +377,19 @@ country_event = {
 		custom_tooltip = stat_gain_from_peasant_zeal_math_tt
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = faction_fatigue_abolitionists_tt
+		if = {
+			limit = {
+				is_variable_greater_than = {
+					var = new_abolitionists_count
+					which = new_candidate_equilibrium
+				}
+			}
+			custom_tooltip = abolitionists_excess_tooltip
+		}
+		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
+		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
 		if = {
 			limit = {
 				is_variable_greater_than = {
@@ -350,18 +397,16 @@ country_event = {
 					value = 0
 				}
 			}
-			custom_tooltip = tooltip_line_divider
-			custom_tooltip = faction_fatigue_abolitionists_tt
 			faction_fatigue_apply_candidate_penalties = {
 				faction = abolitionists
 			}
 		}
 		hidden_effect = {
-			faction_fatigue_change_churn = {
-				var = churn_new_candidate_change
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_new_candidate_change
 			}
 			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_fatction_fatigue_new_candidate_change
+				var = min_faction_fatigue_new_candidate_change
 			}
 			faction_fatigue_increment_abolitionists_new_candidate_victories = yes
 		}
