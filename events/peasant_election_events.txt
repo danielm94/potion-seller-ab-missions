@@ -89,6 +89,7 @@ country_event = {
 			}
 		}
 		toggle_verbose_election_event_tooltip_effect = yes
+		custom_tooltip = remains_ruler
 		change_adm = 1
 		change_dip = 1
 		change_mil = 1
@@ -97,6 +98,7 @@ country_event = {
 			limit = {
 				has_ruler_flag = exemplarist_ruler
 			}
+			add_adm_power = 50
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
@@ -106,6 +108,7 @@ country_event = {
 			limit = {
 				has_ruler_flag = leaguist_ruler
 			}
+			add_dip_power = 50
 			add_faction_influence = {
 				faction = leaguists_faction
 				influence = 10
@@ -115,6 +118,7 @@ country_event = {
 			limit = {
 				has_ruler_flag = abolitionist_ruler
 			}
+			add_mil_power = 50
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
@@ -143,14 +147,7 @@ country_event = {
 			ruler_has_personality = peasant_revolt_leader_personality
 		}
 		toggle_verbose_election_event_tooltip_effect = yes
-		hidden_effect = {
-			faction_fatigue_change_fatigue_gain_modifier = {
-				var = fatigue_gain_modifier_reelect_candidate_change
-			}
-			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_faction_fatigue_reelect_candidate_change
-			}
-		}
+		custom_tooltip = remains_ruler
 		change_adm = 1
 		change_dip = 1
 		change_mil = 1
@@ -162,6 +159,7 @@ country_event = {
 			limit = {
 				has_ruler_flag = exemplarist_ruler
 			}
+			add_adm_power = 50
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
@@ -171,6 +169,7 @@ country_event = {
 			limit = {
 				has_ruler_flag = leaguist_ruler
 			}
+			add_dip_power = 50
 			add_faction_influence = {
 				faction = leaguists_faction
 				influence = 10
@@ -180,6 +179,7 @@ country_event = {
 			limit = {
 				has_ruler_flag = abolitionist_ruler
 			}
+			add_mil_power = 50
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
