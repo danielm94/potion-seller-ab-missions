@@ -42,3 +42,5 @@
  exemplarists_excess_tooltip: "§g- §YThe Exemplarists§! have more new candidate victories (§R[Root.new_exemplarists_count.GetValue]§!) than the equilibrium (§Y[Root.new_candidate_equilibrium.GetValue]§!). Because of this imbalance, the §YFaction Fatigue§! for this candidate will be §Rmuch higher§!.§!"
  leaguists_excess_tooltip: "§g- §YThe Leaguists§! have more new candidate victories (§R[Root.new_leaguists_count.GetValue]§!) than the equilibrium (§Y[Root.new_candidate_equilibrium.GetValue]§!). Because of this imbalance, the §YFaction Fatigue§! for this candidate will be §Rmuch higher§!.§!"
  abolitionists_excess_tooltip: "§g- §YThe Abolitionists§! have more new candidate victories (§R[Root.new_abolitionists_count.GetValue]§!) than the equilibrium (§Y[Root.new_candidate_equilibrium.GetValue]§!). Because of this imbalance, the §YFaction Fatigue§! for this candidate will be §Rmuch higher§!.§!"
+ peasant_election_events.2.t: "$TODO$"
+ peasant_election_events.2.d: "$TODO$"

@@ -92,27 +92,49 @@ add_protector_little_folk_personality_on_election_effect = {
 	display_verbose_election_event_tooltip_if_toggled = {
 		tooltip = chance_of_getting_protector_little_folk_personality_math_tt
 	}
-	hidden_effect = {
-		random_variable = {
-			which = personality_roll
-			value = 100
+	if = {
+		limit = {
+			NOT = {
+				ruler_has_personality = peasant_revolt_leader_personality
+			}
 		}
-		if = {
-			limit = {
-				OR = {
-					NOT = {
-						check_variable = {
+		hidden_effect = {
+			random_variable = {
+				which = personality_roll
+				value = 100
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							check_variable = {
+								which = personality_roll
+								which = total_chance_of_little_folk_personality
+							}
+						}
+						is_variable_equal = {
 							which = personality_roll
 							which = total_chance_of_little_folk_personality
 						}
 					}
-					is_variable_equal = {
-						which = personality_roll
-						which = total_chance_of_little_folk_personality
+				}
+				get_number_of_ruler_personalities = {
+					var_name = num_personalities
+				}
+				if = {
+					limit = {
+						check_variable = {
+							num_personalities = 3
+						}
+					}
+					country_event = {
+						id = peasant_election_events.2
 					}
 				}
+				else = {
+					add_ruler_personality = peasant_revolt_leader_personality
+				}
 			}
-			add_ruler_personality = peasant_revolt_leader_personality
 		}
 	}
 }
