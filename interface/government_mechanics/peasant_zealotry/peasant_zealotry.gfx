@@ -62,4 +62,11 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_peasant_zeal_alert_icon"
+		texturefile = "gfx\interface\alert_icons\peasant_zeal_alert_icon.dds"
+		noOfFrames = 1
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
 }
