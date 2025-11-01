@@ -6,7 +6,7 @@ sister_commune = {
 	# Properties
 	overlord_can_attack = no
 	takes_diplo_slot = yes
-	uses_military_focus = no
+	uses_military_focus = yes
 	overlord_protects_external = yes
 	counts_for_borders = no
 	can_be_annexed = no
@@ -15,7 +15,7 @@ sister_commune = {
 	gets_help_with_rebels = yes
 	share_rebel_popup = no
 	can_transfer_in_peace = no
-	can_set_mil_focus = no
+	can_set_mil_focus = yes
 	can_send_missionary_to_subject = no
 	does_overlord_size_count_for_warscore_cost = no
 	can_concentrate_development = no
@@ -23,9 +23,8 @@ sister_commune = {
 	can_gain_favors = yes
 	trust_on_start = 0
 	should_quit_wars_on_activation = no
-	can_send_tribute = yes
 	# Liberty Desire & Contributions
-	base_liberty_desire = -100
+	base_liberty_desire = -60
 	liberty_desire_development_ratio = 0.125
 	liberty_desire_revolution = 0
 	military_focus = 10
@@ -58,40 +57,9 @@ sister_commune = {
 	divert_trade = yes
 	# (immediate)
 	enforce_religion = no
-	bestow_gifts = yes
 	send_additional_troops = yes
 	# Modifiers:
 	modifier_subject = clear	# Clears the "subject_nation" modifier inherited from default
-	modifier_subject = {
-		modifier = tributary_state_behind_overlord_tech_adm
-		trigger = {
-			ROOT = {
-				NOT = {
-					adm_tech = FROM
-				}
-			}
-		}
-	}
-	modifier_subject = {
-		modifier = tributary_state_behind_overlord_tech_dip
-		trigger = {
-			ROOT = {
-				NOT = {
-					dip_tech = FROM
-				}
-			}
-		}
-	}
-	modifier_subject = {
-		modifier = tributary_state_behind_overlord_tech_mil
-		trigger = {
-			ROOT = {
-				NOT = {
-					mil_tech = FROM
-				}
-			}
-		}
-	}
 	overlord_opinion_modifier = sister_commune_opinion
 	subject_opinion_modifier = sister_commune_opinion
 	modifier_subject = {
