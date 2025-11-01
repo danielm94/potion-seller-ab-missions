@@ -503,3 +503,91 @@ toggle_verbose_election_event_tooltip_effect = {
 	}
 	custom_tooltip = tooltip_line_divider
 }
+
+ten_year_plan_cost_scripted_effect = {
+	if = {
+		limit = {
+			current_age = age_of_imperialism
+		}
+		[[exemplarists]
+		add_adm_power = -250
+		add_years_of_income = -2.5
+		]
+		[[leaguists]
+		add_dip_power = -250
+		add_years_of_income = -2.5
+		]
+		[[abolitionists]
+		add_mil_power = -250
+		add_years_of_income = -2.5
+		]
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		[[exemplarists]
+		add_adm_power = -200
+		add_years_of_income = -2
+		]
+		[[leaguists]
+		add_dip_power = -200
+		add_years_of_income = -2
+		]
+		[[abolitionists]
+		add_mil_power = -200
+		add_years_of_income = -2
+		]
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		[[exemplarists]
+		add_adm_power = -150
+		add_years_of_income = -1.5
+		]
+		[[leaguists]
+		add_dip_power = -150
+		add_years_of_income = -1.5
+		]
+		[[abolitionists]
+		add_mil_power = -150
+		add_years_of_income = -1.5
+		]
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		[[exemplarists]
+		add_adm_power = -100
+		add_years_of_income = -1
+		]
+		[[leaguists]
+		add_dip_power = -100
+		add_years_of_income = -1
+		]
+		[[abolitionists]
+		add_mil_power = -100
+		add_years_of_income = -1
+		]
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		[[exemplarists]
+		add_adm_power = -50
+		add_years_of_income = -0.5
+		]
+		[[leaguists]
+		add_dip_power = -50
+		add_years_of_income = -0.5
+		]
+		[[abolitionists]
+		add_mil_power = -50
+		add_years_of_income = -0.5
+		]
+	}
+}

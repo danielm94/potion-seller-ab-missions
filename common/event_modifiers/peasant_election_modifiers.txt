@@ -1,5 +1,6 @@
 exemplarists_dev_plan = {
 	development_cost_modifier = -0.05
+	expand_infrastructure_cost_modifier = -0.05
 }
 
 exemplarists_build_plan = {
@@ -20,7 +21,7 @@ exemplarists_reform_the_commune_plan = {
 
 exemplarists_modernize_plan = {
 	technology_cost = -0.1
-	yearly_innovativeness = 0.1
+	innovativeness_gain = 0.1
 }
 
 leaguists_integration_plan = {

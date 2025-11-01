@@ -298,6 +298,13 @@ country_event = {
 			}
 			faction_fatigue_increment_exemplarists_new_candidate_victories = yes
 		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = ten_year_plan_event_exemplarists_tt
+		hidden_effect = {
+			country_event = {
+				id = peasant_election_events.3
+			}
+		}
 	}
 	option = {
 		name = peasant_election_events.1.leaguists_candidate
@@ -380,6 +387,13 @@ country_event = {
 				var = min_faction_fatigue_new_candidate_change
 			}
 			faction_fatigue_increment_leaguists_new_candidate_victories = yes
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = ten_year_plan_event_leaguists_tt
+		hidden_effect = {
+			country_event = {
+				id = peasant_election_events.4
+			}
 		}
 	}
 	option = {
@@ -464,10 +478,17 @@ country_event = {
 			}
 			faction_fatigue_increment_abolitionists_new_candidate_victories = yes
 		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = ten_year_plan_event_abolitionists_tt
+		hidden_effect = {
+			country_event = {
+				id = peasant_election_events.5
+			}
+		}
 	}
 }
 
-#Remove personality for Augustus
+#Choose Personality To Replace With Protector of Little Folk
 country_event = {
 	id = peasant_election_events.2
 	title = peasant_election_events.2.t
@@ -989,4 +1010,682 @@ country_event = {
 		remove_ruler_personality = impaler3_personality
 		add_ruler_personality = peasant_revolt_leader_personality
 	}
+}
+
+#10 year plan - Exemplarists
+country_event = {
+	id = peasant_election_events.3
+	title = peasant_election_events.ten_year_plan_title
+	desc = peasant_election_events.3.d
+	picture = LIBERUM_VETO_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = peasant_election_events.no_plan
+		add_prestige = -10
+		change_peasant_zeal = {
+			value = -5
+			scaled_with_gain_modifier = no
+		}
+	}
+	option = {
+		name = peasant_election_events.3.exemplarists_dev_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = exemplarists_dev_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = exemplarists_dev_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			exemplarists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.3.exemplarists_build_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = exemplarists_build_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = exemplarists_build_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			exemplarists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.3.exemplarists_reform_banking_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = exemplarists_reform_banking_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = exemplarists_reform_banking_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			exemplarists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.3.exemplarists_reform_the_commune_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = exemplarists_reform_the_commune_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = exemplarists_reform_the_commune_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			exemplarists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.3.exemplarists_modernize_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = exemplarists_modernize_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = exemplarists_modernize_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			exemplarists = yes
+		}
+	}
+}
+
+#10 year plan - Leaguists
+country_event = {
+	id = peasant_election_events.4
+	title = peasant_election_events.ten_year_plan_title
+	desc = peasant_election_events.4.d
+	picture = LIBERUM_VETO_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = peasant_election_events.no_plan
+		add_prestige = -10
+		change_peasant_zeal = {
+			value = -5
+			scaled_with_gain_modifier = no
+		}
+	}
+	option = {
+		name = peasant_election_events.4.leaguists_integration_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = leaguists_integration_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = leaguists_integration_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			leaguists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.4.leaguists_expand_diplomatic_corps_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = leaguists_expand_diplomatic_corps_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = leaguists_expand_diplomatic_corps_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			leaguists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.4.leaguists_improve_communal_image_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = leaguists_improve_communal_image_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = leaguists_improve_communal_image_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			leaguists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.4.leaguists_expand_trade_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = leaguists_expand_trade_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = leaguists_expand_trade_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			leaguists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.4.leaguists_establish_spheres_of_influence_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = leaguists_establish_spheres_of_influence_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = leaguists_establish_spheres_of_influence_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			leaguists = yes
+		}
+	}
+}
+
+#10 year plan - Abolitionists
+country_event = {
+	id = peasant_election_events.5
+	title = peasant_election_events.ten_year_plan_title
+	desc = peasant_election_events.5.d
+	picture = LIBERUM_VETO_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = peasant_election_events.no_plan
+		add_prestige = -10
+		change_peasant_zeal = {
+			value = -5
+			scaled_with_gain_modifier = no
+		}
+	}
+	option = {
+		name = peasant_election_events.5.abolitionists_spy_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = abolitionists_spy_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = abolitionists_spy_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			abolitionists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.5.abolitionists_establish_standards_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = abolitionists_establish_standards_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = abolitionists_establish_standards_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			abolitionists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.5.abolitionists_professionalize_peasants_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = abolitionists_professionalize_peasants_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = abolitionists_professionalize_peasants_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			abolitionists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.5.abolitionists_rally_the_peasants_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = abolitionists_rally_the_peasants_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = abolitionists_rally_the_peasants_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			abolitionists = yes
+		}
+	}
+	option = {
+		name = peasant_election_events.5.abolitionists_global_liberation_plan
+		custom_tooltip = ten_years_plan_tt
+		tooltip = {
+			add_ruler_modifier = {
+				name = abolitionists_global_liberation_plan
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = abolitionists_global_liberation_plan_flag
+		}
+		ten_year_plan_cost_scripted_effect = {
+			abolitionists = yes
+		}
+	}
+}
+
+#10 Year Plan Fruition - Dev Plan
+country_event = {
+    id = peasant_election_events.6
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.6.d
+    picture = TRADE_GOODS_eventPicture
+	trigger = {
+		had_ruler_flag = {
+			flag = exemplarists_dev_plan_flag
+			days = 3650
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clr_ruler_flag = exemplarists_dev_plan_flag
+		}
+	}
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = exemplarists_dev_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Build Plan
+country_event = {
+    id = peasant_election_events.7
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.7.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = exemplarists_build_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = exemplarists_build_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = exemplarists_build_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Reform Banking Plan
+country_event = {
+    id = peasant_election_events.8
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.8.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = exemplarists_reform_banking_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = exemplarists_reform_banking_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = exemplarists_reform_banking_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Reform the Commune
+country_event = {
+    id = peasant_election_events.9
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.9.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = exemplarists_reform_the_commune_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = exemplarists_reform_the_commune_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = exemplarists_reform_the_commune_plan
+            duration = -1
+        }
+    }
+}
+#10 Year Plan Fruition - Modernize Plan
+country_event = {
+    id = peasant_election_events.10
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.10.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = exemplarists_modernize_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = exemplarists_modernize_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = exemplarists_modernize_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Leaguists Integration
+country_event = {
+    id = peasant_election_events.11
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.11.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = leaguists_integration_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = leaguists_integration_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = leaguists_integration_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Leaguists Diplomatic Corps
+country_event = {
+    id = peasant_election_events.12
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.12.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = leaguists_expand_diplomatic_corps_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = leaguists_expand_diplomatic_corps_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = leaguists_expand_diplomatic_corps_plan
+            duration = -1
+        }
+    }
+}
+#10 Year Plan Fruition - Leaguists Image
+country_event = {
+    id = peasant_election_events.13
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.13.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = leaguists_improve_communal_image_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = leaguists_improve_communal_image_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = leaguists_improve_communal_image_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Leaguists Trade
+country_event = {
+    id = peasant_election_events.14
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.14.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = leaguists_expand_trade_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = leaguists_expand_trade_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = leaguists_expand_trade_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Leaguists Spheres
+country_event = {
+    id = peasant_election_events.15
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.15.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = leaguists_establish_spheres_of_influence_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = leaguists_establish_spheres_of_influence_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = leaguists_establish_spheres_of_influence_plan
+            duration = -1
+        }
+    }
+}
+#10 Year Plan Fruition - Abolitionists Spy Plan
+country_event = {
+    id = peasant_election_events.16
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.16.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = abolitionists_spy_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = abolitionists_spy_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = abolitionists_spy_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Abolitionists Establish Standards
+country_event = {
+    id = peasant_election_events.17
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.17.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = abolitionists_establish_standards_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = abolitionists_establish_standards_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = abolitionists_establish_standards_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Abolitionists Professionalize Peasants
+country_event = {
+    id = peasant_election_events.18
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.18.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = abolitionists_professionalize_peasants_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = abolitionists_professionalize_peasants_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = abolitionists_professionalize_peasants_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Abolitionists Rally the Peasants
+country_event = {
+    id = peasant_election_events.19
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.19.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = abolitionists_rally_the_peasants_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = abolitionists_rally_the_peasants_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = abolitionists_rally_the_peasants_plan
+            duration = -1
+        }
+    }
+}
+
+#10 Year Plan Fruition - Abolitionists Global Liberation
+country_event = {
+    id = peasant_election_events.20
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.20.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = abolitionists_global_liberation_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = abolitionists_global_liberation_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = abolitionists_global_liberation_plan
+            duration = -1
+        }
+    }
 }
