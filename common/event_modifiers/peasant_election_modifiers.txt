@@ -1,0 +1,74 @@
+exemplarists_dev_plan = {
+	development_cost_modifier = -0.05
+}
+
+exemplarists_build_plan = {
+	build_cost = -0.1
+	build_time = -0.15
+}
+
+exemplarists_reform_banking_plan = {
+	interest = -1
+	inflation_reduction = 0.1
+	monthly_gold_inflation_modifier = -0.5
+}
+
+exemplarists_reform_the_commune_plan = {
+	reform_progress_growth = 0.25
+	adm_advisor_cost = -0.1
+}
+
+exemplarists_modernize_plan = {
+	technology_cost = -0.1
+	yearly_innovativeness = 0.1
+}
+
+leaguists_integration_plan = {
+	diplomatic_annexation_cost = -0.05
+	diplomatic_reputation = 1
+}
+
+leaguists_expand_diplomatic_corps_plan = {
+	diplomatic_upkeep = 2
+	dip_advisor_cost = -0.1
+}
+
+leaguists_improve_communal_image_plan = {
+	improve_relation_modifier = 0.25
+	prestige_decay = -0.005
+}
+
+leaguists_expand_trade_plan = {
+	global_trade_power = 0.1
+	trade_steering = 0.1
+}
+
+leaguists_establish_spheres_of_influence_plan = {
+	accept_vassalization_reasons = 20
+	can_transfer_vassal_wargoal = yes
+}
+
+abolitionists_spy_plan = {
+	rebel_support_efficiency = 1
+	spy_action_cost_modifier = -0.25
+}
+
+abolitionists_establish_standards_plan = {
+	discipline = 0.05
+	army_tradition = 0.05
+}
+
+abolitionists_professionalize_peasants_plan = {
+	drill_gain_modifier = 0.40
+	mil_advisor_cost = -0.1
+}
+
+abolitionists_rally_the_peasants_plan = {
+	reinforce_speed = 0.33
+	manpower_recovery_speed = 0.1
+}
+
+abolitionists_global_liberation_plan = {
+	ae_impact = -0.15
+	recover_army_morale_speed = 0.05
+}
