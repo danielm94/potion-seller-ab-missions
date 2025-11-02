@@ -2159,6 +2159,10 @@ calculate_spy_action_cost_var = {
 		which = $spy_action_cost_var$
 		which = $spy_action_base_cost$
 	}
+	variable_limit_min = {
+		var = $spy_action_cost_var$
+		min = 0
+	}
 }
 
 #SCOPE = COUNTRY
