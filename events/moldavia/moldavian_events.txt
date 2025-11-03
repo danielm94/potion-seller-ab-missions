@@ -19,6 +19,9 @@ country_event = {
 	}
 	picture = BIG_BOOK_eventPicture
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = in_moldavian_events.1
+	}
 	option = {
 		name = nevermind
 		trigger = {
@@ -97,5 +100,6 @@ country_event = {
 	}
 	after = {
 		set_country_flag = unlocked_mop_country_rename_decision
+		clr_country_flag = in_moldavian_events.1
 	}
 }
