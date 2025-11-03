@@ -196,7 +196,9 @@ invest_adm_commune_integration = {
 		is_investing_adm_power_in_commune = no
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -243,7 +245,9 @@ cancel_invest_adm_commune_integration = {
 		is_investing_adm_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -267,7 +271,9 @@ invest_dip_commune_integration = {
 		is_investing_dip_power_in_commune = no
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -305,7 +311,9 @@ cancel_invest_dip_commune_integration = {
 		is_investing_dip_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -329,7 +337,9 @@ invest_mil_commune_integration = {
 		is_investing_mil_power_in_commune = no
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -366,7 +376,9 @@ cancel_invest_mil_commune_integration = {
 		is_investing_mil_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -389,7 +401,9 @@ invest_republican_tradition_commune_integration = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -428,8 +442,9 @@ stage_coup_commune_integration = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
-			is_commune_subject_being_integrated = yes
 			is_subject_of = ROOT
+			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
@@ -521,6 +536,65 @@ stage_coup_commune_integration = {
 				who = overlord
 				modifier = commune_staged_coup_against_another_commune
 			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+convert_subject_to_commune = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_subject_of = PREV
+			is_commune_subject = no
+			is_commune_subject_being_integrated = no
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			is_subject_loyaly_enough_to_convert_to_commune = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = not_currently_integrating_a_commune_subject
+			is_integrating_commune_subject = no
+		}
+		NOT = {
+			truce_with = FROM
+		}
+		NOT = {
+			FROM = {
+				truce_with = PREV
+			}
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		enable_commune_integration_overlord = yes
+		FROM = {
+			save_global_event_target_as = commune_being_integrated
+			initialize_commune_integration_progress = yes
+			calculate_commune_integration_cost = yes
+			initialize_integration_progress_percentage_variable = yes
+			enable_commune_integration_subject = yes
+			calculate_monthly_commune_integration_progress = yes
 		}
 	}
 	ai_will_do = {

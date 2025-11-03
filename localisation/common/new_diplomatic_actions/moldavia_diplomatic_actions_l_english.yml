@@ -64,3 +64,8 @@
  stage_coup_commune_integration_desc: "Description"
  stage_coup_commune_integration_tooltip: "Current Integration Progress: §Y[From.commune_integration_progress.GetValue]§! / §Y[From.commune_integration_cost.GetValue]§!"
  stage_coup_commune_integration_alert_tooltip: "£allied_commune£Stage Coup in Commune£allied_commune£"
+ convert_subject_to_commune: "£integrated_commune£ Establish Commune £integrated_commune£"
+ convert_subject_to_commune_title: "£integrated_commune£ Establish Commune £integrated_commune£"
+ convert_subject_to_commune_desc: "Description"
+ convert_subject_to_commune_tooltip: "Description"
+ convert_subject_to_commune_alert_tooltip: "£integrated_commune£ Establish Commune £integrated_commune£"

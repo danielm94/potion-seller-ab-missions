@@ -113,21 +113,21 @@ calculate_commune_integration_cost = {
 		limit = {
 			is_subject_of_type = allied_commune
 		}
-		set_variable = {
-			subject_type_annexation_cost_multiplier = 3
+		get_allied_commune_annexation_cost_multiplier = {
+			var = subject_type_annexation_cost_multiplier
 		}
 	}
 	else_if = {
 		limit = {
 			is_subject_of_type = sister_commune
 		}
-		set_variable = {
-			subject_type_annexation_cost_multiplier = 5
+		get_sister_commune_annexation_cost_multiplier = {
+			var = subject_type_annexation_cost_multiplier
 		}
 	}
 	else = {
-		set_variable = {
-			subject_type_annexation_cost_multiplier = 6
+		get_subject_to_commune_annexation_cost_multiplier = {
+			var = subject_type_annexation_cost_multiplier
 		}
 	}
 	set_variable = {
@@ -311,11 +311,12 @@ change_commune_integration_progress_as_percentage_of_cost = {
 		var = integration_cost_temp
 	}
 }
+
 #SCOPE = COUNTRY
 calculate_monthly_commune_integration_progress = {
 	if = {
 		limit = {
-			is_commune_subject_being_integrated = yes
+			is_commune_subject = yes
 		}
 		set_variable = {
 			which = peasant_zeal_amount
@@ -340,6 +341,86 @@ calculate_monthly_commune_integration_progress = {
 		divide_variable = {
 			which = commune_integration_progress_change
 			value = 400
+		}
+	}
+	else = {
+		overlord = {
+			calculate_monthly_subject_to_commune_integration_progress = yes
+		}
+	}
+}
+
+calculate_monthly_subject_to_commune_integration_progress = {
+	get_base_dip_investment_monthly_cost = {
+		var = subject_to_commune_monthly_change
+	}
+	export_to_variable = {
+		which = diplo_rep
+		value = modifier:diplomatic_reputation
+	}
+	variable_truncate_decimal = {
+		var = diplo_rep
+	}
+	change_variable = {
+		which = subject_to_commune_monthly_change
+		which = diplo_rep
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					subject_to_commune_monthly_change = 1
+				}
+			}
+		}
+		set_variable = {
+			subject_to_commune_monthly_change = 0
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				dip_power = 0
+			}
+			export_to_variable = {
+				which = dip_power_var
+				value = trigger_value:dip_power
+			}
+		}
+		else = {
+			set_variable = {
+				dip_power_var = 0
+			}
+		}
+		#If you don't have enough dip points for monthly cost, the amount deducted will be what you have.
+		if = {
+			limit = {
+				check_variable = {
+					which = subject_to_commune_monthly_change
+					which = dip_power_var
+				}
+			}
+			set_variable = {
+				which = subject_to_commune_monthly_change
+				which = dip_power_var
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				subject_to_commune_monthly_change = 1
+			}
+		}
+		set_variable = {
+			which = commune_integration_progress_change
+			which = subject_to_commune_monthly_change
+		}
+		event_target:commune_being_integrated = {
+			set_variable = {
+				which = commune_integration_progress_change
+				which = PREV
+			}
 		}
 	}
 }
@@ -773,4 +854,22 @@ clear_commune_integration_investments = {
 	remove_country_modifier = investing_admin_commune
 	remove_country_modifier = investing_dip_commune
 	remove_country_modifier = investing_mil_commune
+}
+
+get_allied_commune_annexation_cost_multiplier = {
+	set_variable = {
+		$var$ = 3
+	}
+}
+
+get_sister_commune_annexation_cost_multiplier = {
+	set_variable = {
+		$var$ = 5
+	}
+}
+
+get_subject_to_commune_annexation_cost_multiplier = {
+	set_variable = {
+		$var$ = 8
+	}
 }

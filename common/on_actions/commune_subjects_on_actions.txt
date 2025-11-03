@@ -18,13 +18,42 @@ on_monthly_pulse = {
 				is_commune_subject_being_integrated = yes
 			}
 			calculate_monthly_commune_integration_progress = yes
-			overlord = {
-				calculate_overlord_adm_investment_integration_progress_gain = yes
-				apply_overlord_adm_investment_costs = yes
-				calculate_overlord_dip_investment_integration_progress_gain = yes
-				apply_overlord_dip_investment_costs = yes
-				calculate_overlord_mil_investment_integration_progress_gain = yes
-				apply_overlord_mil_investment_costs = yes
+			if = {
+				limit = {
+					is_commune_subject = yes
+				}
+				overlord = {
+					calculate_overlord_adm_investment_integration_progress_gain = yes
+					apply_overlord_adm_investment_costs = yes
+					calculate_overlord_dip_investment_integration_progress_gain = yes
+					apply_overlord_dip_investment_costs = yes
+					calculate_overlord_mil_investment_integration_progress_gain = yes
+					apply_overlord_mil_investment_costs = yes
+				}
+			}
+			else = {
+				overlord = {
+					calculate_monthly_subject_to_commune_integration_progress = yes
+					set_variable = {
+						which = commune_integration_progress_change
+						which = PREV
+					}
+					set_variable = {
+						which = cost
+						which =  commune_integration_progress_change
+					}
+					variable_limit_min = {
+						var = cost
+						min = 0
+					}
+					variable_make_negative = {
+						var = cost
+					}
+					variable_effect = {
+						var = cost
+						effect = add_dip_power
+					}
+				}
 			}
 			variable_change_commune_integration_progress = {
 				var = commune_integration_progress_change

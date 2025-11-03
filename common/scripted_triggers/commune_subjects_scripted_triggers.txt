@@ -46,13 +46,22 @@ is_commune_loyal_enough_to_integrate = {
 }
 
 #SCOPE = COUNTRY
+is_subject_loyaly_enough_to_convert_to_commune = {
+	NOT = {
+		liberty_desire = 1
+	}
+}
+
+#SCOPE = COUNTRY
 is_investing_adm_power_in_commune = {
 	has_country_flag = investing_adm_in_commune
 }
+
 #SCOPE = COUNTRY
 is_investing_dip_power_in_commune = {
 	has_country_flag = investing_dip_in_commune
 }
+
 #SCOPE = COUNTRY
 is_investing_mil_power_in_commune = {
 	has_country_flag = investing_mil_in_commune

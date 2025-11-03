@@ -52,20 +52,9 @@ country_event = {
 					who = event_target:commune_being_integrated
 				}
 			}
-			else_if = {
-				limit = {
-					event_target:commune_being_integrated = {
-						is_subject_of_type = allied_commune
-					}
-				}
-				create_subject = {
-					subject_type = sister_commune
-					who = event_target:commune_being_integrated
-				}
-			}
 			else = {
 				create_subject = {
-					subject_type = allied_commune
+					subject_type = sister_commune
 					who = event_target:commune_being_integrated
 				}
 			}
@@ -78,6 +67,25 @@ country_event = {
 			limit = {
 				NOT = {
 					has_country_flag = no_integrate_penalty
+				}
+			}
+			tooltip = {
+				if = {
+					limit = {
+						event_target:commune_being_integrated = {
+							is_subject_of_type = sister_commune
+						}
+					}
+					create_subject = {
+						subject_type = integrated_commune
+						who = event_target:commune_being_integrated
+					}
+				}
+				else = {
+					create_subject = {
+						subject_type = sister_commune
+						who = event_target:commune_being_integrated
+					}
 				}
 			}
 			add_country_modifier = {
