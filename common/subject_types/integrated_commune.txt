@@ -9,7 +9,6 @@ integrated_commune = {
 	joins_overlords_wars = yes
 	can_be_annexed = yes
 	has_power_projection = no
-	has_overlords_ruler = yes
 	transfer_subjects_when_made = yes
 	gets_help_with_rebels = yes
 	forms_trade_companies = yes
