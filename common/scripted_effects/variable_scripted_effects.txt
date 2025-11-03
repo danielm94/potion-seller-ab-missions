@@ -2303,3 +2303,54 @@ export_faction_influence_to_variable = {
 		}
 	}
 }
+
+#SCOPE = ANY
+variable_truncate_decimal = {
+	if = {
+		limit = {
+			check_variable = {
+				$var$ = 0
+			}
+		}
+		round_variable = {
+			which = $var$
+			value = -1
+		}
+	}
+	else = {
+		round_variable = {
+			which = $var$
+			value = 1
+		}
+	}
+}
+
+#SCOPE = ANY
+variable_make_positive = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					$var$ = 0
+				}
+			}
+		}
+		multiply_variable = {
+			$var$ = -1
+		}
+	}
+}
+
+#SCOPE = ANY
+variable_make_negative = {
+	if = {
+		limit = {
+			check_variable = {
+				$var$ = 0
+			}
+		}
+		multiply_variable = {
+			$var$ = -1
+		}
+	}
+}
