@@ -52,13 +52,27 @@ country_event = {
 					who = event_target:commune_being_integrated
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					event_target:commune_being_integrated = {
+						is_subject_of_type = allied_commune
+					}
+				}
 				create_subject = {
 					subject_type = sister_commune
 					who = event_target:commune_being_integrated
 				}
 			}
-			clear_global_event_target = commune_being_integrated
+			else = {
+				create_subject = {
+					subject_type = sister_commune
+					who = event_target:commune_being_integrated
+				}
+				event_target:commune_being_integrated = {
+					change_government = republic
+					add_government_reform = peasants_republic
+				}
+			}
 		}
 	}
 	option = {
@@ -92,6 +106,9 @@ country_event = {
 				name = "annexers_legacy"
 				duration = 3650
 			}
+		}
+		hidden_effect = {
+			clear_global_event_target = commune_being_integrated
 		}
 	}
 }
