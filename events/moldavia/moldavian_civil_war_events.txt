@@ -150,5 +150,8 @@ country_event = {
 			name = moldavia_civil_war_recovery
 			duration = 3650
 		}
+		country_event = {
+			id = moldavian_events.1
+		}
 	}
 }

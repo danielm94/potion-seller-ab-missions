@@ -1,0 +1,30 @@
+clear_mop_country_name_flags = {
+	clr_country_flag = set_moldavia_name
+	clr_country_flag = set_moldavian_commune_name_EN
+	clr_country_flag = set_moldavian_commune_name_RO
+	clr_country_flag = set_razesi_republic_name_EN
+	clr_country_flag = set_razesi_republic_name_RO
+}
+
+moldavia_name_change_cost_effect = {
+	if = {
+		limit = {
+			has_country_flag = unlocked_mop_country_rename_decision
+		}
+		add_prestige = -1
+	}
+	else = {
+		custom_tooltip = moldavia_name_change_first_one_free_tt
+	}
+}
+
+unlock_rename_decision_tooltip_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_country_rename_decision
+			}
+		}
+		custom_tooltip = unlock_decision_to_rename_mop_tt
+	}
+}

@@ -1,0 +1,101 @@
+namespace = moldavian_events
+#Pick Your Country Name Moldavia
+country_event = {
+	id = moldavian_events.1
+	title = moldavian_events.1.t
+	desc = {
+		desc = moldavian_events.1.civil_war_ended_desc
+		trigger = {
+			NOT = {
+				has_country_flag = unlocked_mop_country_rename_decision
+			}
+		}
+	}
+	desc = {
+		desc = moldavian_events.1.regular_desc
+		trigger = {
+			has_country_flag = unlocked_mop_country_rename_decision
+		}
+	}
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = nevermind
+		trigger = {
+			has_country_flag = unlocked_mop_country_rename_decision
+		}
+	}
+	option = {
+		name = moldavian_events.1.moldavia
+		trigger = {
+			NOT = {
+				exists = MOL
+			}
+			NOT = {
+				has_country_flag = set_moldavia_name
+			}
+		}
+		override_country_name = MOL
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_moldavia_name
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_events.1.moldavian_commune_EN
+		trigger = {
+			NOT = {
+				has_country_flag = set_moldavian_commune_name_EN
+			}
+		}
+		override_country_name = MOP_MOLDAVIAN_COMMUNE_EN
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_moldavian_commune_name_EN
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_events.1.moldavian_commune_RO
+		trigger = {
+			NOT = {
+				has_country_flag = set_moldavian_commune_name_RO
+			}
+		}
+		override_country_name = MOP_MOLDAVIAN_COMMUNE_RO
+		custom_tooltip = romanian_equivalent_of_moldavian_commune_tt
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_moldavian_commune_name_RO
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_events.1.razesi_republic_EN
+		trigger = {
+			NOT = {
+				has_country_flag = set_razesi_republic_name_EN
+			}
+		}
+		override_country_name = MOP_RAZESI_REPUBLIC_EN
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_razesi_republic_name_EN
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_events.1.razesi_republic_RO
+		trigger = {
+			NOT = {
+				has_country_flag = set_razesi_republic_name_RO
+			}
+		}
+		override_country_name = MOP_RAZESI_REPUBLIC_RO
+		custom_tooltip = romanian_equivalent_of_razesi_republic_tt
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_razesi_republic_name_RO
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	after = {
+		set_country_flag = unlocked_mop_country_rename_decision
+	}
+}
