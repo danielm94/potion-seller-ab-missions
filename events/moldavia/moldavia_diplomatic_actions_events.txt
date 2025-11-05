@@ -87,7 +87,7 @@ country_event = {
 				if = {
 					limit = {
 						event_target:commune_being_integrated = {
-							is_subject_of_type = sister_commune
+							is_subject_of_type = integrated_commune
 						}
 					}
 					create_subject = {
@@ -95,9 +95,20 @@ country_event = {
 						who = event_target:commune_being_integrated
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						event_target:commune_being_integrated = {
+							is_subject_of_type = sister_commune
+						}
+					}
 					create_subject = {
 						subject_type = sister_commune
+						who = event_target:commune_being_integrated
+					}
+				}
+				else = {
+					create_subject = {
+						subject_type = allied_commune
 						who = event_target:commune_being_integrated
 					}
 				}
