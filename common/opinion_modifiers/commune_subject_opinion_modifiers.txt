@@ -18,3 +18,9 @@ sister_commune_opinion = {
 integrated_commune_opinion = {
 	opinion = 50
 }
+
+abandoned_communal_league = {
+	opinion = -100
+	min = -200
+	yearly_decay = 2
+}

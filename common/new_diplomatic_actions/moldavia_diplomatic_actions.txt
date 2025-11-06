@@ -67,6 +67,55 @@ incite_peasants = {
 	}
 }
 
+leave_communal_league = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		is_subject_of_type_with_overlord = {
+			who = FROM
+			type = allied_commune
+		}
+	}
+	is_allowed = {
+		NOT = {
+			truce_with = FROM
+		}
+		OR = {
+			NOT = {
+				has_opinion = {
+					who = FROM
+					value = 0
+				}
+			}
+			NOT = {
+				trust = {
+					who = FROM
+					value = 30
+				}
+			}
+			liberty_desire = 50
+		}
+	}
+	on_accept = {
+		overlord = {
+			add_opinion = {
+				who = PREV
+				modifier = abandoned_communal_league
+			}
+			add_casus_belli = {
+				type = cb_reintegrate_into_peasant_league
+				target = PREV
+				months = 300
+			}
+		}
+		grant_independence = yes
+		restore_country_color = yes
+	}
+	ai_will_do = {
+		always = yes
+	}
+}
+
 integrate_commune = {
 	category = influence
 	require_acceptance = no
