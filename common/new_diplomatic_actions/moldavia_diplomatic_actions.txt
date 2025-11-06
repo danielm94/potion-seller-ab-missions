@@ -80,6 +80,11 @@ leave_peasant_league = {
 		NOT = {
 			truce_with = FROM
 		}
+		FROM = {
+			NOT = {
+				truce_with = PREV
+			}
+		}
 		OR = {
 			NOT = {
 				has_opinion = {
@@ -112,7 +117,29 @@ leave_peasant_league = {
 		restore_country_color = yes
 	}
 	ai_will_do = {
-		always = yes
+		NOT = {
+			truce_with = overlord
+		}
+		overlord = {
+			NOT = {
+				truce_with = PREV
+			}
+		}
+		OR = {
+			NOT = {
+				has_opinion = {
+					who = overlord
+					value = 0
+				}
+			}
+			NOT = {
+				trust = {
+					who = overlord
+					value = 30
+				}
+			}
+			liberty_desire = 50
+		}
 	}
 }
 

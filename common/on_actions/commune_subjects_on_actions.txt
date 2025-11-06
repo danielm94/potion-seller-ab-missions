@@ -102,6 +102,25 @@ on_dependency_gained = {
 			initialize_commune_subject = yes
 			if = {
 				limit = {
+					NOT = {
+						truce_with = overlord
+					}
+				}
+				add_truce_with = overlord
+				overlord = {
+					if = {
+						limit = {
+							NOT = {
+								truce_with = PREV
+							}
+						}
+						add_truce_with = PREV
+					}
+					
+				}
+			}
+			if = {
+				limit = {
 					is_subject_of_type = integrated_commune
 				}
 				change_country_color = {
