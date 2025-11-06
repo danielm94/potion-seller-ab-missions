@@ -1,5 +1,5 @@
 ﻿l_english:
  po_reintegrate_into_peasant_league: "Regime Change"
- po_reintegrate_into_peasant_league_desc: "[From.Monarch.GetName] and his band of reactionaries will be executed and replaced by someone loyal to us.\n[From.GetName] will become a commune subject of ours but their level of integration will be reduced."
+ po_reintegrate_into_peasant_league_desc: "[From.Monarch.GetName] and [From.Monarch.GetHerHis] clique of reactionaries will be removed and replaced by a council loyal to the League.\n[From.GetName] will be re-established as a commune subject, though its level of integration will be reduced."
  CB_ALLOWED_po_reintegrate_into_peasant_league: "Regime Change"
  PEACE_po_reintegrate_into_peasant_league: "Regime Change"
