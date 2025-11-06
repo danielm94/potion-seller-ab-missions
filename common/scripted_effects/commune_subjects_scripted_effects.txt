@@ -856,20 +856,45 @@ clear_commune_integration_investments = {
 	remove_country_modifier = investing_mil_commune
 }
 
+#SCOPE = ANY
 get_allied_commune_annexation_cost_multiplier = {
 	set_variable = {
 		$var$ = 3
 	}
 }
 
+#SCOPE = ANY
 get_sister_commune_annexation_cost_multiplier = {
 	set_variable = {
 		$var$ = 5
 	}
 }
 
+#SCOPE = ANY
 get_subject_to_commune_annexation_cost_multiplier = {
 	set_variable = {
 		$var$ = 8
 	}
+}
+
+#SCOPE = COUNTRY
+clear_was_commune_subject_flags = {
+	clr_country_flag = was_allied_commune
+	clr_country_flag = was_sister_commune
+	clr_country_flag = was_integrated_commune
+}
+
+#SCOPE = COUNTRY
+mark_country_as_having_been_allied_commune = {
+	set_country_flag = was_allied_commune
+}
+
+#SCOPE = COUNTRY
+mark_country_as_having_been_sister_commune = {
+	set_country_flag = was_sister_commune
+}
+
+#SCOPE = COUNTRY
+mark_country_as_having_been_integrated_commune = {
+	set_country_flag = was_integrated_commune
 }

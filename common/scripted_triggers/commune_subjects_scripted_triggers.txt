@@ -74,3 +74,16 @@ is_investing_mana_in_commune = {
 		is_investing_mil_power_in_commune = yes
 	}
 }
+
+#SCOPE = COUNTRY
+has_been_allied_commune = {
+	has_country_flag = was_allied_commune
+}
+#SCOPE = COUNTRY
+has_been_sister_commune = {
+	has_country_flag = was_sister_commune
+}
+#SCOPE = COUNTRY
+has_been_integrated_commune = {
+	has_country_flag = was_integrated_commune
+}
