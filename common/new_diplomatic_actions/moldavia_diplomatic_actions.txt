@@ -67,7 +67,7 @@ incite_peasants = {
 	}
 }
 
-leave_communal_league = {
+leave_peasant_league = {
 	category = influence
 	require_acceptance = no
 	is_visible = {
