@@ -4,22 +4,3 @@ cb_moldavia_civil_war = {
 	ai_peace_desire = -30
 	war_goal = moldavian_civil_war_wargoal
 }
-
-cb_great_peasant_uprising = {
-	valid_for_subject = no
-	prerequisites = {
-		is_a_peasant_government = yes
-		has_spawned_supported_rebels = FROM
-		FROM = {
-			has_country_flag = incited_peasants
-			NOT = {
-				had_country_flag = {
-					flag = incited_peasants
-					days = 3650
-				}
-			}
-			is_a_peasant_government = no
-		}
-	}
-	war_goal = overthrow_the_nobility_wargoal
-}

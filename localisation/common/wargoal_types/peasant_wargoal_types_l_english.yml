@@ -1,0 +1,7 @@
+﻿l_english:
+ overthrow_the_nobility_wargoal: "Overthrow the Nobility"
+ overthrow_the_nobility_wargoal_desc: "$TODO$"
+ great_peasant_uprising_war_name: "The Great $SECOND$ Peasant Uprising"
+ reintegrate_into_peasant_league_wargoal: "Reintegrate Them Into the League"
+ reintegrate_into_peasant_league_wargoal_desc: "It's time to remind them of the debt they owe us for their liberation."
+ peasant_regime_change_war_name: "$ORDER$$FIRST$-$SECOND$ Communal Restoration"
