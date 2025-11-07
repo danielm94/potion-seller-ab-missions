@@ -46,6 +46,9 @@ po_punish_the_boieri = {
 				duration = 3650
 			}
 		}
+		country_event = {
+			id = moldavian_civil_war_events.3
+		}
 	}
 	ai_weight = {
 		export_to_variable = {
