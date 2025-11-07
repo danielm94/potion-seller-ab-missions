@@ -215,18 +215,6 @@ is_most_developed_orthodox_province = {
 	}
 }
 
-#SCOPE = COUNTRY
-is_a_peasant_government = {
-	custom_trigger_tooltip = {
-		tooltip = is_a_peasant_government_tooltip
-		OR = {
-			has_reform = peasants_republic
-			has_reform = sfatul_tarii_reform
-			has_reform = moldavian_commune_reform
-		}
-	}
-}
-
 spy_action_cost_trigger = {
 	if = {
 		limit = {
