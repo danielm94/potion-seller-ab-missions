@@ -146,6 +146,11 @@ country_event = {
 		add_stability = 2
 		add_ruler_personality = peasant_revolt_leader_personality
 		add_government_reform = moldavian_commune_reform
+		balance_peasant_faction_influence_effect = yes
+		add_faction_influence = {
+			faction = abolitionists_faction
+			influence = 20
+		}
 		add_country_modifier = {
 			name = moldavia_civil_war_recovery
 			duration = 3650

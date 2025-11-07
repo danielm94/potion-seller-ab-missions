@@ -50,3 +50,33 @@ calculate_stage_coup_cost = {
 		spy_action_base_cost = stage_coup_base_cost_var
 	}
 }
+
+#SCOPE = COUNTRY
+balance_peasant_faction_influence_effect = {
+	hidden_effect = {
+		set_faction_influence_to_0_effect = {
+			faction = exemplarists_faction
+		}
+		add_faction_influence = {
+			faction = exemplarists_faction
+			influence = 33
+			perform_readjustment = no
+		}
+		set_faction_influence_to_0_effect = {
+			faction = leaguists_faction
+		}
+		add_faction_influence = {
+			faction = leaguists_faction
+			influence = 33
+			perform_readjustment = no
+		}
+		set_faction_influence_to_0_effect = {
+			faction = abolitionists_faction
+		}
+		add_faction_influence = {
+			faction = abolitionists_faction
+			influence = 33
+			perform_readjustment = no
+		}
+	}
+}
