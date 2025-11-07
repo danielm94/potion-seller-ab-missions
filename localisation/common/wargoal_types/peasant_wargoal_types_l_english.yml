@@ -4,4 +4,7 @@
  great_peasant_uprising_war_name: "The Great $SECOND$ Peasant Uprising"
  reintegrate_into_peasant_league_wargoal: "Reintegrate Them into the League"
  reintegrate_into_peasant_league_wargoal_desc: "It is time to remind them of the debt they owe the communes that freed them."
- peasant_regime_change_war_name: "$ORDER$$FIRST$-$SECOND$ Communal Restoration"
+ peasant_regime_change_war_name: "$ORDER$$FIRST$-$SECOND$ Reintegration War"
+ force_into_peasant_league_wargoal: "Force Them into the League"
+ force_into_peasant_league_wargoal_desc: "Seize the enemy capital and compel their councils to sign the League Charter."
+ force_into_peasant_league_war_name: "$ORDER$$FIRST$–$SECOND$ Peasant War"

@@ -1,0 +1,5 @@
+﻿l_english:
+ po_force_into_peasant_league: "Establish Allied Commune"
+ po_force_into_peasant_league_desc: "[From.GetName] will be reorganized as an Allied Commune under our leadership. The old regime will be removed and a communal government installed."
+ CB_ALLOWED_po_force_into_peasant_league: "Establish Allied Commune"
+ PEACE_po_force_into_peasant_league: "Establish Allied Commune"

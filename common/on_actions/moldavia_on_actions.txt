@@ -7,11 +7,35 @@ on_monthly_pulse = {
 	}
 }
 
+on_monthly_pulse = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		export_government_power_to_variable = {
+			mechanic_type = peasant_zealotry
+			power_type = peasant_zeal
+		}
+	}
+}
+
 on_startup = {
 	if = {
 		limit = {
 			ai = no
 		}
 		calculate_spy_action_cost_values = yes
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		export_government_power_to_variable = {
+			mechanic_type = peasant_zealotry
+			power_type = peasant_zeal
+		}
 	}
 }

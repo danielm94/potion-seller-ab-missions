@@ -1,0 +1,71 @@
+po_force_into_peasant_league = {
+	# Show in treaties tab
+	category = 6
+	prestige_base = 0.1
+	ae_base = 0.25
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	# Warscore cost scales directly according to the warscore cost of the provinces that the owner retains
+	# IE: If you take some provinces, the cost of forced conversion is reduced
+	warscore_cost = {
+		all_provinces = 1
+		owner_keeps = 0		# The provinces that are not of any of the types below
+		conquered = 0		# Provinces that are selected by a Demand Province treaty
+		returned_core = 0		# Provinces that are selected by a Return Core treaty
+		released_nation = 0		# Provinces that will become a part of a selected released-to-be nation
+		cancelled_subject = 0		# This one should not be relevant here since Giver can't be a cancelled subject. Including anyway for completeness
+		concede_colonial_region = 0		# Ditto
+	}
+	# No limit to the cost of forced conversion (ie. large nations cannot be forcibly converted)
+	warscore_cap = 100
+	requires_is_allowed = yes
+	is_visible = {
+		is_in_war = {
+			defender_leader = FROM
+			attacker_leader = ROOT
+			casus_belli = cb_force_into_peasant_league
+		}
+	}
+	is_allowed = {
+		always = yes
+	}
+	effect = {
+		create_subject = {
+			subject_type = allied_commune
+			who = FROM
+		}
+		FROM = {
+			kill_ruler = yes
+			change_government = republic
+			add_government_reform = peasants_republic
+			add_trust = {
+				who = PREV
+				value = -100
+			}
+			add_trust = {
+				who = PREV
+				value = 50
+			}
+			add_liberty_desire = -50
+		}
+		reverse_add_aggressive_expansion = {
+			who = FROM
+			value = -1000
+			apply_calc = no
+		}
+		reverse_remove_opinion = {
+			who = FROM
+			modifier = declared_war_on_us
+		}
+		reverse_remove_opinion = {
+			who = FROM
+			modifier = had_war_with_us
+		}
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 5000
+		}
+	}
+}

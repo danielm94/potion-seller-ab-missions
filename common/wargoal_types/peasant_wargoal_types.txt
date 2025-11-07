@@ -48,3 +48,27 @@ reintegrate_into_peasant_league_wargoal = {
 
 	war_name = peasant_regime_change_war_name
 }
+force_into_peasant_league_wargoal = {
+	type = take_capital
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_force_into_peasant_league
+		}
+	}
+		
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1		
+	
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	war_name = force_into_peasant_league_war_name
+}
