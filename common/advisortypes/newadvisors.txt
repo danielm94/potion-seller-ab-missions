@@ -224,6 +224,7 @@ in_advisor = {
 			technology_cost = -0.02
 		}
 	}
+	#PotionSeller
 	skill_scaled_modifier = {
 		trigger = { 
 			owner = { 

@@ -98,6 +98,7 @@ royal_marriage = {
 			NOT = { war_with = FROM }
 		}
 	}
+	#PotionSeller
 	condition = {
 		tooltip = tuh_from_cant_marry_tooltip
 		potential = { 
@@ -112,6 +113,7 @@ royal_marriage = {
 			always = no
 		}
 	}
+	#PotionSeller
 	condition = {
 		tooltip = tuh_root_cant_marry_tooltip
 		potential = { 
