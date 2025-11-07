@@ -40,19 +40,11 @@ po_reintegrate_into_peasant_league = {
 				subject_type = sister_commune
 				who = FROM
 			}
-			FROM = {
-				clear_was_commune_subject_flags = yes
-				mark_country_as_having_been_sister_commune = yes
-			}
 		}
 		else = {
 			create_subject = {
 				subject_type = allied_commune
 				who = FROM
-			}
-			FROM = {
-				clear_was_commune_subject_flags = yes
-				mark_country_as_having_been_allied_commune = yes
 			}
 		}
 		FROM = {
