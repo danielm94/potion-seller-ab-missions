@@ -63,6 +63,7 @@ MOP_ideas = {
     }
     MOP_torchbearers_of_the_peasantry = {
         rebel_support_efficiency = 1
+		monthly_peasant_zeal = 0.05
     }
     MOP_wine_of_the_east = {
         prestige = 1
