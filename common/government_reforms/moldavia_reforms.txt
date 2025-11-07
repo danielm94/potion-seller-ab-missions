@@ -38,6 +38,9 @@ sfatul_tarii_reform = {
 		tag = MOP
 		has_country_flag = in_moldavian_civil_war
 	}
+	trigger = {
+		is_blocked_from_peasant_government_because_of_treaty = no
+	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
@@ -47,6 +50,7 @@ sfatul_tarii_reform = {
 		war_taxes_cost_modifier = -1
 	}
 	custom_attributes = {
+		is_peasants_republic = yes
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 		disables_estate_nobles = yes
@@ -64,6 +68,9 @@ moldavian_commune_reform = {
 	potential = {
 		tag = MOP
 		has_country_flag = moldavian_civil_war_victory
+	}
+	trigger = {
+		is_blocked_from_peasant_government_because_of_treaty = no
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -85,6 +92,7 @@ moldavian_commune_reform = {
 		enables_estate_razesi = yes
 		has_parliament = yes
 		has_peasant_elections = yes
+		is_peasants_republic = yes
 	}
 	factions = {
 		exemplarists_faction

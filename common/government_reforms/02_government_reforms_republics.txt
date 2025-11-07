@@ -810,6 +810,7 @@ peasants_republic = {
 	}
 	trigger = {
 		is_not_blocked_by_estate_privilege = { estate = estate_nobles }
+		is_blocked_from_peasant_government_because_of_treaty = no
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20

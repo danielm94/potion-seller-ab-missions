@@ -8,3 +8,6 @@
  force_into_peasant_league_wargoal: "Force Them into the League"
  force_into_peasant_league_wargoal_desc: "Seize the enemy capital and compel their councils to sign the League Charter."
  force_into_peasant_league_war_name: "$ORDER$$FIRST$–$SECOND$ Peasant War"
+ crush_peasants_wargoal: "Break the Commune"
+ crush_peasants_wargoal_desc: "Seize their capital and dissolve the peasant councils."
+ crush_peasants_war_name: "$ORDER$$FIRST$–$SECOND$ Anti-Peasant War"

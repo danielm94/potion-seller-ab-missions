@@ -1,0 +1,5 @@
+﻿l_english:
+ po_crush_the_peasants: "Crush the Peasants"
+ po_crush_the_peasants_desc: "§Y[From.GetName]§! cannot be ruled by peasants for §Y20 years§!.\n\nIf we are a monarchy:\n- §Y[From.GetName]§! becomes a monarchy.\n- A ruler of our dynasty, religion, and culture will be crowned in §Y[From.GetName]§!.\n\nIf we are a theocracy:\n- §Y[From.GetName]§! becomes a theocracy.\n- We will gain §G+25§! Devotion.\n\nIf we are a republic:\n- We will gain §G+10§! Republican Tradition."
+ CB_ALLOWED_po_crush_the_peasants: "Crush the Peasants"
+ PEACE_po_crush_the_peasants: "Crush the Peasants"

@@ -1,0 +1,12 @@
+is_blocked_from_peasant_government_because_of_treaty = {
+	custom_trigger_tooltip = {
+		tooltip = is_blocked_from_peasant_government_because_of_treaty_tt
+		has_country_flag = cannot_have_peasant_government_because_of_treaty
+		NOT = {
+			had_country_flag = {
+				flag = cannot_have_peasant_government_because_of_treaty
+				days = 7300
+			}
+		}
+	}
+}

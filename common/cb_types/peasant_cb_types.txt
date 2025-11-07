@@ -1,7 +1,7 @@
 cb_great_peasant_uprising = {
 	valid_for_subject = no
 	prerequisites = {
-		is_a_peasant_government = yes
+		has_government_attribute = is_peasants_republic
 		has_spawned_supported_rebels = FROM
 		FROM = {
 			has_country_flag = incited_peasants
@@ -11,7 +11,9 @@ cb_great_peasant_uprising = {
 					days = 3650
 				}
 			}
-			is_a_peasant_government = no
+			NOT = {
+				has_government_attribute = is_peasants_republic
+			}
 		}
 	}
 	war_goal = overthrow_the_nobility_wargoal
@@ -33,7 +35,7 @@ cb_reintegrate_into_peasant_league = {
 		po_transfer_vassals
 	}
 	prerequisites = {
-		is_a_peasant_government = yes
+		has_government_attribute = is_peasants_republic
 		FROM = {
 			is_commune_subject = no
 		}
@@ -44,7 +46,7 @@ cb_reintegrate_into_peasant_league = {
 cb_force_into_peasant_league = {
 	valid_for_subject = no
 	is_triggered_only = yes
-		attacker_disabled_po = {
+	attacker_disabled_po = {
 		po_demand_provinces
 		po_release_vassals
 		po_release_annexed
@@ -57,10 +59,55 @@ cb_force_into_peasant_league = {
 		po_transfer_vassals
 	}
 	prerequisites = {
-		is_a_peasant_government = yes
+		has_government_attribute = is_peasants_republic
 		FROM = {
 			is_commune_subject = no
 		}
 	}
 	war_goal = force_into_peasant_league_wargoal
+}
+
+cb_crush_peasants = {
+	valid_for_subject = no
+	ai_peace_desire = -30
+	prerequisites_self = {
+		NOT = {
+			has_government_attribute = is_peasants_republic
+		}
+	}
+	prerequisites = {
+		#prevent this CB from messing with great peasant war mechanics...
+		if = {
+			limit = {
+				FROM = {
+					is_part_of_hre = yes
+				}
+			}
+			is_part_of_hre = no
+		}
+		FROM = {
+			has_government_attribute = is_peasants_republic
+		}
+		OR = {
+			government = monarchy
+			government = theocracy
+			AND = {
+				government = republic
+				FROM = {
+					OR = {
+						NOT = {
+							stability = 0
+						}
+						has_government_power = {
+							mechanic_type = peasant_zealotry
+							power_type = peasant_zeal
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		is_neighbor_of = FROM
+	}
+	war_goal = crush_peasants_wargoal
 }

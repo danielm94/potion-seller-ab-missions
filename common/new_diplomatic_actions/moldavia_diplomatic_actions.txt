@@ -9,7 +9,9 @@ incite_peasants = {
 			}
 		}
 		FROM = {
-			is_a_peasant_government = no
+			NOT = {
+				has_government_attribute = is_peasants_republic
+			}
 		}
 	}
 	is_allowed = {
@@ -75,7 +77,7 @@ invite_to_peasant_league = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
-			is_a_peasant_government = yes
+			has_government_attribute = is_peasants_republic
 			is_subject = no
 		}
 	}
