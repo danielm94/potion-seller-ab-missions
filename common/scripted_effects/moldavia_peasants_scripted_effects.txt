@@ -32,6 +32,7 @@ unlock_rename_decision_tooltip_effect = {
 	}
 }
 
+#SCOPE = COUNTRY
 mop_cossack_relations_conquered_reward_effect = {
 	custom_tooltip = mop_cossack_relations_conquered_reward_effect_tt
 	hidden_effect = {
