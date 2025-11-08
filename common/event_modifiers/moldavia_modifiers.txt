@@ -7,28 +7,8 @@ moldavian_civil_war_anti_cheese = {
 	siege_ability = 0.1
 }
 
-boieri_purged = {
-	local_manpower_modifier = -0.5
-	local_tax_modifier = -0.5
-	local_defensiveness = -0.5
-}
 razesi_purged = {
 	local_manpower_modifier = -0.5
 	trade_goods_size_modifier = -0.5
 	local_production_efficiency = -0.5
-}
-
-moldavia_civil_war_recovery = {
-	development_cost = 0.1
-	global_tax_modifier = -0.2
-	global_monthly_devastation = -0.05
-}
-
-incited_peasantry = {
-	global_unrest = 2
-	global_tax_modifier = -0.1
-}
-
-negate_moldavian_commune_reform_ccr = {
-	local_core_creation = -3
 }

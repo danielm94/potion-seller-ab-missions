@@ -1,0 +1,25 @@
+moldavia_civil_war_recovery = {
+	development_cost = 0.1
+	global_tax_modifier = -0.2
+	global_monthly_devastation = -0.05
+}
+
+incited_peasantry = {
+	global_unrest = 2
+	global_tax_modifier = -0.1
+}
+
+negate_moldavian_commune_reform_ccr = {
+	local_core_creation = -3
+}
+
+boieri_purged = {
+	local_manpower_modifier = -0.5
+	local_tax_modifier = -0.5
+	local_defensiveness = -0.5
+}
+
+mop_zaz_subject_bonus = {
+	cossacks_loyalty_modifier = 0.05
+	can_recruit_cossacks = yes
+}
