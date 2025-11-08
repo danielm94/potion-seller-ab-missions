@@ -6,9 +6,23 @@ can_incite_rebels = {
 	}
 }
 
+#SCOPE = COUNTRY
 can_stage_coup = {
 	spy_action_cost_trigger = {
 		spy_action_cost_var = stage_coup_cost_var
 		who = $who$
+	}
+}
+
+#SCOPE = COUNTRY
+have_access_to_peasant_moldavia_missions = {
+	tag = MOP
+}
+
+#SCOPE = COUNTRY
+has_won_moldavian_civil_war = {
+	custom_trigger_tooltip = {
+		tooltip = has_won_moldavian_civil_war_tt
+		has_country_flag = moldavian_civil_war_victory
 	}
 }

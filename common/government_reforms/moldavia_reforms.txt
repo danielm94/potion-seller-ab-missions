@@ -67,7 +67,7 @@ moldavian_commune_reform = {
 	legacy_equivalent = peasants_republic_legacy
 	potential = {
 		tag = MOP
-		has_country_flag = moldavian_civil_war_victory
+		has_won_moldavian_civil_war = yes
 	}
 	trigger = {
 		is_blocked_from_peasant_government_because_of_treaty = no
