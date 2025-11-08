@@ -1,3 +1,4 @@
+#SCOPE = COUNTRY
 clear_mop_country_name_flags = {
 	clr_country_flag = set_moldavia_name
 	clr_country_flag = set_moldavian_commune_name_EN
@@ -6,6 +7,7 @@ clear_mop_country_name_flags = {
 	clr_country_flag = set_razesi_republic_name_RO
 }
 
+#SCOPE = COUNTRY
 moldavia_name_change_cost_effect = {
 	if = {
 		limit = {
@@ -18,6 +20,7 @@ moldavia_name_change_cost_effect = {
 	}
 }
 
+#SCOPE = COUNTRY
 unlock_rename_decision_tooltip_effect = {
 	if = {
 		limit = {
