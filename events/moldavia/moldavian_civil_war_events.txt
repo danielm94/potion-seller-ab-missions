@@ -121,7 +121,7 @@ country_event = {
 	trigger = {
 		tag = MOP
 		OR = {
-			has_country_flag = moldavian_civil_war_victory
+			has_won_moldavian_civil_war = yes
 			NOT = {
 				exists = MOL
 			}
@@ -155,6 +155,7 @@ country_event = {
 			name = moldavia_civil_war_recovery
 			duration = 3650
 		}
+		swap_non_generic_missions = yes
 		country_event = {
 			id = moldavian_events.1
 		}

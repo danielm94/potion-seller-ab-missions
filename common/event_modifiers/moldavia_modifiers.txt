@@ -28,3 +28,7 @@ incited_peasantry = {
 	global_unrest = 2
 	global_tax_modifier = -0.1
 }
+
+negate_moldavian_commune_reform_ccr = {
+	local_core_creation = -3
+}
