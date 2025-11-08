@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mop_win_civil_war"
+		texturefile = "gfx/interface/missions/mop/mop_win_civil_war.dds"
+		loadType = "INGAME"
+	}
+}

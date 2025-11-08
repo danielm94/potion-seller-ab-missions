@@ -24,7 +24,7 @@ ab_mop_3 = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
 	mop_win_civil_war = {
-		icon = mission_control_moldavia
+		icon = GFX_mop_win_civil_war
 		position = 1
 		provinces_to_highlight = {
 			OR = {
@@ -78,6 +78,117 @@ ab_mop_4 = {
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
+	}
+	mop_cossack_relations = {
+		icon = mission_cossack_cavalry
+		position = 2
+		required_missions = {
+			mop_win_civil_war
+		}
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					exists = ZAZ
+				}
+				is_capital_of = ZAZ
+			}
+			else = {
+				OR = {
+					province_id = 282
+					province_id = 2406
+					province_id = 283
+					province_id = 5013
+					province_id = 1943
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = ZAZ
+				}
+				custom_trigger_tooltip = {
+					tooltip = improved_relations_with_zaz_tt
+					reverse_has_opinion_modifier = {
+						who = ZAZ
+						modifier = improved_relation
+						value = 100
+					}
+				}
+				alliance_with = ZAZ
+			}
+			else = {
+				owns_all_provinces = {
+					OR = {
+						province_id = 282
+						province_id = 2406
+						province_id = 283
+						province_id = 5013
+						province_id = 1943
+					}
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_allied_with_zaz_tt
+				first_limit = "alliance_with = ZAZ"
+				first_effect = "add_favors = {
+				who = ZAZ
+				amount = 5
+			}
+			ZAZ = {
+				add_trust = {
+					who = PREV
+					value = 5
+				}
+			}"
+				second_custom_tooltip = if_we_improved_relations_with_zaz_tt
+				second_limit = "reverse_has_opinion_modifier = {
+						who = ZAZ
+						modifier = improved_relation
+						value = 100
+					}"
+				second_effect = "force_remove_rival = ZAZ
+			create_alliance = ZAZ"
+				third_custom_tooltip = if_zaz_no_longer_exists_and_we_conquered_zaz_tt
+				third_limit = "NOT = {
+						exists = ZAZ
+					}
+					owns_all_provinces = {
+						OR = {
+							province_id = 282
+							province_id = 2406
+							province_id = 283
+							province_id = 5013
+							province_id = 1943
+						}
+					}"
+				third_effect = "release_zaz_as_sister_commune_effect = yes"
+			}
+			custom_tooltip = AB_EMPTY
+			hidden_effect = {
+				add_historical_friend = ZAZ
+				ZAZ = {
+					add_historical_friend = PREV
+				}
+			}
+			# ZAZ may or may not exist, this ensures that the tooltip always shows that they will become
+			# our historical friend.
+			tooltip = {
+				add_historical_friend = ZAZ
+				ZAZ = {
+					add_historical_friend = PREV
+				}
+			}
+			add_estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 10
+			}
+		}
 	}
 }
 
