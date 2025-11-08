@@ -103,3 +103,35 @@ country_event = {
 		clr_country_flag = in_moldavian_peasant_events.1
 	}
 }
+
+# Hidden event to give the player opinion boost with ZAZ because PDX jank prevents me
+# from doing that from the scripted effect.
+country_event = {
+	id = moldavian_peasant_events.2
+	title = moldavian_peasant_events.2.t
+	desc = moldavian_peasant_events.2.d
+	picture = dev
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		add_treasury = 5000
+		ZAZ = {
+			add_opinion = {
+				who = MOP
+				modifier = released_us_freely
+			}
+		}
+		add_opinion = {
+			who = ZAZ
+			modifier = hre_country_left
+		}
+		reverse_add_opinion = {
+			who = ZAZ
+			modifier = no_support_of_pope
+		}
+	}
+	option = {
+		name = moldavian_peasant_events.2.a
+		
+	}
+}

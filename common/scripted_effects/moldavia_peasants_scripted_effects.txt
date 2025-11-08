@@ -32,8 +32,8 @@ unlock_rename_decision_tooltip_effect = {
 	}
 }
 
-release_zaz_as_sister_commune_effect = {
-	custom_tooltip = zaz_released_as_sister_commune_tt
+mop_cossack_relations_conquered_reward_effect = {
+	custom_tooltip = mop_cossack_relations_conquered_reward_effect_tt
 	hidden_effect = {
 		every_owned_province = {
 			limit = {
@@ -47,10 +47,24 @@ release_zaz_as_sister_commune_effect = {
 			}
 			add_core = ZAZ
 		}
-		release = ZAZ
-		create_subject = {
-			subject_type = sister_commune
-			who = ZAZ
+		ZAZ = {
+			change_religion = PREV
+			remove_country_modifier = conversion_zeal
+			change_primary_culture = ruthenian
+			add_government_reform = cossacks_reform
+			add_trust = {
+				who = PREV
+				value = 100
+			}
 		}
+		release = ZAZ
+		create_alliance = ZAZ
+		capital_scope = {
+			cossack_cavalry = owner
+			cossack_cavalry = owner
+			cossack_cavalry = owner
+			cossack_cavalry = owner
+		}
+		set_country_flag = moldavia_released_zaz
 	}
 }

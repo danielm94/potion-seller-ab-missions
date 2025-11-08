@@ -167,13 +167,23 @@ ab_mop_4 = {
 							province_id = 1943
 						}
 					}"
-				third_effect = "release_zaz_as_sister_commune_effect = yes"
+				third_effect = "mop_cossack_relations_conquered_reward_effect = yes"
 			}
 			custom_tooltip = AB_EMPTY
 			hidden_effect = {
 				add_historical_friend = ZAZ
 				ZAZ = {
 					add_historical_friend = PREV
+				}
+				if = {
+					limit = {
+						has_country_flag = moldavia_released_zaz
+					}
+					clr_country_flag = moldavia_released_zaz
+					reverse_add_opinion = {
+						who = ZAZ
+						modifier = released_us_freely
+					}
 				}
 			}
 			# ZAZ may or may not exist, this ensures that the tooltip always shows that they will become
