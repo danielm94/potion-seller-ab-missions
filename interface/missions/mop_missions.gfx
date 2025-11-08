@@ -4,4 +4,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_win_civil_war.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_cossack_relations"
+		texturefile = "gfx/interface/missions/mop/mop_cossack_relations.dds"
+		loadType = "INGAME"
+	}
 }
