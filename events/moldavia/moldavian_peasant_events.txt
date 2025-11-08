@@ -1,10 +1,10 @@
-namespace = moldavian_events
+namespace = moldavian_peasant_events
 #Pick Your Country Name Moldavia
 country_event = {
-	id = moldavian_events.1
-	title = moldavian_events.1.t
+	id = moldavian_peasant_events.1
+	title = moldavian_peasant_events.1.t
 	desc = {
-		desc = moldavian_events.1.civil_war_ended_desc
+		desc = moldavian_peasant_events.1.civil_war_ended_desc
 		trigger = {
 			NOT = {
 				has_country_flag = unlocked_mop_country_rename_decision
@@ -12,7 +12,7 @@ country_event = {
 		}
 	}
 	desc = {
-		desc = moldavian_events.1.regular_desc
+		desc = moldavian_peasant_events.1.regular_desc
 		trigger = {
 			has_country_flag = unlocked_mop_country_rename_decision
 		}
@@ -20,7 +20,7 @@ country_event = {
 	picture = BIG_BOOK_eventPicture
 	is_triggered_only = yes
 	immediate = {
-		set_country_flag = in_moldavian_events.1
+		set_country_flag = in_moldavian_peasant_events.1
 	}
 	option = {
 		name = nevermind
@@ -29,7 +29,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = moldavian_events.1.moldavia
+		name = moldavian_peasant_events.1.moldavia
 		trigger = {
 			NOT = {
 				exists = MOL
@@ -45,7 +45,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_events.1.moldavian_commune_EN
+		name = moldavian_peasant_events.1.moldavian_commune_EN
 		trigger = {
 			NOT = {
 				has_country_flag = set_moldavian_commune_name_EN
@@ -58,7 +58,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_events.1.moldavian_commune_RO
+		name = moldavian_peasant_events.1.moldavian_commune_RO
 		trigger = {
 			NOT = {
 				has_country_flag = set_moldavian_commune_name_RO
@@ -72,7 +72,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_events.1.razesi_republic_EN
+		name = moldavian_peasant_events.1.razesi_republic_EN
 		trigger = {
 			NOT = {
 				has_country_flag = set_razesi_republic_name_EN
@@ -85,7 +85,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_events.1.razesi_republic_RO
+		name = moldavian_peasant_events.1.razesi_republic_RO
 		trigger = {
 			NOT = {
 				has_country_flag = set_razesi_republic_name_RO
@@ -100,6 +100,6 @@ country_event = {
 	}
 	after = {
 		set_country_flag = unlocked_mop_country_rename_decision
-		clr_country_flag = in_moldavian_events.1
+		clr_country_flag = in_moldavian_peasant_events.1
 	}
 }

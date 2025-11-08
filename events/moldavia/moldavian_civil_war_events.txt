@@ -157,7 +157,7 @@ country_event = {
 		}
 		swap_non_generic_missions = yes
 		country_event = {
-			id = moldavian_events.1
+			id = moldavian_peasant_events.1
 		}
 	}
 }
