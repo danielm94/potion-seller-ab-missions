@@ -31,3 +31,26 @@ unlock_rename_decision_tooltip_effect = {
 		custom_tooltip = unlock_decision_to_rename_mop_tt
 	}
 }
+
+release_zaz_as_sister_commune_effect = {
+	custom_tooltip = zaz_released_as_sister_commune_tt
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 282
+					province_id = 2406
+					province_id = 283
+					province_id = 5013
+					province_id = 1943
+				}
+			}
+			add_core = ZAZ
+		}
+		release = ZAZ
+		create_subject = {
+			subject_type = sister_commune
+			who = ZAZ
+		}
+	}
+}
