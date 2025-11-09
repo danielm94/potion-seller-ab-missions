@@ -108,26 +108,34 @@ ab_mop_4 = {
 		trigger = {
 			if = {
 				limit = {
-					exists = ZAZ
+					is_debug_mode_enabled = yes
 				}
-				custom_trigger_tooltip = {
-					tooltip = improved_relations_with_zaz_tt
-					reverse_has_opinion_modifier = {
-						who = ZAZ
-						modifier = improved_relation
-						value = 100
-					}
-				}
-				alliance_with = ZAZ
+				always = yes
 			}
 			else = {
-				owns_all_provinces = {
-					OR = {
-						province_id = 282
-						province_id = 2406
-						province_id = 283
-						province_id = 5013
-						province_id = 1943
+				if = {
+					limit = {
+						exists = ZAZ
+					}
+					custom_trigger_tooltip = {
+						tooltip = improved_relations_with_zaz_tt
+						reverse_has_opinion_modifier = {
+							who = ZAZ
+							modifier = improved_relation
+							value = 100
+						}
+					}
+					alliance_with = ZAZ
+				}
+				else = {
+					owns_all_provinces = {
+						OR = {
+							province_id = 282
+							province_id = 2406
+							province_id = 283
+							province_id = 5013
+							province_id = 1943
+						}
 					}
 				}
 			}
@@ -232,7 +240,7 @@ ab_mop_4 = {
 		trigger = {
 			if = {
 				limit = {
-					has_country_flag = debug
+					is_debug_mode_enabled = yes
 				}
 				always = yes
 			}
@@ -250,6 +258,7 @@ ab_mop_4 = {
 					limit = {
 						exists = ZAZ
 					}
+					alliance_with = ZAZ
 					has_more_total_development_than_target = {
 						target = ZAZ
 					}
@@ -326,7 +335,6 @@ ab_mop_4 = {
 					}
 				}
 			}
-			add_dip_power = -125
 			create_subject = {
 				subject_type = client_march
 				who = ZAZ
@@ -345,25 +353,168 @@ ab_mop_4 = {
 			}
 			ZAZ = {
 				add_permanent_claim_multi_provinces = {
+					target = yedisan_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = zaporizhia_area
+				}
+				add_permanent_claim_multi_provinces = {
 					target = crimea_area
 				}
 				add_permanent_claim_multi_provinces = {
-					target = circassia_area
+					target = azov_area
 				}
 				add_permanent_claim_multi_provinces = {
-					target = dagestan_area
+					target = red_ruthenia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = volhynia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = podolia_volhynia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = west_dniepr_area
 				}
 			}
-			custom_tooltip = AB_EMPTY
+			custom_tooltip = tooltip_line_divider
 			set_country_flag = mop_zaz_subject_bonus_enabled
 			add_country_modifier = {
 				name = mop_zaz_subject_bonus
 				duration = -1
 			}
 			custom_tooltip = so_as_long_as_zaz_remains_our_subject_tt
+			custom_tooltip = AB_EMPTY
+			add_dip_power = -125
 			add_faction_influence = {
 				faction = leaguists_faction
 				influence = 5
+			}
+		}
+	}
+	mop_western_ukraine = {
+		icon = mission_non-western_cavalry_raid
+		position = 6
+		required_missions = {
+			mop_deepen_cossack_ties
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = red_ruthenia_area
+				area = volhynia_area
+				area = podolia_volhynia_area
+				area = west_dniepr_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ZAZ
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ZAZ = {
+					is_subject_of = ROOT
+					owns = 261
+					owns = 279
+					owns = 280
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 15
+						OR = {
+							area = red_ruthenia_area
+							area = volhynia_area
+							area = podolia_volhynia_area
+							area = west_dniepr_area
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = mop_expand_the_host_anti_confusion_trigger_tt
+					}
+				}
+			}
+		}
+		effect = {
+			ZAZ = {
+				add_permanent_claim_multi_provinces = {
+					target = sloboda_ukraine_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = east_dniepr_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = chernigov_area
+				}
+				add_liberty_desire = -10
+			}
+			custom_tooltip = tooltip_line_divider
+			#TODO - EVENT WHERE ABOLITIONISTS PURGE THE FUCK OUT OF KIEV IF THEY ARE IN CHARGE
+			280 = {
+				custom_tooltip = mop_enclave_in_kiev_tt
+				hidden_effect = {
+					add_core = ROOT
+					cede_province = ROOT
+				}
+				if = {
+					limit = {
+						can_build = fort_19th
+					}
+					add_building_construction = {
+						building = fort_19th
+						cost = 0.5
+						speed = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						can_build = fort_18th
+					}
+					add_building_construction = {
+						building = fort_18th
+						cost = 0.5
+						speed = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						can_build = fort_17th
+					}
+					add_building_construction = {
+						building = fort_17th
+						cost = 0.5
+						speed = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						can_build = fort_16th
+					}
+					add_building_construction = {
+						building = fort_16th
+						cost = 0.5
+						speed = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						can_build = fort_15th
+					}
+					add_building_construction = {
+						building = fort_15th
+						cost = 0.5
+						speed = 0.5
+					}
+				}
+				add_province_modifier = {
+					name = kievan_commune
+					duration = -1
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
 			}
 		}
 	}
@@ -375,5 +526,92 @@ ab_mop_5 = {
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
+	}
+	mop_secure_crimea = {
+		icon = mission_sca_lit_conquer_crimea
+		position = 5
+		required_missions = {
+			mop_deepen_cossack_ties
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = yedisan_area
+				area = zaporizhia_area
+				area = crimea_area
+				area = azov_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ZAZ
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ZAZ = {
+					is_subject_of = ROOT
+					owns = 286
+					owns = 284
+					owns = 285
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 14
+						OR = {
+							area = yedisan_area
+							area = zaporizhia_area
+							area = crimea_area
+							area = azov_area
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = mop_expand_the_host_anti_confusion_trigger_tt
+					}
+				}
+			}
+		}
+		effect = {
+			ZAZ = {
+				add_permanent_claim_multi_provinces = {
+					target = lower_don_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = astrakhan_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = circassia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = dagestan_area
+				}
+				add_liberty_desire = -10
+			}
+			custom_tooltip = tooltip_line_divider
+			286 = {
+				custom_tooltip = azov_commune_tt
+				hidden_effect = {
+					add_core = root
+					cede_province = root
+				}
+				center_of_trade = 1
+				add_province_modifier = {
+					name = azov_commune
+					duration = -1
+				}
+				custom_tooltip = abolitionists_ban_black_sea_slave_tt
+				change_trade_goods = salt
+				add_province_modifier = {
+					name = azov_abolition_shock
+					duration = 7300
+				}
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+			add_patriarch_authority = 0.05
+		}
 	}
 }

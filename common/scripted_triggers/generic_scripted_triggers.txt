@@ -1452,3 +1452,7 @@ has_more_total_development_than_target = {
 		}
 	}
 }
+
+is_debug_mode_enabled = {
+	has_country_flag = debug
+}
