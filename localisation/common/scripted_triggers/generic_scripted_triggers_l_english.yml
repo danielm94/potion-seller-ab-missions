@@ -6,3 +6,4 @@
  is_most_developed_orthodox_province_tooltip: "§Y[This.GetName]§! is the most developed §YOrthodox§! province in the world."
  unlocked_superiority_of_the_state_reform_tt: "We have unlocked §YSuperiority of the State§! as a reward." 
  has_spy_network_in_cost_trigger_tt: "We have a spy network of at least [Root.action_cost_var.GetValue]."
+ more_development_than_target_tt: "Has less total development than §Y[Root.GetName]§!."

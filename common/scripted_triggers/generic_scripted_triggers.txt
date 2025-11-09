@@ -1429,3 +1429,26 @@ spy_action_cost_trigger = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+has_more_total_development_than_target = {
+	$target$ = {
+		variable_arithmetic_trigger = {
+			custom_tooltip = more_development_than_target_tt
+			export_to_variable = {
+				which = target_total_dev
+				value = total_development
+				who = $target$
+			}
+			export_to_variable = {
+				which = root_total_dev
+				value = total_development
+				who = ROOT
+			}
+			check_variable = {
+				which = root_total_dev
+				which = target_total_dev
+			}
+		}
+	}
+}
