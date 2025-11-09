@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_cossack_protectorate_icon"
+		texturefile = "gfx/interface/subject_types/moldavia/cossack_protectorate/cossack_protectorate.dds"
+	}
+	spriteType = {
+		name = "GFX_cossack_protectorate_am"
+		texturefile = "gfx/interface/subject_types/moldavia/cossack_protectorate/cossack_protectorate_am.dds"
+	}
+	spriteType = {
+		name = "GFX_cossack_protectorate_lead"
+		texturefile = "gfx/interface/subject_types/moldavia/cossack_protectorate/cossack_protectorate_lead.dds"
+	}
+}
