@@ -1,0 +1,101 @@
+cossack_protectorate = {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = yes
+	sprite = GFX_cossack_protectorate_icon
+	diplomacy_overlord_sprite = GFX_cossack_protectorate_lead
+	diplomacy_subject_sprite = GFX_cossack_protectorate_am
+	transfer_trade_power = yes
+	joins_overlords_wars = yes
+	can_be_annexed = yes
+	can_concentrate_development = no
+	has_power_projection = yes
+	transfer_subjects_when_made = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = yes
+	uses_military_focus = yes
+	can_set_mil_focus = yes
+	takes_diplo_slot = no
+	extend_trading_range = yes
+	counts_for_borders = yes
+	max_government_rank = 3
+	can_be_co_belligerented = yes
+	must_accept_cta_from_overlord = yes
+	can_gain_favors = no
+	can_have_subjects_of_other_types = yes
+	liberty_desire_development_ratio = 0.02
+	pays_overlord = 0
+	forcelimit_to_overlord = 0.5	# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.2	# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.333	# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.2	# Percent of subject FL to use as base for modifiers
+	base_liberty_desire = -25
+	liberty_desire_revolution = 0
+	military_focus = 10
+	annex_cost_per_development = 16
+	relative_power_class = 1
+	should_quit_wars_on_activation = no
+	restoration_cb = cb_disloyal_eyalet
+	# (continuous)
+	support_loyalists = yes
+	subsidize_armies = yes
+	send_officers = yes
+	divert_trade = yes
+	enforce_religion = yes
+	send_additional_troops = yes
+	seize_territory = yes
+	start_colonial_war = yes
+	# Modifiers:
+	modifier_subject = clear	# Use this to clear after copy_from.
+	modifier_subject = {
+		modifier = subject_tax_modifier
+		trigger = {
+			overlord = {
+				has_government_attribute = subject_tax_modifier_25
+			}
+		}
+	}
+	overlord_opinion_modifier = cossack_protectorate_opinion
+	subject_opinion_modifier = cossack_protectorate_opinion
+	modifier_subject = {
+		modifier = cossack_protectorate_subject_modifier
+	}
+	modifier_overlord = {
+		modifier = cossack_protectorate_overlord_modifier
+	}
+	modifier_overlord = {
+		trigger = {
+			total_development = 400
+		}
+		modifier = cossack_protectorate_overlord_bonus_1
+	}
+	modifier_overlord = {
+		trigger = {
+			total_development = 800
+		}
+		modifier = cossack_protectorate_overlord_bonus_2
+	}
+	modifier_overlord = {
+		trigger = {
+			total_development = 1200
+		}
+		modifier = cossack_protectorate_overlord_bonus_3
+	}
+	modifier_overlord = {
+		trigger = {
+			total_development = 1600
+		}
+		modifier = cossack_protectorate_overlord_bonus_4
+	}
+	modifier_overlord = {
+		trigger = {
+			total_development = 750
+		}
+		modifier = cossack_protectorate_merchant_bonus_1
+	}
+	modifier_overlord = {
+		trigger = {
+			total_development = 1500
+		}
+		modifier = cossack_protectorate_merchant_bonus_2
+	}
+}

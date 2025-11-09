@@ -1,0 +1,7 @@
+﻿l_english:
+ cossack_protectorate: "Cossack Protectorate"
+ cossack_protectorate_long_desc: "$TODO$"
+ cossack_protectorate_is_our: "$NAME|Y$ is a Cossack Protectorate."
+ cossack_protectorate_title: "Cossack Protectorate"
+ cossack_protectorate_title_plural: "Cossack Protectorates"
+ is_cossack_protectorate: "Is a Cossack Protectorate"

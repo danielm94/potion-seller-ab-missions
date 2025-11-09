@@ -1,0 +1,3 @@
+cossack_protectorate_opinion = {
+	opinion = 25
+}
