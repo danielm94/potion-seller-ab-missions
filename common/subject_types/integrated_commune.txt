@@ -34,7 +34,7 @@ integrated_commune = {
 	annex_cost_per_development = 16
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
-	restoration_cb = cb_disloyal_eyalet
+	restoration_cb = cb_reintegrate_into_peasant_league
 	# (continuous)
 	support_loyalists = yes
 	subsidize_armies = yes
