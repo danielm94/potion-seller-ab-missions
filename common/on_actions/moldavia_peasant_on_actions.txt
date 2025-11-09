@@ -62,3 +62,33 @@ on_province_owner_change = {
 		}
 	}
 }
+
+on_dependency_lost = {
+	if = {
+		limit = {
+			FROM = {
+				is_or_was_tag = {
+					tag = ZAZ
+				}
+			}
+		}
+		remove_country_modifier = mop_zaz_subject_bonus
+	}
+}
+
+on_dependency_gained = {
+	if = {
+		limit = {
+			has_country_flag = mop_zaz_subject_bonus_enabled
+			FROM = {
+				is_or_was_tag = {
+					tag = ZAZ
+				}
+			}
+		}
+		add_country_modifier = {
+			name = mop_zaz_subject_bonus
+			duration = -1
+		}
+	}
+}

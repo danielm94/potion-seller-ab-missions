@@ -80,7 +80,7 @@ ab_mop_4 = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
 	mop_cossack_relations = {
-		icon = mission_cossack_cavalry
+		icon = GFX_mop_cossack_relations
 		position = 2
 		required_missions = {
 			mop_win_civil_war
@@ -197,6 +197,173 @@ ab_mop_4 = {
 			add_estate_loyalty = {
 				estate = estate_cossacks
 				loyalty = 10
+			}
+		}
+	}
+	mop_deepen_cossack_ties = {
+		icon = mission_cossack_cavalry
+		position = 4
+		required_missions = {
+			mop_cossack_relations
+		}
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					exists = ZAZ
+				}
+				is_capital_of = ZAZ
+			}
+			else = {
+				OR = {
+					province_id = 282
+					province_id = 2406
+					province_id = 283
+					province_id = 5013
+					province_id = 1943
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					development = 12
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = debug
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_cossacks
+					value = 3
+				}
+				estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 65
+				}
+				dip_power = 125
+				if = {
+					limit = {
+						exists = ZAZ
+					}
+					has_more_total_development_than_target = {
+						target = ZAZ
+					}
+					ZAZ = {
+						trust = {
+							who = ROOT
+							value = 100
+						}
+					}
+					reverse_has_opinion = {
+						who = ZAZ
+						value = 200
+					}
+				}
+				else = {
+					282 = {
+						owned_by = root
+						development = 12
+					}
+					2406 = {
+						owned_by = root
+						development = 12
+					}
+					283 = {
+						owned_by = root
+						development = 12
+					}
+					5013 = {
+						owned_by = root
+						development = 12
+					}
+					1943 = {
+						owned_by = root
+						development = 12
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = ZAZ
+					}
+				}
+				custom_tooltip = zaz_will_be_released_again_lmao_tt
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								province_id = 282
+								province_id = 2406
+								province_id = 283
+								province_id = 5013
+								province_id = 1943
+							}
+						}
+						add_core = ZAZ
+					}
+					ZAZ = {
+						change_religion = PREV
+						remove_country_modifier = conversion_zeal
+						change_primary_culture = ruthenian
+						add_government_reform = cossacks_reform
+						add_trust = {
+							who = PREV
+							value = 100
+						}
+					}
+					release = ZAZ
+					reverse_add_opinion = {
+						who = ZAZ
+						modifier = released_us_freely
+					}
+				}
+			}
+			add_dip_power = -125
+			create_subject = {
+				subject_type = client_march
+				who = ZAZ
+			}
+			hidden_effect = {
+				ZAZ = {
+					if = {
+						limit = {
+							NOT = {
+								has_reform = cossacks_reform
+							}
+						}
+						add_government_reform = cossacks_reform
+					}
+				}
+			}
+			ZAZ = {
+				add_permanent_claim_multi_provinces = {
+					target = crimea_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = circassia_area
+				}
+				add_permanent_claim_multi_provinces = {
+					target = dagestan_area
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = mop_zaz_subject_bonus_enabled
+			add_country_modifier = {
+				name = mop_zaz_subject_bonus
+				duration = -1
+			}
+			custom_tooltip = so_as_long_as_zaz_remains_our_subject_tt
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 5
 			}
 		}
 	}

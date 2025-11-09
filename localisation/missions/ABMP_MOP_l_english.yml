@@ -8,3 +8,7 @@
  if_we_allied_with_zaz_tt: "If we allied with @ZAZ §Y[ZAZ.GetName]§!:"
  if_we_improved_relations_with_zaz_tt: "If we improved relations with @ZAZ §Y[ZAZ.GetName]§!:"
  if_zaz_no_longer_exists_and_we_conquered_zaz_tt: "If @ZAZ §Y[ZAZ.GetName]§! no longer exists and we conquered their starting provinces:"
+ mop_deepen_cossack_ties_title: "Deepen Cossack Ties"
+ mop_deepen_cossack_ties_desc: "The steppe is a dangerous borderland, and neither the Sfatul Tarii nor the Zaporizhian Host can stand alone. Surrounded by boyar princedoms and the hungry gaze of the Horde, we must bind ourselves to the Cossacks through shared trust and purpose. They will guard the frontier, and we will see that their supply lines never run dry."
+ zaz_will_be_released_again_lmao_tt: "@ZAZ §Y[ZAZ.GetName]§! will be released."
+ so_as_long_as_zaz_remains_our_subject_tt: "§gThis modifier will be active as long as @ZAZ §Y[ZAZ.GetName]§! or @HTM §Y[HTM.GetName]§! are our subjects.§!"
