@@ -36,21 +36,25 @@ cossack_protectorate_overlord_modifier = {
 
 cossack_protectorate_overlord_bonus_1 = {
 	cavalry_power = 0.2
+	allowed_cossack_fraction = 0.05
 }
 
 cossack_protectorate_overlord_bonus_2 = {
 	cavalry_shock = 0.2
 	cavalry_cost = -0.1
+	allowed_cossack_fraction = 0.10
 }
 
 cossack_protectorate_overlord_bonus_3 = {
 	cav_to_inf_ratio = 0.25
 	cavalry_flanking = 0.25
+	allowed_cossack_fraction = 0.15
 }
 
 cossack_protectorate_overlord_bonus_4 = {
 	movement_speed = 0.1
 	shock_damage = 0.1
+	allowed_cossack_fraction = 0.2
 }
 
 cossack_protectorate_merchant_bonus_1 = {
@@ -79,7 +83,7 @@ azov_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 15
-	local_development_cost = -0.1
+	local_development_cost = -0.05
 	naval_maintenance_modifier = -0.05
 }
 azov_abolition_shock = {
@@ -87,4 +91,19 @@ azov_abolition_shock = {
 	local_production_efficiency = -0.75
 	trade_goods_size_modifier = -0.75
 	local_development_cost = 0.2
+}
+
+astrakhan_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 15
+	local_development_cost = -0.05
+	global_trade_power = 0.025
+}
+
+mop_civilizing_the_steppe = {
+	local_missionary_strength = 0.03
+	local_missionary_maintenance_cost = -0.5
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
 }
