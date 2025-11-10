@@ -20,3 +20,5 @@
  mop_secure_crimea_desc: "The Golden Horde still festers upon the steppe, raiding our frontiers and chaining free men for the slave markets of Azov. So long as they endure, neither the communes nor the Host will know peace. We must strike south, shatter the Horde’s hold on the coast, and seize their port before another generation is sold into bondage."
  azov_commune_tt: "We will take control of §Y[286.GetName]§! and the surrounding area and establish a commune."
  abolitionists_ban_black_sea_slave_tt: "The Abolitionists will see to it that the Black Sea slave trade is abolished. As a result, §YSlaves§! will no longer be produced in §Y[286.GetName]§!."
+ mop_develop_kiev_title: "Kiev the Great"
+ mop_develop_kiev_desc: "Kyiv must become the beating heart of our northern trade and the surest sign of our good order in Ruthenia. Expand its streets and storehouses, strengthen its councils, and endow the Kyievo-Pecherska Lavra so that faith and craft flourish side by side."

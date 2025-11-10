@@ -65,6 +65,13 @@ kievan_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 15
+	local_development_cost = -0.05
+	global_manpower_modifier = 0.025
+}
+great_kievan_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
 	local_development_cost = -0.1
 	global_manpower_modifier = 0.05
 }
@@ -73,7 +80,7 @@ azov_commune = {
 	local_governing_cost = -0.75
 	province_trade_power_value = 15
 	local_development_cost = -0.1
-	naval_maintenance_modifier = -0.1
+	naval_maintenance_modifier = -0.05
 }
 azov_abolition_shock = {
 	local_unrest = 10
