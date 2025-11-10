@@ -19,6 +19,7 @@ po_install_peasant_government = {
 	# No limit to the cost of forced conversion (ie. large nations cannot be forcibly converted)
 	warscore_cap = 100
 	requires_is_allowed = yes
+	is_make_subject = yes
 	is_visible = {
 		is_in_war = {
 			defender_leader = FROM
