@@ -91,62 +91,6 @@ ab_mop_2 = {
 			}
 		}
 	}
-}
-
-ab_mop_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		have_access_to_peasant_moldavia_missions = yes
-	}
-	mop_win_civil_war = {
-		icon = GFX_mop_win_civil_war
-		position = 1
-		provinces_to_highlight = {
-			OR = {
-				area = bessarabia_area
-				area = moldavia_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			bessarabia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			moldavia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			has_won_moldavian_civil_war = yes
-		}
-		effect = {
-			add_permanent_claim_multi_provinces = {
-				target = wallachia_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = transylvania_area
-			}
-			add_permanent_claim_multi_provinces = {
-				target = southern_transylvania_area
-			}
-			add_permanent_claim_province = {
-				province = 4706
-			}
-			custom_tooltip = tooltip_line_divider
-			custom_tooltip = no_coring_penalty_in_perma_claim_provinces
-			hidden_effect = {
-				set_country_flag = mop_no_coring_penalty_in_perma_claim_provinces
-			}
-			change_peasant_zeal = {
-				value = 25
-				scaled_with_gain_modifier = yes
-			}
-		}
-	}
 	mop_develop_kiev = {
 		icon = mission_develop_kiev
 		position = 7
@@ -247,12 +191,59 @@ ab_mop_3 = {
 	}
 }
 
-ab_mop_4 = {
-	slot = 4
+ab_mop_3 = {
+	slot = 3
 	generic = no
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
+	}
+	mop_win_civil_war = {
+		icon = GFX_mop_win_civil_war
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = bessarabia_area
+				area = moldavia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bessarabia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moldavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			has_won_moldavian_civil_war = yes
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = wallachia_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = transylvania_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = southern_transylvania_area
+			}
+			add_permanent_claim_province = {
+				province = 4706
+			}
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = no_coring_penalty_in_perma_claim_provinces
+			hidden_effect = {
+				set_country_flag = mop_no_coring_penalty_in_perma_claim_provinces
+			}
+			change_peasant_zeal = {
+				value = 25
+				scaled_with_gain_modifier = yes
+			}
+		}
 	}
 	mop_cossack_relations = {
 		icon = GFX_mop_cossack_relations
@@ -838,14 +829,14 @@ ab_mop_4 = {
 	}
 }
 
-ab_mop_5 = {
-	slot = 5
+ab_mop_4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
-	mop_secure_crimea = {
+		mop_secure_crimea = {
 		icon = mission_sca_lit_conquer_crimea
 		position = 5
 		required_missions = {
@@ -1091,4 +1082,14 @@ ab_mop_5 = {
 			}
 		}
 	}
+}
+
+ab_mop_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+	}
+
 }
