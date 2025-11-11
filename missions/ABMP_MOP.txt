@@ -53,6 +53,7 @@ ab_mop_2 = {
 				}"
 				second_effect = "mop_purge_ten_houses_effect = yes"
 			}
+			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
 				first_limit = "is_bogdan_razesul_ruling = yes"
