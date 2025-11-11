@@ -302,6 +302,10 @@ ab_mop_4 = {
 					add_historical_friend = PREV
 				}
 			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 5
+			}
 			add_estate_loyalty = {
 				estate = estate_cossacks
 				loyalty = 10
@@ -843,7 +847,7 @@ ab_mop_5 = {
 				change_trade_goods = salt
 				add_province_modifier = {
 					name = azov_abolition_shock
-					duration = 7300
+					duration = 5475
 				}
 			}
 			add_faction_influence = {
@@ -918,6 +922,95 @@ ab_mop_5 = {
 			}
 			ZAZ = {
 				add_liberty_desire = -20
+			}
+		}
+	}
+	mop_the_caspian_gates = {
+		icon = toulon_dockyards
+		position = 8
+		required_missions = {
+			mop_march_to_sarai
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 286
+				province_id = 464
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				286 = {
+					owned_by = ROOT
+					development = 25
+					province_has_center_of_trade_of_level = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+				464 = {
+					owned_by = ROOT
+					development = 25
+					province_has_center_of_trade_of_level = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			286 = {
+				upgrade_center_of_trade = yes
+				upgrade_trade_building = yes
+				if = {
+					limit = {
+						has_province_modifier = azov_abolition_shock
+					}
+					remove_province_modifier = azov_abolition_shock
+				}
+				add_province_modifier = {
+					name = azov_gate
+					duration = -1
+				}
+			}
+			464 = {
+				upgrade_center_of_trade = yes
+				upgrade_trade_building = yes
+				add_province_modifier = {
+					name = astrakhan_gate
+					duration = -1
+				}
+			}
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+			define_advisor = {
+				type = trader
+				skill = 1
+				cost_multiplier = 0.25
+				min_age = 18
+				max_age = 25
+			}
+			custom_tooltip = AB_EMPTY
+			add_permanent_claim_province = {
+				province = 421
+			}
+			add_permanent_claim_province = {
+				province = 4341
 			}
 		}
 	}

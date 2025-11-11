@@ -2196,3 +2196,18 @@ calculate_average_province_development_effect = {
 		which = number_of_provinces
 	}
 }
+
+#SCOPE = COUNTRY
+upgrade_center_of_trade = {
+	if = {
+		limit = {
+			province_has_center_of_trade_of_level = 3
+		}
+		owner = {
+			add_treasury = 1000
+		}
+	}
+	else = {
+		add_center_of_trade_level = 1
+	}
+}
