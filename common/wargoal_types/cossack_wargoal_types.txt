@@ -1,0 +1,23 @@
+cossack_conquest_wargoal = {
+	type = superiority
+	attacker = {
+		badboy_factor = 0.9
+		prestige_factor = 1
+		peace_cost_factor = 0.9
+		peace_options = {
+			po_demand_provinces
+		}
+		allowed_provinces = {
+			is_cossack_conquest_province = yes
+		}
+	}
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	war_name = cossack_conquest_war_name
+}

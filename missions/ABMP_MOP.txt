@@ -556,6 +556,8 @@ ab_mop_4 = {
 				custom_tooltip = mop_enclave_in_kiev_tt
 				hidden_effect = {
 					add_core = ROOT
+					remove_core = ZAZ
+					remove_claim = ZAZ
 					cede_province = ROOT
 				}
 				if = {
@@ -613,6 +615,141 @@ ab_mop_4 = {
 					duration = -1
 				}
 			}
+			change_peasant_zeal = {
+				value = 10
+			}
+		}
+	}
+	mop_east_ukraine = {
+		icon = mission_early_russian_army
+		position = 7
+		required_missions = {
+			mop_western_ukraine
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sloboda_ukraine_area
+				area = east_dniepr_area
+				area = chernigov_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ZAZ = {
+					is_subject_of = ROOT
+					owns = 289
+					owns = 291
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 11
+						OR = {
+							area = sloboda_ukraine_area
+							area = east_dniepr_area
+							area = chernigov_area
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = mop_expand_the_host_anti_confusion_trigger_tt
+					}
+				}
+			}
+		}
+		effect = {
+			ZAZ = {
+				add_permanent_claim_multi_provinces = {
+					target = ruthenia_region
+				}
+				add_liberty_desire = -20
+				add_country_modifier = {
+					name = zaz_hegemon_of_ruthenia
+					duration = -1
+				}
+			}
+			change_peasant_zeal = {
+				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+		}
+	}
+	mop_proclaim_the_hetmanate = {
+		icon = GFX_mop_proclaim_the_hetmanate
+		position = 8
+		required_missions = {
+			mop_east_ukraine
+			mop_march_to_sarai
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ZAZ = {
+					is_subject_of = ROOT
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 56
+						OR = {
+							region = ruthenia_region
+							region = crimea_region
+							area = circassia_area
+							area = dagestan_area
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = mop_expand_the_host_anti_confusion_trigger_tt
+					}
+				}
+				283 = {
+					development = 25
+					has_courthouse_building_trigger = yes
+				}
+				dip_power = 200
+			}
+		}
+		effect = {
+			ZAZ = {
+				change_tag = HTM
+				swap_free_idea_group = yes
+				add_prestige = 25
+				add_liberty_desire = -20
+				hidden_effect = {
+					remove_non_electors_emperors_from_empire_effect = yes
+					add_government_reform = hetmanate
+				}
+				set_country_flag = cossack_conquest_cb_enabled
+				custom_tooltip = conssack_conquest_cb_enabled_tt
+			}
+			custom_tooltip = tooltip_line_divider
+			create_subject = {
+				subject_type = cossack_protectorate
+				who = HTM
+			}
+			custom_tooltip = cossack_protectorate_tt
 			change_peasant_zeal = {
 				value = 10
 			}
@@ -693,6 +830,8 @@ ab_mop_5 = {
 				custom_tooltip = azov_commune_tt
 				hidden_effect = {
 					add_core = root
+					remove_core = ZAZ
+					remove_claim = ZAZ
 					cede_province = root
 				}
 				center_of_trade = 1
@@ -767,6 +906,8 @@ ab_mop_5 = {
 				custom_tooltip = astrakhan_commune_tt
 				hidden_effect = {
 					add_core = root
+					remove_core = ZAZ
+					remove_claim = ZAZ
 					cede_province = root
 				}
 				add_province_modifier = {

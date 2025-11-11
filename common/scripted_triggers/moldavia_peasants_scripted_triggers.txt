@@ -26,3 +26,18 @@ has_won_moldavian_civil_war = {
 		has_country_flag = moldavian_civil_war_victory
 	}
 }
+
+#SCOPE = PROVINCE
+is_cossack_conquest_province = {
+	OR = {
+		region = russia_region
+		region = ruthenia_region
+		region = ural_region
+		region = crimea_region
+		region = central_asia_region
+		region = west_siberia_region
+		region = mongolia_region
+		region = east_siberia_region
+		region = manchuria_region
+	}
+}

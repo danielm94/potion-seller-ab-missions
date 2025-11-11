@@ -1,0 +1,18 @@
+cb_cossack_conquest = {
+	valid_for_subject = yes
+	prerequisites_self = {
+		has_country_flag = cossack_conquest_cb_enabled
+	}
+	prerequisites = {
+		NOT = {
+			truce_with = FROM
+		}
+		is_neighbor_of = FROM
+		FROM = {
+			any_owned_province = {
+				is_cossack_conquest_province = yes
+			}
+		}
+	}
+	war_goal = cossack_conquest_wargoal
+}

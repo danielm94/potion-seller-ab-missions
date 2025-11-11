@@ -107,3 +107,7 @@ mop_civilizing_the_steppe = {
 	local_culture_conversion_cost = -0.25
 	local_culture_conversion_time = -0.25
 }
+
+zaz_hegemon_of_ruthenia = {
+	core_creation = -0.1
+}

@@ -9,4 +9,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_cossack_relations.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_proclaim_the_hetmanate"
+		texturefile = "gfx/interface/missions/mop/mop_proclaim_the_hetmanate.dds"
+		loadType = "INGAME"
+	}
 }

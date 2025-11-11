@@ -1,0 +1,4 @@
+﻿l_english:
+ cossack_conquest_wargoal: "Show Superiority"
+ cossack_conquest_wargoal_desc: "We must trample them to dust."
+ cossack_conquest_war_name: "$ORDER$ Cossack Conquest of $SECOND$"

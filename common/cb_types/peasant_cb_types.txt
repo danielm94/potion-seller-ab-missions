@@ -1,5 +1,6 @@
 cb_great_peasant_uprising = {
 	valid_for_subject = no
+	ai_peace_desire = -20
 	prerequisites = {
 		has_government_attribute = is_peasants_republic
 		has_spawned_supported_rebels = FROM
