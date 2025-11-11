@@ -14,6 +14,82 @@ ab_mop_2 = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
+	mop_wallachia = {
+		icon = gfx_wal_war_of_the_ten_houses
+		position = 2
+		required_missions = {
+			mop_win_civil_war
+		}
+		provinces_to_highlight = {
+			area = wallachia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				wallachia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_the_butcher_has_already_purged_the_ten_houses_tt
+				first_limit = "WAL = {
+					has_won_wallachian_civil_war = yes
+				}"
+				first_effect = "mop_wallachia_already_purged_effect = yes"
+				second_custom_tooltip = if_the_butcher_hasnt_already_purged_the_ten_houses_tt
+				second_limit = "WAL = {
+					has_won_wallachian_civil_war = no
+				}"
+				second_effect = "mop_purge_ten_houses_effect = yes"
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
+				first_limit = "is_bogdan_razesul_ruling = yes"
+				first_effect = "
+					change_peasant_zeal = {
+						value = 20
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 10
+					}"
+				second_custom_tooltip = if_bogdan_razesul_isnt_ruling_tt
+				second_limit = "is_bogdan_razesul_ruling = no"
+				second_effect = "
+					change_peasant_zeal = {
+						value = 10
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 5
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 5
+					}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_the_end_of_the_boiermiea
+				duration = -1
+			}
+		}
+	}
 }
 
 ab_mop_3 = {

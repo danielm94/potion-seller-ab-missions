@@ -1,0 +1,150 @@
+defined_text = {
+	name = mop_wallachia_title_loc
+	random = no
+	text = {
+		localisation_key = mop_wallachia_title_rem
+		trigger = {
+			OR = {
+				AND = {
+					exists = WAL
+					WAL = {
+						has_government_attribute = romanian_elective_monarchy
+					}
+				}
+				AND = {
+					exists = ROD
+					ROD = {
+						has_government_attribute = romanian_elective_monarchy
+					}
+				}
+				exists = TUH
+			}
+		}
+	}
+	text = {
+		localisation_key = mop_wallachia_title_not_rem
+		trigger = {
+			NOT = {
+				exists = TUH
+			}
+			OR = {
+				AND = {
+					exists = WAL
+					WAL = {
+						NOT = {
+							has_government_attribute = romanian_elective_monarchy
+						}
+					}
+				}
+				AND = {
+					exists = DAC
+					DAC = {
+						NOT = {
+							has_government_attribute = romanian_elective_monarchy
+						}
+					}
+				}
+				AND = {
+					exists = ROD
+					ROD = {
+						NOT = {
+							has_government_attribute = romanian_elective_monarchy
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = mop_wallachia_title_dead_wal
+		trigger = {
+			NOT = {
+				exists = WAL
+			}
+			NOT = {
+				exists = DAC
+			}
+			NOT = {
+				exists = TUH
+			}
+			NOT = {
+				exists = ROD
+			}
+		}
+	}
+}
+defined_text = {
+	name = mop_wallachia_desc_loc
+	random = no
+	text = {
+		localisation_key = mop_wallachia_desc_rem
+		trigger = {
+			OR = {
+				AND = {
+					exists = WAL
+					WAL = {
+						has_government_attribute = romanian_elective_monarchy
+					}
+				}
+				AND = {
+					exists = ROD
+					ROD = {
+						has_government_attribute = romanian_elective_monarchy
+					}
+				}
+				exists = TUH
+			}
+		}
+	}
+	text = {
+		localisation_key = mop_wallachia_desc_not_rem
+		trigger = {
+			NOT = {
+				exists = TUH
+			}
+			OR = {
+				AND = {
+					exists = WAL
+					WAL = {
+						NOT = {
+							has_government_attribute = romanian_elective_monarchy
+						}
+					}
+				}
+				AND = {
+					exists = DAC
+					DAC = {
+						NOT = {
+							has_government_attribute = romanian_elective_monarchy
+						}
+					}
+				}
+				AND = {
+					exists = ROD
+					ROD = {
+						NOT = {
+							has_government_attribute = romanian_elective_monarchy
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = mop_wallachia_desc_dead_wal
+		trigger = {
+			NOT = {
+				exists = WAL
+			}
+			NOT = {
+				exists = DAC
+			}
+			NOT = {
+				exists = TUH
+			}
+			NOT = {
+				exists = ROD
+			}
+		}
+	}
+}

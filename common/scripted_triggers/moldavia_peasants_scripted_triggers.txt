@@ -41,3 +41,8 @@ is_cossack_conquest_province = {
 		region = manchuria_region
 	}
 }
+
+#SCOPE = COUNTRY
+is_bogdan_razesul_ruling = {
+	has_ruler = "Bogdan Razesul"
+}

@@ -42,7 +42,7 @@ cossack_protectorate_overlord_bonus_1 = {
 cossack_protectorate_overlord_bonus_2 = {
 	cavalry_shock = 0.2
 	cavalry_cost = -0.1
-	allowed_cossack_fraction = 0.10
+	allowed_cossack_fraction = 0.1
 }
 
 cossack_protectorate_overlord_bonus_3 = {
@@ -72,6 +72,7 @@ kievan_commune = {
 	local_development_cost = -0.05
 	global_manpower_modifier = 0.025
 }
+
 great_kievan_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -79,6 +80,7 @@ great_kievan_commune = {
 	local_development_cost = -0.1
 	global_manpower_modifier = 0.05
 }
+
 azov_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
@@ -86,6 +88,7 @@ azov_commune = {
 	local_development_cost = -0.05
 	naval_maintenance_modifier = -0.05
 }
+
 azov_abolition_shock = {
 	local_unrest = 10
 	local_production_efficiency = -0.75
@@ -99,13 +102,6 @@ astrakhan_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.05
 	global_trade_power = 0.025
-}
-
-mop_civilizing_the_steppe = {
-	local_missionary_strength = 0.03
-	local_missionary_maintenance_cost = -0.5
-	local_culture_conversion_cost = -0.25
-	local_culture_conversion_time = -0.25
 }
 
 zaz_hegemon_of_ruthenia = {
@@ -124,4 +120,17 @@ azov_gate = {
 	trade_efficiency = 0.05
 	global_trade_power = 0.025
 	defensiveness = 0.25
+}
+
+mop_the_end_of_the_boiermiea = {
+	razesi_loyalty_modifier = 0.05
+	land_morale = 0.05
+}
+
+mop_purging_the_ten_houses = {
+	local_monthly_devastation = 0.1
+	local_unrest = 15
+	local_tax_modifier = -1
+	local_manpower_modifier = -1
+	local_production_efficiency = -1
 }

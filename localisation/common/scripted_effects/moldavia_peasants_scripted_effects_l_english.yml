@@ -1,2 +1,4 @@
 ﻿l_english:
  mop_cossack_relations_conquered_reward_effect_tt: "@ZAZ §Y[ZAZ.GetName]§! will be released as a loyal ally of ours.\nWe will gain §G4§! §YCossack Cavalry§! in our capital.\n§gDon't panic, courting @ZAZ §Y[ZAZ.GetName]§! will pay off in the long run!§!"
+ mop_purge_ten_houses_tt: "The noble §YTen Houses of Wallachia§! will be hunted down and systemically purged. Every province in §YWallachia§! will receive:"
+ mop_wallachia_already_purged_tt: "The people of Wallachia, already so broken from the sadistic violence of the Voivode, the civil war, and now the peasant invasion have lost most of their will to resist. Every province in Wallachia will receive:"
