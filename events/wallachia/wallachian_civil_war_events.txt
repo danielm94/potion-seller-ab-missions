@@ -72,13 +72,13 @@ country_event = {
 	title = wallachian_civil_war_events.2.t
 	desc = {
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 		desc = wallachian_civil_war_events.2.d_refused
 	}
 	desc = {
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 		desc = wallachian_civil_war_events.2.d_banquet
 	}
@@ -101,7 +101,7 @@ country_event = {
 		name = wallachian_civil_war_start_refused_option
 		trigger = {
 			hidden_trigger = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 		}
 		reduce_stability = {
@@ -123,7 +123,7 @@ country_event = {
 		name = wallachian_civil_war_start_banquet_option
 		trigger = {
 			hidden_trigger = {
-				has_butchered_the_boiermiea = yes
+				has_butchered_the_boierimea = yes
 			}
 		}
 		reduce_stability = {
@@ -183,7 +183,7 @@ country_event = {
 				}
 				modifier = {
 					factor = 0
-					has_butchered_the_boiermiea = yes
+					has_butchered_the_boierimea = yes
 				}
 			}
 			5 = {
@@ -194,7 +194,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_refused_boiermiea_ultimatum = yes
+						has_refused_boierimea_ultimatum = yes
 						ruler_has_personality = calm_personality
 					}
 				}
@@ -745,19 +745,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.9.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.9.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -797,19 +797,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.10.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.10.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -849,19 +849,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.11.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.11.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -901,19 +901,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.12.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.12.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -953,19 +953,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.13.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.13.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -1005,19 +1005,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.14.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.14.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -1057,19 +1057,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.15.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.15.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -1109,19 +1109,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.16.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.16.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -1161,19 +1161,19 @@ country_event = {
 	desc = {
 		desc = wallachian_civil_war_events_refused.17.d
 		trigger = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	desc = {
 		desc = wallachian_civil_war_events_butchered.17.d
 		trigger = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 	}
 	immediate = {
 		if = {
 			limit = {
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 			hidden_effect = {
 				random_owned_province = {
@@ -1761,7 +1761,7 @@ country_event = {
 			add_government_reform = appointive_voivodate
 			if = {
 				limit = {
-					has_butchered_the_boiermiea = yes
+					has_butchered_the_boierimea = yes
 				}
 				country_event = {
 					id = wallachian_civil_war_events.41
@@ -1813,7 +1813,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_refused_boiermiea_ultimatum = yes
+					has_refused_boierimea_ultimatum = yes
 				}
 				country_event = {
 					id = wallachian_civil_war_events.38

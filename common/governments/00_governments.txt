@@ -347,7 +347,7 @@ monarchy = {
 				empower_the_diet_of_the_ten
 				dominance_of_the_ruling_house
 				supremacy_of_the_armasie
-				abolition_of_the_boiermiea
+				abolition_of_the_boierimea
 			}
 		}
 		bureaucracy = {

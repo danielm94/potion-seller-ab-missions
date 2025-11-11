@@ -329,7 +329,7 @@ ab_wal_slayed_the_boieri_missions = {
 			}
 			custom_tooltip = AB_EMPTY
 			unlock_government_reform = {
-				government_reform = abolition_of_the_boiermiea
+				government_reform = abolition_of_the_boierimea
 				tooltip = yes
 			}
 		}
@@ -417,7 +417,7 @@ ab_wal_slayed_the_boieri_missions = {
 						power_type = terror_power
 						value = 60
 					}
-					has_butchered_the_boiermiea = yes
+					has_butchered_the_boierimea = yes
 				}
 				NOT = {
 					diplomatic_reputation = -10

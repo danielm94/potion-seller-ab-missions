@@ -1,13 +1,13 @@
 wallachian_civil_war_rebels_enforce_demands_effect = {
 	if = {
 		limit = {
-			has_refused_boiermiea_ultimatum = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 		custom_tooltip = wallachian_civil_war_refused_ultimatum_rebels_enforced_effect_tooltip
 	}
 	else_if = {
 		limit = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 		custom_tooltip = wallachian_civil_war_slaughtered_rebels_enforced_effect_tooltip
 	}

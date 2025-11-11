@@ -122,7 +122,7 @@ azov_gate = {
 	defensiveness = 0.25
 }
 
-mop_the_end_of_the_boiermiea = {
+mop_the_end_of_the_boierimea = {
 	razesi_loyalty_modifier = 0.05
 	land_morale = 0.05
 }

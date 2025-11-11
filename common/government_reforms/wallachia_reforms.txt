@@ -281,8 +281,8 @@ supremacy_of_the_armasie = {
 	}
 }
 
-abolition_of_the_boiermiea = {
-	icon = "abolition_of_the_boiermiea"
+abolition_of_the_boierimea = {
+	icon = "abolition_of_the_boierimea"
 	allow_normal_conversion = yes
 	potential = {
 		is_or_was_wallachia = yes
@@ -293,7 +293,7 @@ abolition_of_the_boiermiea = {
 	}
 	trigger = {
 		has_unlocked_government_reform = {
-			government_reform = abolition_of_the_boiermiea
+			government_reform = abolition_of_the_boierimea
 		}
 	}
 	modifiers = {

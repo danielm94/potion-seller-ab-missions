@@ -5,15 +5,15 @@ wallachian_civil_war = {
 			has_country_flag = complete_end_of_wallachian_civil_war
 		}
 		OR = {
-			has_butchered_the_boiermiea = yes
-			has_refused_boiermiea_ultimatum = yes
+			has_butchered_the_boierimea = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	can_start = {
 		is_or_was_wallachia = yes
 		OR = {
-			has_butchered_the_boiermiea = yes
-			has_refused_boiermiea_ultimatum = yes
+			has_butchered_the_boierimea = yes
+			has_refused_boierimea_ultimatum = yes
 		}
 	}
 	can_stop = {
@@ -53,14 +53,14 @@ wallachian_civil_war = {
 			factor = 100
 			custom_trigger_tooltip = {
 				tooltip = wallachian_civil_war_refused_ultimatum_trigger_tooltip
-				has_refused_boiermiea_ultimatum = yes
+				has_refused_boierimea_ultimatum = yes
 			}
 		}
 		modifier = {
 			factor = 100
 			custom_trigger_tooltip = {
 				tooltip = wallchian_civil_war_slaughtered_guests_trigger_tooltip
-				has_butchered_the_boiermiea = yes
+				has_butchered_the_boierimea = yes
 			}
 		}
 	}

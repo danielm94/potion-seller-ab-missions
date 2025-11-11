@@ -103,9 +103,9 @@ l_english:
  wallachian_civil_war_rebels_demands_refused_ultimatum: "Ruler Dies"
  wallachian_civil_war_rebels_demands_refused_ultimatum_desc: "The rebels demand the execution of the Voivode and the permanent curtailing of all royal powers, ensuring the nobility can never be challenged again."
  wallachian_civil_war_butchered_the_nobles_trigger_tooltip: "The rebels won't negotiate with you after what you've done to the heads of their house!"
- wallachian_civil_war_refused_ultimatum_rebels_enforced_effect_tooltip: "§YThe War of the Ten Houses§! disaster will end.\n§R§Y[Root.Monarch.GetName]§! will be hanged for his crimes.§!\n§RThe §YBoiermiea§! will impose strict limitations on all royal powers.§!"
+ wallachian_civil_war_refused_ultimatum_rebels_enforced_effect_tooltip: "§YThe War of the Ten Houses§! disaster will end.\n§R§Y[Root.Monarch.GetName]§! will be hanged for his crimes.§!\n§RThe §YBoierimea§! will impose strict limitations on all royal powers.§!"
  wallachian_civil_war_rebels_on_siege_won_tooltip: "§RIf the capital is sieged, you will lose §YThe War of the Ten Houses§!§!"
  wallachian_civil_war_rebels_demands_butchered: "Ruler Dies Horribly"
  wallachian_civil_war_rebels_demands_butchered_desc: "I'm not going to sugar-coat it, they will get medieval on your ass."
- wallachian_civil_war_slaughtered_rebels_enforced_effect_tooltip: "§YThe War of the Ten Houses§! disaster will end.\n§R§Y[Root.Monarch.GetName]§! will be tortured, and then impaled.§!\n§RThe §YBoiermiea§! will impose strict limitations on all royal powers.§!"
+ wallachian_civil_war_slaughtered_rebels_enforced_effect_tooltip: "§YThe War of the Ten Houses§! disaster will end.\n§R§Y[Root.Monarch.GetName]§! will be tortured, and then impaled.§!\n§RThe §YBoierimea§! will impose strict limitations on all royal powers.§!"
 

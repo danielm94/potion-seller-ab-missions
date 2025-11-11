@@ -86,7 +86,7 @@ ab_mop_2 = {
 			}
 			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
-				name = mop_the_end_of_the_boiermiea
+				name = mop_the_end_of_the_boierimea
 				duration = -1
 			}
 		}

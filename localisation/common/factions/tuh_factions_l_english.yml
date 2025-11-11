@@ -13,7 +13,7 @@
  bibescu_faction_FACTION_DESC: "Aristocratic house recognized for diplomatic finesse, administrative reforms, and fostering closer cultural ties to the West.\n\n\n§YRuler Bonus:§!§TWhen elected, we will gain a Skill §Y2 Diplomat§! that is §G75%§! cheaper to employ.§!"
  brancoveanu_faction: "House Brancoveanu"
  brancoveanu_faction_influence: "Brancoveanu Influence"
- brancoveanu_faction_FACTION_DESC: "Famed patrons of art and culture, their golden era saw Wallachian prosperity, stability, and significant architectural advancement.\n\n§YRuler Bonus:§! §TDeveloping provinces with §Ytax§!, §Ytrade§!, or §Ymanpower§! buildings has a §Y40%§! chance of granting §Y1§! estate loyalty with the §YClerul§!, §YBreslele§!, or §YBoiermiea§!.§!"
+ brancoveanu_faction_FACTION_DESC: "Famed patrons of art and culture, their golden era saw Wallachian prosperity, stability, and significant architectural advancement.\n\n§YRuler Bonus:§! §TDeveloping provinces with §Ytax§!, §Ytrade§!, or §Ymanpower§! buildings has a §Y40%§! chance of granting §Y1§! estate loyalty with the §YClerul§!, §YBreslele§!, or §YBoierimea§!.§!"
  movilesti_faction: "House Movilesti"
  movilesti_faction_influence: "Movilesti Influence"
  movilesti_faction_FACTION_DESC: "Influential in Wallachia and Moldavia, renowned for strategic marriages, political maneuvering, and close ties with Byzantine nobility.\n\n§YRuler Bonus:§!§T The §YForge a Coalition§! ability will be §Gempowered§!.§!"

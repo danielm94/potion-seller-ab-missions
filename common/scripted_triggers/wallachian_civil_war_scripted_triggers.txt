@@ -2,16 +2,16 @@ is_in_war_of_the_ten_houses_disaster = {
 	has_country_flag = in_war_of_the_ten_houses
 }
 
-has_refused_boiermiea_ultimatum = {
+has_refused_boierimea_ultimatum = {
 	custom_trigger_tooltip = {
-		tooltip = has_refused_boiermiea_ultimatum_tooltip
+		tooltip = has_refused_boierimea_ultimatum_tooltip
 		has_country_flag = wallachia_refused_nobility_ultimatum
 	}
 }
 
-has_butchered_the_boiermiea = {
+has_butchered_the_boierimea = {
 	custom_trigger_tooltip = {
-		tooltip = has_butchered_the_boiermiea_tooltip
+		tooltip = has_butchered_the_boierimea_tooltip
 		has_country_flag = wallachia_slaughtered_guests_in_your_own_home
 	}
 }
@@ -33,11 +33,11 @@ has_voiovode_surrendered_wallachian_civil_war = {
 can_negotiate_with_wallachian_civil_war_rebels = {
 	if = {
 		limit = {
-			has_butchered_the_boiermiea = yes
+			has_butchered_the_boierimea = yes
 		}
 		custom_trigger_tooltip = {
 			tooltip = wallachian_civil_war_butchered_the_nobles_trigger_tooltip
-			has_butchered_the_boiermiea = no
+			has_butchered_the_boierimea = no
 		}
 	}
 }
