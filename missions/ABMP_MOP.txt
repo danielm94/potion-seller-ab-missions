@@ -5,6 +5,143 @@ ab_mop_1 = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
+	mop_liberate_transylvania = {
+		icon = gfx_wal_liberate_transylvania
+		position = 2
+		required_missions = {
+			mop_win_civil_war
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = transylvania_area
+				area = southern_transylvania_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					OR = {
+						area = transylvania_area
+						area = southern_transylvania_area
+					}
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = alfold_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = centralhungary_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = eastslovakia_area
+			}
+			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
+				first_limit = "is_bogdan_razesul_ruling = yes"
+				first_effect = "
+					change_peasant_zeal = {
+						value = 20
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 10
+					}"
+				second_custom_tooltip = if_bogdan_razesul_isnt_ruling_tt
+				second_limit = "is_bogdan_razesul_ruling = no"
+				second_effect = "
+					change_peasant_zeal = {
+						value = 10
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 5
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 5
+					}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 15
+			}
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power = {
+				culture = transylvanian
+			}
+			custom_tooltip = wal_liberate_transylvania_heathen_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_establish_mountain_monasteries
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				transylvania_area = {
+					limit = {
+						religion = tengri_pagan_reformed
+					}
+					add_province_modifier = {
+						name = wallachia_establish_mountain_monasteries
+						duration = 7300
+					}
+				}
+				southern_transylvania_area = {
+					limit = {
+						religion = tengri_pagan_reformed
+					}
+					add_province_modifier = {
+						name = wallachia_establish_mountain_monasteries
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = wal_liberate_transylvania_bretheren_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = wallachia_liberated_bretheren
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				transylvania_area = {
+					limit = {
+						culture = transylvanian
+					}
+					add_province_modifier = {
+						name = wallachia_liberated_bretheren
+						duration = 7300
+					}
+				}
+				southern_transylvania_area = {
+					limit = {
+						culture = transylvanian
+					}
+					add_province_modifier = {
+						name = wallachia_liberated_bretheren
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
 }
 
 ab_mop_2 = {
@@ -85,6 +222,9 @@ ab_mop_2 = {
 					}"
 			}
 			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power = {
+				culture = Wallachian
+			}
 			add_country_modifier = {
 				name = mop_the_end_of_the_boierimea
 				duration = -1
@@ -849,8 +989,16 @@ ab_mop_4 = {
 			}
 		}
 		trigger = {
-			4706 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				4706 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
