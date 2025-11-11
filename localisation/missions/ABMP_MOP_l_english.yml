@@ -39,3 +39,6 @@
  if_bogdan_razesul_isnt_ruling_tt: "If §VBogdan Razesul§! isn't ruling §Y[Root.GetName]§!:"
  if_the_butcher_has_already_purged_the_ten_houses_tt: "If the Butcher of Tirgoviste has already purged the Ten Houses of Wallachia:"
  if_the_butcher_hasnt_already_purged_the_ten_houses_tt: "If the Butcher of Tirgoviste hasn't already purged the Ten Houses of Wallachia:"
+ if_bulgaria_is_our_rival_tt: "If @BUL [BUL.GetName] is our rival, we will gain:"
+ mop_liberate_dobruja_title: "Liberate Dobruja"
+ mop_liberate_dobruja_desc: "For nearly a millennium, the Bulgar yoke has weighed upon our people. Their recent war against the Romans has left them overextended, their armies drained. An opportunity to settle old scores and secure our future now presents itself. We must strike across the Danube and liberate our kin in Dobruja."
