@@ -108,6 +108,8 @@ dlc102_wal_sprite_pack = {
 			tag = TUH
 			tag = DAC
 			tag = ROD
+			tag = MOP
+			tag = TUC
 		}
 	}
 
