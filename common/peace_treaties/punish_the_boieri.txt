@@ -46,6 +46,12 @@ po_punish_the_boieri = {
 				duration = 3650
 			}
 		}
+		every_owned_province = {
+			limit = {
+				is_core = MOL
+			}
+			remove_core = MOL
+		}
 		country_event = {
 			id = moldavian_civil_war_events.3
 		}
