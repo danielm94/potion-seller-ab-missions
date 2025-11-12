@@ -5,7 +5,7 @@
  incite_peasants_desc: "Description"
  incite_peasants_tooltip: "Description"
  incite_peasants_alert_tooltip: "Incite Peasants"
- incite_peasants_spy_network_size_tt: "Have a Spy Network in §Y[From.GetName]§! of at least size §Y[Root.incite_rebels_cost_var.GetValue]§!."
+ incite_peasants_spy_network_size_tt: "Have a Spy Network in §Y[From.GetName]§! of at least size §Y[Root.incite_peasants_cost_var.GetValue]§!."
  invite_to_peasant_league: "Invite to League"
  invite_to_peasant_league_title: "£allied_commune£ Invite to League £allied_commune£"
  invite_to_peasant_league_desc: "We will invite them into our peasant league.\n\nIf they accept the offer:\n- §Y[From.GetName]§! will become an §YAllied Commune§! of ours.\n- §YThe Leaguists§! will gain §Y+5§! faction influence.\n\nIf they reject the offer:\n- Lose §R5§! Prestige\n- We will gain the §YPeasant League Integration§! casus belli against them for §Y5 years§!, allowing us to force them to become an §YAllied Commune§!."

@@ -35,7 +35,7 @@ calculate_incite_rebels_cost = {
 		var = incite_rebels_base_cost_var
 	}
 	calculate_spy_action_cost_var = {
-		spy_action_cost_var = incite_rebels_cost_var
+		spy_action_cost_var = incite_peasants_cost_var
 		spy_action_base_cost = incite_rebels_base_cost_var
 	}
 }

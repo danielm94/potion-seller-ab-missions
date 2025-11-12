@@ -37,13 +37,7 @@ anti_tax_rebels = {
 		modifier = {
 			factor = 1000
 			owner = {
-				has_country_flag = incited_peasants
-				NOT = {
-					had_country_flag = {
-						flag = incited_peasants
-						days = 3650
-					}
-				}
+				have_peasants_been_incited_recently = yes
 			}
 		}
 		modifier = {

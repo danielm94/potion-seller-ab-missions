@@ -17,7 +17,7 @@ incite_peasants = {
 	is_allowed = {
 		custom_trigger_tooltip = {
 			tooltip = incite_peasants_spy_network_size_tt
-			can_incite_rebels = {
+			can_incite_peasants = {
 				who = FROM
 			}
 		}
@@ -40,7 +40,7 @@ incite_peasants = {
 		calculate_spy_action_cost_values = yes
 		set_variable = {
 			which = spy_network_deduction_var
-			which = incite_rebels_cost_var
+			which = incite_peasants_cost_var
 		}
 		multiply_variable = {
 			which = spy_network_deduction_var

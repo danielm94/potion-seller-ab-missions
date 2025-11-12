@@ -1,7 +1,7 @@
 #SCOPE = COUNTRY
-can_incite_rebels = {
+can_incite_peasants = {
 	spy_action_cost_trigger = {
-		spy_action_cost_var = incite_rebels_cost_var
+		spy_action_cost_var = incite_peasants_cost_var
 		who = $who$
 	}
 }
@@ -45,4 +45,15 @@ is_cossack_conquest_province = {
 #SCOPE = COUNTRY
 is_bogdan_razesul_ruling = {
 	has_ruler = "Bogdan Razesul"
+}
+
+#SCOPE = COUNTRY
+have_peasants_been_incited_recently = {
+	has_country_flag = incited_peasants
+	NOT = {
+		had_country_flag = {
+			flag = incited_peasants
+			days = 3650
+		}
+	}
 }
