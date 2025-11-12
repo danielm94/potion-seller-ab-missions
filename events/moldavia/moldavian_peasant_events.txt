@@ -29,8 +29,96 @@ country_event = {
 		}
 	}
 	option = {
+		name = moldavian_peasant_events.1.united_communes_EN
+		trigger = {
+			tag = TUC
+			NOT = {
+				has_country_flag = set_tuc_united_communes_name_EN
+			}
+		}
+		override_country_name = TUC
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_tuc_united_communes_name_EN
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_peasant_events.1.united_communes_RO
+		trigger = {
+			tag = TUC
+			NOT = {
+				has_country_flag = set_tuc_united_communes_name_RO
+			}
+		}
+		override_country_name = TUC_RO
+		custom_tooltip = romanian_equivalent_of_united_communes_tt
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_tuc_united_communes_name_RO
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_peasant_events.1.dacian_league_EN
+		trigger = {
+			tag = TUC
+			NOT = {
+				has_country_flag = set_tuc_dacian_league_name_EN
+			}
+		}
+		override_country_name = TUC_DACIAN_LEAGUE_EN
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_tuc_dacian_league_name_EN
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_peasant_events.1.dacian_league_RO
+		trigger = {
+			tag = TUC
+			NOT = {
+				has_country_flag = set_tuc_dacian_league_name_RO
+			}
+		}
+		override_country_name = TUC_DACIAN_LEAGUE_RO
+		custom_tooltip = romanian_equivalent_of_dacian_league_tt
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_tuc_dacian_league_name_RO
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_peasant_events.1.vlach_federation_EN
+		trigger = {
+			tag = TUC
+			NOT = {
+				has_country_flag = set_tuc_vlach_federation_name_EN
+			}
+		}
+		override_country_name = TUC_VLACH_FEDERATION_EN
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_tuc_vlach_federation_name_EN
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
+		name = moldavian_peasant_events.1.vlach_federation_RO
+		trigger = {
+			tag = TUC
+			NOT = {
+				has_country_flag = set_tuc_vlach_federation_name_RO
+			}
+		}
+		override_country_name = TUC_VLACH_FEDERATION_RO
+		custom_tooltip = romanian_equivalent_of_vlach_federation_tt
+		clear_mop_country_name_flags = yes
+		set_country_flag = set_tuc_vlach_federation_name_RO
+		unlock_rename_decision_tooltip_effect = yes
+		moldavia_name_change_cost_effect = yes
+	}
+	option = {
 		name = moldavian_peasant_events.1.moldavia
 		trigger = {
+			tag = MOP
 			NOT = {
 				exists = MOL
 			}
@@ -47,6 +135,7 @@ country_event = {
 	option = {
 		name = moldavian_peasant_events.1.moldavian_commune_EN
 		trigger = {
+			tag = MOP
 			NOT = {
 				has_country_flag = set_moldavian_commune_name_EN
 			}
@@ -60,6 +149,7 @@ country_event = {
 	option = {
 		name = moldavian_peasant_events.1.moldavian_commune_RO
 		trigger = {
+			tag = MOP
 			NOT = {
 				has_country_flag = set_moldavian_commune_name_RO
 			}
@@ -101,37 +191,5 @@ country_event = {
 	after = {
 		set_country_flag = unlocked_mop_country_rename_decision
 		clr_country_flag = in_moldavian_peasant_events.1
-	}
-}
-
-# Hidden event to give the player opinion boost with ZAZ because PDX jank prevents me
-# from doing that from the scripted effect.
-country_event = {
-	id = moldavian_peasant_events.2
-	title = moldavian_peasant_events.2.t
-	desc = moldavian_peasant_events.2.d
-	picture = dev
-	is_triggered_only = yes
-	hidden = yes
-	immediate = {
-		add_treasury = 5000
-		ZAZ = {
-			add_opinion = {
-				who = MOP
-				modifier = released_us_freely
-			}
-		}
-		add_opinion = {
-			who = ZAZ
-			modifier = hre_country_left
-		}
-		reverse_add_opinion = {
-			who = ZAZ
-			modifier = no_support_of_pope
-		}
-	}
-	option = {
-		name = moldavian_peasant_events.2.a
-		
 	}
 }

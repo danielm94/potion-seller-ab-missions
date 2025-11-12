@@ -5,18 +5,29 @@ clear_mop_country_name_flags = {
 	clr_country_flag = set_moldavian_commune_name_RO
 	clr_country_flag = set_razesi_republic_name_EN
 	clr_country_flag = set_razesi_republic_name_RO
+	clr_country_flag = set_tuc_united_communes_name_EN
+	clr_country_flag = set_tuc_united_communes_name_RO
+	clr_country_flag = set_tuc_dacian_league_name_EN
+	clr_country_flag = set_tuc_dacian_league_name_RO
+	clr_country_flag = set_tuc_vlach_federation_name_EN
+	clr_country_flag = set_tuc_vlach_federation_name_RO
 }
+
 
 #SCOPE = COUNTRY
 moldavia_name_change_cost_effect = {
 	if = {
 		limit = {
 			has_country_flag = unlocked_mop_country_rename_decision
+			NOT = {
+				has_country_flag = free_rename
+			}
 		}
 		add_prestige = -1
 	}
 	else = {
 		custom_tooltip = moldavia_name_change_first_one_free_tt
+		clr_country_flag = free_rename
 	}
 }
 
