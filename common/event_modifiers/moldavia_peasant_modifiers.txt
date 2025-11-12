@@ -134,3 +134,11 @@ mop_purging_the_ten_houses = {
 	local_manpower_modifier = -1
 	local_production_efficiency = -1
 }
+
+mop_supporting_rebels_bul = {
+	rebel_support_efficiency = 2
+}
+
+incite_peasants_support_buff = {
+	rebel_support_efficiency = 5
+}
