@@ -148,3 +148,19 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = get_moldavian_peasant_flag
+	text = { 
+		localisation_key = mop_flag
+		trigger = {
+			tag = MOP
+		}
+	}
+	text = { 
+		localisation_key = tuc_flag
+		trigger = {
+			tag = TUC
+		}
+	}
+}
