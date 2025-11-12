@@ -7,4 +7,8 @@ spriteTypes = {
 		name = "government_reform_sfatul_tarii_reform"
 		texturefile = "gfx/interface/government_reform_icons/sfatul_tarii.dds"
 	}
+	spriteType = {
+		name = "government_reform_dacian_commune_reform"
+		texturefile = "gfx/interface/government_reform_icons/dacian_commune.dds"
+	}
 }

@@ -87,7 +87,7 @@ moldavian_commune_reform = {
 	}
 }
 dacian_commune_reform = {
-	icon = "sfatul_tarii_reform"
+	icon = "dacian_commune_reform"
 	allow_convert = no
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
