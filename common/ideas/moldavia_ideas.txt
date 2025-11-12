@@ -40,40 +40,80 @@ MOL_ideas = {
 }
 
 MOP_ideas = {
-    start = {
-        land_morale = 0.1
-        improve_relation_modifier = 0.33
-    }
-    bonus = {
-        manpower_recovery_speed = 0.1
-    }
-    trigger = {
-        tag = MOP
-    }
-    free = yes
-
-    MOP_council_of_the_land = {
-        republican_tradition = 0.3
-    }
-    MOP_wanderers_and_whispers = {
-        spy_offence = 0.5
-    }
-    MOP_the_fields_are_ours = {
-        development_cost = -0.1
-    }
-    MOP_torchbearers_of_the_peasantry = {
-        rebel_support_efficiency = 1
+	start = {
+		land_morale = 0.1
+		improve_relation_modifier = 0.33
+	}
+	bonus = {
+		manpower_recovery_speed = 0.1
+	}
+	trigger = {
+		tag = MOP
+	}
+	free = yes
+	MOP_council_of_the_land = {
+		republican_tradition = 0.3
+	}
+	MOP_wanderers_and_whispers = {
+		spy_offence = 0.5
+	}
+	MOP_the_fields_are_ours = {
+		development_cost = -0.1
+	}
+	MOP_torchbearers_of_the_peasantry = {
+		rebel_support_efficiency = 1
 		monthly_peasant_zeal = 0.05
-    }
-    MOP_wine_of_the_east = {
-        prestige = 1
-    }
-    MOP_razesi_ascendant = {
-        razesi_loyalty_modifier = 0.1
-        global_unrest = -1
-    }
-    MOP_communes_united = {
-        reduced_liberty_desire_on_same_continent = 20
-    }
+	}
+	MOP_wine_of_the_east = {
+		prestige = 1
+	}
+	MOP_razesi_ascendant = {
+		razesi_loyalty_modifier = 0.1
+		global_unrest = -1
+	}
+	MOP_communes_united = {
+		reduced_liberty_desire_on_same_continent = 20
+	}
 }
 
+TUC_ideas = {
+	free = yes
+	start = {
+		land_morale = 0.2
+		spy_offence = 0.5
+	}
+	trigger = {
+		tag = TUC
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	TUC_sneaky_peasants = {
+		rebel_support_efficiency = 1
+		spy_action_cost_modifier = -0.25
+	}
+	TUC_freedom = {
+		morale_damage_received = -0.05
+		recover_army_morale_speed = 0.15
+	}
+	TUC_council_of_the_land = {
+		republican_tradition = 0.3
+		num_of_parliament_issues = 1
+	}
+	TUC_river_gates = {
+		justify_trade_conflict_cost = -0.25
+		trade_steering = 0.25
+	}
+	TUC_leader_of_the_revolution = {
+		monthly_peasant_zeal = 0.07
+		diplomatic_upkeep = 2
+	}
+	TUC_peasant_horde = {
+		manpower_recovery_speed = 0.2
+		land_maintenance_modifier = -0.1
+	}
+	TUC_sheppard_of_the_communes = {
+		reduced_liberty_desire_on_same_continent = 20
+		diplomatic_reputation = 2
+	}
+}
