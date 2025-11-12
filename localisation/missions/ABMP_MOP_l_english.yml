@@ -50,3 +50,8 @@
  unlock_dacian_commune_reform_tt: "We will replace the §YMoldavian Commune§! Tier 1 government reform with the more powerful §YDacian Commune§! reform"
  ruler_has_protector_of_the_little_folk_personality_tt: "If our ruler has the §YProtector of the Little Folk§! personality trait:"
  ruler_doesnt_have_protector_of_the_little_folk_personality_tt: "If our ruler doesn't have the §YProtector of the Little Folk§! personality trait:"
+ mop_rouse_the_bulgar_peasants_title: "Rouse the Bulgars"
+ mop_rouse_the_bulgar_peasants_desc: "The Vlachs are free; now the peasants south of the Danube look to us for a sign. Our riders carry bread, letters, and quiet oaths into the valleys of Moesia and Thrace, stirring the Bulgarian villages against their lords."
+ mop_rouse_the_bulgar_peasants_trigger_tt: "We have used the §YIncite the Peasants§! covert diplomatic action against any country that:\n- Owns §YBulgarian§! provinces in the §YBalkans§!.\n- Isn't our subject."
+ bulgarian_peasants_send_contact_tt: "§gThe Bulgarian ringleader will send one of his best operatives to work at our court in §Y[Root.Capital.GetName]§! as a token of his gratitude...§!"
+ if_we_incited_peasants_against_bulgaria_itself_tt: "If we incited peasants against @BUL §Y[BUL.GetName]§! and they are our §Yrival§! or §Yenemy§!:"
