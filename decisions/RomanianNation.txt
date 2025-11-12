@@ -7,6 +7,12 @@ country_decisions = {
 				exists = RMN
 			}
 			is_or_was_wallachia = no
+			NOT = {
+				tag = MOP
+			}
+			NOT = {
+				tag = TUC
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
