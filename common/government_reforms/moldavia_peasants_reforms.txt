@@ -1,0 +1,146 @@
+sfatul_tarii_reform = {
+	icon = "sfatul_tarii_reform"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = peasants_republic_legacy
+	potential = {
+		tag = MOP
+		has_country_flag = in_moldavian_civil_war
+	}
+	trigger = {
+		is_blocked_from_peasant_government_because_of_treaty = no
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		can_not_declare_war = yes
+		manpower_recovery_speed = 0.25
+		regiment_recruit_speed = -0.25
+		war_taxes_cost_modifier = -1
+	}
+	custom_attributes = {
+		is_peasants_republic = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		disables_estate_nobles = yes
+		enables_estate_razesi = yes
+		election_on_death = yes
+	}
+}
+
+moldavian_commune_reform = {
+	icon = "sfatul_tarii_reform"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = peasants_republic_legacy
+	potential = {
+		tag = MOP
+		has_won_moldavian_civil_war = yes
+	}
+	trigger = {
+		is_blocked_from_peasant_government_because_of_treaty = no
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		core_creation = 3
+		diplomatic_annexation_cost = 0.7
+		governing_capacity_modifier = -0.5
+		reduced_liberty_desire_on_other_continent = -50
+		reduced_liberty_desire_on_same_continent = -50
+		land_morale = 0.1
+		idea_cost = -0.1
+		development_cost = -0.1
+		razesi_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		disables_estate_nobles = yes
+		enables_estate_razesi = yes
+		has_parliament = yes
+		has_peasant_elections = yes
+		is_peasants_republic = yes
+	}
+	factions = {
+		exemplarists_faction
+		leaguists_faction
+		abolitionists_faction
+	}
+	government_abilities = {
+		peasant_zealotry
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = faction_fatigue_variables_initialized
+					}
+				}
+				faction_fatigue_initialize_faction_fatigue_variables = yes
+				set_country_flag = faction_fatigue_variables_initialized
+			}
+		}
+	}
+}
+dacian_commune_reform = {
+	icon = "sfatul_tarii_reform"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = peasants_republic_legacy
+	potential = {
+		tag = TUC
+	}
+	trigger = {
+		is_blocked_from_peasant_government_because_of_treaty = no
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		core_creation = 3
+		diplomatic_annexation_cost = 0.7
+		governing_capacity_modifier = -0.5
+		reduced_liberty_desire_on_other_continent = -50
+		reduced_liberty_desire_on_same_continent = -50
+		land_morale = 0.1
+		morale_damage = 0.05
+		idea_cost = -0.1
+		development_cost = -0.15
+		razesi_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		disables_estate_nobles = yes
+		enables_estate_razesi = yes
+		has_parliament = yes
+		has_peasant_elections = yes
+		is_peasants_republic = yes
+		centralize_state_no_reform_cost = yes
+	}
+	factions = {
+		exemplarists_faction
+		leaguists_faction
+		abolitionists_faction
+	}
+	government_abilities = {
+		peasant_zealotry
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = faction_fatigue_variables_initialized
+					}
+				}
+				faction_fatigue_initialize_faction_fatigue_variables = yes
+				set_country_flag = faction_fatigue_variables_initialized
+			}
+		}
+	}
+}
