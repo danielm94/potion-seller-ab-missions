@@ -51,7 +51,10 @@ on_province_owner_change = {
 		if = {
 			limit = {
 				owner = {
-					has_reform = moldavian_commune_reform
+					OR = {
+						has_reform = moldavian_commune_reform
+						has_reform = dacian_commune_reform
+					}
 				}
 			}
 			add_province_modifier = {
