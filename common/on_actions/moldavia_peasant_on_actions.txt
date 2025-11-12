@@ -95,3 +95,38 @@ on_dependency_gained = {
 		}
 	}
 }
+on_monthly_pulse = {
+	if = {
+		limit = {
+			has_country_flag = support_rebels_against_@THIS
+			any_country = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+		clr_country_flag = support_rebels_against_@THIS
+		random_country = {
+			limit = {
+				has_spawned_supported_rebels = PREV
+			}
+			clr_country_flag = support_rebels_against_@PREV
+		}
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			has_country_flag = support_rebels_against_@THIS
+			any_country = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+		clr_country_flag = support_rebels_against_@THIS
+		random_country = {
+			limit = {
+				has_spawned_supported_rebels = PREV
+			}
+			clr_country_flag = support_rebels_against_@PREV
+		}
+	}
+}

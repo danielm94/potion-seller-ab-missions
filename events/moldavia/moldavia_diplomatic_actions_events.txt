@@ -123,3 +123,22 @@ country_event = {
 		}
 	}
 }
+
+#Clear support rebels flag
+country_event = {
+	id = moldavia_diplomatic_actions_events.3
+	title = moldavia_diplomatic_actions_events.3.t
+	desc = moldavia_diplomatic_actions_events.3.d
+	picture = dev
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		FROM = {
+			clr_country_flag = support_rebels_against_@PREV
+		}
+		clr_country_flag = support_rebels_against_@THIS
+	}
+	option = {
+		name = moldavia_diplomatic_actions_events.3.a
+	}
+}

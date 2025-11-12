@@ -325,3 +325,19 @@ ask_for_tributary_state_action = {
 		}
 	}
 }
+
+#PotionSeller
+support_rebels = {
+	pre_effect = {
+		FROM = {
+			set_country_flag = support_rebels_against_@THIS
+			PREV = {
+				set_country_flag = support_rebels_against_@PREV
+			}
+			country_event = {
+				id = moldavia_diplomatic_actions_events.3
+				days = 1825
+			}
+		}
+	}
+}
