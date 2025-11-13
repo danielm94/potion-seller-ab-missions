@@ -35,6 +35,26 @@ incite_peasants = {
 				}
 			}
 		}
+		custom_trigger_tooltip = {
+			tooltip = commune_subject_within_border_distance_tt
+			OR = {
+				NOT = {
+					border_distance = {
+						who = FROM
+						distance = 50
+					}
+				}
+				any_subject_country = {
+					is_commune_subject = yes
+					NOT = {
+						border_distance = {
+							who = FROM
+							distance = 50
+						}
+					}
+				}
+			}
+		}
 	}
 	on_accept = {
 		calculate_spy_action_cost_values = yes

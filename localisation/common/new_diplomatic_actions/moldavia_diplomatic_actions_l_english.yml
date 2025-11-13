@@ -82,3 +82,4 @@
  convert_subject_to_commune_tooltip: "Description"
  convert_subject_to_commune_alert_tooltip: "£integrated_commune£ Establish Commune £integrated_commune£"
  AI_VASSALIZATION_ACCEPTANCE: "Vassalization Acceptance"
+ commune_subject_within_border_distance_tt: "The distance between the borders of §Y[From.GetName]§! and either §Yyour nation§! or one of your  §YCommune Subjects§! is less than §Y50§!."
