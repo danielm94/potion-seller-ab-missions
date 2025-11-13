@@ -193,3 +193,21 @@ country_event = {
 		clr_country_flag = in_moldavia_peasant_events.1
 	}
 }
+
+country_event = {
+	id = moldavia_peasant_events.2
+	title = moldavia_peasant_events.2.t
+	desc = moldavia_peasant_events.2.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = new_idea_group_yes
+		swap_free_idea_group = yes
+	}
+	option = {
+		name = new_idea_group_no
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
