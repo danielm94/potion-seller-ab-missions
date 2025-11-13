@@ -4067,24 +4067,14 @@ ab_wal_4 = {
 				religion = ROOT
 				culture = ROOT
 			}
-			if = {
-				limit = {
-					exists = MGY
-				}
-				custom_tooltip = wal_crush_the_magyars_mgy_exists_tooltip_no
-				tooltip = {
-					change_ruler_stat = {
-						type = mil
-						amount = 1
-					}
-				}
-			}
-			else = {
-				custom_tooltip = wal_crush_the_magyars_mgy_exists_tooltip_yes
-				change_ruler_stat = {
-					type = mil
-					amount = 1
-				}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_the_magyars_do_not_exist_tt
+				first_limit = "exists = MGY"
+				first_effect = "change_ruler_stat = {
+									type = mil
+									amount = 1
+								}"
 			}
 			custom_tooltip = wal_transylvania_romanianization_tooltip
 			custom_tooltip = wal_hungary_romanianization_tooltip
