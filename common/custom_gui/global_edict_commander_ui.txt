@@ -56,8 +56,8 @@ custom_button = {
 	tooltip = global_edicts_no_edicts_button_tt
 	potential = {
 		FROM = {
-			NOT = {
-				has_country_modifier = edict_commander_cooldown
+			any_owned_province = {
+				can_change_state_edict = yes
 			}
 		}
 	}

@@ -1,3 +1,0 @@
-edict_commander_cooldown = {
-	test
-}
