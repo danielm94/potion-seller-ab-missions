@@ -142,3 +142,8 @@ mop_supporting_rebels_bul = {
 incite_peasants_support_buff = {
 	rebel_support_efficiency = 5
 }
+
+mop_soothe_relations_post_bulgarian_liberation = {
+	improve_relation_modifier = 0.25
+	leaguists_faction_influence = 0.05
+}

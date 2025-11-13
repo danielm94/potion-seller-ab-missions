@@ -142,6 +142,124 @@ ab_mop_1 = {
 			}
 		}
 	}
+	mop_liberate_the_bulgars = {
+		icon = dom_ara_remensa_war
+		position = 7
+		required_missions = {
+			mop_war_for_the_bulgars
+		}
+		provinces_to_highlight = {
+			owner = {
+				NOT = {
+					tag = ROOT
+				}
+				any_owned_province = {
+					culture = bulgarian
+					region = balkan_region
+				}
+			}
+			is_capital_of = owner
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else_if = {
+				limit = {
+					owns_all_provinces = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				owns_all_provinces = {
+					culture = bulgarian
+					region = balkan_region
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = mop_arm_the_bulgar_peasants_target_expired_tt
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_liberate_the_bulgars_subject_trigger_tt
+					event_target:mop_peasant_subject_tutorial_mission_target = {
+						is_commune_subject = yes
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_all_provinces = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				if = {
+					limit = {
+						exists = BUL
+						overlord_of = BUL
+					}
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+				}
+				else = {
+					release = BUL
+					BUL = {
+						hidden_effect = {
+							change_religion = ROOT
+							change_government = republic
+							add_government_reform = peasants_republic
+						}
+					}
+					create_subject = {
+						subject_type = sister_commune
+						who = BUL
+					}
+				}
+			}
+			else = {
+				add_power_projection = {
+					type = liberated_the_bulgars_pp
+					amount = 10
+				}
+				change_peasant_zeal = {
+					value = 10
+				}
+				custom_tooltip = AB_EMPTY
+				add_faction_influence = {
+					faction = abolitionists_faction
+					influence = 5
+				}
+				add_faction_influence = {
+					faction = leaguists_faction
+					influence = 10
+				}
+				custom_tooltip = AB_EMPTY
+				BUL = {
+					add_liberty_desire = -20
+				}
+				add_country_modifier = {
+					name = mop_soothe_relations_post_bulgarian_liberation
+					duration = 3650
+				}
+			}
+		}
+	}
 }
 
 ab_mop_2 = {
@@ -525,10 +643,6 @@ ab_mop_2 = {
 			}
 			else = {
 				event_target:mop_peasant_subject_tutorial_mission_target = {
-					have_peasants_been_incited_recently = yes
-					NOT = {
-						is_subject_of = ROOT
-					}
 					custom_trigger_tooltip = {
 						tooltip = is_supporting_peasant_rebels_against_target_tt
 						is_supporting_rebels_against_target = {
@@ -566,7 +680,7 @@ ab_mop_2 = {
 		}
 	}
 	mop_war_for_the_bulgars = {
-		icon = dom_ara_remensa_war
+		icon = gfx_wal_drive_out_the_bulgars
 		position = 6
 		required_missions = {
 			mop_arm_the_bulgar_peasants
@@ -624,11 +738,22 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			custom_tooltip = some_of_the_bulgars_join_our_ranks_tt
-			add_yearly_manpower = 0.5
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 5
+			if = {
+				limit = {
+					owns_all_provinces = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				add_adm_power = 50
+			}
+			else = {
+				custom_tooltip = some_of_the_bulgars_join_our_ranks_tt
+				add_yearly_manpower = 0.5
+				custom_tooltip = AB_EMPTY
+				change_peasant_zeal = {
+					value = 5
+				}
 			}
 		}
 	}
@@ -1439,6 +1564,7 @@ ab_mop_4 = {
 			4706 = {
 				add_nationalism = -30
 				add_unrest = -20
+				remove_core = BUL
 			}
 			add_adm_power = 50
 			add_army_tradition_or_mil_power = {

@@ -64,3 +64,6 @@
  mop_war_for_the_bulgars_title: "War for the Bulgars"
  mop_war_for_the_bulgars_desc: "The spark has caught; the Bulgar villages now stand on the edge of open revolt. Our agents have armed them, our whispers have turned to war cries, and the boyars now beg for mercy."
  some_of_the_bulgars_join_our_ranks_tt: "§gSome of the Bulgarian peasants join our ranks!§!"
+ mop_liberate_the_bulgars_title: "Liberate the Bulgars"
+ mop_liberate_the_bulgars_desc: "We have armed the villages and marched beneath the banner of revolt; now we must see the work finished. The Bulgar peasants have cast down their lords with our aid, and look to us as guarantors of their freedom."
+ mop_liberate_the_bulgars_subject_trigger_tt: "@[mop_peasant_subject_tutorial_mission_target.GetTag] §Y[mop_peasant_subject_tutorial_mission_target.GetName]§! is either:\n£allied_commune£ An §YAllied Commune§! subject of ours.\n£sister_commune£ A §YSister Commune§! subject of ours.\n£integrated_commune£ An §YIntegrated Commune§! subject of ours."
