@@ -1,10 +1,10 @@
-namespace = moldavian_peasant_events
+namespace = moldavia_peasant_events
 #Pick Your Country Name Moldavia
 country_event = {
-	id = moldavian_peasant_events.1
-	title = moldavian_peasant_events.1.t
+	id = moldavia_peasant_events.1
+	title = moldavia_peasant_events.1.t
 	desc = {
-		desc = moldavian_peasant_events.1.civil_war_ended_desc
+		desc = moldavia_peasant_events.1.civil_war_ended_desc
 		trigger = {
 			NOT = {
 				has_country_flag = unlocked_mop_country_rename_decision
@@ -12,7 +12,7 @@ country_event = {
 		}
 	}
 	desc = {
-		desc = moldavian_peasant_events.1.regular_desc
+		desc = moldavia_peasant_events.1.regular_desc
 		trigger = {
 			has_country_flag = unlocked_mop_country_rename_decision
 		}
@@ -20,7 +20,7 @@ country_event = {
 	picture = BIG_BOOK_eventPicture
 	is_triggered_only = yes
 	immediate = {
-		set_country_flag = in_moldavian_peasant_events.1
+		set_country_flag = in_moldavia_peasant_events.1
 	}
 	option = {
 		name = nevermind
@@ -29,7 +29,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = moldavian_peasant_events.1.united_communes_EN
+		name = moldavia_peasant_events.1.united_communes_EN
 		trigger = {
 			tag = TUC
 			NOT = {
@@ -43,7 +43,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.united_communes_RO
+		name = moldavia_peasant_events.1.united_communes_RO
 		trigger = {
 			tag = TUC
 			NOT = {
@@ -58,7 +58,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.dacian_league_EN
+		name = moldavia_peasant_events.1.dacian_league_EN
 		trigger = {
 			tag = TUC
 			NOT = {
@@ -72,7 +72,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.dacian_league_RO
+		name = moldavia_peasant_events.1.dacian_league_RO
 		trigger = {
 			tag = TUC
 			NOT = {
@@ -87,7 +87,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.vlach_federation_EN
+		name = moldavia_peasant_events.1.vlach_federation_EN
 		trigger = {
 			tag = TUC
 			NOT = {
@@ -101,7 +101,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.vlach_federation_RO
+		name = moldavia_peasant_events.1.vlach_federation_RO
 		trigger = {
 			tag = TUC
 			NOT = {
@@ -116,7 +116,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.moldavia
+		name = moldavia_peasant_events.1.moldavia
 		trigger = {
 			tag = MOP
 			NOT = {
@@ -133,7 +133,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.moldavian_commune_EN
+		name = moldavia_peasant_events.1.moldavian_commune_EN
 		trigger = {
 			tag = MOP
 			NOT = {
@@ -147,7 +147,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.moldavian_commune_RO
+		name = moldavia_peasant_events.1.moldavian_commune_RO
 		trigger = {
 			tag = MOP
 			NOT = {
@@ -162,7 +162,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.razesi_republic_EN
+		name = moldavia_peasant_events.1.razesi_republic_EN
 		trigger = {
 			NOT = {
 				has_country_flag = set_razesi_republic_name_EN
@@ -175,7 +175,7 @@ country_event = {
 		moldavia_name_change_cost_effect = yes
 	}
 	option = {
-		name = moldavian_peasant_events.1.razesi_republic_RO
+		name = moldavia_peasant_events.1.razesi_republic_RO
 		trigger = {
 			NOT = {
 				has_country_flag = set_razesi_republic_name_RO
@@ -190,6 +190,6 @@ country_event = {
 	}
 	after = {
 		set_country_flag = unlocked_mop_country_rename_decision
-		clr_country_flag = in_moldavian_peasant_events.1
+		clr_country_flag = in_moldavia_peasant_events.1
 	}
 }
