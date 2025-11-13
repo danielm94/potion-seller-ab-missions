@@ -365,11 +365,11 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = AB_wallachia_events.10.a
+		name = new_idea_group_yes
 		swap_free_idea_group = yes
 	}
 	option = {
-		name = AB_wallachia_events.10.b
+		name = new_idea_group_no
 		ai_chance = {
 			factor = 0
 		}
@@ -441,11 +441,11 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = AB_wallachia_events.10.a
+		name = new_idea_group_yes
 		swap_free_idea_group = yes
 	}
 	option = {
-		name = AB_wallachia_events.10.b
+		name = new_idea_group_no
 		ai_chance = {
 			factor = 0
 		}
@@ -3649,11 +3649,11 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	is_triggered_only = yes
 	option = {
-		name = AB_wallachia_events.10.a
+		name = new_idea_group_yes
 		swap_free_idea_group = yes
 	}
 	option = {
-		name = AB_wallachia_events.10.b
+		name = new_idea_group_no
 		ai_chance = {
 			factor = 0
 		}
