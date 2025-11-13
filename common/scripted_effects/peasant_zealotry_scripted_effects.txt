@@ -11,12 +11,12 @@ change_peasant_zeal = {
 
 #SCOPE = COUNTRY
 calculate_spy_action_cost_values = {
-	calculate_incite_rebels_cost = yes
+	calculate_incite_peasants_cost = yes
 	calculate_stage_coup_cost = yes
 }
 
 #SCOPE = COUNTRY
-get_incite_rebels_base_cost_var = {
+get_incite_peasants_base_cost_var = {
 	set_variable = {
 		$var$ = 30
 	}
@@ -30,13 +30,13 @@ get_stage_coup_base_cost_var = {
 }
 
 #SCOPE = COUNTRY
-calculate_incite_rebels_cost = {
-	get_incite_rebels_base_cost_var = {
-		var = incite_rebels_base_cost_var
+calculate_incite_peasants_cost = {
+	get_incite_peasants_base_cost_var = {
+		var = incite_peasants_base_cost_var
 	}
 	calculate_spy_action_cost_var = {
 		spy_action_cost_var = incite_peasants_cost_var
-		spy_action_base_cost = incite_rebels_base_cost_var
+		spy_action_base_cost = incite_peasants_base_cost_var
 	}
 }
 

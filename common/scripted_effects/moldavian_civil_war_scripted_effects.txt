@@ -1,6 +1,7 @@
 #SCOPE = COUNTRY
 setup_MOP_effect = {
 	MOP = {
+		calculate_spy_action_cost_values = yes
 		set_country_flag = started_moldavian_civil_war
 		set_country_flag = in_moldavian_civil_war
 		change_religion = PREV
