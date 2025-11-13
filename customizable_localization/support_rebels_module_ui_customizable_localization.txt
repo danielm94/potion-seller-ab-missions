@@ -1,0 +1,123 @@
+defined_text = {
+	name = rebel_uprising_progress
+	random = no
+	text = {
+		localisation_key = rebel_uprising_progress_currently_active
+		trigger = {
+			FROM = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_100
+		trigger = {
+			rebel_progress_at_least = {
+				value = 100
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_90
+		trigger = {
+			rebel_progress_at_least = {
+				value = 90
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_80
+		trigger = {
+			rebel_progress_at_least = {
+				value = 80
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_70
+		trigger = {
+			rebel_progress_at_least = {
+				value = 70
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_60
+		trigger = {
+			rebel_progress_at_least = {
+				value = 60
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_50
+		trigger = {
+			rebel_progress_at_least = {
+				value = 50
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_40
+		trigger = {
+			rebel_progress_at_least = {
+				value = 40
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_30
+		trigger = {
+			rebel_progress_at_least = {
+				value = 30
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_20
+		trigger = {
+			rebel_progress_at_least = {
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_10
+		trigger = {
+			rebel_progress_at_least = {
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = progress_0
+		trigger = {
+			rebel_progress_at_least = {
+				value = 0
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = rebel_uprising_progress_tooltip
+	random = no
+	text = {
+		localisation_key = rebel_uprising_progress_active_tooltip
+		trigger = {
+			FROM = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+	}
+	text = {
+		localisation_key = rebel_uprising_progress_not_active_tooltip
+		trigger = {
+			NOT = {
+				FROM = {
+					has_spawned_supported_rebels = PREV
+				}
+			}
+		}
+	}
+}

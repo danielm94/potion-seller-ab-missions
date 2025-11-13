@@ -13,7 +13,6 @@ clear_mop_country_name_flags = {
 	clr_country_flag = set_tuc_vlach_federation_name_RO
 }
 
-
 #SCOPE = COUNTRY
 moldavia_name_change_cost_effect = {
 	if = {
@@ -80,6 +79,7 @@ mop_cossack_relations_conquered_reward_effect = {
 		set_country_flag = moldavia_released_zaz
 	}
 }
+
 mop_wallachia_already_purged_effect = {
 	custom_tooltip = mop_wallachia_already_purged_tt
 	tooltip = {
@@ -98,6 +98,8 @@ mop_wallachia_already_purged_effect = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
 mop_purge_ten_houses_effect = {
 	custom_tooltip = mop_purge_ten_houses_tt
 	tooltip = {
@@ -122,5 +124,20 @@ mop_purge_ten_houses_effect = {
 				duration = 3650
 			}
 		}
+	}
+}
+
+#SCOPE = COUNTRY
+calculate_support_rebel_monthly_increase_chance = {
+	export_to_variable = {
+		which = support_rebel_monthly_increase_chance
+		value = modifier:rebel_support_efficiency
+	}
+	#Base support efficiency is 1
+	change_variable = {
+		support_rebel_monthly_increase_chance = 1
+	}
+	multiply_variable = {
+		support_rebel_monthly_increase_chance = 10
 	}
 }

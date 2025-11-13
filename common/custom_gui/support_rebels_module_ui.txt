@@ -1,0 +1,50 @@
+custom_icon = {
+	name = support_rebels_bg
+	potential = {
+		OR = {
+			AND = {
+				has_country_flag = support_rebels_against_@ROOT
+				FROM = {
+					has_country_flag = support_rebels_against_@ROOT
+				}
+			}
+			FROM = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+	}
+}
+custom_icon = {
+	name = support_rebels_icon
+	potential = {
+		OR = {
+			AND = {
+				has_country_flag = support_rebels_against_@ROOT
+				FROM = {
+					has_country_flag = support_rebels_against_@ROOT
+				}
+			}
+			FROM = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+	}
+}
+
+custom_text_box = {
+	name = support_rebels_progress
+	potential = {
+		OR = {
+			AND = {
+				has_country_flag = support_rebels_against_@ROOT
+				FROM = {
+					has_country_flag = support_rebels_against_@ROOT
+				}
+			}
+			FROM = {
+				has_spawned_supported_rebels = PREV
+			}
+		}
+	}
+	tooltip = support_rebels_progress_tt
+}
