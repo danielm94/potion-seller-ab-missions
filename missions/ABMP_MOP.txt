@@ -471,6 +471,7 @@ ab_mop_2 = {
 					culture = bulgarian
 					religion = orthodox
 				}
+				custom_tooltip = AB_EMPTY
 			}
 		}
 	}
@@ -560,6 +561,74 @@ ab_mop_2 = {
 					name = mop_supporting_rebels_bul
 					duration = 1095
 				}
+				custom_tooltip = get_read_to_invade_with_peasants_tt
+			}
+		}
+	}
+	mop_war_for_the_bulgars = {
+		icon = dom_ara_remensa_war
+		position = 6
+		required_missions = {
+			mop_arm_the_bulgar_peasants
+		}
+		provinces_to_highlight = {
+			owner = {
+				NOT = {
+					tag = ROOT
+				}
+				any_owned_province = {
+					culture = bulgarian
+					region = balkan_region
+				}
+			}
+			is_capital_of = owner
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else_if = {
+				limit = {
+					owns_all_provinces = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				owns_all_provinces = {
+					culture = bulgarian
+					region = balkan_region
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = mop_arm_the_bulgar_peasants_target_expired_tt
+					always = no
+				}
+			}
+			else = {
+				event_target:mop_peasant_subject_tutorial_mission_target = {
+					is_in_war = {
+						attacker_leader = ROOT
+						defender_leader = event_target:mop_peasant_subject_tutorial_mission_target
+						casus_belli = cb_great_peasant_uprising
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = some_of_the_bulgars_join_our_ranks_tt
+			add_yearly_manpower = 0.5
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 5
 			}
 		}
 	}

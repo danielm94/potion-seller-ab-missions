@@ -60,3 +60,7 @@
  mop_arm_the_bulgar_peasants_target_expired_tt: "You need to use the §YIncite the Peasants§! covert diplomatic action on a country that owns §YBulgarian§! provinces in the §YBalkans§!. The effects of §YIncite the Peasants§! only last for §Y10 years§!."
  is_supporting_peasant_rebels_against_target_tt: "We are supporting §YPEASANT§! rebels against §Y[mop_peasant_subject_tutorial_mission_target.GetName]§!"
  mop_robbed_target_tt: "§gOur agents intercept supply caravans and extort local magnates loyal to the oppressor, seizing §Y100¤§! to arm the Bulgarian communes.§!"
+ get_read_to_invade_with_peasants_tt: "§gBe sure to keep an eye on the rebel progress. Once the peasant rebels rise up, you will gain access to the §YGreat Peasant Uprising§! casus belli against §Y[mop_peasant_subject_tutorial_mission_target.GetName]§!. If the rebels are destroyed before you declare war on them, §Ryou will have to go through this whole song and dance all over again.§!§!"
+ mop_war_for_the_bulgars_title: "War for the Bulgars"
+ mop_war_for_the_bulgars_desc: "The spark has caught; the Bulgar villages now stand on the edge of open revolt. Our agents have armed them, our whispers have turned to war cries, and the boyars now beg for mercy."
+ some_of_the_bulgars_join_our_ranks_tt: "§gSome of the Bulgarian peasants join our ranks!§!"
