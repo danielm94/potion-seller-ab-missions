@@ -51,6 +51,15 @@ incite_peasants = {
 			var = spy_network_deduction_var
 		}
 		FROM = {
+			if = {
+				limit = {
+					any_owned_province = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				save_global_event_target_as = mop_peasant_subject_tutorial_mission_target
+			}
 			set_country_flag = incited_peasants
 			add_country_modifier = {
 				name = incited_peasantry

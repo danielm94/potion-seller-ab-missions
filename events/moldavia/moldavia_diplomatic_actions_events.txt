@@ -137,6 +137,7 @@ country_event = {
 			clr_country_flag = support_rebels_against_@PREV
 		}
 		clr_country_flag = support_rebels_against_@THIS
+		clear_global_event_target = mop_peasant_subject_tutorial_mission_target
 	}
 	option = {
 		name = moldavia_diplomatic_actions_events.3.a

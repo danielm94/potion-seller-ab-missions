@@ -390,13 +390,8 @@ ab_mop_2 = {
 					tag = ROOT
 				}
 				any_owned_province = {
-					OR = {
-						area = bulgaria_area
-						area = silistria_area
-						area = thrace_area
-						area = macedonia_area
-					}
 					culture = bulgarian
+					region = balkan_region
 				}
 			}
 			is_capital_of = owner
@@ -472,6 +467,95 @@ ab_mop_2 = {
 					cost_multiplier = 0.5
 					culture = bulgarian
 					religion = orthodox
+				}
+			}
+		}
+	}
+	mop_arm_the_bulgar_peasants = {
+		icon = push_on_to_bulgaria
+		position = 5
+		required_missions = {
+			mop_rouse_the_bulgar_peasants
+		}
+		provinces_to_highlight = {
+			owner = {
+				NOT = {
+					tag = ROOT
+				}
+				any_owned_province = {
+					culture = bulgarian
+					region = balkan_region
+				}
+			}
+			is_capital_of = owner
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else_if = {
+				limit = {
+					owns_all_provinces = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				owns_all_provinces = {
+					culture = bulgarian
+					region = balkan_region
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = mop_arm_the_bulgar_peasants_target_expired_tt
+					always = no
+				}
+			}
+			else = {
+				event_target:mop_peasant_subject_tutorial_mission_target = {
+					have_peasants_been_incited_recently = yes
+					NOT = {
+						is_subject_of = ROOT
+					}
+					custom_trigger_tooltip = {
+						tooltip = is_supporting_peasant_rebels_against_target_tt
+						is_supporting_rebels_against_target = {
+							target = event_target:mop_peasant_subject_tutorial_mission_target
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_all_provinces = {
+						culture = bulgarian
+						region = balkan_region
+					}
+				}
+				add_mil_power = 50
+			}
+			else = {
+				if = {
+					limit = {
+						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
+					}
+					custom_tooltip = mop_robbed_target_tt
+					add_treasury = 100
+				}
+				custom_tooltip = AB_EMPTY
+				add_country_modifier = {
+					name = mop_supporting_rebels_bul
+					duration = 1095
 				}
 			}
 		}

@@ -1453,6 +1453,28 @@ has_more_total_development_than_target = {
 	}
 }
 
+#SCOPE = COUNTRY
 is_debug_mode_enabled = {
 	has_country_flag = debug
+}
+
+#SCOPE = COUNTRY
+# Checks if you are currently supporting rebels before they rise up against the target.
+is_supporting_rebels_against_target = {
+	$target$ = {
+		custom_trigger_tooltip = {
+			tooltip = is_supporting_rebels_against_target_tt
+			OR = {
+				AND = {
+					has_country_flag = support_rebels_against_@THIS
+					ROOT = {
+						has_country_flag = support_rebels_against_@PREV
+					}
+				}
+				ROOT = {
+					has_spawned_supported_rebels = $target$
+				}
+			}
+		}
+	}
 }

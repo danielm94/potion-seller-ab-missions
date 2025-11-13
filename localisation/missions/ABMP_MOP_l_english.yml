@@ -55,3 +55,8 @@
  mop_rouse_the_bulgar_peasants_trigger_tt: "We have used the §YIncite the Peasants§! covert diplomatic action against any country that:\n- Owns §YBulgarian§! provinces in the §YBalkans§!.\n- Isn't our subject."
  bulgarian_peasants_send_contact_tt: "§gThe Bulgarian ringleader will send one of his best operatives to work at our court in §Y[Root.Capital.GetName]§! as a token of his gratitude...§!"
  if_we_incited_peasants_against_bulgaria_itself_tt: "If we incited peasants against @BUL §Y[BUL.GetName]§! and they are our §Yrival§! or §Yenemy§!:"
+ mop_arm_the_bulgar_peasants_title: "Arm the Bulgar Peasants"
+ mop_arm_the_bulgar_peasants_desc: "Our whispers have turned to oaths, and oaths now need steel. The Bulgarian villages have risen in secret, hammering ploughshares into pikes and hiding powder beneath their granaries. Our agents cross the Danube under night, smuggling coin and arms through the monasteries and wine caravans. Let them take what they need from the boyars’ own purses—those riches will soon return to the people one way or another."
+ mop_arm_the_bulgar_peasants_target_expired_tt: "You need to use the §YIncite the Peasants§! covert diplomatic action on a country that owns §YBulgarian§! provinces in the §YBalkans§!. The effects of §YIncite the Peasants§! only last for §Y10 years§!."
+ is_supporting_peasant_rebels_against_target_tt: "We are supporting §YPEASANT§! rebels against §Y[mop_peasant_subject_tutorial_mission_target.GetName]§!"
+ mop_robbed_target_tt: "§gOur agents intercept supply caravans and extort local magnates loyal to the oppressor, seizing §Y100¤§! to arm the Bulgarian communes.§!"

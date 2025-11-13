@@ -130,3 +130,39 @@ on_startup = {
 		}
 	}
 }
+
+on_monthly_pulse = {
+	if = {
+		limit = {
+			tag = event_target:mop_peasant_subject_tutorial_mission_target
+			OR = {
+				NOT = {
+					exists = event_target:mop_peasant_subject_tutorial_mission_target
+				}
+				had_country_flag = {
+					flag = incited_peasants
+					days = 3650
+				}
+			}
+		}
+		clear_global_event_target = mop_peasant_subject_tutorial_mission_target
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			tag = event_target:mop_peasant_subject_tutorial_mission_target
+			OR = {
+				NOT = {
+					exists = event_target:mop_peasant_subject_tutorial_mission_target
+				}
+				had_country_flag = {
+					flag = incited_peasants
+					days = 3650
+				}
+			}
+		}
+		clear_global_event_target = mop_peasant_subject_tutorial_mission_target
+	}
+}
