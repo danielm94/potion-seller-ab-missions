@@ -300,7 +300,9 @@ ab_mop_1 = {
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_the_magyars_do_not_exist_tt
-				first_limit = "exists = MGY"
+				first_limit = "NOT = {
+									exists = MGY
+								}"
 				first_effect = "add_mil_power = 150"
 			}
 			custom_tooltip = wal_transylvania_romanianization_tooltip
@@ -425,7 +427,113 @@ ab_mop_1 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
-			
+		}
+	}
+	mop_carpathia_cultural_hegemon = {
+		icon = the_great_city_of_buda
+		position = 6
+		required_missions = {
+			mop_seal_the_carpathians
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							culture_group = romanian_culture_group
+						}
+						NOT = {
+							development = 15
+						}
+					}
+					region = carpathia_region
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 153
+					OR = {
+						NOT = {
+							development = 40
+						}
+						num_free_building_slots = 1
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						has_manufactory_trigger = no
+						NOT = {
+							has_great_project = {
+								type = buda_castle
+								tier = 2
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				carpathia_region = {
+					owned_by = ROOT
+					culture_group = romanian_culture_group
+					development = 15
+					type = all
+				}
+				153 = {
+					development = 40
+					NOT = {
+						num_free_building_slots = 1
+					}
+					num_of_times_expanded_infrastructure = 2
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = buda_castle
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 30
+			}
+			if = {
+				limit = {
+					153 = {
+						has_great_project = {
+							type = buda_castle
+							tier = 3
+						}
+					}
+				}
+				add_treasury = 3000
+			}
+			else = {
+				153 = {
+					add_great_project_tier = {
+						type = buda_castle
+						tier = 1
+					}
+				}
+			}
+			153 = {
+				add_province_modifier = {
+					name = mop_pest_crowning_achievement
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_exemplary_society
+				duration = -1
+			}
 		}
 	}
 	mop_liberate_the_bulgars = {

@@ -147,3 +147,14 @@ mop_soothe_relations_post_bulgarian_liberation = {
 	improve_relation_modifier = 0.25
 	leaguists_faction_influence = 0.05
 }
+
+mop_exemplary_society = {
+	diplomatic_annexation_cost = -0.1
+}
+
+mop_pest_crowning_achievement = {
+	local_governing_cost = -0.9
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	prestige = 0.5
+}

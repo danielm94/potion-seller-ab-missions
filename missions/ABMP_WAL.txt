@@ -4070,7 +4070,9 @@ ab_wal_4 = {
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_the_magyars_do_not_exist_tt
-				first_limit = "exists = MGY"
+				first_limit = "NOT = {
+									exists = MGY
+								}"
 				first_effect = "change_ruler_stat = {
 									type = mil
 									amount = 1
