@@ -796,6 +796,7 @@ ab_mop_2 = {
 		}
 		effect = {
 			change_tag = TUC
+			set_government_rank = 2
 			custom_tooltip = unlock_dacian_commune_reform_tt
 			hidden_effect = {
 				add_government_reform = dacian_commune_reform
