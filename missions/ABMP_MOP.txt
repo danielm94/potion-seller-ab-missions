@@ -2356,4 +2356,103 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_the_gates_of_the_danube = {
+		icon = GFX_mop_the_gates_of_the_danube
+		position = 3
+		required_missions = {
+			mop_recover_from_civil_war
+			mop_liberate_dobruja
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1756
+				province_id = 4706
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 20
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1756 = {
+					owned_by = ROOT
+					development = 20
+					province_has_center_of_trade_of_level = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+				4706 = {
+					owned_by = ROOT
+					development = 20
+					province_has_center_of_trade_of_level = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			1756 = {
+				center_of_trade = 1
+				add_province_modifier = {
+					name = gate_of_the_danube
+					duration = -1
+				}
+			}
+			4706 = {
+				center_of_trade = 1
+				add_province_modifier = {
+					name = gate_of_the_danube
+					duration = -1
+				}
+			}
+			153 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 15
+					key = control_of_trade_to_black_sea_desc
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			134 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 10
+					key = control_of_trade_to_black_sea_desc
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 15
+			}
+		}
+	}
 }

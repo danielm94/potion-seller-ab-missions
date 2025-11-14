@@ -14,4 +14,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_proclaim_the_hetmanate.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_the_gates_of_the_danube"
+		texturefile = "gfx/interface/missions/mop/mop_the_gates_of_the_danube.dds"
+		loadType = "INGAME"
+	}
 }

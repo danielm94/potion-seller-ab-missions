@@ -112,14 +112,14 @@ astrakhan_gate = {
 	province_trade_power_value = 15
 	trade_range_modifier = 0.25
 	global_trade_power = 0.025
-	defensiveness = 0.25
+	local_defensiveness = 0.25
 }
 
 azov_gate = {
 	province_trade_power_value = 15
 	trade_efficiency = 0.05
 	global_trade_power = 0.025
-	defensiveness = 0.25
+	local_defensiveness = 0.25
 }
 
 mop_the_end_of_the_boierimea = {
@@ -162,4 +162,12 @@ mop_pest_crowning_achievement = {
 mop_church_of_the_dormition_of_the_martyrs = {
 	local_tax_modifier = 0.5
 	monthly_peasant_zeal = 0.02
+}
+
+gate_of_the_danube = {
+	province_trade_power_value = 10
+	local_defensiveness = 0.25
+	embargo_efficiency = 0.25
+	global_own_trade_power = 0.05
+	global_tax_income = 24
 }

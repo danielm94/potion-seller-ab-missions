@@ -52,3 +52,5 @@
  desc_mop_pest_crowning_achievement: "Once a tribal stronghold, Pest has been rebuilt into the pride of the Carpathian communes. Its markets bustle with trade, its councils run with unmatched efficiency, and its people live in prosperity rare even among our own lands. Travelers speak of it as the jewel of Dacia—a living testament to what free peasants can build together."
  mop_church_of_the_dormition_of_the_martyrs: "The Church of the Dormition of the Martyrs"
  desc_mop_church_of_the_dormition_of_the_martyrs: "A beautiful Orthodox church constructed in memory of the last honorable Voivode, [assassinated_moldavian_voivode.GetName], and the fallen of the Moldavian Civil War."
+ gate_of_the_danube: "Gate of the Danube"
+ desc_gate_of_the_danube: "This port stands as one of the river’s great locks. Its piers, custom houses, and watchtowers oversee the flow of trade from the heart of Europe to the Black Sea, ensuring that no cargo passes without leaving a share in our coffers."
