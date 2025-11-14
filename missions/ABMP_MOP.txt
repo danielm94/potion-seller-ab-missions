@@ -1895,7 +1895,7 @@ ab_mop_3 = {
 				area = chernigov_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_non_sovereign_subject_holds = ZAZ
 			}
 		}
 		trigger = {
@@ -1959,8 +1959,22 @@ ab_mop_3 = {
 			mop_march_to_sarai
 		}
 		provinces_to_highlight = {
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				AND = {
+					OR = {
+						region = ruthenia_region
+						region = crimea_region
+						area = circassia_area
+						area = dagestan_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ZAZ
+					}
+				}
+				AND = {
+					province_id = 283
+					has_courthouse_building_trigger = no
+				}
 			}
 		}
 		trigger = {
