@@ -952,6 +952,9 @@ convert_subject_to_commune = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			NOT = {
+				is_subject_of_type = cossack_protectorate
+			}
 			is_subject_of = PREV
 			is_commune_subject = no
 			is_commune_subject_being_integrated = no

@@ -84,7 +84,7 @@ great_kievan_commune = {
 azov_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
-	province_trade_power_value = 15
+	province_trade_power_value = 5
 	local_development_cost = -0.05
 	naval_maintenance_modifier = -0.05
 }
@@ -99,7 +99,7 @@ azov_abolition_shock = {
 astrakhan_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
-	province_trade_power_value = 15
+	province_trade_power_value = 5
 	local_development_cost = -0.05
 	global_trade_power = 0.025
 }
@@ -113,6 +113,7 @@ astrakhan_gate = {
 	trade_range_modifier = 0.25
 	global_trade_power = 0.025
 	local_defensiveness = 0.25
+	global_tax_income = 6
 }
 
 azov_gate = {
@@ -120,6 +121,7 @@ azov_gate = {
 	trade_efficiency = 0.05
 	global_trade_power = 0.025
 	local_defensiveness = 0.25
+	global_tax_income = 6
 }
 
 mop_the_end_of_the_boierimea = {
