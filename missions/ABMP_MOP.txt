@@ -645,30 +645,45 @@ ab_mop_1 = {
 					}
 				}
 			}
-			else = {
-				add_power_projection = {
-					type = liberated_the_bulgars_pp
-					amount = 10
+			add_power_projection = {
+				type = liberated_the_bulgars_pp
+				amount = 10
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+			custom_tooltip = AB_EMPTY
+			event_target:mop_peasant_subject_tutorial_mission_target = {
+				add_liberty_desire = -20
+			}
+			add_country_modifier = {
+				name = mop_soothe_relations_post_bulgarian_liberation
+				duration = 3650
+			}
+			if = {
+				limit = {
+					overlord_of = BUL
+					BUL = {
+						is_commune_subject = yes
+					}
 				}
-				change_peasant_zeal = {
-					value = 10
-				}
-				custom_tooltip = AB_EMPTY
-				add_faction_influence = {
-					faction = abolitionists_faction
-					influence = 5
-				}
-				add_faction_influence = {
-					faction = leaguists_faction
-					influence = 10
-				}
-				custom_tooltip = AB_EMPTY
-				BUL = {
-					add_liberty_desire = -20
-				}
-				add_country_modifier = {
-					name = mop_soothe_relations_post_bulgarian_liberation
-					duration = 3650
+				custom_tooltip = mop_liberate_the_bulgars_BUL_core_on_all_bulgarian_provinces_tt
+				hidden_effect = {
+					balkan_region = {
+						limit = {
+							culture = bulgarian
+						}
+						add_core = BUL
+					}
 				}
 			}
 		}
@@ -1041,9 +1056,17 @@ ab_mop_2 = {
 		effect = {
 			if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
 				add_dip_power = 50
@@ -1160,9 +1183,17 @@ ab_mop_2 = {
 		effect = {
 			if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
 				add_mil_power = 50
@@ -1264,9 +1295,17 @@ ab_mop_2 = {
 		effect = {
 			if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
 				add_adm_power = 50
@@ -1375,6 +1414,106 @@ ab_mop_2 = {
 							tier = 1
 						}
 					}
+				}
+			}
+		}
+	}
+	mop_liberate_thrace = {
+		icon = byz_city_of_worlds_desire
+		position = 10
+		required_missions = {
+			mop_bulgars_are_free
+		}
+		provinces_to_highlight = {
+			area = thrace_area
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_thrace_provinces_tt
+					thrace_area = {
+						type = all
+						country_or_commune_subject_or_subject_of_commune_subject_holds = {
+							who = ROOT
+						}
+					}
+				}
+				thrace_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_constantinople_is_owned_by_commune_subject_tt
+				first_limit = "151 = {
+									NOT = {
+										owned_by = ROOT
+									}
+									country_or_commune_subject_or_subject_of_commune_subject_holds = {
+										who = ROOT
+									}
+								}"
+				first_effect = "151 = {
+									remove_core = owner
+									add_core = ROOT
+									cede_province = ROOT
+								}"
+			}
+			custom_tooltip = AB_EMPTY
+			151 = {
+				if = {
+					limit = {
+						NOT = {
+							culture = greek
+						}
+						NOT = {
+							culture = ROOT
+						}
+					}
+					change_culture = greek
+				}
+				change_province_name = "Stamboli"
+				rename_capital = "Stamboli"
+				add_province_modifier = {
+					name = mop_stamboli_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = patriarch
+				skill = 1
+				cost_multiplier = 0.25
+				culture = greek
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Stamboli"
+				location = 151
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = patriarch_constantinople_buff
+			set_country_flag = patriarch_of_constantinople
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			151 = {
+				add_province_modifier = {
+					name = mop_patriarchate_of_stamboli
+					duration = -1
 				}
 			}
 		}

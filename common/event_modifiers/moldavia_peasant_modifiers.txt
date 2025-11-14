@@ -68,7 +68,7 @@ cossack_protectorate_merchant_bonus_2 = {
 kievan_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
-	province_trade_power_value = 15
+	province_trade_power_value = 10
 	local_development_cost = -0.05
 	global_manpower_modifier = 0.025
 }
@@ -76,7 +76,7 @@ kievan_commune = {
 great_kievan_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
-	province_trade_power_value = 20
+	province_trade_power_value = 15
 	local_development_cost = -0.1
 	global_manpower_modifier = 0.05
 }
@@ -172,4 +172,20 @@ gate_of_the_danube = {
 	embargo_efficiency = 0.25
 	global_own_trade_power = 0.05
 	global_tax_income = 24
+}
+
+mop_stamboli_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	great_project_upgrade_cost = -0.05
+}
+
+mop_patriarchate_of_stamboli = {
+	yearly_patriarch_authority = 0.001
+	republican_tradition = 0.25
+	prestige_decay = -0.01
+	local_great_project_upgrade_cost = -0.1
+	religion = yes
 }

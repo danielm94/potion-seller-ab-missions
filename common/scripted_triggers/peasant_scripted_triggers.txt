@@ -10,3 +10,24 @@ is_blocked_from_peasant_government_because_of_treaty = {
 		}
 	}
 }
+
+#SCOPE = PROVINCE
+country_or_commune_subject_or_subject_of_commune_subject_holds = {
+	custom_trigger_tooltip = {
+		tooltip = country_or_commune_subject_or_subject_of_commune_subject_holds_tt
+		OR = {
+			owned_by = $who$
+			owner = {
+				is_commune_subject = yes
+				is_subject_of = $who$
+			}
+			owner = {
+				is_subject = yes
+				overlord = {
+					is_commune_subject = yes
+					is_subject_of = $who$
+				}
+			}
+		}
+	}
+}
