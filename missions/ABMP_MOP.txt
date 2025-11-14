@@ -2221,4 +2221,60 @@ ab_mop_5 = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
+	mop_recover_from_civil_war = {
+		icon = mission_castle_construction
+		position = 2
+		required_missions = {
+			mop_win_civil_war
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = moldavia_area
+				area = bessarabia_area
+			}
+			devastation = 0.01
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				stability = 1
+				NOT = {
+					has_country_modifier = moldavia_civil_war_recovery
+				}
+				moldavia_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { devastation = 0.01 }
+				}
+				bessarabia_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { devastation = 0.01 }
+				}
+				1756 = {
+					has_tax_building_trigger = yes
+				} 
+			}
+		}
+		effect = {
+			change_peasant_zeal = {
+				value = 5
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+			1756 = {
+				add_province_modifier = {
+					name = mop_church_of_the_dormition_of_the_martyrs
+					duration = -1
+				}
+			}
+		}
+	}
 }

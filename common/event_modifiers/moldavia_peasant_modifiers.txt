@@ -158,3 +158,8 @@ mop_pest_crowning_achievement = {
 	local_development_cost = -0.1
 	prestige = 0.5
 }
+
+mop_church_of_the_dormition_of_the_martyrs = {
+	local_tax_modifier = 0.5
+	monthly_peasant_zeal = 0.02
+}

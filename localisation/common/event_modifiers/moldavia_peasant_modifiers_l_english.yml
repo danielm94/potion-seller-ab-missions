@@ -49,4 +49,6 @@
  mop_exemplary_society: "Exemplary Society"
  desc_mop_exemplary_society: "Our communes stand as a beacon for all who dwell beyond the mountains. Prosperity is shared, justice is even-handed, and every village thrives. Subjects who once kept us at arm's length now seek entry into our league, hoping their own people may be uplifted by our example. The world sees what the free and united can build—and many wish to join our number."
  mop_pest_crowning_achievement: "Crowning Achievement of Pest"
- desc_mop_pest_crowing_achievement: "Once a tribal stronghold, Pest has been rebuilt into the pride of the Carpathian communes. Its markets bustle with trade, its councils run with unmatched efficiency, and its people live in prosperity rare even among our own lands. Travelers speak of it as the jewel of Dacia—a living testament to what free peasants can build together."
+ desc_mop_pest_crowning_achievement: "Once a tribal stronghold, Pest has been rebuilt into the pride of the Carpathian communes. Its markets bustle with trade, its councils run with unmatched efficiency, and its people live in prosperity rare even among our own lands. Travelers speak of it as the jewel of Dacia—a living testament to what free peasants can build together."
+ mop_church_of_the_dormition_of_the_martyrs: "The Church of the Dormition of the Martyrs"
+ desc_mop_church_of_the_dormition_of_the_martyrs: "A beautiful Orthodox church constructed in memory of the last honorable Voivode, [assassinated_moldavian_voivode.GetName], and the fallen of the Moldavian Civil War."
