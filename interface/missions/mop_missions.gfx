@@ -24,4 +24,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_the_black_sea_gate.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_bulgars_are_free"
+		texturefile = "gfx/interface/missions/mop/mop_bulgars_are_free.dds"
+		loadType = "INGAME"
+	}
 }

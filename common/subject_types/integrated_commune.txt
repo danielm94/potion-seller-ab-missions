@@ -79,4 +79,14 @@ integrated_commune = {
 			total_development = 1000
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_bul_bonus
+		trigger = {
+			total_development = 300
+			culture = bulgarian
+			overlord = {
+				has_country_flag = bul_integrated_commune_bonus
+			}
+		}
+	}
 }

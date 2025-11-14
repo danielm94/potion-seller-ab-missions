@@ -563,14 +563,33 @@ ab_mop_1 = {
 			}
 			else_if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
-				owns_all_provinces = {
-					culture = bulgarian
-					region = balkan_region
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
 				}
 			}
 			else_if = {
@@ -651,6 +670,62 @@ ab_mop_1 = {
 					name = mop_soothe_relations_post_bulgarian_liberation
 					duration = 3650
 				}
+			}
+		}
+	}
+	mop_bulgars_are_free = {
+		icon = GFX_mop_bulgars_are_free
+		position = 9
+		required_missions = {
+			mop_liberate_the_bulgars
+		}
+		provinces_to_highlight = {
+			culture = bulgarian
+			region = balkan_region
+			owner = {
+				is_commune_subject = no
+				NOT = {
+					tag = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = bul_integrated_commune_bonus_tt
+			set_country_flag = bul_integrated_commune_bonus
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
 			}
 		}
 	}
@@ -918,14 +993,33 @@ ab_mop_2 = {
 			}
 			else_if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
-				owns_all_provinces = {
-					culture = bulgarian
-					region = balkan_region
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
 				}
 			}
 			else = {
@@ -1012,14 +1106,33 @@ ab_mop_2 = {
 			}
 			else_if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
-				owns_all_provinces = {
-					culture = bulgarian
-					region = balkan_region
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
 				}
 			}
 			else_if = {
@@ -1098,14 +1211,33 @@ ab_mop_2 = {
 			}
 			else_if = {
 				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
 					}
 				}
-				owns_all_provinces = {
-					culture = bulgarian
-					region = balkan_region
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								is_commune_subject = no
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
 				}
 			}
 			else_if = {

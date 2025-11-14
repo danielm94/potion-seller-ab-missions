@@ -59,3 +59,7 @@ allied_commune_subject = {
 	diplomatic_annexation_cost = 0.1
 	province_warscore_cost = 0.25
 }
+
+integrated_commune_bul_bonus = {
+	shock_damage_received = -0.05
+}
