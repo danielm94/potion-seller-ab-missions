@@ -24,3 +24,19 @@ abandoned_communal_league = {
 	min = -200
 	yearly_decay = 2
 }
+liberated_us_from_nobles = {
+	opinion = 50
+	max = 200
+	yearly_decay = 1
+}
+balkanized_our_nation = {
+	opinion = -20
+	min = -999
+	yearly_decay = 2
+}
+
+balkanized_released_us = {
+	opinion = 50
+	max = 50
+	yearly_decay = 2
+}

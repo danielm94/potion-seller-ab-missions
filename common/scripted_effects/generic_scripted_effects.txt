@@ -2213,3 +2213,1503 @@ upgrade_center_of_trade = {
 		add_center_of_trade_level = 1
 	}
 }
+
+#SCOPE = COUNTRY
+clear_releasable_countries_event_targets = {
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_0
+		}
+		clear_global_event_target = releasable_country_0
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_1
+		}
+		clear_global_event_target = releasable_country_1
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_2
+		}
+		clear_global_event_target = releasable_country_2
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_3
+		}
+		clear_global_event_target = releasable_country_3
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_4
+		}
+		clear_global_event_target = releasable_country_4
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_5
+		}
+		clear_global_event_target = releasable_country_5
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_6
+		}
+		clear_global_event_target = releasable_country_6
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_7
+		}
+		clear_global_event_target = releasable_country_7
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_8
+		}
+		clear_global_event_target = releasable_country_8
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_9
+		}
+		clear_global_event_target = releasable_country_9
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_10
+		}
+		clear_global_event_target = releasable_country_10
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_11
+		}
+		clear_global_event_target = releasable_country_11
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_12
+		}
+		clear_global_event_target = releasable_country_12
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_13
+		}
+		clear_global_event_target = releasable_country_13
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_14
+		}
+		clear_global_event_target = releasable_country_14
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_15
+		}
+		clear_global_event_target = releasable_country_15
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_16
+		}
+		clear_global_event_target = releasable_country_16
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_17
+		}
+		clear_global_event_target = releasable_country_17
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_18
+		}
+		clear_global_event_target = releasable_country_18
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_19
+		}
+		clear_global_event_target = releasable_country_19
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_20
+		}
+		clear_global_event_target = releasable_country_20
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_21
+		}
+		clear_global_event_target = releasable_country_21
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_22
+		}
+		clear_global_event_target = releasable_country_22
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_23
+		}
+		clear_global_event_target = releasable_country_23
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_24
+		}
+		clear_global_event_target = releasable_country_24
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_25
+		}
+		clear_global_event_target = releasable_country_25
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_26
+		}
+		clear_global_event_target = releasable_country_26
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_27
+		}
+		clear_global_event_target = releasable_country_27
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_28
+		}
+		clear_global_event_target = releasable_country_28
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_29
+		}
+		clear_global_event_target = releasable_country_29
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_30
+		}
+		clear_global_event_target = releasable_country_30
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_31
+		}
+		clear_global_event_target = releasable_country_31
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_32
+		}
+		clear_global_event_target = releasable_country_32
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_33
+		}
+		clear_global_event_target = releasable_country_33
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_34
+		}
+		clear_global_event_target = releasable_country_34
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_35
+		}
+		clear_global_event_target = releasable_country_35
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_36
+		}
+		clear_global_event_target = releasable_country_36
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_37
+		}
+		clear_global_event_target = releasable_country_37
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_38
+		}
+		clear_global_event_target = releasable_country_38
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_39
+		}
+		clear_global_event_target = releasable_country_39
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_40
+		}
+		clear_global_event_target = releasable_country_40
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_41
+		}
+		clear_global_event_target = releasable_country_41
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_42
+		}
+		clear_global_event_target = releasable_country_42
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_43
+		}
+		clear_global_event_target = releasable_country_43
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_44
+		}
+		clear_global_event_target = releasable_country_44
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_45
+		}
+		clear_global_event_target = releasable_country_45
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_46
+		}
+		clear_global_event_target = releasable_country_46
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_47
+		}
+		clear_global_event_target = releasable_country_47
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_48
+		}
+		clear_global_event_target = releasable_country_48
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_49
+		}
+		clear_global_event_target = releasable_country_49
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_50
+		}
+		clear_global_event_target = releasable_country_50
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_51
+		}
+		clear_global_event_target = releasable_country_51
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_52
+		}
+		clear_global_event_target = releasable_country_52
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_53
+		}
+		clear_global_event_target = releasable_country_53
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_54
+		}
+		clear_global_event_target = releasable_country_54
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_55
+		}
+		clear_global_event_target = releasable_country_55
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_56
+		}
+		clear_global_event_target = releasable_country_56
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_57
+		}
+		clear_global_event_target = releasable_country_57
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_58
+		}
+		clear_global_event_target = releasable_country_58
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_59
+		}
+		clear_global_event_target = releasable_country_59
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_60
+		}
+		clear_global_event_target = releasable_country_60
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_61
+		}
+		clear_global_event_target = releasable_country_61
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_62
+		}
+		clear_global_event_target = releasable_country_62
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_63
+		}
+		clear_global_event_target = releasable_country_63
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_64
+		}
+		clear_global_event_target = releasable_country_64
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_65
+		}
+		clear_global_event_target = releasable_country_65
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_66
+		}
+		clear_global_event_target = releasable_country_66
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_67
+		}
+		clear_global_event_target = releasable_country_67
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_68
+		}
+		clear_global_event_target = releasable_country_68
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_69
+		}
+		clear_global_event_target = releasable_country_69
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_70
+		}
+		clear_global_event_target = releasable_country_70
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_71
+		}
+		clear_global_event_target = releasable_country_71
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_72
+		}
+		clear_global_event_target = releasable_country_72
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_73
+		}
+		clear_global_event_target = releasable_country_73
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_74
+		}
+		clear_global_event_target = releasable_country_74
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_75
+		}
+		clear_global_event_target = releasable_country_75
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_76
+		}
+		clear_global_event_target = releasable_country_76
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_77
+		}
+		clear_global_event_target = releasable_country_77
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_78
+		}
+		clear_global_event_target = releasable_country_78
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_79
+		}
+		clear_global_event_target = releasable_country_79
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_80
+		}
+		clear_global_event_target = releasable_country_80
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_81
+		}
+		clear_global_event_target = releasable_country_81
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_82
+		}
+		clear_global_event_target = releasable_country_82
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_83
+		}
+		clear_global_event_target = releasable_country_83
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_84
+		}
+		clear_global_event_target = releasable_country_84
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_85
+		}
+		clear_global_event_target = releasable_country_85
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_86
+		}
+		clear_global_event_target = releasable_country_86
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_87
+		}
+		clear_global_event_target = releasable_country_87
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_88
+		}
+		clear_global_event_target = releasable_country_88
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_89
+		}
+		clear_global_event_target = releasable_country_89
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_90
+		}
+		clear_global_event_target = releasable_country_90
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_91
+		}
+		clear_global_event_target = releasable_country_91
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_92
+		}
+		clear_global_event_target = releasable_country_92
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_93
+		}
+		clear_global_event_target = releasable_country_93
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_94
+		}
+		clear_global_event_target = releasable_country_94
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_95
+		}
+		clear_global_event_target = releasable_country_95
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_96
+		}
+		clear_global_event_target = releasable_country_96
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_97
+		}
+		clear_global_event_target = releasable_country_97
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_98
+		}
+		clear_global_event_target = releasable_country_98
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_99
+		}
+		clear_global_event_target = releasable_country_99
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = releasable_country_100
+		}
+		clear_global_event_target = releasable_country_100
+	}
+}
+
+#SCOPE = COUNTRY
+store_releasable_country_event_target = {
+	if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_0
+			}
+		}
+		save_global_event_target_as = releasable_country_0
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_1
+			}
+		}
+		save_global_event_target_as = releasable_country_1
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_2
+			}
+		}
+		save_global_event_target_as = releasable_country_2
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_3
+			}
+		}
+		save_global_event_target_as = releasable_country_3
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_4
+			}
+		}
+		save_global_event_target_as = releasable_country_4
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_5
+			}
+		}
+		save_global_event_target_as = releasable_country_5
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_6
+			}
+		}
+		save_global_event_target_as = releasable_country_6
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_7
+			}
+		}
+		save_global_event_target_as = releasable_country_7
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_8
+			}
+		}
+		save_global_event_target_as = releasable_country_8
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_9
+			}
+		}
+		save_global_event_target_as = releasable_country_9
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_10
+			}
+		}
+		save_global_event_target_as = releasable_country_10
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_11
+			}
+		}
+		save_global_event_target_as = releasable_country_11
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_12
+			}
+		}
+		save_global_event_target_as = releasable_country_12
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_13
+			}
+		}
+		save_global_event_target_as = releasable_country_13
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_14
+			}
+		}
+		save_global_event_target_as = releasable_country_14
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_15
+			}
+		}
+		save_global_event_target_as = releasable_country_15
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_16
+			}
+		}
+		save_global_event_target_as = releasable_country_16
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_17
+			}
+		}
+		save_global_event_target_as = releasable_country_17
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_18
+			}
+		}
+		save_global_event_target_as = releasable_country_18
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_19
+			}
+		}
+		save_global_event_target_as = releasable_country_19
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_20
+			}
+		}
+		save_global_event_target_as = releasable_country_20
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_21
+			}
+		}
+		save_global_event_target_as = releasable_country_21
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_22
+			}
+		}
+		save_global_event_target_as = releasable_country_22
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_23
+			}
+		}
+		save_global_event_target_as = releasable_country_23
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_24
+			}
+		}
+		save_global_event_target_as = releasable_country_24
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_25
+			}
+		}
+		save_global_event_target_as = releasable_country_25
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_26
+			}
+		}
+		save_global_event_target_as = releasable_country_26
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_27
+			}
+		}
+		save_global_event_target_as = releasable_country_27
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_28
+			}
+		}
+		save_global_event_target_as = releasable_country_28
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_29
+			}
+		}
+		save_global_event_target_as = releasable_country_29
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_30
+			}
+		}
+		save_global_event_target_as = releasable_country_30
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_31
+			}
+		}
+		save_global_event_target_as = releasable_country_31
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_32
+			}
+		}
+		save_global_event_target_as = releasable_country_32
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_33
+			}
+		}
+		save_global_event_target_as = releasable_country_33
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_34
+			}
+		}
+		save_global_event_target_as = releasable_country_34
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_35
+			}
+		}
+		save_global_event_target_as = releasable_country_35
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_36
+			}
+		}
+		save_global_event_target_as = releasable_country_36
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_37
+			}
+		}
+		save_global_event_target_as = releasable_country_37
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_38
+			}
+		}
+		save_global_event_target_as = releasable_country_38
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_39
+			}
+		}
+		save_global_event_target_as = releasable_country_39
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_40
+			}
+		}
+		save_global_event_target_as = releasable_country_40
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_41
+			}
+		}
+		save_global_event_target_as = releasable_country_41
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_42
+			}
+		}
+		save_global_event_target_as = releasable_country_42
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_43
+			}
+		}
+		save_global_event_target_as = releasable_country_43
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_44
+			}
+		}
+		save_global_event_target_as = releasable_country_44
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_45
+			}
+		}
+		save_global_event_target_as = releasable_country_45
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_46
+			}
+		}
+		save_global_event_target_as = releasable_country_46
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_47
+			}
+		}
+		save_global_event_target_as = releasable_country_47
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_48
+			}
+		}
+		save_global_event_target_as = releasable_country_48
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_49
+			}
+		}
+		save_global_event_target_as = releasable_country_49
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_50
+			}
+		}
+		save_global_event_target_as = releasable_country_50
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_51
+			}
+		}
+		save_global_event_target_as = releasable_country_51
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_52
+			}
+		}
+		save_global_event_target_as = releasable_country_52
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_53
+			}
+		}
+		save_global_event_target_as = releasable_country_53
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_54
+			}
+		}
+		save_global_event_target_as = releasable_country_54
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_55
+			}
+		}
+		save_global_event_target_as = releasable_country_55
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_56
+			}
+		}
+		save_global_event_target_as = releasable_country_56
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_57
+			}
+		}
+		save_global_event_target_as = releasable_country_57
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_58
+			}
+		}
+		save_global_event_target_as = releasable_country_58
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_59
+			}
+		}
+		save_global_event_target_as = releasable_country_59
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_60
+			}
+		}
+		save_global_event_target_as = releasable_country_60
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_61
+			}
+		}
+		save_global_event_target_as = releasable_country_61
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_62
+			}
+		}
+		save_global_event_target_as = releasable_country_62
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_63
+			}
+		}
+		save_global_event_target_as = releasable_country_63
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_64
+			}
+		}
+		save_global_event_target_as = releasable_country_64
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_65
+			}
+		}
+		save_global_event_target_as = releasable_country_65
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_66
+			}
+		}
+		save_global_event_target_as = releasable_country_66
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_67
+			}
+		}
+		save_global_event_target_as = releasable_country_67
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_68
+			}
+		}
+		save_global_event_target_as = releasable_country_68
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_69
+			}
+		}
+		save_global_event_target_as = releasable_country_69
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_70
+			}
+		}
+		save_global_event_target_as = releasable_country_70
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_71
+			}
+		}
+		save_global_event_target_as = releasable_country_71
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_72
+			}
+		}
+		save_global_event_target_as = releasable_country_72
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_73
+			}
+		}
+		save_global_event_target_as = releasable_country_73
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_74
+			}
+		}
+		save_global_event_target_as = releasable_country_74
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_75
+			}
+		}
+		save_global_event_target_as = releasable_country_75
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_76
+			}
+		}
+		save_global_event_target_as = releasable_country_76
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_77
+			}
+		}
+		save_global_event_target_as = releasable_country_77
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_78
+			}
+		}
+		save_global_event_target_as = releasable_country_78
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_79
+			}
+		}
+		save_global_event_target_as = releasable_country_79
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_80
+			}
+		}
+		save_global_event_target_as = releasable_country_80
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_81
+			}
+		}
+		save_global_event_target_as = releasable_country_81
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_82
+			}
+		}
+		save_global_event_target_as = releasable_country_82
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_83
+			}
+		}
+		save_global_event_target_as = releasable_country_83
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_84
+			}
+		}
+		save_global_event_target_as = releasable_country_84
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_85
+			}
+		}
+		save_global_event_target_as = releasable_country_85
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_86
+			}
+		}
+		save_global_event_target_as = releasable_country_86
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_87
+			}
+		}
+		save_global_event_target_as = releasable_country_87
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_88
+			}
+		}
+		save_global_event_target_as = releasable_country_88
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_89
+			}
+		}
+		save_global_event_target_as = releasable_country_89
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_90
+			}
+		}
+		save_global_event_target_as = releasable_country_90
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_91
+			}
+		}
+		save_global_event_target_as = releasable_country_91
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_92
+			}
+		}
+		save_global_event_target_as = releasable_country_92
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_93
+			}
+		}
+		save_global_event_target_as = releasable_country_93
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_94
+			}
+		}
+		save_global_event_target_as = releasable_country_94
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_95
+			}
+		}
+		save_global_event_target_as = releasable_country_95
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_96
+			}
+		}
+		save_global_event_target_as = releasable_country_96
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_97
+			}
+		}
+		save_global_event_target_as = releasable_country_97
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_98
+			}
+		}
+		save_global_event_target_as = releasable_country_98
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_99
+			}
+		}
+		save_global_event_target_as = releasable_country_99
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = releasable_country_100
+			}
+		}
+		save_global_event_target_as = releasable_country_100
+	}
+}
+
+clear_identified_releasable_flags = {
+	every_country_including_inactive = {
+		limit = {
+			has_country_flag = identified_releasable
+		}
+		clr_country_flag = identified_releasable
+	}
+}
+
+#SCOPE = COUNTRY
+identify_releasable_countries_for_target = {
+	$target$ = {
+		set_variable = {
+			releasable_countries = 0
+		}
+		every_owned_province = {
+			every_core_country = {
+				limit = {
+					exists = no
+					NOT = {
+						has_country_flag = identified_releasable
+					}
+					NOT = {
+						tag = $target$
+					}
+				}
+				if = {
+					limit = {
+						PREV = {
+							is_capital = yes
+						}
+					}
+					set_country_flag = has_core_on_capital
+					remove_core = PREV
+				}
+				set_country_flag = identified_releasable
+				store_releasable_country_event_target = yes
+				$target$ = {
+					change_variable = {
+						releasable_countries = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+complex_release_effect = {
+	tooltip = {
+		release = $target$
+	}
+	hidden_effect = {
+		release = $target$
+		[[change_religion]
+		$target$ = {
+			change_religion = $change_religion$
+			remove_country_modifier = conversion_zeal
+		}
+		]
+		[[change_culture]
+		$target$ = {
+			change_culture = $change_culture$
+		}
+		]
+		[[change_government]
+		$target$ = {
+			change_government = $change_government$
+		}
+		]
+		[[add_government_reform]
+		$target$ = {
+			add_government_reform = $add_government_reform$
+		}
+		]
+	}
+}

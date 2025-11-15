@@ -71,6 +71,24 @@ po_install_peasant_government = {
 			who = FROM
 			modifier = caught_spy
 		}
+		FROM = {
+			save_global_event_target_as = new_peasant_subject
+		}
+		identify_releasable_countries_for_target = {
+			target = event_target:new_peasant_subject
+		}
+		if = {
+			limit = {
+				can_be_balkanized = yes
+			}
+			country_event = {
+				id = moldavia_peasant_events.3
+			}
+		}
+		else = {
+			clear_releasable_countries_event_targets = yes
+			clear_identified_releasable_flags = yes
+		}
 	}
 	ai_weight = {
 		export_to_variable = {

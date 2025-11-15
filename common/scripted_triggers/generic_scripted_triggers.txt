@@ -1478,3 +1478,13 @@ is_supporting_rebels_against_target = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+can_be_balkanized = {
+	any_owned_province = {
+		is_capital = no
+		any_core_country = {
+			exists = no
+		}
+	}
+}

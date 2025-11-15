@@ -194,6 +194,7 @@ country_event = {
 	}
 }
 
+# New TUC traditions and ambitions.
 country_event = {
 	id = moldavia_peasant_events.2
 	title = moldavia_peasant_events.2.t
@@ -209,5 +210,54 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
+	}
+}
+
+# Balkanization Event
+country_event = {
+	id = moldavia_peasant_events.3
+	title = moldavia_peasant_events.3.t
+	desc = moldavia_peasant_events.3.d
+	picture = GFX_moldavia_peasant_events.3
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			event_target:new_peasant_subject = {
+				set_variable = {
+					which = opinion_loss_from_balkanization
+					which = releasable_countries
+				}
+				multiply_variable = {
+					which = opinion_loss_from_balkanization
+					value = -20
+				}
+				set_variable = {
+					which = liberty_desire_gain_from_balkanization
+					which = releasable_countries
+				}
+				multiply_variable = {
+					which = liberty_desire_gain_from_balkanization
+					value = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = moldavia_peasant_events.3.balkanize
+		custom_tooltip = balkanize_overlap_disclaimer_tt
+		custom_tooltip = AB_EMPTY
+		release_balkanized_communes_for_target = {
+			target = event_target:new_peasant_subject
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = balkanize_effect_tt
+	}
+	option = {
+		name = nevermind
+	}
+	after = {
+		clear_releasable_countries_event_targets = yes
+		clear_identified_releasable_flags = yes
+		clear_global_event_target = new_peasant_subject
 	}
 }
