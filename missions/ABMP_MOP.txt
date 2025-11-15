@@ -744,6 +744,60 @@ ab_mop_1 = {
 			}
 		}
 	}
+	mop_liberate_the_serbs = {
+		icon = defeat_the_serbs
+		position = 10
+		required_missions = {
+			mop_bulgars_are_free
+		}
+		provinces_to_highlight = {
+			culture = serbian
+			region = balkan_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_liberate_the_serbs_tt
+					NOT = {
+						any_province = {
+							culture = serbian
+							region = balkan_region
+							NOT = {
+								country_or_commune_subject_or_subject_of_commune_subject_holds = {
+									who = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_province = {
+				province = 137
+			}
+			add_mil_power = 100
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_yearly_manpower = 1
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_2 = {
@@ -1515,6 +1569,10 @@ ab_mop_2 = {
 					name = mop_patriarchate_of_stamboli
 					duration = -1
 				}
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
 			}
 		}
 	}
