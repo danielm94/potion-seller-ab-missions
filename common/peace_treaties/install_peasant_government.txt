@@ -71,6 +71,10 @@ po_install_peasant_government = {
 			who = FROM
 			modifier = caught_spy
 		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = liberated_us_from_nobles
+		}
 		FROM = {
 			save_global_event_target_as = new_peasant_subject
 		}

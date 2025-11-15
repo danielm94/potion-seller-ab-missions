@@ -253,7 +253,8 @@ country_event = {
 		custom_tooltip = balkanize_effect_tt
 	}
 	option = {
-		name = nevermind
+		name = moldavia_peasant_events.3.no
+		custom_tooltip = cant_balkanize_again_tt
 	}
 	after = {
 		clear_releasable_countries_event_targets = yes
