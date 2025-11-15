@@ -103,3 +103,4 @@
  if_we_have_completed_naval_ideas_tt: "If we have completed §YNaval Ideas§!:"
  mop_liberate_the_greeks_title: "Liberate the Greeks"
  mop_liberate_the_greeks_desc: "The fall of the imperial city was only the first step. From the hills of Hellas to the harbors of the Aegean, Greek peasants, sailors, and craftsmen still bend the knee to princes, stratocrats, and merchant elites who claim the legacy of empires long dead. If our victory in Thrace is to mean anything, we must carry the revolution southward and across the islands, breaking the last chains that bind the Greek people."
+ mop_liberate_the_greeks_tt: "All provinces of §YGreek§! culture in the §YBalkans§! or §YAegean Archipelago§! are either controlled by us, a £allied_commune£§YCommune Subject§!, or a subject of our £allied_commune£§YCommune Subject§!."
