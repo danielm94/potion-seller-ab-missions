@@ -690,7 +690,7 @@ ab_mop_1 = {
 	}
 	mop_bulgars_are_free = {
 		icon = GFX_mop_bulgars_are_free
-		position = 9
+		position = 12
 		required_missions = {
 			mop_liberate_the_bulgars
 		}
@@ -746,7 +746,7 @@ ab_mop_1 = {
 	}
 	mop_liberate_the_serbs = {
 		icon = defeat_the_serbs
-		position = 11
+		position = 14
 		required_missions = {
 			mop_bulgars_are_free
 		}
@@ -800,7 +800,7 @@ ab_mop_1 = {
 	}
 	mop_conquer_ragusa = {
 		icon = capture_adriatic_ports
-		position = 13
+		position = 16
 		required_missions = {
 			mop_liberate_the_serbs
 		}
@@ -836,6 +836,7 @@ ab_mop_1 = {
 				faction = abolitionists_faction
 				influence = 5
 			}
+			custom_tooltip = AB_EMPTY
 			137 = {
 				add_province_modifier = {
 					name = mop_commune_of_dubrovnik
@@ -1520,7 +1521,7 @@ ab_mop_2 = {
 	}
 	mop_liberate_thrace = {
 		icon = byz_city_of_worlds_desire
-		position = 10
+		position = 13
 		required_missions = {
 			mop_bulgars_are_free
 		}
@@ -1614,6 +1615,78 @@ ab_mop_2 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+		}
+	}
+	mop_liberate_the_greeks = {
+		icon = mission_parthenon
+		position = 15
+		required_missions = {
+			mop_liberate_thrace
+		}
+		provinces_to_highlight = {
+			culture = greek
+			OR = {
+				region = balkan_region
+				area = aegean_archipelago_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_liberate_the_greeks_tt
+					NOT = {
+						any_province = {
+							culture = greek
+							OR = {
+								region = balkan_region
+								area = aegean_archipelago_area
+							}
+							NOT = {
+								country_or_commune_subject_or_subject_of_commune_subject_holds = {
+									who = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			set_country_flag = artists_help_with_great_projects
+			custom_tooltip = artists_help_with_great_projects_tooltip
+			add_accepted_culture_or_dip_power_stated = {
+				culture = greek
+				dip_reward = yes
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_completed_naval_ideas_tt
+				first_limit = "full_idea_group = naval_ideas"
+				first_effect = "add_country_modifier = {
+									name = byzantium_greekfire
+									duration = -1
+								}"
+			}
+			
 		}
 	}
 }
