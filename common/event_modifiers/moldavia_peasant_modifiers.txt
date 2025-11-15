@@ -189,3 +189,11 @@ mop_patriarchate_of_stamboli = {
 	local_great_project_upgrade_cost = -0.1
 	religion = yes
 }
+
+mop_commune_of_dubrovnik = {
+	min_local_autonomy = 20
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	sailors_recovery_speed = 0.05
+}
