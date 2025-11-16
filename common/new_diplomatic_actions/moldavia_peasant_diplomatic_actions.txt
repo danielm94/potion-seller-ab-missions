@@ -966,7 +966,7 @@ convert_subject_to_commune = {
 			is_at_war = no
 		}
 		FROM = {
-			is_subject_loyaly_enough_to_convert_to_commune = yes
+			does_subject_have_0_liberty_desire = yes
 		}
 		custom_trigger_tooltip = {
 			tooltip = not_currently_integrating_a_commune_subject
@@ -1001,6 +1001,141 @@ convert_subject_to_commune = {
 			initialize_integration_progress_percentage_variable = yes
 			enable_commune_integration_subject = yes
 			calculate_monthly_commune_integration_progress = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+establish_illyrian_commune = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = ILR
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_illyria_diplomatic_actions
+		FROM = {
+			culture_group = south_slavic
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		FROM = {
+			capital_scope = {
+				OR = {
+					region = balkan_region
+					area = carinthia_area
+				}
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = ILR
+			set_government_rank_force = 3
+			swap_free_idea_group = yes
+			override_country_name = ILR_commune
+			change_country_color = {
+				country = ROOT
+			}
+			balkan_region = {
+				limit = {
+					culture_group = south_slavic
+				}
+				add_permanent_claim = ILR
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_illyria = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_illyria_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = ILR
+		ILR = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = ILR
+			}
+			any_owned_province = {
+				culture_group = south_slavic
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = south_slavic
+				}
+				add_core = ILR
+				cede_province = ILR
+			}
 		}
 	}
 	ai_will_do = {

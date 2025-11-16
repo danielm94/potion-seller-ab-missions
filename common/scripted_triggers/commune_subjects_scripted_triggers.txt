@@ -46,7 +46,7 @@ is_commune_loyal_enough_to_integrate = {
 }
 
 #SCOPE = COUNTRY
-is_subject_loyaly_enough_to_convert_to_commune = {
+does_subject_have_0_liberty_desire = {
 	NOT = {
 		liberty_desire = 1
 	}
