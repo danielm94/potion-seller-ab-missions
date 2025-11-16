@@ -14,30 +14,33 @@ investing_mil_commune = {
 }
 
 allied_commune_overlord = {
-	monthly_peasant_zeal = 0.005
-}
-
-sister_commune_overlord = {
 	monthly_peasant_zeal = 0.01
 }
 
-integrated_commune_overlord = {
+sister_commune_overlord = {
 	monthly_peasant_zeal = 0.02
+}
+
+integrated_commune_overlord = {
+	monthly_peasant_zeal = 0.04
 	peasant_zeal_gain_modifier = 0.01
 }
 
 large_integrated_commune_bonus_1 = {
 	merchants = 1
 }
+
 large_integrated_commune_bonus_2 = {
 	merchants = 1
-	monthly_peasant_zeal = 0.01
+	monthly_peasant_zeal = 0.02
 }
+
 large_integrated_commune_bonus_3 = {
 	merchants = 1
-	monthly_peasant_zeal = 0.02
+	monthly_peasant_zeal = 0.04
 	peasant_zeal_gain_modifier = 0.01
 }
+
 integrated_commune_subject = {
 	global_manpower = -5
 	land_forcelimit = -5
@@ -62,4 +65,8 @@ allied_commune_subject = {
 
 integrated_commune_bul_bonus = {
 	shock_damage_received = -0.05
+}
+
+integrated_commune_alb_bonus = {
+	leader_land_shock = 1
 }
