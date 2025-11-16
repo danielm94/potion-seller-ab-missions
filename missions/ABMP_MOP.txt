@@ -1788,6 +1788,62 @@ ab_mop_2 = {
 			}
 		}
 	}
+	mop_protect_the_albanians = {
+		icon = mission_protect_albania
+		position = 17
+		required_missions = {
+			mop_liberate_the_greeks
+		}
+		provinces_to_highlight = {
+			area = albania_area
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				albania_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_albania_is_an_allied_commune_tt
+				first_limit = "ALB = {
+								is_subject_of_type_with_overlord = {
+									who = ROOT
+									type = allied_commune
+								}
+							}"
+				first_effect = "create_subject = {
+									subject_type = sister_commune
+									who = ALB
+								}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+			change_peasant_zeal = {
+				value = 5
+			}
+			custom_tooltip = albania_integrated_commune_bonus_tt
+			set_country_flag = alb_integrated_commune_bonus
+		}
+	}
 }
 
 ab_mop_3 = {
