@@ -730,8 +730,8 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			custom_tooltip = bul_integrated_commune_bonus_tt
-			set_country_flag = bul_integrated_commune_bonus
+			custom_tooltip = bulgarian_integrated_commune_bonus_tt
+			set_country_flag = bulgarian_integrated_commune_bonus
 			add_faction_influence = {
 				faction = leaguists_faction
 				influence = 10
@@ -787,6 +787,7 @@ ab_mop_1 = {
 			add_permanent_claim_province = {
 				province = 137
 			}
+			custom_tooltip = AB_EMPTY
 			add_mil_power = 100
 			change_peasant_zeal = {
 				value = 10
@@ -796,6 +797,9 @@ ab_mop_1 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = serbian_integrated_commune_bonus_tt
+			set_country_flag = serbian_integrated_commune_bonus
 		}
 	}
 	mop_conquer_ragusa = {
@@ -943,6 +947,77 @@ ab_mop_1 = {
 				name = mop_prepare_to_confront_venice
 				duration = 3650
 			}
+		}
+	}
+	mop_liberate_illyria = {
+		icon = secure_the_sava
+		position = 20
+		required_missions = {
+			mop_great_port_of_dubrovnik
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				bosnia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				east_adriatic_coast_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				croatia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				slavonia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_illyria_diplomatic_actions_tt
+			set_country_flag = unlock_illyria_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = commandant
+				skill = 2
+				cost_multiplier = 0.5
+				religion = ROOT
+				culture = ROOT
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = croatian_integrated_commune_bonus_tt
+			set_country_flag = croatian_integrated_commune_bonus
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = bosnian_integrated_commune_bonus_tt
+			set_country_flag = bosnian_integrated_commune_bonus
 		}
 	}
 }
@@ -1841,7 +1916,7 @@ ab_mop_2 = {
 				value = 5
 			}
 			custom_tooltip = albania_integrated_commune_bonus_tt
-			set_country_flag = alb_integrated_commune_bonus
+			set_country_flag = albanian_integrated_commune_bonus
 		}
 	}
 }
