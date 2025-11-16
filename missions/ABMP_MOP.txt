@@ -2647,6 +2647,71 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_dismantle_the_stratocracy = {
+		icon = mission_nicaea
+		position = 14
+		required_missions = {
+			mop_liberate_thrace
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				hudavendigar_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				aydin_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			316 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_unit_construction = {
+					type = galley
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+				add_province_modifier = {
+					name = mop_chalcedon_commune 
+					duration = -1
+				}
+			}
+			add_army_professionalism = 0.05
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+		}
+	}
 }
 
 ab_mop_4 = {

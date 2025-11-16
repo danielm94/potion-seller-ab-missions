@@ -198,6 +198,7 @@ mop_commune_of_dubrovnik = {
 	local_great_project_upgrade_cost = -0.5
 	sailors_recovery_speed = 0.05
 }
+
 mop_great_commune_of_dubrovnik = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -224,4 +225,12 @@ mop_the_legend_of_bogdan_razesul = {
 	prestige = 1
 	republican_tradition = 0.5
 	monthly_peasant_zeal = 0.05
+}
+
+mop_chalcedon_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	infantry_power = 0.05
 }
