@@ -845,6 +845,106 @@ ab_mop_1 = {
 			}
 		}
 	}
+	mop_great_port_of_dubrovnik = {
+		icon = GFX_mop_great_port_of_dubrovnik
+		position = 18
+		required_missions = {
+			mop_conquer_ragusa
+		}
+		provinces_to_highlight = {
+			province_id = 137
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = walls_ston
+						tier = 1
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				137 = {
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = walls_ston
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			137 = {
+				remove_province_modifier = mop_commune_of_dubrovnik
+				add_province_modifier = {
+					name = mop_great_commune_of_dubrovnik
+					duration = -1
+				}
+				add_unit_construction = {
+					type = heavy_ship
+					cost = 0.25
+					speed = 0.25
+				}
+				add_unit_construction = {
+					type = heavy_ship
+					cost = 0.25
+					speed = 0.25
+				}
+				add_unit_construction = {
+					type = heavy_ship
+					cost = 0.25
+					speed = 0.25
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = naval_reformer
+				skill = 3
+				cost_multiplier = 0.5
+				culture = dalmatian
+				religion = catholic
+				location = 137
+			}
+			custom_tooltip = AB_EMPTY
+			add_yearly_sailors = 1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_prepare_to_confront_venice
+				duration = 3650
+			}
+		}
+	}
 }
 
 ab_mop_2 = {
@@ -1686,7 +1786,6 @@ ab_mop_2 = {
 									duration = -1
 								}"
 			}
-			
 		}
 	}
 }

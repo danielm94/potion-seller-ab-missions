@@ -195,5 +195,20 @@ mop_commune_of_dubrovnik = {
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
+	local_great_project_upgrade_cost = -0.5
 	sailors_recovery_speed = 0.05
+}
+mop_great_commune_of_dubrovnik = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	local_great_project_upgrade_cost = -0.5
+	sailors_recovery_speed = 0.1
+}
+
+mop_prepare_to_confront_venice = {
+	global_ship_cost = -0.1
+	global_ship_recruit_speed = -0.1
+	naval_forcelimit_modifier = 0.1
 }
