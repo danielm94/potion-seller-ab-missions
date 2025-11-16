@@ -1919,6 +1919,82 @@ ab_mop_2 = {
 			set_country_flag = albanian_integrated_commune_bonus
 		}
 	}
+	mop_liberate_the_balkans = {
+		icon = mission_balkan_conquest
+		position = 21
+		required_missions = {
+			mop_liberate_illyria
+			mop_protect_the_albanians
+		}
+		provinces_to_highlight = {
+			region = balkan_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				balkan_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
+				first_limit = "is_bogdan_razesul_ruling = yes"
+				first_effect = "
+					change_peasant_zeal = {
+						value = 100
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 20
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 20
+					}
+					add_country_modifier = {
+						name = mop_the_legend_of_bogdan_razesul
+						duration = -1
+					}"
+				second_custom_tooltip = if_bogdan_razesul_isnt_ruling_tt
+				second_limit = "is_bogdan_razesul_ruling = no"
+				second_effect = "
+					change_peasant_zeal = {
+						value = 50
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 10
+					}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_balkan_liberator
+				duration = 36500
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+		}
+	}
 }
 
 ab_mop_3 = {

@@ -212,3 +212,16 @@ mop_prepare_to_confront_venice = {
 	global_ship_recruit_speed = -0.1
 	naval_forcelimit_modifier = 0.1
 }
+
+mop_balkan_liberator = {
+	diplomatic_annexation_cost = -0.05
+	reduced_liberty_desire = 5
+	shock_damage_received = -0.1
+	morale_damage_received = -0.1
+}
+
+mop_the_legend_of_bogdan_razesul = {
+	prestige = 1
+	republican_tradition = 0.5
+	monthly_peasant_zeal = 0.05
+}
