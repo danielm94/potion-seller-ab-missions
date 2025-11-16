@@ -1057,7 +1057,6 @@ establish_illyrian_commune = {
 		FROM = {
 			change_tag = ILR
 			set_government_rank_force = 2
-			swap_free_idea_group = yes
 			override_country_name = ILR_commune
 			change_country_color = {
 				country = ROOT
