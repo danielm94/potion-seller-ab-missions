@@ -1141,3 +1141,38 @@ integrate_into_illyria = {
 		always = no
 	}
 }
+
+adopt_illyrian_ideas = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		FROM = {
+			tag = ILR
+			NOT = {
+				has_country_flag = took_ilr_ideas
+			}
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_illyria_diplomatic_actions
+	}
+	is_allowed = {
+		FROM = {
+			NOT = {
+				liberty_desire = 50
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			swap_free_idea_group = yes
+			set_country_flag = took_ilr_ideas
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

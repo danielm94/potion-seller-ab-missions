@@ -92,3 +92,7 @@
  integrate_into_illyria_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YSouth Slavic§! provinces to @ILR §Y[ILR.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YSouth Slavic§! culture, they will be §Rfully annexed§! by @ILR §Y[ILR.GetName]§!."
  integrate_into_illyria_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YSouth Slavic§! provinces to @ILR §Y[ILR.GetName]§!"
  DIPLOMACYACTION_CATEGORY_league: "Commune Interactions"
+ adopt_illyrian_ideas: "@ILR Adopt New Ideas"
+ adopt_illyrian_ideas_title: "@ILR Adopt New Ideas"
+ adopt_illyrian_ideas_desc: "\n@[From.GetTag] §Y[From.GetName]§! will adopt @ILR §YIllyrian§! national ideas:\n\nIllyrian Traditions:\nNaval Force Limit Modifier: §G+15.0%§!\nCore-Creation Cost: §G-10.0%§!\n\nIllyrian Assembly:\nStability Cost Modifier: §G-15.0%§!\n\nBlood Before Faith:\nHeretic and heathen provinces do not give any penalties\n\nSouth Slavic Union:\nManpower in same Culture Group provinces: §G+20.0%§!\n\nEstablish Banovinas:\nGoverning Capacity Modifier: §G+10.0%§!\n\nRoyal Illyrian Army:\nInfantry Combat Ability: §G+10.0%§!\nRegiment Costs: §G-10.0%§!\n\nExpand the Estates:\nProduction Efficiency: §G+10.0%§!\n\nHej, Sloveni!:\nMorale of Armies: §G+15.0%§!\n\nIllyrian Ambition:\nManpower Recovery Speed: §G+20.0%§!\n\n§RTHIS DECISION IS FINAL!§!"
+ adopt_illyrian_ideas_tooltip: "@[From.GetTag] §Y[From.GetName]§! will adopt §YIllyrian§! national ideas."
