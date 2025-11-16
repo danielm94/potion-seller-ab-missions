@@ -63,10 +63,26 @@ allied_commune_subject = {
 	province_warscore_cost = 0.25
 }
 
-integrated_commune_bul_bonus = {
+integrated_commune_bulgarian_bonus = {
 	shock_damage_received = -0.05
 }
 
-integrated_commune_alb_bonus = {
+integrated_commune_albanian_bonus = {
 	leader_land_shock = 1
+}
+
+integrated_commune_serbian_bonus = {
+	ae_impact = -0.05
+}
+
+integrated_commune_croatian_bonus = {
+	cavalry_cost = -0.1
+}
+
+integrated_commune_bosnian_bonus = {
+	artillery_power = 0.05
+}
+
+integrated_commune_slovene_bonus = {
+	diplomatic_reputation = 0.5
 }

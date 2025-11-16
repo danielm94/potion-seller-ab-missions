@@ -35,6 +35,7 @@ integrated_commune = {
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
 	restoration_cb = cb_reintegrate_into_peasant_league
+	share_rebel_popup = no
 	# (continuous)
 	support_loyalists = yes
 	subsidize_armies = yes
@@ -80,22 +81,62 @@ integrated_commune = {
 		}
 	}
 	modifier_overlord = {
-		modifier = integrated_commune_bul_bonus
+		modifier = integrated_commune_bulgarian_bonus
 		trigger = {
 			total_development = 300		
 			primary_culture = bulgarian
 			overlord = {
-				has_country_flag = bul_integrated_commune_bonus
+				has_country_flag = bulgarian_integrated_commune_bonus
 			}
 		}
 	}
 	modifier_overlord = {
-		modifier = integrated_commune_alb_bonus
+		modifier = integrated_commune_albanian_bonus
 		trigger = {
 			total_development = 150	
 			primary_culture = albanian
 			overlord = {
-				has_country_flag = alb_integrated_commune_bonus
+				has_country_flag = albanian_integrated_commune_bonus
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_serbian_bonus
+		trigger = {
+			total_development = 250
+			primary_culture = serbian
+			overlord = {
+				has_country_flag = serbian_integrated_commune_bonus
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_croatian_bonus
+		trigger = {
+			total_development = 250
+			primary_culture = croatian
+			overlord = {
+				has_country_flag = croatian_integrated_commune_bonus
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_bosnian_bonus
+		trigger = {
+			total_development = 200
+			primary_culture = bosnian
+			overlord = {
+				has_country_flag = bosnian_integrated_commune_bonus
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_slovene_bonus
+		trigger = {
+			total_development = 200
+			primary_culture = slovene
+			overlord = {
+				has_country_flag = slovene_integrated_commune_bonus
 			}
 		}
 	}
