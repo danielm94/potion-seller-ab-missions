@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_diplomacy_action_league"
+		texturefile = "gfx/interface/icon_diplomacy_commune.dds"
+		alwaystransparent = yes
+	}
+}

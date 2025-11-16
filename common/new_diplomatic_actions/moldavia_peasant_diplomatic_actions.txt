@@ -103,7 +103,7 @@ incite_peasants = {
 }
 
 invite_to_peasant_league = {
-	category = influence
+	category = league
 	alert_index = 3
 	alert_tooltip = PEASANT_LEAGUE_INVITE
 	require_acceptance = yes
@@ -407,7 +407,7 @@ invite_to_peasant_league = {
 }
 
 leave_peasant_league = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_subject_of = FROM
@@ -471,7 +471,7 @@ leave_peasant_league = {
 }
 
 integrate_commune = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
@@ -563,7 +563,7 @@ integrate_commune = {
 }
 
 cancel_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
@@ -593,7 +593,7 @@ cancel_commune_integration = {
 }
 
 invest_adm_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_investing_adm_power_in_commune = no
@@ -642,7 +642,7 @@ invest_adm_commune_integration = {
 }
 
 cancel_invest_adm_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_investing_adm_power_in_commune = yes
@@ -668,7 +668,7 @@ cancel_invest_adm_commune_integration = {
 }
 
 invest_dip_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_investing_dip_power_in_commune = no
@@ -708,7 +708,7 @@ invest_dip_commune_integration = {
 }
 
 cancel_invest_dip_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_investing_dip_power_in_commune = yes
@@ -734,7 +734,7 @@ cancel_invest_dip_commune_integration = {
 }
 
 invest_mil_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_investing_mil_power_in_commune = no
@@ -773,7 +773,7 @@ invest_mil_commune_integration = {
 }
 
 cancel_invest_mil_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		is_investing_mil_power_in_commune = yes
@@ -799,7 +799,7 @@ cancel_invest_mil_commune_integration = {
 }
 
 invest_republican_tradition_commune_integration = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
@@ -947,7 +947,7 @@ stage_coup_commune_integration = {
 }
 
 convert_subject_to_commune = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
@@ -1009,7 +1009,7 @@ convert_subject_to_commune = {
 }
 
 establish_illyrian_commune = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		NOT = {
@@ -1056,7 +1056,7 @@ establish_illyrian_commune = {
 	on_accept = {
 		FROM = {
 			change_tag = ILR
-			set_government_rank_force = 3
+			set_government_rank_force = 2
 			swap_free_idea_group = yes
 			override_country_name = ILR_commune
 			change_country_color = {
@@ -1076,7 +1076,7 @@ establish_illyrian_commune = {
 }
 
 integrate_into_illyria = {
-	category = influence
+	category = league
 	require_acceptance = no
 	is_visible = {
 		has_country_flag = unlock_illyria_diplomatic_actions
