@@ -118,8 +118,7 @@ astrakhan_gate = {
 
 azov_gate = {
 	province_trade_power_value = 15
-	trade_efficiency = 0.05
-	global_trade_power = 0.025
+	global_trade_power = 0.05
 	local_defensiveness = 0.25
 	global_tax_income = 6
 }
@@ -233,4 +232,12 @@ mop_chalcedon_commune = {
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	infantry_power = 0.05
+}
+
+gate_of_the_bosporus = {
+	province_trade_power_value = 15
+	local_defensiveness = 0.25
+	global_tax_income = 60
+	trade_efficiency = 0.05
+	global_trade_power = 0.025
 }
