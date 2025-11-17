@@ -1770,3 +1770,7 @@ release_balkanized_communes_for_target = {
 		}
 	}
 }
+
+enable_adopt_new_ideas_commune = {
+	set_country_flag = can_adopt_new_ideas_commune
+}

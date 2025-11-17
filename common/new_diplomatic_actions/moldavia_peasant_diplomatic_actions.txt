@@ -1016,7 +1016,7 @@ establish_illyrian_commune = {
 			exists = ILR
 		}
 		has_government_mechanic = peasant_zealotry
-		has_country_flag = unlock_illyria_diplomatic_actions
+		has_country_flag = unlock_ILR_commune_diplomatic_actions
 		FROM = {
 			culture_group = south_slavic
 			is_subject_of_type_with_overlord = {
@@ -1067,6 +1067,7 @@ establish_illyrian_commune = {
 				}
 				add_permanent_claim = ILR
 			}
+			enable_adopt_new_ideas_commune = yes
 		}
 	}
 	ai_will_do = {
@@ -1078,7 +1079,7 @@ integrate_into_illyria = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		has_country_flag = unlock_illyria_diplomatic_actions
+		has_country_flag = unlock_ILR_commune_diplomatic_actions
 		has_government_mechanic = peasant_zealotry
 		exists = ILR
 		ILR = {
@@ -1142,22 +1143,21 @@ integrate_into_illyria = {
 	}
 }
 
-adopt_illyrian_ideas = {
+adopt_new_ideas_commune = {
 	category = league
 	require_acceptance = no
 	is_visible = {
+		has_government_mechanic = peasant_zealotry
 		FROM = {
-			tag = ILR
+			has_country_flag = can_adopt_new_ideas_commune
 			NOT = {
-				has_country_flag = took_ilr_ideas
+				has_country_flag = took_new_commune_ideas
 			}
 			is_subject_of_type_with_overlord = {
 				who = ROOT
 				type = integrated_commune
 			}
 		}
-		has_government_mechanic = peasant_zealotry
-		has_country_flag = unlock_illyria_diplomatic_actions
 	}
 	is_allowed = {
 		FROM = {
@@ -1169,7 +1169,7 @@ adopt_illyrian_ideas = {
 	on_accept = {
 		FROM = {
 			swap_free_idea_group = yes
-			set_country_flag = took_ilr_ideas
+			set_country_flag = took_new_commune_ideas
 		}
 	}
 	ai_will_do = {
@@ -1185,7 +1185,7 @@ establish_hellenic_commune = {
 			exists = HLE
 		}
 		has_government_mechanic = peasant_zealotry
-		has_country_flag = unlock_hellenic_commune_diplomatic_actions
+		has_country_flag = unlock_HLE_commune_diplomatic_actions
 		FROM = {
 			culture = greek
 			is_subject_of_type_with_overlord = {
@@ -1236,6 +1236,7 @@ establish_hellenic_commune = {
 				}
 				add_permanent_claim = HLE
 			}
+			enable_adopt_new_ideas_commune = yes
 		}
 	}
 	ai_will_do = {
@@ -1247,7 +1248,7 @@ integrate_into_hellenic_communes = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		has_country_flag = unlock_hellenic_commune_diplomatic_actions
+		has_country_flag = unlock_HLE_commune_diplomatic_actions
 		has_government_mechanic = peasant_zealotry
 		exists = HLE
 		HLE = {
@@ -1304,41 +1305,6 @@ integrate_into_hellenic_communes = {
 				add_core = HLE
 				cede_province = HLE
 			}
-		}
-	}
-	ai_will_do = {
-		always = no
-	}
-}
-
-adopt_hellenic_ideas = {
-	category = league
-	require_acceptance = no
-	is_visible = {
-		FROM = {
-			tag = HLE
-			NOT = {
-				has_country_flag = took_HLE_ideas
-			}
-			is_subject_of_type_with_overlord = {
-				who = ROOT
-				type = integrated_commune
-			}
-		}
-		has_government_mechanic = peasant_zealotry
-		has_country_flag = unlock_hellenic_commune_diplomatic_actions
-	}
-	is_allowed = {
-		FROM = {
-			NOT = {
-				liberty_desire = 50
-			}
-		}
-	}
-	on_accept = {
-		FROM = {
-			swap_free_idea_group = yes
-			set_country_flag = took_HLE_ideas
 		}
 	}
 	ai_will_do = {

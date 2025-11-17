@@ -1,0 +1,19 @@
+defined_text = {
+	name = get_idea_list_for_commune
+	text = { 
+		localisation_key = ILR_ideas_list
+		trigger = {
+			FROM = {
+				tag = ILR
+			}
+		}
+	}
+	text = { 
+		localisation_key = HLE_ideas_list
+		trigger = {
+			FROM = {
+				tag = HLE
+			}
+		}
+	}
+}
