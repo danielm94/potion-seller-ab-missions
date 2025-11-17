@@ -90,3 +90,15 @@ integrated_commune_slovene_bonus = {
 integrated_commune_greek_bonus = {
 	great_project_upgrade_cost = -0.1
 }
+
+integrated_commune_turkish_muslim_bonus = {
+	tolerance_heathen = 1
+}
+
+integrated_commune_turkish_orthodox_bonus = {
+	tolerance_own = 1
+}
+
+integrated_commune_armenian_bonus = {
+	tolerance_heretic = 1
+}
