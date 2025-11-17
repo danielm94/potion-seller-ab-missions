@@ -1430,3 +1430,129 @@ integrate_into_turk_communes = {
 		always = no
 	}
 }
+establish_armenian_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = ARM
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_ARM_commune_diplomatic_actions
+		FROM = {
+			culture = armenian
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = ARM
+			set_government_rank_force = 2
+			override_country_name = ARM_commune
+			change_country_color = {
+				country = ROOT
+			}
+			every_province = {
+				limit = {
+					culture = armenian
+				}
+				add_permanent_claim = ARM
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_armenian_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_ARM_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = ARM
+		ARM = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = ARM
+			}
+			any_owned_province = {
+				culture = armenian
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture = armenian
+				}
+				add_core = ARM
+				cede_province = ARM
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
