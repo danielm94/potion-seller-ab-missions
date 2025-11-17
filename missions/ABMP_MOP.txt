@@ -1838,6 +1838,9 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
+			custom_tooltip = unlock_hellenic_commune_diplomatic_actions_tt
+			set_country_flag = unlock_hellenic_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 10
 			}
@@ -1845,8 +1848,9 @@ ab_mop_2 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
-			set_country_flag = artists_help_with_great_projects
-			custom_tooltip = artists_help_with_great_projects_tooltip
+			custom_tooltip = greek_integrated_commune_bonus_tt
+			set_country_flag = greek_integrated_commune_bonus
+			custom_tooltip = AB_EMPTY
 			add_accepted_culture_or_dip_power_stated = {
 				culture = greek
 				dip_reward = yes

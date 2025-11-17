@@ -140,4 +140,14 @@ integrated_commune = {
 			}
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_greek_bonus
+		trigger = {
+			total_development = 200
+			primary_culture = greek
+			overlord = {
+				has_country_flag = greek_integrated_commune_bonus
+			}
+		}
+	}
 }

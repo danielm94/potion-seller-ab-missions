@@ -236,7 +236,7 @@ mop_chalcedon_commune = {
 
 gate_of_the_bosporus = {
 	province_trade_power_value = 15
-	local_defensiveness = 0.25
+	local_defender_dice_roll_bonus = 1
 	global_tax_income = 60
 	trade_efficiency = 0.05
 	global_trade_power = 0.025

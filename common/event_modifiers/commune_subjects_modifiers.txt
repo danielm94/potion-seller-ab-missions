@@ -86,3 +86,7 @@ integrated_commune_bosnian_bonus = {
 integrated_commune_slovene_bonus = {
 	diplomatic_reputation = 0.5
 }
+
+integrated_commune_greek_bonus = {
+	great_project_upgrade_cost = -0.1
+}
