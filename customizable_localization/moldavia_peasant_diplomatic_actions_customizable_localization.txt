@@ -16,4 +16,12 @@ defined_text = {
 			}
 		}
 	}
+	text = { 
+		localisation_key = RUM_ideas_list
+		trigger = {
+			FROM = {
+				tag = RUM
+			}
+		}
+	}
 }
