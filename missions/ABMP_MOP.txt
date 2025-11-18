@@ -2623,29 +2623,43 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_proclaim_the_hetmanate = {
-		icon = GFX_mop_proclaim_the_hetmanate
+	mop_destroy_the_princes = {
+		icon = mission_defeat_muscovy
 		position = 8
 		required_missions = {
 			mop_east_ukraine
-			mop_march_to_sarai
 		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					OR = {
-						region = ruthenia_region
-						region = crimea_region
-						area = circassia_area
-						area = dagestan_area
+					owner = {
+						culture_group = east_slavic
+						government = monarchy
+						capital_scope = {
+							continent = europe
+						}
+						OR = {
+							is_subject = no
+							AND = {
+								is_subject = yes
+								overlord = {
+									is_commune_subject = no
+								}
+							}
+						}
 					}
-					NOT = {
-						country_or_non_sovereign_subject_holds = ZAZ
-					}
+					is_capital = yes
 				}
 				AND = {
-					province_id = 283
-					has_courthouse_building_trigger = no
+					province_id = 295
+					NOT = {
+						owned_by = root
+					}
+					owner = {
+						NOT = {
+							is_subject_of = root
+						}
+					}
 				}
 			}
 		}
@@ -2657,49 +2671,82 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				ZAZ = {
-					is_subject_of = ROOT
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 56
-						OR = {
-							region = ruthenia_region
-							region = crimea_region
-							area = circassia_area
-							area = dagestan_area
+				295 = {
+					OR = {
+						owned_by = root
+						owner = {
+							is_subject_of = root
 						}
 					}
-					custom_trigger_tooltip = {
-						tooltip = mop_expand_the_host_anti_confusion_trigger_tt
+				}
+				custom_trigger_tooltip = {
+					tooltip = no_east_slavic_monarchies_europe_tt
+					NOT = {
+						any_country = {
+							culture_group = east_slavic
+							government = monarchy
+							capital_scope = {
+								continent = europe
+							}
+							OR = {
+								is_subject = no
+								AND = {
+									is_subject = yes
+									overlord = {
+										is_commune_subject = no
+									}
+								}
+							}
+						}
 					}
 				}
-				283 = {
-					development = 25
-					has_courthouse_building_trigger = yes
-				}
-				dip_power = 200
 			}
 		}
 		effect = {
-			ZAZ = {
-				change_tag = HTM
-				swap_free_idea_group = yes
-				add_prestige = 25
-				add_liberty_desire = -20
-				hidden_effect = {
-					remove_non_electors_emperors_from_empire_effect = yes
-					add_government_reform = hetmanate
+			295 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_moscow_commune
+					duration = -1
 				}
-				set_country_flag = cossack_conquest_cb_enabled
-				custom_tooltip = conssack_conquest_cb_enabled_tt
 			}
-			custom_tooltip = tooltip_line_divider
-			create_subject = {
-				subject_type = cossack_protectorate
-				who = HTM
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.25
+				religion = orthodox
+				culture = russian
+				location = 1081
+				name = "Vladimir Ulyan"
 			}
-			custom_tooltip = cossack_protectorate_tt
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
-				value = 10
+				value = 25
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+			custom_tooltip = every_east_slavic_commune_subject_ld_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						culture_group = east_slavic
+						NOT = {
+							has_estate = estate_nobles
+						}
+					}
+					add_liberty_desire = -20
+				}
 			}
 		}
 	}
@@ -3172,6 +3219,87 @@ ab_mop_4 = {
 			ZAZ = {
 				add_liberty_desire = -20
 			}
+		}
+	}
+	mop_proclaim_the_hetmanate = {
+		icon = GFX_mop_proclaim_the_hetmanate
+		position = 8
+		required_missions = {
+			mop_east_ukraine
+			mop_march_to_sarai
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						region = ruthenia_region
+						region = crimea_region
+						area = circassia_area
+						area = dagestan_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ZAZ
+					}
+				}
+				AND = {
+					province_id = 283
+					has_courthouse_building_trigger = no
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ZAZ = {
+					is_subject_of = ROOT
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 56
+						OR = {
+							region = ruthenia_region
+							region = crimea_region
+							area = circassia_area
+							area = dagestan_area
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = mop_expand_the_host_anti_confusion_trigger_tt
+					}
+				}
+				283 = {
+					development = 25
+					has_courthouse_building_trigger = yes
+				}
+				dip_power = 200
+			}
+		}
+		effect = {
+			ZAZ = {
+				change_tag = HTM
+				swap_free_idea_group = yes
+				add_prestige = 25
+				add_liberty_desire = -20
+				hidden_effect = {
+					remove_non_electors_emperors_from_empire_effect = yes
+					add_government_reform = hetmanate
+				}
+				set_country_flag = cossack_conquest_cb_enabled
+				custom_tooltip = conssack_conquest_cb_enabled_tt
+			}
+			custom_tooltip = tooltip_line_divider
+			create_subject = {
+				subject_type = cossack_protectorate
+				who = HTM
+			}
+			custom_tooltip = cossack_protectorate_tt
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_dip_power = -200
 		}
 	}
 }
