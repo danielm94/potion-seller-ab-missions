@@ -2546,9 +2546,6 @@ ab_mop_3 = {
 		}
 		effect = {
 			ZAZ = {
-				add_permanent_claim_multi_provinces = {
-					target = ruthenia_region
-				}
 				add_liberty_desire = -20
 				add_country_modifier = {
 					name = zaz_hegemon_of_ruthenia
