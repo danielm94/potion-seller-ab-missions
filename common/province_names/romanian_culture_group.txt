@@ -63,7 +63,7 @@
 253 = "Hebridele Exterioare"
 257 = "Varsovia"
 261 = "Halici"
-262 = "Cracovia"
+262 = {"Cracovia" "Cracovia"}
 264 = "Wroclaw"
 266 = "Praga"
 267 = "Pilsen"

@@ -259,7 +259,7 @@
 259 = "Sandomiria" # 259 -> Sandomierz
 260 = "Lublinum" # 260 -> Lublin
 261 = "Halicia" # 261 -> Halicz
-262 = "Cracovia" # 262 -> Krakow
+262 = {"Cracovia" "Cracovia"} # 262 -> Krakow
 263 = "Ratiboria" # 263 -> Ratibor
 264 = "Vratislavia" # 264 -> Breslau
 265 = "Bruna" # 265 -> Brno
