@@ -86,8 +86,8 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = bulgarian_integrated_commune_bonus
 			}
-			total_development = 300
 			primary_culture = bulgarian
+			total_development = 300
 		}
 	}
 	modifier_overlord = {
@@ -96,8 +96,8 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = albanian_integrated_commune_bonus
 			}
-			total_development = 150
 			primary_culture = albanian
+			total_development = 150
 		}
 	}
 	modifier_overlord = {
@@ -106,8 +106,8 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = serbian_integrated_commune_bonus
 			}
-			total_development = 250
 			primary_culture = serbian
+			total_development = 250
 		}
 	}
 	modifier_overlord = {
@@ -116,8 +116,8 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = croatian_integrated_commune_bonus
 			}
-			total_development = 250
 			primary_culture = croatian
+			total_development = 250
 		}
 	}
 	modifier_overlord = {
@@ -126,8 +126,8 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = bosnian_integrated_commune_bonus
 			}
-			total_development = 200
 			primary_culture = bosnian
+			total_development = 200
 		}
 	}
 	modifier_overlord = {
@@ -136,8 +136,8 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = slovene_integrated_commune_bonus
 			}
-			total_development = 200
 			primary_culture = slovene
+			total_development = 200
 		}
 	}
 	modifier_overlord = {
@@ -145,9 +145,9 @@ integrated_commune = {
 		trigger = {
 			overlord = {
 				has_country_flag = greek_integrated_commune_bonus
+				primary_culture = greek
 			}
 			total_development = 200
-			primary_culture = greek
 		}
 	}
 	modifier_overlord = {
@@ -156,9 +156,9 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = integrated_commune_turkish_muslim_bonus_flag
 			}
-			total_development = 300
 			primary_culture = turkish
 			religion_group = muslim
+			total_development = 300
 		}
 	}
 	modifier_overlord = {
@@ -167,9 +167,9 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = integrated_commune_turkish_orthodox_bonus_flag
 			}
-			total_development = 300
 			primary_culture = turkish
 			religion = orthodox
+			total_development = 300
 		}
 	}
 	modifier_overlord = {
@@ -178,8 +178,9 @@ integrated_commune = {
 			overlord = {
 				has_country_flag = integrated_commune_armenian_bonus_flag
 			}
-			total_development = 200
 			primary_culture = armenian
+			religion = coptic
+			total_development = 200
 		}
 	}
 }
