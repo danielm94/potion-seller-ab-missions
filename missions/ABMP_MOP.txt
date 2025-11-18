@@ -859,6 +859,9 @@ ab_mop_1 = {
 			province_id = 137
 			OR = {
 				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
 					development = 30
 				}
 				NOT = {
@@ -889,6 +892,7 @@ ab_mop_1 = {
 			}
 			else = {
 				137 = {
+					owned_by = ROOT
 					development = 30
 					province_has_center_of_trade_of_level = 2
 					num_of_times_expanded_infrastructure = 2
@@ -2762,6 +2766,84 @@ ab_mop_3 = {
 					}
 					add_liberty_desire = -20
 				}
+			}
+		}
+	}
+	mop_fortify_moscow = {
+		icon = mission_take_over_the_kremlin
+		position = 9
+		required_missions = {
+			mop_destroy_the_princes
+		}
+		provinces_to_highlight = {
+			province_id = 295
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					base_manpower = 12
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_fort_building_trigger = no
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = kremlin
+						tier = 1
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				295 = {
+					owned_by = ROOT
+					development = 30
+					base_manpower = 12
+					num_of_times_expanded_infrastructure = 2
+					has_fort_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = kremlin
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = mop_grand_captain_bonus_tt
+			set_country_flag = mop_grand_captain_bonus_flag
+			custom_tooltip = AB_EMPTY
+			295 = {
+				remove_province_modifier = mop_moscow_commune
+				add_province_modifier = {
+					name = mop_great_fortress_commune_of_moscow
+					duration = -1
+				}
+			}
+			add_yearly_manpower = 1
+			add_army_tradition_or_mil_power = {
+				amount = 20
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}

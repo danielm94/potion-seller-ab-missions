@@ -2428,6 +2428,17 @@ grand_captain = {
 	}
 	# ]]]
 
+	# PotionSeller
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = mop_grand_captain_bonus_flag
+			}
+		}
+		modifier = { 
+			reinforce_cost_modifier = -0.05
+		}
+	}
 	chance = {
 		factor = 1
 	}
