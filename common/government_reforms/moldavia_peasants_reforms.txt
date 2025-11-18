@@ -111,6 +111,7 @@ dacian_commune_reform = {
 		idea_cost = -0.1
 		development_cost = -0.15
 		razesi_influence_modifier = 0.1
+		can_fabricate_for_vassals = yes
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
