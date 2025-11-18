@@ -1430,6 +1430,7 @@ integrate_into_turk_communes = {
 		always = no
 	}
 }
+
 establish_armenian_commune = {
 	category = league
 	require_acceptance = no
@@ -1549,6 +1550,161 @@ integrate_into_armenian_communes = {
 				}
 				add_core = ARM
 				cede_province = ARM
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+establish_polish_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = PLC
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_PLC_commune_diplomatic_actions
+		FROM = {
+			OR = {
+				primary_culture = Polan
+				primary_culture = schlesian
+				primary_culture = polish
+				primary_culture = Vistulan
+				primary_culture = Lendian
+				primary_culture = Mazovian
+			}
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = PLC
+			set_government_rank_force = 2
+			override_country_name = PLC_commune
+			change_country_color = {
+				country = ROOT
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = Polan
+						culture = schlesian
+						culture = polish
+						culture = Vistulan
+						culture = Lendian
+						culture = Mazovian
+					}
+				}
+				add_permanent_claim = PLC
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_polish_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_PLC_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = PLC
+		PLC = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = PLC
+			}
+			any_owned_province = {
+				OR = {
+					culture = Polan
+					culture = schlesian
+					culture = polish
+					culture = Vistulan
+					culture = Lendian
+					culture = Mazovian
+				}
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = Polan
+						culture = schlesian
+						culture = polish
+						culture = Vistulan
+						culture = Lendian
+						culture = Mazovian
+					}
+				}
+				add_core = PLC
+				cede_province = PLC
 			}
 		}
 	}

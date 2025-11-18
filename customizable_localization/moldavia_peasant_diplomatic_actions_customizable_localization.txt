@@ -32,4 +32,12 @@ defined_text = {
 			}
 		}
 	}
+	text = { 
+		localisation_key = PLC_ideas_list
+		trigger = {
+			FROM = {
+				tag = PLC
+			}
+		}
+	}
 }
