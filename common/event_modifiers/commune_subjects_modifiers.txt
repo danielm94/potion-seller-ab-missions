@@ -102,3 +102,7 @@ integrated_commune_turkish_orthodox_bonus = {
 integrated_commune_armenian_bonus = {
 	tolerance_heretic = 1
 }
+
+integrated_commune_polish_bonus = {
+	cavalry_power = 0.1
+}

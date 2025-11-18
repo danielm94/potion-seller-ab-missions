@@ -183,4 +183,22 @@ integrated_commune = {
 			total_development = 200
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_polish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_polish_bonus_flag
+			}
+			OR = {
+				primary_culture = Polan
+				primary_culture = schlesian
+				primary_culture = polish 
+				primary_culture = Vistulan
+				primary_culture = Lendian
+				primary_culture = Mazovian
+			}
+			total_development = 300
+		}
+	}
+	
 }
