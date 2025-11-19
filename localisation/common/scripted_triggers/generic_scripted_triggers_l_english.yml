@@ -8,3 +8,4 @@
  has_spy_network_in_cost_trigger_tt: "We have a spy network of at least [Root.action_cost_var.GetValue]."
  more_development_than_target_tt: "Has less total development than §Y[Root.GetName]§!."
  is_supporting_rebels_against_target_tt: "We are currently supporting rebels against §Y[This.GetName]§!."
+ are_we_and_target_at_peace_tt: "We and @[This.GetTag] §Y[This.GetName]§! are at peace."

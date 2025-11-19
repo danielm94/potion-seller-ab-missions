@@ -1488,3 +1488,16 @@ can_be_balkanized = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+are_we_and_target_at_peace = {
+	$target$ = {
+		custom_trigger_tooltip = {
+			tooltip = are_we_and_target_at_peace_tt
+			is_at_war = no
+			ROOT = {
+				is_at_war = no
+			}
+		}
+	}
+}
