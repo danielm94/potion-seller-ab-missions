@@ -143,3 +143,7 @@
  mop_fortify_moscow_title: "Fortify Moscova"
  mop_fortify_moscow_desc: "Having torn down the princes’ rule in Moscova, we must now ensure that no new tyrant can so easily seize it again. By expanding the Kremlin, lining the city with new redoubts and barracks, and turning Moscova into a vast armoury and depot for the communes’ armies, we will forge a bulwark that can weather any storm from steppe or West alike."
  mop_grand_captain_bonus_tt: "§YGrand Captain§! advisors now grant §G-5.0%§! to Reinforce Cost per skill level."
+ mop_saltworks_of_cracovia_title: "Saltworks of Cracovia"
+ mop_saltworks_of_cracovia_desc: "We need a strong economy to support our armies. Krakow sits on valuable salt deposits. By developing the city and its infrastructure, we can turn these mines into the republic's primary treasury."
+ mop_completed_great_cracovia_mission_tt: "Completed Mission §YSalty Niggas§!."
+ unlock_krakow_salt_mine_bonus_tt: "We will §Gunlock§! the Production Efficiency bonus for the §YWieliczka Salt Mine§!"

@@ -2284,14 +2284,81 @@ wieliczka_salt_mine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = pol_wieliczka_mission
-					owner = {
-						OR = {
-							mission_completed = pol_pagan_wieliczka
-							mission_completed = pol_catholic_wieliczka
-							mission_completed = pol_orthodox_wieliczka
+				owner = {
+					if = {
+						limit = {
+							#TEU
+							OR = {
+								tag = TEU
+								tag = LIV
+								was_tag = TEU
+								was_tag = LIV
+							}
+							NOT = {
+								tag = GER
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
 							mission_completed = teu_salt_mine
+						}
+					}
+					else_if = {
+						limit = {
+							#PAGAN POLAND
+							OR = {
+								tag = VIS
+								was_tag = VIS
+								tag = MAZ
+								was_tag = MAZ
+								tag = SIL
+								was_tag = SIL
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_pagan_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							#CATHOLIC POLAND
+							OR = {
+								tag = PLN
+								was_tag = PLN
+							}
+							OR = {
+								religion = catholic
+								religion = hussite
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_catholic_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								tag = LUD
+								was_tag = LUD
+							}
+							religion = orthodox
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_orthodox_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							is_or_was_tag = {
+								tag = MOP
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = mop_completed_great_cracovia_mission_tt
+							has_country_flag = unlock_krakow_salt_mine_bonus
 						}
 					}
 				}
@@ -2326,14 +2393,81 @@ wieliczka_salt_mine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = pol_wieliczka_mission
-					owner = {
-						OR = {
-							mission_completed = pol_pagan_wieliczka
-							mission_completed = pol_catholic_wieliczka
-							mission_completed = pol_orthodox_wieliczka
+				owner = {
+					if = {
+						limit = {
+							#TEU
+							OR = {
+								tag = TEU
+								tag = LIV
+								was_tag = TEU
+								was_tag = LIV
+							}
+							NOT = {
+								tag = GER
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
 							mission_completed = teu_salt_mine
+						}
+					}
+					else_if = {
+						limit = {
+							#PAGAN POLAND
+							OR = {
+								tag = VIS
+								was_tag = VIS
+								tag = MAZ
+								was_tag = MAZ
+								tag = SIL
+								was_tag = SIL
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_pagan_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							#CATHOLIC POLAND
+							OR = {
+								tag = PLN
+								was_tag = PLN
+							}
+							OR = {
+								religion = catholic
+								religion = hussite
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_catholic_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								tag = LUD
+								was_tag = LUD
+							}
+							religion = orthodox
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_orthodox_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							is_or_was_tag = {
+								tag = MOP
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = mop_completed_great_cracovia_mission_tt
+							has_country_flag = unlock_krakow_salt_mine_bonus
 						}
 					}
 				}
@@ -2370,14 +2504,81 @@ wieliczka_salt_mine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = pol_wieliczka_mission
-					owner = {
-						OR = {
-							mission_completed = pol_pagan_wieliczka
-							mission_completed = pol_catholic_wieliczka
-							mission_completed = pol_orthodox_wieliczka
+				owner = {
+					if = {
+						limit = {
+							#TEU
+							OR = {
+								tag = TEU
+								tag = LIV
+								was_tag = TEU
+								was_tag = LIV
+							}
+							NOT = {
+								tag = GER
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
 							mission_completed = teu_salt_mine
+						}
+					}
+					else_if = {
+						limit = {
+							#PAGAN POLAND
+							OR = {
+								tag = VIS
+								was_tag = VIS
+								tag = MAZ
+								was_tag = MAZ
+								tag = SIL
+								was_tag = SIL
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_pagan_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							#CATHOLIC POLAND
+							OR = {
+								tag = PLN
+								was_tag = PLN
+							}
+							OR = {
+								religion = catholic
+								religion = hussite
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_catholic_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								tag = LUD
+								was_tag = LUD
+							}
+							religion = orthodox
+						}
+						custom_trigger_tooltip = {
+							tooltip = pol_wieliczka_mission
+							mission_completed = pol_orthodox_wieliczka
+						}
+					}
+					else_if = {
+						limit = {
+							is_or_was_tag = {
+								tag = MOP
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = mop_completed_great_cracovia_mission_tt
+							has_country_flag = unlock_krakow_salt_mine_bonus
 						}
 					}
 				}

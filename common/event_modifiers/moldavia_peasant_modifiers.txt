@@ -265,3 +265,11 @@ mop_great_fortress_commune_of_moscow = {
 	local_development_cost = -0.1
 	land_maintenance_modifier = -0.1
 }
+
+mop_great_krakow_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	land_attrition = -0.1
+}
