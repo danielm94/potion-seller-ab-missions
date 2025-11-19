@@ -1,0 +1,83 @@
+consulate_subject = {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+	# Triggers:
+	is_potential_overlord = {
+	}
+	# Graphics:
+	sprite = GFX_consulate_subject_icon
+	diplomacy_overlord_sprite = GFX_consulate_subject_lead
+	diplomacy_subject_sprite = GFX_consulate_subject_am
+	# Properties:
+	can_fight_independence_war = yes
+	joins_overlords_wars = no
+	joins_colonial_wars = no
+	can_be_co_belligerented = no	#Enemies can force this subject to join its overlord into the defense war. Only used when the subject has the "joins_overlords_wars = no". By default it's "no".
+	must_accept_cta_from_overlord = no	#Overlord can ask subject to join wars like it could ask allies to join. You would require favors  to call them to wars. Only used when the subject has the "joins_overlords_wars = no". By default it's "no"
+	overlord_can_attack = yes
+	takes_diplo_slot = no
+	base_liberty_desire = -50
+	relative_power_class = 1
+	should_quit_wars_on_activation = no
+	can_have_subjects_of_other_types = yes
+	uses_military_focus = no
+	overlord_protects_external = yes
+	counts_for_borders = no
+	counts_as_overlord_holding = yes
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_set_mil_focus = no
+	can_send_missionary_to_subject = no
+	overlord_can_fabricate_for = no
+	does_overlord_size_count_for_warscore_cost = no
+	can_concentrate_development = no
+	transfer_trade_power = yes
+	liberty_desire_development_ratio = 0.1
+	trust_on_start = 0
+	pays_overlord = 0
+	can_send_tribute = yes
+	overlord_opinion_modifier = is_trade_protectorate
+	subject_opinion_modifier = is_trade_protectorate
+	can_fight = {
+		independent_nations = yes
+		same_overlord = trade_protectorate
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = trade_protectorate
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = trade_protectorate
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = trade_protectorate
+		other_overlord = all
+	}
+	# Subject Interactions:
+	# (immediate)
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	divert_trade = yes
+	# Modifiers:
+	modifier_subject = clear	# Trade Protectorate don't get the ordinary subject_nation penalty 
+	modifier_subject = {
+		modifier = trade_protectorate_subject_modifier
+	}
+	modifier_subject = {
+		modifier = trade_protectorate_low_development_subject_modifier
+		trigger = {
+			NOT = {
+				total_development = 200
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = consulate_overlord_modifier
+	}
+}

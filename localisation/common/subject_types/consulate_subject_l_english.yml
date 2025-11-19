@@ -1,0 +1,7 @@
+﻿l_english:
+ consulate_subject: "Consulate"
+ consulate_subject_long_desc: "A Consulate is a government established to secure the Communes' economic interests in foreign regions. While technically autonomous, its administration is dominated by merchant councils loyal to the Communes. They transfer significant trade power but are exempt from military service in the Communes' wars."
+ consulate_subject_title: "Consulate"
+ consulate_subject_title_plural: "Consulates"
+ consulate_subject_is_our: "$NAME|Y$ is a Consulate of us"
+ is_consulate_subject: "Is a Consulate"
