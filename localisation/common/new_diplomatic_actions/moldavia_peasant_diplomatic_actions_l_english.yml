@@ -133,3 +133,4 @@
  integrate_into_polish_communes_title: "@PLC Transfer to Commonwealth"
  integrate_into_polish_communes_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YPolan§!, §YSilesian§!, §YVistulan§!, §YLendian§!, §YMazovian§!, and §YPolish§! provinces to @PLC §Y[PLC.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YPolan§!, §YSilesian§!, §YVistulan§!, §YLendian§!, §YMazovian§!, and §YPolish§! culture, they will be §Rfully annexed§! by @PLC §Y[PLC.GetName]§!."
  integrate_into_polish_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YPolan§!, §YSilesian§!, §YVistulan§!, §YLendian§!, §YMazovian§!, and §YPolish§! provinces to @PLC §Y[PLC.GetName]§!"
+ communism_and_cossacks_no_tt: "§RThe Cossacks don't want what you're selling.§!"

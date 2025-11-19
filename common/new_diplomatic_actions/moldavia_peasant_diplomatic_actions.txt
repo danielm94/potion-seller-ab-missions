@@ -961,36 +961,72 @@ convert_subject_to_commune = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						has_reform = cossacks_reform
+						has_reform = hetmanate
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = communism_and_cossacks_no_tt
+				always = no
+			}
+		}
+		else = {
 			is_at_war = no
-		}
-		FROM = {
-			does_subject_have_0_liberty_desire = yes
-		}
-		custom_trigger_tooltip = {
-			tooltip = not_currently_integrating_a_commune_subject
-			is_integrating_commune_subject = no
-		}
-		NOT = {
-			truce_with = FROM
-		}
-		NOT = {
 			FROM = {
-				truce_with = PREV
+				is_at_war = no
+			}
+			FROM = {
+				does_subject_have_0_liberty_desire = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = not_currently_integrating_a_commune_subject
+				is_integrating_commune_subject = no
+			}
+			NOT = {
+				truce_with = FROM
+			}
+			NOT = {
+				FROM = {
+					truce_with = PREV
+				}
+			}
+			reverse_has_opinion = {
+				who = FROM
+				value = 190
+			}
+			FROM = {
+				trust = {
+					who = PREV
+					value = 100
+				}
+			}
+			is_colonial_nation = no
+			custom_trigger_tooltip = {
+				tooltip = commune_subject_within_border_distance_tt
+				OR = {
+					NOT = {
+						border_distance = {
+							who = FROM
+							distance = 50
+						}
+					}
+					any_subject_country = {
+						is_commune_subject = yes
+						NOT = {
+							border_distance = {
+								who = FROM
+								distance = 50
+							}
+						}
+					}
+				}
 			}
 		}
-		reverse_has_opinion = {
-			who = FROM
-			value = 190
-		}
-		FROM = {
-			trust = {
-				who = PREV
-				value = 100
-			}
-		}
-		is_colonial_nation = no
 	}
 	on_accept = {
 		enable_commune_integration_overlord = yes
