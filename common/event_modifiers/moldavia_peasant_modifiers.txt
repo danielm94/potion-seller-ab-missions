@@ -10,7 +10,7 @@ incited_peasantry = {
 }
 
 negate_moldavian_commune_reform_ccr = {
-	local_core_creation = -3
+	local_core_creation = -6
 }
 
 boieri_purged = {
