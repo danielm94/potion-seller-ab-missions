@@ -80,3 +80,6 @@
  desc_mop_great_fortress_commune_of_moscow: "Moscova has been remade as a fortress-city of the communes: its walls thickened, its towers bristling with guns, its streets threaded with magazines, granaries and mustering yards. From here the councils can govern the surrounding lands with a firm hand, sustain large standing forces at lower cost, and command the trade that flows through the heart of Rus."
  mop_great_krakow_commune: "The Great Cracovian Commune"
  desc_mop_great_krakow_commune: "This city has been forged into the logistical heart of the region. The salt trade flows efficiently into the republic's coffers, while the expanded guilds ensure that our armies in the west are the best supplied in Europe."
+ consulate_overlord_modifier: "Is Overlord of a Consulate"
+ agitated_guilds_mod: "Guild Sedition"
+ desc_agitated_guilds_mod: "Agents from the Peasant Republic have infiltrated the guild halls and dockyards. They are inciting strikes, demanding the abolition of tariffs, and turning the merchant class against the crown."

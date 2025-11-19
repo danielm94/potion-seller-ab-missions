@@ -273,3 +273,14 @@ mop_great_krakow_commune = {
 	local_development_cost = -0.1
 	land_attrition = -0.1
 }
+
+agitated_guilds_mod = {
+	burghers_loyalty_modifier = -0.2
+	global_unrest = 2
+	trade_efficiency = -0.05
+}
+
+consulate_overlord_modifier = {
+	global_trade_power = 0.05
+	trade_steering = 0.05
+}
