@@ -115,9 +115,8 @@ invite_to_peasant_league = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		OR = {
 			is_neighbor_of = FROM
@@ -393,9 +392,8 @@ invite_to_peasant_league = {
 				days = 3650
 			}
 		}
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		OR = {
 			is_neighbor_of = FROM
@@ -484,9 +482,8 @@ integrate_commune = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			is_commune_loyal_enough_to_integrate = yes
@@ -976,9 +973,8 @@ convert_subject_to_commune = {
 			}
 		}
 		else = {
-			is_at_war = no
-			FROM = {
-				is_at_war = no
+			are_we_and_target_at_peace = {
+				target = FROM
 			}
 			FROM = {
 				does_subject_have_0_liberty_desire = yes
@@ -1070,9 +1066,8 @@ establish_illyrian_commune = {
 				}
 			}
 		}
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1144,9 +1139,8 @@ integrate_into_illyria = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1231,9 +1225,8 @@ establish_hellenic_commune = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1305,9 +1298,8 @@ integrate_into_hellenic_communes = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1358,9 +1350,8 @@ establish_turk_commune = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1432,9 +1423,8 @@ integrate_into_turk_communes = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1485,9 +1475,8 @@ establish_armenian_commune = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1559,9 +1548,8 @@ integrate_into_armenian_communes = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1619,9 +1607,8 @@ establish_polish_commune = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1707,9 +1694,8 @@ integrate_into_polish_communes = {
 		}
 	}
 	is_allowed = {
-		is_at_war = no
-		FROM = {
-			is_at_war = no
+		are_we_and_target_at_peace = {
+			target = FROM
 		}
 		FROM = {
 			does_subject_have_0_liberty_desire = yes
@@ -1741,6 +1727,71 @@ integrate_into_polish_communes = {
 				}
 				add_core = PLC
 				cede_province = PLC
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+agitate_guilds = {
+	category = covert
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = enable_agitate_guilds
+		NOT = {
+			overlord_of = FROM
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = have_fabricated_trade_conflict_tt
+			has_casus_belli = {
+				target = from
+				type = cb_trade_conflict
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = havent_agitated_guilds_yet_tt
+			FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = agitated_guilds
+					}
+					had_country_flag = {
+						flag = agitated_guilds
+						days = 3650
+					}
+				}
+			}
+		}
+		NOT = {
+			same_continent = FROM
+		}
+		FROM = {
+			NOT = {
+				total_development = 125
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			set_country_flag = agitated_guilds
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -20
+			}
+			add_country_modifier = {
+				name = agitated_guilds_mod
+				duration = 3650
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 2
+					friend = ROOT
+				}
 			}
 		}
 	}
