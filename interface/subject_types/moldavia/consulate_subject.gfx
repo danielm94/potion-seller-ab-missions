@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_consulate_subject_icon"
+		texturefile = "gfx/interface/subject_types/moldavia/consulate_subject/consulate_subject.dds"
+	}
+	spriteType = {
+		name = "GFX_consulate_subject_am"
+		texturefile = "gfx/interface/subject_types/moldavia/consulate_subject/consulate_subject_am.dds"
+	}
+	spriteType = {
+		name = "GFX_consulate_subject_lead"
+		texturefile = "gfx/interface/subject_types/moldavia/consulate_subject/consulate_subject_lead.dds"
+	}
+}
