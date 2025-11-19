@@ -1,0 +1,5 @@
+﻿l_english:
+ po_force_consulate: "Establish Consulate"
+ po_force_consulate_desc: "The guilds shall execute @[From.GetTag] §Y[From.Monarch.GetName]§! and seize the apparatus of the state.\n\nIn return for our intervention, the new government will be reorganized as a §YConsulate§! subject, serving as a loyal extension of the Communes' commercial interests."
+ CB_ALLOWED_po_force_consulate: "Establish Consulate"
+ PEACE_po_force_consulate: "Establish Consulate"
