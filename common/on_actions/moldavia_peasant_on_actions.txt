@@ -97,6 +97,7 @@ on_dependency_gained = {
 		}
 	}
 }
+
 on_monthly_pulse = {
 	if = {
 		limit = {
@@ -166,5 +167,12 @@ on_startup = {
 			}
 		}
 		clear_global_event_target = mop_peasant_subject_tutorial_mission_target
+	}
+}
+
+on_war_ended = {
+	clr_country_flag = above_125_dev
+	FROM = {
+		clr_country_flag = above_125_dev
 	}
 }

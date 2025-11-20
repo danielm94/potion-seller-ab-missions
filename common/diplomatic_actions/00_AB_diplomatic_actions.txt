@@ -445,6 +445,20 @@ declarewar = {
 				clr_country_flag = incited_peasants
 			}
 		}
+		if = {
+			limit = {	
+				is_in_war = {
+					casus_belli = cb_trade_conflict
+					defender_leader = FROM
+				}
+				FROM = {
+					total_development = 126		
+				}		
+			}
+			FROM = {
+				set_country_flag = above_125_dev
+			}
+		}
 	}
 }
 

@@ -3,3 +3,4 @@
  po_force_consulate_desc: "The guilds shall execute @[From.GetTag] §Y[From.Monarch.GetName]§! and seize the apparatus of the state.\n\nIn return for our intervention, the new government will be reorganized as a §YConsulate§! subject, serving as a loyal extension of the Communes' commercial interests."
  CB_ALLOWED_po_force_consulate: "Establish Consulate"
  PEACE_po_force_consulate: "Establish Consulate"
+ not_above_125_dev_at_war_start_tt: "@[From.GetTag] §Y[From.GetName]§! did not have more than §Y125§! total development at the start of the war."

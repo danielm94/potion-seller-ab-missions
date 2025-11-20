@@ -27,13 +27,18 @@ po_force_consulate = {
 			attacker_leader = ROOT
 			casus_belli = cb_trade_conflict
 		}
-		has_country_flag = enable_agitate_guilds
-		FROM = {
-			has_country_flag = agitated_guilds
-		}
+		has_country_flag = enable_establish_consulate_po
 	}
 	is_allowed = {
-		always = yes
+		NOT = {
+			same_continent = FROM
+		}
+		custom_trigger_tooltip = {
+			tooltip = not_above_125_dev_at_war_start_tt
+			NOT = {
+				has_country_flag = above_125_dev
+			}
+		}
 	}
 	effect = {
 		create_subject = {
