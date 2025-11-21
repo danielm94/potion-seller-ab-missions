@@ -18,7 +18,7 @@ calculate_spy_action_cost_values = {
 #SCOPE = COUNTRY
 get_incite_peasants_base_cost_var = {
 	set_variable = {
-		$var$ = 30
+		$var$ = 40
 	}
 }
 

@@ -24,14 +24,8 @@ incite_peasants = {
 		custom_trigger_tooltip = {
 			tooltip = incite_peasants_on_cooldown_tt
 			FROM = {
-				OR = {
-					NOT = {
-						has_country_flag = incited_peasants
-					}
-					had_country_flag = {
-						flag = incited_peasants
-						days = 3650
-					}
+				NOT = {
+					has_country_modifier = incited_peasantry
 				}
 			}
 		}
@@ -80,13 +74,15 @@ incite_peasants = {
 				}
 				save_global_event_target_as = mop_peasant_subject_tutorial_mission_target
 			}
-			set_country_flag = incited_peasants
 			add_country_modifier = {
 				name = incited_peasantry
 				duration = 3650
 			}
 			random_owned_province = {
-				add_unrest = 15
+				add_province_modifier = {
+					name = radicalized_peasantry
+					duration = 3650
+				}
 			}
 			country_event = {
 				id = moldavia_diplomatic_actions_events.1
