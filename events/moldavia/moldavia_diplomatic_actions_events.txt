@@ -1,5 +1,4 @@
 namespace = moldavia_diplomatic_actions_events
-
 country_event = {
 	id = moldavia_diplomatic_actions_events.1
 	title = moldavia_diplomatic_actions_events.1.t
@@ -9,6 +8,16 @@ country_event = {
 	option = {
 		name = moldavia_diplomatic_actions_events.1.a
 		tooltip = {
+			event_target:radicalized_province = {
+				add_province_modifier = {
+					name = radicalized_peasantry
+					duration = 3650
+				}
+			}
+			add_rebel_progress = {
+				rebel_type = anti_tax_rebels
+				value = 40
+			}
 			add_country_modifier = {
 				name = incited_peasantry
 				duration = 3650
