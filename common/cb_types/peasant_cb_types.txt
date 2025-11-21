@@ -1,19 +1,189 @@
 cb_great_peasant_uprising = {
 	valid_for_subject = no
 	ai_peace_desire = -20
+	prerequisites_self = {
+		has_government_attribute = can_install_peasant_governments
+		NOT = {
+			truce_with = FROM
+		}
+	}
 	prerequisites = {
-		has_government_attribute = is_peasants_republic
-		has_spawned_supported_rebels = FROM
+		has_country_flag = support_rebels_against_@FROM
 		FROM = {
-			has_country_flag = incited_peasants
-			NOT = {
-				had_country_flag = {
-					flag = incited_peasants
-					days = 3650
-				}
-			}
 			NOT = {
 				has_government_attribute = is_peasants_republic
+			}
+		}
+		if = {
+			limit = {
+				has_spawned_supported_rebels = FROM
+			}
+			FROM = {
+				num_of_rebel_armies = 1
+				has_spawned_rebels = anti_tax_rebels
+			}
+		}
+		else = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = required_peasant_progress
+					value = trigger_value:always
+				}
+				change_variable = {
+					which = required_peasant_progress
+					value = 100
+				}
+				export_to_variable = {
+					which = rebel_support_var
+					value = modifier:rebel_support_efficiency
+				}
+				round_variable = {
+					which = rebel_support_var
+					value = -1
+				}
+				multiply_variable = {
+					which = rebel_support_var
+					value = 10
+				}
+				subtract_variable = {
+					which = required_peasant_progress
+					which = rebel_support_var
+				}
+				if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 100
+						}
+					}
+					has_spawned_supported_rebels = FROM
+					FROM = {
+						has_spawned_rebels = anti_tax_rebels
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 90
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 90
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 80
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 80
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 70
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 70
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 60
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 60
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 50
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 50
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 40
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 40
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 30
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 30
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 20
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 20
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							required_peasant_progress = 10
+						}
+					}
+					FROM = {
+						rebel_progress_at_least = {
+							rebel_type = anti_tax_rebels
+							value = 10
+						}
+					}
+				}
+				else = {
+					FROM = {
+						any_owned_province = {
+							likely_rebels = anti_tax_rebels
+						}
+					}
+				}
 			}
 		}
 	}
@@ -75,6 +245,7 @@ cb_crush_peasants = {
 		NOT = {
 			has_government_attribute = is_peasants_republic
 		}
+		has_nobility_estate_of_some_kind = yes
 	}
 	prerequisites = {
 		#prevent this CB from messing with great peasant war mechanics...
