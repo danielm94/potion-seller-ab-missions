@@ -6,3 +6,5 @@
  mechanic_has_peasant_elections_yes: "Enables §YPeasant Elections§!" 
  dacian_commune_reform: "Dacian Commune"
  dacian_commune_reform_desc: "$TODO$"
+ mechanic_non_peasant_neighbors_gain_unrest_yes: "Neighboring non-Peasant Republics suffer increased §YUnrest§! in provinces bordering us or our £integrated_commune£§YCommune Subjects§!."
+ mechanic_can_install_peasant_governments_yes: "Can create £integrated_commune£§YCommune Subjects§! by supporting peasant rebels in other countries."

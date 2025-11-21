@@ -9,6 +9,11 @@ incited_peasantry = {
 	global_tax_modifier = -0.1
 }
 
+radicalized_peasantry = {
+	local_unrest = 10
+	trade_goods_size = 0.001
+}
+
 negate_moldavian_commune_reform_ccr = {
 	local_core_creation = -6
 }
@@ -141,7 +146,7 @@ mop_supporting_rebels_bul = {
 }
 
 incite_peasants_support_buff = {
-	rebel_support_efficiency = 5
+	rebel_support_efficiency = 2
 }
 
 mop_soothe_relations_post_bulgarian_liberation = {

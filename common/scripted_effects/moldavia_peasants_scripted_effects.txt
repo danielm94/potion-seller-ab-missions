@@ -141,3 +141,36 @@ calculate_support_rebel_monthly_increase_chance = {
 		support_rebel_monthly_increase_chance = 10
 	}
 }
+
+clear_all_radicallized_peasantry = {
+	every_province = {
+		limit = {
+			has_province_modifier = radicalized_peasantry
+		}
+		remove_province_modifier = radicalized_peasantry
+	}
+}
+
+apply_radicalized_peasantry_to_all_provinces = {
+	every_country = {
+		limit = {
+			OR = {
+				has_government_attribute = non_peasant_neighbors_gain_unrest
+				is_commune_subject = yes
+			}
+		}
+		every_neighbor_province = {
+			limit = {
+				owner = {
+					has_nobility_estate_of_some_kind = yes
+				}
+			}
+			add_province_modifier = {
+				name = radicalized_peasantry
+				duration = -1
+			}
+		}
+	}
+}
+
+

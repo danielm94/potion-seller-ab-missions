@@ -63,6 +63,8 @@ moldavian_commune_reform = {
 		has_parliament = yes
 		has_peasant_elections = yes
 		is_peasants_republic = yes
+		non_peasant_neighbors_gain_unrest = yes
+		can_install_peasant_governments = yes
 	}
 	factions = {
 		exemplarists_faction
@@ -122,6 +124,8 @@ dacian_commune_reform = {
 		has_peasant_elections = yes
 		is_peasants_republic = yes
 		centralize_state_no_reform_cost = yes
+		non_peasant_neighbors_gain_unrest = yes
+		can_install_peasant_governments = yes
 	}
 	factions = {
 		exemplarists_faction

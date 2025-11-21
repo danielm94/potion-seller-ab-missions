@@ -176,3 +176,57 @@ on_war_ended = {
 		clr_country_flag = above_125_dev
 	}
 }
+
+on_startup = {
+	if = {
+		limit = {
+			OR = {
+				has_government_attribute = non_peasant_neighbors_gain_unrest
+				is_commune_subject = yes
+			}
+		}
+		every_neighbor_province = {
+			limit = {
+				owner = {
+					has_nobility_estate_of_some_kind = yes
+				}
+			}
+			add_province_modifier = {
+				name = radicalized_peasantry
+				duration = -1
+			}
+		}
+	}
+	else = {
+		every_owned_province = {
+			limit = {
+				has_province_modifier = radicalized_peasantry
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_neighbor_province = {
+							owner = {
+								OR = {
+									has_government_attribute = non_peasant_neighbors_gain_unrest
+									is_commune_subject = yes
+								}
+							}
+						}
+					}
+				}
+				remove_province_modifier = radicalized_peasantry
+			}
+		}
+	}
+}
+
+on_province_owner_change = {
+	owner = {
+		set_country_flag = set_province_peasant_modifiers
+		country_event = {
+			id = moldavia_diplomatic_actions_events.0
+			days = 1
+		}
+	}
+}

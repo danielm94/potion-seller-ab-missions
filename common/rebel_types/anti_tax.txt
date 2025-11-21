@@ -36,9 +36,7 @@ anti_tax_rebels = {
 		factor = 2
 		modifier = {
 			factor = 1000
-			owner = {
-				have_peasants_been_incited_recently = yes
-			}
+			has_province_modifier = radicalized_peasantry
 		}
 		modifier = {
 			factor = 100.0
@@ -128,7 +126,6 @@ anti_tax_rebels = {
 	can_negotiate_trigger = {
 		always = yes
 	}
-	
 	# Country scope
 	can_enforce_trigger = {
 		always = yes
