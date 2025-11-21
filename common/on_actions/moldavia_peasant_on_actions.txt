@@ -224,9 +224,25 @@ on_dependency_gained = {
 	FROM = {
 		if = {
 			limit = {
-				is_country_that_spreads_radicalized_peasants = yes
+				OR = {
+					is_country_that_spreads_radicalized_peasants = yes
+				}
 			}
 			apply_radicalized_peasantry_to_neighbors = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					is_country_that_spreads_radicalized_peasants = yes
+					has_nobility_estate_of_some_kind = no
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_province_modifier = radicalized_peasantry
+				}
+				remove_province_modifier = radicalized_peasantry
+			}
 		}
 	}
 }
