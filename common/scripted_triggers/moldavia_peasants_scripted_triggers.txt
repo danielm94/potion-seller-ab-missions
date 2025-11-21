@@ -67,3 +67,12 @@ has_nobility_estate_of_some_kind = {
 		has_estate = estate_rajput
 	}
 }
+
+#SCOPE = COUNTRY
+is_country_that_spreads_radicalized_peasants = {
+	OR = {
+		has_government_attribute = non_peasant_neighbors_gain_unrest
+		is_commune_subject = yes
+		is_subject_of_type = consulate_subject
+	}
+}

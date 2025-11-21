@@ -156,10 +156,7 @@ clear_all_radicallized_peasantry = {
 apply_radicalized_peasantry_to_all_provinces = {
 	every_country = {
 		limit = {
-			OR = {
-				has_government_attribute = non_peasant_neighbors_gain_unrest
-				is_commune_subject = yes
-			}
+			is_country_that_spreads_radicalized_peasants = yes
 		}
 		apply_radicalized_peasantry_to_neighbors = yes
 	}
