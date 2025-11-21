@@ -14,6 +14,11 @@ cb_great_peasant_uprising = {
 				has_government_attribute = is_peasants_republic
 			}
 		}
+		FROM = {
+			any_owned_province = {
+				has_province_modifier = radicalized_peasantry
+			}
+		}
 		if = {
 			limit = {
 				has_spawned_supported_rebels = FROM
