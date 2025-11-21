@@ -1,3 +1,20 @@
 cossack_protectorate_opinion = {
 	opinion = 25
 }
+
+peasant_scum_opinion = {
+	opinion = -75
+	min = -75
+	max = -75
+}
+
+incited_peasants_opinion = {
+	opinion = -75
+	months = 120
+}
+
+tyrant_scum_opinion = {
+	opinion = -75
+	min = -75
+	max = -75
+}

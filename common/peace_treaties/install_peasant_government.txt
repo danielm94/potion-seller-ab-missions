@@ -71,6 +71,14 @@ po_install_peasant_government = {
 			who = FROM
 			modifier = caught_spy
 		}
+		reverse_remove_opinion = {
+			who = FROM
+			modifier = peasant_scum_opinion
+		}
+		remove_opinion = {
+			who = FROM
+			modifier = tyrant_scum_opinion
+		}
 		reverse_add_opinion = {
 			who = FROM
 			modifier = liberated_us_from_nobles

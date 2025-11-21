@@ -77,6 +77,7 @@ is_country_that_spreads_radicalized_peasants = {
 	}
 }
 
+#SCOPE = COUNTRY
 is_within_range_of_the_peasants_revolution = {
 	custom_trigger_tooltip = {
 		tooltip = is_within_range_of_the_peasants_revolution_tt
@@ -98,4 +99,9 @@ is_within_range_of_the_peasants_revolution = {
 			}
 		}
 	}
+}
+
+#SCOPE = COUNTRY
+has_been_spreader_of_radicalized_peasants = {
+	has_country_flag = has_been_spreader_of_radicalized_peasants_flag
 }

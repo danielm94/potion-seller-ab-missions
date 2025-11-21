@@ -143,10 +143,23 @@ calculate_support_rebel_monthly_increase_chance = {
 }
 
 #SCOPE = COUNTRY
-clear_all_radicallized_peasantry = {
+apply_radicalized_peasantry_effect = {
+	clear_all_radicalized_peasantry = yes
+	apply_radicalized_peasantry_to_all_provinces = yes
+	clear_neighboring_peasant_opinion = yes
+	apply_neighboring_peasant_opinion = yes
+}
+
+#SCOPE = COUNTRY
+clear_all_radicalized_peasantry = {
 	every_province = {
 		limit = {
 			has_province_modifier = radicalized_peasantry
+			owner = {
+				NOT = {
+					has_country_modifier = incited_peasantry
+				}
+			}
 		}
 		remove_province_modifier = radicalized_peasantry
 	}
@@ -168,6 +181,9 @@ apply_radicalized_peasantry_to_neighbors = {
 		limit = {
 			owner = {
 				has_nobility_estate_of_some_kind = yes
+				NOT = {
+					is_subject_of_type = consulate_subject
+				}
 			}
 		}
 		add_province_modifier = {
@@ -175,4 +191,78 @@ apply_radicalized_peasantry_to_neighbors = {
 			duration = -1
 		}
 	}
+}
+
+clear_neighboring_peasant_opinion = {
+	every_country = {
+		limit = {
+			has_been_spreader_of_radicalized_peasants = yes
+		}
+		every_known_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = peasant_scum_opinion
+				}
+			}
+			remove_opinion = {
+				who = PREV
+				modifier = peasant_scum_opinion
+			}
+			reverse_remove_opinion = {
+				who = PREV
+				modifier = tyrant_scum_opinion
+			}
+		}
+	}
+}
+
+apply_neighboring_peasant_opinion = {
+	every_country = {
+		limit = {
+			is_country_that_spreads_radicalized_peasants = yes
+		}
+		every_neighbor_country = {
+			limit = {
+				has_nobility_estate_of_some_kind = yes
+				NOT = {
+					is_subject_of_type = consulate_subject
+				}
+			}
+			add_opinion = {
+				who = PREV
+				modifier = peasant_scum_opinion
+			}
+			reverse_add_opinion = {
+				who = PREV
+				modifier = tyrant_scum_opinion
+			}
+			if = {
+				limit = {
+					PREV = {
+						overlord = {
+							is_country_that_spreads_radicalized_peasants = yes
+						}
+					}
+				}
+				save_event_target_as = afflicted_by_peasants_country
+				PREV = {
+					overlord = {
+						add_opinion = {
+							who = event_target:afflicted_by_peasants_country
+							modifier = tyrant_scum_opinion
+						}
+						reverse_add_opinion = {
+							who = event_target:afflicted_by_peasants_country
+							modifier = peasant_scum_opinion
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+mark_country_has_been_spreader_of_radicalized_peasants = {
+	set_country_flag = has_been_spreader_of_radicalized_peasants_flag
 }

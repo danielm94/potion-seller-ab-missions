@@ -76,6 +76,8 @@ moldavian_commune_reform = {
 	}
 	effect = {
 		hidden_effect = {
+			mark_country_has_been_spreader_of_radicalized_peasants = yes
+			apply_radicalized_peasantry_effect = yes
 			if = {
 				limit = {
 					NOT = {
@@ -85,6 +87,11 @@ moldavian_commune_reform = {
 				faction_fatigue_initialize_faction_fatigue_variables = yes
 				set_country_flag = faction_fatigue_variables_initialized
 			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			apply_radicalized_peasantry_effect = yes
 		}
 	}
 }
@@ -137,6 +144,8 @@ dacian_commune_reform = {
 	}
 	effect = {
 		hidden_effect = {
+			mark_country_has_been_spreader_of_radicalized_peasants = yes
+			apply_radicalized_peasantry_effect = yes
 			if = {
 				limit = {
 					NOT = {
@@ -146,6 +155,11 @@ dacian_commune_reform = {
 				faction_fatigue_initialize_faction_fatigue_variables = yes
 				set_country_flag = faction_fatigue_variables_initialized
 			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			apply_radicalized_peasantry_effect = yes
 		}
 	}
 }

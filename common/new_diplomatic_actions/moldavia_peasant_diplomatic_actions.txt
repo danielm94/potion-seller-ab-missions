@@ -422,6 +422,9 @@ leave_peasant_league = {
 		}
 		grant_independence = yes
 		restore_country_color = yes
+		FROM = {
+			apply_radicalized_peasantry_effect = yes
+		}
 	}
 	ai_will_do = {
 		NOT = {
@@ -979,7 +982,6 @@ convert_subject_to_commune = {
 				}
 			}
 			is_colonial_nation = no
-		
 		}
 	}
 	on_accept = {
