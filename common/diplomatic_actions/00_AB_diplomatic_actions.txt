@@ -433,16 +433,37 @@ declarewar = {
 			}
 		}
 		if = {
-			limit = {
-				FROM = {
-					is_in_war = {
-						casus_belli = cb_great_peasant_uprising
-						defender_leader = THIS
+			limit = {		
+				is_in_war = {
+					casus_belli = cb_great_peasant_uprising
+					attacker_leader = THIS
+				}	
+			}
+			clr_country_flag = support_rebels_against_@FROM
+			FROM = {
+				clr_country_flag = support_rebels_against_@THIS
+			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							has_spawned_rebels = anti_tax_rebels
+						}
 					}
 				}
-			}
-			FROM = {
-				clr_country_flag = incited_peasants
+				FROM = {
+					random_owned_province = {
+						limit = {
+							has_province_modifier = radicalized_peasantry
+						}
+						spawn_rebels = {
+							size = 1
+							type = anti_tax_rebels
+							friend = ROOT
+							win = yes
+						}
+					}
+				}
 			}
 		}
 		if = {
