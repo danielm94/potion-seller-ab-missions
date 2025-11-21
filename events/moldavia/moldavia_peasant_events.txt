@@ -1,4 +1,28 @@
 namespace = moldavia_peasant_events
+# Calculate Bordering Peasants Penalty
+country_event = {
+	id = moldavia_peasant_events.0
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = AB_EMPTY
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = set_province_peasant_modifiers
+					has_global_flag = startup_calculated_radicalized_peasantry
+				}
+			}
+			apply_radicalized_peasantry_effect = yes
+			clr_country_flag = set_province_peasant_modifiers
+			clr_global_flag = startup_calculated_radicalized_peasantry
+		}
+	}
+}
+
 #Pick Your Country Name Moldavia
 country_event = {
 	id = moldavia_peasant_events.1
