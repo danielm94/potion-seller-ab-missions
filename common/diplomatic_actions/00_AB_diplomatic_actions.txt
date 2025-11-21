@@ -442,6 +442,12 @@ declarewar = {
 			clr_country_flag = support_rebels_against_@FROM
 			FROM = {
 				clr_country_flag = support_rebels_against_@THIS
+				every_owned_province = {
+					limit = {
+						has_rebel_faction = anti_tax_rebels
+					}
+					change_controller = ROOT
+				}
 			}
 			if = {
 				limit = {
