@@ -75,6 +75,10 @@ po_install_peasant_government = {
 			who = FROM
 			modifier = peasant_scum_opinion
 		}
+		reverse_remove_opinion = {
+			who = FROM
+			modifier = incited_peasants_opinion
+		}
 		remove_opinion = {
 			who = FROM
 			modifier = tyrant_scum_opinion

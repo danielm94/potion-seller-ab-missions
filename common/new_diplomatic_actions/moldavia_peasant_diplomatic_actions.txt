@@ -45,6 +45,10 @@ incite_peasants = {
 			who = FROM
 			var = spy_network_deduction_var
 		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = incited_peasants_opinion
+		}
 		FROM = {
 			if = {
 				limit = {
@@ -60,6 +64,11 @@ incite_peasants = {
 				duration = 3650
 			}
 			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_modifier = radicalized_peasantry
+					}
+				}
 				add_province_modifier = {
 					name = radicalized_peasantry
 					duration = 3650
