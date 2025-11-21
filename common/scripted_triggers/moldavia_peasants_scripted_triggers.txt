@@ -76,3 +76,26 @@ is_country_that_spreads_radicalized_peasants = {
 		is_subject_of_type = consulate_subject
 	}
 }
+
+is_within_range_of_the_peasants_revolution = {
+	custom_trigger_tooltip = {
+		tooltip = is_within_range_of_the_peasants_revolution_tt
+		OR = {
+			NOT = {
+				border_distance = {
+					who = FROM
+					distance = 50
+				}
+			}
+			any_subject_country = {
+				is_country_that_spreads_radicalized_peasants = yes
+				NOT = {
+					border_distance = {
+						who = FROM
+						distance = 50
+					}
+				}
+			}
+		}
+	}
+}

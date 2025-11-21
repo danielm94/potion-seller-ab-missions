@@ -29,26 +29,7 @@ incite_peasants = {
 				}
 			}
 		}
-		custom_trigger_tooltip = {
-			tooltip = commune_subject_within_border_distance_tt
-			OR = {
-				NOT = {
-					border_distance = {
-						who = FROM
-						distance = 50
-					}
-				}
-				any_subject_country = {
-					is_commune_subject = yes
-					NOT = {
-						border_distance = {
-							who = FROM
-							distance = 50
-						}
-					}
-				}
-			}
-		}
+		is_within_range_of_the_peasants_revolution = yes
 	}
 	on_accept = {
 		calculate_spy_action_cost_values = yes
@@ -998,26 +979,7 @@ convert_subject_to_commune = {
 				}
 			}
 			is_colonial_nation = no
-			custom_trigger_tooltip = {
-				tooltip = commune_subject_within_border_distance_tt
-				OR = {
-					NOT = {
-						border_distance = {
-							who = FROM
-							distance = 50
-						}
-					}
-					any_subject_country = {
-						is_commune_subject = yes
-						NOT = {
-							border_distance = {
-								who = FROM
-								distance = 50
-							}
-						}
-					}
-				}
-			}
+		
 		}
 	}
 	on_accept = {

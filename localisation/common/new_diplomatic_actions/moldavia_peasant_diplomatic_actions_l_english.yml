@@ -83,7 +83,7 @@
  convert_subject_to_commune_tooltip: "Description"
  convert_subject_to_commune_alert_tooltip: "Establish Commune"
  AI_VASSALIZATION_ACCEPTANCE: "Vassalization Acceptance"
- commune_subject_within_border_distance_tt: "The distance between the borders of §Y[From.GetName]§! and either §Yyour nation§! or one of your  §YCommune Subjects§! is less than §Y50§!."
+ is_within_range_of_the_peasants_revolution_tt: "The distance between the borders of §Y[From.GetName]§! and §Yyour nation§!, one of your  §YCommune Subjects§!, or a §YConsulate§! subject is less than §Y50§!."
  establish_illyrian_commune: "@ILR Establish Illyria"
  establish_illyrian_commune_title: "@ILR Establish Illyria"
  establish_illyrian_commune_desc: "\n- @[From.GetTag] §Y[From.GetName]§! will become @ILR §YThe Illyrian Communes§!.\n\n- The government rank of @ILR §YThe Illyrian Communes§! changes to §YKingdom§!.\n\n- They will gain a permanent claim on all §YSouth Slavic§! provinces in the Balkan region.\n\n\nYou can ask loyal £integrated_commune£§YIntegrated Commune§! or §YCossack Protectorate§! subjects to transfer §YSouth Slavic§! provinces to @ILR §YThe Illyrian Communes§!.\n\n§RYOU CANNOT UNDO THIS DECISION! Think carefully on whether or not @[From.GetTag] §Y[From.GetName]§! is the best candidate to form @ILR §YThe Illyrian Communes§!."
