@@ -8,7 +8,6 @@ cb_great_peasant_uprising = {
 		}
 	}
 	prerequisites = {
-		has_country_flag = support_rebels_against_@FROM
 		FROM = {
 			NOT = {
 				has_government_attribute = is_peasants_republic
@@ -29,6 +28,7 @@ cb_great_peasant_uprising = {
 			}
 		}
 		else = {
+			has_country_flag = support_rebels_against_@FROM
 			variable_arithmetic_trigger = {
 				export_to_variable = {
 					which = required_peasant_progress
