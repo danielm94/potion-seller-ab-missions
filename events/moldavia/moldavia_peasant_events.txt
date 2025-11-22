@@ -12,12 +12,12 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_country_flag = set_province_peasant_modifiers
+					has_global_flag = set_province_peasant_modifiers
 					has_global_flag = startup_calculated_radicalized_peasantry
 				}
 			}
 			apply_radicalized_peasantry_effect = yes
-			clr_country_flag = set_province_peasant_modifiers
+			clr_global_flag = set_province_peasant_modifiers
 			clr_global_flag = startup_calculated_radicalized_peasantry
 		}
 	}
