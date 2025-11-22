@@ -143,6 +143,28 @@ calculate_support_rebel_monthly_increase_chance = {
 }
 
 #SCOPE = COUNTRY
+calculate_required_progress_for_early_great_peasant_uprising_cb = {
+	set_variable = {
+		required_progress_for_early_great_peasant_uprising_cb = 100
+	}
+	export_to_variable = {
+		which = rebel_support_var
+		value = modifier:rebel_support_efficiency
+	}
+	round_variable = {
+		which = rebel_support_var
+		value = -1
+	}
+	multiply_variable = {
+		rebel_support_var = 10
+	}
+	subtract_variable = {
+		which = required_progress_for_early_great_peasant_uprising_cb
+		which = rebel_support_var
+	}
+}
+
+#SCOPE = COUNTRY
 apply_radicalized_peasantry_effect = {
 	clear_all_radicalized_peasantry = yes
 	apply_radicalized_peasantry_to_all_provinces = yes
