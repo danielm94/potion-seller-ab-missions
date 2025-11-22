@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "GFX_text_republican_tradition"
 		texturefile = "gfx/interface/text_icons/republican_tradition_text_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_text_radicalized_peasantry"
+		texturefile = "gfx/interface/text_icons/radicalized_peasantry_text_icon.dds"
+	}
 }
