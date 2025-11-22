@@ -599,7 +599,7 @@ ab_mop_1 = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = mop_arm_the_bulgar_peasants_target_expired_tt
+					tooltip = mop_no_tutorial_mission_target_tt
 					always = no
 				}
 			}
@@ -1261,8 +1261,8 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_rouse_the_bulgar_peasants = {
-		icon = mission_peasantry
+	mop_arm_the_bulgar_peasants = {
+		icon = push_on_to_bulgaria
 		position = 4
 		required_missions = {
 			mop_vlach_emancipation
@@ -1292,10 +1292,9 @@ ab_mop_2 = {
 						any_province = {
 							culture = bulgarian
 							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
+							NOT = {
+								country_or_commune_subject_or_subject_of_commune_subject_holds = {
+									who = ROOT
 								}
 							}
 						}
@@ -1303,139 +1302,7 @@ ab_mop_2 = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_rouse_the_bulgar_peasants_trigger_tt
-					any_country = {
-						have_peasants_been_incited_recently = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-						any_owned_province = {
-							culture = bulgarian
-							region = balkan_region
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-				add_dip_power = 50
-			}
-			else = {
-				complex_dynamic_effect = {
-					first_custom_tooltip = if_we_incited_peasants_against_bulgaria_itself_tt
-					first_limit = "BUL = {
-									have_peasants_been_incited_recently = yes
-									NOT = {
-										is_subject_of = ROOT
-									}
-									OR = {
-										is_rival = ROOT
-										is_enemy = ROOT
-									}
-								}"
-					first_effect = "add_spy_network_in = {
-									who = BUL
-									value = 15
-								}"
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = bulgarian_peasants_send_contact_tt
-				define_advisor = {
-					type = spymaster
-					skill = 2
-					cost_multiplier = 0.5
-					culture = bulgarian
-					religion = orthodox
-				}
-				custom_tooltip = AB_EMPTY
-			}
-		}
-	}
-	mop_arm_the_bulgar_peasants = {
-		icon = push_on_to_bulgaria
-		position = 5
-		required_missions = {
-			mop_rouse_the_bulgar_peasants
-		}
-		provinces_to_highlight = {
-			owner = {
-				NOT = {
-					tag = ROOT
-				}
-				any_owned_province = {
-					culture = bulgarian
-					region = balkan_region
-				}
-			}
-			is_capital_of = owner
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
+					always = yes
 				}
 			}
 			else_if = {
@@ -1445,7 +1312,7 @@ ab_mop_2 = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = mop_arm_the_bulgar_peasants_target_expired_tt
+					tooltip = mop_no_tutorial_mission_target_tt
 					always = no
 				}
 			}
@@ -1491,7 +1358,7 @@ ab_mop_2 = {
 					name = mop_supporting_rebels_bul
 					duration = 1095
 				}
-				custom_tooltip = get_read_to_invade_with_peasants_tt
+				custom_tooltip = get_ready_to_invade_with_peasants_tt
 			}
 		}
 	}
@@ -1558,7 +1425,7 @@ ab_mop_2 = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = mop_arm_the_bulgar_peasants_target_expired_tt
+					tooltip = mop_no_tutorial_mission_target_tt
 					always = no
 				}
 			}
