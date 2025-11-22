@@ -463,10 +463,19 @@ declarewar = {
 							has_province_modifier = radicalized_peasantry
 						}
 						spawn_rebels = {
-							size = 1
+							size = 2
 							type = anti_tax_rebels
 							friend = ROOT
 							win = yes
+						}
+					}
+					every_owned_province = {
+						limit = {
+							likely_rebels = anti_tax_rebels
+						}
+						add_province_modifier = {
+							name = recent_uprising
+							duration = 3650
 						}
 					}
 				}
