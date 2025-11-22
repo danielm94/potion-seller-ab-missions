@@ -121,3 +121,26 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = great_peasant_uprising_tooltip
+	random = no
+	text = {
+		localisation_key = rebel_uprising_progress_great_peasant_uprising_tooltip
+		trigger = {
+			FROM = {
+				has_government_attribute = can_install_peasant_governments
+			}
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				FROM = {
+					has_government_attribute = can_install_peasant_governments
+				}
+			}
+		}
+	}
+}
