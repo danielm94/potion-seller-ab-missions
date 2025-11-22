@@ -832,7 +832,6 @@ guiTypes = {
 			position = { x= 309 y = 221 }
 			scripted = yes
 		}
-
 		instantTextBoxType = {
 			name = "support_rebels_progress"
 			position = { x = 304 y = 221 }
@@ -1213,6 +1212,15 @@ guiTypes = {
 			}
 			quadTextureSprite ="GFX_view_your_country_button"
 			shortcut = "z"
+		}
+
+		#PotionSeller
+		iconType = {
+			name = "consulate_info_icon"
+			spriteType = "GFX_valid_to_form_consulate"
+			position = {x = 308 y = 294}
+			Orientation = "UPPER_LEFT"
+			scripted = yes
 		}
 
 		instantTextBoxType= {

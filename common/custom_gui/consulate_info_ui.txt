@@ -1,0 +1,123 @@
+custom_icon = {
+	name = consulate_info_icon
+	tooltip = consulate_info_tt
+	potential = {
+		NOT = {
+			tag = FROM
+		}
+		FROM = {
+			has_country_flag = enable_establish_consulate_po
+		}
+		NOT = {
+			is_subject_of = FROM
+		}
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				total_development = 126
+			}
+			OR = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict_triggered
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war_triggered
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_conflict
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_dispute
+					}
+				}
+			}
+			NOT = {
+				same_continent = FROM
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			OR = {
+				total_development = 126
+				AND = {
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_conflict
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_conflict_triggered
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_war
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_war_triggered
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_league_conflict
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_league_dispute
+							}
+						}
+					}
+				}
+				same_continent = FROM
+			}
+		}
+	}
+}

@@ -11,4 +11,10 @@ spriteTypes = {
 		name = "GFX_consulate_subject_lead"
 		texturefile = "gfx/interface/subject_types/moldavia/consulate_subject/consulate_subject_lead.dds"
 	}
+	spriteType = {
+		name = "GFX_valid_to_form_consulate"
+		texturefile = "gfx/interface/buttons/consulate_check/valid_to_form_consulate.dds"
+		loadType = "INGAME"
+		noOfFrames = 2
+	}
 }

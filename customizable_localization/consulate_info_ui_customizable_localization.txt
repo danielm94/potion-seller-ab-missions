@@ -1,0 +1,244 @@
+defined_text = {
+	name = consulate_info_description_tt
+	random = no
+	text = {
+		localisation_key = no_establish_consulate_description_tt
+		trigger = {
+			OR = {
+				total_development = 126
+				AND = {
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_conflict
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_conflict_triggered
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_war
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_war_triggered
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_league_conflict
+							}
+						}
+					}
+					NOT = {
+						FROM = {
+							has_casus_belli = {
+								target = root
+								type = cb_trade_league_dispute
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = yes_establish_consulate_description_tt
+		trigger = {
+			NOT = {
+				total_development = 126
+			}
+			OR = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict_triggered
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war_triggered
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_conflict
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_dispute
+					}
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = total_development_consulate_condition_tt
+	text = {
+		localisation_key = no_total_development_consulate_condition_tt
+		trigger = {
+			total_development = 126
+		}
+	}
+	text = {
+		localisation_key = yes_total_development_consulate_condition_tt
+		trigger = {
+			NOT = {
+				total_development = 126
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = has_casus_belli_consulate_condition_tt
+	text = {
+		localisation_key = no_has_casus_belli_consulate_condition_tt
+		trigger = {
+			NOT = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict_triggered
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war_triggered
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_conflict
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_dispute
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = yes_has_casus_belli_consulate_condition_tt
+		trigger = {
+			OR = {
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_conflict_triggered
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_war_triggered
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_conflict
+					}
+				}
+				FROM = {
+					has_casus_belli = {
+						target = root
+						type = cb_trade_league_dispute
+					}
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = continent_consulate_condition_tt
+	text = {
+		localisation_key = no_continent_consulate_condition_tt
+		trigger = {
+			same_continent = FROM
+		}
+	}
+	text = {
+		localisation_key = yes_continent_consulate_condition_tt
+		trigger = {
+			NOT = {
+				same_continent = FROM
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+﻿l_english:
+ consulate_info_tt: "[consulate_info_description_tt]\n[total_development_consulate_condition_tt]\n[has_casus_belli_consulate_condition_tt]\n[continent_consulate_condition_tt]\n\n§g§YConsulates§! are unique subjects that provide yearly £allmana£ §GTribute§! and §G+5.0%§! Trade Steering instead of tax.\n\nStrategically, they act as forward operating bases. They spread §YRadicalized Peasantry§! to neighbors, allowing you to establish £integrated_commune£§YCommune Subjects§! in distant regions.\n\n§YHow to establish a Consulate:§!\n1. Target a country on a §Ydifferent continent§! with §Y125§! or less Total Development.\n2. Declare war using §YANY§! Trade Casus Belli (e.g., §YTrade Conflict§!, §YTrade Dispute§!, or §YTrade League Dispute§!).\n3. Select the §YEstablish Consulate§! peace offer.§!"
+ yes_establish_consulate_description_tt: "We §Gcan§! establish a §YConsulate§! subject in @[Root.GetTag] §Y[Root.GetName]§! due to the following conditions:"
+ no_establish_consulate_description_tt: "We §Rcan't§! establish a §YConsulate§! subject in @[Root.GetTag] §Y[Root.GetName]§! due to the following conditions:"
+ no_total_development_consulate_condition_tt: "£no£ §RThey have more than §Y125§! total development.§!"
+ yes_total_development_consulate_condition_tt: "£yes£ §GTheir total development is §Y125§! or less.§!"
+ no_has_casus_belli_consulate_condition_tt: "£no£ §RWe don't have a §YTrade Conflict§!, §YTrade Dispute§!, or §YTrade League Dispute§! casus belli against them.§!"
+ yes_has_casus_belli_consulate_condition_tt: "£yes£ §GWe have a §YTrade Conflict§!, §YTrade Dispute§!, or §YTrade League Dispute§! casus belli against them.§!"
+ no_continent_consulate_condition_tt: "£no£ §RTheir capital and our capital are both on the same continent, §Y[Root.Capital.GetContinentName]§!.§!"
+ yes_continent_consulate_condition_tt: "£yes£ §GTheir capital and our capital are on different continents.§!"
