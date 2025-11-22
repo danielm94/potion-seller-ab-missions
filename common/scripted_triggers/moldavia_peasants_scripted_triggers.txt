@@ -46,20 +46,6 @@ is_bogdan_razesul_ruling = {
 }
 
 #SCOPE = COUNTRY
-have_peasants_been_incited_recently = {
-	custom_trigger_tooltip = {
-		tooltip = have_peasants_been_incited_recently_tt
-		has_country_flag = incited_peasants
-		NOT = {
-			had_country_flag = {
-				flag = incited_peasants
-				days = 3650
-			}
-		}
-	}
-}
-
-#SCOPE = COUNTRY
 has_nobility_estate_of_some_kind = {
 	OR = {
 		has_estate = estate_nobles
