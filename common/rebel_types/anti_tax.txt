@@ -98,7 +98,13 @@ anti_tax_rebels = {
 			controlled_by = REB
 		}
 		modifier = {
-			factor = 0
+			factor = 0.001
+			owner = {
+				is_in_war = {
+					defender_leader = THIS
+					casus_belli = cb_great_peasant_uprising
+				}
+			}
 			controller = {
 				is_in_war = {
 					attacker_leader = THIS
@@ -121,37 +127,12 @@ anti_tax_rebels = {
 	}
 	# Province Scope
 	siege_won_trigger = {
+		NOT = {
+			local_autonomy = 50
+		}
 	}
 	siege_won_effect = {
-		if = {
-			limit = {
-				NOT = {
-					local_autonomy = 50
-				}
-			}
-			add_local_autonomy = 10
-		}
-		if = {
-			limit = {
-				owner = {
-					is_in_war = {
-						defender_leader = THIS
-						casus_belli = cb_great_peasant_uprising
-					}
-				}
-			}
-			random_country = {
-				limit = {
-					is_in_war = {
-						attacker_leader = THIS
-						casus_belli = cb_great_peasant_uprising
-					}
-				}
-				PREV = {
-					change_controller = PREV
-				}
-			}
-		}
+		add_local_autonomy = 10
 	}
 	# Country scope
 	can_negotiate_trigger = {
