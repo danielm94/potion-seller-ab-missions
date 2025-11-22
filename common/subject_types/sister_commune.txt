@@ -33,20 +33,24 @@ sister_commune = {
 	can_fight = {
 		same_overlord = allied_commune
 		same_overlord = sister_commune
+		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_rival = {
 		same_overlord = allied_commune
 		same_overlord = sister_commune
+		same_overlord = consulate_subject
 	}
 	can_ally = {
 		same_overlord = allied_commune
 		same_overlord = sister_commune
+		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_marry = {
 		same_overlord = allied_commune
 		same_overlord = sister_commune
+		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	# Subject Interactions:

@@ -19,6 +19,10 @@ integrated_commune_opinion = {
 	opinion = 50
 }
 
+consulate_subject_opinion = {
+	opinion = 25
+}
+
 abandoned_communal_league = {
 	opinion = -100
 	min = -200
