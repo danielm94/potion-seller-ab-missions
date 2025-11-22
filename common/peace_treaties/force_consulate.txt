@@ -2,7 +2,7 @@ po_force_consulate = {
 	# Show in treaties tab
 	category = 6
 	prestige_base = 0.5
-	ae_base = 0.5
+	ae_base = 0.325
 	power_projection = vassalized_rival
 	power_cost_base = 0
 	# Warscore cost scales directly according to the warscore cost of the provinces that the owner retains
@@ -22,10 +22,37 @@ po_force_consulate = {
 	is_make_subject = no
 	applies_to_war_target = no
 	is_visible = {
-		is_in_war = {
-			defender_leader = FROM
-			attacker_leader = ROOT
-			casus_belli = cb_trade_conflict
+		OR = {
+			is_in_war = {
+				defender_leader = FROM
+				attacker_leader = ROOT
+				casus_belli = cb_trade_conflict
+			}
+			is_in_war = {
+				defender_leader = FROM
+				attacker_leader = ROOT
+				casus_belli = cb_trade_conflict_triggered
+			}
+			is_in_war = {
+				defender_leader = FROM
+				attacker_leader = ROOT
+				casus_belli = cb_trade_war
+			}
+			is_in_war = {
+				defender_leader = FROM
+				attacker_leader = ROOT
+				casus_belli = cb_trade_war_triggered
+			}
+			is_in_war = {
+				defender_leader = FROM
+				attacker_leader = ROOT
+				casus_belli = cb_trade_league_conflict
+			}
+			is_in_war = {
+				defender_leader = FROM
+				attacker_leader = ROOT
+				casus_belli = cb_trade_league_dispute
+			}
 		}
 		has_country_flag = enable_establish_consulate_po
 	}
