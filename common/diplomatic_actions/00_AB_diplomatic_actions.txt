@@ -466,7 +466,6 @@ declarewar = {
 							size = 2
 							type = anti_tax_rebels
 							friend = ROOT
-							win = yes
 						}
 					}
 					every_owned_province = {
