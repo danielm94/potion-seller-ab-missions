@@ -2959,6 +2959,9 @@ ab_mop_3 = {
 				faction = exemplarists_faction
 				influence = 15
 			}
+			custom_tooltip = tooltip_line_divider
+			set_country_flag = enable_establish_consulate_po
+			custom_tooltip = enable_establish_consulate_po_tt
 		}
 	}
 	mop_free_anatolia = {
@@ -3656,6 +3659,9 @@ ab_mop_5 = {
 				min_age = 18
 				max_age = 25
 			}
+			custom_tooltip = tooltip_line_divider
+			set_country_flag = enable_establish_consulate_po
+			custom_tooltip = enable_establish_consulate_po_tt
 		}
 	}
 }
