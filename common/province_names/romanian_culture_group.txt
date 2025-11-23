@@ -14,7 +14,7 @@
 39 = "Culdiga"
 40 = "Klaipeda"
 42 = "Varmia"
-43 = "Gdansk"
+43 = {"Gdansc" "Gdansc"}
 48 = "Kolobrzeg"
 57 = "Braunschweig"
 61 = "Dresda"
@@ -79,7 +79,7 @@
 289 = "Cernigov"
 291 = "Harkov"
 292 = "Moghilau"
-295 = "Moscova"
+295 = {"Moscova" "Moscova"}
 297 = "Briansk"
 299 = "Voronej"
 301 = "Riazan"
@@ -141,7 +141,7 @@
 457 = "Taskent"
 462 = "Colchis Micri"
 463 = "Circasia"
-464 = "Astrahan"
+464 = {"Astrahan" "Astrahan"}
 465 = "Nogai"
 476 = "Kipshak"
 480 = "Hoarda Pestrita"
