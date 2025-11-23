@@ -369,3 +369,11 @@ mop_commune_of_khiva = {
 	local_development_cost = -0.05
 	caravan_power = 0.05
 }
+
+mop_great_commune_of_khiva = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 25
+	local_development_cost = -0.1
+	caravan_power = 0.20
+}

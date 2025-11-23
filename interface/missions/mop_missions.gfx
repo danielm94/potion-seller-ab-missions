@@ -39,4 +39,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_kazan.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_silk_road_infrastructure"
+		texturefile = "gfx/interface/missions/mop/mop_silk_road_infrastructure.dds"
+		loadType = "INGAME"
+	}
 }

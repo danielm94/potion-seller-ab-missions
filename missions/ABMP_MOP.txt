@@ -3891,11 +3891,9 @@ ab_mop_4 = {
 			custom_tooltip = mop_unlock_krepost_system_tt
 			set_country_flag = mop_unlock_krepost_system
 			tooltip = {
-				1082 = {
-					add_province_modifier = {
-						name = mop_krepost
-						duration = -1
-					}
+				add_province_modifier = {
+					name = mop_krepost
+					duration = -1
 				}
 			}
 			hidden_effect = {
@@ -4337,6 +4335,147 @@ ab_mop_5 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 5
+			}
+		}
+	}
+	mop_silk_road_infrastructure = {
+		icon = GFX_mop_silk_road_infrastructure
+		position = 10
+		required_missions = {
+			mop_central_asia
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 465
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 15
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_dock_building_trigger = no
+					}
+				}
+				AND = {
+					province_id = 471
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 15
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_production_building_trigger = yes
+					}
+				}
+				AND = {
+					province_id = 441
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						has_production_building_trigger = no
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_manufactory_trigger = no
+						NOT = {
+							has_great_project = {
+								type = itchan_kala
+								tier = 1
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				465 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 15
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+				471 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 15
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+				441 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = itchan_kala
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			441 = {
+				change_trade_goods = silk
+				remove_province_modifier = mop_commune_of_khiva
+				add_province_modifier = {
+					name = mop_great_commune_of_khiva
+					duration = -1
+				}
+				if = {
+					limit = {
+						has_great_project = {
+							type = itchan_kala
+							tier = 3
+						}
+					}
+					owner = {
+						add_treasury = 2500
+					}
+				}
+				else = {
+					add_great_project_tier = {
+						type = itchan_kala
+						tier = 1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}
