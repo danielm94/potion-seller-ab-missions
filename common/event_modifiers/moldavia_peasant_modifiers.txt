@@ -345,3 +345,19 @@ mop_riga_commune = {
 	local_development_cost = -0.05
 	global_trade_goods_size_modifier = 0.05
 }
+
+mop_great_port_of_gdansc = {
+	province_trade_power_value = 15
+	local_defensiveness = 0.25
+	global_foreign_trade_power = 0.05
+	naval_forcelimit_modifier = 0.1
+}
+
+mop_holy_commune_of_riga = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
+	global_missionary_strength = 0.02
+}
