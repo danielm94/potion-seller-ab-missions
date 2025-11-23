@@ -3324,6 +3324,9 @@ ab_mop_4 = {
 				hidden_effect = {
 					remove_non_electors_emperors_from_empire_effect = yes
 					add_government_reform = hetmanate
+					change_country_color = {
+						country = ROOT
+					}
 				}
 				set_country_flag = cossack_conquest_cb_enabled
 				custom_tooltip = conssack_conquest_cb_enabled_tt
@@ -3509,6 +3512,11 @@ ab_mop_4 = {
 						}
 					}
 				}
+			}
+			add_army_professionalism = 0.05
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}
