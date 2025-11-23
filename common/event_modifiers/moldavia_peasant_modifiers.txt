@@ -361,3 +361,11 @@ mop_holy_commune_of_riga = {
 	global_trade_goods_size_modifier = 0.1
 	global_missionary_strength = 0.02
 }
+
+mop_commune_of_khiva = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	caravan_power = 0.05
+}

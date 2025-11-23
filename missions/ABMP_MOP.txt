@@ -3024,7 +3024,10 @@ ab_mop_3 = {
 			}
 			NOT = {
 				owner = {
-					is_subject_of_type = cossack_protectorate
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = cossack_protectorate
+					}
 				}
 			}
 		}
@@ -3045,7 +3048,10 @@ ab_mop_3 = {
 								who = ROOT
 							}
 							owner = {
-								is_subject_of_type = cossack_protectorate
+								is_subject_of_type_with_overlord = {
+									who = ROOT
+									type = cossack_protectorate
+								}
 							}
 						}
 					}
@@ -4245,6 +4251,93 @@ ab_mop_5 = {
 			custom_tooltip = tooltip_line_divider
 			set_country_flag = enable_establish_consulate_po
 			custom_tooltip = enable_establish_consulate_po_tt
+		}
+	}
+	mop_central_asia = {
+		icon = mission_central_asian_steppes
+		position = 9
+		required_missions = {
+			mop_proclaim_the_hetmanate
+		}
+		provinces_to_highlight = {
+			region = central_asia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_central_asia_trigger_tt
+					central_asia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = ROOT
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			441 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_commune_of_khiva
+					duration = -1
+				}
+			}
+			1756 = {
+				custom_tooltip = change_bessarabia_to_silk_tt
+				hidden_effect = {
+					change_trade_goods = silk
+				}
+				add_base_production = 3
+				add_province_modifier = {
+					name = tuh_fledgling_silk_industry
+					duration = 7300
+				}
+			}
+			simple_unlock_issue = {
+				issue = restrict_silk_exports_issue
+			}
+			simple_unlock_issue = {
+				issue = expand_silk_production_issue
+			}
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 5
+			}
 		}
 	}
 }
