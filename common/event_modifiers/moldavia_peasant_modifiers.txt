@@ -314,3 +314,18 @@ mop_arhanghel_commune = {
 	local_development_cost = -0.05
 	navy_tradition = 1
 }
+
+mop_port_of_arhanghel = {
+	province_trade_power_value = 15
+	local_defensiveness = 0.25
+	reduced_trade_penalty_on_non_main_tradenode = 0.25
+	naval_attrition = -0.25
+}
+
+mop_dock_arctic_negation = {
+	local_colonial_growth = 10
+	supply_limit_modifier = 0.4
+	allowed_num_of_buildings = 1
+	local_development_cost = -0.5
+	picture = "climate_arctic"
+}

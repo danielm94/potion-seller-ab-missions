@@ -665,6 +665,23 @@ ab_building_dock_effect = {
 		}
 		add_base_manpower = 1
 	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = mop_arctic_provinces_dock_bonus
+					overlord = {
+						has_country_flag = mop_arctic_provinces_dock_bonus
+					}
+				}
+			}
+			has_climate = arctic
+		}
+		add_province_modifier = {
+			name = mop_dock_arctic_negation
+			duration = -1
+		}
+	}
 }
 
 ab_removing_dock_effect = {
@@ -675,6 +692,12 @@ ab_removing_dock_effect = {
 			}
 		}
 		add_base_manpower = -1
+	}
+	if = {
+		limit = {
+			has_province_modifier = mop_dock_arctic_negation
+		}
+		remove_province_modifier = mop_dock_arctic_negation
 	}
 }
 

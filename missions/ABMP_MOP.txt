@@ -2860,6 +2860,110 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_arhanghel = {
+		icon = mission_found_arkhangelsk
+		position = 11
+		required_missions = {
+			mop_russia
+		}
+		provinces_to_highlight = {
+			province_id = 1955
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 25
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1955 = {
+					owned_by = ROOT
+					development = 25
+					province_has_center_of_trade_of_level = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			1955 = {
+				add_province_modifier = {
+					name = mop_port_of_arhanghel
+					duration = -1
+				}
+			}
+			23 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 15
+					key = port_of_anhanghel_desc
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			97 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 10
+					key = port_of_anhanghel_desc
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = mop_arctic_provinces_dock_bonus_tt
+			set_country_flag = mop_arctic_provinces_dock_bonus
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_climate = arctic
+						has_dock_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = mop_dock_arctic_negation
+						duration = -1
+					}
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							has_climate = arctic
+							has_dock_building_trigger = yes
+						}
+						add_province_modifier = {
+							name = mop_dock_arctic_negation
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 3
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 	mop_dismantle_the_stratocracy = {
 		icon = mission_nicaea
 		position = 14

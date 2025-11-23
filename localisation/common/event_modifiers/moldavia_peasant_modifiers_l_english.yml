@@ -91,3 +91,8 @@
  desc_mop_krepost: "This province is part of the Great Abatis Line. The fortress here serves as a defensive structure and as a hub for soldier-settlers and colonial administration. The local population is organized to maintain the defenses and till the land in exchange for military service."
  mop_arhanghel_commune: "The Arhanghel Commune"
  desc_mop_arhanghel_commune: "The northern gateway to the world is now under the direct administration of the Republic. Through these icy waters, the wealth of the Federation flows to the wider world."
+ mop_port_of_arhanghel: "The White Sea Gateway"
+ desc_mop_port_of_arhanghel: "Dredged, fortified, and expanded, this port now serves as our gateway to the Atlantic. It brings in the wealth of the Atlantic and exports the resources of the East, operating far beyond the reach of the Baltic powers."
+ port_of_anhanghel_desc: "We control the port of Arhanghel"
+ mop_dock_arctic_negation: "Winterized Infrastructure"
+ desc_mop_dock_arctic_negation: "Advanced logistical networks and heated warehouses allow this port to operate at full capacity despite the harsh climate. The infrastructure effectively negates the logistical penalties of the Arctic winter."
