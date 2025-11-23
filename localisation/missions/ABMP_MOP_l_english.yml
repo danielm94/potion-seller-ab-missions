@@ -150,3 +150,8 @@
  integrated_commune_tartar_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YTartar§! culture will grant us §G+5.0%§! Shock Damage if they have more than §Y250§! total development."
  mop_kazan_title: "The Eastern Bastion"
  mop_kazan_desc: "Cazan is the keystone of our domination over the steppes. To maintain our grip on the vast frontier, we must transform the city into a self-sufficient military metropolis. The Kremlin must be expanded, the population drilled, and the infrastructure built to sustain a massive army thousands of miles from the capital."
+ mop_russia_title: "Sloboda"
+ mop_russia_desc: "The concept of the 'Sloboda' (the free settlement) must be expanded from a frontier curiosity into a national reality. We must drive out the last of the Boyars and Oligarchs from the Russian heartland and transform the entire region into a single, vast union of free communities."
+ mop_russia_trigger_tt: "Every province in the Russia region is owned by us, our £allied_commune£§YCommune Subject§!, a subject of our £allied_commune£§YCommune Subject§!, or our @HTM §YCossack Protectorate§!."
+ unlock_UKR_commune_diplomatic_actions_tt: "Unlock §YCommune Interactions§!£integrated_commune£ that allow you to establish @UKR §YSloboda Rus'§! in one of your £integrated_commune£§YIntegrated Communes§! that are of §YEast Slavic§! culture. Once @UKR §YSloboda Rus'§! is established, you will be able to transfer §YEast Slavic§! provinces from your other £integrated_commune£§YIntegrated Communes§! to @UKR §YSloboda Rus'§!."
+ integrated_commune_east_slavic_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YEast Slavic§! culture will grant us §G-10.0%§! Infantry Cost if they have more than §Y350§! total development."

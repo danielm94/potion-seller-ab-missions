@@ -1704,3 +1704,150 @@ integrate_into_polish_communes = {
 		always = no
 	}
 }
+
+establish_rus_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = UKR
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_UKR_commune_diplomatic_actions
+		FROM = {
+			culture_group = east_slavic
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = UKR
+			set_government_rank_force = 2
+			override_country_name = UKR_commune
+			change_country_color = {
+				country = ROOT
+			}
+			every_province = {
+				limit = {
+					culture_group = east_slavic
+				}
+				add_permanent_claim = UKR
+			}
+			enable_adopt_new_ideas_commune = yes
+			define_ruler = {
+				name = "Lukash"
+				adm = 5
+				dip = 3
+				mil = 5
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_rus_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_UKR_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = UKR
+		UKR = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = UKR
+			}
+			any_owned_province = {
+				culture_group = east_slavic
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						tag = ZAZ
+						tag = HTM
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = cossacks_dont_share_with_rus_tt
+				always = no
+			}
+		}
+		else = {
+			are_we_and_target_at_peace = {
+				target = FROM
+			}
+			FROM = {
+				does_subject_have_0_liberty_desire = yes
+			}
+			reverse_has_opinion = {
+				who = FROM
+				value = 200
+			}
+			FROM = {
+				trust = {
+					who = PREV
+					value = 100
+				}
+			}
+			is_colonial_nation = no
+		}
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = east_slavic
+				}
+				add_core = UKR
+				cede_province = UKR
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

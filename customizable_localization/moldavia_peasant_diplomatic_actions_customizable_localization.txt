@@ -40,4 +40,12 @@ defined_text = {
 			}
 		}
 	}
+	text = { 
+		localisation_key = UKR_ideas_list
+		trigger = {
+			FROM = {
+				tag = UKR
+			}
+		}
+	}
 }

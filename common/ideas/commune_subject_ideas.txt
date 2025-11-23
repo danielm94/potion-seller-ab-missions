@@ -1,0 +1,43 @@
+sloboda_rus_ideas = {
+	start = {
+		merc_maintenance_modifier = -0.2
+		global_manpower_modifier = 0.25
+	}
+	
+	bonus = {
+		military_tactics = 0.25
+	}	
+
+	trigger = {
+		tag = UKR
+		is_commune_subject = yes
+	}
+	free = yes
+	
+	sloboda_rus_first = {
+		development_cost_modifier = -0.05
+		center_of_trade_upgrade_cost = -0.2
+	}
+	sloboda_rus_second = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	sloboda_rus_third = {
+		republican_tradition = 0.5
+		legitimacy = 0.5
+	}
+	sloboda_rus_fourth = {
+		merchants = 1
+		global_trade_power = 0.2
+	}
+	sloboda_rus_fifth = {
+		navy_tradition = 1
+		privateer_efficiency = 0.2
+	}
+	sloboda_rus_sixth = {
+		global_foreign_trade_power = 0.2
+	}
+	sloboda_rus_seventh = {
+		colonists = 1
+		colonist_placement_chance = 0.1
+	}
+}

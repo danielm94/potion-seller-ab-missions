@@ -110,3 +110,7 @@ integrated_commune_polish_bonus = {
 integrated_commune_tartar_bonus = {
 	shock_damage = 0.05
 }
+
+integrated_commune_east_slavic_bonus = {
+	infantry_cost = -0.1
+}
