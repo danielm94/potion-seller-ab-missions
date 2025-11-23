@@ -451,6 +451,25 @@ ab_building_fort_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = {
+			OR = {
+				owner = {
+					has_country_flag = mop_unlock_krepost_system
+				}
+				owner = {
+					overlord = {
+						has_country_flag = mop_unlock_krepost_system
+					}
+				}
+			}
+			is_a_krepost_province = yes
+		}
+		add_province_modifier = {
+			name = mop_krepost
+			duration = -1
+		}
+	}
 }
 
 ab_removing_fort_effect = {
@@ -500,6 +519,12 @@ ab_removing_fort_effect = {
 			has_province_modifier = ned_low_countries_fort_buff_buffed
 		}
 		remove_province_modifier = ned_low_countries_fort_buff_buffed
+	}
+	if = {
+		limit = {
+			has_province_modifier = mop_krepost
+		}
+		remove_province_modifier = mop_krepost
 	}
 }
 

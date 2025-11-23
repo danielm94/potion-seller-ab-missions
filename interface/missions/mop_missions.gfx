@@ -34,4 +34,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_great_port_of_dubrovnik.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_kazan"
+		texturefile = "gfx/interface/missions/mop/mop_kazan.dds"
+		loadType = "INGAME"
+	}
 }

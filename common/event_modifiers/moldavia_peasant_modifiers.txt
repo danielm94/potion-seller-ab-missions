@@ -285,3 +285,24 @@ consulate_overlord_modifier = {
 	global_trade_power = 0.05
 	trade_steering = 0.05
 }
+
+mop_kazan_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	movement_speed = 0.05
+}
+
+mop_great_kazan_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	movement_speed = 0.1
+}
+
+mop_krepost = {
+	local_defensiveness = 0.2
+	local_development_cost = -0.1
+}

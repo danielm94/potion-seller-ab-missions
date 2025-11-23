@@ -277,3 +277,23 @@ on_siege_won_province = {
 		}
 	}
 }
+
+on_dependency_gained = {
+	if = {
+		limit = {
+			has_country_flag = mop_unlock_krepost_system
+		}
+		FROM = {
+			every_owned_province = {
+				limit = {
+					is_a_krepost_province = yes
+					has_fort_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = mop_krepost
+					duration = -1
+				}
+			}
+		}
+	}
+}

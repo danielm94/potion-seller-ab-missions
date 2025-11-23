@@ -3340,6 +3340,178 @@ ab_mop_4 = {
 			add_dip_power = -200
 		}
 	}
+	mop_urals = {
+		icon = mission_steppe_warriors
+		position = 9
+		required_missions = {
+			mop_proclaim_the_hetmanate
+		}
+		provinces_to_highlight = {
+			region = ural_region
+			is_empty = no
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type = cossack_protectorate
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_urals_trigger_tt
+					ural_region = {
+						type = all
+						OR = {
+							is_empty = yes
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_tartar_bonus_tt
+			set_country_flag = integrated_commune_tartar_bonus_flag
+			custom_tooltip = AB_EMPTY
+			1082 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_kazan_commune
+					duration = -1
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_army_tradition_or_mil_power = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_kazan = {
+		icon = GFX_mop_kazan
+		position = 10
+		required_missions = {
+			mop_urals
+		}
+		provinces_to_highlight = {
+			province_id = 1082
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					base_manpower = 12
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_fort_building_trigger = no
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = kazan_kremlin
+						tier = 1
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1082 = {
+					owned_by = root
+					development = 30
+					base_manpower = 12
+					num_of_times_expanded_infrastructure = 2
+					has_fort_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = kazan_kremlin
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			1082 = {
+				upgrade_fort_building = yes
+				remove_province_modifier = mop_kazan_commune
+				add_province_modifier = {
+					name = mop_great_kazan_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = mop_unlock_krepost_system_tt
+			set_country_flag = mop_unlock_krepost_system
+			tooltip = {
+				1082 = {
+					add_province_modifier = {
+						name = mop_krepost
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_a_krepost_province = yes
+						has_fort_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = mop_krepost
+						duration = -1
+					}
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							is_a_krepost_province = yes
+							has_fort_building_trigger = yes
+						}
+						add_province_modifier = {
+							name = mop_krepost
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 ab_mop_5 = {

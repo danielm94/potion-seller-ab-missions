@@ -104,5 +104,9 @@ integrated_commune_armenian_bonus = {
 }
 
 integrated_commune_polish_bonus = {
-	cavalry_power = 0.1
+	cavalry_power = 0.05
+}
+
+integrated_commune_tartar_bonus = {
+	shock_damage = 0.05
 }
