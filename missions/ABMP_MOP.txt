@@ -1892,6 +1892,7 @@ ab_mop_2 = {
 				skill = 3
 				culture = baltic_german
 				location = 43
+				cost_multiplier = 0.5
 			}
 			custom_tooltip = AB_EMPTY
 			define_advisor = {
@@ -1901,10 +1902,10 @@ ab_mop_2 = {
 				religion = orthodox
 				location = 38
 				name = "Patriarch of Riga"
+				cost_multiplier = 0.5
 			}
 			custom_tooltip = AB_EMPTY
 			45 = {
-				#LUBECK
 				add_trade_modifier = {
 					who = root
 					duration = -1
@@ -1914,7 +1915,6 @@ ab_mop_2 = {
 			}
 			custom_tooltip = AB_EMPTY
 			97 = {
-				# AMSTERDAM
 				add_trade_modifier = {
 					who = root
 					duration = -1
