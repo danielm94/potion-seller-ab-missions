@@ -96,3 +96,7 @@
  port_of_anhanghel_desc: "We control the port of Arhanghel"
  mop_dock_arctic_negation: "Winterized Infrastructure"
  desc_mop_dock_arctic_negation: "Advanced logistical networks and heated warehouses allow this port to operate at full capacity despite the harsh climate. The infrastructure effectively negates the logistical penalties of the Arctic winter."
+ mop_gdansc_commune: "The Gdansc Commune"
+ desc_mop_gdansc_commune: "The wealthy patricians of the Hansa have been expelled from the city. The great crane of the harbor now lifts grain for the common granaries, and the Vistula trade is finally free from the tolls of the German lords."
+ mop_riga_commune: "The Riga Commune"
+ desc_mop_riga_commune: "Once the headquarters of the Crusader orders, Riga has been cleansed of its military aristocracy. It now serves as the commercial heart of the Baltic, acting as a funnel for the immense wealth of the interior forests to flow into the Republic."

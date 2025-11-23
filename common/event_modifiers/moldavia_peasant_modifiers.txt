@@ -329,3 +329,19 @@ mop_dock_arctic_negation = {
 	local_development_cost = -0.5
 	picture = "climate_arctic"
 }
+
+mop_gdansc_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	center_of_trade_upgrade_cost = -0.1
+}
+
+mop_riga_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	global_trade_goods_size_modifier = 0.05
+}

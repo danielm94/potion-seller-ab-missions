@@ -144,3 +144,12 @@
  integrate_into_rus_communes_title: "@UKR Transfer to Sloboda Rus"
  integrate_into_rus_communes_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YEast Slavic§! provinces to @UKR §Y[UKR.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YEast Slavic§! culture, they will be §Rfully annexed§! by @UKR §Y[UKR.GetName]§!."
  integrate_into_rus_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YEast Slavic§! provinces to @UKR §Y[UKR.GetName]§!"
+ establish_baltic_commune: "@BLT Establish Baltia"
+ establish_baltic_commune_title: "@BLT Establish Baltia"
+ establish_baltic_commune_desc: "\n- @[From.GetTag] §Y[From.GetName]§! will become @BLT §YThe Baltic Communes§!.\n\n- The government rank of @BLT §YThe Baltic Communes§! changes to §YKingdom§!.\n\n- They will gain a permanent claim on all §YBaltic§! provinces.\n\n\nYou can ask loyal £integrated_commune£§YIntegrated Commune§! subjects to transfer §YBaltic§! provinces to @BLT §YThe Baltic Communes§!.\n\n§RYOU CANNOT UNDO THIS DECISION! Think carefully on whether or not @[From.GetTag] §Y[From.GetName]§! is the best candidate to form @BLT §YThe Baltic Communes§!."
+ establish_baltic_commune_tooltip: "@[From.GetTag] §Y[From.GetName]§! will become @BLT §YThe Baltic Communes§!"
+ 
+ integrate_into_baltic_communes: "@BLT Transfer to Baltia"
+ integrate_into_baltic_communes_title: "@BLT Transfer to Baltia"
+ integrate_into_baltic_communes_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YBaltic§! provinces to @BLT §Y[BLT.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YBaltic§! culture, they will be §Rfully annexed§! by @BLT §Y[BLT.GetName]§!."
+ integrate_into_baltic_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YBaltic§! provinces to @BLT §Y[BLT.GetName]§!"

@@ -192,7 +192,7 @@ integrated_commune = {
 			OR = {
 				primary_culture = Polan
 				primary_culture = schlesian
-				primary_culture = polish 
+				primary_culture = polish
 				primary_culture = Vistulan
 				primary_culture = Lendian
 				primary_culture = Mazovian
@@ -217,8 +217,17 @@ integrated_commune = {
 				has_country_flag = integrated_commune_east_slavic_bonus
 			}
 			culture_group = east_slavic
-			total_development = 350
+			total_development = 400
 		}
 	}
-	
+	modifier_overlord = {
+		modifier = integrated_commune_baltic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_baltic_bonus
+			}
+			culture_group = baltic
+			total_development = 300
+		}
+	}
 }
