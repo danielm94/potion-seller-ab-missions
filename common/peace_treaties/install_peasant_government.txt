@@ -31,10 +31,6 @@ po_install_peasant_government = {
 		always = yes
 	}
 	effect = {
-		create_subject = {
-			subject_type = allied_commune
-			who = FROM
-		}
 		FROM = {
 			kill_consort = yes
 			kill_heir = {
@@ -53,6 +49,10 @@ po_install_peasant_government = {
 				who = PREV
 				value = 50
 			}
+		}
+		create_subject = {
+			subject_type = allied_commune
+			who = FROM
 		}
 		reverse_add_aggressive_expansion = {
 			who = FROM
