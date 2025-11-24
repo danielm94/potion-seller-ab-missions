@@ -202,6 +202,9 @@ apply_radicalized_peasantry_to_neighbors = {
 	every_neighbor_province = {
 		limit = {
 			owner = {
+				NOT = {
+					has_government_attribute = is_peasants_republic
+				}
 				has_nobility_estate_of_some_kind = yes
 				NOT = {
 					is_subject_of_type = consulate_subject
@@ -246,6 +249,9 @@ apply_neighboring_peasant_opinion = {
 		}
 		every_neighbor_country = {
 			limit = {
+				NOT = {
+					has_government_attribute = is_peasants_republic
+				}
 				has_nobility_estate_of_some_kind = yes
 				NOT = {
 					is_subject_of_type = consulate_subject
