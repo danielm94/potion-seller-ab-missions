@@ -390,3 +390,10 @@ mop_qaraqorum_commune = {
 	local_development_cost = -0.05
 	cavalry_power = 0.05
 }
+mop_great_qaraqorum_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	cavalry_power = 0.1
+}
