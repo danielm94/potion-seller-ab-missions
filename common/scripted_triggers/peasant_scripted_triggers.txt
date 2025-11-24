@@ -23,6 +23,7 @@ country_or_commune_subject_or_subject_of_commune_subject_holds = {
 			}
 			owner = {
 				is_subject = yes
+				is_free_or_tributary_trigger = no
 				overlord = {
 					is_commune_subject = yes
 					is_subject_of = $who$
