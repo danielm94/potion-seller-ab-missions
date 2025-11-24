@@ -32,3 +32,5 @@
  moldavia_peasant_events.4.t: "The End of the Celestial Empire"
  moldavia_peasant_events.4.d: "For thousands of years, the scholars of the East preached that the order of the world was fixed—that the high must rule the low as the mountain rules the valley. They claimed the Emperor held a Mandate from Heaven, making him a god among men.\n\nToday, we have proven that man was nothing but a blasphemer and a slave master. Much like the Pharaoh of Egypt of old, and every tyrant who has stood in our way since, he was made to face the judgement of the one true God, the Almighty."
  moldavia_peasant_events.4.a: "Blessed are the meek, for they shall inherit the Earth."
+ moldavia_peasant_events.5.t: "Naadam Festival of [GetYear]"
+ moldavia_peasant_events.5.d: "The Naadam is a celebration of the herder's skill, strength, and endurance. To foster unity between the Federation and the local tribes, the administration has organized a grand tournament at Caracorum. By sponsoring the traditional events of wrestling, horse racing, and archery, we prove that the Republic honors the culture of the steppe. Which discipline shall the communal treasury sponsor this year?"

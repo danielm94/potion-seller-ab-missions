@@ -313,3 +313,55 @@ country_event = {
 		dismantle_empire_of_china = yes
 	}
 }
+
+#Nadaam Festival
+country_event = {
+	id = moldavia_peasant_events.5
+	title = moldavia_peasant_events.5.t
+	desc = moldavia_peasant_events.5.d
+	picture = URBANISATION_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = moldavia_peasant_events.5
+				days = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = ab_yuan.8.a
+		add_years_of_income = -0.25
+		add_country_modifier = { 
+			name = yua_festival_reward_power 
+			duration = 1825 
+		}
+	}
+
+	option = {
+		name = ab_yuan.8.b
+		add_years_of_income = -0.25
+		add_country_modifier = { 
+			name = yua_festival_reward_speed 
+			duration = 1825 
+		}
+	}
+
+	option = {
+		name = ab_yuan.8.c
+		add_years_of_income = -0.25
+		add_country_modifier = { 
+			name = yua_festival_reward_shock
+			duration = 1825 
+		}
+	}
+	
+	option = {
+		name = ab_yuan.8.de
+		add_prestige = -10
+		custom_tooltip = YUAN_NO_DISCIPLINE
+	}
+}
