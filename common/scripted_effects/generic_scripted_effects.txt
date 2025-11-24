@@ -3652,6 +3652,9 @@ identify_releasable_countries_for_target = {
 			releasable_countries = 0
 		}
 		every_owned_province = {
+			limit = {
+				is_capital = no
+			}
 			every_core_country = {
 				limit = {
 					exists = no

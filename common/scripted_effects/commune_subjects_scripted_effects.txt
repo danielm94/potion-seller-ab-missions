@@ -903,7 +903,6 @@ mark_country_as_having_been_integrated_commune = {
 release_balkanized_commune_country = {
 	complex_release_effect = {
 		target = $target$
-		change_religion = THIS
 		change_government = republic
 		add_government_reform = peasants_republic
 	}
@@ -919,6 +918,26 @@ release_balkanized_commune_country = {
 			}
 			$target$ = {
 				clr_country_flag = has_core_on_capital
+			}
+		}
+	}
+	hidden_effect = {
+		$target$ = {
+			change_religion = capital
+			if = {
+				limit = {
+					has_country_modifier = conversion_zeal
+				}
+				remove_country_modifier = conversion_zeal
+				add_prestige = 100
+				while = {
+					limit = {
+						NOT = {
+							stability = 0
+						}
+					}
+					add_stability = 1
+				}
 			}
 		}
 	}
