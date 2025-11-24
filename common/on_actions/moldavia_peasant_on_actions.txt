@@ -219,7 +219,13 @@ on_dependency_gained = {
 				}
 			}
 			mark_country_has_been_spreader_of_radicalized_peasants = yes
-			apply_radicalized_peasantry_effect = yes
+			set_global_flag = set_province_peasant_modifiers
+			ROOT = {
+				country_event = {
+					id = moldavia_peasant_events.0
+					days = 1
+				}
+			}
 		}
 		if = {
 			limit = {
