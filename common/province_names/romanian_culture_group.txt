@@ -705,7 +705,7 @@
 2185 = "Merghen"
 2188 = "Alciuca"
 2189 = "Teterleg"
-2190 = "Baianhongor"
+2190 = {"Caracorum" "Caracorum"}
 2191 = "Egin"
 2192 = "Corla"
 2193 = "Gobi"
