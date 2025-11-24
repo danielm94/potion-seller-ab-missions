@@ -286,3 +286,24 @@ country_event = {
 		clear_global_event_target = new_peasant_subject
 	}
 }
+
+#EOC Is Now PRC
+country_event = {
+	id = moldavia_peasant_events.4
+	title = moldavia_peasant_events.4.t
+	desc = moldavia_peasant_events.4.d
+	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = moldavia_peasant_events.4.a
+		change_peasant_zeal = {
+			value = 50
+		}
+		add_dip_power = 50
+		add_mil_power = 50
+		add_adm_power = 50
+		set_country_flag = ab_has_dismantled_china
+		dismantle_empire_of_china = yes
+	}
+}

@@ -54,6 +54,16 @@ po_install_peasant_government = {
 			subject_type = allied_commune
 			who = FROM
 		}
+		if = {
+			limit = {
+				FROM = {
+					is_emperor_of_china = yes
+				}
+			}
+			country_event = {
+				id = moldavia_peasant_events.4
+			}
+		}
 		reverse_add_aggressive_expansion = {
 			who = FROM
 			value = -1000
