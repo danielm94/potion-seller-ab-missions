@@ -12,6 +12,9 @@ country_event = {
 	
 	trigger = {
 		FROM = { is_emperor_of_china = yes }
+		NOT = {
+			has_government_mechanic = peasant_zealotry
+		}
 	}
 	
 	option = {
