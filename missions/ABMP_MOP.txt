@@ -4590,4 +4590,76 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_mongolia = {
+		icon = mission_unify_mongolia
+		position = 12
+		required_missions = {
+			mop_push_into_siberia
+			mop_silk_road_infrastructure
+		}
+		provinces_to_highlight = {
+			region = mongolia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_mongolia_trigger_tt
+					mongolia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_mongolian_bonus_tt
+			set_country_flag = integrated_commune_mongolian_bonus
+			custom_tooltip = AB_EMPTY
+			2190 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_qaraqorum_commune
+					duration = -1
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }

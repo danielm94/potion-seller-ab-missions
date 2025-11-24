@@ -382,3 +382,11 @@ mop_siberian_frontier_subject = {
 	may_establish_frontier = yes
 	auto_explore_adjacent_to_colony = yes
 }
+
+mop_qaraqorum_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	cavalry_power = 0.05
+}

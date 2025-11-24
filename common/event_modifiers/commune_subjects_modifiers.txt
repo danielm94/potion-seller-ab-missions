@@ -118,3 +118,6 @@ integrated_commune_east_slavic_bonus = {
 integrated_commune_baltic_bonus = {
 	max_general_shock = 1
 }
+integrated_commune_mongolian_bonus = {
+	province_warscore_cost = -0.05
+}

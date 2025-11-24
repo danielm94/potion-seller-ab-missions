@@ -230,4 +230,14 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_mongolian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_mongolian_bonus
+			}
+			culture_group = Mongolian
+			total_development = 300
+		}
+	}
 }
