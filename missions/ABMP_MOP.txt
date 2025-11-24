@@ -3927,6 +3927,117 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_push_into_siberia = {
+		icon = mission_rb_colonise_canada
+		position = 11
+		required_missions = {
+			mop_kazan
+		}
+		provinces_to_highlight = {
+			region = west_siberia_region
+			is_empty = no
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_push_into_siberia_tt
+					west_siberia_region = {
+						type = all
+						OR = {
+							is_empty = yes
+							OR = {
+								country_or_commune_subject_or_subject_of_commune_subject_holds = {
+									who = ROOT
+								}
+								owner = {
+									is_subject_of_type_with_overlord = {
+										who = root
+										type = cossack_protectorate
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					1074 = {
+						is_empty = yes
+					}
+				}
+				1074 = {
+					add_siberian_construction = 50
+					center_of_trade = 1
+					change_province_name = "Tiumen"
+					hidden_effect = {
+						rename_capital = "Tiumen"
+					}
+					add_core = root
+					change_culture = root
+					change_religion = root
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						owns = 1074
+					}
+				}
+				1074 = {
+					center_of_trade = 1
+					change_province_name = "Tiumen"
+					hidden_effect = {
+						rename_capital = "Tiumen"
+					}
+					remove_core = owner
+					add_core = root
+					cede_province = root
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_sloboda_rus_is_subject_tt
+				first_limit = "UKR = {
+									is_subject_of_type_with_overlord = {
+										who = root
+										type = integrated_commune
+									}
+								}"
+				first_effect = "UKR = {
+									add_country_modifier = {
+										name = mop_siberian_frontier_subject
+										duration = -1
+									}
+								}"
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+		}
+	}
 }
 
 ab_mop_5 = {
