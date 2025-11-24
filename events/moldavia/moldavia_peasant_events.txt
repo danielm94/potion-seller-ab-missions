@@ -295,6 +295,12 @@ country_event = {
 	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
 	is_triggered_only = yes
 	major = yes
+	trigger = {
+		FROM = {
+			is_emperor_of_china = yes
+		}
+		has_government_mechanic = peasant_zealotry
+	}
 	option = {
 		name = moldavia_peasant_events.4.a
 		change_peasant_zeal = {
