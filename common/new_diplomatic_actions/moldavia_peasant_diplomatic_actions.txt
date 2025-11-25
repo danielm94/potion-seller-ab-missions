@@ -988,9 +988,7 @@ convert_subject_to_commune = {
 						}
 					}
 				}
-				FROM = {
-					is_within_range_of_the_peasants_revolution = yes
-				}
+				is_within_range_of_the_peasants_revolution = yes
 			}
 		}
 	}
