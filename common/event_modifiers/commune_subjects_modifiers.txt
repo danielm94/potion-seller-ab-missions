@@ -135,3 +135,7 @@ integrated_commune_chinese_bonus_3 = {
 integrated_commune_chinese_bonus_4 = {
 	governing_capacity_modifier = 0.05
 }
+
+integrated_commune_wendish_bonus = {
+	fort_maintenance_modifier = -0.1
+}

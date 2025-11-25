@@ -3111,7 +3111,7 @@ ab_mop_3 = {
 		}
 	}
 	mop_manchuria = {
-		icon = mission_manchu_warrior
+		icon = mission_mukden
 		position = 13
 		required_missions = {
 			mop_qaraqorum
@@ -3995,6 +3995,64 @@ ab_mop_4 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 20
+			}
+		}
+	}
+	mop_free_the_wends = {
+		icon = mission_wendia
+		position = 11
+		required_missions = {
+			mop_baltic_ports
+		}
+		provinces_to_highlight = {
+			region = wendia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				wendia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_WEE_commune_diplomatic_actions_tt
+			set_country_flag = unlock_WEE_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_wendish_bonus_tt
+			set_country_flag = integrated_commune_wendish_bonus
+			custom_tooltip = AB_EMPTY
+			50 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_berlin_commune
+					duration = -1
+				}
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
 			}
 		}
 	}

@@ -280,4 +280,18 @@ integrated_commune = {
 			total_development = 2000
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_wendish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_wendish_bonus
+			}
+			OR = {
+				culture = pommeranian 
+				culture = Wendish
+				culture = sorbian
+			}
+			total_development = 300
+		}
+	}
 }

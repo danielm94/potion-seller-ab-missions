@@ -2025,7 +2025,7 @@ establish_chinese_commune = {
 	on_accept = {
 		FROM = {
 			change_tag = PCC
-			set_government_rank_force = 3
+			set_government_rank = 2
 			change_country_color = {
 				country = ROOT
 			}
@@ -2111,6 +2111,131 @@ integrate_into_chinese_communes = {
 				}
 				add_core = PCC
 				cede_province = PCC
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+establish_wendish_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = WEE
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_WEE_commune_diplomatic_actions
+		FROM = {
+			is_wendish_culture_group = yes
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = WEE
+			set_government_rank_force = 2
+			override_country_name = WEE_commune
+			change_country_color = {
+				country = ROOT
+			}
+			every_province = {
+				limit = {
+					is_wendish_culture_group = yes
+				}
+				add_permanent_claim = WEE
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_wendish_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_WEE_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = WEE
+		WEE = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = WEE
+			}
+			any_owned_province = {
+				is_wendish_culture_group = yes
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					is_wendish_culture_group = yes
+				}
+				add_core = WEE
+				cede_province = WEE
 			}
 		}
 	}

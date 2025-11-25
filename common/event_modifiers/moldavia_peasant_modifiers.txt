@@ -505,3 +505,12 @@ mop_venture_into_pacific = {
 	auto_explore_adjacent_to_colony = yes
 	range = 0.5
 }
+
+mop_berlin_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	army_tradition = 0.5
+	picture = "commune_province_modifier_icon"
+}

@@ -87,3 +87,13 @@ has_been_sister_commune = {
 has_been_integrated_commune = {
 	has_country_flag = was_integrated_commune
 }
+
+#SCOPE = COUNTRY
+# Not actually a culture group, used for deciding if relevant for Wendish commune
+is_wendish_culture_group = {
+	OR = {
+		culture = Wendish
+		culture = pommeranian
+		culture = sorbian
+	}
+}
