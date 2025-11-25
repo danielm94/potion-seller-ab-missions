@@ -72,6 +72,17 @@ country_event = {
 					who = event_target:commune_being_integrated
 				}
 			}
+			else_if = {
+				limit = { 
+					event_target:commune_being_integrated = {
+						is_subject_of_type = consulate_subject
+					}
+				}
+				create_subject = {
+					subject_type = allied_commune
+					who = event_target:commune_being_integrated
+				}
+			}
 			else = {
 				create_subject = {
 					subject_type = sister_commune

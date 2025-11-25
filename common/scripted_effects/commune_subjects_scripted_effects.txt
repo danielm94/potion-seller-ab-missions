@@ -75,7 +75,10 @@ calculate_commune_integration_cost = {
 	if = {
 		limit = {
 			overlord = {
-				has_reform = moldavian_commune_reform
+				OR = {
+					has_reform = moldavian_commune_reform
+					has_reform = dacian_commune_reform
+				}
 			}
 		}
 		change_variable = {
@@ -122,6 +125,14 @@ calculate_commune_integration_cost = {
 			is_subject_of_type = sister_commune
 		}
 		get_sister_commune_annexation_cost_multiplier = {
+			var = subject_type_annexation_cost_multiplier
+		}
+	}
+	else_if = {
+		limit = {
+			is_subject_of_type = consulate_subject
+		}
+		get_consulate_annexation_cost_multiplier = {
 			var = subject_type_annexation_cost_multiplier
 		}
 	}
@@ -867,6 +878,13 @@ get_allied_commune_annexation_cost_multiplier = {
 get_sister_commune_annexation_cost_multiplier = {
 	set_variable = {
 		$var$ = 5
+	}
+}
+
+#SCOPE = ANY
+get_consulate_annexation_cost_multiplier = {
+	set_variable = {
+		$var$ = 3
 	}
 }
 
