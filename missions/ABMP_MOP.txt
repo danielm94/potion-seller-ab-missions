@@ -3633,43 +3633,17 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_destroy_the_princes = {
-		icon = mission_defeat_muscovy
+	mop_free_the_lechites = {
+		icon = mission_pol_moldavia
 		position = 7
 		required_missions = {
 			mop_east_ukraine
 		}
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					owner = {
-						culture_group = east_slavic
-						government = monarchy
-						capital_scope = {
-							continent = europe
-						}
-						OR = {
-							is_subject = no
-							AND = {
-								is_subject = yes
-								overlord = {
-									is_commune_subject = no
-								}
-							}
-						}
-					}
-					is_capital = yes
-				}
-				AND = {
-					province_id = 295
-					NOT = {
-						owned_by = root
-					}
-					owner = {
-						NOT = {
-							is_subject_of = root
-						}
-					}
+			region = poland_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
 				}
 			}
 		}
@@ -3681,116 +3655,83 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				295 = {
-					OR = {
-						owned_by = root
-						owner = {
-							is_subject_of = root
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = no_east_slavic_monarchies_europe_tt
-					NOT = {
-						any_country = {
-							culture_group = east_slavic
-							government = monarchy
-							capital_scope = {
-								continent = europe
-							}
-							OR = {
-								is_subject = no
-								AND = {
-									is_subject = yes
-									overlord = {
-										is_commune_subject = no
-									}
-								}
-							}
-						}
+				poland_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
 					}
 				}
 			}
 		}
 		effect = {
-			295 = {
-				remove_core = owner
+			custom_tooltip = unlock_PLC_commune_diplomatic_actions_tt
+			set_country_flag = unlock_PLC_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_polish_bonus_tt
+			set_country_flag = integrated_commune_polish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			262 = {
 				add_core = root
+				remove_core = owner
 				cede_province = root
 				add_province_modifier = {
-					name = mop_moscow_commune
+					name = mop_krakow_commune
 					duration = -1
 				}
 			}
 			define_advisor = {
-				type = statesman
+				type = dragoon
 				skill = 3
 				cost_multiplier = 0.25
-				religion = orthodox
-				culture = russian
-				location = 295
-				name = "Vladimir Ulyan"
+				culture = polish
+				location = 262
 			}
 			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
-				value = 25
+				value = 10
 			}
 			add_prestige_or_monarch_power = {
-				amount = 10
+				amount = 5
 			}
 			add_estate_loyalty = {
 				estate = estate_razesi
-				loyalty = 10
+				loyalty = 5
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
-				influence = 20
-			}
-			custom_tooltip = every_east_slavic_commune_subject_ld_tt
-			hidden_effect = {
-				every_subject_country = {
-					limit = {
-						culture_group = east_slavic
-						NOT = {
-							has_estate = estate_nobles
-						}
-					}
-					add_liberty_desire = -20
-				}
+				influence = 10
 			}
 		}
 	}
-	mop_fortify_moscow = {
-		icon = mission_take_over_the_kremlin
+	mop_saltworks_of_cracovia = {
+		icon = mission_pol_revival_krakow
 		position = 8
 		required_missions = {
-			mop_destroy_the_princes
+			mop_free_the_lechites
 		}
 		provinces_to_highlight = {
-			province_id = 295
+			province_id = 262
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					owned_by = root
 				}
 				NOT = {
 					development = 30
 				}
 				NOT = {
-					base_manpower = 12
+					base_production = 12
 				}
 				NOT = {
 					num_of_times_expanded_infrastructure = 2
 				}
-				has_fort_building_trigger = no
-				has_manpower_building_trigger = no
-				has_forcelimit_building_trigger = no
-				has_manufactory_trigger = no
 				NOT = {
-					has_great_project = {
-						type = kremlin
-						tier = 1
-					}
+					province_has_center_of_trade_of_level = 2
 				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+				has_tax_building_trigger = no
+				has_manufactory_trigger = no
 			}
 		}
 		trigger = {
@@ -3801,62 +3742,49 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				295 = {
-					owned_by = ROOT
+				262 = {
+					owned_by = root
 					development = 30
-					base_manpower = 12
+					base_production = 12
 					num_of_times_expanded_infrastructure = 2
-					has_fort_building_trigger = yes
-					has_manpower_building_trigger = yes
-					has_forcelimit_building_trigger = yes
+					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_road_building_trigger = yes
+					has_tax_building_trigger = yes
 					has_manufactory_trigger = yes
-					has_great_project = {
-						type = kremlin
-						tier = 1
-					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = mop_grand_captain_bonus_tt
-			set_country_flag = mop_grand_captain_bonus_flag
-			custom_tooltip = AB_EMPTY
-			295 = {
-				remove_province_modifier = mop_moscow_commune
+			262 = {
+				remove_province_modifier = mop_krakow_commune
 				add_province_modifier = {
-					name = mop_great_fortress_commune_of_moscow
+					name = mop_great_krakow_commune
 					duration = -1
 				}
 			}
-			add_yearly_manpower = 1
-			add_army_tradition_or_mil_power = {
-				amount = 20
-			}
+			custom_tooltip = unlock_krakow_salt_mine_bonus_tt
+			set_country_flag = unlock_krakow_salt_mine_bonus
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
 			}
 		}
 	}
-	mop_russia = {
-		icon = mission_conquer_novgorod
+	mop_baltic = {
+		icon = mission_conquer_baltic_region
 		position = 9
 		required_missions = {
-			mop_fortify_moscow
+			mop_saltworks_of_cracovia
 		}
 		provinces_to_highlight = {
-			region = russia_region
+			region = baltic_region
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = ROOT
-				}
-			}
-			NOT = {
-				owner = {
-					is_subject_of_type_with_overlord = {
-						who = ROOT
-						type = cossack_protectorate
-					}
 				}
 			}
 		}
@@ -3868,50 +3796,44 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_russia_trigger_tt
-					russia_region = {
-						type = all
-						OR = {
-							country_or_commune_subject_or_subject_of_commune_subject_holds = {
-								who = ROOT
-							}
-							owner = {
-								is_subject_of_type_with_overlord = {
-									who = ROOT
-									type = cossack_protectorate
-								}
-							}
-						}
+				baltic_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
 					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = unlock_UKR_commune_diplomatic_actions_tt
-			set_country_flag = unlock_UKR_commune_diplomatic_actions
+			custom_tooltip = unlock_BLT_commune_diplomatic_actions_tt
+			set_country_flag = unlock_BLT_commune_diplomatic_actions
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_east_slavic_bonus_tt
-			set_country_flag = integrated_commune_east_slavic_bonus
+			custom_tooltip = integrated_commune_baltic_bonus_tt
+			set_country_flag = integrated_commune_baltic_bonus
 			custom_tooltip = AB_EMPTY
-			1955 = {
-				change_province_name = "Arhanghel"
-				hidden_effect = {
-					rename_capital = "Arhanghel"
-				}
+			43 = {
 				remove_core = owner
 				add_core = root
 				cede_province = root
 				add_province_modifier = {
-					name = mop_arhanghel_commune
+					name = mop_gdansc_commune
+					duration = -1
+				}
+			}
+			38 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_riga_commune
 					duration = -1
 				}
 			}
 			change_peasant_zeal = {
 				value = 15
 			}
-			add_prestige_or_monarch_power = {
-				amount = 5
+			add_army_tradition_or_mil_power = {
+				amount = 10
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
@@ -3919,29 +3841,66 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_arhanghel = {
-		icon = mission_found_arkhangelsk
+	mop_baltic_ports = {
+		icon = mission_danzig_or_war
 		position = 10
 		required_missions = {
-			mop_russia
+			mop_baltic
 		}
 		provinces_to_highlight = {
-			province_id = 1955
 			OR = {
-				NOT = {
-					owned_by = ROOT
+				AND = {
+					province_id = 43
+					OR = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						has_coast_defense_building_trigger = no
+						has_manufactory_trigger = no
+					}
 				}
-				NOT = {
-					development = 25
+				AND = {
+					province_id = 38
+					OR = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						has_coast_defense_building_trigger = no
+						has_manufactory_trigger = no
+						NOT = {
+							has_great_project = {
+								type = amber_coast
+								tier = 2
+							}
+						}
+					}
 				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_dock_building_trigger = no
-				has_shipyard_building_trigger = no
-				has_coast_defense_building_trigger = no
-				has_trade_building_trigger = no
-				has_fort_building_trigger = no
 			}
 		}
 		trigger = {
@@ -3952,31 +3911,74 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				1955 = {
-					owned_by = ROOT
-					development = 25
+				43 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
 					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 					has_coast_defense_building_trigger = yes
+					has_manufactory_trigger = yes
+				}
+				38 = {
+					owned_by = root
+					development = 30
+					religion = ROOT
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
-					has_fort_building_trigger = yes
+					has_production_building_trigger = yes
+					has_road_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = amber_coast
+						tier = 2
+					}
 				}
 			}
 		}
 		effect = {
-			1955 = {
+			43 = {
 				add_province_modifier = {
-					name = mop_port_of_arhanghel
+					name = mop_great_port_of_gdansc
 					duration = -1
 				}
 			}
-			23 = {
+			38 = {
+				remove_province_modifier = mop_riga_commune
+				add_province_modifier = {
+					name = mop_holy_commune_of_riga
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				culture = baltic_german
+				location = 43
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				culture = baltic_german
+				religion = orthodox
+				location = 38
+				name = "Patriarch of Riga"
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			45 = {
 				add_trade_modifier = {
-					who = ROOT
+					who = root
 					duration = -1
 					power = 15
-					key = port_of_anhanghel_desc
+					key = control_danzig_and_riga_desc
 				}
 			}
 			custom_tooltip = AB_EMPTY
@@ -3985,41 +3987,14 @@ ab_mop_4 = {
 					who = root
 					duration = -1
 					power = 10
-					key = port_of_anhanghel_desc
+					key = control_danzig_and_riga_desc
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = mop_arctic_provinces_dock_bonus_tt
-			set_country_flag = mop_arctic_provinces_dock_bonus
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						has_climate = arctic
-						has_dock_building_trigger = yes
-					}
-					add_province_modifier = {
-						name = mop_dock_arctic_negation
-						duration = -1
-					}
-				}
-				every_subject_country = {
-					every_owned_province = {
-						limit = {
-							has_climate = arctic
-							has_dock_building_trigger = yes
-						}
-						add_province_modifier = {
-							name = mop_dock_arctic_negation
-							duration = -1
-						}
-					}
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			add_mercantilism = 2
+			add_mercantilism = 5
 			add_faction_influence = {
 				faction = exemplarists_faction
-				influence = 10
+				influence = 20
 			}
 		}
 	}
@@ -4577,17 +4552,43 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_free_the_lechites = {
-		icon = mission_pol_moldavia
+	mop_destroy_the_princes = {
+		icon = mission_defeat_muscovy
 		position = 7
 		required_missions = {
 			mop_east_ukraine
 		}
 		provinces_to_highlight = {
-			region = poland_region
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = ROOT
+			OR = {
+				AND = {
+					owner = {
+						culture_group = east_slavic
+						government = monarchy
+						capital_scope = {
+							continent = europe
+						}
+						OR = {
+							is_subject = no
+							AND = {
+								is_subject = yes
+								overlord = {
+									is_commune_subject = no
+								}
+							}
+						}
+					}
+					is_capital = yes
+				}
+				AND = {
+					province_id = 295
+					NOT = {
+						owned_by = root
+					}
+					owner = {
+						NOT = {
+							is_subject_of = root
+						}
+					}
 				}
 			}
 		}
@@ -4599,83 +4600,116 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				poland_region = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
+				295 = {
+					OR = {
+						owned_by = root
+						owner = {
+							is_subject_of = root
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = no_east_slavic_monarchies_europe_tt
+					NOT = {
+						any_country = {
+							culture_group = east_slavic
+							government = monarchy
+							capital_scope = {
+								continent = europe
+							}
+							OR = {
+								is_subject = no
+								AND = {
+									is_subject = yes
+									overlord = {
+										is_commune_subject = no
+									}
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = unlock_PLC_commune_diplomatic_actions_tt
-			set_country_flag = unlock_PLC_commune_diplomatic_actions
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_polish_bonus_tt
-			set_country_flag = integrated_commune_polish_bonus_flag
-			custom_tooltip = AB_EMPTY
-			262 = {
-				add_core = root
+			295 = {
 				remove_core = owner
+				add_core = root
 				cede_province = root
 				add_province_modifier = {
-					name = mop_krakow_commune
+					name = mop_moscow_commune
 					duration = -1
 				}
 			}
 			define_advisor = {
-				type = dragoon
+				type = statesman
 				skill = 3
 				cost_multiplier = 0.25
-				culture = polish
-				location = 262
+				religion = orthodox
+				culture = russian
+				location = 295
+				name = "Vladimir Ulyan"
 			}
 			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
-				value = 10
+				value = 25
 			}
 			add_prestige_or_monarch_power = {
-				amount = 5
+				amount = 10
 			}
 			add_estate_loyalty = {
 				estate = estate_razesi
-				loyalty = 5
+				loyalty = 10
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
-				influence = 10
+				influence = 20
+			}
+			custom_tooltip = every_east_slavic_commune_subject_ld_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						culture_group = east_slavic
+						NOT = {
+							has_estate = estate_nobles
+						}
+					}
+					add_liberty_desire = -20
+				}
 			}
 		}
 	}
-	mop_saltworks_of_cracovia = {
-		icon = mission_pol_revival_krakow
+	mop_fortify_moscow = {
+		icon = mission_take_over_the_kremlin
 		position = 8
 		required_missions = {
-			mop_free_the_lechites
+			mop_destroy_the_princes
 		}
 		provinces_to_highlight = {
-			province_id = 262
+			province_id = 295
 			OR = {
 				NOT = {
-					owned_by = root
+					owned_by = ROOT
 				}
 				NOT = {
 					development = 30
 				}
 				NOT = {
-					base_production = 12
+					base_manpower = 12
 				}
 				NOT = {
 					num_of_times_expanded_infrastructure = 2
 				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_trade_building_trigger = no
-				has_production_building_trigger = no
-				has_road_building_trigger = no
-				has_tax_building_trigger = no
+				has_fort_building_trigger = no
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
 				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = kremlin
+						tier = 1
+					}
+				}
 			}
 		}
 		trigger = {
@@ -4686,49 +4720,62 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				262 = {
-					owned_by = root
+				295 = {
+					owned_by = ROOT
 					development = 30
-					base_production = 12
+					base_manpower = 12
 					num_of_times_expanded_infrastructure = 2
-					province_has_center_of_trade_of_level = 2
-					has_trade_building_trigger = yes
-					has_production_building_trigger = yes
-					has_road_building_trigger = yes
-					has_tax_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
 					has_manufactory_trigger = yes
+					has_great_project = {
+						type = kremlin
+						tier = 1
+					}
 				}
 			}
 		}
 		effect = {
-			262 = {
-				remove_province_modifier = mop_krakow_commune
+			custom_tooltip = mop_grand_captain_bonus_tt
+			set_country_flag = mop_grand_captain_bonus_flag
+			custom_tooltip = AB_EMPTY
+			295 = {
+				remove_province_modifier = mop_moscow_commune
 				add_province_modifier = {
-					name = mop_great_krakow_commune
+					name = mop_great_fortress_commune_of_moscow
 					duration = -1
 				}
 			}
-			custom_tooltip = unlock_krakow_salt_mine_bonus_tt
-			set_country_flag = unlock_krakow_salt_mine_bonus
-			custom_tooltip = AB_EMPTY
-			add_mercantilism = 2
+			add_yearly_manpower = 1
+			add_army_tradition_or_mil_power = {
+				amount = 20
+			}
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
 			}
 		}
 	}
-	mop_baltic = {
-		icon = mission_conquer_baltic_region
+	mop_russia = {
+		icon = mission_conquer_novgorod
 		position = 9
 		required_missions = {
-			mop_saltworks_of_cracovia
+			mop_fortify_moscow
 		}
 		provinces_to_highlight = {
-			region = baltic_region
+			region = russia_region
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = ROOT
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = cossack_protectorate
+					}
 				}
 			}
 		}
@@ -4740,44 +4787,50 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				baltic_region = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
+				custom_trigger_tooltip = {
+					tooltip = mop_russia_trigger_tt
+					russia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = ROOT
+									type = cossack_protectorate
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = unlock_BLT_commune_diplomatic_actions_tt
-			set_country_flag = unlock_BLT_commune_diplomatic_actions
+			custom_tooltip = unlock_UKR_commune_diplomatic_actions_tt
+			set_country_flag = unlock_UKR_commune_diplomatic_actions
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_baltic_bonus_tt
-			set_country_flag = integrated_commune_baltic_bonus
+			custom_tooltip = integrated_commune_east_slavic_bonus_tt
+			set_country_flag = integrated_commune_east_slavic_bonus
 			custom_tooltip = AB_EMPTY
-			43 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_gdansc_commune
-					duration = -1
+			1955 = {
+				change_province_name = "Arhanghel"
+				hidden_effect = {
+					rename_capital = "Arhanghel"
 				}
-			}
-			38 = {
 				remove_core = owner
 				add_core = root
 				cede_province = root
 				add_province_modifier = {
-					name = mop_riga_commune
+					name = mop_arhanghel_commune
 					duration = -1
 				}
 			}
 			change_peasant_zeal = {
 				value = 15
 			}
-			add_army_tradition_or_mil_power = {
-				amount = 10
+			add_prestige_or_monarch_power = {
+				amount = 5
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
@@ -4785,66 +4838,29 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_baltic_ports = {
-		icon = mission_danzig_or_war
+	mop_arhanghel = {
+		icon = mission_found_arkhangelsk
 		position = 10
 		required_missions = {
-			mop_baltic
+			mop_russia
 		}
 		provinces_to_highlight = {
+			province_id = 1955
 			OR = {
-				AND = {
-					province_id = 43
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_dock_building_trigger = no
-						has_shipyard_building_trigger = no
-						has_coast_defense_building_trigger = no
-						has_manufactory_trigger = no
-					}
+				NOT = {
+					owned_by = ROOT
 				}
-				AND = {
-					province_id = 38
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_dock_building_trigger = no
-						has_shipyard_building_trigger = no
-						has_coast_defense_building_trigger = no
-						has_manufactory_trigger = no
-						NOT = {
-							has_great_project = {
-								type = amber_coast
-								tier = 2
-							}
-						}
-					}
+				NOT = {
+					development = 25
 				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
 			}
 		}
 		trigger = {
@@ -4855,74 +4871,31 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				43 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
+				1955 = {
+					owned_by = ROOT
+					development = 25
 					province_has_center_of_trade_of_level = 2
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 					has_coast_defense_building_trigger = yes
-					has_manufactory_trigger = yes
-				}
-				38 = {
-					owned_by = root
-					development = 30
-					religion = ROOT
-					num_of_times_expanded_infrastructure = 2
-					province_has_center_of_trade_of_level = 2
-					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
-					has_production_building_trigger = yes
-					has_road_building_trigger = yes
-					has_manufactory_trigger = yes
-					has_great_project = {
-						type = amber_coast
-						tier = 2
-					}
+					has_fort_building_trigger = yes
 				}
 			}
 		}
 		effect = {
-			43 = {
+			1955 = {
 				add_province_modifier = {
-					name = mop_great_port_of_gdansc
+					name = mop_port_of_arhanghel
 					duration = -1
 				}
 			}
-			38 = {
-				remove_province_modifier = mop_riga_commune
-				add_province_modifier = {
-					name = mop_holy_commune_of_riga
-					duration = -1
-				}
-			}
-			define_advisor = {
-				type = trader
-				skill = 3
-				culture = baltic_german
-				location = 43
-				cost_multiplier = 0.5
-			}
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = patriarch
-				skill = 3
-				culture = baltic_german
-				religion = orthodox
-				location = 38
-				name = "Patriarch of Riga"
-				cost_multiplier = 0.5
-			}
-			custom_tooltip = AB_EMPTY
-			45 = {
+			23 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = -1
 					power = 15
-					key = control_danzig_and_riga_desc
+					key = port_of_anhanghel_desc
 				}
 			}
 			custom_tooltip = AB_EMPTY
@@ -4931,14 +4904,41 @@ ab_mop_5 = {
 					who = root
 					duration = -1
 					power = 10
-					key = control_danzig_and_riga_desc
+					key = port_of_anhanghel_desc
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			add_mercantilism = 5
+			custom_tooltip = mop_arctic_provinces_dock_bonus_tt
+			set_country_flag = mop_arctic_provinces_dock_bonus
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_climate = arctic
+						has_dock_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = mop_dock_arctic_negation
+						duration = -1
+					}
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							has_climate = arctic
+							has_dock_building_trigger = yes
+						}
+						add_province_modifier = {
+							name = mop_dock_arctic_negation
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
-				influence = 20
+				influence = 10
 			}
 		}
 	}
