@@ -375,7 +375,7 @@ mop_great_commune_of_khiva = {
 	local_governing_cost = -1
 	province_trade_power_value = 25
 	local_development_cost = -0.1
-	caravan_power = 0.20
+	caravan_power = 0.2
 }
 
 mop_siberian_frontier_subject = {
@@ -390,10 +390,75 @@ mop_qaraqorum_commune = {
 	local_development_cost = -0.05
 	cavalry_power = 0.05
 }
+
 mop_great_qaraqorum_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
 	province_trade_power_value = 20
 	local_development_cost = -0.1
 	cavalry_power = 0.1
+}
+
+mop_dragon_slayer = {
+	administrative_efficiency = 0.05
+}
+
+mop_beijing_legation_city = {
+	min_local_autonomy = 100
+	local_governing_cost = -0.9
+	province_trade_power_value = 25
+	diplomats = 1
+	culture_conversion_cost = 100
+	culture_conversion_time = 100
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+	governing_capacity_modifier = 0.05
+}
+
+mop_hangzhou_legation_city = {
+	min_local_autonomy = 100
+	local_governing_cost = -0.9
+	province_trade_power_value = 25
+	diplomatic_upkeep = 1
+	culture_conversion_cost = 100
+	culture_conversion_time = 100
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+	production_efficiency = 0.05
+}
+
+mop_canton_legation_city = {
+	min_local_autonomy = 100
+	local_governing_cost = -0.9
+	province_trade_power_value = 25
+	diplomatic_upkeep = 1
+	culture_conversion_cost = 100
+	culture_conversion_time = 100
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+	global_ship_cost = -0.05
+}
+
+mop_chengdu_legation_city = {
+	min_local_autonomy = 100
+	local_governing_cost = -0.9
+	province_trade_power_value = 25
+	diplomatic_upkeep = 1
+	culture_conversion_cost = 100
+	culture_conversion_time = 100
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+	manpower_recovery_speed = 0.05
+}
+
+mop_xian_legation_city = {
+	min_local_autonomy = 100
+	local_governing_cost = -0.9
+	province_trade_power_value = 25
+	diplomatic_upkeep = 1
+	culture_conversion_cost = 100
+	culture_conversion_time = 100
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+	global_trade_power = 0.05
 }

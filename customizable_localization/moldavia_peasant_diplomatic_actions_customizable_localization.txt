@@ -48,4 +48,20 @@ defined_text = {
 			}
 		}
 	}
+	text = { 
+		localisation_key = BLT_ideas_list
+		trigger = {
+			FROM = {
+				tag = BLT
+			}
+		}
+	}
+	text = { 
+		localisation_key = PCC_ideas_list
+		trigger = {
+			FROM = {
+				tag = PCC
+			}
+		}
+	}
 }

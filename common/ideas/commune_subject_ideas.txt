@@ -41,3 +41,40 @@ sloboda_rus_ideas = {
 		colonist_placement_chance = 0.1
 	}
 }
+
+PCC_ideas = {
+	free = yes
+	trigger = {
+		tag = PCC
+	}
+	start = {
+		global_manpower_modifier = 0.33
+		land_forcelimit_modifier = 0.5
+	}
+	bonus = {
+		defensiveness = 0.25
+	}
+	PCC_first = {
+		governing_capacity_modifier = 0.15
+	}
+	PCC_second = {
+		yearly_harmony = 0.25
+		harmonization_speed = 0.25
+	}
+	PCC_third = {
+		development_cost = -0.1
+	}
+	PCC_fourth = {
+		naval_forcelimit_modifier = 0.25
+		ship_trade_power_modifier = 0.1
+	}
+	PCC_fifth = {
+		global_trade_goods_size_modifier = 0.2
+	}
+	PCC_sixth = {
+		land_morale = 0.2
+	}
+	PCC_seventh = {
+		global_unrest = -3
+	}
+}

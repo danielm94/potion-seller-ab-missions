@@ -175,7 +175,11 @@
 577 = "Cuetta"
 578 = "Ron"
 635 = "Timorul de Vest"
+667 = {"Canton" "Canton"}
 668 = "Macao"
+679 = {"Cengdu" "Cengdu"}
+684 = {"Hangciu" "Hangciu"}
+700 = {"Sian" "Sian"}
 735 = "Seul"
 741 = "Noua Oltenie"
 742 = "Gurile Dunarii"
@@ -506,7 +510,7 @@
 1776 = "Carelia Alba"
 1778 = "Casimov"
 1815 = "Patein"
-1816 = "Pekin"
+1816 = {"Pechin" "Pechin"}
 1818 = "Cicuzen"
 1821 = "Nankin"
 1822 = "Sujou"

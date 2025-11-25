@@ -240,4 +240,44 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_chinese_bonus_1
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_chinese_bonus
+			}
+			culture_group = east_asian
+			total_development = 500
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_chinese_bonus_2
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_chinese_bonus
+			}
+			culture_group = east_asian
+			total_development = 1000
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_chinese_bonus_3
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_chinese_bonus
+			}
+			culture_group = east_asian
+			total_development = 1500
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_chinese_bonus_4
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_chinese_bonus
+			}
+			culture_group = east_asian
+			total_development = 2000
+		}
+	}
 }

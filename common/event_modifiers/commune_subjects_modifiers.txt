@@ -118,6 +118,20 @@ integrated_commune_east_slavic_bonus = {
 integrated_commune_baltic_bonus = {
 	max_general_shock = 1
 }
+
 integrated_commune_mongolian_bonus = {
 	province_warscore_cost = -0.05
+}
+
+integrated_commune_chinese_bonus_1 = {
+	governing_capacity_modifier = 0.05
+}
+integrated_commune_chinese_bonus_2 = {
+	governing_capacity_modifier = 0.05
+}
+integrated_commune_chinese_bonus_3 = {
+	governing_capacity_modifier = 0.05
+}
+integrated_commune_chinese_bonus_4 = {
+	governing_capacity_modifier = 0.05
 }
