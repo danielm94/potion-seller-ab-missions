@@ -645,6 +645,7 @@
 2100 = "Vani"
 2104 = "Birigia"
 2105 = "Curu"
+2106 = {"Vladivostoc" "Vladivostoc"}
 2107 = "Ninguta"
 2108 = "Hunciun"
 2110 = "Iehe"

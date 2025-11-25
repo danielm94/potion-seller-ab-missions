@@ -462,3 +462,18 @@ mop_xian_legation_city = {
 	local_religious_unity_contribution = -1
 	global_trade_power = 0.05
 }
+
+mop_vladivostoc_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	heavy_ship_cost = -0.1
+}
+
+mop_venture_into_pacific = {
+	may_explore = yes
+	colonists = 1
+	auto_explore_adjacent_to_colony = yes
+	range = 0.5
+}

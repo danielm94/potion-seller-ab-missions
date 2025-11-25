@@ -1781,6 +1781,7 @@ ab_mop_2 = {
 			mop_silk_road_infrastructure
 		}
 		provinces_to_highlight = {
+			is_empty = no
 			OR = {
 				AND = {
 					is_capital = yes
@@ -1815,6 +1816,7 @@ ab_mop_2 = {
 					china_superregion = {
 						type = all
 						OR = {
+							is_empty = no
 							country_or_commune_subject_or_subject_of_commune_subject_holds = {
 								who = root
 							}
@@ -3105,6 +3107,80 @@ ab_mop_3 = {
 				country_event = {
 					id = moldavia_peasant_events.5
 				}
+			}
+		}
+	}
+	mop_manchuria = {
+		icon = mission_manchu_warrior
+		position = 13
+		required_missions = {
+			mop_qaraqorum
+		}
+		provinces_to_highlight = {
+			region = manchuria_region
+			is_empty = no
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_manchuria_trigger_tt
+					manchuria_region = {
+						type = all
+						OR = {
+							is_empty = yes
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			2106 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_vladivostoc_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_venture_into_pacific
+				duration = 18250
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
 			}
 		}
 	}
