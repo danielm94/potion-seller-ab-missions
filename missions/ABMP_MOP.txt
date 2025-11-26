@@ -5520,8 +5520,57 @@ ab_mop_5 = {
 			mop_scandinavia
 		}
 		provinces_to_highlight = {
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				AND = {
+					province_id = 23
+					OR = {
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							base_production = 12
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						has_coast_defense_building_trigger = no
+						NOT = {
+							has_great_project = {
+								type = bergen
+								tier = 1
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 370
+					OR = {
+						NOT = {
+							development = 25
+						}
+						NOT = {
+							base_production = 10
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 1
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						has_coast_defense_building_trigger = no
+					}
+				}
 			}
 		}
 		trigger = {
@@ -5532,9 +5581,77 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
+				23 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 12
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_great_project = {
+						type = bergen
+						tier = 1
+					}
+				}
+				370 = {
+					owned_by = ROOT
+					development = 25
+					base_production = 10
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 1
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+				}
 			}
 		}
 		effect = {
+			23 = {
+				remove_province_modifier = mop_bergenhus_commune
+				add_province_modifier = {
+					name = mop_great_bergenhus_commune
+					duration = -1
+				}
+			}
+			370 = {
+				remove_province_modifier = mop_reykjavik_commune
+				add_province_modifier = {
+					name = mop_great_reykjavik_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_venture_into_atlantic
+				duration = 18250
+			}
+			define_conquistador = {
+				shock = 3
+				fire = 3
+				manuever = 5
+				siege = 2
+				name = "Gunnar Gunnarsson"
+				trait = goal_oriented_personality
+			}
+			define_explorer = {
+				shock = 2
+				fire = 2
+				manuever = 5
+				siege = 1
+				name = "Gunnar Gunnarssonsson"
+				trait = great_explorer_personality
+			}
+			add_mercantilism = 5
+			add_navy_tradition = 20
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
 		}
 	}
 }

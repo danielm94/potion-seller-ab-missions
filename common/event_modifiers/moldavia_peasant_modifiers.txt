@@ -539,40 +539,21 @@ mop_bergenhus_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_bergenhus_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	ship_trade_power_modifier = 0.1
+	picture = "commune_province_modifier_icon"
+}
+
 mop_copenhaga_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	galley_power = 0.1
-	picture = "commune_province_modifier_icon"
-}
-
-
-mop_gotland_commune = {
-	min_local_autonomy = 25
-	local_governing_cost = -0.75
-	province_trade_power_value = 10
-	local_development_cost = -0.05
-	naval_tradition_from_trade = 0.25
-	picture = "commune_province_modifier_icon"
-}
-
-mop_aland_commune = {
-	min_local_autonomy = 25
-	local_governing_cost = -0.75
-	province_trade_power_value = 10
-	local_development_cost = -0.05
-	naval_tradition_from_battle = 0.25
-	picture = "commune_province_modifier_icon"
-}
-
-mop_reykjavik_commune = {
-	min_local_autonomy = 25
-	local_governing_cost = -0.75
-	province_trade_power_value = 10
-	local_development_cost = -0.05
-	range = 0.1
 	picture = "commune_province_modifier_icon"
 }
 
@@ -585,8 +566,13 @@ mop_great_copenhaga_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
-mop_sound_toll = {
-	global_tax_income = 84
+mop_gotland_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	naval_tradition_from_trade = 0.25
+	picture = "commune_province_modifier_icon"
 }
 
 mop_great_gotland_commune = {
@@ -598,6 +584,15 @@ mop_great_gotland_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_aland_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	naval_tradition_from_battle = 0.25
+	picture = "commune_province_modifier_icon"
+}
+
 mop_great_aland_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -605,4 +600,33 @@ mop_great_aland_commune = {
 	local_development_cost = -0.1
 	naval_tradition_from_battle = 0.5
 	picture = "commune_province_modifier_icon"
+}
+
+mop_reykjavik_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	range = 0.1
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_reykjavik_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	range = 0.2
+	picture = "commune_province_modifier_icon"
+}
+
+mop_sound_toll = {
+	global_tax_income = 84
+}
+
+mop_venture_into_atlantic = {
+	may_explore = yes
+	colonists = 1
+	auto_explore_adjacent_to_colony = yes
+	range = 0.5
 }
