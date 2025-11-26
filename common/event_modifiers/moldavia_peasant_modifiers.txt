@@ -649,3 +649,13 @@ mop_venture_into_atlantic = {
 	auto_explore_adjacent_to_colony = yes
 	range = 0.5
 }
+
+mop_pyeongyang_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	monthly_peasant_zeal = 0.05
+	peasant_zeal_gain_modifier = 0.05
+	picture = "commune_province_modifier_icon"
+}

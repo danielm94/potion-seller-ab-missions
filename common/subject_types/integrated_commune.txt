@@ -314,4 +314,14 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_korean_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_korean_bonus_flag
+			}
+			culture_group = korean_g
+			total_development = 300
+		}
+	}
 }

@@ -444,6 +444,12 @@ on_dependency_gained = {
 				}
 				override_country_name = NSE_commune
 			}
+			else_if = {
+				limit = {
+					tag = KOR
+				}
+				override_country_name = KOR_commune
+			}
 		}
 	}
 }

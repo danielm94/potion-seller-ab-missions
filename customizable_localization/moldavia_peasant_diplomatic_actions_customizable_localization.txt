@@ -88,4 +88,12 @@ defined_text = {
 			}
 		}
 	}
+	text = { 
+		localisation_key = KOR_ideas_list
+		trigger = {
+			FROM = {
+				tag = KOR
+			}
+		}
+	}
 }

@@ -149,3 +149,7 @@ integrated_commune_scandinavian_bonus = {
 	may_explore = yes
 	may_perform_slave_raid = yes
 }
+
+integrated_commune_korean_bonus = {
+	embracement_cost = -0.1
+}

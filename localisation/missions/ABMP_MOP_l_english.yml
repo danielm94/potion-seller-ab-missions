@@ -221,3 +221,8 @@
  desc_mop_great_vladivostoc_commune: "The shipyards here burn day and night. We churn out heavy ships at a pace the monarchs of Asia cannot comprehend, securing our dominance over the eastern waves."
  mop_the_pacific_fleet: "The Pacific Fleet"
  desc_mop_the_pacific_fleet: "The vast distance from the capital demands autonomy. We have commissioned a second command structure, authorizing additional flagships to lead our eastern armada independently of the home fleet."
+ mop_discounted_continue_the_liberation_tt: "The §YContinue the Liberation§! interaction will now cost §G40.00§! §YPeasant Zeal§! instead of §Y50.00§!"
+ unlock_KOR_commune_diplomatic_actions_tt: "Unlock §YCommune Interactions§!£integrated_commune£ that allow you to establish @KOR §YThe Korean Leagues§! in one of your £integrated_commune£§YIntegrated Communes§! that are of §YKorean§! culture. Once @KOR §YThe Korean Leagues§! is established, you will be able to transfer §YKorean§! provinces from your other £integrated_commune£§YIntegrated Communes§! to @KOR §YThe Korean Leagues§!."
+ integrated_commune_korean_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YKorean§! culture will grant us §G-10.0%§! Institution Cost if they have more than §Y300§! total development."
+ mop_korea_title: "The Hermit Kingdom"
+ mop_korea_desc: "The Joseon Dynasty hides behind a veil of isolation, preserving a rigid hierarchy that chokes the common people. We will tear down these walls and flood the peninsula with revolutionary fervor. By establishing a stronghold in Pyongyang and dismantling the power of the Yangban aristocracy, we shall wake the Land of the Morning Calm to a brilliant, liberated dawn."

@@ -113,5 +113,6 @@ is_formable_commune_subject = {
 		tag = WEE
 		tag = SLU
 		tag = NSE
+		tag = KOR
 	}
 }

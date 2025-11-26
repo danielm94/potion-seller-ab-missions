@@ -4485,6 +4485,65 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_korea = {
+		icon = mjz_into_korea
+		position = 13
+		required_missions = {
+			mop_manchuria
+		}
+		provinces_to_highlight = {
+			region = korea_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				korea_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_KOR_commune_diplomatic_actions_tt
+			set_country_flag = unlock_KOR_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_korean_bonus_tt
+			set_country_flag = integrated_commune_korean_bonus_flag
+			custom_tooltip = AB_EMPTY
+			1845 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_pyeongyang_commune
+					duration = -1
+				}
+			}
+
+			custom_tooltip = mop_discounted_continue_the_liberation_tt
+			set_country_flag = mop_discounted_continue_the_liberation
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_5 = {

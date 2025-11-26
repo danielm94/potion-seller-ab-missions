@@ -530,7 +530,7 @@
 1841 = "Malbork"
 1843 = "Cozuche"
 1844 = "Sianhuang"
-1845 = "Phenian"
+1845 = {"Phenian" "Phenian"}
 1846 = "Armeniacon"
 1847 = "Siribesi"
 1850 = "Iaran"
