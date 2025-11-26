@@ -372,3 +372,72 @@ on_province_owner_change = {
 		}
 	}
 }
+
+on_dependency_gained = {
+	if = {
+		limit = {
+			FROM = {
+				is_commune_subject = yes
+				is_formable_commune_subject = yes
+			}
+		}
+		FROM = {
+			set_government_rank_force = 2
+			enable_adopt_new_ideas_commune = yes
+			if = {
+				limit = {
+					tag = ILR
+				}
+				override_country_name = ILR_commune
+			}
+			else_if = {
+				limit = {
+					tag = HLE
+				}
+				override_country_name = HLE_commune
+			}
+			else_if = {
+				limit = {
+					tag = RUM
+				}
+				override_country_name = RUM_commune
+			}
+			else_if = {
+				limit = {
+					tag = ARM
+				}
+				override_country_name = ARM_commune
+			}
+			else_if = {
+				limit = {
+					tag = PLC
+				}
+				override_country_name = PLC_commune
+			}
+			else_if = {
+				limit = {
+					tag = UKR
+				}
+				override_country_name = UKR_commune
+			}
+			else_if = {
+				limit = {
+					tag = BLT
+				}
+				override_country_name = BLT_commune
+			}
+			else_if = {
+				limit = {
+					tag = WEE
+				}
+				override_country_name = WEE_commune
+			}
+			else_if = {
+				limit = {
+					tag = SLU
+				}
+				override_country_name = SLU_commune
+			}
+		}
+	}
+}

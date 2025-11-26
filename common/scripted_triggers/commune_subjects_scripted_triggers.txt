@@ -79,10 +79,12 @@ is_investing_mana_in_commune = {
 has_been_allied_commune = {
 	has_country_flag = was_allied_commune
 }
+
 #SCOPE = COUNTRY
 has_been_sister_commune = {
 	has_country_flag = was_sister_commune
 }
+
 #SCOPE = COUNTRY
 has_been_integrated_commune = {
 	has_country_flag = was_integrated_commune
@@ -95,5 +97,20 @@ is_wendish_culture_group = {
 		culture = Wendish
 		culture = pommeranian
 		culture = sorbian
+	}
+}
+
+is_formable_commune_subject = {
+	OR = {
+		tag = ILR
+		tag = HLE
+		tag = RUM
+		tag = ARM
+		tag = PLC
+		tag = UKR
+		tag = BLT
+		tag = PCC
+		tag = WEE
+		tag = SLU
 	}
 }
