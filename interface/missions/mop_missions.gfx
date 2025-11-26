@@ -59,4 +59,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_vladivostoc.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_pyongyang"
+		texturefile = "gfx/interface/missions/mop/mop_pyongyang.dds"
+		loadType = "INGAME"
+	}
 }

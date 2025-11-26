@@ -1,7 +1,12 @@
 peasant_expansion_mod = {
 	morale_damage = 0.1
-	rebel_support_efficiency = 1
+	rebel_support_efficiency = 2
 	ae_impact = -0.1
+}
+peasant_expansion_mod_enhanced = {
+	morale_damage = 0.15
+	rebel_support_efficiency = 3
+	ae_impact = -0.15
 }
 
 negate_commune_subject_penalty = {

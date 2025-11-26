@@ -4532,7 +4532,6 @@ ab_mop_4 = {
 					duration = -1
 				}
 			}
-
 			custom_tooltip = mop_discounted_continue_the_liberation_tt
 			set_country_flag = mop_discounted_continue_the_liberation
 			change_peasant_zeal = {
@@ -4542,6 +4541,90 @@ ab_mop_4 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+		}
+	}
+	mop_pyongyang = {
+		icon = GFX_mop_pyongyang
+		position = 14
+		required_missions = {
+			mop_korea
+		}
+		provinces_to_highlight = {
+			province_id = 1845
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_production_building_trigger = no
+				has_manpower_building_trigger = no
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				has_road_building_trigger = no
+				has_manufactory_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1845 = {
+					owned_by = root
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_production_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_road_building_trigger = yes
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+		effect = {
+			1845 = {
+				remove_province_modifier = mop_pyeongyang_commune
+				add_province_modifier = {
+					name = mop_great_pyeongyang_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = mop_enhanced_peasant_expansion_tt
+			set_country_flag = mop_enhanced_peasant_expansion
+			tooltip = {
+				add_country_modifier = {
+					name = peasant_expansion_mod_enhanced
+					duration = 3650
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+			add_corruption = 4
 		}
 	}
 }

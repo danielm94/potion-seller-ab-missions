@@ -134,26 +134,19 @@ peasant_zealotry = {
 					faction = abolitionists_faction
 					influence = 20
 				}
-				add_country_modifier = {
-					name = peasant_expansion_mod
-					duration = 3650
-				}
-				custom_tooltip = every_commune_subject_negate_penalty_tt
-				tooltip = {
+				if = {
+					limit = {
+						has_country_flag = mop_enhanced_peasant_expansion
+					}
 					add_country_modifier = {
-						name = negate_commune_subject_penalty
+						name = peasant_expansion_mod_enhanced
 						duration = 3650
 					}
 				}
-				hidden_effect = {
-					every_subject_country = {
-						limit = {
-							is_commune_subject = yes
-						}
-						add_country_modifier = {
-							name = negate_commune_subject_penalty
-							duration = 3650
-						}
+				else = {
+					add_country_modifier = {
+						name = peasant_expansion_mod
+						duration = 3650
 					}
 				}
 			}
