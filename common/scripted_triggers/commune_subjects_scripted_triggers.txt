@@ -112,5 +112,6 @@ is_formable_commune_subject = {
 		tag = PCC
 		tag = WEE
 		tag = SLU
+		tag = NSE
 	}
 }

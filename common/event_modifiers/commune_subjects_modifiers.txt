@@ -144,3 +144,8 @@ integrated_commune_finnic_bonus = {
 	hostile_attrition = 1
 	max_hostile_attrition = 1
 }
+
+integrated_commune_scandinavian_bonus = {
+	may_explore = yes
+	may_perform_slave_raid = yes
+}

@@ -304,4 +304,14 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_scandinavian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_scandinavian_bonus
+			}
+			culture_group = scandinavian
+			total_development = 450
+		}
+	}
 }
