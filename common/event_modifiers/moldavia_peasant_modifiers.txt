@@ -575,3 +575,34 @@ mop_reykjavik_commune = {
 	range = 0.1
 	picture = "commune_province_modifier_icon"
 }
+
+mop_great_copenhaga_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	galley_power = 0.2
+	picture = "commune_province_modifier_icon"
+}
+
+mop_sound_toll = {
+	global_tax_income = 84
+}
+
+mop_great_gotland_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	naval_tradition_from_trade = 0.5
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_aland_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	naval_tradition_from_battle = 0.5
+	picture = "commune_province_modifier_icon"
+}

@@ -35,6 +35,19 @@ kiel_canal = {
 	#what to do when it's built
 	on_built = {
 		add_canal = kiel_canal
+		#PotionSeller
+		hidden_effect = {
+			if = {
+				limit = {
+					12 = {
+						has_province_modifier = mop_sound_toll
+					}
+				}
+				12 = {
+					remove_province_modifier = mop_sound_toll
+				}
+			}
+		}
 	}
 	
 	#what to do when it's destroyed

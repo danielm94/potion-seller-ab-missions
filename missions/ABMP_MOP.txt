@@ -4167,6 +4167,126 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_baltic_sea = {
+		icon = mission_the_sound_toll
+		position = 13
+		required_missions = {
+			mop_scandinavia
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = sound_toll_trigger_tt
+					denmark_area = {
+						type = all
+						country_or_commune_subject_or_subject_of_commune_subject_holds = {
+							who = ROOT
+						}
+						development = 10
+						has_coast_defense_building_trigger = yes
+					}
+					6 = {
+						country_or_commune_subject_or_subject_of_commune_subject_holds = {
+							who = ROOT
+						}
+						development = 10
+						has_coast_defense_building_trigger = yes
+					}
+				}
+				12 = {
+					owned_by = ROOT
+					development = 30
+					base_production = 12
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_great_project = {
+						type = kronborg
+						tier = 1
+					}
+					has_great_project = {
+						type = sound_toll
+						tier = 1
+					}
+				}
+				25 = {
+					owned_by = ROOT
+					development = 25
+					base_production = 10
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 1
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_great_project = {
+						type = visby_city
+						tier = 1
+					}
+				}
+				1930 = {
+					owned_by = ROOT
+					development = 25
+					base_production = 10
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 1
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			12 = {
+				remove_province_modifier = mop_copenhaga_commune
+				add_province_modifier = {
+					name = mop_great_copenhaga_commune
+					duration = -1
+				}
+				add_province_modifier = {
+					name = mop_sound_toll
+					duration = -1
+					desc = until_kiel_canal_is_constructed_desc
+				}
+			}
+			25 = {
+				remove_province_modifier = mop_gotland_commune
+				add_province_modifier = {
+					name = mop_great_gotland_commune
+					duration = -1
+				}
+			}
+			1930 = {
+				remove_province_modifier = mop_great_aland_commune
+				add_province_modifier = {
+					name = mop_great_aland_commune
+					duration = -1
+				}
+			}
+			add_mercantilism = 7
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
+			}
+		}
+	}
 }
 
 ab_mop_5 = {
