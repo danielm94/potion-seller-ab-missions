@@ -3,6 +3,8 @@
 14 = "Funen"
 18 = "Laponia"
 19 = "Ostrobotnia"
+23 = {"Berghenhus" "Berghen"}
+25 = {"Gotlanda" Visbi}
 27 = "Turku"
 28 = "Uusimaa"
 30 = "Viborg"
@@ -96,6 +98,7 @@
 340 = "Constantina"
 344 = "Marrakesh"
 367 = "Azore"
+370 = {"Reichiavic" "Reichiavic"}
 377 = "Alep"
 378 = "Tripoli"
 379 = {"Iudeea" "Ierusalim"}
@@ -548,7 +551,7 @@
 1878 = "Aquisgrana"
 1879 = "Alencon"
 1881 = "Sanmartin"
-1930 = "Aland"
+1930 = {"Alandia" "Mariehamn"}
 1931 = "Frisia de Est"
 1935 = "Mitava"
 1936 = "Caunas"
