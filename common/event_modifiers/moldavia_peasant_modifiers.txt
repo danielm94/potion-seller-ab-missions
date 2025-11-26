@@ -499,11 +499,30 @@ mop_vladivostoc_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_vladivostoc_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	heavy_ship_cost = -0.2
+	picture = "commune_province_modifier_icon"
+}
+
 mop_venture_into_pacific = {
 	may_explore = yes
 	colonists = 1
 	auto_explore_adjacent_to_colony = yes
 	range = 0.5
+}
+
+mop_the_pacific_fleet = {
+	max_flagships = 2
+	naval_forcelimit_modifier = 0.05
+}
+
+mop_prepare_to_invade_japan = {
+	heavy_ship_power = 0.1
+	disengagement_chance = 0.05
 }
 
 mop_berlin_commune = {

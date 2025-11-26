@@ -3184,6 +3184,84 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_vladivostoc = {
+		icon = GFX_mop_vladivostoc
+		position = 14
+		required_missions = {
+			mop_manchuria
+		}
+		provinces_to_highlight = {
+			province_id = 2106
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					base_production = 12
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_fort_building_trigger = no
+				has_trade_building_trigger = no
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				2106 = {
+					owned_by = root
+					development = 30
+					base_production = 12
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_road_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			2106 = {
+				remove_province_modifier = mop_vladivostoc_commune
+				add_province_modifier = {
+					name = mop_great_vladivostoc_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_the_pacific_fleet
+				duration = -1
+			}
+			add_country_modifier = {
+				name = mop_prepare_to_invade_japan
+				duration = 7300
+			}
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 	mop_dismantle_the_stratocracy = {
 		icon = mission_nicaea
 		position = 16
@@ -5525,6 +5603,9 @@ ab_mop_5 = {
 					province_id = 23
 					OR = {
 						NOT = {
+							owned_by = root
+						}
+						NOT = {
 							development = 30
 						}
 						NOT = {
@@ -5552,6 +5633,9 @@ ab_mop_5 = {
 				AND = {
 					province_id = 370
 					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
 						NOT = {
 							development = 25
 						}
