@@ -4280,6 +4280,16 @@ ab_mop_4 = {
 					duration = -1
 				}
 			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+				culture = danish
+				location = 12
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = unlock_can_use_propagate_religion_tt
+			set_country_flag = can_use_propagate_religion
 			add_mercantilism = 7
 			add_faction_influence = {
 				faction = exemplarists_faction
