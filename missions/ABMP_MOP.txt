@@ -5263,6 +5263,7 @@ ab_mop_5 = {
 					}
 				}
 			}
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 25
 			}
