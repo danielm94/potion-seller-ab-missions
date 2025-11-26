@@ -514,3 +514,18 @@ mop_berlin_commune = {
 	army_tradition = 0.5
 	picture = "commune_province_modifier_icon"
 }
+
+mop_great_berlin_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	army_tradition = 1
+	picture = "commune_province_modifier_icon"
+}
+
+mop_wendish_fortifications = {
+	defensiveness = 0.25
+	fort_maintenance_modifier = -0.25
+	local_defender_dice_roll_bonus = 1
+}

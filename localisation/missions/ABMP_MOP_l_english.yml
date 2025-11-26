@@ -195,3 +195,6 @@
  integrated_commune_wendish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YWendish§!, §YPomeranian§!, or §YSorbian§! culture will grant us §G-10.0%§! Fort Maintenance if they have more than §Y300§! total development."
  mop_free_the_wends_title: "The Race for the Elbe"
  mop_free_the_wends_desc: "The German princes look East with hungry eyes. We know their ambition: the Drive to the East. If we hesitate, the Holy Roman Emperor will extend his protection over these lands, and the Wends will be swallowed by feudalism. We must strike first. We will secure the lands between the Oder and the Elbe, turning the Wendish tribes into a permanent shield against the Empire."
+ mop_fortify_berlin_title: "Fortify Berlin"
+ mop_fortify_berlin_desc: "Berlin stands on the precipice. Beyond the Elbe, the Holy Roman Emperor marshals his forces, waiting for a moment of weakness. We must turn this city into an impregnable fortress. From the Brandenburg Gate to the banks of the Spree, every street shall be a rampart and every citizen a defender. Let the Imperial armies break their teeth on our walls."
+ every_owned_wendish_province_with_fort_tt: "Every owned or subject-held province in the §YWendia§! region with a fort §Gupgrades its fort§! and gains the following modifier:"

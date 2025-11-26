@@ -49,4 +49,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_qaraqorum.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_fortify_berlin"
+		texturefile = "gfx/interface/missions/mop/mop_fortify_berlin.dds"
+		loadType = "INGAME"
+	}
 }
