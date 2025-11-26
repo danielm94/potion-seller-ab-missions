@@ -294,4 +294,14 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_finnic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_finnic_bonus
+			}
+			culture_group = Finnic
+			total_development = 300
+		}
+	}
 }

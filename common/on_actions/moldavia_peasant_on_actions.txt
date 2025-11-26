@@ -441,3 +441,64 @@ on_dependency_gained = {
 		}
 	}
 }
+on_adm_development = {
+	if = {
+		limit = {
+			has_terrain = forest
+			OR = {
+				owner = {
+					overlord = {
+						has_country_flag = forest_dev_20_percent_extra_dev
+					}
+				}
+				owner = {
+					has_country_flag = forest_dev_20_percent_extra_dev
+				}
+			}
+		}
+		random = {
+			chance = 20
+			add_base_tax = 1
+		}
+	}
+}
+
+on_dip_development = {
+	if = {
+		limit = {
+			has_terrain = forest
+			owner = {
+				overlord = {
+					has_country_flag = forest_dev_20_percent_extra_dev
+				}
+			}
+			owner = {
+				has_country_flag = forest_dev_20_percent_extra_dev
+			}
+		}
+		random = {
+			chance = 20
+			add_base_production = 1
+		}
+	}
+}
+
+on_mil_development = {
+	if = {
+		limit = {
+			has_terrain = forest
+			owner = {
+				overlord = {
+					has_country_flag = forest_dev_20_percent_extra_dev
+				}
+			}
+			owner = {
+				has_country_flag = forest_dev_20_percent_extra_dev
+			}
+		}
+		random = {
+			chance = 20
+			add_base_manpower = 1
+		}
+	}
+}

@@ -2243,3 +2243,128 @@ integrate_into_wendish_communes = {
 		always = no
 	}
 }
+
+establish_finnic_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = SLU
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_SLU_commune_diplomatic_actions
+		FROM = {
+			culture_group = Finnic
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = SLU
+			set_government_rank_force = 2
+			override_country_name = SLU_commune
+			change_country_color = {
+				country = ROOT
+			}
+			every_province = {
+				limit = {
+					culture_group = Finnic
+				}
+				add_permanent_claim = SLU
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_finnic_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_SLU_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = SLU
+		SLU = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = SLU
+			}
+			any_owned_province = {
+				culture_group = Finnic
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = Finnic
+				}
+				add_core = SLU
+				cede_province = SLU
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
