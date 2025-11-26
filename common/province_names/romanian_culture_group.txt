@@ -1,4 +1,4 @@
-12 = "Zeelanda"
+12 = {"Copenhaga" "Copenhaga"}
 13 = "Schleswig"
 14 = "Funen"
 18 = "Laponia"
@@ -1665,7 +1665,6 @@
 367 = "Insulele Soimului"
 163 = "Candia"
 1325 = "Balaton"
-12 = "Copenhaga"
 1767 = "Osiec"
 4947 = "Camenita"
 4950 = "Ciongrad"
