@@ -4174,8 +4174,118 @@ ab_mop_4 = {
 			mop_scandinavia
 		}
 		provinces_to_highlight = {
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				AND = {
+					OR = {
+						area = denmark_area
+						province_id = 6
+					}
+					OR = {
+						NOT = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+						}
+						NOT = {
+							development = 10
+						}
+						NOT = {
+							has_coast_defense_building_trigger = yes
+						}
+					}
+				}
+				AND = {
+					province_id = 12
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							base_production = 12
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						NOT = {
+							has_great_project = {
+								type = kronborg
+								tier = 1
+							}
+						}
+						NOT = {
+							has_great_project = {
+								type = sound_toll
+								tier = 1
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 25
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							development = 25
+						}
+						NOT = {
+							base_production = 10
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 1
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						has_coast_defense_building_trigger = no
+						NOT = {
+							has_great_project = {
+								type = visby_city
+								tier = 1
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 1930
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							development = 25
+						}
+						NOT = {
+							base_production = 10
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 1
+						}
+						has_fort_building_trigger = no
+						has_trade_building_trigger = no
+						has_dock_building_trigger = no
+						has_shipyard_building_trigger = no
+						has_coast_defense_building_trigger = no
+					}
+				}
 			}
 		}
 		trigger = {
@@ -5401,6 +5511,30 @@ ab_mop_5 = {
 				faction = abolitionists_faction
 				influence = 25
 			}
+		}
+	}
+	mop_north_sea = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 13
+		required_missions = {
+			mop_scandinavia
+		}
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+			}
+		}
+		effect = {
 		}
 	}
 }
