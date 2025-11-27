@@ -2536,12 +2536,14 @@ establish_korean_commune = {
 			define_ruler = {
 				name = "Il-jong"
 				dynasty = "Kim"
-				adm = 6
-				dip = 6
-				mil = 6
+				adm = 2
+				dip = 1
+				mil = 3
 				culture = korean
 				religion = noreligion
 			}
+			add_ruler_personality = cruel_personality
+			add_ruler_personality = drunkard_personality
 			set_government_rank_force = 2
 			override_country_name = KOR_commune
 			change_country_color = {
@@ -2554,7 +2556,6 @@ establish_korean_commune = {
 				add_permanent_claim = KOR
 			}
 			enable_adopt_new_ideas_commune = yes
-			add_ruler_personality = peasant_revolt_leader_personality
 		}
 	}
 	ai_will_do = {
