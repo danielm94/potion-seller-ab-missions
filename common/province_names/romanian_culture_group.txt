@@ -367,7 +367,7 @@
 1011 = "Chinugeulini"
 1013 = "Ceongiu"
 1016 = "Ha Tin"
-1020 = "Chiot"
+1020 = {"Chioto" "Chioto"}
 1021 = "Setu"
 1023 = "Ecizen"
 1024 = "Ecigo"

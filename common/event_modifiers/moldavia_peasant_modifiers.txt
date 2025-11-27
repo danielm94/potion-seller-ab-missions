@@ -669,3 +669,12 @@ mop_great_pyeongyang_commune = {
 	peasant_zeal_gain_modifier = 0.1
 	picture = "commune_province_modifier_icon"
 }
+
+mop_chioto_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	infantry_shock = 0.25
+	picture = "commune_province_modifier_icon"
+}

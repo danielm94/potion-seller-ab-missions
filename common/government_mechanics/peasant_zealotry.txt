@@ -30,16 +30,39 @@ peasant_zealotry = {
 				NOT = {
 					has_country_modifier = peasant_expansion_mod
 				}
-				has_government_power = {
-					mechanic_type = peasant_zealotry
-					power_type = peasant_zeal
-					value = 50
+				if = {
+					limit = {
+						has_country_flag = mop_discounted_cultivate_the_land
+					}
+					has_government_power = {
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						value = 40
+					}
+				}
+				else = {
+					has_government_power = {
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						value = 50
+					}
 				}
 			}
 			effect = {
-				change_peasant_zeal = {
-					value = -50
-					scaled_with_gain_modifier = no
+				if = {
+					limit = {
+						has_country_flag = mop_discounted_cultivate_the_land
+					}
+					change_peasant_zeal = {
+						value = -40
+						scaled_with_gain_modifier = no
+					}
+				}
+				else = {
+					change_peasant_zeal = {
+						value = -50
+						scaled_with_gain_modifier = no
+					}
 				}
 				add_faction_influence = {
 					faction = exemplarists_faction

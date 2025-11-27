@@ -324,4 +324,14 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_japanese_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_japanese_bonus_flag
+			}
+			culture_group = japanese_g
+			total_development = 450
+		}
+	}
 }

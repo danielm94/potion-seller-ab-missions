@@ -114,5 +114,6 @@ is_formable_commune_subject = {
 		tag = SLU
 		tag = NSE
 		tag = KOR
+		tag = JAP
 	}
 }

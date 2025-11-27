@@ -450,6 +450,13 @@ on_dependency_gained = {
 				}
 				override_country_name = KOR_commune
 			}
+			else_if = {
+				limit = {
+					tag = JAP
+				}
+				override_country_name = JAP_commune
+				add_government_reform = ikko_ikki_republic_reform
+			}
 		}
 	}
 }
