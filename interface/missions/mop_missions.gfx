@@ -74,4 +74,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_xinan.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_slay_the_dragon"
+		texturefile = "gfx/interface/missions/mop/mop_slay_the_dragon.dds"
+		loadType = "INGAME"
+	}
 }

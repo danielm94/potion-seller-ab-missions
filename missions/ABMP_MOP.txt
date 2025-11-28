@@ -1825,8 +1825,6 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			# custom_tooltip = unlock_PCC_commune_diplomatic_actions_tt
-			# set_country_flag = unlock_PCC_commune_diplomatic_actions
 			custom_tooltip = integrated_commune_chinese_bonus_tt
 			set_country_flag = integrated_commune_chinese_bonus
 			custom_tooltip = AB_EMPTY
@@ -3586,6 +3584,78 @@ ab_mop_3 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+	mop_slay_the_dragon = {
+		icon = GFX_mop_slay_the_dragon
+		position = 16
+		required_missions = {
+			mop_develop_south_china
+			mop_develop_xinan
+		}
+		provinces_to_highlight = {
+			is_empty = no
+			OR = {
+				AND = {
+					is_capital = yes
+					owner = {
+						is_emperor_of_china = yes
+					}
+				}
+				AND = {
+					superregion = china_superregion
+					NOT = {
+						country_or_commune_subject_or_subject_of_commune_subject_holds = {
+							who = root
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				has_dismantled_the_empire_of_china = yes
+				custom_trigger_tooltip = {
+					tooltip = mop_destroy_eoc_trigger_tt
+					china_superregion = {
+						type = all
+						OR = {
+							is_empty = no
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_PCC_commune_diplomatic_actions_tt
+			set_country_flag = unlock_PCC_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_dragon_slayer
+				duration = -1
+			}
+			change_peasant_zeal = {
+				value = 50
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 25
 			}
 		}
 	}
