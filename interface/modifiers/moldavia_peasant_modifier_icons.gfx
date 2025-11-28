@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "commune_province_modifier_icon"
 		texturefile = "gfx/interface/ideas_EU4/commune_province_modifier_icon.dds"
 	}
+	spriteType = {
+		name = "tea_monopoly"
+		texturefile = "gfx/interface/ideas_EU4/tea_monopoly.dds"
+	}
 }

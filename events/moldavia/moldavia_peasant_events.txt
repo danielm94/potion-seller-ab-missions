@@ -320,9 +320,7 @@ country_event = {
 	title = moldavia_peasant_events.5.t
 	desc = moldavia_peasant_events.5.d
 	picture = URBANISATION_INCIDENT_eventPicture
-	
 	is_triggered_only = yes
-
 	after = {
 		hidden_effect = {
 			country_event = {
@@ -331,37 +329,82 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = ab_yuan.8.a
 		add_years_of_income = -0.25
-		add_country_modifier = { 
-			name = yua_festival_reward_power 
-			duration = 1825 
+		add_country_modifier = {
+			name = yua_festival_reward_power
+			duration = 1825
 		}
 	}
-
 	option = {
 		name = ab_yuan.8.b
 		add_years_of_income = -0.25
-		add_country_modifier = { 
-			name = yua_festival_reward_speed 
-			duration = 1825 
+		add_country_modifier = {
+			name = yua_festival_reward_speed
+			duration = 1825
 		}
 	}
-
 	option = {
 		name = ab_yuan.8.c
 		add_years_of_income = -0.25
-		add_country_modifier = { 
+		add_country_modifier = {
 			name = yua_festival_reward_shock
-			duration = 1825 
+			duration = 1825
 		}
 	}
-	
 	option = {
 		name = ab_yuan.8.de
 		add_prestige = -10
 		custom_tooltip = YUAN_NO_DISCIPLINE
+	}
+}
+
+country_event = {
+	id = moldavia_peasant_events.6
+	title = moldavia_peasant_events.6.t
+	desc = {
+		desc = moldavia_peasant_events.6.d_pcc_exists
+		trigger = {
+			exists = PCC
+		}
+	}
+	desc = {
+		desc = moldavia_peasant_events.6.d_pcc_not_exists
+		trigger = {
+			NOT = {
+				exists = PCC
+			}
+		}
+	}
+	picture = BUDDHISM_MONASTERY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_peasant_events.6.a
+		custom_tooltip = unlock_GPH_commune_diplomatic_actions_tt
+		set_country_flag = unlock_GPH_commune_diplomatic_actions
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = integrated_commune_tibetan_bonus_tt
+		set_country_flag = integrated_commune_tibetan_bonus
+		custom_tooltip = AB_EMPTY
+		add_country_modifier = {
+			name = mop_freed_tibet
+			duration = -1
+		}
+		change_peasant_zeal = {
+			value = 25
+		}
+	}
+	option = {
+		name = moldavia_peasant_events.6.b
+		set_country_flag = china_can_absorb_tibet
+		add_country_modifier = {
+			name = mop_tea_monopoly
+			duration = -1
+		}
+		change_peasant_zeal = {
+			value = -25
+			scaled_with_gain_modifier = no
+		}
 	}
 }

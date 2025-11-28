@@ -2067,6 +2067,14 @@ integrate_into_chinese_communes = {
 				OR = {
 					culture_group = east_asian
 					superregion = china_superregion
+					if = {
+						limit = {
+							ROOT = {
+								has_country_flag = china_can_absorb_tibet
+							}
+						}
+						culture_group = tibetan_group
+					}
 				}
 			}
 			OR = {
@@ -2107,6 +2115,14 @@ integrate_into_chinese_communes = {
 					OR = {
 						culture_group = east_asian
 						superregion = china_superregion
+						if = {
+							limit = {
+								ROOT = {
+									has_country_flag = china_can_absorb_tibet
+								}
+							}
+							culture_group = tibetan_group
+						}
 					}
 				}
 				add_core = PCC
@@ -2680,7 +2696,6 @@ establish_japanese_commune = {
 				add_permanent_claim = JAP
 			}
 			enable_adopt_new_ideas_commune = yes
-			add_ruler_personality = peasant_revolt_leader_personality
 		}
 	}
 	ai_will_do = {
@@ -2747,6 +2762,144 @@ integrate_into_japanese_communes = {
 				}
 				add_core = JAP
 				cede_province = JAP
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+establish_tibetan_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = GPH
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_GPH_commune_diplomatic_actions
+		FROM = {
+			culture_group = tibetan_group
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = GPH
+			set_government_rank_force = 2
+			add_government_reform = ganden_phodrang_reform
+			change_country_color = {
+				country = ROOT
+			}
+			every_province = {
+				limit = {
+					culture_group = tibetan_group
+				}
+				add_permanent_claim = GPH
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_tibetan_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_GPH_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = GPH
+		GPH = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = GPH
+			}
+			any_owned_province = {
+				culture_group = tibetan_group
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = {
+					culture_group = east_asian
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = china_wants_tibet_tt
+				always = no
+			}
+		}
+		else = {
+			are_we_and_target_at_peace = {
+				target = FROM
+			}
+			FROM = {
+				does_subject_have_0_liberty_desire = yes
+			}
+			reverse_has_opinion = {
+				who = FROM
+				value = 200
+			}
+			FROM = {
+				trust = {
+					who = PREV
+					value = 100
+				}
+			}
+			is_colonial_nation = no
+		}
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = tibetan_group
+				}
+				add_core = GPH
+				cede_province = GPH
 			}
 		}
 	}

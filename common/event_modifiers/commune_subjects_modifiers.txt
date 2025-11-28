@@ -166,3 +166,7 @@ league_subject_rice_bonus = {
 	manpower_recovery_speed = 0.1
 	liberty_desire = -5
 }
+
+integrated_commune_tibetan_bonus = {
+	no_religion_penalty = yes
+}

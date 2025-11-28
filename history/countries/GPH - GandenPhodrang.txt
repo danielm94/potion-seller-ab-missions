@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = ganden_phodrang_reform
+government_rank = 2
+primary_culture = tibetan
+technology_group = chinese
+religion = vajrayana
+capital = 677

@@ -2157,6 +2157,58 @@ ab_mop_2 = {
 			}
 		}
 	}
+	mop_tibet = {
+		icon = GFX_mop_tibet
+		position = 16
+		required_missions = {
+			mop_develop_xinan
+		}
+		provinces_to_highlight = {
+			region = tibet_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				tibet_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			565 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_thimpu_commune
+					duration = -1
+				}
+			}
+			country_event = {
+				id = moldavia_peasant_events.6
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 	mop_liberate_thrace = {
 		icon = byz_city_of_worlds_desire
 		position = 18
