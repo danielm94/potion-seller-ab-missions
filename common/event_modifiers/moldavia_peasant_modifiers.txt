@@ -433,6 +433,14 @@ mop_beijing_commune = {
 	vassal_income = 0.1
 	picture = "commune_province_modifier_icon"
 }
+mop_great_beijing_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	vassal_income = 0.2
+	picture = "commune_province_modifier_icon"
+}
 
 mop_hangzhou_legation_city = {
 	min_local_autonomy = 25
@@ -467,6 +475,15 @@ mop_xian_commune = {
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	global_trade_power = 0.05
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_xian_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	global_trade_power = 0.1
 	picture = "commune_province_modifier_icon"
 }
 

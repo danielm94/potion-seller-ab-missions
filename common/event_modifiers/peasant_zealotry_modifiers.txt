@@ -9,13 +9,6 @@ peasant_expansion_mod_enhanced = {
 	ae_impact = -0.15
 }
 
-negate_commune_subject_penalty = {
-	global_regiment_recruit_speed = -0.25
-	core_creation = -0.1
-	diplomatic_annexation_cost = -0.1
-	province_warscore_cost = -0.25
-}
-
 peasant_development_mod = {
 	stability_cost_to_declare_war = 3
 	build_cost = -0.1
@@ -32,4 +25,9 @@ peasant_development_mod_enhanced = {
 peasant_diplomacy_mod = {
 	diplomatic_annexation_cost = -0.1
 	reduced_liberty_desire = 10
+}
+
+peasant_diplomacy_mod_enhanced = {
+	diplomatic_annexation_cost = -0.15
+	reduced_liberty_desire = 15
 }

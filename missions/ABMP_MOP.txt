@@ -1774,7 +1774,7 @@ ab_mop_2 = {
 		}
 	}
 	mop_north_china = {
-		icon = jap_conquer_north_china
+		icon = mng_nomadic_frontier
 		position = 11
 		required_missions = {
 			mop_push_into_siberia
@@ -1877,7 +1877,7 @@ ab_mop_2 = {
 				# 	}
 				# }
 			}
-			custom_tooltip  = mop_discounted_rally_the_communes_tt
+			custom_tooltip = mop_discounted_rally_the_communes_tt
 			set_country_flag = mop_discounted_rally_the_communes
 			custom_tooltip = enable_palace_of_the_east_tt
 			set_country_flag = enable_palace_of_the_east
@@ -1886,8 +1886,138 @@ ab_mop_2 = {
 				value = 25
 			}
 			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 25
+				faction = leaguists_faction
+				influence = 15
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_develop_north_china = {
+		icon = jap_conquer_north_china
+		position = 13
+		required_missions = {
+			mop_north_china
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 1816
+					OR = {
+						NOT = {
+							development = 45
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 3
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						has_courthouse_building_trigger = no
+						NOT = {
+							has_building = state_house
+						}
+						has_road_building_trigger = no
+						has_fort_building_trigger = no
+						NOT = {
+							has_great_project = {
+								type = forbidden_city_peasant
+								tier = 1
+							}
+						}
+						NOT = {
+							has_great_project = {
+								type = northern_canal
+								tier = 1
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 700
+					OR = {
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_production_building_trigger = no
+						has_fort_building_trigger = no
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1816 = {
+					development = 45
+					num_of_times_expanded_infrastructure = 3
+					province_has_center_of_trade_of_level = 2
+					has_courthouse_building_trigger = yes
+					has_building = state_house
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = forbidden_city_peasant
+						tier = 1
+					}
+					has_great_project = {
+						type = northern_canal
+						tier = 1
+					}
+				}
+				700 = {
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
+					has_production_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			1816 = {
+				remove_province_modifier = mop_beijing_commune
+				add_province_modifier = {
+					name = mop_great_beijing_commune
+					duration = -1
+				}
+			}
+			700 = {
+				remove_province_modifier = mop_xian_commune
+				add_province_modifier = {
+					name = mop_great_xian_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = mop_enhanced_rally_the_communes_tt
+			set_country_flag = mop_enhanced_rally_the_communes
+			tooltip = {
+				add_country_modifier = {
+					name = peasant_diplomacy_mod_enhanced
+					duration = -1
+				}
+			}
+			add_reform_progress_big_effect = yes
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
 			}
 		}
 	}
