@@ -442,7 +442,7 @@ mop_great_beijing_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
-mop_hangzhou_legation_city = {
+mop_hangzhou_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
@@ -451,12 +451,12 @@ mop_hangzhou_legation_city = {
 	picture = "commune_province_modifier_icon"
 }
 
-mop_canton_legation_city = {
+mop_canton_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
-	global_ship_cost = -0.05
+	diplomatic_upkeep = 1
 	picture = "commune_province_modifier_icon"
 }
 

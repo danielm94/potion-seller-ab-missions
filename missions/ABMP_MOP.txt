@@ -1849,24 +1849,6 @@ ab_mop_2 = {
 				}
 			}
 			hidden_effect = {
-				# 684 = {
-				# 	remove_core = owner
-				# 	add_core = root
-				# 	cede_province = root
-				# 	add_province_modifier = {
-				# 		name = mop_hangzhou_legation_city
-				# 		duration = -1
-				# 	}
-				# }
-				# 667 = {
-				# 	remove_core = owner
-				# 	add_core = root
-				# 	cede_province = root
-				# 	add_province_modifier = {
-				# 		name = mop_canton_legation_city
-				# 		duration = -1
-				# 	}
-				# }
 				# 679 = {
 				# 	remove_core = owner
 				# 	add_core = root
@@ -3296,6 +3278,73 @@ ab_mop_3 = {
 				name = mop_venture_into_pacific
 				duration = 18250
 			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_south_china = {
+		icon = mission_to_the_south_china_sea
+		position = 14
+		required_missions = {
+			mop_develop_north_china
+		}
+		provinces_to_highlight = {
+			region = south_china_region
+			is_empty = no
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_south_china_trigger_tt
+					south_china_region = {
+						type = all
+						OR = {
+							is_empty = yes
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			684 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_hangzhou_commune
+					duration = -1
+				}
+			}
+			667 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_canton_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = mop_center_of_trade_upgrade_bonus_tt
+			set_country_flag = mop_center_of_trade_upgrade_bonus
 			change_peasant_zeal = {
 				value = 10
 			}

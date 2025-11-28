@@ -521,3 +521,35 @@ on_mil_development = {
 		}
 	}
 }
+
+on_center_of_trade_upgrade = {
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = mop_center_of_trade_upgrade_bonus
+					overlord = {
+						has_country_flag = mop_center_of_trade_upgrade_bonus
+					}
+				}
+			}
+		}
+		add_base_production = 1
+	}
+}
+
+on_center_of_trade_downgrade = {
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = mop_center_of_trade_upgrade_bonus
+					overlord = {
+						has_country_flag = mop_center_of_trade_upgrade_bonus
+					}
+				}
+			}
+		}
+		add_base_production = -1
+	}
+}
