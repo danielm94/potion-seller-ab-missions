@@ -2059,23 +2059,34 @@ integrate_into_chinese_communes = {
 				type = integrated_commune
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = china_can_absorb_tibet
+			}
+			FROM = {
+				any_owned_province = {
+					OR = {
+						culture_group = east_asian
+						superregion = china_superregion
+						culture_group = tibetan_group
+						region = tibet_region
+					}
+				}
+			}
+		}
+		else = {
+			FROM = {
+				any_owned_province = {
+					OR = {
+						culture_group = east_asian
+						superregion = china_superregion
+					}
+				}
+			}
+		}
 		FROM = {
 			NOT = {
 				tag = PCC
-			}
-			any_owned_province = {
-				OR = {
-					culture_group = east_asian
-					superregion = china_superregion
-					if = {
-						limit = {
-							ROOT = {
-								has_country_flag = china_can_absorb_tibet
-							}
-						}
-						culture_group = tibetan_group
-					}
-				}
 			}
 			OR = {
 				is_subject_of_type_with_overlord = {
@@ -2109,24 +2120,37 @@ integrate_into_chinese_communes = {
 		is_colonial_nation = no
 	}
 	on_accept = {
-		FROM = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						culture_group = east_asian
-						superregion = china_superregion
-						if = {
-							limit = {
-								ROOT = {
-									has_country_flag = china_can_absorb_tibet
-								}
-							}
+		if = {
+			limit = {
+				has_country_flag = china_can_absorb_tibet
+			}
+			FROM = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture_group = east_asian
+							superregion = china_superregion
 							culture_group = tibetan_group
+							region = tibet_region
 						}
 					}
+					add_core = PCC
+					cede_province = PCC
 				}
-				add_core = PCC
-				cede_province = PCC
+			}
+		}
+		else = {
+			FROM = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture_group = east_asian
+							superregion = china_superregion
+						}
+					}
+					add_core = PCC
+					cede_province = PCC
+				}
 			}
 		}
 	}
@@ -2785,6 +2809,9 @@ establish_tibetan_commune = {
 				who = ROOT
 				type = integrated_commune
 			}
+			capital_scope = {
+				region = tibet_region
+			}
 		}
 	}
 	is_allowed = {
@@ -2816,7 +2843,10 @@ establish_tibetan_commune = {
 			}
 			every_province = {
 				limit = {
-					culture_group = tibetan_group
+					OR = {
+						culture_group = tibetan_group
+						region = tibet_region
+					}
 				}
 				add_permanent_claim = GPH
 			}
@@ -2846,7 +2876,10 @@ integrate_into_tibetan_communes = {
 				tag = GPH
 			}
 			any_owned_province = {
-				culture_group = tibetan_group
+				OR = {
+					culture_group = tibetan_group
+					region = tibet_region
+				}
 			}
 			OR = {
 				is_subject_of_type_with_overlord = {
@@ -2864,7 +2897,10 @@ integrate_into_tibetan_communes = {
 		if = {
 			limit = {
 				FROM = {
-					culture_group = east_asian
+					OR = {
+						culture_group = east_asian
+						tag = PCC
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2896,7 +2932,10 @@ integrate_into_tibetan_communes = {
 		FROM = {
 			every_owned_province = {
 				limit = {
-					culture_group = tibetan_group
+					OR = {
+						region = tibet_region
+						culture_group = tibetan_group
+					}
 				}
 				add_core = GPH
 				cede_province = GPH

@@ -78,3 +78,41 @@ PCC_ideas = {
 		global_unrest = -3
 	}
 }
+
+GPH_ideas = {
+	free = yes
+	trigger = {
+		tag = GPH
+	}
+	start = {
+		development_cost = -0.15
+		defensiveness = 0.5
+	}
+	bonus = {
+		yearly_karma_decay = 0.1
+	}
+	GPH_first = {
+		hostile_attrition = 2
+		max_hostile_attrition = 2
+	}
+	GPH_second = {
+		fort_maintenance_modifier = -0.25
+		global_tax_modifier = 0.25
+	}
+	GPH_third = {
+		global_unrest = -2
+	}
+	GPH_fourth = {
+		land_attrition = -0.25
+	}
+	GPH_fifth = {
+		global_missionary_strength = 0.03
+	}
+	GPH_sixth = {
+		improve_relation_modifier = 0.33
+	}
+	GPH_seventh = {
+		adm_advisor_cost = -0.25
+		church_loyalty_modifier = 0.1
+	}
+}

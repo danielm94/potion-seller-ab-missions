@@ -397,6 +397,8 @@ country_event = {
 	}
 	option = {
 		name = moldavia_peasant_events.6.b
+		custom_tooltip = china_can_absorb_tibet_tt
+		custom_tooltip = AB_EMPTY
 		set_country_flag = china_can_absorb_tibet
 		add_country_modifier = {
 			name = mop_tea_monopoly

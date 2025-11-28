@@ -96,4 +96,20 @@ defined_text = {
 			}
 		}
 	}
+	text = { 
+		localisation_key = JAP_ideas_list
+		trigger = {
+			FROM = {
+				tag = JAP
+			}
+		}
+	}
+	text = { 
+		localisation_key = GPH_ideas_list
+		trigger = {
+			FROM = {
+				tag = GPH
+			}
+		}
+	}
 }
