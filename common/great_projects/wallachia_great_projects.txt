@@ -114,7 +114,7 @@ sfatul_tarii = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			parliament_backing_chance = 0.10
+			parliament_backing_chance = 0.1
 			num_of_parliament_issues = 2
 		}
 		#what effects happen when this tier is achieved
@@ -456,10 +456,10 @@ st_pauls_basilica = {
 	}
 	#what to do when it's built
 	on_built = {
-		show_ambient_object = stpeters_cathedral
 		destroy_great_project = {
 			type = stpeters_cathedral
 		}
+		show_ambient_object = stpeters_cathedral
 		owner = {
 			hidden_effect = {
 				set_country_flag = destroyed_st_peters
