@@ -235,7 +235,7 @@ ab_mop_1 = {
 	}
 	mop_arm_the_bulgar_peasants = {
 		icon = push_on_to_bulgaria
-		position = 6
+		position = 7
 		required_missions = {
 			mop_vlach_emancipation
 		}
@@ -336,7 +336,7 @@ ab_mop_1 = {
 	}
 	mop_war_for_the_bulgars = {
 		icon = gfx_wal_drive_out_the_bulgars
-		position = 9
+		position = 11
 		required_missions = {
 			mop_arm_the_bulgar_peasants
 		}
@@ -441,7 +441,7 @@ ab_mop_1 = {
 	}
 	mop_liberate_the_bulgars = {
 		icon = dom_ara_remensa_war
-		position = 12
+		position = 14
 		required_missions = {
 			mop_war_for_the_bulgars
 		}
@@ -593,7 +593,7 @@ ab_mop_1 = {
 	}
 	mop_bulgars_are_free = {
 		icon = GFX_mop_bulgars_are_free
-		position = 15
+		position = 17
 		required_missions = {
 			mop_liberate_the_bulgars
 		}
@@ -649,7 +649,7 @@ ab_mop_1 = {
 	}
 	mop_liberate_the_serbs = {
 		icon = defeat_the_serbs
-		position = 17
+		position = 19
 		required_missions = {
 			mop_bulgars_are_free
 		}
@@ -707,7 +707,7 @@ ab_mop_1 = {
 	}
 	mop_conquer_ragusa = {
 		icon = capture_adriatic_ports
-		position = 19
+		position = 21
 		required_missions = {
 			mop_liberate_the_serbs
 		}
@@ -754,7 +754,7 @@ ab_mop_1 = {
 	}
 	mop_great_port_of_dubrovnik = {
 		icon = GFX_mop_great_port_of_dubrovnik
-		position = 21
+		position = 23
 		required_missions = {
 			mop_conquer_ragusa
 		}
@@ -858,7 +858,7 @@ ab_mop_1 = {
 	}
 	mop_liberate_illyria = {
 		icon = secure_the_sava
-		position = 23
+		position = 25
 		required_missions = {
 			mop_great_port_of_dubrovnik
 		}
@@ -2161,7 +2161,7 @@ ab_mop_2 = {
 	}
 	mop_liberate_thrace = {
 		icon = byz_city_of_worlds_desire
-		position = 16
+		position = 18
 		required_missions = {
 			mop_bulgars_are_free
 		}
@@ -2259,7 +2259,7 @@ ab_mop_2 = {
 	}
 	mop_liberate_the_greeks = {
 		icon = mission_parthenon
-		position = 18
+		position = 20
 		required_missions = {
 			mop_liberate_thrace
 		}
@@ -2334,7 +2334,7 @@ ab_mop_2 = {
 	}
 	mop_protect_the_albanians = {
 		icon = mission_protect_albania
-		position = 22
+		position = 24
 		required_missions = {
 			mop_liberate_the_greeks
 		}
@@ -2390,7 +2390,7 @@ ab_mop_2 = {
 	}
 	mop_liberate_the_balkans = {
 		icon = mission_balkan_conquest
-		position = 24
+		position = 26
 		required_missions = {
 			mop_liberate_illyria
 			mop_protect_the_albanians
@@ -3591,7 +3591,7 @@ ab_mop_3 = {
 	}
 	mop_dismantle_the_stratocracy = {
 		icon = mission_nicaea
-		position = 17
+		position = 19
 		required_missions = {
 			mop_liberate_thrace
 		}
@@ -3657,7 +3657,7 @@ ab_mop_3 = {
 	}
 	mop_gates_of_the_bosprous = {
 		icon = mission_the_bospborus
-		position = 19
+		position = 21
 		required_missions = {
 			mop_dismantle_the_stratocracy
 		}
@@ -3770,7 +3770,7 @@ ab_mop_3 = {
 	}
 	mop_free_anatolia = {
 		icon = anatolian_frontier
-		position = 21
+		position = 23
 		required_missions = {
 			mop_gates_of_the_bosprous
 		}
