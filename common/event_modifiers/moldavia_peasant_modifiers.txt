@@ -477,7 +477,7 @@ mop_great_canton_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
-mop_chengdu_legation_city = {
+mop_chengdu_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 10

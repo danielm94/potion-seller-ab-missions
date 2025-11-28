@@ -553,3 +553,35 @@ on_center_of_trade_downgrade = {
 		add_base_production = -1
 	}
 }
+
+on_dependency_gained = {
+	if = {
+		limit = {
+			has_country_flag = commune_subject_rice_bonus_flag
+			NOT = {
+				FROM = {
+					has_country_modifier = league_subject_rice_bonus
+				}
+			}
+		}
+		FROM = {
+			add_country_modifier = {
+				name = league_subject_rice_bonus
+				duration = -1
+			}
+		}
+	}
+}
+
+on_dependency_lost = {
+	if = {
+		limit = {
+			FROM = {
+					has_country_modifier = league_subject_rice_bonus
+				}
+		}
+		FROM = {
+			remove_country_modifier = league_subject_rice_bonus
+		}
+	}
+}

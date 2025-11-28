@@ -1848,17 +1848,6 @@ ab_mop_2 = {
 					duration = -1
 				}
 			}
-			hidden_effect = {
-				# 679 = {
-				# 	remove_core = owner
-				# 	add_core = root
-				# 	cede_province = root
-				# 	add_province_modifier = {
-				# 		name = mop_chengdu_legation_city
-				# 		duration = -1
-				# 	}
-				# }
-			}
 			custom_tooltip = mop_discounted_rally_the_communes_tt
 			set_country_flag = mop_discounted_rally_the_communes
 			custom_tooltip = enable_palace_of_the_east_tt
@@ -2008,6 +1997,80 @@ ab_mop_2 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 20
+			}
+		}
+	}
+	mop_xinan = {
+		icon = GFX_mop_xinan
+		position = 14
+		required_missions = {
+			mop_develop_north_china
+		}
+		provinces_to_highlight = {
+			region = xinan_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				xinan_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			679 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_chengdu_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = commune_subject_rice_bonus_tt
+			set_country_flag = commune_subject_rice_bonus_flag
+			tooltip = {
+				add_country_modifier = {
+					name = league_subject_rice_bonus
+					duration = -1
+				}
+				add_liberty_desire = -10
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_commune_subject = yes
+					}
+					add_country_modifier = {
+						name = league_subject_rice_bonus
+						duration = -1
+					}
+					add_liberty_desire = -10
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
 			}
 		}
 	}

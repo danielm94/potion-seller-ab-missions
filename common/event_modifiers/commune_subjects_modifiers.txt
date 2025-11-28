@@ -126,12 +126,15 @@ integrated_commune_mongolian_bonus = {
 integrated_commune_chinese_bonus_1 = {
 	governing_capacity_modifier = 0.05
 }
+
 integrated_commune_chinese_bonus_2 = {
 	governing_capacity_modifier = 0.05
 }
+
 integrated_commune_chinese_bonus_3 = {
 	governing_capacity_modifier = 0.05
 }
+
 integrated_commune_chinese_bonus_4 = {
 	governing_capacity_modifier = 0.05
 }
@@ -156,4 +159,10 @@ integrated_commune_korean_bonus = {
 
 integrated_commune_japanese_bonus = {
 	discipline = 0.025
+}
+
+league_subject_rice_bonus = {
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.1
+	liberty_desire = -5
 }
