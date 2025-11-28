@@ -250,3 +250,7 @@
  mop_xinan_title: "Seize the Land of Abundance"
  mop_xinan_desc: "The Sichuan Basin is a fortress of nature, shielding the most fertile soil on earth. While our armies march across the continent, the issue of supply becomes paramount. We cannot allow the Tusi warlords to hoard the harvest of the 'Tianfu'—the Heavenly Province. We must pierce the mountain passes, dismantle the feudal chieftainships, and secure the ancient irrigation systems. By seizing this granary, we ensure that no citizen of the Federation ever knows the bite of hunger again."
  commune_subject_rice_bonus_tt: "Every £allied_commune£§YCommune Subject§! and all future subjects will receive:"
+ mop_develop_xinan_title: "The Garden of the West"
+ mop_develop_xinan_desc: "The Sichuan Basin is a natural fortress, shielded by cloud piercing mountains and fed by the eternal waters of the Min River. While our coastal communes drive the economy, they remain vulnerable to the fleets of our enemies. We must transform Chengdu into an unassailable sanctuary for the Revolution. By expanding the ancient Dujiangyan engineering works and fortifying the mountain passes, we create a self sufficient paradise deep in the interior, a guarantee that the Federation can endure any calamity."
+ unlocked_dujiangyan_bonus_tt: "We have unlocked this bonus through a mission."
+ enable_dujiangyan_bonus_tt: "The great project §YDujiangyan§! will now grant §G-5.0%§! Development Cost Modifier globally at §Ytier 3§!."

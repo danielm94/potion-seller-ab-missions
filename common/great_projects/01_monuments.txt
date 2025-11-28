@@ -17875,6 +17875,19 @@ dujiangyan = {
 		}
 		on_upgraded = {
 		}
+		conditional_modifier = {
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = unlocked_dujiangyan_bonus_tt
+					owner = {
+						has_country_flag = enable_dujiangyan_bonus
+					}
+				}
+			}
+			modifier = { 
+				development_cost_modifier = -0.05
+			}
+		}
 	}
 }
 

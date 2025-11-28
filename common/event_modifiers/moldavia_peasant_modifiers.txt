@@ -433,6 +433,7 @@ mop_beijing_commune = {
 	vassal_income = 0.1
 	picture = "commune_province_modifier_icon"
 }
+
 mop_great_beijing_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -468,6 +469,7 @@ mop_canton_commune = {
 	diplomatic_upkeep = 1
 	picture = "commune_province_modifier_icon"
 }
+
 mop_great_canton_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -483,6 +485,15 @@ mop_chengdu_commune = {
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	manpower_recovery_speed = 0.05
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_chengdu_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	manpower_recovery_speed = 0.1
 	picture = "commune_province_modifier_icon"
 }
 
@@ -692,6 +703,7 @@ mop_chioto_commune = {
 	infantry_shock = 0.15
 	picture = "commune_province_modifier_icon"
 }
+
 mop_great_chioto_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
