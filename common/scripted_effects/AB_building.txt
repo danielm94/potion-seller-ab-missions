@@ -470,6 +470,25 @@ ab_building_fort_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = {
+			has_terrain = mountain
+			OR = {
+				owner = {
+					has_country_flag = mop_unlock_krepost_system
+				}
+				owner = {
+					overlord = {
+						has_country_flag = mop_unlock_krepost_system
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = mop_dzong_citadels
+			duration = -1
+		}
+	}
 }
 
 ab_removing_fort_effect = {
@@ -525,6 +544,12 @@ ab_removing_fort_effect = {
 			has_province_modifier = mop_krepost
 		}
 		remove_province_modifier = mop_krepost
+	}
+	if = {
+		limit = {
+			has_province_modifier = mop_dzong_citadels
+		}
+		remove_province_modifier = mop_dzong_citadels
 	}
 }
 

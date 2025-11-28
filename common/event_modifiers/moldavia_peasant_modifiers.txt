@@ -721,6 +721,20 @@ mop_thimpu_commune = {
 	infantry_fire = 0.15
 	picture = "commune_province_modifier_icon"
 }
+mop_great_thimpu_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	infantry_fire = 0.3
+	picture = "commune_province_modifier_icon"
+}
+
+mop_dzong_citadels= {
+	local_missionary_strength = 0.01
+	local_fort_maintenance_modifier = -0.1
+	local_tax_modifier = 0.25
+}
 
 mop_tea_monopoly = {
 	global_trade_power = 0.15
