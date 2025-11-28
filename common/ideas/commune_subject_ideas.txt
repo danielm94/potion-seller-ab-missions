@@ -116,3 +116,41 @@ GPH_ideas = {
 		church_loyalty_modifier = 0.1
 	}
 }
+
+JAP_peasant_ideas = {
+	free = yes
+	trigger = {
+		tag = JAP
+		has_government_attribute = is_peasants_republic
+	}
+	start = {
+		infantry_power = 0.1
+		naval_morale = 0.1
+	}
+	bonus = {
+		manpower_in_culture_group_provinces = 0.33
+	}
+	JAP_peasant_first = {
+		tolerance_own = 2
+		tolerance_heretic = 2
+	}
+	JAP_peasant_second = {
+		development_cost = -0.1
+		build_time  = -0.1
+	}
+	JAP_peasant_third = {
+		stability_cost_modifier = -0.25
+	}
+	JAP_peasant_fourth = {
+		discipline = 0.05
+	}
+	JAP_peasant_fifth = {
+		heavy_ship_cost = -0.15
+	}
+	JAP_peasant_sixth = {
+		reelection_cost = -0.2
+	}
+	JAP_peasant_seventh = {
+		state_governing_cost = -0.15
+	}
+}

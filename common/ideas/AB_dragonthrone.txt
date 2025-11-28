@@ -1787,6 +1787,7 @@ JAP_ideas = {
 		NOT = {
 			has_country_flag = JAP_evolved_ideas2
 		}
+		is_commune_subject = no
 	}
 	free = yes
 	
