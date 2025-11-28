@@ -91,3 +91,17 @@ is_within_range_of_the_peasants_revolution = {
 has_been_spreader_of_radicalized_peasants = {
 	has_country_flag = has_been_spreader_of_radicalized_peasants_flag
 }
+
+has_unlocked_palace_of_the_east_great_project = {
+	custom_trigger_tooltip = {
+		tooltip = has_unlocked_palace_of_the_east_great_project_tt
+		has_country_flag = enable_palace_of_the_east
+	}
+}
+
+is_peasant_republic = {
+	custom_trigger_tooltip = {
+		tooltip = mechanic_is_peasants_republic_yes
+		has_government_attribute = is_peasants_republic
+	}
+}

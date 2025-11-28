@@ -425,67 +425,47 @@ mop_dragon_slayer = {
 	administrative_efficiency = 0.05
 }
 
-mop_beijing_legation_city = {
-	min_local_autonomy = 100
-	local_governing_cost = -0.9
-	province_trade_power_value = 25
-	diplomats = 1
-	culture_conversion_cost = 100
-	culture_conversion_time = 100
-	local_missionary_strength = -1
-	local_religious_unity_contribution = -1
-	governing_capacity_modifier = 0.05
+mop_beijing_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	vassal_income = 0.1
 	picture = "commune_province_modifier_icon"
 }
 
 mop_hangzhou_legation_city = {
-	min_local_autonomy = 100
-	local_governing_cost = -0.9
-	province_trade_power_value = 25
-	diplomatic_upkeep = 1
-	culture_conversion_cost = 100
-	culture_conversion_time = 100
-	local_missionary_strength = -1
-	local_religious_unity_contribution = -1
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
 	production_efficiency = 0.05
 	picture = "commune_province_modifier_icon"
 }
 
 mop_canton_legation_city = {
-	min_local_autonomy = 100
-	local_governing_cost = -0.9
-	province_trade_power_value = 25
-	diplomatic_upkeep = 1
-	culture_conversion_cost = 100
-	culture_conversion_time = 100
-	local_missionary_strength = -1
-	local_religious_unity_contribution = -1
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
 	global_ship_cost = -0.05
 	picture = "commune_province_modifier_icon"
 }
 
 mop_chengdu_legation_city = {
-	min_local_autonomy = 100
-	local_governing_cost = -0.9
-	province_trade_power_value = 25
-	diplomatic_upkeep = 1
-	culture_conversion_cost = 100
-	culture_conversion_time = 100
-	local_missionary_strength = -1
-	local_religious_unity_contribution = -1
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
 	manpower_recovery_speed = 0.05
 	picture = "commune_province_modifier_icon"
 }
 
-mop_xian_legation_city = {
-	min_local_autonomy = 100
-	local_governing_cost = -0.9
-	province_trade_power_value = 25
-	diplomatic_upkeep = 1
-	culture_conversion_cost = 100
-	culture_conversion_time = 100
-	local_missionary_strength = -1
-	local_religious_unity_contribution = -1
+mop_xian_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
 	global_trade_power = 0.05
 	picture = "commune_province_modifier_icon"
 }

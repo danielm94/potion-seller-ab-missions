@@ -1501,3 +1501,10 @@ are_we_and_target_at_peace = {
 		}
 	}
 }
+
+has_dismantled_the_empire_of_china = {
+	custom_trigger_tooltip = {
+		tooltip = ab_has_dismantled_china_tt
+		has_country_flag = ab_has_dismantled_china
+	}
+}

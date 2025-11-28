@@ -2540,7 +2540,6 @@ establish_korean_commune = {
 				dip = 1
 				mil = 3
 				culture = korean
-				religion = noreligion
 			}
 			add_ruler_personality = cruel_personality
 			add_ruler_personality = drunkard_personality
