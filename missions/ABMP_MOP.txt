@@ -1889,6 +1889,9 @@ ab_mop_2 = {
 					province_id = 1816
 					OR = {
 						NOT = {
+							owned_by = root
+						}
+						NOT = {
 							development = 45
 						}
 						NOT = {
@@ -1912,7 +1915,7 @@ ab_mop_2 = {
 						NOT = {
 							has_great_project = {
 								type = northern_canal
-								tier = 1
+								tier = 2
 							}
 						}
 					}
@@ -1920,6 +1923,9 @@ ab_mop_2 = {
 				AND = {
 					province_id = 700
 					OR = {
+						NOT = {
+							owned_by = root
+						}
 						NOT = {
 							development = 30
 						}
@@ -1946,6 +1952,7 @@ ab_mop_2 = {
 			}
 			else = {
 				1816 = {
+					owned_by = root
 					development = 45
 					num_of_times_expanded_infrastructure = 3
 					province_has_center_of_trade_of_level = 2
@@ -1959,10 +1966,11 @@ ab_mop_2 = {
 					}
 					has_great_project = {
 						type = northern_canal
-						tier = 1
+						tier = 2
 					}
 				}
 				700 = {
+					owned_by = root
 					development = 30
 					num_of_times_expanded_infrastructure = 2
 					province_has_center_of_trade_of_level = 2
@@ -3350,6 +3358,85 @@ ab_mop_3 = {
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_develop_south_china = {
+		icon = GFX_mop_develop_south_china
+		position = 15
+		required_missions = {
+			mop_south_china
+		}
+		provinces_to_highlight = {
+			province_id = 667
+			OR = {
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				667 = {
+					owned_by = root
+					development = 45
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 3
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_road_building_trigger = yes
+				}
+				684 = {
+					owned_by = root
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_great_project = {
+						type = southern_canal
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			667 = {
+				remove_province_modifier = mop_canton_commune
+				add_province_modifier = {
+					name = mop_great_canton_commune
+					duration = -1
+				}
+			}
+			684 = {
+				remove_province_modifier = mop_hangzhou_commune
+				add_province_modifier = {
+					name = mop_great_hangzhou_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = eng_trade_income
+			hidden_effect = {
+				add_years_of_trade_income = {
+					years = 1
+				}
+			}
+			add_yearly_manpower = 2
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 5
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
 				influence = 10
 			}
 		}
@@ -5204,7 +5291,6 @@ ab_mop_5 = {
 				add_liberty_desire = -20
 			}
 			custom_tooltip = tooltip_line_divider
-			#TODO - EVENT WHERE ABOLITIONISTS PURGE THE FUCK OUT OF KIEV IF THEY ARE IN CHARGE
 			280 = {
 				custom_tooltip = mop_enclave_in_kiev_tt
 				hidden_effect = {

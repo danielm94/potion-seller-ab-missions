@@ -451,12 +451,29 @@ mop_hangzhou_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_hangzhou_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	production_efficiency = 0.1
+	picture = "commune_province_modifier_icon"
+}
+
 mop_canton_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	diplomatic_upkeep = 1
+	picture = "commune_province_modifier_icon"
+}
+mop_great_canton_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	diplomatic_upkeep = 2
 	picture = "commune_province_modifier_icon"
 }
 
