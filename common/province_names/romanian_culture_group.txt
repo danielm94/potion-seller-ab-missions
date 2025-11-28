@@ -113,7 +113,7 @@
 417 = "Amardion"
 419 = "Erebuna"
 420 = "Tigranocheras"
-421 = "Satrapeia"
+421 = {"Satrapeia" "Satrapeia"}
 422 = "Iberia"
 423 = "Fasis"
 424 = "Artabile"

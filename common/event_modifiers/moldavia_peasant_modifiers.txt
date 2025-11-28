@@ -721,6 +721,7 @@ mop_thimpu_commune = {
 	infantry_fire = 0.15
 	picture = "commune_province_modifier_icon"
 }
+
 mop_great_thimpu_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -730,7 +731,7 @@ mop_great_thimpu_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
-mop_dzong_citadels= {
+mop_dzong_citadels = {
 	local_missionary_strength = 0.01
 	local_fort_maintenance_modifier = -0.1
 	local_tax_modifier = 0.25
@@ -748,4 +749,13 @@ mop_freed_tibet = {
 	republican_tradition = 0.1
 	monthly_peasant_zeal = 0.01
 	peasant_zeal_gain_modifier = 0.05
+}
+
+mop_satrapeia_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	fire_damage = 0.05
+	picture = "commune_province_modifier_icon"
 }

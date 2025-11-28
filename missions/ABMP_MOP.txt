@@ -6666,4 +6666,79 @@ ab_mop_5 = {
 			add_corruption = 4
 		}
 	}
+	mop_caucasia = {
+		icon = mission_the_caucasus_rus
+		position = 24
+		required_missions = {
+			mop_free_anatolia
+		}
+		provinces_to_highlight = {
+			region = caucasia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_cauacasia_trigger_tt
+					caucasia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			421 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_satrapeia_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				skill = 3
+				culture = georgian
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
