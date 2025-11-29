@@ -234,6 +234,12 @@ baghdad = {
 					value = 0.01
 				}
 			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = has_unlocked_great_project_through_mission_tt
+					has_country_flag = can_use_bagdad_library
+				}
+			}
 		}
 	}
 
@@ -257,6 +263,12 @@ baghdad = {
 					value = 0.01
 				}
 			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = has_unlocked_great_project_through_mission_tt
+					has_country_flag = can_use_bagdad_library
+				}
+			}
 		}	
 	}
 
@@ -270,6 +282,12 @@ baghdad = {
 				has_global_modifier_value = {
 					which = tolerance_heathen
 					value = 0.01
+				}
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = has_unlocked_great_project_through_mission_tt
+					has_country_flag = can_use_bagdad_library
 				}
 			}
 		}
