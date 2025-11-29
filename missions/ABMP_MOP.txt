@@ -5587,6 +5587,105 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_bagdad = {
+		icon = GFX_mop_bagdad
+		position = 25
+		required_missions = {
+			mop_iraq
+		}
+		provinces_to_highlight = {
+			province_id = 410
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_road_building_trigger = no
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = baghdad
+						tier = 1
+					}
+				}
+				NOT = {
+					has_great_project = {
+						type = nahrawan
+						tier = 1
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				410 = {
+					owned_by = root
+					development = 45
+					num_of_times_expanded_infrastructure = 3
+					province_has_center_of_trade_of_level = 2
+					has_road_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = baghdad
+						tier = 1
+					}
+					has_great_project = {
+						type = nahrawan
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			410 = {
+				remove_province_modifier = mop_bagdad_commune
+				add_province_modifier = {
+					name = mop_great_bagdad_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = wal_in_advisor_bonus_tooltip
+			set_country_flag = wal_in_advisor_bonus
+			define_advisor = {
+				type = in_advisor
+				skill = 3
+				culture = al_iraqiya_arabic
+				religion = sunni
+				name = "Saddam al-Baghdadi"
+				cost_multiplier = 0.5
+				location = 410
+
+			}
+			custom_tooltip = AB_EMPTY
+			add_innovativeness_or_monarch_power = {
+				amount = 5
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_5 = {

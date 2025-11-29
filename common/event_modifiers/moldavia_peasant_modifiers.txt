@@ -785,6 +785,15 @@ mop_bagdad_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_bagdad_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	technology_cost = -0.05
+	idea_cost = -0.05
+	picture = "commune_province_modifier_icon"
+}
 mop_restore_grand_library_of_bagdad = {
 	local_great_project_upgrade_cost = -0.5
 }
