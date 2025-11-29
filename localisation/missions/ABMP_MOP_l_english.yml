@@ -87,7 +87,6 @@
  mop_control_all_bulgarian_balkan_provinces_tt: "All the provinces of §YBulgarian§! culture in the §YBalkans§! are owned by us or a £allied_commune£§YCommune Subject§!."
  bulgarian_integrated_commune_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YBulgarian§! culture will grant us §G-5.0%§! Shock Damage Received if they have over §Y300§! total development."
  mop_control_all_thrace_provinces_tt: "All provinces in the §YThrace§! area are either controlled by us, a £allied_commune£§YCommune Subject§!, or a non-sovereign subject of our £allied_commune£§YCommune Subject§!."
- if_constantinople_is_owned_by_commune_subject_tt: "If §Y[151.GetName]§! is owned by a £allied_commune£§YCommune Subject§!:"
  mop_liberate_thrace_title: "Liberate Thrace"
  mop_liberate_thrace_desc: "The plains and coasts of Thrace have long been trampled by imperial armies and ruled from the gilded halls of [151.GetName]. If our revolution is to endure, the straits and the city at their heart must no longer answer to emperors or stratocrats, but to the communes themselves. By bringing every village and town in Thrace under the protection of our federation, we will free the peasants of the region and seize the City of the World’s Desire for the common cause."
  mop_liberate_the_serbs_title: "Liberate the Serbs"

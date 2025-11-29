@@ -2341,24 +2341,10 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_constantinople_is_owned_by_commune_subject_tt
-				first_limit = "151 = {
-									NOT = {
-										owned_by = ROOT
-									}
-									country_or_commune_subject_or_subject_of_commune_subject_holds = {
-										who = ROOT
-									}
-								}"
-				first_effect = "151 = {
-									remove_core = owner
-									add_core = ROOT
-									cede_province = ROOT
-								}"
-			}
-			custom_tooltip = AB_EMPTY
 			151 = {
+				remove_core = owner
+				add_core = ROOT
+				cede_province = ROOT
 				if = {
 					limit = {
 						NOT = {
