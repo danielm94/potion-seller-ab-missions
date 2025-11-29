@@ -272,3 +272,7 @@
  desc_mop_antiohia_commune: "The ancient See of St. Peter has been restored. By returning the Patriarchate to the people, we have created a seminary system that operates on faith rather than gold, allowing us to maintain a vast clergy with minimal expense."
  mop_ierusalim_commune: "The Ierusalim Commune"
  desc_mop_ierusalim_commune: "The Holy Sepulchre is now guarded by the common soldier. Possession of the holiest city on earth validates our divine mandate, lending our missionaries an authority that even the most stubborn heathens find difficult to resist."
+ if_we_have_completed_innovative_ideas_tt: "If we have embraced all §YInnovative§! ideas:"
+ mop_iraq_title: "Liberate the Cradle"
+ mop_iraq_desc: "Between the Tigris and the Euphrates lies the very cradle of agriculture, where the first furrow was plowed by the first peasant. Yet, under the neglect of the warlords, the ancient irrigation canals have choked with silt and the House of Wisdom lies in ruin. We must march into Mesopotamia to reclaim this wasted potential. By seizing Bagdad and restoring the flow of the Two Rivers, we shall turn the desert green again and proving that the Federation is the true heir to the knowledge of the ancients."
+ can_use_bagdad_library_tt: "We can use §YThe House of Wisdom§! great project without meeting the religious requirements!"

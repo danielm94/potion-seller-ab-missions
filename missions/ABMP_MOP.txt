@@ -5372,6 +5372,86 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_iraq = {
+		icon = mission_cradle_of_civilization
+		position = 24
+		required_missions = {
+			mop_free_anatolia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = basra_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				al_jazira_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				iraq_arabi_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				basra_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			410 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_bagdad_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = can_use_bagdad_library_tt
+			set_country_flag = can_use_bagdad_library
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_completed_innovative_ideas_tt
+				first_limit = "full_idea_group = innovativeness_ideas"
+				first_effect = "	410 = {
+										add_province_modifier = {
+											name = mop_restore_grand_library_of_bagdad
+											duration = -1
+										}
+									}"
+			}
+			add_innovativeness_or_monarch_power = {
+				amount = 5
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_5 = {
