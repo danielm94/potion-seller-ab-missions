@@ -34,7 +34,7 @@ patriarch = {
 	skill_scaled_modifier = {
 		trigger = {
 			owner = {
-				has_country_flag = patriarch_of_jersualem
+				has_country_flag = patriarch_of_jerusalem
 			}
 		}
 		modifier = {
