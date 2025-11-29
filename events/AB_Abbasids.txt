@@ -68,6 +68,7 @@ country_event = {
 		name = ab_abbasid.2.b
 		trigger = {
 			NOT = { exists = ABS }
+			government = monarchy
 		}
 		ai_chance = { factor = 80 }
 		country_event = {
