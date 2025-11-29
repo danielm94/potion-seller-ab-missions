@@ -759,3 +759,20 @@ mop_satrapeia_commune = {
 	fire_damage = 0.05
 	picture = "commune_province_modifier_icon"
 }
+
+mop_antiohia_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	missionary_maintenance_cost = -0.1
+	picture = "commune_province_modifier_icon"
+}
+mop_ierusalim_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	global_missionary_strength = 0.01
+	picture = "commune_province_modifier_icon"
+}

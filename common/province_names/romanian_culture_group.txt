@@ -799,7 +799,7 @@
 2310 = "Ticrit"
 2311 = "Samauat"
 2312 = "Uasit"
-2313 = "Antiohia"
+2313 = {"Antiohia" "Antiohia"}
 2314 = "Raba"
 2316 = "Al Garbia"
 2317 = "Minia"
