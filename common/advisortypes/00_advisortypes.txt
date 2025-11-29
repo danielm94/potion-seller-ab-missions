@@ -1242,6 +1242,17 @@ naval_reformer = {
 		}
 	}
 	# ]]]
+	#PotionSeller
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = naval_reformer_galley_buff
+			}
+		}
+		modifier = {
+			galley_power = 0.05
+		}
+	}
 	
 	chance = {
 		factor = 1

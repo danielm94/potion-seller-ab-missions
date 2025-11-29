@@ -5674,7 +5674,6 @@ ab_mop_4 = {
 				name = "Saddam al-Baghdadi"
 				cost_multiplier = 0.5
 				location = 410
-
 			}
 			custom_tooltip = AB_EMPTY
 			add_innovativeness_or_monarch_power = {
@@ -7151,6 +7150,68 @@ ab_mop_5 = {
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_satrapeia = {
+		icon = mission_beacon
+		position = 25
+		required_missions = {
+			mop_caucasia
+		}
+		provinces_to_highlight = {
+			province_id = 421
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_production_building_trigger = no
+				has_trade_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				421 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			421 = {
+				remove_province_modifier = mop_satrapeia_commune
+				add_province_modifier = {
+					name = mop_great_satrapeia_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = naval_reformer_galley_buff_tt
+			set_country_flag = naval_reformer_galley_buff
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = exemplarists_faction
 				influence = 10
 			}
 		}
