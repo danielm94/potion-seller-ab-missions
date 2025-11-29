@@ -291,6 +291,68 @@ apply_neighboring_peasant_opinion = {
 	}
 }
 
+#SCOPE = COUNTRY
 mark_country_has_been_spreader_of_radicalized_peasants = {
 	set_country_flag = has_been_spreader_of_radicalized_peasants_flag
+}
+
+#SCOPE = COUNTRY
+export_egyptian_grain_cost_effect = {
+	add_years_of_income = -0.05
+	if = {
+		limit = {
+			any_owned_province = {
+				region = egypt_region
+				trade_goods = grain
+				base_production = 2
+			}
+		}
+		random_owned_province = {
+			limit = {
+				region = egypt_region
+				trade_goods = grain
+				base_production = 2
+			}
+			add_base_production = -1
+		}
+	}
+	else = {
+		export_to_variable = {
+			which = subject_grain_payment
+			value = treasury
+		}
+		add_years_of_income = -0.1
+		export_to_variable = {
+			which = post_treasury
+			value = treasury
+		}
+		subtract_variable = {
+			which = subject_grain_payment
+			which = post_treasury
+		}
+		random_province = {
+			limit = {
+				region = egypt_region
+				trade_goods = grain
+				base_production = 2
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = integrated_commune
+					}
+				}
+			}
+			add_base_production = -1
+			owner = {
+				set_variable = {
+					which = subject_grain_payment
+					which = root
+				}
+				variable_effect = {
+					var = subject_grain_payment
+					effect = add_treasury
+				}
+			}
+		}
+	}
 }

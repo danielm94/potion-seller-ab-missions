@@ -18,3 +18,9 @@ tyrant_scum_opinion = {
 	min = -75
 	max = -75
 }
+
+sent_grain_shipments = {
+	opinion = 50
+	max = 100
+	yearly_decay = 2
+}

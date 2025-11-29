@@ -4268,6 +4268,57 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_egypt = {
+		icon = gfx_wal_conquer_egypt
+		position = 26
+		required_missions = {
+			mop_reestablish_the_patriarchs
+		}
+		provinces_to_highlight = {
+			region = egypt_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				egypt_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			358 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_alexandria_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = unlock_egyptian_grain_export_tt
+			set_country_flag = unlock_egyptian_grain_export
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
 }
 
 ab_mop_4 = {

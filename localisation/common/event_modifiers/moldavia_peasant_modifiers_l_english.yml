@@ -206,3 +206,7 @@
  desc_mop_great_satrapeia_commune: "The City of Eternal Fire has become the blackened arsenal of the Republic. Our industrial extraction of naphtha is now so efficient that it has reshaped our military doctrine. Federation generals now march to war with ample reserves of liquid fire, incinerating enemy formations with a terrifying tactical superiority."
  mop_moca_commune: "The Moca Commune"
  desc_mop_moca_commune: "The port of Moca controls the flow of the 'black gold' that is quickly becoming the fuel of the modern world. By seizing the coffee trade at its source, we have secured a commodity as valuable as silver. The immense profits generated here flow back into the Federation, subsidizing the production of goods in every commune from the Carpathians to the Caucasus."
+ mop_alexandria_commune: "The Alexandria Commune"
+ desc_mop_alexandria_commune: "The Throne of Saint Mark now oversees the busiest harbor in the world. By securing the delta, we ensure that the spice of India and the silk of China flow exclusively into the Federation's markets, bypassing the greedy merchant republics of the West."
+ received_egyptian_grain_shipments: "Egyptian Grain Dole"
+ desc_received_egyptian_grain_shipments: "The convoys from Alexandria have arrived, filling our silos with the surplus of the Nile. A well-fed population is a strong population, and the abundance of bread ensures our youth can march to war without the fear that their families will starve at home."

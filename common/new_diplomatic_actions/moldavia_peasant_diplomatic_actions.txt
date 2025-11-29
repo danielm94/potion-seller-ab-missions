@@ -2946,3 +2946,119 @@ integrate_into_tibetan_communes = {
 		always = no
 	}
 }
+
+export_egyptian_grain = {
+	category = economy
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_egyptian_grain_export
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				is_rival = FROM
+			}
+			custom_trigger_tooltip = {
+				tooltip = cant_export_grain_to_rival_tt
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				is_enemy = FROM
+			}
+			custom_trigger_tooltip = {
+				tooltip = cant_export_grain_to_enemy_tt
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					is_subject_of = root
+					any_owned_province = {
+						region = egypt_region
+						trade_goods = grain
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = cant_export_grain_to_grain_producer_tt
+				always = no
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_province = {
+							region = egypt_region
+							trade_goods = grain
+							base_production = 2
+						}
+					}
+				}
+				years_of_income = 0.15
+			}
+			else = {
+				years_of_income = 0.05
+			}
+			is_at_war = no
+			FROM = {
+				NOT = {
+					has_country_modifier = received_egyptian_grain_shipments
+				}
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = export_egyptian_grain_we_have_grain_tt
+					any_owned_province = {
+						region = egypt_region
+						trade_goods = grain
+						base_production = 2
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = export_egyptian_grain_commune_has_grain_tt
+					any_subject_country = {
+						is_subject_of_type = integrated_commune
+						NOT = {
+							liberty_desire = 50
+						}
+						any_owned_province = {
+							region = egypt_region
+							trade_goods = grain
+							base_production = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		export_egyptian_grain_cost_effect = yes
+		FROM = {
+			add_opinion = {
+				who = root
+				modifier = sent_grain_shipments
+			}
+			add_trust = {
+				who = root
+				value = 5
+			}
+			add_country_modifier = {
+				name = received_egyptian_grain_shipments
+				duration = 1825
+			}
+			if = {
+				limit = {
+					is_subject_of = root
+				}
+				add_liberty_desire = -10
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}

@@ -1,6 +1,6 @@
 defined_text = {
 	name = get_idea_list_for_commune
-	text = { 
+	text = {
 		localisation_key = ILR_ideas_list
 		trigger = {
 			FROM = {
@@ -8,7 +8,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = HLE_ideas_list
 		trigger = {
 			FROM = {
@@ -16,7 +16,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = RUM_ideas_list
 		trigger = {
 			FROM = {
@@ -24,7 +24,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = ARM_ideas_list
 		trigger = {
 			FROM = {
@@ -32,7 +32,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = PLC_ideas_list
 		trigger = {
 			FROM = {
@@ -40,7 +40,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = UKR_ideas_list
 		trigger = {
 			FROM = {
@@ -48,7 +48,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = BLT_ideas_list
 		trigger = {
 			FROM = {
@@ -56,7 +56,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = PCC_ideas_list
 		trigger = {
 			FROM = {
@@ -64,7 +64,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = WEE_ideas_list
 		trigger = {
 			FROM = {
@@ -72,7 +72,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = SLU_ideas_list
 		trigger = {
 			FROM = {
@@ -80,7 +80,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = NSE_ideas_list
 		trigger = {
 			FROM = {
@@ -88,7 +88,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = KOR_ideas_list
 		trigger = {
 			FROM = {
@@ -96,7 +96,7 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = JAP_ideas_list
 		trigger = {
 			FROM = {
@@ -104,11 +104,51 @@ defined_text = {
 			}
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = GPH_ideas_list
 		trigger = {
 			FROM = {
 				tag = GPH
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = export_egyptian_grain_grain_target
+	random = no
+	text = {
+		localisation_key = export_egyptian_grain_self_grain_target
+		trigger = {
+			any_owned_province = {
+				region = egypt_region
+				trade_goods = grain
+				base_production = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = export_egyptian_grain_subject_grain_target
+		trigger = {
+			always = yes			# If you don't have grain, it always gets shipped from your subject.
+		}
+	}
+}
+
+defined_text = {
+	name = export_egyptian_grain_subject_bonus
+	random = no
+	text = {
+		localisation_key = export_egyptian_grain_is_subject
+		trigger = {
+			overlord_of = FROM
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				overlord_of = FROM
 			}
 		}
 	}

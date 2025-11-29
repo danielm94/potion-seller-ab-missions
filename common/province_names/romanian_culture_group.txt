@@ -1807,7 +1807,7 @@
 332 = "Ghermanicea"
 352 = "Iustiniana"
 357 = "Darnis"
-358 = "Alexandria"
+358 = {"Alexandria" "Alexandria"}
 360 = "Caine"
 363 = "Tamiatis"
 396 = "Tilos"

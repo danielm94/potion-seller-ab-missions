@@ -75,7 +75,7 @@ kievan_commune = {
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
-	global_manpower_modifier = 0.025
+	global_manpower_modifier = 0.05
 	picture = "commune_province_modifier_icon"
 }
 
@@ -84,7 +84,7 @@ great_kievan_commune = {
 	local_governing_cost = -1
 	province_trade_power_value = 15
 	local_development_cost = -0.1
-	global_manpower_modifier = 0.05
+	global_manpower_modifier = 0.1
 	picture = "commune_province_modifier_icon"
 }
 
@@ -818,4 +818,18 @@ mop_moca_commune = {
 	local_development_cost = -0.05
 	global_trade_goods_size = 0.05
 	picture = "commune_province_modifier_icon"
+}
+
+mop_alexandria_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	trade_steering = 0.05
+	picture = "commune_province_modifier_icon"
+}
+
+received_egyptian_grain_shipments = {
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.1
 }
