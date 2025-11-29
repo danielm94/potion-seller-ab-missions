@@ -5685,6 +5685,61 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_arabia = {
+		icon = mission_into_arabia
+		position = 26
+		required_missions = {
+			mop_reestablish_the_patriarchs
+			mop_bagdad
+		}
+		provinces_to_highlight = {
+			region = arabia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				arabia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			387 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_moca_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = desert_dev_20_percent_extra_dev_tt
+			set_country_flag = desert_dev_20_percent_extra_dev
+			custom_tooltip = coastal_desert_dev_20_percent_extra_dev_tt
+			set_country_flag = coastal_desert_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
 }
 
 ab_mop_5 = {

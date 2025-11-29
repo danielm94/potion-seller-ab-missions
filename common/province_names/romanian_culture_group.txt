@@ -103,6 +103,7 @@
 378 = "Tripoli"
 379 = {"Iudeea" "Ierusalim"}
 382 = "Damasc"
+387 = {"Moca" "Moca"}
 390 = "Sanaa"
 410 = "Bagdad"
 412 = "Susa"
