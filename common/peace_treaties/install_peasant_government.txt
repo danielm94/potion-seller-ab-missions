@@ -32,6 +32,13 @@ po_install_peasant_government = {
 	}
 	effect = {
 		FROM = {
+			if = {
+				limit = {
+					tag = ABS
+				}
+				change_tag = EGY
+				swap_free_idea_group = yes
+			}
 			kill_consort = yes
 			kill_heir = {
 				allow_new_heir = no
@@ -105,7 +112,9 @@ po_install_peasant_government = {
 		}
 		if = {
 			limit = {
-				can_be_balkanized = yes
+				FROM = {
+					can_be_balkanized = yes
+				}
 			}
 			country_event = {
 				id = moldavia_peasant_events.3
