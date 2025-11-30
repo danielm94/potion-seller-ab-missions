@@ -842,3 +842,19 @@ mop_portul_abas_commune = {
 	trade_company_investment_cost = -0.05
 	picture = "commune_province_modifier_icon"
 }
+
+mop_great_portul_abas_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	trade_company_investment_cost = -0.1
+	picture = "commune_province_modifier_icon"
+}
+
+mop_explore_indian_ocean = {
+	may_explore = yes
+	colonists = 1
+	auto_explore_adjacent_to_colony = yes
+	range = 0.5
+}

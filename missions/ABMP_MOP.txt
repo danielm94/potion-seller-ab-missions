@@ -3566,7 +3566,7 @@ ab_mop_3 = {
 			}
 			add_country_modifier = {
 				name = mop_venture_into_pacific
-				duration = 18250
+				duration = 10950
 			}
 			change_peasant_zeal = {
 				value = 10
@@ -4311,7 +4311,7 @@ ab_mop_3 = {
 			custom_tooltip = unlock_egyptian_grain_export_tt
 			set_country_flag = unlock_egyptian_grain_export
 			custom_tooltip = AB_EMPTY
-			custom_tooltip  = marsh_dev_20_percent_extra_dev_tt
+			custom_tooltip = marsh_dev_20_percent_extra_dev_tt
 			set_country_flag = marsh_dev_20_percent_extra_dev
 			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
@@ -7007,7 +7007,7 @@ ab_mop_5 = {
 			}
 			add_country_modifier = {
 				name = mop_venture_into_atlantic
-				duration = 18250
+				duration = 10950
 			}
 			define_conquistador = {
 				shock = 3
@@ -7353,9 +7353,9 @@ ab_mop_5 = {
 					duration = -1
 				}
 			}
-			custom_tooltip  = mountain_dev_20_percent_extra_dev_tt
+			custom_tooltip = mountain_dev_20_percent_extra_dev_tt
 			set_country_flag = mountain_dev_20_percent_extra_dev
-			custom_tooltip  = highlands_dev_20_percent_extra_dev_tt
+			custom_tooltip = highlands_dev_20_percent_extra_dev_tt
 			set_country_flag = highlands_dev_20_percent_extra_dev
 			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
@@ -7364,6 +7364,85 @@ ab_mop_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 20
+			}
+		}
+	}
+	mop_portul_abas = {
+		icon = mission_dominate_persian_gulf
+		position = 27
+		required_missions = {
+			mop_persia
+		}
+		provinces_to_highlight = {
+			province_id = 431
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				431 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = shapurshahr
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			431 = {
+				remove_province_modifier = mop_portul_abas_commune
+				add_province_modifier = {
+					name = mop_great_portul_abas_commune
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					431 = {
+						has_great_project = {
+							type = shapurshahr
+							tier = 3
+						}
+					}
+				}
+				add_treasury = 3000
+			}
+			else = {
+				431 = {
+					add_great_project_tier = {
+						type = shapurshahr
+						tier = 1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_explore_indian_ocean
+				duration = 10950
+			}
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}
