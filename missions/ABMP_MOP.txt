@@ -5781,6 +5781,75 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_moca = {
+		icon = yem_coffee
+		position = 27
+		required_missions = {
+			mop_arabia
+		}
+		provinces_to_highlight = {
+			province_id = 387
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					base_production = 20
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				has_trade_building_trigger = no
+				NOT = {
+					has_building = plantations
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				387 = {
+					owned_by = root
+					development = 45
+					base_production = 20
+					num_of_times_expanded_infrastructure = 3
+					has_production_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_building = plantations
+				}
+			}
+		}
+		effect = {
+			387 = {
+				remove_province_modifier = mop_moca_commune
+				add_province_modifier = {
+					name = mop_great_moca_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_coffee
+				duration = -1
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_5 = {
@@ -7378,6 +7447,27 @@ ab_mop_5 = {
 			OR = {
 				NOT = {
 					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_trade_building_trigger = no
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = shapurshahr
+						tier = 2
+					}
 				}
 			}
 		}
