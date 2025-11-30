@@ -12,6 +12,7 @@ incited_peasantry = {
 radicalized_peasantry = {
 	local_unrest = 10
 	trade_goods_size = 0.001
+	picture = rad_pes
 }
 
 negate_moldavian_commune_reform_ccr = {
