@@ -317,8 +317,8 @@ country_event = {
 		}
 		NOT = {
 			any_province = {
-					is_part_of_hre = yes
-					has_province_modifier = radicalized_peasantry
+				is_part_of_hre = yes
+				has_province_modifier = radicalized_peasantry
 			}
 		}
 	}
