@@ -25,6 +25,12 @@ country_decisions = {
 					}
 				}
 			}
+			NOT = {
+				any_province = {
+					is_part_of_hre = yes
+					has_province_modifier = radicalized_peasantry
+				}
+			}
 		}		
 		effect = {
 			set_imperial_incident = incident_great_peasants_war
@@ -50,6 +56,12 @@ country_decisions = {
 						which = GPW_counting_variable
 						value = 10
 					}
+				}
+			}
+			NOT = {
+				any_province = {
+					is_part_of_hre = yes
+					has_province_modifier = radicalized_peasantry
 				}
 			}
 		}		
