@@ -183,6 +183,16 @@ ab_florentine_peasants_reform = {
 		expand_infrastructure_c_mechanic = yes
 		is_peasants_republic = yes
 	}
+	effect = {
+		hidden_effect = {
+			apply_radicalized_peasantry_effect = yes
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			apply_radicalized_peasantry_effect = yes
+		}
+	}
 }
 
 ab_tuscan_peasants_reform ={
@@ -224,6 +234,16 @@ ab_tuscan_peasants_reform ={
 		disables_estate_nobles = yes
 		expand_infrastructure_c_mechanic = yes
 		is_peasants_republic = yes
+	}
+	effect = {
+		hidden_effect = {
+			apply_radicalized_peasantry_effect = yes
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			apply_radicalized_peasantry_effect = yes
+		}
 	}
 }
 
