@@ -48,6 +48,15 @@ country_event = {
 				}
 			}
 			# ]]]
+			# PotionSeller
+			every_country = {
+				limit = {
+					has_government_mechanic = peasant_zealotry
+				}
+				country_event = {
+					id = moldavia_peasant_events.7
+				}
+			}
 		}
 	}
 	
@@ -93,10 +102,28 @@ country_event = {
 			}
 			elector = no
 		}
+		hidden_effect = {
+			remove_country_modifier = incited_peasantry
+			every_country = {
+				limit = {
+					has_government_mechanic = peasant_zealotry
+				}
+				reverse_remove_opinion = {
+					who = PREV
+					modifier = incited_peasants_opinion
+				}
+			}
+		}
 	}
 	option = { # Grant massive concessions, same penalty as usual
 		name = great_peasant_war.2.b
-		ai_chance = { factor = 1 }
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 0
+				has_country_modifier = incited_peasantry
+			}
+		}
 		add_prestige = -50
 	}
 }
@@ -239,6 +266,12 @@ country_event = {
 			flag = great_peasants_war_flag
 			days = 7300
 		}
+		NOT = {
+			any_province = {
+				is_part_of_hre = yes
+				has_province_modifier = radicalized_peasantry
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -276,6 +309,12 @@ country_event = {
 		had_global_flag = {
 			flag = great_peasants_war_flag
 			days = 5475
+		}
+		NOT = {
+			any_province = {
+					is_part_of_hre = yes
+					has_province_modifier = radicalized_peasantry
+			}
 		}
 	}
 	
