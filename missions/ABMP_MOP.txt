@@ -4323,6 +4323,86 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_alexandria_patriarch = {
+		icon = promote_the_patriarchate
+		position = 27
+		required_missions = {
+			mop_egypt
+		}
+		provinces_to_highlight = {
+			province_id = 358
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					religion = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				358 = {
+					owned_by = root
+					development = 30
+					religion = root
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			358 = {
+				upgrade_tax_building = yes
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_alexandria
+					duration = -1
+				}
+			}
+			set_country_flag = patriarch_of_alexandria
+			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_misr_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Alexandria"
+				location = 358
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_4 = {
@@ -5834,6 +5914,7 @@ ab_mop_4 = {
 		}
 		effect = {
 			387 = {
+				center_of_trade = 1
 				remove_province_modifier = mop_moca_commune
 				add_province_modifier = {
 					name = mop_great_moca_commune
