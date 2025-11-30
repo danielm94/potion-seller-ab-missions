@@ -21,11 +21,47 @@ incite_peasants = {
 				who = FROM
 			}
 		}
-		custom_trigger_tooltip = {
-			tooltip = incite_peasants_on_cooldown_tt
+		if = {
+			limit = {
+				FROM = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+			}
 			FROM = {
-				NOT = {
-					has_country_modifier = incited_peasantry
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = no_radicalized_peasantry_trigger_tt
+						any_owned_province = {
+							NOT = {
+								has_province_modifier = radicalized_peasantry
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = incite_peasants_on_cooldown_tt
+						AND = {
+							NOT = {
+								has_country_modifier = incited_peasantry
+							}
+							NOT = {
+								has_country_modifier = incited_peasantry_great_peasants_war
+							}
+						}
+					}
+				}
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = incite_peasants_on_cooldown_tt
+				FROM = {
+					NOT = {
+						has_country_modifier = incited_peasantry
+					}
+					NOT = {
+						has_country_modifier = incited_peasantry_great_peasants_war
+					}
 				}
 			}
 		}
@@ -50,21 +86,45 @@ incite_peasants = {
 			modifier = incited_peasants_opinion
 		}
 		FROM = {
-			add_country_modifier = {
-				name = incited_peasantry
-				duration = 3650
-			}
-			random_owned_province = {
+			if = {
 				limit = {
-					NOT = {
-						has_province_modifier = radicalized_peasantry
-					}
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
 				}
-				add_province_modifier = {
-					name = radicalized_peasantry
+				add_country_modifier = {
+					name = incited_peasantry_great_peasants_war
 					duration = 3650
 				}
-				save_event_target_as = radicalized_province
+			}
+			else = {
+				add_country_modifier = {
+					name = incited_peasantry
+					duration = 3650
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+				get_number_of_provinces_without_radicalized_peasantry = {
+					var_name = num_provinces_without_radicalized_peasantry
+				}
+				divide_variable = {
+					which = num_provinces_without_radicalized_peasantry
+					value = 2
+				}
+				variable_limit_min = {
+					var = num_provinces_without_radicalized_peasantry
+					min = 1
+				}
+				for_variable_amount = {
+					variable = num_provinces_without_radicalized_peasantry
+					effect = "add_radicalized_peasantry_to_random_province_effect = yes"
+				}
+			}
+			else = {
+				add_radicalized_peasantry_to_random_province_effect = yes
 			}
 			add_rebel_progress = {
 				rebel_type = anti_tax_rebels

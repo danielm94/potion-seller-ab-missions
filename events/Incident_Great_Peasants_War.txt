@@ -104,6 +104,7 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_country_modifier = incited_peasantry
+			remove_country_modifier = incited_peasantry_great_peasants_war
 			every_country = {
 				limit = {
 					has_government_mechanic = peasant_zealotry
@@ -122,6 +123,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_country_modifier = incited_peasantry
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = incited_peasantry_great_peasants_war
 			}
 		}
 		add_prestige = -50

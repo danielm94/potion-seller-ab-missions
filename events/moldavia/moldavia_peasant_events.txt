@@ -360,6 +360,7 @@ country_event = {
 	}
 }
 
+#Dumb
 country_event = {
 	id = moldavia_peasant_events.6
 	title = moldavia_peasant_events.6.t
@@ -409,4 +410,15 @@ country_event = {
 			scaled_with_gain_modifier = no
 		}
 	}
+}
+
+#Great Peasants War Explained
+country_event = {
+	id = moldavia_peasant_events.7
+	title = moldavia_peasant_events.7.t
+	desc = moldavia_peasant_events.7.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_peasant_events.7.a
 }

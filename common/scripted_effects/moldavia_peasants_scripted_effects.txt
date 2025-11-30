@@ -181,6 +181,9 @@ clear_all_radicalized_peasantry = {
 				NOT = {
 					has_country_modifier = incited_peasantry
 				}
+				NOT = {
+					has_country_modifier = incited_peasantry_great_peasants_war
+				}
 			}
 		}
 		remove_province_modifier = radicalized_peasantry
@@ -354,5 +357,62 @@ export_egyptian_grain_cost_effect = {
 				}
 			}
 		}
+	}
+}
+
+#SCOPE = COUNTRY
+get_number_of_provinces_without_radicalized_peasantry = {
+	export_to_variable = {
+		which = state_provinces
+		value = trigger_value:num_of_provinces_in_states
+	}
+	export_to_variable = {
+		which = territory_provinces
+		value = trigger_value:num_of_provinces_in_territories
+	}
+	set_variable = {
+		which = number_of_provinces
+		which = state_provinces
+	}
+	change_variable = {
+		which = number_of_provinces
+		which = territory_provinces
+	}
+	set_variable = {
+		num_of_radicalized_peasantry = 0
+	}
+	every_owned_province = {
+		limit = {
+			has_province_modifier = radicalized_peasantry
+		}
+		owner = {
+			change_variable = {
+				num_of_radicalized_peasantry = 1
+			}
+		}
+	}
+	set_variable = {
+		which = $var_name$
+		which = number_of_provinces
+	}
+	subtract_variable = {
+		which = $var_name$
+		which = num_of_radicalized_peasantry
+	}
+}
+
+#SCOPE = COUNTRY
+add_radicalized_peasantry_to_random_province_effect = {
+	random_owned_province = {
+		limit = {
+			NOT = {
+				has_province_modifier = radicalized_peasantry
+			}
+		}
+		add_province_modifier = {
+			name = radicalized_peasantry
+			duration = 3650
+		}
+		save_event_target_as = radicalized_province
 	}
 }

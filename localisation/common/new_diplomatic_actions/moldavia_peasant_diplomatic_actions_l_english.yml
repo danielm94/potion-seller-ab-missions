@@ -229,3 +229,4 @@
  export_egyptian_grain_self_grain_target: "One of our owned §YGrain§!-producing provinces in §YEgypt§! will lose §R1§! Base Production."
  export_egyptian_grain_subject_grain_target: "One of our £integrated_commune£ §YIntegrated Commune§!'s §YGrain§!-producing provinces in §YEgypt§! will lose §R1§! Base Production. They will expect §R10% of our yearly income§! as compensation."
  export_egyptian_grain_is_subject: "\n\n@[From.GetTag] §Y[From.GetName]§! will lose §G10§! Liberty Desire."
+ no_radicalized_peasantry_trigger_tt: "At least one of their provinces doesn't have the §YRadicalized Peasantry§! modifier."
