@@ -102,6 +102,23 @@ incite_peasants = {
 					duration = 3650
 				}
 			}
+			every_owned_province = {
+				limit = {
+					has_province_modifier = radicalized_peasantry
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_neighbor_province = {
+								owner = {
+									is_country_that_spreads_radicalized_peasants = yes
+								}
+							}
+						}
+					}
+					refresh_radicalized_peasantry_in_province = yes
+				}
+			}
 			if = {
 				limit = {
 					is_part_of_hre = yes
@@ -132,6 +149,122 @@ incite_peasants = {
 			}
 			country_event = {
 				id = moldavia_diplomatic_actions_events.1
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+stage_mass_peasant_uprising = {
+	category = covert
+	require_acceptance = no
+	is_visible = {
+		has_global_flag = great_peasants_war_flag
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_part_of_hre = yes
+		}
+		NOT = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+		FROM = {
+			NOT = {
+				has_government_attribute = is_peasants_republic
+			}
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = stage_mass_peasant_uprising_spy_network_size_tt
+			can_stage_mass_peasant_uprising = {
+				who = FROM
+			}
+		}
+		years_of_income = 0.25
+		FROM = {
+			any_owned_province = {
+				has_province_modifier = radicalized_peasantry
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = mass_peasant_uprising_cooldown_tt
+			FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = recent_mass_peasant_uprising
+					}
+					had_country_flag = {
+						flag = recent_mass_peasant_uprising
+						days = 3650
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		calculate_spy_action_cost_values = yes
+		set_variable = {
+			which = spy_network_deduction_var
+			which = stage_mass_peasant_uprising_cost_var
+		}
+		multiply_variable = {
+			which = spy_network_deduction_var
+			value = -1
+		}
+		variable_change_spy_network_in = {
+			who = FROM
+			var = spy_network_deduction_var
+		}
+		add_years_of_income = -0.25
+		FROM = {
+			every_owned_province = {
+				limit = {
+					likely_rebels = anti_tax_rebels
+				}
+				add_province_modifier = {
+					name = recent_uprising
+					duration = 3650
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_province_modifier = radicalized_peasantry
+				}
+				spawn_rebels = {
+					size = 2
+					type = anti_tax_rebels
+				}
+			}
+			set_country_flag = recent_mass_peasant_uprising
+			remove_country_modifier = incited_peasantry
+			remove_country_modifier = incited_peasantry_great_peasants_war
+		}
+		apply_radicalized_peasantry_effect = yes
+		reverse_add_aggressive_expansion = {
+			who = FROM
+			value = 5
+			apply_calc = yes
+		}
+		reverse_add_aggressive_expansion = {
+			who = emperor
+			value = 5
+			apply_calc = yes
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				NOT = {
+					has_government_attribute = is_peasants_republic
+				}
+			}
+			add_aggressive_expansion = {
+				who = root
+				value = 2
+				apply_calc = yes
 			}
 		}
 	}

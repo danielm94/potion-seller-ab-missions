@@ -329,3 +329,12 @@ add_radicalized_peasantry_to_random_province_effect = {
 		save_event_target_as = radicalized_province
 	}
 }
+
+#SCOPE = PROVINCE
+refresh_radicalized_peasantry_in_province = {
+	remove_province_modifier = radicalized_peasantry
+	add_province_modifier = {
+		name = radicalized_peasantry
+		duration = 3650
+	}
+}
