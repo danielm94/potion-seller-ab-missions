@@ -504,6 +504,45 @@ on_adm_development = {
 						}
 					}
 				}
+				AND = {
+					has_terrain = marsh
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = marsh_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = marsh_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = mountain
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = mountain_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = mountain_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = highlands
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = highlands_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = highlands_dev_20_percent_extra_dev
+						}
+					}
+				}
 			}
 		}
 		random = {
@@ -556,6 +595,45 @@ on_dip_development = {
 						}
 					}
 				}
+				AND = {
+					has_terrain = marsh
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = marsh_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = marsh_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = mountain
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = mountain_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = mountain_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = highlands
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = highlands_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = highlands_dev_20_percent_extra_dev
+						}
+					}
+				}
 			}
 		}
 		random = {
@@ -605,6 +683,45 @@ on_mil_development = {
 						}
 						owner = {
 							has_country_flag = coastal_desert_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = marsh
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = marsh_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = marsh_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = mountain
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = mountain_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = mountain_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = highlands
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = highlands_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = highlands_dev_20_percent_extra_dev
 						}
 					}
 				}

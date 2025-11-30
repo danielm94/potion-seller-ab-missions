@@ -833,3 +833,12 @@ received_egyptian_grain_shipments = {
 	global_manpower_modifier = 0.1
 	manpower_recovery_speed = 0.1
 }
+
+mop_portul_abas_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	trade_company_investment_cost = -0.05
+	picture = "commune_province_modifier_icon"
+}

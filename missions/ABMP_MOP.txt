@@ -4310,6 +4310,10 @@ ab_mop_3 = {
 			}
 			custom_tooltip = unlock_egyptian_grain_export_tt
 			set_country_flag = unlock_egyptian_grain_export
+			custom_tooltip = AB_EMPTY
+			custom_tooltip  = marsh_dev_20_percent_extra_dev_tt
+			set_country_flag = marsh_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 20
 			}
@@ -7305,6 +7309,61 @@ ab_mop_5 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+	mop_persia = {
+		icon = per_reborn_in_fire
+		position = 26
+		required_missions = {
+			mop_bagdad
+			mop_satrapeia
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				persia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			431 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_portul_abas_commune
+					duration = -1
+				}
+			}
+			custom_tooltip  = mountain_dev_20_percent_extra_dev_tt
+			set_country_flag = mountain_dev_20_percent_extra_dev
+			custom_tooltip  = highlands_dev_20_percent_extra_dev_tt
+			set_country_flag = highlands_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
 			}
 		}
 	}
