@@ -16,11 +16,23 @@ country_event = {
 			}
 			add_rebel_progress = {
 				rebel_type = anti_tax_rebels
-				value = 40
+				value = 50
 			}
-			add_country_modifier = {
-				name = incited_peasantry
-				duration = 3650
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+				add_country_modifier = {
+					name = incited_peasantry_great_peasants_war
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = incited_peasantry
+					duration = 3650
+				}
 			}
 		}
 	}
@@ -73,7 +85,7 @@ country_event = {
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					event_target:commune_being_integrated = {
 						is_subject_of_type = consulate_subject
 					}

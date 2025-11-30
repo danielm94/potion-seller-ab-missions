@@ -47,6 +47,7 @@ po_install_peasant_government = {
 			change_government = republic
 			add_government_reform = peasants_republic
 			remove_country_modifier = incited_peasantry
+			remove_country_modifier = incited_peasantry_great_peasants_war
 			remove_all_rebels_in_country = yes
 			add_trust = {
 				who = PREV

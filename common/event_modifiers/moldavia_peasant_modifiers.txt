@@ -9,6 +9,11 @@ incited_peasantry = {
 	global_tax_modifier = -0.1
 }
 
+incited_peasantry_great_peasants_war = {
+	global_unrest = 4
+	global_tax_modifier = -0.2
+}
+
 radicalized_peasantry = {
 	local_unrest = 10
 	trade_goods_size = 0.001
