@@ -364,15 +364,15 @@ wallachia_patriarchate_of_antiohia = {
 	yearly_patriarch_authority = 0.001
 	local_development_cost = -0.1
 	local_build_cost = -0.1
-	local_missionary_strength = 0.03
+	same_religion_advisor_cost = -0.1
 	religion = yes
 }
 
 wallachia_patriarchate_of_ierusalim = {
 	yearly_patriarch_authority = 0.001
-	local_missionary_strength = 0.04
-	local_great_project_upgrade_cost = -0.25
-	local_great_project_upgrade_time = -0.25
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	manpower_in_true_faith_provinces = 0.1
 	religion = yes
 }
 
@@ -439,7 +439,8 @@ wallachia_broke_the_iron_crown = {
 
 wallachia_patriarchate_of_alexandria = {
 	tolerance_own = 1
-	local_missionary_strength = 0.05
+	local_development_cost = -0.1
+	local_build_cost = -0.1
 	yearly_patriarch_authority = 0.001
 	religion = yes
 }
@@ -518,7 +519,9 @@ wallachia_rome_on_the_danube_upgraded = {
 wallachia_patriarchate_of_rome = {
 	yearly_patriarch_authority = 0.001
 	legitimacy = 0.5
-	local_great_project_upgrade_cost = -0.1
+	republican_tradition = 0.3
+	local_development_cost = -0.1
+	local_build_cost = -0.1
 	prestige = 0.5
 	religion = yes
 }
