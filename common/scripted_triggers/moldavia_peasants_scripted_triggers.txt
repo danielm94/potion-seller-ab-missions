@@ -15,6 +15,14 @@ can_stage_coup = {
 }
 
 #SCOPE = COUNTRY
+can_stage_mass_peasant_uprising = {
+	spy_action_cost_trigger = {
+		spy_action_cost_var = stage_mass_peasant_uprising_cost_var
+		who = $who$
+	}
+}
+
+#SCOPE = COUNTRY
 have_access_to_peasant_moldavia_missions = {
 	tag = MOP
 }
