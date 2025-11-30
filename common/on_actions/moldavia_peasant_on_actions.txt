@@ -797,3 +797,26 @@ on_dependency_lost = {
 		}
 	}
 }
+
+on_reform_enacted = {
+	set_global_flag = set_province_peasant_modifiers
+	country_event = {
+		id = moldavia_peasant_events.0
+		days = 30
+	}
+}
+on_reform_changed = {
+	set_global_flag = set_province_peasant_modifiers
+	country_event = {
+		id = moldavia_peasant_events.0
+		days = 30
+	}
+}
+
+on_government_change = {
+	set_global_flag = set_province_peasant_modifiers
+	country_event = {
+		id = moldavia_peasant_events.0
+		days = 30
+	}
+}
