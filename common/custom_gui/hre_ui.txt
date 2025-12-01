@@ -21,5 +21,8 @@ custom_icon = {
 	name = great_peasants_war_info
 	potential = {
 		has_global_flag = great_peasants_war_flag
+		NOT = {
+			active_imperial_incident = any
+		}
 	}
 }

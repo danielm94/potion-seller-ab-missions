@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_great_peasants_war_info
+		texturefile = "gfx/interface/hre/great_peasants_war_hre_button.dds"
+	}
+}

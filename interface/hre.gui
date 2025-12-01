@@ -519,6 +519,15 @@ guiTypes = {
 			scripted = yes
 		}
 
+		iconType = {
+			name ="great_peasants_war_info"
+			spriteType = "GFX_great_peasants_war_info"
+			position = { x= 350 y = 101 }
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+
+
 		guiButtonType = {
 			name = "leave_button"
 			position = { x= 119 y = 686}

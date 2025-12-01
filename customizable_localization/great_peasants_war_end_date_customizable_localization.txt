@@ -1,0 +1,257 @@
+defined_text = {
+	name = great_peasants_war_time_left
+	random = no
+	text = {
+		localisation_key = "N/A"
+		trigger = {
+			NOT = {
+				has_global_flag = great_peasants_war_flag
+			}
+		}
+	}
+	text = {
+		localisation_key = "Ending Very Soon"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5475
+			}
+		}
+	}
+	# MONTHS REMAINING (Decrement by 30 days)
+	text = {
+		localisation_key = "1 month"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5445
+			}
+		}
+	}
+	text = {
+		localisation_key = "2 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5415
+			}
+		}
+	}
+	text = {
+		localisation_key = "3 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5385
+			}
+		}
+	}
+	text = {
+		localisation_key = "4 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5355
+			}
+		}
+	}
+	text = {
+		localisation_key = "5 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5325
+			}
+		}
+	}
+	text = {
+		localisation_key = "6 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5295
+			}
+		}
+	}
+	text = {
+		localisation_key = "7 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5265
+			}
+		}
+	}
+	text = {
+		localisation_key = "8 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5235
+			}
+		}
+	}
+	text = {
+		localisation_key = "9 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5205
+			}
+		}
+	}
+	text = {
+		localisation_key = "10 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5175
+			}
+		}
+	}
+	text = {
+		localisation_key = "11 months"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5145
+			}
+		}
+	}
+	# YEARS REMAINING (Decrement by 365 days)
+	text = {
+		localisation_key = "1 year"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 5110
+			}
+		}
+	}
+	text = {
+		localisation_key = "2 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 4745
+			}
+		}
+	}
+	text = {
+		localisation_key = "3 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 4380
+			}
+		}
+	}
+	text = {
+		localisation_key = "4 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 4015
+			}
+		}
+	}
+	text = {
+		localisation_key = "5 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 3650
+			}
+		}
+	}
+	text = {
+		localisation_key = "6 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 3285
+			}
+		}
+	}
+	text = {
+		localisation_key = "7 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 2920
+			}
+		}
+	}
+	text = {
+		localisation_key = "8 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 2555
+			}
+		}
+	}
+	text = {
+		localisation_key = "9 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 2190
+			}
+		}
+	}
+	text = {
+		localisation_key = "10 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 1825
+			}
+		}
+	}
+	text = {
+		localisation_key = "11 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 1460
+			}
+		}
+	}
+	text = {
+		localisation_key = "12 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 1095
+			}
+		}
+	}
+	text = {
+		localisation_key = "13 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 730
+			}
+		}
+	}
+	text = {
+		localisation_key = "14 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 365
+			}
+		}
+	}
+	text = {
+		localisation_key = "15 years"
+		trigger = {
+			had_global_flag = {
+				flag = great_peasants_war_flag
+				days = 0
+			}
+		}
+	}
+}
