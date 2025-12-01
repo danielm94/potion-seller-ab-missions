@@ -271,12 +271,6 @@ country_event = {
 			flag = great_peasants_war_flag
 			days = 7300
 		}
-		NOT = {
-			any_province = {
-				is_part_of_hre = yes
-				has_province_modifier = radicalized_peasantry
-			}
-		}
 	}
 	
 	mean_time_to_happen = {
@@ -315,16 +309,6 @@ country_event = {
 			flag = great_peasants_war_flag
 			days = 5475
 		}
-		NOT = {
-			any_province = {
-				is_part_of_hre = yes
-				has_province_modifier = radicalized_peasantry
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 3
 	}
 	
 	immediate = {
