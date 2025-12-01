@@ -1,29 +1,33 @@
 custom_button = {
-	name = toggle_peasant_election_verbose_tooltips
+	name = toggle_verbose_tooltips_hidden_button
 	tooltip = AB_EMPTY
 	potential = {
 		FROM = {
-			has_country_flag = in_peasant_elections_event
+			OR = {
+				has_country_flag = in_peasant_elections_event
+				has_country_flag = in_moldavia_peasant_events.7
+			}
 		}
 	}
 	trigger = {
 	}
 	effect = {
-		if = {
-			limit = {
-				FROM = {
-					has_country_flag = hide_peasant_election_verbose_tooltips
+		FROM = {
+			if = {
+				limit = {
+					has_country_flag = in_peasant_elections_event
+				}
+				toggle_country_flag_with_sound = {
+					flag = hide_peasant_election_verbose_tooltips
 				}
 			}
-			FROM = {
-				clr_country_flag = hide_peasant_election_verbose_tooltips
-				play_sound = lock_mapmode
-			}
-		}
-		else = {
-			FROM = {
-				set_country_flag = hide_peasant_election_verbose_tooltips
-				play_sound = unlock_mapmode
+			else_if = {
+				limit = {
+					has_country_flag = in_moldavia_peasant_events.7
+				}
+				toggle_country_flag_with_sound = {
+					flag = show_verbose_gpw_tooltips
+				}
 			}
 		}
 	}

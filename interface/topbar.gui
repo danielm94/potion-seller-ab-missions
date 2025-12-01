@@ -18,7 +18,7 @@ guiTypes = {
 
 		#PotionSeller
 		guiButtonType = {
-			name = "toggle_peasant_election_verbose_tooltips"
+			name = "toggle_verbose_tooltips_hidden_button"
 			quadTextureSprite ="GFX_autonomy_macro_empty_button"
 			position = { x= -5 y = 2 }
 			Orientation = "UPPER_LEFT"

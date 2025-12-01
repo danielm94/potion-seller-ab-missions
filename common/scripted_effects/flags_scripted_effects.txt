@@ -9,3 +9,17 @@ toggle_country_flag = {
 		set_country_flag = $flag$
 	}
 }
+
+toggle_country_flag_with_sound = {
+	if = {
+		limit = {
+			has_country_flag = $flag$
+		}
+		clr_country_flag = $flag$
+		play_sound = lock_mapmode
+	}
+	else = {
+		set_country_flag = $flag$
+		play_sound = unlock_mapmode
+	}
+}

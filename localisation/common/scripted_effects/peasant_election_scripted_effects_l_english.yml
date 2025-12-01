@@ -1,5 +1,3 @@
 ﻿l_english:
  chance_of_getting_protector_little_folk_personality_tt: "There is a §Y[Root.total_chance_of_little_folk_personality.GetValue]%§! chance they will gain the §YProtector of the Little Folk§! personality trait."
  chance_of_getting_protector_little_folk_personality_math_tt: "§g- For every §YAllied Commune§! we have (§G[Root.num_allied_communes.GetValue]§!), the chance is increased by §Y0.5%§!. Therefore, we increase the chance by §G[Root.chance_gain_from_allied_communes.GetValue]%§!.\n- For every §YSister Commune§! we have (§G[Root.num_sister_communes.GetValue]§!), the chance is increased by §Y0.75%§!. Therefore, we increase the chance by §G[Root.chance_gain_from_sister_communes.GetValue]%§!.\n- For every §YIntegrated Commune§! we have (§G[Root.num_integrated_communes.GetValue]§!), the chance is increased by §Y1%§!. Therefore, we increase the chance by §G[Root.chance_gain_from_integrated_communes.GetValue]%§!.§!"
- show_peasant_election_verbose_tooltips_tt: "§VEnable Detailed Tooltips: §YCTRL+T§!§!"
- hide_peasant_election_verbose_tooltips_tt: "§VDisable Detailed Tooltips: §YCTRL+T§!§!"

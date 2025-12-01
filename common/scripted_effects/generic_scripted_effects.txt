@@ -3716,3 +3716,25 @@ complex_release_effect = {
 		]
 	}
 }
+
+#SCOPE = COUNTRY
+display_tooltip_if_has_country_flag = {
+	[[tooltip]
+	if = {
+		limit = {
+			has_country_flag = $flag$
+		}
+		custom_tooltip = $tooltip$
+	}
+	]
+	[[not_tooltip]
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = $flag$
+			}
+		}
+		custom_tooltip = $not_tooltip$
+	}
+	]
+}

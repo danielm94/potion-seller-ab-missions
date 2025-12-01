@@ -412,13 +412,78 @@ country_event = {
 	}
 }
 
-#Great Peasants War Explained
+# Great Peasants War Explained
+# show_verbose_gpw_tooltips flag is toggled in: common/custom_gui/topbar_hidden_shortcuts_ui.txt
 country_event = {
 	id = moldavia_peasant_events.7
 	title = moldavia_peasant_events.7.t
 	desc = moldavia_peasant_events.7.d
 	picture = ANGRY_MOB_eventPicture
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_moldavia_peasant_events.7
+		}
+	}
+	after = {
+		clr_country_flag = in_moldavia_peasant_events.7
+	}
 	option = {
 		name = moldavia_peasant_events.7.a
+		display_tooltip_if_has_country_flag = {
+			flag = show_verbose_gpw_tooltips
+			tooltip = hide_verbose_tooltips_tt
+			not_tooltip = show_verbose_tooltips_tt
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = gpw_basics_tt
+		display_tooltip_if_has_country_flag = {
+			flag = show_verbose_gpw_tooltips
+			tooltip = gpw_new_icon_tt
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = incite_peasants_gpw_changes_tt
+		display_tooltip_if_has_country_flag = {
+			flag = show_verbose_gpw_tooltips
+			tooltip = incite_peasants_verbose_gpw_changes_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = show_verbose_gpw_tooltips
+			}
+			tooltip = {
+				if = {
+					limit = {
+						hre_size = 1
+					}
+					emperor = {
+						add_country_modifier = {
+							name = incited_peasantry_great_peasants_war
+							duration = 3650
+						}
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = incited_peasantry_great_peasants_war
+						duration = 3650
+					}
+				}
+			}
+		}
+		else = {
+			custom_tooltip = AB_EMPTY
+		}
+		custom_tooltip = gpw_unlock_stage_mass_uprising_tt
+		display_tooltip_if_has_country_flag = {
+			flag = show_verbose_gpw_tooltips
+			tooltip = gpw_unlock_stage_mass_uprising_verbose_tt
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = gpw_opportunity_tt
+		display_tooltip_if_has_country_flag = {
+			flag = show_verbose_gpw_tooltips
+			tooltip = gpw_opportunity_verbose_tt
+		}
+	}
 }
