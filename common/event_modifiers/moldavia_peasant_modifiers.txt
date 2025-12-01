@@ -12,6 +12,7 @@ incited_peasantry = {
 incited_peasantry_great_peasants_war = {
 	global_unrest = 4
 	global_tax_modifier = -0.2
+	global_spy_defence = -0.25
 }
 
 radicalized_peasantry = {
