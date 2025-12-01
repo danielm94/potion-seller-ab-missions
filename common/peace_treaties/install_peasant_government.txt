@@ -31,6 +31,19 @@ po_install_peasant_government = {
 		always = yes
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					is_part_of_hre = yes
+				}
+			}
+			change_variable = {
+				hre_nations_liberated = 1
+			}
+			FROM = {
+				set_in_empire = no
+			}
+		}
 		FROM = {
 			if = {
 				limit = {
