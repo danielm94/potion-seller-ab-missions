@@ -206,6 +206,9 @@ stage_mass_peasant_uprising = {
 		}
 	}
 	on_accept = {
+		change_variable = {
+			number_of_mass_peasant_uprisings = 1
+		}
 		set_global_flag = great_peasants_war_flag
 		calculate_spy_action_cost_values = yes
 		set_variable = {
@@ -290,6 +293,10 @@ invite_to_peasant_league = {
 		are_we_and_target_at_peace = {
 			target = FROM
 		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
 		OR = {
 			is_neighbor_of = FROM
 			any_subject_country = {
@@ -306,8 +313,29 @@ invite_to_peasant_league = {
 			faction = leaguists_faction
 			influence = 5
 		}
-		FROM = {
-			set_in_empire = no
+		if = {
+			limit = {
+				FROM = {
+					is_part_of_hre = yes
+				}
+			}
+			FROM = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+					emperor = {
+						add_opinion = {
+							who = ROOT
+							modifier = hre_province_left
+						}
+					}
+				}
+			}
+			change_variable = {
+				hre_nations_diplo_annexed = 1
+			}
 		}
 	}
 	on_decline = {
@@ -404,7 +432,7 @@ invite_to_peasant_league = {
 			#4 dev = -1
 			multiply_variable = {
 				which = ai_value
-				value = -0.25
+				value = -0.4
 			}
 		}
 		add_entry = {
@@ -420,7 +448,41 @@ invite_to_peasant_league = {
 			}
 			multiply_variable = {
 				which = ai_value
-				value = -1000
+				value = -30
+			}
+		}
+		add_entry = {
+			name = GUARANTEEING
+			limit = {
+				has_guaranteed = FROM
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 5
+			}
+		}
+		add_entry = {
+			name = STRONGER_THAN_HRE_EMPEROR
+			limit = {
+				FROM = {
+					is_part_of_hre = yes
+				}
+				army_strength = {
+					who = emperor
+					value = 1.05
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 5
 			}
 		}
 		add_entry = {

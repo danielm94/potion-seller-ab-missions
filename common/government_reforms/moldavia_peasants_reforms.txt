@@ -80,15 +80,25 @@ moldavian_commune_reform = {
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = faction_fatigue_variables_initialized
+						has_country_flag = peasant_variables_initialized
 					}
 				}
 				faction_fatigue_initialize_faction_fatigue_variables = yes
-				set_country_flag = faction_fatigue_variables_initialized
+				set_variable = {
+					hre_nations_liberated = 0
+				}
+				set_variable = {
+					hre_nations_diplo_annexed = 0
+				}
+				set_variable = {
+					number_of_mass_peasant_uprisings = 0
+				}
+				set_country_flag = peasant_variables_initialized
 			}
 		}
 	}
 }
+
 dacian_commune_reform = {
 	icon = "dacian_commune_reform"
 	allow_convert = no
@@ -142,11 +152,20 @@ dacian_commune_reform = {
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = faction_fatigue_variables_initialized
+						has_country_flag = peasant_variables_initialized
 					}
 				}
 				faction_fatigue_initialize_faction_fatigue_variables = yes
-				set_country_flag = faction_fatigue_variables_initialized
+				set_variable = {
+					hre_nations_liberated = 0
+				}
+				set_variable = {
+					hre_nations_diplo_annexed = 0
+				}
+				set_variable = {
+					number_of_mass_peasant_uprisings = 0
+				}
+				set_country_flag = peasant_variables_initialized
 			}
 		}
 	}
@@ -156,12 +175,16 @@ ganden_phodrang_reform = {
 	icon = "peasants"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { tag = PAP }
+		NOT = {
+			tag = PAP
+		}
 		tag = GPH
 	}
 	trigger = {
 		religion_group = eastern
-		is_not_blocked_by_estate_privilege = { estate = estate_nobles }
+		is_not_blocked_by_estate_privilege = {
+			estate = estate_nobles
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
