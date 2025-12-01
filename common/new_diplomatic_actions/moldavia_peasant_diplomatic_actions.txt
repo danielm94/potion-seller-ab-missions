@@ -206,6 +206,7 @@ stage_mass_peasant_uprising = {
 		}
 	}
 	on_accept = {
+		set_global_flag = great_peasants_war_flag
 		calculate_spy_action_cost_values = yes
 		set_variable = {
 			which = spy_network_deduction_var
@@ -304,6 +305,9 @@ invite_to_peasant_league = {
 		add_faction_influence = {
 			faction = leaguists_faction
 			influence = 5
+		}
+		FROM = {
+			set_in_empire = no
 		}
 	}
 	on_decline = {
