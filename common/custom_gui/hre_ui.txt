@@ -15,3 +15,11 @@ custom_button = {
 	effect = {
 	}
 }
+
+custom_icon = {
+	tooltip = great_peasants_war_info_tt
+	name = great_peasants_war_info
+	potential = {
+		has_global_flag = great_peasants_war_flag
+	}
+}
