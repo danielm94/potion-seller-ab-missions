@@ -504,10 +504,10 @@ toggle_verbose_election_event_tooltip_effect = {
 		limit = {
 			has_country_flag = hide_peasant_election_verbose_tooltips
 		}
-		custom_tooltip = show_peasant_election_verbose_tooltips_tt
+		custom_tooltip = show_verbose_tooltips_tt
 	}
 	else = {
-		custom_tooltip = hide_peasant_election_verbose_tooltips_tt
+		custom_tooltip = hide_verbose_tooltips_tt
 	}
 	custom_tooltip = tooltip_line_divider
 }
