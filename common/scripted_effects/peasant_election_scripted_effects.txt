@@ -299,6 +299,7 @@ calculate_abolitionist_stat_gain_from_army_professionalism_effect = {
 	}
 }
 
+#SCOPE = COUNTRY
 calculate_abolition_stat_gain_from_power_projection = {
 	export_to_variable = {
 		which = power_proj
@@ -318,6 +319,7 @@ calculate_abolition_stat_gain_from_power_projection = {
 	}
 }
 
+#SCOPE = COUNTRY
 calculate_exemplarist_candidate_after_stats_effect = {
 	set_variable = {
 		which = exemplarist_total_stat_change
@@ -370,6 +372,7 @@ calculate_exemplarist_candidate_after_stats_effect = {
 	}
 }
 
+#SCOPE = COUNTRY
 calculate_leaguist_candidate_after_stats_effect = {
 	set_variable = {
 		which = leaguist_total_stat_change
@@ -426,6 +429,7 @@ calculate_leaguist_candidate_after_stats_effect = {
 	}
 }
 
+#SCOPE = COUNTRY
 calculate_abolitionist_candidate_after_stats_effect = {
 	set_variable = {
 		which = abolitionist_total_stat_change
@@ -494,6 +498,7 @@ display_verbose_election_event_tooltip_if_toggled = {
 	}
 }
 
+#SCOPE = COUNTRY
 toggle_verbose_election_event_tooltip_effect = {
 	if = {
 		limit = {
@@ -507,6 +512,7 @@ toggle_verbose_election_event_tooltip_effect = {
 	custom_tooltip = tooltip_line_divider
 }
 
+#SCOPE = COUNTRY
 ten_year_plan_cost_scripted_effect = {
 	if = {
 		limit = {
