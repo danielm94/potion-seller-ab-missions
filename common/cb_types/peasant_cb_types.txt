@@ -284,7 +284,17 @@ cb_crush_peasants = {
 				}
 			}
 		}
-		is_neighbor_of = FROM
+		OR = {
+			is_neighbor_of = FROM
+			AND = {
+				is_emperor = yes
+				FROM = {
+					any_neighbor_country = {
+						is_part_of_hre = yes
+					}
+				}
+			}
+		}
 	}
 	war_goal = crush_peasants_wargoal
 }
