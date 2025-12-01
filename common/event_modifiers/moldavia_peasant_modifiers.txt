@@ -878,3 +878,9 @@ mop_explore_indian_ocean = {
 mop_coffee = {
 	all_power_cost = -0.025
 }
+
+mop_great_peasants_war_mod = {
+	spy_action_cost_modifier = -0.25
+	rebel_support_efficiency = 1
+	ae_impact = -0.1
+}

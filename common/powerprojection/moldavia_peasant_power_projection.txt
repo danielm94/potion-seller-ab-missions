@@ -4,3 +4,10 @@ liberated_the_bulgars_pp = {
 	power = 1
 	yearly_decay = 1
 }
+
+started_gpw_pp = {
+	min = 1
+	max = 10.377
+	power = 1
+	yearly_decay = 0.001
+}

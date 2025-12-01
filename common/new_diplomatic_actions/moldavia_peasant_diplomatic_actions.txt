@@ -470,6 +470,7 @@ invite_to_peasant_league = {
 			limit = {
 				FROM = {
 					is_part_of_hre = yes
+					is_emperor = no
 				}
 				army_strength = {
 					who = emperor

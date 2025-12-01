@@ -100,6 +100,7 @@ has_been_spreader_of_radicalized_peasants = {
 	has_country_flag = has_been_spreader_of_radicalized_peasants_flag
 }
 
+#SCOPE = COUNTRY
 has_unlocked_palace_of_the_east_great_project = {
 	custom_trigger_tooltip = {
 		tooltip = has_unlocked_palace_of_the_east_great_project_tt
@@ -107,9 +108,21 @@ has_unlocked_palace_of_the_east_great_project = {
 	}
 }
 
+#SCOPE = COUNTRY
 is_peasant_republic = {
 	custom_trigger_tooltip = {
 		tooltip = mechanic_is_peasants_republic_yes
 		has_government_attribute = is_peasants_republic
+	}
+}
+
+#SCOPE = ANY
+has_great_peasants_war_ended = {
+	OR = {
+		has_global_flag = condemned_peasant_republics
+		has_global_flag = gpw_nobles_win_minor
+		has_global_flag = gpw_nobles_win_major
+		has_global_flag = gpw_peasants_win_major
+		has_global_flag = gpw_peasants_win_minor
 	}
 }
