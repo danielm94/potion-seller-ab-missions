@@ -496,7 +496,13 @@ declarewar = {
 		}
 	}
 }
-
+grant_freecity= {
+	condition = {
+		tooltip = no_fc_during_great_peasants_war_tt
+		potential = { has_global_flag = great_peasants_war_flag }
+		allow = { always = no }
+	}
+}
 # Thanks Nitrogue for suggesting this
 demand_unlawful_territory_action = {
 	condition = {
