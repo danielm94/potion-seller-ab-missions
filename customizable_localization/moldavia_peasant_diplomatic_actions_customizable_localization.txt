@@ -153,3 +153,104 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = custom_incite_peasants_tooltip
+	random = no
+	text = {
+		localisation_key = custom_incite_peasants_regular_tooltip
+		trigger = {
+			NOT = {
+				FROM = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = custom_incite_peasants_gpw_tooltip
+		trigger = {
+			FROM = {
+				is_part_of_hre = yes
+				has_global_flag = great_peasants_war_flag
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = incite_peasants_desc_modifier_applied
+	random = no
+	text = {
+		localisation_key = incite_peasants_desc_regular_modifier_applied
+		trigger = {
+			NOT = {
+				FROM = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = incite_peasants_desc_gpw_modifier_applied
+		trigger = {
+			FROM = {
+				is_part_of_hre = yes
+				has_global_flag = great_peasants_war_flag
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = incite_peasants_desc_radicalized_peasantry
+	random = no
+	text = {
+		localisation_key = incite_peasants_desc_radicalized_peasantry_regular
+		trigger = {
+			NOT = {
+				FROM = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = incite_peasants_desc_radicalized_peasantry_gpw
+		trigger = {
+			FROM = {
+				is_part_of_hre = yes
+				has_global_flag = great_peasants_war_flag
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = incite_peasants_desc_overthrow_explained
+	text = {
+		localisation_key = incite_peasants_desc_overthrow_explained_has_rad_pes
+		trigger = {
+			FROM = {
+				any_owned_province = {
+					has_province_modifier = radicalized_peasantry
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = incite_peasants_desc_overthrow_explained_not_has_rad_pes
+		trigger = {
+			NOT = {
+				FROM = {
+					any_owned_province = {
+						has_province_modifier = radicalized_peasantry
+					}
+				}
+			}
+		}
+	}
+}
