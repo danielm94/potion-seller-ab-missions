@@ -314,3 +314,6 @@
  integrated_commune_neapolitan_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YNeapolitan§! culture will grant us §G-10.0%§! Ship Costs if they have over §Y350§! total development."
  mop_south_italy_title: "Liberate the Mezzogiorno"
  mop_south_italy_desc: "The Shia Sultans rule the mainland from their island fortresses, treating the fertile peninsula as little more than a harvest colony. The farmers of Apulia and the fishermen of Calabria cry out for deliverance. We must cross the Adriatic, secure the boot of Italy, and drive the Sultan's armies back across the Strait of Messina."
+ we_will_liberate_sicilian_slaves_tt: "We will liberate all the slaves captured by §Y[SIC.GetName]§!."
+ mop_sicily_title: "Liberate the Isles"
+ mop_sicily_desc: "The islands of the Mediterranean have long served as safe harbors for pirates, slavers, and reactionary aristocrats. From the rock of Malta to the granaries of Sicily, these territories act as staging grounds for raids against free peoples. We must cross the straits, storm their fortifications, and turn these unsinkable carriers of oppression into bastions of the revolution."

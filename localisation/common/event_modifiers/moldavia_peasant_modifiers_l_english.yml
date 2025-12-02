@@ -228,3 +228,5 @@
  desc_razesi_monopoly_on_livestock: "The state has granted the [get_razesi_name] monopoly rights over livestock farming."
  razesi_monopoly_on_grain: "Monopoly on Grain"
  desc_razesi_monopoly_on_grain: "The state has granted the [get_razesi_name] monopoly rights over farming grain."
+ mop_malta_commune: "The Maltese Commune"
+ desc_mop_malta_commune: "The ancient fortifications of Malta have been repurposed to defend the revolution, turning the island into an impenetrable lock on the central Mediterranean."

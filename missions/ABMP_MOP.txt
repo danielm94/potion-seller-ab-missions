@@ -937,7 +937,7 @@ ab_mop_1 = {
 	}
 	mop_south_italy = {
 		icon = king_of_naples
-		position = 26
+		position = 27
 		required_missions = {
 			mop_liberate_illyria
 		}
@@ -1011,7 +1011,7 @@ ab_mop_1 = {
 	}
 	mop_sicily = {
 		icon = arb_sicily
-		position = 27
+		position = 29
 		required_missions = {
 			mop_south_italy
 		}
@@ -1056,7 +1056,68 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			
+			126 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_malta_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = we_will_liberate_sicilian_slaves_tt
+			custom_tooltip = AB_EMPTY
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+					any_owned_province = {
+						has_province_flag = SIC_raided_province
+						NOT = {
+							had_province_flag = {
+								flag = SIC_raided_province
+								days = 14600
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = freed_our_enslaved_people
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						has_province_flag = SIC_raided_province
+						NOT = {
+							had_province_flag = {
+								flag = SIC_raided_province
+								days = 14600
+							}
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = return_slaves_home_tooltip
+				custom_tooltip = AB_EMPTY
+			}
+			add_ruler_modifier = {
+				name = wallachia_great_liberator
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
 		}
 	}
 }
@@ -3486,7 +3547,9 @@ ab_mop_3 = {
 					add_government_reform = hetmanate
 					change_country_color = {
 						color = {
-							140 0 0
+							140
+							0
+							0
 						}
 					}
 				}
