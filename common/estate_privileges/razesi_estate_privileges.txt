@@ -821,6 +821,71 @@ estate_razesi_advisors = {
 	}
 }
 
+estate_razesi_exemplarism = {
+	icon = GFX_estate_razesi_exemplarism
+	land_share = 5
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	loyalty = 0.05
+	influence = 0.15
+	is_valid = {
+		has_government_mechanic = peasant_zealotry
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_razesi_revolution
+		}
+	}
+	can_revoke = {
+		is_at_war = no
+	}
+	on_granted = {
+		add_faction_influence = {
+			faction = exemplarists_faction
+			influence = 20
+		}
+	}
+	modifier_by_land_ownership = {
+		development_cost = -0.33
+		global_tax_modifier = 0.33
+		production_efficiency = 0.33
+		manpower_in_true_faith_provinces = 0.33
+		core_creation = 1
+		province_warscore_cost = 2
+	}
+	penalties = {
+		stability_cost_to_declare_war = 1
+	}
+	benefits = {
+		global_prosperity_growth = 0.1
+		global_monthly_devastation = -0.1
+		abolitionists_faction_influence = 0.05
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	conditional_modifier = {
+		trigger = {
+			ai = yes
+		}		#I know, this one is cheating. It would be better to teach the AI to not dow, but whatev
+		modifier = {
+			can_not_declare_war = yes
+		}
+		is_bad = yes
+	}
+	cooldown_years = 25
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 estate_razesi_revolution = {
 	icon = GFX_estate_razesi_revolution
 	land_share = 5
@@ -839,10 +904,17 @@ estate_razesi_revolution = {
 		has_government_mechanic = peasant_zealotry
 	}
 	can_select = {
+		NOT = {
+			has_estate_privilege = estate_razesi_exemplarism
+		}
 	}
 	can_revoke = {
 	}
 	on_granted = {
+		add_faction_influence = {
+			faction = abolitionists_faction
+			influence = 20
+		}
 	}
 	modifier_by_land_ownership = {
 		rebel_support_efficiency = 5
@@ -850,6 +922,7 @@ estate_razesi_revolution = {
 	}
 	penalties = {
 		improve_relation_modifier = -0.1
+		monthly_peasant_zeal = 0.02
 	}
 	benefits = {
 		abolitionists_faction_influence = 0.05

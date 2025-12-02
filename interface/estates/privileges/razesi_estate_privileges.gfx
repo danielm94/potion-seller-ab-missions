@@ -19,4 +19,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/privileges/razesi/estate_razesi_revolution.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_estate_razesi_exemplarism"
+		texturefile = "gfx/interface/privileges/razesi/estate_razesi_exemplarism.dds"
+		loadType = "INGAME"
+	}
 }

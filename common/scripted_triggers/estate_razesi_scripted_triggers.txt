@@ -1,5 +1,7 @@
 has_exempt_from_seize_land_for_estate_razesi = {
 	OR = {
 		has_estate_privilege = estate_razesi_blood_tax
+		has_estate_privilege = estate_razesi_exemplarism
+		has_estate_privilege = estate_razesi_revolution
 	}
 }
