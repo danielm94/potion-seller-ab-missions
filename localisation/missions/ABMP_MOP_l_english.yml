@@ -338,3 +338,7 @@
  mop_genoa_title: "La Superba"
  mop_genoa_desc: "The banking families choked Genoa's potential with their intrigue and avarice. We have swept them aside. By integrating the port directly into the Federation's supply chain and expanding its dockyards, we will transform this city into an industrial titan that eclipses anything the old Doges could have imagined."
  unlock_genoese_rigging_tt: "§GUnlocks§! the §YGenoese Rigging§! flagship modification:\nTrade Power per Ship in Fleet: §G+2.00§!\nFleet Movement Speed: §G+1.00§!\nFlagship Maintenance: §R+1.00§!"
+ integrated_commune_tuscan_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YTuscan§! culture will grant us §G-2.5%§! Idea Cost if they have over §Y350§! total development."
+ integrated_commune_romagnan_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YRomagnan§! culture will grant us §G-5%§! Advisor Cost if they have over §Y350§! total development."
+ mop_central_italy_title: "End the Medici Tyranny"
+ mop_central_italy_desc: "The Medici bankers and the Romagnan counts have turned the cradle of the Renaissance into a gilded cage, using culture as a cloak for usury and nepotism. We must storm the palaces of Florence and the lecture halls of Bologna. Wisdom belongs to the free man, not the highest bidder."

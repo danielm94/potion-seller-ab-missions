@@ -394,4 +394,24 @@ integrated_commune = {
 			total_development = 350
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_tuscan_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_tuscan_bonus_flag
+			}
+			culture = tuscan
+			total_development = 350
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_romagnan_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_romagnan_bonus_flag
+			}
+			culture = romagnan
+			total_development = 350
+		}
+	}
 }

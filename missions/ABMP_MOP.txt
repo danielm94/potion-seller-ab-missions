@@ -3218,6 +3218,68 @@ ab_mop_2 = {
 			}
 		}
 	}
+	mop_central_italy = {
+		icon = conquer_tuscany
+		position = 34
+		required_missions = {
+			mop_genoa
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = emilia_romagna_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				tuscany_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				emilia_romagna_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_tuscan_bonus_tt
+			set_country_flag = integrated_commune_tuscan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_romagnan_bonus_tt
+			set_country_flag = integrated_commune_romagnan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = artist
+				skill = 2
+				culture = tuscan
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_innovativeness_big_effect = yes
+			add_reform_progress_big_effect = yes
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_3 = {
