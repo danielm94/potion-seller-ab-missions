@@ -1010,7 +1010,7 @@ ab_mop_1 = {
 		}
 	}
 	mop_sicily = {
-		icon = GFX_mop_sicily
+		icon = arb_sicily
 		position = 27
 		required_missions = {
 			mop_south_italy
@@ -1056,7 +1056,7 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			#TODO: FINISH THIS
+			
 		}
 	}
 }
@@ -3485,7 +3485,9 @@ ab_mop_3 = {
 					remove_non_electors_emperors_from_empire_effect = yes
 					add_government_reform = hetmanate
 					change_country_color = {
-						country = ROOT
+						color = {
+							140 0 0
+						}
 					}
 				}
 				set_country_flag = cossack_conquest_cb_enabled

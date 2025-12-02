@@ -1808,6 +1808,16 @@ release_balkanized_communes_for_target = {
 	}
 }
 
+#SCOPE = COUNTRY
 enable_adopt_new_ideas_commune = {
 	set_country_flag = can_adopt_new_ideas_commune
+}
+
+#SCOPE = COUNTRY
+change_integrated_commune_color = {
+	change_country_color = {
+		color = {
+			100 0 0
+		}
+	}
 }

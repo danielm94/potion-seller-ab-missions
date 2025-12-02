@@ -123,9 +123,7 @@ on_dependency_gained = {
 				limit = {
 					is_subject_of_type = integrated_commune
 				}
-				change_country_color = {
-					country = overlord
-				}
+				change_integrated_commune_color = yes
 				clear_was_commune_subject_flags = yes
 				mark_country_as_having_been_integrated_commune = yes
 			}
