@@ -780,3 +780,43 @@ estate_razesi_commune_integration = {
 		factor = 0
 	}
 }
+
+estate_razesi_advisors = {
+	icon = GFX_estate_razesi_advisors
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	influence = 0.1
+	loyalty = 0.05
+	penalties = {
+		global_tax_modifier = -0.15
+	}
+	benefits = {
+		advisor_pool = 2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

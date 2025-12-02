@@ -18,3 +18,5 @@
  estate_razesi_monopoly_of_grain_revoke_tooltip: "Production income from §YGrain§! is restored"
  estate_razesi_commune_integration: "[get_razesi_name] Integration Oversight"
  estate_razesi_commune_integration_desc: "Integrating a fellow commune is a delicate task, usually met with fear by our other subjects. The [get_razesi_name] propose a solution: a rigorous, standardized process of assimilation. By embedding [get_razesi_name] overseers in our subjects' administrations, we ensure a swift integration that other communes view as a standard legal procedure rather than a conquest."
+ estate_razesi_advisors: "[get_razesi_name] Education Grants"
+ estate_razesi_advisors_desc: "The [get_razesi_name] argue that the state invests too much in war and too little in the minds of its people. This privilege diverts a significant portion of national tax revenue to fund local schools and village academies."
