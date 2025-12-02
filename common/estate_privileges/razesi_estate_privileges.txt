@@ -615,7 +615,7 @@ estate_razesi_monopoly_of_livestock = {
 			}
 			custom_tooltip = MONOPOLY_INCOME_LIVESTOCK_DESC
 		}
-		custom_tooltip = estate_razesi_monopoly_of_livestock_effect_tooltip
+		custom_tooltip = estate_nobles_monopoly_of_livestock_effect_tooltip
 	}
 	loyalty = 0.05
 	is_valid = {
@@ -658,7 +658,7 @@ estate_razesi_monopoly_of_livestock = {
 		}
 	}
 	on_revoked = {
-		custom_tooltip = estate_razesi_monopoly_of_livestock_revoke_tooltip
+		custom_tooltip = estate_nobles_monopoly_of_livestock_revoke_tooltip
 	}
 	on_revoked_province = {
 		if = {
@@ -669,7 +669,7 @@ estate_razesi_monopoly_of_livestock = {
 		}
 	}
 	on_invalid = {
-		custom_tooltip = estate_razesi_monopoly_of_livestock_revoke_tooltip
+		custom_tooltip = estate_nobles_monopoly_of_livestock_revoke_tooltip
 	}
 	on_invalid_province = {
 		if = {
