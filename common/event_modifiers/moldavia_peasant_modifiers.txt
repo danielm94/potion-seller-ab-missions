@@ -938,3 +938,13 @@ mop_genoa_commune = {
 	light_ship_cost = -0.1
 	picture = "commune_province_modifier_icon"
 }
+
+mop_great_genoa_commune = {
+	min_local_autonomy = 10
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.15
+	light_ship_cost = -0.1
+	sea_repair = yes
+	picture = "commune_province_modifier_icon"
+}

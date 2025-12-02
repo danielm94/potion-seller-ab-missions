@@ -238,3 +238,5 @@
  desc_mop_serene_venice_commune: "The lagoon city has entered a golden age. No longer stifled by oligarchic infighting, the Venetian Arsenal operates at peak efficiency, and the trade flowing through the canals enriches the entire federation. It stands as the ultimate proof of the revolutionary model's superiority."
  mop_genoa_commune: "The Genoese Commune"
  desc_mop_genoa_commune: "For centuries, a cabal of banking families ruled Genoa behind a mask of republicanism. We have torn off the mask. The oligarchy is dissolved, and the port now prioritizes the common utility over private usury, maintaining a vast fleet to secure the Western Mediterranean."
+ mop_great_genoa_commune: "The Great Genoese Commune"
+ desc_mop_great_genoa_commune: "Genoa stands as the logistical heart of the Federation. Its shipyards turn out vessels at a feverish pace, and its reformed banks provide interest-free credit to the communes."
