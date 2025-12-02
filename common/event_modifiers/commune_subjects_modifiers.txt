@@ -174,3 +174,7 @@ integrated_commune_tibetan_bonus = {
 integrated_commune_neapolitan_bonus = {
 	global_ship_cost = -0.1
 }
+
+integrated_commune_venetian_bonus = {
+	galley_power = 0.075
+}

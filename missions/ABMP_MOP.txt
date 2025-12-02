@@ -2867,6 +2867,92 @@ ab_mop_2 = {
 			}
 		}
 	}
+	mop_venice = {
+		icon = mission_raid_on_venice
+		position = 30
+		required_missions = {
+			mop_liberate_the_balkans
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = venetia_area
+				province_id = 110
+				province_id = 4738
+				province_id = 130
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				venetia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				110 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				4738 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				130 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_venetian_bonus_tt
+			set_country_flag = integrated_commune_venetian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			112 = {
+				remove_core = root
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_venice_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = BYZ_buff_free_enterprise
+			set_country_flag = BYZ_free_enterprise_buff
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = galleass_galley_in_venice_tt
+			hidden_effect = {
+				112 = {
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_3 = {

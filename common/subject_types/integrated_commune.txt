@@ -344,4 +344,14 @@ integrated_commune = {
 			total_development = 350
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_venetian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_venetian_bonus_flag
+			}
+			culture = venetian
+			total_development = 350
+		}
+	}
 }

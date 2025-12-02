@@ -320,3 +320,7 @@
  mop_malta_title: "Shield of the Mediterranean"
  mop_malta_desc: "Possession of Malta is merely the first step; to truly secure the seas, we must transform this rock into an unsinkable carrier of revolutionary power. By expanding the harbors, reinforcing the ancient citadel, and establishing a permanent naval shipyard, we will ensure that our reach extends to every corner of the Mediterranean."
  unlocked_corsair_crew_flagship_tt: "§GUnlocks§! the §YCorsair Crew§! flagship modification."
+ mop_venice_title: "The Merchant Princes"
+ mop_venice_desc: "The so-called 'Serene Republic' is a gilded lie, an oligarchy where a few merchant families fatten themselves on the labor of the Adriatic while claiming the mantle of liberty. We must breach the lagoon, storm the Doge's Palace, and burn the Golden Book. The Arsenal will no longer serve profit, but the liberation of the working class."
+ galleass_galley_in_venice_tt: "We will gain §Y5§! Galleass Galleys in §Y[112.GetName]§!."
+ integrated_commune_venetian_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YVenetian§! culture will grant us §G+7.5%§! Galley Combat Ability if they have over §Y350§! total development."

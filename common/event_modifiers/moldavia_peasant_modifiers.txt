@@ -910,3 +910,12 @@ mop_great_malta_commune = {
 	privateer_efficiency = 0.2
 	picture = "commune_province_modifier_icon"
 }
+
+mop_venice_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	galley_cost = -0.1
+	picture = "commune_province_modifier_icon"
+}
