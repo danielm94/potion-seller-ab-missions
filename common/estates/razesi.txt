@@ -55,6 +55,7 @@ estate_razesi = {
 		estate_razesi_primacy
 		estate_razesi_blood_tax
 		estate_razesi_horses
+		estate_razesi_generals
 		estate_razesi_charter
 		estate_razesi_strong_communes
 		estate_razesi_monopoly_of_livestock

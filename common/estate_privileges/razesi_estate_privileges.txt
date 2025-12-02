@@ -460,6 +460,58 @@ estate_razesi_blood_tax = {
 		}
 	}
 }
+
+estate_razesi_generals = {
+	icon = privilege_army_tradition
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	influence = 0.1
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			monthly_boieri_vs_razesi_power = 0.25
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	benefits = {
+		general_cost = -0.1
+	}
+	penalties = {
+		prestige_from_land = -0.5
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_nobles_nobility_primacy
+		}
+		NOT = {
+			has_estate_privilege = estate_nobles_officer_corp
+		}
+		NOT = {
+			has_estate_privilege = estate_nobles_noble_officer_right
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 estate_razesi_horses = {
 	icon = privilege_raise_host
 	max_absolutism = -5
