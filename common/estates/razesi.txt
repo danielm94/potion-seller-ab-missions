@@ -61,6 +61,7 @@ estate_razesi = {
 		estate_razesi_commune_integration
 		estate_razesi_advisors
 		estate_razesi_exemplarism
+		estate_razesi_internationalism
 		estate_razesi_revolution
 	}
 	agendas = {

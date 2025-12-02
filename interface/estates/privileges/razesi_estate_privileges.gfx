@@ -15,13 +15,18 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_estate_razesi_revolution"
-		texturefile = "gfx/interface/privileges/razesi/estate_razesi_revolution.dds"
+		name = "GFX_estate_razesi_exemplarism"
+		texturefile = "gfx/interface/privileges/razesi/estate_razesi_exemplarism.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_estate_razesi_exemplarism"
-		texturefile = "gfx/interface/privileges/razesi/estate_razesi_exemplarism.dds"
+		name = "GFX_estate_razesi_internationalism"
+		texturefile = "gfx/interface/privileges/razesi/estate_razesi_internationalism.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_estate_razesi_revolution"
+		texturefile = "gfx/interface/privileges/razesi/estate_razesi_revolution.dds"
 		loadType = "INGAME"
 	}
 }
