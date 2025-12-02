@@ -21,7 +21,7 @@ boieri_vs_razesi_on_development_effect = {
 			}
 			owner = {
 				change_razesi_power = {
-					value = -0.1
+					value = -1
 				}
 			}
 		}
@@ -31,7 +31,7 @@ boieri_vs_razesi_on_development_effect = {
 			}
 			owner = {
 				change_razesi_power = {
-					value = 0.1
+					value = 1
 				}
 			}
 		}
