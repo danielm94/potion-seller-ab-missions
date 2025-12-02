@@ -224,3 +224,5 @@
  desc_incited_peasantry_great_peasants_war: "The local grievances of the village have merged with the continental struggle of the Great Peasant War. Emboldened by foreign agents, the common folk have rejected all feudal authority, transforming isolated unrest into a unified military front that ensures the fires of revolution continue to burn."
  mop_great_peasants_war_mod: "Bauernkrieg"
  desc_mop_great_peasants_war_mod: "While the German mobs have numbers, they lack direction. We provide the strategy, the gold, and the steel to ensure their fury is not wasted, serving as the hidden generals of a revolution that will burn the Empire to ash."
+ razesi_monopoly_on_livestock: "Monopoly on Livestock"
+ desc_razesi_monopoly_on_livestock: "The state has granted the [get_razesi_name] monopoly rights over livestock farming."

@@ -1,0 +1,3 @@
+﻿l_english:
+ razesi_events.0.t: "Extension of the Monopoly on Livestock"
+ razesi_events.0.d: "The monopoly on livestock we granted to the [get_razesi_name] has expired, meaning that we are now able to reclaim the income from livestock farming. However, the [get_razesi_name] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."

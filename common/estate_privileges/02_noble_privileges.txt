@@ -870,6 +870,9 @@ estate_nobles_monopoly_of_livestock = {
 		any_owned_province = {
 			trade_goods = livestock
 		}
+		NOT = {
+			has_estate_privilege = estate_razesi_monopoly_of_livestock
+		}
 	}
 	can_select = {
 		custom_trigger_tooltip = {

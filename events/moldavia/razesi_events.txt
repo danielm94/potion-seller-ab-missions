@@ -1,0 +1,23 @@
+namespace = razesi_events
+
+country_event = {
+	id = razesi_events.0
+	title = razesi_events.0.t
+	desc = razesi_events.0.d
+	picture = FARMING_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_estate_privilege = estate_razesi_monopoly_of_livestock
+		}
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		set_estate_privilege = estate_razesi_monopoly_of_livestock
+	}
+	option = {
+		name = monopoly_privileges.1.b
+	}
+}

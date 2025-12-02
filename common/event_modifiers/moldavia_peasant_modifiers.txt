@@ -884,3 +884,7 @@ mop_great_peasants_war_mod = {
 	rebel_support_efficiency = 1
 	ae_impact = -0.1
 }
+
+razesi_monopoly_on_livestock = {
+	local_production_efficiency = -100
+}
