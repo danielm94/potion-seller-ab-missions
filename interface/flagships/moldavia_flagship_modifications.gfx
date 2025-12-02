@@ -4,4 +4,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/flagships/barbary_corsairs.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_flagship_venetian_arsenal_heavy_bombards"
+		texturefile = "gfx/interface/flagships/venetian_arsenal_heavy_bombards.dds"
+		loadType = "INGAME"
+	}
 }

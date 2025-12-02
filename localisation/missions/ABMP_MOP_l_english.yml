@@ -324,3 +324,7 @@
  mop_venice_desc: "The so-called 'Serene Republic' is a gilded lie, an oligarchy where a few merchant families fatten themselves on the labor of the Adriatic while claiming the mantle of liberty. We must breach the lagoon, storm the Doge's Palace, and burn the Golden Book. The Arsenal will no longer serve profit, but the liberation of the working class."
  galleass_galley_in_venice_tt: "We will gain §Y5§! Galleass Galleys in §Y[112.GetName]§!."
  integrated_commune_venetian_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YVenetian§! culture will grant us §G+7.5%§! Galley Combat Ability if they have over §Y350§! total development."
+ coastline_dev_20_percent_extra_dev_tt: "There is now a §G20%§! chance of gaining §G1§! extra point of development when developing §YCoastal§! provinces."
+ unlocked_venetian_arsenal_heavy_bombards_tt: "§GUnlocks§! the §YArsenal Heavy Bombards§! flagship modification."
+ mop_dev_venice_title: "Most Serene Commune"
+ mop_dev_venice_desc: "Venice was built on the backs of sailors and shipwrights, yet for centuries only the aristocracy reaped the rewards. It is time to unleash the full potential of this city under the banner of the revolution."

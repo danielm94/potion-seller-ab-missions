@@ -492,6 +492,19 @@ on_adm_development = {
 					}
 				}
 				AND = {
+					has_terrain = coastline
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = coastline_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = coastline_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
 					has_terrain = coastal_desert
 					OR = {
 						owner = {
@@ -583,6 +596,19 @@ on_dip_development = {
 					}
 				}
 				AND = {
+					has_terrain = coastline
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = coastline_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = coastline_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
 					has_terrain = coastal_desert
 					OR = {
 						owner = {
@@ -670,6 +696,19 @@ on_mil_development = {
 						}
 						owner = {
 							has_country_flag = desert_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = coastline
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = coastline_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = coastline_dev_20_percent_extra_dev
 						}
 					}
 				}

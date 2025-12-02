@@ -1,5 +1,4 @@
 barbary_corsairs = {
-    
 	trigger = {
 		has_country_flag = unlocked_corsair_crew_flagship
 	}
@@ -21,5 +20,22 @@ barbary_corsairs = {
             factor = 10
             has_government_attribute = is_pirate_republic_reform
         }
+    }
+}
+
+venetian_arsenal_heavy_bombards = {
+    trigger = {
+		has_country_flag = unlocked_venetian_arsenal_heavy_bombards
+    }
+	modifier = {
+        barrage_cost_in_fleet_modifier = -0.5
+        number_of_cannons_flagship_modifier = 0.5
+        naval_maintenance_flagship_modifier = 1
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
     }
 }
