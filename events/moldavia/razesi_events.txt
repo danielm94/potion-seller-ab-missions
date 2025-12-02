@@ -21,3 +21,24 @@ country_event = {
 		name = monopoly_privileges.1.b
 	}
 }
+country_event = {
+	id = razesi_events.1
+	title = razesi_events.1.t
+	desc = razesi_events.1.d
+	picture = FARMING_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_estate_privilege = estate_razesi_monopoly_of_grain
+		}
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		set_estate_privilege = estate_razesi_monopoly_of_grain
+	}
+	option = {
+		name = monopoly_privileges.1.b
+	}
+}

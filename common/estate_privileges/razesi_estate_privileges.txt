@@ -620,3 +620,118 @@ estate_razesi_monopoly_of_livestock = {
 		factor = 0
 	}
 }
+
+estate_razesi_monopoly_of_grain = {
+	icon = GFX_estate_razesi_monopoly_of_grain
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+		if = {
+			limit = {
+				grain = 1
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = grain
+			}
+			custom_tooltip = MONOPOLY_INCOME_GRAIN_DESC
+		}
+		custom_tooltip = estate_razesi_monopoly_of_grain_effect_tooltip
+	}
+	loyalty = 0.05
+	is_valid = {
+		any_owned_province = {
+			trade_goods = grain
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = {
+				has_disaster = revolution
+			}
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = grain
+			}
+			add_province_modifier = {
+				name = razesi_monopoly_on_grain
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = razesi_monopoly_on_grain
+			}
+			remove_province_modifier = razesi_monopoly_on_grain
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_razesi_monopoly_of_grain_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = razesi_monopoly_on_grain
+			}
+			remove_province_modifier = razesi_monopoly_on_grain
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_razesi_monopoly_of_grain_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = razesi_monopoly_on_grain
+			}
+			remove_province_modifier = razesi_monopoly_on_grain
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = {
+			id = razesi_events.1
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -888,3 +888,7 @@ mop_great_peasants_war_mod = {
 razesi_monopoly_on_livestock = {
 	local_production_efficiency = -100
 }
+
+razesi_monopoly_on_grain = {
+	local_production_efficiency = -100
+}

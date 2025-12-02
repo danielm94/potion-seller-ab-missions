@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "GFX_estate_razesi_strong_communes"
 		texturefile = "gfx/interface/privileges/razesi/estate_razesi_strong_communes.dds"
 	}
+	spriteType = {
+		name = "GFX_estate_razesi_monopoly_of_grain"
+		texturefile = "gfx/interface/privileges/razesi/estate_razesi_monopoly_of_grain.dds"
+	}
 }
