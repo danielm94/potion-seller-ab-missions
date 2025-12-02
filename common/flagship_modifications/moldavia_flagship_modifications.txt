@@ -1,0 +1,25 @@
+barbary_corsairs = {
+    
+	trigger = {
+		has_country_flag = unlocked_corsair_crew_flagship
+	}
+    modifier = {
+        privateering_efficiency_in_fleet_modifier = 0.5
+        naval_maintenance_flagship_modifier = 0.75
+		movement_speed_onto_off_boat_modifier = 0.25
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+}

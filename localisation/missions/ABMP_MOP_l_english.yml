@@ -317,3 +317,6 @@
  we_will_liberate_sicilian_slaves_tt: "We will liberate all the slaves captured by §Y[SIC.GetName]§!."
  mop_sicily_title: "Liberate the Isles"
  mop_sicily_desc: "The islands of the Mediterranean have long served as safe harbors for pirates, slavers, and reactionary aristocrats. From the rock of Malta to the granaries of Sicily, these territories act as staging grounds for raids against free peoples. We must cross the straits, storm their fortifications, and turn these unsinkable carriers of oppression into bastions of the revolution."
+ mop_malta_title: "Shield of the Mediterranean"
+ mop_malta_desc: "Possession of Malta is merely the first step; to truly secure the seas, we must transform this rock into an unsinkable carrier of revolutionary power. By expanding the harbors, reinforcing the ancient citadel, and establishing a permanent naval shipyard, we will ensure that our reach extends to every corner of the Mediterranean."
+ unlocked_corsair_crew_flagship_tt: "§GUnlocks§! the §YCorsair Crew§! flagship modification."

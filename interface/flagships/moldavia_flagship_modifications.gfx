@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_flagship_barbary_corsairs"
+		texturefile = "gfx/interface/flagships/barbary_corsairs.dds"
+		loadType = "INGAME"
+	}
+}
