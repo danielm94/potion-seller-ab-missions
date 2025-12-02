@@ -435,6 +435,9 @@ estate_nobles_levies = {
 		}
 	}
 	can_select = {
+		NOT = {
+			has_estate_privilege = estate_razesi_blood_tax
+		}
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
 		if = {
 			limit = {
@@ -956,11 +959,11 @@ estate_nobles_monopoly_of_livestock = {
 		any_owned_province = {
 			trade_goods = livestock
 		}
+	}
+	can_select = {
 		NOT = {
 			has_estate_privilege = estate_razesi_monopoly_of_livestock
 		}
-	}
-	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
