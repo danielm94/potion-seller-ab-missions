@@ -233,7 +233,7 @@ estate_razesi_primacy = {
 	loyalty = -0.05
 	can_select = {
 		NOT = {
-			has_estate_privilege = estate_nobles_nobility_primacy
+			has_estate_privilege = estate_razesi_nobility_primacy
 		}
 	}
 	penalties = {
@@ -419,7 +419,7 @@ estate_razesi_blood_tax = {
 			factor = 0.75
 			NOT = {
 				estate_territory = {
-					estate = estate_nobles
+					estate = estate_razesi
 					territory = 15
 				}
 			}
@@ -428,7 +428,7 @@ estate_razesi_blood_tax = {
 			factor = 0.75
 			NOT = {
 				estate_territory = {
-					estate = estate_nobles
+					estate = estate_razesi
 					territory = 10
 				}
 			}
@@ -437,7 +437,7 @@ estate_razesi_blood_tax = {
 			factor = 0.75
 			NOT = {
 				estate_territory = {
-					estate = estate_nobles
+					estate = estate_razesi
 					territory = 5
 				}
 			}
@@ -457,6 +457,59 @@ estate_razesi_blood_tax = {
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
+		}
+	}
+}
+estate_razesi_horses = {
+	icon = privilege_raise_host
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	influence = 0.1
+	loyalty = 0.1
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			monthly_boieri_vs_razesi_power = 0.25
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	benefits = {
+		cavalry_cost = -0.1
+		cav_to_inf_ratio = 0.1
+	}
+	penalties = {
+		global_tax_modifier = -0.1
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			any_rival_country = {
+				army_strength = {
+					who = root
+					value = 1.5
+				}
+			}
 		}
 	}
 }
@@ -542,7 +595,7 @@ estate_razesi_monopoly_of_livestock = {
 			}
 			custom_tooltip = MONOPOLY_INCOME_LIVESTOCK_DESC
 		}
-		custom_tooltip = estate_nobles_monopoly_of_livestock_effect_tooltip
+		custom_tooltip = estate_razesi_monopoly_of_livestock_effect_tooltip
 	}
 	loyalty = 0.05
 	is_valid = {
@@ -550,7 +603,7 @@ estate_razesi_monopoly_of_livestock = {
 			trade_goods = livestock
 		}
 		NOT = {
-			has_estate_privilege = estate_nobles_monopoly_of_livestock
+			has_estate_privilege = estate_razesi_monopoly_of_livestock
 		}
 	}
 	can_select = {
@@ -585,7 +638,7 @@ estate_razesi_monopoly_of_livestock = {
 		}
 	}
 	on_revoked = {
-		custom_tooltip = estate_nobles_monopoly_of_livestock_revoke_tooltip
+		custom_tooltip = estate_razesi_monopoly_of_livestock_revoke_tooltip
 	}
 	on_revoked_province = {
 		if = {
@@ -596,7 +649,7 @@ estate_razesi_monopoly_of_livestock = {
 		}
 	}
 	on_invalid = {
-		custom_tooltip = estate_nobles_monopoly_of_livestock_revoke_tooltip
+		custom_tooltip = estate_razesi_monopoly_of_livestock_revoke_tooltip
 	}
 	on_invalid_province = {
 		if = {
@@ -873,7 +926,7 @@ estate_razesi_exemplarism = {
 		abolitionists_faction_influence = 0.05
 	}
 	mechanics = {
-		exempt_from_seize_land
+		no_estate_crownland_loss_from_developing
 	}
 	conditional_modifier = {
 		trigger = {
