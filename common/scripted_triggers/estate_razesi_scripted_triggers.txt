@@ -1,4 +1,5 @@
 has_exempt_from_seize_land_for_estate_razesi = {
-	#$TODO$ Replace with a privilege that makes you exempt from seize land
-	always = yes
+	OR = {
+		has_estate_privilege = estate_razesi_blood_tax
+	}
 }
