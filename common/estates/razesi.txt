@@ -58,6 +58,7 @@ estate_razesi = {
 		estate_razesi_strong_communes
 		estate_razesi_monopoly_of_livestock
 		estate_razesi_monopoly_of_grain
+		estate_razesi_commune_integration
 	}
 	agendas = {
 		estate_razesi_spy_on_threats

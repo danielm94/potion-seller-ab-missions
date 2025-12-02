@@ -16,3 +16,5 @@
  estate_razesi_monopoly_of_grain_desc: "The harvest is the heartbeat of our economy. To secure immediate funding for the state, we have granted the [get_razesi_name] exclusive rights to the grain trade. In exchange for a substantial lump sum paid directly to the treasury, the [Root.GovernmentName] relinquishes its claim on the production taxes of the fields."
  estate_razesi_monopoly_of_grain_effect_tooltip: "§RNo income from §YGrain§!§!"
  estate_razesi_monopoly_of_grain_revoke_tooltip: "Production income from §YGrain§! is restored"
+ estate_razesi_commune_integration: "[get_razesi_name] Integration Oversight"
+ estate_razesi_commune_integration_desc: "Integrating a fellow commune is a delicate task, usually met with fear by our other subjects. The [get_razesi_name] propose a solution: a rigorous, standardized process of assimilation. By embedding [get_razesi_name] overseers in our subjects' administrations, we ensure a swift integration that other communes view as a standard legal procedure rather than a conquest."
