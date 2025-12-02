@@ -935,6 +935,80 @@ ab_mop_1 = {
 			set_country_flag = bosnian_integrated_commune_bonus
 		}
 	}
+	mop_south_italy = {
+		icon = king_of_naples
+		position = 26
+		required_missions = {
+			mop_liberate_illyria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = naples_area
+				area = apulia_area
+				area = calabria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				naples_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				apulia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				calabria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_neapolitan_bonus_tt
+			set_country_flag = integrated_commune_neapolitan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_prepare_to_land_in_sicily
+				duration = 5475
+			}
+			add_navy_tradition = 20
+			add_yearly_sailors = 2
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = naval_reformer
+				skill = 2
+				culture = venetian
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_2 = {

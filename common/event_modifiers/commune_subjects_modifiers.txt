@@ -170,3 +170,7 @@ league_subject_rice_bonus = {
 integrated_commune_tibetan_bonus = {
 	no_religion_penalty = yes
 }
+
+integrated_commune_neapolitan_bonus = {
+	global_ship_cost = -0.1
+}

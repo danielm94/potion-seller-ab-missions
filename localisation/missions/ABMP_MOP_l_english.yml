@@ -311,3 +311,6 @@
  great_peasants_war_late_tt: "§YThe Great Peasants War§! has happened already."
  mop_great_peasants_war_title: "The Great Peasants War"
  mop_great_peasants_war_desc: "The feudal lords of the Holy Roman Empire sit atop a powder keg of resentment. It is our duty to light the fuse. We must send our agents into the German heartlands, radicalize the countryside, and ensure that when the fires of war are lit, they burn hot enough to consume the Imperial throne itself."
+ integrated_commune_neapolitan_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YNeapolitan§! culture will grant us §G-10.0%§! Ship Costs if they have over §Y350§! total development."
+ mop_south_italy_title: "Liberate the Mezzogiorno"
+ mop_south_italy_desc: "The Shia Sultans rule the mainland from their island fortresses, treating the fertile peninsula as little more than a harvest colony. The farmers of Apulia and the fishermen of Calabria cry out for deliverance. We must cross the Adriatic, secure the boot of Italy, and drive the Sultan's armies back across the Strait of Messina."

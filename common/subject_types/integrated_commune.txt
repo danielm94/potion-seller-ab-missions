@@ -334,4 +334,14 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_neapolitan_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_neapolitan_bonus_flag
+			}
+			culture = neapolitan
+			total_development = 350
+		}
+	}
 }
