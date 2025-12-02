@@ -354,4 +354,44 @@ integrated_commune = {
 			total_development = 350
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_lombard_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_lombard_bonus_flag
+			}
+			culture = lombard
+			total_development = 350
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_piedmontese_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_piedmontese_bonus_flag
+			}
+			culture = piedmontese
+			total_development = 350
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_ligurian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_ligurian_bonus_flag
+			}
+			culture = ligurian
+			total_development = 350
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_sardinian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_sardinian_bonus_flag
+			}
+			culture = sardinian
+			total_development = 350
+		}
+	}
 }

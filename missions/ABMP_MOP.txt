@@ -1056,6 +1056,9 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_sardinian_bonus_tt
+			set_country_flag = integrated_commune_sardinian_bonus_flag
+			custom_tooltip = AB_EMPTY
 			126 = {
 				remove_core = owner
 				add_core = root
@@ -3043,6 +3046,98 @@ ab_mop_2 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+	mop_north_italy = {
+		icon = mission_conquer_north_italy
+		position = 32
+		required_missions = {
+			mop_dev_venice
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = po_valley_area
+				area = lombardy_area
+				area = piedmont_area
+				area = liguria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				po_valley_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lombardy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				piedmont_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				liguria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_lombard_bonus_tt
+			set_country_flag = integrated_commune_lombard_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_piedmontese_bonus_tt
+			set_country_flag = integrated_commune_piedmontese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_ligurian_bonus_tt
+			set_country_flag = integrated_commune_ligurian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			101 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_genoa_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				culture = ligurian
+				religion = catholic
+				location = 101
+				name = "Furio Giunta"
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = AB_EMPTY
+			add_years_of_income = 1
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
 			}
 		}
 	}
