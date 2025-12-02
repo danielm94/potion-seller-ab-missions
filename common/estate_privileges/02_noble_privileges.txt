@@ -40,7 +40,17 @@ estate_nobles_land_rights = {
 			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	penalties = {
 	}
@@ -252,7 +262,17 @@ estate_nobles_nobility_primacy = {
 			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	penalties = {
 	}
@@ -347,7 +367,17 @@ estate_nobles_officer_corp = {
 	can_select = {
 		army_tradition = 30
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		add_army_tradition = -5
 	}
 	penalties = {
@@ -414,7 +444,17 @@ estate_nobles_levies = {
 			NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	} 
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.1
@@ -586,6 +626,18 @@ estate_nobles_advisors = {
 			max_absolutism = 5
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 9
 		modifier = {
@@ -635,6 +687,18 @@ estate_nobles_right_of_counsel = {
 	penalties = {
 	}
 	benefits = {
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	ai_will_do = {
 		factor = 10
@@ -708,6 +772,18 @@ estate_nobles_supremacy_over_crown = {
 	mechanics = {
 		can_give_agendas_without_interaction
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -765,7 +841,17 @@ estate_nobles_monopoly_of_metals = {
 			}
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		if = {
 			limit = {
 				OR = {
@@ -893,7 +979,17 @@ estate_nobles_monopoly_of_livestock = {
 			# }
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		if = {
 			limit = {
 				livestock = 1
@@ -1010,7 +1106,17 @@ estate_nobles_monopoly_of_gems = {
 			}
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		if = {
 			limit = {
 				gems = 1
@@ -1094,6 +1200,18 @@ estate_nobles_junker_primacy = {
 	}
 	penalties = {
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -1148,6 +1266,18 @@ estate_nobles_golden_liberty = {
 	mechanics = {
 		exempt_from_seize_land
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 0
 	}
@@ -1166,6 +1296,18 @@ estate_nobles_veto_heir_apparent = {
 	}
 	benefits = {
 		monthly_support_heir_gain = 0.33
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	ai_will_do = {
 		factor = 0
@@ -1207,7 +1349,17 @@ estate_nobles_statutory_rights = {
 			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		change_estate_land_share = {
 			estate = all
 			share = -30
@@ -1272,7 +1424,17 @@ estate_nobles_better_integration = {
 	}
 	can_select = {
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		disable_annexation_penalty = yes
 	}
 	on_revoked = {
@@ -1321,7 +1483,17 @@ estate_nobles_neighbor_raids = {
 	can_select = {
 		NOT = { has_country_modifier = the_abolish_slavery_act }
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		enable_capital_slave_raid = yes
 	}
 	on_revoked = {
@@ -1361,7 +1533,17 @@ estate_nobles_cawa_peace_keepers = {
 			}
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		remove_estate_privilege = estate_nobles_cawa_offensive_fighters
 		hidden_effect = {
 			clr_country_flag = picked_cawa_privilege
@@ -1437,7 +1619,17 @@ estate_nobles_cawa_offensive_fighters = {
 			}
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		remove_estate_privilege = estate_nobles_cawa_peace_keepers
 		hidden_effect = {
 			clr_country_flag = picked_cawa_privilege
@@ -1503,7 +1695,17 @@ estate_nobles_grant_power_to_the_bashorun = {
 			NOT = { technology_group = polynesian_tech }
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		enable_tributary_state_use_estate = yes
 	}
 	on_invalid = {
@@ -1556,7 +1758,17 @@ estate_nobles_decentralized_tribe = {
 	mechanics = {
 		exempt_from_seize_land
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 5
@@ -1599,7 +1811,17 @@ estate_nobles_tribe_unification = {
 	benefits = {
 		legitimacy = 0.25
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		tooltip = {
 			add_estate_loyalty = {
 				estate = estate_nobles
@@ -1648,7 +1870,17 @@ estate_nobles_tribe_centralization = {
 		}
 		stability = 2
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		tooltip = {
 			add_stability = -2
 			add_estate_loyalty = {
@@ -1694,6 +1926,18 @@ estate_nobles_mansabdari_cav_maintenance = {
 			cavalry_cost = -0.5
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -1717,6 +1961,18 @@ estate_nobles_mansabdari_military_service = {
 			army_tradition_decay = -0.01
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -1732,6 +1988,18 @@ estate_nobles_mansabdari_royal_rule = {
 		land_maintenance_modifier = 0.1
 	}
 	mechanics = {  }
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -1746,7 +2014,17 @@ estate_nobles_rynda = {
 	influence = 0.05
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = estate_nobles_rynda_at
 		custom_tooltip = SCALES_WITH_LOYALTY_TT
 	}
@@ -1775,7 +2053,17 @@ estate_nobles_landed_army = {
 		cav_to_inf_ratio = 0.25
 		cavalry_cost = -0.1
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = estate_nobles_landed_army_tt
 		custom_tooltip = SCALES_WITH_INFLUENCE_TT
 	}
@@ -1802,8 +2090,17 @@ estate_nobles_factionalist_nobility = {
 	can_revoke = {
 		crown_land_share = 50 
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
-		
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	on_revoked = {
 		
@@ -1831,7 +2128,17 @@ estate_nobles_consolidated_noble_contracts = {
 		has_dlc = "Domination" 
 		NOT = { absolutism = 50 }
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	on_revoked = {
 	}
@@ -1895,7 +2202,17 @@ estate_nobles_development_of_castles = {
 			has_wallachia_not_compromised_with_the_boieri = yes
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = estate_nobles_development_of_castles_gt
 		tooltip = {
 			add_province_modifier = {
@@ -2013,7 +2330,17 @@ estate_nobles_statesman_servitude = {
 	}
 	can_select = {
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		enable_estate_action = {
 			estate_action = RECRUIT_MINISTER_NOBLES
 		}
@@ -2087,7 +2414,17 @@ estate_nobles_royal_court_tasks = {
 			NOT = { has_estate_privilege = estate_maratha_royal_court_tasks }
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		scaling_with_influence_privilege_tooltip = {
 			estate_privilege = estate_nobles_royal_court_tasks
 		}
@@ -2178,7 +2515,17 @@ estate_nobles_diet_right = {
 	is_valid = {
 		has_dlc = "Domination"
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		enable_estate_action = {
 			estate_action = CALL_DIET_NOBLES
 		}
@@ -2239,7 +2586,17 @@ estate_nobles_force_conscription = {
 	is_valid = {
 		has_dlc = "Domination"
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		enable_estate_action = {
 			estate_action = DEMAND_MORE_TROOPS_NOBLES
 		}
@@ -2304,7 +2661,17 @@ estate_nobles_noble_officer_right = {
 			NOT = { has_estate_privilege = estate_maratha_force_conscription }
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		enable_estate_action = {
 			estate_action = GRANT_GENERALSHIP_NOBLES
 		}
@@ -2369,7 +2736,17 @@ estate_nobles_expedition_rights = {
 		}
 	}
 	
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		scaling_with_loyalty_privilege_tooltip = {
 			estate_privilege = estate_nobles_expedition_rights
 		}
@@ -2425,7 +2802,17 @@ estate_nobles_highland_fortifications = {
 			has_fort_building_trigger = yes
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = estate_nobles_highland_fortifications_tt
 	}
 	on_granted_province = {
@@ -2482,8 +2869,17 @@ estate_nobles_defensive_policy = {
 		NOT = { has_estate_privilege = estate_qizilbash_defensive_policy }
 		NOT = { has_estate_privilege = estate_ghulams_defensive_policy }
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
-		
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	on_revoked = {
 		
@@ -2512,8 +2908,17 @@ estate_nobles_tofangchi_regiment = {
 		NOT = { has_estate_privilege = estate_qizilbash_tofangchi_regiment }
 		NOT = { has_estate_privilege = estate_ghulams_tofangchi_regiment }
 	}
-	on_granted = {
-		
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {	
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	on_revoked = {
 		
@@ -2541,7 +2946,17 @@ estate_nobles_tupchi_artillery_corps = {
 		NOT = { has_estate_privilege = estate_qizilbash_tupchi_artillery_corps }
 		NOT = { has_estate_privilege = estate_ghulams_tupchi_artillery_corps }
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = tupchi_artillery_corps_tt
 	}
 	on_revoked = {
@@ -2569,7 +2984,17 @@ estate_nobles_qurchi_service = {
 		NOT = { has_estate_privilege = estate_ghulams_qurchi_service }
 		NOT = { has_estate_privilege = estate_qizilbash_qurchi_service }
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		scaling_with_loyalty_privilege_tooltip = {
 			estate_privilege = estate_nobles_qurchi_service
 		}
@@ -2615,7 +3040,17 @@ estate_nobles_mamlukian_administration = {
 		governing_capacity_modifier = 0.1
 		nobles_privilege_slots = 1
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = mamlukian_administration_modifier_gt
 		tooltip = {
 			add_province_modifier = {
@@ -2667,6 +3102,18 @@ estate_nobles_enlist_the_mamluks = {
 		has_mamluks = yes 
 		allowed_mamluks_fraction = 0.2
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
+	}
 	ai_will_do = {
 		factor = 100
 	}
@@ -2680,7 +3127,17 @@ estate_nobles_orangist_privileges = {
 	is_valid = {
 		has_country_flag = ned_buff_orangist_candidates_flag
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = NED_UNLOCK_OVERTHROW_STATIST_CANDIDATES
 	}
 	penalties = {
@@ -2711,7 +3168,17 @@ estate_nobles_vegvar_system = {
 			has_fort_building_trigger = yes
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = estate_nobles_vegvar_system_tt
 		tooltip = {
 			add_province_modifier = {
@@ -2772,7 +3239,17 @@ estate_nobles_MAY_spread_dynastic_influence = {
 	benefits = {
 		annexation_relations_impact = -0.25
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
 	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 		custom_tooltip = MAY_benefits_of_dynastic_influence
 	}
 	ai_will_do = {
@@ -2819,6 +3296,18 @@ estate_nobles_AZT_triple_alliance = {
 			tooltip = AZT_revokable_via_mission
 			always = no
 		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			razesi_loyalty_modifier  = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		boieri_vs_razesi_privilege_boierimea_on_granted_effect = yes
 	}
 	ai_will_do = {
 		factor = 1
