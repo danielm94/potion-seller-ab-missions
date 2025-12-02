@@ -3280,6 +3280,84 @@ ab_mop_2 = {
 			}
 		}
 	}
+	mop_rome = {
+		icon = gfx_wal_rome
+		position = 35
+		provinces_to_highlight = {
+			OR = {
+				area = lazio_area
+				area = central_italy_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else_if = {
+				limit = {
+					OR = {
+						mission_completed = mop_central_italy
+						mission_completed = mop_malta
+					}
+				}
+				lazio_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				central_italy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+			else = {
+				OR = {
+					mission_completed = mop_central_italy
+					mission_completed = mop_malta
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_umbrian_bonus_tt
+			set_country_flag = integrated_commune_umbrian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			118 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_roman_commune
+					duration = -1
+				}
+				add_province_modifier = {
+					name = mop_rebuild_rome
+					duration = 3650
+				}
+			}
+			add_republican_tradition = 10
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			change_peasant_zeal = {
+				value = 25
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
 }
 
 ab_mop_3 = {

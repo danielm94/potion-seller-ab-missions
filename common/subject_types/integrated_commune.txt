@@ -414,4 +414,14 @@ integrated_commune = {
 			total_development = 350
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_umbrian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_umbrian_bonus_flag
+			}
+			culture = umbrian
+			total_development = 350
+		}
+	}
 }

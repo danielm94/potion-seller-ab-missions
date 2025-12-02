@@ -342,3 +342,6 @@
  integrated_commune_romagnan_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YRomagnan§! culture will grant us §G-5%§! Advisor Cost if they have over §Y350§! total development."
  mop_central_italy_title: "End the Medici Tyranny"
  mop_central_italy_desc: "The Medici bankers and the Romagnan counts have turned the cradle of the Renaissance into a gilded cage, using culture as a cloak for usury and nepotism. We must storm the palaces of Florence and the lecture halls of Bologna. Wisdom belongs to the free man, not the highest bidder."
+ integrated_commune_umbrian_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YUmbrian§! culture will grant us §G-5%§! Morale Damage Received if they have over §Y350§! total development."
+ mop_rome_title: "Liberate Rome"
+ mop_rome_desc: "For centuries Rome has been the throne of emperors, popes and princes, never of the common folk. Now our communes ring the Apennines and the Tiber lies within our reach. If we seize the Eternal City and bind central Italy into our federation, we will prove that no altar, palace or senate is beyond the peasantry’s grasp."

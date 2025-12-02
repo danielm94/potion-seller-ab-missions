@@ -240,3 +240,7 @@
  desc_mop_genoa_commune: "For centuries, a cabal of banking families ruled Genoa behind a mask of republicanism. We have torn off the mask. The oligarchy is dissolved, and the port now prioritizes the common utility over private usury, maintaining a vast fleet to secure the Western Mediterranean."
  mop_great_genoa_commune: "The Great Genoese Commune"
  desc_mop_great_genoa_commune: "Genoa stands as the logistical heart of the Federation. Its shipyards turn out vessels at a feverish pace, and its reformed banks provide interest-free credit to the communes."
+ mop_roman_commune: "The Roman Commune"
+ mop_roman_commune_desc: "Rome is governed as a peasant commune, its markets, courts and forums reorganized to serve the federation, easing rule over Italy and inspiring struggles against foreign faiths."
+ mop_rebuild_rome: "Rebuild Rome"
+ mop_rebuild_rome_desc: "The Eternal City lies under scaffolds and cranes as we restore its bridges, aqueducts and monuments, making great works cheaper and quicker to raise anew."

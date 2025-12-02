@@ -948,3 +948,18 @@ mop_great_genoa_commune = {
 	sea_repair = yes
 	picture = "commune_province_modifier_icon"
 }
+
+mop_roman_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	warscore_cost_vs_other_religion = -0.05
+	picture = "commune_province_modifier_icon"
+}
+
+mop_rebuild_rome = {
+	interest = -1
+	local_great_project_upgrade_cost = -0.25
+	local_great_project_upgrade_time = -0.25
+}

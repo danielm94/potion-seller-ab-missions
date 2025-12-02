@@ -202,3 +202,7 @@ integrated_commune_tuscan_bonus = {
 integrated_commune_romagnan_bonus = {
 	advisor_cost = -0.05
 }
+
+integrated_commune_umbrian_bonus = {
+	morale_damage_received = -0.05
+}
