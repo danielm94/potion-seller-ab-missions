@@ -21,11 +21,7 @@ estate_razesi_land_rights = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	loyalty = 0.05
 	influence = 0.05
@@ -224,16 +220,12 @@ estate_razesi_primacy = {
 		}
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	loyalty = -0.05
 	can_select = {
 		NOT = {
-			has_estate_privilege = estate_razesi_nobility_primacy
+			has_estate_privilege = estate_nobles_nobility_primacy
 		}
 	}
 	penalties = {
@@ -315,11 +307,7 @@ estate_razesi_strong_communes = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	is_valid = {
 		any_subject_country = {
@@ -381,11 +369,7 @@ estate_razesi_blood_tax = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	benefits = {
 		global_manpower_modifier = 0.1
@@ -484,11 +468,7 @@ estate_razesi_generals = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	benefits = {
 		general_cost = -0.1
@@ -536,11 +516,7 @@ estate_razesi_horses = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	benefits = {
 		cavalry_cost = -0.1
@@ -587,11 +563,7 @@ estate_razesi_charter = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	loyalty = 0.1
 	influence = 0.1
@@ -629,11 +601,7 @@ estate_razesi_monopoly_of_livestock = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 		if = {
 			limit = {
 				livestock = 1
@@ -747,11 +715,7 @@ estate_razesi_monopoly_of_grain = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 		if = {
 			limit = {
 				grain = 1
@@ -907,11 +871,7 @@ estate_razesi_advisors = {
 		is_bad = yes
 	}
 	on_granted = {
-		add_government_power = {
-			mechanic_type = boieri_vs_razesi_mechanic
-			power_type = boieri_vs_razesi_power
-			value = 10
-		}
+		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
 	influence = 0.1
 	loyalty = 0.05

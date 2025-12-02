@@ -37,3 +37,19 @@ boieri_vs_razesi_on_development_effect = {
 		}
 	}
 }
+#SCOPE = COUNTRY
+boieri_vs_razesi_privilege_razesi_on_granted_effect = {
+	add_government_power = {
+		mechanic_type = boieri_vs_razesi_mechanic
+		power_type = boieri_vs_razesi_power
+		value = 10
+	}
+}
+#SCOPE = COUNTRY
+boieri_vs_razesi_privilege_boierimea_on_granted_effect = {
+	add_government_power = {
+		mechanic_type = boieri_vs_razesi_mechanic
+		power_type = boieri_vs_razesi_power
+		value = -10
+	}
+}
