@@ -10,16 +10,28 @@ estate_razesi_land_rights = {
 			max_absolutism = 1
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			monthly_boieri_vs_razesi_power = 0.25
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
 	loyalty = 0.05
 	influence = 0.05
-	on_granted = {
-	}
-	penalties = {
-		nobles_loyalty_modifier = -0.1
-	}
 	benefits = {
 		governing_capacity = 100
-	}	
+	}
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -37,53 +49,73 @@ estate_razesi_land_rights = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { crown_land_share = 25 }
+				NOT = {
+					crown_land_share = 25
+				}
 				estate_influence = {
-					estate = estate_nobles
+					estate = estate_razesi
 					influence = 75
 				}
 			}
-			NOT = { has_estate_privilege = estate_nobles_land_rights }
+			NOT = {
+				has_estate_privilege = estate_razesi_land_rights
+			}
 		}
 		modifier = {
 			factor = 3
 			OR = {
 				AND = {
 					governing_capacity_percentage = 0.9
-					NOT = { has_estate_privilege = estate_nobles_land_rights }
+					NOT = {
+						has_estate_privilege = estate_razesi_land_rights
+					}
 				}
 				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
 				AND = {
 					governing_capacity_percentage = 0.6
-					has_estate_privilege = estate_nobles_land_rights
+					has_estate_privilege = estate_razesi_land_rights
 				}
 			}
 		}
 		modifier = {
 			factor = 0
-			NOT = { governing_capacity_percentage = 0.5 }
+			NOT = {
+				governing_capacity_percentage = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.8
 			OR = {
-				NOT = { crown_land_share = 40 }
+				NOT = {
+					crown_land_share = 40
+				}
 				AND = {
 					is_absolutism_active = yes
-					NOT = { crown_land_share = 60 }
+					NOT = {
+						crown_land_share = 60
+					}
 				}
 			}
-			NOT = { has_estate_privilege = estate_nobles_land_rights }
+			NOT = {
+				has_estate_privilege = estate_razesi_land_rights
+			}
 		}
 		modifier = {
 			factor = 0.8
 			OR = {
-				NOT = { crown_land_share = 30 }
+				NOT = {
+					crown_land_share = 30
+				}
 				AND = {
 					is_absolutism_active = yes
-					NOT = { crown_land_share = 50 }
+					NOT = {
+						crown_land_share = 50
+					}
 				}
 			}
-			NOT = { has_estate_privilege = estate_nobles_land_rights }
+			NOT = {
+				has_estate_privilege = estate_razesi_land_rights
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -103,13 +135,19 @@ estate_razesi_land_rights = {
 		}
 		modifier = {
 			factor = 8
-			NOT = { adm_tech = 12 }
+			NOT = {
+				adm_tech = 12
+			}
 			governing_capacity_percentage = 0.8
 		}
 		modifier = {
 			factor = 5
-			NOT = { adm_tech = 12 }
-			NOT = { government_rank = 1 }
+			NOT = {
+				adm_tech = 12
+			}
+			NOT = {
+				government_rank = 1
+			}
 			governing_capacity_percentage = 0.65
 		}
 		#Has already a similar privilege active
@@ -152,6 +190,315 @@ estate_razesi_land_rights = {
 		modifier = {
 			factor = 0.75
 			has_estate_privilege = estate_rajput_land_rights
+		}
+	}
+}
+
+estate_razesi_primacy = {
+	icon = privilege_military_power
+	land_share = 10
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			monthly_boieri_vs_razesi_power = 0.25
+			nobles_loyalty_modifier = -0.1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = peasant_zealotry
+		}
+		modifier = {
+			monthly_peasant_zeal = 0.02
+		}
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	loyalty = -0.05
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_nobles_nobility_primacy
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		country_military_power = 1
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					crown_land_share = 30
+				}
+				estate_influence = {
+					estate = estate_razesi
+					influence = 95
+				}
+			}
+			NOT = {
+				has_estate_privilege = estate_razesi_primacy
+			}
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = {
+					crown_land_share = 35
+				}
+				AND = {
+					is_absolutism_active = yes
+					NOT = {
+						crown_land_share = 55
+					}
+				}
+			}
+			NOT = {
+				has_estate_privilege = estate_razesi_primacy
+			}
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = {
+				mil = 2
+			}
+		}
+	}
+}
+
+estate_razesi_strong_communes = {
+	icon = GFX_estate_razesi_strong_communes
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_government_attribute = no_absolutism_from_boier_privileges
+			}
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
+	influence = 0.1
+	loyalty = 0.05
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			monthly_boieri_vs_razesi_power = 0.25
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	is_valid = {
+		any_subject_country = {
+			OR = {
+				is_commune_subject = yes
+				is_subject_of_type = consulate_subject
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = estate_razesi_strong_communes_trigger_tooltip
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					OR = {
+						is_commune_subject = yes
+						is_subject_of_type = consulate_subject
+					}
+				}
+			}
+		}
+	}
+	penalties = {
+		diplomatic_annexation_cost = 0.1
+	}
+	benefits = {
+		diplomatic_upkeep = 4
+		reduced_liberty_desire = 10
+	}
+	can_revoke = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_razesi_blood_tax = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	influence = 0.1
+	loyalty = 0.1
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			monthly_boieri_vs_razesi_power = 0.25
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	benefits = {
+		global_manpower_modifier = 0.1
+	}
+	penalties = {
+		global_tax_modifier = -0.1
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.5
+			any_rival_country = {
+				army_strength = {
+					who = root
+					value = 1.5
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 0.5
+			max_manpower = 200
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				current_income_balance = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				current_income_balance = 0
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_razesi_charter = {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = boieri_vs_razesi_mechanic
+		}
+		modifier = {
+			nobles_loyalty_modifier = -0.1
+		}
+		is_bad = yes
+	}
+	on_granted = {
+		add_government_power = {
+			mechanic_type = boieri_vs_razesi_mechanic
+			power_type = boieri_vs_razesi_power
+			value = 10
+		}
+	}
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
 		}
 	}
 }
