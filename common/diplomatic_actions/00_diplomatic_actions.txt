@@ -329,6 +329,20 @@ ask_for_tributary_state_action = {
 #PotionSeller
 support_rebels = {
 	pre_effect = {
+		if = {
+			limit = {
+				has_country_flag = defenestration_tactics_enabled
+				NOT = {
+					has_country_modifier = mop_successful_defenestration
+				}
+			}
+			random = {
+				chance = 10
+				country_event = {
+					id = moldavia_peasant_events.10
+				}
+			}
+		}
 		FROM = {
 			set_country_flag = support_rebels_against_@THIS
 			PREV = {

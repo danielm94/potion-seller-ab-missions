@@ -61,3 +61,6 @@
  establishment_of_roman_communes_tt: "We establish the @ROP §Y[ROP.GetName]§! in all lands currently held by the @PAP §Y[PAP.GetName]§!."
  every_pap_province_goes_to_roman_communes_tt: "All lands currently held by the @PAP §Y[PAP.GetName]§! are transferred to our subject, the @ROP §Y[ROP.GetName]§!."
  annex_pap_tt: "We directly seize all lands currently held by the @PAP §Y[PAP.GetName]§!."
+ moldavia_peasant_events.10.t: "A Sudden Descent"
+ moldavia_peasant_events.10.d: "Our agent found the target admiring the view from the third story. A brief struggle ensued, followed by a long scream and a dull thud. The enemy command structure now lies broken on the cobblestones below. With their leadership literally crushed, the garrison is in a state of absolute panic. The window of opportunity is open."
+ moldavia_peasant_events.10.a: "We must seize upon this window of opportunity!"

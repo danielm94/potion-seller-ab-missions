@@ -1026,3 +1026,7 @@ mop_great_nurnberg_commune = {
 mop_federation_standard_time = {
 	monthly_reform_progress_modifier = 0.2
 }
+
+mop_successful_defenestration = {
+	rebel_support_efficiency = 10
+}

@@ -641,3 +641,18 @@ country_event = {
 		name = AB_EMPTY
 	}
 }
+#Successfull defenestration
+country_event = {
+	id = moldavia_peasant_events.10
+	title = moldavia_peasant_events.10.t
+	desc = moldavia_peasant_events.10.d
+	picture = DEFENESTRATION_PRAGUE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_peasant_events.10.a
+		add_country_modifier = {
+			name = mop_successful_defenestration
+			duration = 60
+		}
+	}
+}

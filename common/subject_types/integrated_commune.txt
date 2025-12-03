@@ -504,4 +504,14 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_czech_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_czech_bonus_flag
+			}
+			culture = czech
+			total_development = 200
+		}
+	}
 }

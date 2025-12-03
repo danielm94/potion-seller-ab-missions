@@ -9363,4 +9363,59 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_bohemia = {
+		icon = mission_crown_of_wenceslas
+		position = 33
+		required_missions = {
+			mop_bavaria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				erzgebirge_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				bohemia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_czech_bonus_tt
+			set_country_flag = integrated_commune_czech_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = defenestration_tactics_enabled_tt
+			set_country_flag = defenestration_tactics_enabled
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }

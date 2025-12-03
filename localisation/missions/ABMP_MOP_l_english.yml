@@ -376,3 +376,7 @@
  woods_dev_20_percent_extra_dev_tt: "There is now a §G20%§! chance of gaining §G1§! extra point of development when developing §YWoods§! provinces."
  mop_nurnberg_title: "Develop Nürnberg"
  mop_nurnberg_desc: "The guilds of Nürnberg possess the potential to arm the entire Federation. We must pour our wealth into this city until it rises as a peerless metropolis of steel and science. A thoroughly modernized industry will guarantee the survival of our ideals."
+ mop_bohemia_title: "The Hussite Legacy"
+ mop_bohemia_desc: "Prague remains a dormant volcano of radical thought. The Hussites dreamed of a world without masters long before us. We shall march into Bohemia to vindicate their martyrs and harness their intellectual fervor. The Truth Prevails."
+ integrated_commune_czech_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YCzech§! culture will grant us §G+10.0%§! Innovativeness Gain if they have at least §Y200§! total development."
+ defenestration_tactics_enabled_tt: "Impressed by the efficiency of Czech political discourse, our spies have adopted the art of defenestration. Supporting rebels now has a §Y10%§! chance of granting §G+1000%§! Rebel Support Efficiency against the target, allowing you declare war with the §YGreat Peasant Uprising§! casus belli §Gimmediately§!."
