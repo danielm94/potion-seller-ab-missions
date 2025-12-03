@@ -5766,8 +5766,13 @@ ab_mop_3 = {
 				skill = 2
 			}
 			custom_tooltip = AB_EMPTY
-			set_country_flag = fort_advisor_garrsion_damage_buff
-			custom_tooltip = fort_advisor_garrsion_damage_buff_tooltip
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
 		}
 	}
 }
@@ -9146,6 +9151,73 @@ ab_mop_5 = {
 			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_bavaria = {
+		icon = duchy_of_bavaria
+		position = 32
+		required_missions = {
+			mop_austria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_bavaria_area
+				area = lower_bavaria_area
+				area = upper_bavaria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				east_bavaria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lower_bavaria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				upper_bavaria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_bavarian_bonus_tt
+			set_country_flag = integrated_commune_bavarian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = oktoberfest_enabled_tt
+			set_country_flag = oktoberfest_enabled
+			tooltip = {
+				add_province_modifier = {
+					name = mop_oktoberfest
+					duration = 31
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
 				influence = 10
 			}
 		}

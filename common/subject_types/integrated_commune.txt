@@ -474,4 +474,14 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_bavarian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_bavarian_bonus_flag
+			}
+			culture = bavarian
+			total_development = 450
+		}
+	}
 }

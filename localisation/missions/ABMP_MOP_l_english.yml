@@ -364,3 +364,7 @@
  mop_switzerland_title: "The Alpine Bastion"
  mop_switzerland_desc: "The Swiss Cantons share a flicker of our communal spirit, yet they squander their freedom by selling their sons as mercenaries to foreign tyrants. We must end this blood trade. By marching into the Alps and integrating the Cantons, we transform the roof of Europe into an impenetrable fortress."
  integrated_commune_swiss_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YSwiss§! culture will grant us §G+7.5%§! Mercenary Discipline if they have over §Y450§! total development."
+ integrated_commune_bavarian_bonus_tt: "£integrated_commune£§YIntegrated Commune§!£integrated_commune£ subjects of §YBavarian§! culture will grant us §G+5.0%§! Goods Produced Modifier if they have over §Y450§! total development."
+ oktoberfest_enabled_tt: "Every year starting in §YSeptember§!, every §YGrain§! and §YWine§! producing province will celebrate §YOktoberfest§! for §Y1 month§!, which grants the province the following:"
+ mop_bavaria_title: "Liberate Bavaria"
+ mop_bavaria_desc: "With the Alps secured, the path to the heart of the Holy Roman Empire lies open across the Bavarian plateau. The Wittelsbach dukes stand as the self-appointed gatekeepers of Germania, using their rich agricultural lands to feed the Imperial armies and block our advance up the Danube. We must march on Munchen to seize the granaries of the south. By shattering this shield, we leave the remaining princes of the Empire exposed and defenseless."

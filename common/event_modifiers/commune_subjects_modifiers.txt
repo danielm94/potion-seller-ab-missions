@@ -234,3 +234,7 @@ integrated_commune_austrian_bonus = {
 integrated_commune_swiss_bonus = {
 	mercenary_discipline = 0.075
 }
+
+integrated_commune_bavarian_bonus = {
+	global_trade_goods_size_modifier = 0.05
+}

@@ -603,3 +603,41 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = moldavia_peasant_events.9
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	trigger = {
+		has_country_flag = oktoberfest_enabled
+		is_month = 8
+		NOT = {
+			is_month = 9
+		}
+		any_owned_province = {
+			OR = {
+				trade_goods = wine
+				trade_goods = grain
+			}
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = wine
+					trade_goods = grain
+				}
+			}
+			add_province_modifier = {
+				name = mop_oktoberfest
+				duration = 31
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+	}
+}
