@@ -287,7 +287,7 @@ integrated_commune = {
 				has_country_flag = integrated_commune_wendish_bonus
 			}
 			OR = {
-				culture = pommeranian 
+				culture = pommeranian
 				culture = Wendish
 				culture = sorbian
 			}
@@ -464,13 +464,13 @@ integrated_commune = {
 			total_development = 2000
 		}
 	}
-		modifier_overlord = {
-		modifier = integrated_commune_austrian_bonus
+	modifier_overlord = {
+		modifier = integrated_commune_swiss_bonus
 		trigger = {
 			overlord = {
-				has_country_flag = integrated_commune_austrian_bonus_flag
+				has_country_flag = integrated_commune_swiss_bonus_flag
 			}
-			culture = austrian
+			culture = swiss
 			total_development = 450
 		}
 	}

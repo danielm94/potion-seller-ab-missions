@@ -230,3 +230,7 @@ integrated_commune_umbrian_bonus = {
 integrated_commune_austrian_bonus = {
 	diplomatic_upkeep = 1
 }
+
+integrated_commune_swiss_bonus = {
+	mercenary_discipline = 0.075
+}

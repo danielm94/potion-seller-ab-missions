@@ -5666,6 +5666,110 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_switzerland = {
+		icon = reorganize_the_confederacy
+		position = 32
+		required_missions = {
+			mop_austria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = switzerland_area
+				area = romandie_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				switzerland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				romandie_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_swiss_bonus_tt
+			set_country_flag = integrated_commune_swiss_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = mop_switzerland_swiss_fort_bonus_tooltip
+			tooltip = {
+				custom_tooltip = upgraded_fort_tooltip
+				add_province_modifier = {
+					name = wallachia_gate_of_the_alps
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							owned_by = root
+							owner = {
+								is_subject_of = root
+							}
+						}
+						OR = {
+							area = romandie_area
+							area = switzerland_area
+						}
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_gate_of_the_alps
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					which = swiss_religion
+					value = 0
+				}
+				165 = {
+					export_to_variable = {
+						which = swiss_religion
+						value = religion
+					}
+					PREV = {
+						set_variable = {
+							which = swiss_religion
+							which = PREV
+						}
+					}
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				religion = variable:swiss_religion
+				culture = swiss
+				location = 165
+				cost_multiplier = 0.5
+				skill = 2
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = fort_advisor_garrsion_damage_buff
+			custom_tooltip = fort_advisor_garrsion_damage_buff_tooltip
+		}
+	}
 }
 
 ab_mop_4 = {
