@@ -1199,6 +1199,97 @@ ab_mop_1 = {
 			}
 		}
 	}
+	mop_roman_patriarch = {
+		icon = mission_most_holy_synod
+		position = 36
+		required_missions = {
+			mop_rome
+		}
+		provinces_to_highlight = {
+			province_id = 118
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				has_road_building_trigger = no
+				has_tax_building_trigger = no
+				has_fort_building_trigger = no
+				has_courthouse_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = st_pauls_basilica
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				118 = {
+					owned_by = root
+					religion = orthodox
+					development = 45
+					num_of_times_expanded_infrastructure = 3
+					has_road_building_trigger = yes
+					has_tax_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_courthouse_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = st_pauls_basilica
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			118 = {
+				remove_province_modifier = mop_roman_commune
+				add_province_modifier = {
+					name = mop_eternal_roman_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = patriarch_of_rome_tooltip
+			set_country_flag = patriarch_of_rome
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				religion = orthodox
+				culture = umbrian
+				location = 118
+				min_age = 40
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.2
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
+			}
+		}
+	}
 }
 
 ab_mop_2 = {
