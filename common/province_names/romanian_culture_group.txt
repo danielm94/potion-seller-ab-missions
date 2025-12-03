@@ -30,7 +30,7 @@
 102 = "Nisa"
 103 = "Torino"
 104 = "Milano"
-112 = "Venetia"
+112 = {"Venetia" "Venetia"}
 116 = "Florenta"
 128 = "Carintia Inferioara"
 129 = "Carniola"
