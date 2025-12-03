@@ -206,3 +206,15 @@ integrated_commune_romagnan_bonus = {
 integrated_commune_umbrian_bonus = {
 	morale_damage_received = -0.05
 }
+integrated_commune_latin_bonus_1 = {
+	core_creation = -1
+}
+integrated_commune_latin_bonus_2 = {
+	core_creation = -1
+}
+integrated_commune_latin_bonus_3 = {
+	core_creation = -1
+}
+integrated_commune_latin_bonus_4 = {
+	core_creation = -1
+}

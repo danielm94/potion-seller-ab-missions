@@ -963,3 +963,7 @@ mop_rebuild_rome = {
 	local_great_project_upgrade_cost = -0.25
 	local_great_project_upgrade_time = -0.25
 }
+
+mop_italia_mare = {
+	administrative_efficiency = 0.05
+}

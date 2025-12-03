@@ -3358,6 +3358,59 @@ ab_mop_2 = {
 			}
 		}
 	}
+	mop_italy = {
+		icon = mission_rule_italy
+		position = 36
+		required_missions = {
+			mop_rome
+		}
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				italy_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_ROP_commune_diplomatic_actions_tt
+			set_country_flag = unlock_ROP_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_latin_bonus_tt
+			set_country_flag = integrated_commune_latin_bonus_flag
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_italia_mare
+				duration = -1
+			}
+			change_peasant_zeal = {
+				value = 50
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 25
+			}
+		}
+	}
 }
 
 ab_mop_3 = {

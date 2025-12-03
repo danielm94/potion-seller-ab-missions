@@ -112,6 +112,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = ROP_ideas_list
+		trigger = {
+			FROM = {
+				tag = ROP
+			}
+		}
+	}
 }
 
 defined_text = {
