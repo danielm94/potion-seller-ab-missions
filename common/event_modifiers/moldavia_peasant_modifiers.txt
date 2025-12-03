@@ -979,3 +979,12 @@ mop_italia_mare = {
 pentarchy_converted_subject_to_orthodox = {
 	liberty_desire = -50
 }
+
+mop_viena_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	diplomatic_annexation_cost = -0.05
+	picture = "commune_province_modifier_icon"
+}

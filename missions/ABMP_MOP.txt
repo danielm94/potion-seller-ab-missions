@@ -7194,6 +7194,83 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_austria = {
+		icon = prosper_in_piedmont
+		position = 31
+		required_missions = {
+			mop_great_peasants_war
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = inner_austria_area
+				area = austria_proper_area
+				area = tirol_area
+				area = carinthia_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				inner_austria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				austria_proper_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				tirol_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				carinthia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_austrian_bonus_tt
+			custom_tooltip = AB_EMPTY
+			134 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_viena_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = hill_dev_20_percent_extra_dev_tt
+			set_country_flag = hill_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_5 = {

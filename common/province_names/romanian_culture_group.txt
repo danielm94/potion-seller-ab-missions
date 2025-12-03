@@ -36,7 +36,7 @@
 129 = "Carniola"
 132 = "Stiria"
 133 = "Austria Superioara"
-134 = "Viena"
+134 = {"Viena" "Viena"}
 137 = "Dubrovnik"
 147 = "Larisa"
 145 = "Moreea"

@@ -464,4 +464,14 @@ integrated_commune = {
 			total_development = 2000
 		}
 	}
+		modifier_overlord = {
+		modifier = integrated_commune_austrian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_austrian_bonus_flag
+			}
+			culture = austrian
+			total_development = 450
+		}
+	}
 }
