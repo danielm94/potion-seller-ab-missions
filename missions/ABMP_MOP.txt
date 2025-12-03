@@ -937,7 +937,7 @@ ab_mop_1 = {
 	}
 	mop_south_italy = {
 		icon = king_of_naples
-		position = 30
+		position = 31
 		required_missions = {
 			mop_liberate_illyria
 		}
@@ -1011,7 +1011,7 @@ ab_mop_1 = {
 	}
 	mop_sicily = {
 		icon = arb_sicily
-		position = 32
+		position = 34
 		required_missions = {
 			mop_south_italy
 		}
@@ -1125,7 +1125,7 @@ ab_mop_1 = {
 	}
 	mop_malta = {
 		icon = fortify_malta
-		position = 34
+		position = 35
 		required_missions = {
 			mop_sicily
 		}
@@ -3095,104 +3095,11 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_dev_venice = {
-		icon = ven_capital_of_europe
-		position = 31
-		required_missions = {
-			mop_venice
-		}
-		provinces_to_highlight = {
-			province_id = 112
-			OR = {
-				NOT = {
-					owned_by = root
-				}
-				NOT = {
-					development = 45
-				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 3
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 3
-				}
-				has_trade_building_trigger = no
-				has_production_building_trigger = no
-				has_manufactory_trigger = no
-				has_road_building_trigger = no
-				has_fort_building_trigger = no
-				has_shipyard_building_trigger = no
-				NOT = {
-					has_great_project = {
-						type = venetian_arsenal_gp
-						tier = 2
-					}
-				}
-				NOT = {
-					has_great_project = {
-						type = doges_palace
-						tier = 2
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				112 = {
-					owned_by = root
-					development = 45
-					num_of_times_expanded_infrastructure = 3
-					province_has_center_of_trade_of_level = 3
-					has_trade_building_trigger = yes
-					has_production_building_trigger = yes
-					has_manufactory_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_shipyard_building_trigger = yes
-					has_great_project = {
-						type = venetian_arsenal_gp
-						tier = 2
-					}
-					has_great_project = {
-						type = doges_palace
-						tier = 2
-					}
-				}
-			}
-		}
-		effect = {
-			112 = {
-				remove_province_modifier = mop_venice_commune
-				add_province_modifier = {
-					name = mop_serene_venice_commune
-					duration = -1
-				}
-			}
-			custom_tooltip = unlocked_venetian_arsenal_heavy_bombards_tt
-			set_country_flag = unlocked_venetian_arsenal_heavy_bombards
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = coastline_dev_20_percent_extra_dev_tt
-			set_country_flag = coastline_dev_20_percent_extra_dev
-			custom_tooltip = AB_EMPTY
-			add_republican_tradition = 10
-			add_mercantilism = 2
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
-			}
-		}
-	}
 	mop_north_italy = {
 		icon = mission_conquer_north_italy
 		position = 32
 		required_missions = {
-			mop_dev_venice
+			mop_venice
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -3280,88 +3187,11 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_genoa = {
-		icon = mission_dominate_genoa
-		position = 33
-		required_missions = {
-			mop_north_italy
-		}
-		provinces_to_highlight = {
-			province_id = 101
-			OR = {
-				NOT = {
-					owned_by = root
-				}
-				NOT = {
-					development = 45
-				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 3
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 3
-				}
-				has_trade_building_trigger = no
-				has_production_building_trigger = no
-				has_manufactory_trigger = no
-				has_road_building_trigger = no
-				has_fort_building_trigger = no
-				has_dock_building_trigger = yes
-				has_shipyard_building_trigger = yes
-				has_coast_defense_building_trigger = yes
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				101 = {
-					owned_by = root
-					development = 45
-					num_of_times_expanded_infrastructure = 3
-					province_has_center_of_trade_of_level = 3
-					has_trade_building_trigger = yes
-					has_production_building_trigger = yes
-					has_manufactory_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
-					has_coast_defense_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			101 = {
-				remove_province_modifier = mop_genoa_commune
-				add_province_modifier = {
-					name = mop_great_genoa_commune
-					duration = -1
-				}
-			}
-			custom_tooltip = unlock_genoese_rigging_tt
-			set_country_flag = unlocked_genoese_rigging
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = repay_loan_reduces_inflation_tt
-			set_country_flag = repay_loan_reduces_inflation
-			custom_tooltip = AB_EMPTY
-			add_mercantilism = 2
-			add_navy_tradition = 20
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
-			}
-		}
-	}
 	mop_central_italy = {
 		icon = conquer_tuscany
 		position = 34
 		required_missions = {
-			mop_genoa
+			mop_north_italy
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -3444,7 +3274,7 @@ ab_mop_2 = {
 				limit = {
 					OR = {
 						mission_completed = mop_central_italy
-						mission_completed = mop_malta
+						mission_completed = mop_sicily
 					}
 				}
 				lazio_area = {
@@ -3463,7 +3293,7 @@ ab_mop_2 = {
 			else = {
 				OR = {
 					mission_completed = mop_central_italy
-					mission_completed = mop_malta
+					mission_completed = mop_sicily
 				}
 			}
 		}
@@ -5666,6 +5496,99 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_dev_venice = {
+		icon = ven_capital_of_europe
+		position = 31
+		required_missions = {
+			mop_venice
+		}
+		provinces_to_highlight = {
+			province_id = 112
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				has_shipyard_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = venetian_arsenal_gp
+						tier = 2
+					}
+				}
+				NOT = {
+					has_great_project = {
+						type = doges_palace
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				112 = {
+					owned_by = root
+					development = 45
+					num_of_times_expanded_infrastructure = 3
+					province_has_center_of_trade_of_level = 3
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_great_project = {
+						type = venetian_arsenal_gp
+						tier = 2
+					}
+					has_great_project = {
+						type = doges_palace
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			112 = {
+				remove_province_modifier = mop_venice_commune
+				add_province_modifier = {
+					name = mop_serene_venice_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = unlocked_venetian_arsenal_heavy_bombards_tt
+			set_country_flag = unlocked_venetian_arsenal_heavy_bombards
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = coastline_dev_20_percent_extra_dev_tt
+			set_country_flag = coastline_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			add_republican_tradition = 10
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 	mop_switzerland = {
 		icon = reorganize_the_confederacy
 		position = 32
@@ -5771,6 +5694,83 @@ ab_mop_3 = {
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_genoa = {
+		icon = mission_dominate_genoa
+		position = 33
+		required_missions = {
+			mop_north_italy
+		}
+		provinces_to_highlight = {
+			province_id = 101
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				has_coast_defense_building_trigger = yes
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				101 = {
+					owned_by = root
+					development = 45
+					num_of_times_expanded_infrastructure = 3
+					province_has_center_of_trade_of_level = 3
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			101 = {
+				remove_province_modifier = mop_genoa_commune
+				add_province_modifier = {
+					name = mop_great_genoa_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = unlock_genoese_rigging_tt
+			set_country_flag = unlocked_genoese_rigging
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = repay_loan_reduces_inflation_tt
+			set_country_flag = repay_loan_reduces_inflation
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_navy_tradition = 20
+			add_faction_influence = {
+				faction = exemplarists_faction
 				influence = 10
 			}
 		}
