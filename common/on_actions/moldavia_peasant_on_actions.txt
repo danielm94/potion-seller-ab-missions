@@ -872,3 +872,18 @@ on_loan_repaid = {
 		add_inflation = -0.05
 	}
 }
+
+on_religion_change = {
+	if = {
+		limit = {
+			religion = orthodox
+			overlord = {
+				has_country_flag = reduce_liberty_desire_from_converting_subjects_to_orthodox
+			}
+		}
+		add_country_modifier = {
+			name = pentarchy_converted_subject_to_orthodox
+			duration = 15209
+		}
+	}
+}

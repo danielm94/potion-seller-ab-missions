@@ -1290,6 +1290,54 @@ ab_mop_1 = {
 			}
 		}
 	}
+	mop_pentarchy = {
+		icon = mission_pope
+		position = 37
+		required_missions = {
+			mop_roman_patriarch
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 118
+				province_id = 151
+				province_id = 358
+				province_id = 379
+				province_id = 2313
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				owns = 118				#Rome
+				owns = 151				#Constantinople
+				owns = 358				#Alexandria
+				owns = 379				#Jerusalem
+				owns = 2313				#Antioch
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = healing_the_schism
+				duration = -1
+			}
+			custom_tooltip = reduce_liberty_desire_from_converting_subjects_to_orthodox_tt
+			set_country_flag = reduce_liberty_desire_from_converting_subjects_to_orthodox
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 50
+			}
+		}
+	}
 }
 
 ab_mop_2 = {

@@ -975,3 +975,7 @@ mop_rebuild_rome = {
 mop_italia_mare = {
 	administrative_efficiency = 0.05
 }
+
+pentarchy_converted_subject_to_orthodox = {
+	liberty_desire = -50
+}
