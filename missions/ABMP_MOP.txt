@@ -9418,4 +9418,106 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_saxons = {
+		icon = conquer_lower_saxony
+		position = 34
+		required_missions = {
+			mop_south_germany
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = south_saxony_area
+				area = northern_saxony_area
+				area = lower_saxony_area
+				area = thuringia_area
+				area = braunschweig_area
+				area = weser_area
+				area = holstein_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				south_saxony_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				northern_saxony_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lower_saxony_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				thuringia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				braunschweig_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				weser_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				holstein_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_saxon_bonus_tt
+			set_country_flag = integrated_commune_saxon_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_lower_saxon_bonus_tt
+			set_country_flag = integrated_commune_lower_saxon_bonus_flag
+			custom_tooltip = AB_EMPTY
+			44 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_hamburg_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = FKN_TRADER_SCALING
+			set_country_flag = trader_give_production_efficiency
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
 }

@@ -514,4 +514,24 @@ integrated_commune = {
 			total_development = 200
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_saxon_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_saxon_bonus_flag
+			}
+			culture = saxon
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_lower_saxon_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_lower_saxon_bonus_flag
+			}
+			culture = lower_saxon
+			total_development = 450
+		}
+	}
 }

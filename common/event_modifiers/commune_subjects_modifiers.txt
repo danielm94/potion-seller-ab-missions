@@ -250,3 +250,11 @@ integrated_commune_franconian_bonus = {
 integrated_commune_czech_bonus = {
 	innovativeness_gain = 0.1
 }
+
+integrated_commune_saxon_bonus = {
+	global_institution_spread = 0.1
+}
+
+integrated_commune_lower_saxon_bonus = {
+	global_trade_power = 0.05
+}
