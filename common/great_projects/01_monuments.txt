@@ -19930,7 +19930,7 @@ schonbrunn_palace = {
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = rem_SCHONBRUNN_CONDITION
+						tooltip = has_unlocked_great_project_through_mission_tt
 						owner = {
 							has_country_flag = unlock_schonbrunn_bonus
 						}
@@ -19968,7 +19968,7 @@ schonbrunn_palace = {
 						}
 					}
 					custom_trigger_tooltip = {
-						tooltip = rem_SCHONBRUNN_CONDITION
+						tooltip = has_unlocked_great_project_through_mission_tt
 						owner = {
 							has_country_flag = unlock_schonbrunn_bonus
 						}

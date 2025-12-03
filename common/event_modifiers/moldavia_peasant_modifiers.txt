@@ -957,6 +957,7 @@ mop_roman_commune = {
 	warscore_cost_vs_other_religion = -0.05
 	picture = "commune_province_modifier_icon"
 }
+
 mop_eternal_roman_commune = {
 	min_local_autonomy = 10
 	local_governing_cost = -1
@@ -986,5 +987,15 @@ mop_viena_commune = {
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	diplomatic_annexation_cost = -0.05
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_viena_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	diplomatic_annexation_cost = -0.05
+	diplomatic_reputation = 0.5
 	picture = "commune_province_modifier_icon"
 }

@@ -5110,7 +5110,7 @@ ab_mop_3 = {
 							num_of_times_expanded_infrastructure = 2
 						}
 						NOT = {
-							religion = root
+							religion = orthodox
 						}
 						has_tax_building_trigger = no
 						has_trade_building_trigger = no
@@ -5137,7 +5137,7 @@ ab_mop_3 = {
 							num_of_times_expanded_infrastructure = 2
 						}
 						NOT = {
-							religion = root
+							religion = orthodox
 						}
 						has_tax_building_trigger = no
 						has_trade_building_trigger = no
@@ -5159,7 +5159,7 @@ ab_mop_3 = {
 					owned_by = root
 					development = 30
 					num_of_times_expanded_infrastructure = 2
-					religion = root
+					religion = orthodox
 					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
 					has_road_building_trigger = yes
@@ -5173,7 +5173,7 @@ ab_mop_3 = {
 					owned_by = root
 					development = 30
 					num_of_times_expanded_infrastructure = 2
-					religion = root
+					religion = orthodox
 					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
 					has_road_building_trigger = yes
@@ -5292,7 +5292,7 @@ ab_mop_3 = {
 					owned_by = root
 				}
 				NOT = {
-					religion = root
+					religion = orthodox
 				}
 				NOT = {
 					development = 30
@@ -5320,7 +5320,7 @@ ab_mop_3 = {
 				358 = {
 					owned_by = root
 					development = 30
-					religion = root
+					religion = orthodox
 					num_of_times_expanded_infrastructure = 2
 					province_has_center_of_trade_of_level = 2
 					has_tax_building_trigger = yes
@@ -6170,7 +6170,7 @@ ab_mop_4 = {
 				38 = {
 					owned_by = root
 					development = 30
-					religion = ROOT
+					religion = orthodox
 					num_of_times_expanded_infrastructure = 2
 					province_has_center_of_trade_of_level = 2
 					has_tax_building_trigger = yes
@@ -7267,6 +7267,95 @@ ab_mop_4 = {
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_vienna = {
+		icon = the_viennese_waltz
+		position = 32
+		required_missions = {
+			mop_austria
+		}
+		provinces_to_highlight = {
+			province_id = 134
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				has_road_building_trigger = no
+				has_courthouse_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = schonbrunn_palace
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				134 = {
+					owned_by = root
+					religion = orthodox
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_road_building_trigger = yes
+					has_courthouse_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = schonbrunn_palace
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			134 = {
+				remove_province_modifier = mop_viena_commune
+				add_province_modifier = {
+					name = mop_great_viena_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = unlock_schonbrunn_bonus_tooltip
+			set_country_flag = unlock_schonbrunn_bonus
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = statesman
+				skill = 2
+				cost_multiplier = 0.5
+				culture = austrian
+				location = 134
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
 				influence = 10
 			}
 		}
