@@ -238,3 +238,11 @@ integrated_commune_swiss_bonus = {
 integrated_commune_bavarian_bonus = {
 	global_trade_goods_size_modifier = 0.05
 }
+
+integrated_commune_swabian_bonus = {
+	inflation_reduction = -0.1
+}
+
+integrated_commune_franconian_bonus = {
+	adm_advisor_cost = -0.075
+}

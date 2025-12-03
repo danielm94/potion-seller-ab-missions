@@ -484,4 +484,24 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_franconian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_franconian_bonus_flag
+			}
+			culture = franconian
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_swabian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_swabian_bonus_flag
+			}
+			culture = swabian
+			total_development = 450
+		}
+	}
 }

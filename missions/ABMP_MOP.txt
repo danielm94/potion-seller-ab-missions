@@ -7469,6 +7469,68 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_south_germany = {
+		icon = mission_rhine
+		position = 33
+		required_missions = {
+			mop_switzerland
+			mop_bavaria
+		}
+		provinces_to_highlight = {
+			region = south_german_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				south_german_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_franconian_bonus_tt
+			set_country_flag = integrated_commune_franconian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_swabian_bonus_tt
+			set_country_flag = integrated_commune_swabian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			67 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_nurnberg_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = buffed_razesi_education_grants_tt
+			set_country_flag = buffed_razesi_education_grants
+			custom_tooltip = AB_EMPTY
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
 }
 
 ab_mop_5 = {

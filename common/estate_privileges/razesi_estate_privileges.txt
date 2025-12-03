@@ -870,6 +870,14 @@ estate_razesi_advisors = {
 		}
 		is_bad = yes
 	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_razesi_education_grants
+		}
+		modifier = {
+			adm_advisor_cost = -0.1
+		}
+	}
 	on_granted = {
 		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes
 	}
@@ -943,7 +951,8 @@ estate_razesi_exemplarism = {
 	conditional_modifier = {
 		trigger = {
 			ai = yes
-		}		#I know, this one is cheating. It would be better to teach the AI to not dow, but whatev
+		}
+		#I know, this one is cheating. It would be better to teach the AI to not dow, but whatev
 		modifier = {
 			can_not_declare_war = yes
 		}
@@ -954,6 +963,7 @@ estate_razesi_exemplarism = {
 		factor = 1
 	}
 }
+
 estate_razesi_internationalism = {
 	icon = GFX_estate_razesi_internationalism
 	land_share = 5
@@ -997,8 +1007,8 @@ estate_razesi_internationalism = {
 		global_spy_defence = -1
 	}
 	penalties = {
-		global_unrest = 3 # People aren't happy that the state's focus is on external things.
-		harsh_treatment_cost = 0.5 # We don't want to look like brutes, so we have to pay more resources to supress rebels
+		global_unrest = 3		# People aren't happy that the state's focus is on external things.
+		harsh_treatment_cost = 0.5		# We don't want to look like brutes, so we have to pay more resources to supress rebels
 	}
 	benefits = {
 		leaguists_faction_influence = 0.05

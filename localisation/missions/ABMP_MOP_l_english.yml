@@ -368,3 +368,8 @@
  oktoberfest_enabled_tt: "Every year starting in §YSeptember§!, every §YGrain§! and §YWine§! producing province will celebrate §YOktoberfest§! for §Y1 month§!, which grants the province the following:"
  mop_bavaria_title: "Liberate Bavaria"
  mop_bavaria_desc: "With the Alps secured, the path to the heart of the Holy Roman Empire lies open across the Bavarian plateau. The Wittelsbach dukes stand as the self-appointed gatekeepers of Germania, using their rich agricultural lands to feed the Imperial armies and block our advance up the Danube. We must march on Munchen to seize the granaries of the south. By shattering this shield, we leave the remaining princes of the Empire exposed and defenseless."
+ mop_south_germany_title: "Liberate South Germany"
+ mop_south_germany_desc: "The patchwork of bishoprics and duchies that has long strangled the south of Germany must be swept away. We will unite the radical zeal of the Swabian peasantry with the industrial might of the Franconian guilds. Nürnberg shall be seized and reorganized as a Federal Enclave—a shining beacon of science and industry to power the revolution."
+ integrated_commune_swabian_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YSwabian§! culture will grant us §G-0.10§! Yearly Inflation Reduction if they have at least §Y450§! total development."
+ integrated_commune_franconian_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YFranconian§! culture will grant us §G-7.5%§! Administrative Advisor Cost if they have at least §Y450§! total development."
+ buffed_razesi_education_grants_tt: "The §YRazesi Education Grants§! estate privilege now grants §G-10.0%§! Administrative Advisor Cost."

@@ -1004,3 +1004,11 @@ mop_oktoberfest = {
 	trade_goods_size = 2
 	local_unrest = -10
 }
+
+mop_nurnberg_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	adm_tech_cost_modifier = -0.05
+	picture = "commune_province_modifier_icon"
+}
