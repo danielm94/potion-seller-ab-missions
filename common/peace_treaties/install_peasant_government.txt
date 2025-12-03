@@ -137,6 +137,16 @@ po_install_peasant_government = {
 		else = {
 			clear_releasable_countries_event_targets = yes
 			clear_identified_releasable_flags = yes
+			if  = {
+				limit = {
+					FROM = {
+						tag = PAP
+					}
+				}
+				country_event = {
+					id = moldavia_peasant_events.8
+				}
+			}
 		}
 	}
 	ai_weight = {

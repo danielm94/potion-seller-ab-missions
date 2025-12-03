@@ -281,6 +281,16 @@ country_event = {
 		custom_tooltip = cant_balkanize_again_tt
 	}
 	after = {
+		if = {
+			limit = {
+				event_target:new_peasant_subject = {
+					tag = PAP
+				}
+			}
+			country_event = {
+				id = moldavia_peasant_events.8
+			}
+		}
 		clear_releasable_countries_event_targets = yes
 		clear_identified_releasable_flags = yes
 		clear_global_event_target = new_peasant_subject
@@ -484,6 +494,111 @@ country_event = {
 		display_tooltip_if_has_country_flag = {
 			flag = show_verbose_gpw_tooltips
 			tooltip = gpw_opportunity_verbose_tt
+		}
+	}
+}
+
+#Birth of Roman Republic
+country_event = {
+	id = moldavia_peasant_events.8
+	title = moldavia_peasant_events.8.t
+	desc = {
+		desc = moldavia_peasant_events.8.d.rop_doesnt_exist
+		trigger = {
+			NOT = {
+				exists = ROP
+			}
+		}
+	}
+	desc = {
+		desc = moldavia_peasant_events.8.d.rop_is_subject
+		trigger = {
+			overlord_of = ROP
+		}
+	}
+	desc = {
+		desc = moldavia_peasant_events.8.d.rop_is_free_nation
+		trigger = {
+			exists = ROP
+			NOT = {
+				overlord_of = ROP
+			}
+		}
+	}
+	picture = ST_PETERS_CHURCH_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_peasant_events.8.a
+		if = {
+			limit = {
+				overlord_of = ROP
+			}
+			custom_tooltip = every_pap_province_goes_to_roman_communes_tt
+			hidden_effect = {
+				PAP = {
+					every_owned_province = {
+						add_core = ROP
+						cede_province = ROP
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					exists = ROP
+				}
+			}
+			custom_tooltip = establishment_of_roman_communes_tt
+			hidden_effect = {
+				ROP = {
+					change_religion = catholic
+					change_primary_culture = umbrian
+					change_government = republic
+					add_government_reform = peasants_republic
+				}
+				PAP = {
+					every_owned_province = {
+						add_core = ROP
+						cede_province = ROP
+					}
+				}
+				if = {
+					limit = {
+						ROP = {
+							owns = 118
+						}
+					}
+					ROP = {
+						set_capital = 118
+					}
+				}
+				reverse_add_opinion = {
+					who = ROP
+					modifier = liberated_us_from_nobles
+				}
+				create_subject = {
+					subject_type = allied_commune
+					who = ROP
+				}
+			}
+		}
+		else = {
+			custom_tooltip = annex_pap_tt
+			hidden_effect = {
+				PAP = {
+					every_owned_province = {
+						add_core = root
+						cede_province = root
+					}
+				}
+			}
+		}
+		change_peasant_zeal = {
+			value = 20
+		}
+		add_prestige_or_monarch_power = {
+			amount = 20
 		}
 	}
 }

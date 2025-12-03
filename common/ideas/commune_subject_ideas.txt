@@ -3,17 +3,14 @@ sloboda_rus_ideas = {
 		merc_maintenance_modifier = -0.2
 		global_manpower_modifier = 0.25
 	}
-	
 	bonus = {
 		military_tactics = 0.25
-	}	
-
+	}
 	trigger = {
 		tag = UKR
 		is_commune_subject = yes
 	}
 	free = yes
-	
 	sloboda_rus_first = {
 		development_cost_modifier = -0.05
 		center_of_trade_upgrade_cost = -0.2
@@ -136,7 +133,7 @@ JAP_peasant_ideas = {
 	}
 	JAP_peasant_second = {
 		development_cost = -0.1
-		build_time  = -0.1
+		build_time = -0.1
 	}
 	JAP_peasant_third = {
 		stability_cost_modifier = -0.25
@@ -152,5 +149,47 @@ JAP_peasant_ideas = {
 	}
 	JAP_peasant_seventh = {
 		state_governing_cost = -0.15
+	}
+}
+
+ROP_ideas = {
+	free = yes
+	trigger = {
+		tag = ROP
+	}
+	start = {
+		discipline = 0.05
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	bonus = {
+		manpower_in_culture_group_provinces = 0.33
+	}
+	ROP_first = {
+		prestige = 1
+	}
+	ROP_second = {
+		great_project_upgrade_cost = -0.5
+	}
+	ROP_third = {
+		stability_cost_modifier = -0.2
+	}
+	ROP_fourth = {
+		morale_damage_received = -0.1
+	}
+	ROP_fifth = {
+		production_efficiency = 0.15
+	}
+	ROP_sixth = {
+		core_creation = -0.2
+	}
+	ROP_seventh = {
+		global_missionary_strength = 0.02
+		papal_influence = 0.25
+		yearly_patriarch_authority = 0.001
+		church_power_modifier = 0.1
 	}
 }
