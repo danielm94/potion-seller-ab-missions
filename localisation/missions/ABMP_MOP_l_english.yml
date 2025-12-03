@@ -373,3 +373,6 @@
  integrated_commune_swabian_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YSwabian§! culture will grant us §G-0.10§! Yearly Inflation Reduction if they have at least §Y450§! total development."
  integrated_commune_franconian_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YFranconian§! culture will grant us §G-7.5%§! Administrative Advisor Cost if they have at least §Y450§! total development."
  buffed_razesi_education_grants_tt: "The §YRazesi Education Grants§! estate privilege now grants §G-10.0%§! Administrative Advisor Cost."
+ woods_dev_20_percent_extra_dev_tt: "There is now a §G20%§! chance of gaining §G1§! extra point of development when developing §YWoods§! provinces."
+ mop_nurnberg_title: "Develop Nürnberg"
+ mop_nurnberg_desc: "The guilds of Nürnberg possess the potential to arm the entire Federation. We must pour our wealth into this city until it rises as a peerless metropolis of steel and science. A thoroughly modernized industry will guarantee the survival of our ideals."

@@ -479,6 +479,19 @@ on_adm_development = {
 					}
 				}
 				AND = {
+					has_terrain = woods
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = woods_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = woods_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
 					has_terrain = desert
 					OR = {
 						owner = {
@@ -596,6 +609,19 @@ on_dip_development = {
 					}
 				}
 				AND = {
+					has_terrain = woods
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = woods_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = woods_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
 					has_terrain = desert
 					OR = {
 						owner = {
@@ -709,6 +735,19 @@ on_mil_development = {
 						}
 						owner = {
 							has_country_flag = forest_dev_20_percent_extra_dev
+						}
+					}
+				}
+				AND = {
+					has_terrain = woods
+					OR = {
+						owner = {
+							overlord = {
+								has_country_flag = woods_dev_20_percent_extra_dev
+							}
+						}
+						owner = {
+							has_country_flag = woods_dev_20_percent_extra_dev
 						}
 					}
 				}

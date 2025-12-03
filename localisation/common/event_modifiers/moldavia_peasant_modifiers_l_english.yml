@@ -257,3 +257,7 @@
  desc_mop_oktoberfest: "The festival is in full swing. The insatiable demand for festbier and pretzel dough drives our farmers and brewers to unprecedented levels of productivity, filling the markets to bursting in celebration of the harvest."
  mop_nurnberg_commune: "The Nürnberg Commune"
  desc_mop_nurnberg_commune: "Nürnberg has been granted special status as a 'Free Federal City.' Its council of master smiths, clockmakers, and scholars operates with significant autonomy, exempt from standard bureaucratic oversight. In exchange, the city dedicates its immense industrial and scientific output solely to the advancement of the Federation."
+ mop_great_nurnberg_commune: "The Great Nürnberg Commune"
+ desc_mop_great_nurnberg_commune: "Nürnberg has transcended its history to become the industrial heart of the Federation. Its forges never cool, its presses never stop, and its scholars are the envy of Europe. It stands as a monolithic proof of the Exemplarist ideal: perfection through collective effort."
+ mop_federation_standard_time: "Federation Standard Time"
+ desc_mop_federation_standard_time: "We have severed the link between labor and the sun. By equipping our overseers and officers with Nürnberg chronometers, we enforce a unified tempo across the Federation. The state now operates with the tireless precision of a clockwork mechanism."

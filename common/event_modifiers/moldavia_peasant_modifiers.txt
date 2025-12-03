@@ -1009,6 +1009,20 @@ mop_nurnberg_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
+	local_development_cost = -0.05
 	adm_tech_cost_modifier = -0.05
 	picture = "commune_province_modifier_icon"
+}
+
+mop_great_nurnberg_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	adm_tech_cost_modifier = -0.1
+	picture = "commune_province_modifier_icon"
+}
+
+mop_federation_standard_time = {
+	monthly_reform_progress_modifier = 0.2
 }
