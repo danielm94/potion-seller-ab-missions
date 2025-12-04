@@ -1,3 +1,4 @@
 PCC = "countries/PeoplesCommunesOfChina.txt"
 GPH = "countries/GandenPhodrang.txt"
 ROP = "countries/RomanCommune.txt"
+FRP = "countries/LaFederation.txt"
