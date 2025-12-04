@@ -9604,6 +9604,8 @@ ab_mop_5 = {
 			custom_tooltip = FKN_TRADER_SCALING
 			set_country_flag = trader_give_production_efficiency
 			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
+			add_mercantilism = 2
 			change_peasant_zeal = {
 				value = 15
 			}
