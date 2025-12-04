@@ -314,3 +314,15 @@ integrated_commune_breton_bonus = {
 integrated_commune_normand_bonus = {
 	global_tax_modifier = 0.1
 }
+
+integrated_commune_frisian_bonus = {
+	republican_tradition = 0.15
+}
+
+integrated_commune_dutch_bonus = {
+	development_cost = -0.05
+}
+
+integrated_commune_flemish_bonus = {
+	build_cost = -0.075
+}

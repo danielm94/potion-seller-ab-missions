@@ -479,6 +479,12 @@ on_dependency_gained = {
 				}
 				override_country_name = GER_commune
 			}
+			else_if = {
+				limit = {
+					tag = UNN
+				}
+				override_country_name = UNN_commune
+			}
 		}
 	}
 }

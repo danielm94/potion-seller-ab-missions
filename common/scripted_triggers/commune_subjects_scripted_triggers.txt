@@ -117,5 +117,6 @@ is_formable_commune_subject = {
 		tag = JAP
 		tag = ROP
 		tag = GER
+		tag = UNN
 	}
 }

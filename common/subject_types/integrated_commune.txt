@@ -680,13 +680,42 @@ integrated_commune = {
 		}
 	}
 	modifier_overlord = {
-		modifier = integrated_commune_normand_bonus
+		modifier = integrated_commune_frisian_bonus
 		trigger = {
 			overlord = {
-				has_country_flag = integrated_commune_normand_bonus_flag
+				has_country_flag = integrated_commune_frisian_bonus_flag
 			}
-			culture = normand
-			total_development = 400
+			OR = {
+				culture = frisian
+				culture = frisian_new
+			}
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_dutch_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_dutch_bonus_flag
+			}
+			OR = {
+				culture = dutch
+				culture = dutch_new
+			}
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_flemish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_flemish_bonus_flag
+			}
+			OR = {
+				culture = flemish
+				culture = flemish_new
+			}
+			total_development = 300
 		}
 	}
 }
