@@ -427,3 +427,6 @@
  isolationist_mandate_buff_tt: "The §YIsolationist Mandate§! estate privilege will now grant us §G-50.0%§! Expand Infrastructure Cost Modifier."
  mop_amsterdam_title: "The World's Warehouse"
  mop_amsterdam_desc: "Amsterdam must rise as the supreme model of urban planning. We shall expand the canal network and drain the surrounding marshlands until the city stands as a monument to human ingenuity. The mastery of nature demonstrated here will serve as a blueprint for the entire Federation."
+ unlock_FRP_commune_diplomatic_actions_tt: "Unlock §YCommune Interactions§!£integrated_commune£ that allow you to establish @FRP §YLa Fédération§! in one of your £integrated_commune£§YIntegrated Communes§! that is of the §YFrench§! culture group. Once @FRP §YLa Fédération§! is established, you will be able to transfer §YFrench§! culture group provinces and provinces in the §YFrance region§! from your other £integrated_commune£§YIntegrated Communes§! to @FRP §YLa Fédération§!."
+ mop_france_title: "The Fall of Tyranny"
+ mop_france_desc: "The heart of the French monarchy, the ancient enemy of the free peasant, lies exposed. We shall march on Paris, tear down the symbols of absolutism, and extinguish the monarchy forever. The city of kings will be remade as a beacon of the Revolution, governed by the people it once oppressed."
