@@ -4912,23 +4912,25 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_holy_land = {
-		icon = convert_the_holy_lands
+	mop_caucasia = {
+		icon = mission_the_caucasus_rus
 		position = 24
 		required_missions = {
 			mop_free_anatolia
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = aleppo_area
-				area = syria_area
-				area = palestine_area
-				area = syrian_desert_area
-				area = trans_jordan_area
-			}
+			region = caucasia_region
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = cossack_protectorate
+					}
 				}
 			}
 		}
@@ -4940,69 +4942,42 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				aleppo_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				syria_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				palestine_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				syrian_desert_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				trans_jordan_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
+				custom_trigger_tooltip = {
+					tooltip = mop_cauacasia_trigger_tt
+					caucasia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = cossack_protectorate
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 		effect = {
-			2313 = {
+			421 = {
 				remove_core = owner
 				add_core = root
 				cede_province = root
 				add_province_modifier = {
-					name = mop_antiohia_commune
-					duration = -1
-				}
-			}
-			379 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_ierusalim_commune
+					name = mop_satrapeia_commune
 					duration = -1
 				}
 			}
 			define_advisor = {
-				type = inquisitor
-				skill = 2
-				culture = al_suryah_arabic
+				type = fortification_expert
+				skill = 3
+				culture = georgian
 				cost_multiplier = 0.5
 			}
 			custom_tooltip = AB_EMPTY
-			add_patriarch_authority = 0.05
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 10
-			}
 			change_peasant_zeal = {
 				value = 10
 			}
@@ -5012,222 +4987,27 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_reestablish_the_patriarchs = {
-		icon = gfx_wal_conquer_antioch
+	mop_satrapeia = {
+		icon = mission_beacon
 		position = 25
 		required_missions = {
-			mop_holy_land
+			mop_caucasia
 		}
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 379
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							religion = orthodox
-						}
-						has_tax_building_trigger = no
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_fort_building_trigger = no
-						NOT = {
-							has_great_project = {
-								type = holy_city_jerusalem
-								tier = 2
-							}
-						}
-					}
-				}
-				AND = {
-					province_id = 2313
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							religion = orthodox
-						}
-						has_tax_building_trigger = no
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_fort_building_trigger = no
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				379 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
-					religion = orthodox
-					has_tax_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_great_project = {
-						type = holy_city_jerusalem
-						tier = 2
-					}
-				}
-				2313 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
-					religion = orthodox
-					has_tax_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			2313 = {
-				center_of_trade = 1
-				add_province_modifier = {
-					name = wallachia_patriarchate_of_antiohia
-					duration = -1
-				}
-			}
-			set_country_flag = patriarch_of_antioch
-			custom_tooltip = patriarch_of_antioch_bonus_tooltip
-			custom_tooltip = AB_EMPTY
-			379 = {
-				center_of_trade = 1
-				add_province_modifier = {
-					name = wallachia_patriarchate_of_ierusalim
-					duration = -1
-				}
-			}
-			set_country_flag = patriarch_of_jerusalem
-			custom_tooltip = patriarch_of_jerusalem_bonus_tooltip
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = patriarch
-				skill = 3
-				cost_multiplier = 0.25
-				culture = al_suryah_arabic
-				religion = orthodox
-				age = 40
-				name = "The Patriarch of Ierusalim"
-				location = 151
-			}
-			custom_tooltip = AB_EMPTY
-			add_patriarch_authority = 0.2
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 20
-			}
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 20
-			}
-		}
-	}
-	mop_egypt = {
-		icon = gfx_wal_conquer_egypt
-		position = 26
-		required_missions = {
-			mop_reestablish_the_patriarchs
-		}
-		provinces_to_highlight = {
-			region = egypt_region
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = root
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				egypt_region = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-			}
-		}
-		effect = {
-			358 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_alexandria_commune
-					duration = -1
-				}
-			}
-			custom_tooltip = unlock_egyptian_grain_export_tt
-			set_country_flag = unlock_egyptian_grain_export
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = marsh_dev_20_percent_extra_dev_tt
-			set_country_flag = marsh_dev_20_percent_extra_dev
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 20
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 20
-			}
-		}
-	}
-	mop_alexandria_patriarch = {
-		icon = promote_the_patriarchate
-		position = 27
-		required_missions = {
-			mop_egypt
-		}
-		provinces_to_highlight = {
-			province_id = 358
+			province_id = 421
 			OR = {
 				NOT = {
 					owned_by = root
 				}
 				NOT = {
-					religion = orthodox
-				}
-				NOT = {
 					development = 30
 				}
 				NOT = {
 					num_of_times_expanded_infrastructure = 2
 				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_tax_building_trigger = no
+				has_production_building_trigger = no
 				has_trade_building_trigger = no
+				has_manufactory_trigger = no
 				has_road_building_trigger = no
 				has_fort_building_trigger = no
 			}
@@ -5240,42 +5020,184 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				358 = {
+				421 = {
 					owned_by = root
 					development = 30
-					religion = orthodox
 					num_of_times_expanded_infrastructure = 2
-					province_has_center_of_trade_of_level = 2
-					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
 					has_trade_building_trigger = yes
+					has_manufactory_trigger = yes
 					has_road_building_trigger = yes
 					has_fort_building_trigger = yes
 				}
 			}
 		}
 		effect = {
-			358 = {
-				upgrade_tax_building = yes
+			421 = {
+				remove_province_modifier = mop_satrapeia_commune
 				add_province_modifier = {
-					name = wallachia_patriarchate_of_alexandria
+					name = mop_great_satrapeia_commune
 					duration = -1
 				}
 			}
-			set_country_flag = patriarch_of_alexandria
-			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = naval_reformer_galley_buff_tt
+			set_country_flag = naval_reformer_galley_buff
 			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = patriarch
-				skill = 3
-				cost_multiplier = 0.25
-				culture = al_misr_arabic
-				religion = orthodox
-				age = 40
-				name = "The Patriarch of Alexandria"
-				location = 358
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_persia = {
+		icon = per_reborn_in_fire
+		position = 26
+		required_missions = {
+			mop_bagdad
+			mop_satrapeia
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				persia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			431 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_portul_abas_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = mountain_dev_20_percent_extra_dev_tt
+			set_country_flag = mountain_dev_20_percent_extra_dev
+			custom_tooltip = highlands_dev_20_percent_extra_dev_tt
+			set_country_flag = highlands_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
+	mop_portul_abas = {
+		icon = mission_dominate_persian_gulf
+		position = 27
+		required_missions = {
+			mop_persia
+		}
+		provinces_to_highlight = {
+			province_id = 431
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_trade_building_trigger = no
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = shapurshahr
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				431 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = shapurshahr
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			431 = {
+				remove_province_modifier = mop_portul_abas_commune
+				add_province_modifier = {
+					name = mop_great_portul_abas_commune
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					431 = {
+						has_great_project = {
+							type = shapurshahr
+							tier = 3
+						}
+					}
+				}
+				add_treasury = 3000
+			}
+			else = {
+				431 = {
+					add_great_project_tier = {
+						type = shapurshahr
+						tier = 1
+					}
+				}
 			}
 			custom_tooltip = AB_EMPTY
-			add_patriarch_authority = 0.1
+			add_country_modifier = {
+				name = mop_explore_indian_ocean
+				duration = 10950
+			}
+			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
@@ -9355,25 +9277,23 @@ ab_mop_5 = {
 			add_corruption = 4
 		}
 	}
-	mop_caucasia = {
-		icon = mission_the_caucasus_rus
+	mop_holy_land = {
+		icon = convert_the_holy_lands
 		position = 24
 		required_missions = {
 			mop_free_anatolia
 		}
 		provinces_to_highlight = {
-			region = caucasia_region
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				area = palestine_area
+				area = syrian_desert_area
+				area = trans_jordan_area
+			}
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = root
-				}
-			}
-			NOT = {
-				owner = {
-					is_subject_of_type_with_overlord = {
-						who = root
-						type = cossack_protectorate
-					}
 				}
 			}
 		}
@@ -9385,42 +9305,69 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_cauacasia_trigger_tt
-					caucasia_region = {
-						type = all
-						OR = {
-							country_or_commune_subject_or_subject_of_commune_subject_holds = {
-								who = root
-							}
-							owner = {
-								is_subject_of_type_with_overlord = {
-									who = root
-									type = cossack_protectorate
-								}
-							}
-						}
+				aleppo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				syria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				palestine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				syrian_desert_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				trans_jordan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
 					}
 				}
 			}
 		}
 		effect = {
-			421 = {
+			2313 = {
 				remove_core = owner
 				add_core = root
 				cede_province = root
 				add_province_modifier = {
-					name = mop_satrapeia_commune
+					name = mop_antiohia_commune
+					duration = -1
+				}
+			}
+			379 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_ierusalim_commune
 					duration = -1
 				}
 			}
 			define_advisor = {
-				type = fortification_expert
-				skill = 3
-				culture = georgian
+				type = inquisitor
+				skill = 2
+				culture = al_suryah_arabic
 				cost_multiplier = 0.5
 			}
 			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
 			change_peasant_zeal = {
 				value = 10
 			}
@@ -9430,29 +9377,62 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_satrapeia = {
-		icon = mission_beacon
+	mop_reestablish_the_patriarchs = {
+		icon = gfx_wal_conquer_antioch
 		position = 25
 		required_missions = {
-			mop_caucasia
+			mop_holy_land
 		}
 		provinces_to_highlight = {
-			province_id = 421
 			OR = {
-				NOT = {
-					owned_by = root
+				AND = {
+					province_id = 379
+					OR = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						NOT = {
+							religion = orthodox
+						}
+						has_tax_building_trigger = no
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_fort_building_trigger = no
+						NOT = {
+							has_great_project = {
+								type = holy_city_jerusalem
+								tier = 2
+							}
+						}
+					}
 				}
-				NOT = {
-					development = 30
+				AND = {
+					province_id = 2313
+					OR = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							num_of_times_expanded_infrastructure = 2
+						}
+						NOT = {
+							religion = orthodox
+						}
+						has_tax_building_trigger = no
+						has_trade_building_trigger = no
+						has_road_building_trigger = no
+						has_fort_building_trigger = no
+					}
 				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 2
-				}
-				has_production_building_trigger = no
-				has_trade_building_trigger = no
-				has_manufactory_trigger = no
-				has_road_building_trigger = no
-				has_fort_building_trigger = no
 			}
 		}
 		trigger = {
@@ -9463,44 +9443,83 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				421 = {
+				379 = {
 					owned_by = root
 					development = 30
 					num_of_times_expanded_infrastructure = 2
-					has_production_building_trigger = yes
+					religion = orthodox
+					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
-					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = holy_city_jerusalem
+						tier = 2
+					}
+				}
+				2313 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					religion = orthodox
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
 					has_road_building_trigger = yes
 					has_fort_building_trigger = yes
 				}
 			}
 		}
 		effect = {
-			421 = {
-				remove_province_modifier = mop_satrapeia_commune
+			2313 = {
+				center_of_trade = 1
 				add_province_modifier = {
-					name = mop_great_satrapeia_commune
+					name = wallachia_patriarchate_of_antiohia
 					duration = -1
 				}
 			}
-			custom_tooltip = naval_reformer_galley_buff_tt
-			set_country_flag = naval_reformer_galley_buff
+			set_country_flag = patriarch_of_antioch
+			custom_tooltip = patriarch_of_antioch_bonus_tooltip
 			custom_tooltip = AB_EMPTY
+			379 = {
+				center_of_trade = 1
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_ierusalim
+					duration = -1
+				}
+			}
+			set_country_flag = patriarch_of_jerusalem
+			custom_tooltip = patriarch_of_jerusalem_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_suryah_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Ierusalim"
+				location = 151
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.2
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
 			add_faction_influence = {
 				faction = exemplarists_faction
-				influence = 10
+				influence = 20
 			}
 		}
 	}
-	mop_persia = {
-		icon = per_reborn_in_fire
+	mop_egypt = {
+		icon = gfx_wal_conquer_egypt
 		position = 26
 		required_missions = {
-			mop_bagdad
-			mop_satrapeia
+			mop_reestablish_the_patriarchs
 		}
 		provinces_to_highlight = {
-			region = persia_region
+			region = egypt_region
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = root
@@ -9515,7 +9534,7 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				persia_region = {
+				egypt_region = {
 					type = all
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
 						who = root
@@ -9524,19 +9543,20 @@ ab_mop_5 = {
 			}
 		}
 		effect = {
-			431 = {
+			358 = {
 				remove_core = owner
 				add_core = root
 				cede_province = root
 				add_province_modifier = {
-					name = mop_portul_abas_commune
+					name = mop_alexandria_commune
 					duration = -1
 				}
 			}
-			custom_tooltip = mountain_dev_20_percent_extra_dev_tt
-			set_country_flag = mountain_dev_20_percent_extra_dev
-			custom_tooltip = highlands_dev_20_percent_extra_dev_tt
-			set_country_flag = highlands_dev_20_percent_extra_dev
+			custom_tooltip = unlock_egyptian_grain_export_tt
+			set_country_flag = unlock_egyptian_grain_export
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = marsh_dev_20_percent_extra_dev_tt
+			set_country_flag = marsh_dev_20_percent_extra_dev
 			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 20
@@ -9547,17 +9567,20 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_portul_abas = {
-		icon = mission_dominate_persian_gulf
+	mop_alexandria_patriarch = {
+		icon = promote_the_patriarchate
 		position = 27
 		required_missions = {
-			mop_persia
+			mop_egypt
 		}
 		provinces_to_highlight = {
-			province_id = 431
+			province_id = 358
 			OR = {
 				NOT = {
 					owned_by = root
+				}
+				NOT = {
+					religion = orthodox
 				}
 				NOT = {
 					development = 30
@@ -9568,18 +9591,10 @@ ab_mop_5 = {
 				NOT = {
 					province_has_center_of_trade_of_level = 2
 				}
+				has_tax_building_trigger = no
 				has_trade_building_trigger = no
-				has_dock_building_trigger = no
-				has_shipyard_building_trigger = no
-				has_coast_defense_building_trigger = no
 				has_road_building_trigger = no
 				has_fort_building_trigger = no
-				NOT = {
-					has_great_project = {
-						type = shapurshahr
-						tier = 2
-					}
-				}
 			}
 		}
 		trigger = {
@@ -9590,57 +9605,42 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				431 = {
+				358 = {
 					owned_by = root
 					development = 30
+					religion = orthodox
 					num_of_times_expanded_infrastructure = 2
 					province_has_center_of_trade_of_level = 2
+					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
-					has_coast_defense_building_trigger = yes
 					has_road_building_trigger = yes
 					has_fort_building_trigger = yes
-					has_great_project = {
-						type = shapurshahr
-						tier = 2
-					}
 				}
 			}
 		}
 		effect = {
-			431 = {
-				remove_province_modifier = mop_portul_abas_commune
+			358 = {
+				upgrade_tax_building = yes
 				add_province_modifier = {
-					name = mop_great_portul_abas_commune
+					name = wallachia_patriarchate_of_alexandria
 					duration = -1
 				}
 			}
-			if = {
-				limit = {
-					431 = {
-						has_great_project = {
-							type = shapurshahr
-							tier = 3
-						}
-					}
-				}
-				add_treasury = 3000
-			}
-			else = {
-				431 = {
-					add_great_project_tier = {
-						type = shapurshahr
-						tier = 1
-					}
-				}
+			set_country_flag = patriarch_of_alexandria
+			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_misr_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Alexandria"
+				location = 358
 			}
 			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = mop_explore_indian_ocean
-				duration = 10950
-			}
-			add_mercantilism = 2
+			add_patriarch_authority = 0.1
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
