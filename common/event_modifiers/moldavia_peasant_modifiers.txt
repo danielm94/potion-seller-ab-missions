@@ -1122,3 +1122,8 @@ mop_agadir_system = {
 	global_supply_limit_modifier = 0.25
 	development_cost_modifier = -0.025
 }
+
+mop_march_to_paris = {
+	siege_ability = 0.2
+	artillery_barrage_cost = -0.25
+}

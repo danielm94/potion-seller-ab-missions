@@ -3380,7 +3380,6 @@ ab_mop_2 = {
 			}
 		}
 	}
-	#Todo finish this later.
 	mop_southern_france = {
 		icon = mission_invade_occitania
 		position = 37
@@ -3463,6 +3462,13 @@ ab_mop_2 = {
 					name = mop_bordeaux_commune
 					duration = -1
 				}
+			}
+			add_country_modifier = {
+				name = mop_march_to_paris
+				duration = 7300
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
 			}
 			change_peasant_zeal = {
 				value = 15
