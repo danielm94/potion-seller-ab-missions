@@ -263,5 +263,7 @@
  desc_mop_federation_standard_time: "We have severed the link between labor and the sun. By equipping our overseers and officers with Nürnberg chronometers, we enforce a unified tempo across the Federation. The state now operates with the tireless precision of a clockwork mechanism."
  mop_successful_defenestration: "Successful Defenestration"
  desc_mop_successful_defenestration: "The target has been sucessfully defenestrated, and as a result the enemy hierarchy has been physically dismantled. While they scramble to determine who is in charge, their defenses are disorganized and their response times sluggish. We strike now."
- mop_hamburg_commune: "The Free Port of Hamburg"
+ mop_hamburg_commune: "The Hamburg Commune"
  desc_mop_hamburg_commune: "The patrician families have been exiled and the keys to the city given to the dockworkers' guilds. The immense wealth of the Elbe now flows directly into the Federation's coffers, bypassing the greedy hands of the merchant princes."
+ mop_frankfurt_commune: "The Frankfurt Commune"
+ desc_mop_frankfurt_commune: "Frankfurt now hosts the permanent council of the Western Communes. This assembly harmonizes the laws of the Rhineland with the Federal Constitution, ensuring that the wealth of the river flows efficiently and that religious squabbles are settled by debate, not swords."

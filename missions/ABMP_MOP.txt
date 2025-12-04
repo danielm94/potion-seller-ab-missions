@@ -5775,6 +5775,99 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_rhine = {
+		icon = rhineland_conquest
+		position = 34
+		required_missions = {
+			mop_south_germany
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hesse_area
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = westphalia_area
+				area = north_westphalia_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				hesse_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				north_rhine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lower_rhineland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				westphalia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				north_westphalia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_hessian_bonus_tt
+			set_country_flag = integrated_commune_hessian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_hannoverian_bonus_tt
+			set_country_flag = integrated_commune_hannoverian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			1876 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_frankfurt_commune
+					duration = -1
+				}
+			}
+			country_event = {
+				id = moldavia_peasant_events.11
+			}
+			custom_tooltip = frankfurt_bank_event_eco_ideas_tt
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = theologian_no_religion_penalty_tt
+			set_country_flag = theologian_no_religion_penalty
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
 }
 
 ab_mop_4 = {

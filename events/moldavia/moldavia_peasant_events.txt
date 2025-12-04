@@ -656,3 +656,78 @@ country_event = {
 		}
 	}
 }
+
+#National Bank of Frankfurt
+country_event = {
+	id = moldavia_peasant_events.11
+	title = moldavia_peasant_events.11.t
+	desc = moldavia_peasant_events.11.d
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			NOT = {
+				full_idea_group = economic_ideas
+			}
+		}
+		name = "EVTOPTA4042"
+		add_inflation = -5
+		add_stability_or_adm_power = yes
+		add_years_of_income = 1
+		add_country_modifier = {
+			name = "national_bank_inflation"
+			duration = 18250
+		}
+		set_country_flag = bank
+	}
+	option = {
+		trigger = {
+			full_idea_group = economic_ideas
+		}
+		highlight = yes
+		name = "EVTOPTA4042"
+		add_inflation = -7.5
+		add_stability_or_adm_power = yes
+		add_adm_power = 50
+		add_years_of_income = 1.5
+		add_country_modifier = {
+			name = "national_bank_inflation"
+			duration = 27375
+		}
+		set_country_flag = bank
+	}
+	option = {
+		name = "EVTOPTB4042"
+		trigger = {
+			NOT = {
+				full_idea_group = economic_ideas
+			}
+		}
+		ai_chance = { factor = 5 }
+		add_inflation = -5
+		add_stability_or_adm_power = yes
+		add_years_of_income = 1
+		add_country_modifier = {
+			name = "national_bank_interest"
+			duration = 18250
+		}
+		set_country_flag = bank
+	}
+	option = {
+		name = "EVTOPTB4042"
+		trigger = {
+			full_idea_group = economic_ideas
+		}
+		highlight = yes
+		ai_chance = { factor = 5 }
+		add_inflation = -7.5
+		add_stability_or_adm_power = yes
+		add_adm_power = 50
+		add_years_of_income = 1.5
+		add_country_modifier = {
+			name = "national_bank_interest"
+			duration = 27375
+		}
+		set_country_flag = bank
+	}
+}

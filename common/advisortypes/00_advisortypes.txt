@@ -750,6 +750,20 @@ theologian = {
 			yearly_corruption = -0.1
 		}
 	}	
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = theologian_no_religion_penalty
+				employed_advisor = {
+					type = theologian
+    			    skill = 5
+				}
+			}
+		}
+		modifier = {
+			no_religion_penalty = yes
+		}
+	}	
 	# ]]]
 	
 	chance = {

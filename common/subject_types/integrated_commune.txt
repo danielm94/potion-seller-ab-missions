@@ -534,4 +534,24 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_hessian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_hessian_bonus_flag
+			}
+			culture = hessian
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_hannoverian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_hannoverian_bonus_flag
+			}
+			culture = hannoverian
+			total_development = 450
+		}
+	}
 }
