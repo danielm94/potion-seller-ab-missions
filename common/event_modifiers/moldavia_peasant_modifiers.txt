@@ -1108,3 +1108,17 @@ mop_demnat_commune = {
 	envoy_travel_time = -0.1
 	picture = "commune_province_modifier_icon"
 }
+
+mop_great_demnat_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	envoy_travel_time = -0.2
+	picture = "commune_province_modifier_icon"
+}
+
+mop_agadir_system = {
+	global_supply_limit_modifier = 0.25
+	development_cost_modifier = -0.025
+}
