@@ -1248,6 +1248,13 @@ architect = {
 
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 5
+			owner = {
+				has_country_flag = exemplarists_architect_boost
+				faction_in_power = exemplarists_faction
+			}
+		}
 	}
 	
 	ai_will_do = {

@@ -5851,11 +5851,6 @@ ab_mop_3 = {
 					duration = -1
 				}
 			}
-			country_event = {
-				id = moldavia_peasant_events.11
-			}
-			custom_tooltip = frankfurt_bank_event_eco_ideas_tt
-			custom_tooltip = AB_EMPTY
 			custom_tooltip = theologian_no_religion_penalty_tt
 			set_country_flag = theologian_no_religion_penalty
 			custom_tooltip = AB_EMPTY
@@ -5874,6 +5869,86 @@ ab_mop_3 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+		}
+	}
+	mop_frankfurt = {
+		icon = GFX_mop_frankfurt
+		position = 35
+		required_missions = {
+			mop_rhine
+		}
+		provinces_to_highlight = {
+			province_id = 1876
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = frankfurtgp
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1876 = {
+					development = 30
+					owned_by = root
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_trade_building_trigger = yes
+					has_courthouse_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = frankfurtgp
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			1876 = {
+				remove_province_modifier = mop_frankfurt_commune
+				add_province_modifier = {
+					name = mop_great_frankfurt_commune
+					duration = -1
+				}
+			}
+			country_event = {
+				id = moldavia_peasant_events.11
+			}
+			custom_tooltip = frankfurt_bank_event_eco_ideas_tt
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = exemplarists_architect_boost_tt
+			set_country_flag = exemplarists_architect_boost
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}

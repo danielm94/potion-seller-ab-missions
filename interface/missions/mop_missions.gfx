@@ -104,4 +104,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_nuremberg.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_frankfurt"
+		texturefile = "gfx/interface/missions/mop/mop_frankfurt.dds"
+		loadType = "INGAME"
+	}
 }
