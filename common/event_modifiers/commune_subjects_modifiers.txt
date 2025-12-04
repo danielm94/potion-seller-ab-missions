@@ -288,11 +288,11 @@ integrated_commune_german_bonus_5 = {
 }
 
 integrated_commune_cosmopolitan_french_bonus = {
-	land_morale = 0.05
+	land_morale = 0.075
 }
 
 integrated_commune_gascon_bonus = {
-	leader_land_fire = 1
+	infantry_fire = 0.1
 }
 
 integrated_commune_occitain_bonus = {

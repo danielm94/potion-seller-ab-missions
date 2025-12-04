@@ -1073,3 +1073,13 @@ mop_freude = {
 	tolerance_own = 2
 	tolerance_heretic = 2
 }
+
+mop_bordeaux_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	leader_land_fire = 1
+	picture = "commune_province_modifier_icon"
+}
+
