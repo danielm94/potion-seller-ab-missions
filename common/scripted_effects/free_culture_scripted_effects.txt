@@ -1,0 +1,1212 @@
+accept_all_german_cultures = {
+	custom_tooltip = accept_all_german_cultures_tt
+	custom_tooltip = accept_all_cultures_no_slot_tt
+	[[dip_reward]
+	custom_tooltip = accept_all_cultures_dip_reward_tt
+	]
+	hidden_effect = {
+		add_accepted_culture_or_dip_power_stated = {
+			culture = prussian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = german_culture_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = Bohemian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = lower_saxon_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = hannoverian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = germanic_silesian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = baltic_german_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = hessian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = gothic_new_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = markish_culture_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = saxon_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = franconian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = swabian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = swiss_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = bavarian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = austrian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = Outremer_united_germanic
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = english_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = american_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = scottish_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = dutch_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = Afrikaans_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = flemish_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = frisian_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = prussian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = german_culture
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = Bohemian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = lower_saxon
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = hannoverian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = markish_culture
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = germanic_silesian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = baltic_german
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = hessian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = gothic_new
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = saxon
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = franconian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = swabian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = swiss
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = bavarian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = austrian
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+		add_accepted_culture_or_dip_power_stated = {
+			culture = Outremer_germanic
+			[[dip_reward]
+			dip_reward = $dip_reward$
+			]
+			free = yes
+		}
+	}
+}
+
+accept_all_german_cultures_in_provinces = {
+	custom_tooltip = accept_all_german_cultures_in_provinces_tt
+	custom_tooltip = accept_all_cultures_no_slot_tt
+	[[dip_reward]
+	custom_tooltip = accept_all_cultures_dip_reward_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				accepted_culture = prussian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = german_culture_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = Bohemian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = lower_saxon_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = hannoverian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = germanic_silesian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = baltic_german_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = hessian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = gothic_new_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = markish_culture_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = saxon_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = franconian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = swabian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = swiss_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = bavarian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = austrian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = Outremer_united_germanic
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = english_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = american_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = scottish_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = dutch_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = Afrikaans_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = flemish_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = frisian_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = prussian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = german_culture
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = Bohemian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = lower_saxon
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = hannoverian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = markish_culture
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = germanic_silesian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = baltic_german
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = hessian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = gothic_new
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = saxon
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = franconian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = swabian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = swiss
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = bavarian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = austrian
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				accepted_culture = Outremer_germanic
+			}
+			add_dip_power = 100
+		}
+	}
+	]
+	hidden_effect = {
+		every_owned_province = {
+			if = {
+				limit = {
+					culture = prussian_new
+					owner = {
+						NOT = {
+							accepted_culture = prussian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = prussian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = german_culture_new
+					owner = {
+						NOT = {
+							accepted_culture = german_culture_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = german_culture_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = Bohemian_new
+					owner = {
+						NOT = {
+							accepted_culture = Bohemian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = Bohemian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = lower_saxon_new
+					owner = {
+						NOT = {
+							accepted_culture = lower_saxon_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = lower_saxon_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = hannoverian_new
+					owner = {
+						NOT = {
+							accepted_culture = hannoverian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = hannoverian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = germanic_silesian_new
+					owner = {
+						NOT = {
+							accepted_culture = germanic_silesian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = germanic_silesian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = baltic_german_new
+					owner = {
+						NOT = {
+							accepted_culture = baltic_german_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = baltic_german_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = hessian_new
+					owner = {
+						NOT = {
+							accepted_culture = hessian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = hessian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = gothic_new_new
+					owner = {
+						NOT = {
+							accepted_culture = gothic_new_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = gothic_new_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = markish_culture_new
+					owner = {
+						NOT = {
+							accepted_culture = markish_culture_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = markish_culture_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = saxon_new
+					owner = {
+						NOT = {
+							accepted_culture = saxon_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = saxon_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = franconian_new
+					owner = {
+						NOT = {
+							accepted_culture = franconian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = franconian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = swabian_new
+					owner = {
+						NOT = {
+							accepted_culture = swabian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = swabian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = swiss_new
+					owner = {
+						NOT = {
+							accepted_culture = swiss_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = swiss_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = bavarian_new
+					owner = {
+						NOT = {
+							accepted_culture = bavarian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = bavarian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = austrian_new
+					owner = {
+						NOT = {
+							accepted_culture = austrian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = austrian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = Outremer_united_germanic
+					owner = {
+						NOT = {
+							accepted_culture = Outremer_united_germanic
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = Outremer_united_germanic
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = english_new
+					owner = {
+						NOT = {
+							accepted_culture = english_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = english_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = american_new
+					owner = {
+						NOT = {
+							accepted_culture = american_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = american_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = scottish_new
+					owner = {
+						NOT = {
+							accepted_culture = scottish_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = scottish_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = dutch_new
+					owner = {
+						NOT = {
+							accepted_culture = dutch_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = dutch_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = Afrikaans_new
+					owner = {
+						NOT = {
+							accepted_culture = Afrikaans_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = Afrikaans_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = flemish_new
+					owner = {
+						NOT = {
+							accepted_culture = flemish_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = flemish_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = frisian_new
+					owner = {
+						NOT = {
+							accepted_culture = frisian_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = frisian_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = prussian
+					owner = {
+						NOT = {
+							accepted_culture = prussian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = prussian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = german_culture
+					owner = {
+						NOT = {
+							accepted_culture = german_culture
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = german_culture
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = Bohemian
+					owner = {
+						NOT = {
+							accepted_culture = Bohemian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = Bohemian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = lower_saxon
+					owner = {
+						NOT = {
+							accepted_culture = lower_saxon
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = lower_saxon
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = hannoverian
+					owner = {
+						NOT = {
+							accepted_culture = hannoverian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = hannoverian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = markish_culture
+					owner = {
+						NOT = {
+							accepted_culture = markish_culture
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = markish_culture
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = germanic_silesian
+					owner = {
+						NOT = {
+							accepted_culture = germanic_silesian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = germanic_silesian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = baltic_german
+					owner = {
+						NOT = {
+							accepted_culture = baltic_german
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = baltic_german
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = hessian
+					owner = {
+						NOT = {
+							accepted_culture = hessian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = hessian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = gothic_new
+					owner = {
+						NOT = {
+							accepted_culture = gothic_new
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = gothic_new
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = saxon
+					owner = {
+						NOT = {
+							accepted_culture = saxon
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = saxon
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = franconian
+					owner = {
+						NOT = {
+							accepted_culture = franconian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = franconian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = swabian
+					owner = {
+						NOT = {
+							accepted_culture = swabian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = swabian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = swiss
+					owner = {
+						NOT = {
+							accepted_culture = swiss
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = swiss
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = bavarian
+					owner = {
+						NOT = {
+							accepted_culture = bavarian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = bavarian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = austrian
+					owner = {
+						NOT = {
+							accepted_culture = austrian
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = austrian
+						free = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					culture = Outremer_germanic
+					owner = {
+						NOT = {
+							accepted_culture = Outremer_germanic
+						}
+					}
+				}
+				owner = {
+					add_accepted_culture_or_dip_power_stated = {
+						culture = Outremer_germanic
+						free = yes
+					}
+				}
+			}
+		}
+	}
+}
