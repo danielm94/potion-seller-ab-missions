@@ -44,4 +44,373 @@ on_culture_demoted = {
 		}
 		remove_country_modifier = free_slot_for_ruthenian
 	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = prussian_new
+			}
+			has_country_modifier = free_slot_for_prussian_new
+		}
+		remove_country_modifier = free_slot_for_prussian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = german_culture_new
+			}
+			has_country_modifier = free_slot_for_german_culture_new
+		}
+		remove_country_modifier = free_slot_for_german_culture_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = Bohemian_new
+			}
+			has_country_modifier = free_slot_for_Bohemian_new
+		}
+		remove_country_modifier = free_slot_for_Bohemian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = lower_saxon_new
+			}
+			has_country_modifier = free_slot_for_lower_saxon_new
+		}
+		remove_country_modifier = free_slot_for_lower_saxon_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = hannoverian_new
+			}
+			has_country_modifier = free_slot_for_hannoverian_new
+		}
+		remove_country_modifier = free_slot_for_hannoverian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = germanic_silesian_new
+			}
+			has_country_modifier = free_slot_for_germanic_silesian_new
+		}
+		remove_country_modifier = free_slot_for_germanic_silesian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = baltic_german_new
+			}
+			has_country_modifier = free_slot_for_baltic_german_new
+		}
+		remove_country_modifier = free_slot_for_baltic_german_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = hessian_new
+			}
+			has_country_modifier = free_slot_for_hessian_new
+		}
+		remove_country_modifier = free_slot_for_hessian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = gothic_new_new
+			}
+			has_country_modifier = free_slot_for_gothic_new_new
+		}
+		remove_country_modifier = free_slot_for_gothic_new_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = markish_culture_new
+			}
+			has_country_modifier = free_slot_for_markish_culture_new
+		}
+		remove_country_modifier = free_slot_for_markish_culture_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = saxon_new
+			}
+			has_country_modifier = free_slot_for_saxon_new
+		}
+		remove_country_modifier = free_slot_for_saxon_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = franconian_new
+			}
+			has_country_modifier = free_slot_for_franconian_new
+		}
+		remove_country_modifier = free_slot_for_franconian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = swabian_new
+			}
+			has_country_modifier = free_slot_for_swabian_new
+		}
+		remove_country_modifier = free_slot_for_swabian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = swiss_new
+			}
+			has_country_modifier = free_slot_for_swiss_new
+		}
+		remove_country_modifier = free_slot_for_swiss_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = bavarian_new
+			}
+			has_country_modifier = free_slot_for_bavarian_new
+		}
+		remove_country_modifier = free_slot_for_bavarian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = austrian_new
+			}
+			has_country_modifier = free_slot_for_austrian_new
+		}
+		remove_country_modifier = free_slot_for_austrian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = Outremer_united_germanic
+			}
+			has_country_modifier = free_slot_for_Outremer_united_germanic
+		}
+		remove_country_modifier = free_slot_for_Outremer_united_germanic
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = english_new
+			}
+			has_country_modifier = free_slot_for_english_new
+		}
+		remove_country_modifier = free_slot_for_english_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = american_new
+			}
+			has_country_modifier = free_slot_for_american_new
+		}
+		remove_country_modifier = free_slot_for_american_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = scottish_new
+			}
+			has_country_modifier = free_slot_for_scottish_new
+		}
+		remove_country_modifier = free_slot_for_scottish_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = dutch_new
+			}
+			has_country_modifier = free_slot_for_dutch_new
+		}
+		remove_country_modifier = free_slot_for_dutch_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = Afrikaans_new
+			}
+			has_country_modifier = free_slot_for_Afrikaans_new
+		}
+		remove_country_modifier = free_slot_for_Afrikaans_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = flemish_new
+			}
+			has_country_modifier = free_slot_for_flemish_new
+		}
+		remove_country_modifier = free_slot_for_flemish_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = frisian_new
+			}
+			has_country_modifier = free_slot_for_frisian_new
+		}
+		remove_country_modifier = free_slot_for_frisian_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = prussian
+			}
+			has_country_modifier = free_slot_for_prussian
+		}
+		remove_country_modifier = free_slot_for_prussian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = german_culture
+			}
+			has_country_modifier = free_slot_for_german_culture
+		}
+		remove_country_modifier = free_slot_for_german_culture
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = Bohemian
+			}
+			has_country_modifier = free_slot_for_Bohemian
+		}
+		remove_country_modifier = free_slot_for_Bohemian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = lower_saxon
+			}
+			has_country_modifier = free_slot_for_lower_saxon
+		}
+		remove_country_modifier = free_slot_for_lower_saxon
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = hannoverian
+			}
+			has_country_modifier = free_slot_for_hannoverian
+		}
+		remove_country_modifier = free_slot_for_hannoverian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = markish_culture
+			}
+			has_country_modifier = free_slot_for_markish_culture
+		}
+		remove_country_modifier = free_slot_for_markish_culture
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = germanic_silesian
+			}
+			has_country_modifier = free_slot_for_germanic_silesian
+		}
+		remove_country_modifier = free_slot_for_germanic_silesian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = baltic_german
+			}
+			has_country_modifier = free_slot_for_baltic_german
+		}
+		remove_country_modifier = free_slot_for_baltic_german
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = hessian
+			}
+			has_country_modifier = free_slot_for_hessian
+		}
+		remove_country_modifier = free_slot_for_hessian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = gothic_new
+			}
+			has_country_modifier = free_slot_for_gothic_new
+		}
+		remove_country_modifier = free_slot_for_gothic_new
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = saxon
+			}
+			has_country_modifier = free_slot_for_saxon
+		}
+		remove_country_modifier = free_slot_for_saxon
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = franconian
+			}
+			has_country_modifier = free_slot_for_franconian
+		}
+		remove_country_modifier = free_slot_for_franconian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = swabian
+			}
+			has_country_modifier = free_slot_for_swabian
+		}
+		remove_country_modifier = free_slot_for_swabian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = swiss
+			}
+			has_country_modifier = free_slot_for_swiss
+		}
+		remove_country_modifier = free_slot_for_swiss
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = bavarian
+			}
+			has_country_modifier = free_slot_for_bavarian
+		}
+		remove_country_modifier = free_slot_for_bavarian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = austrian
+			}
+			has_country_modifier = free_slot_for_austrian
+		}
+		remove_country_modifier = free_slot_for_austrian
+	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = Outremer_germanic
+			}
+			has_country_modifier = free_slot_for_Outremer_germanic
+		}
+		remove_country_modifier = free_slot_for_Outremer_germanic
+	}
 }

@@ -15,3 +15,167 @@ free_slot_for_english_new = {
 free_slot_for_ruthenian = {
 	num_accepted_cultures = 1
 }
+
+free_slot_for_prussian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_german_culture_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_Bohemian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_lower_saxon_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_hannoverian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_germanic_silesian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_baltic_german_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_hessian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_gothic_new_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_markish_culture_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_saxon_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_franconian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_swabian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_swiss_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_bavarian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_austrian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_Outremer_united_germanic = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_english_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_american_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_scottish_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_dutch_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_Afrikaans_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_flemish_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_frisian_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_prussian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_german_culture = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_Bohemian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_lower_saxon = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_hannoverian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_markish_culture = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_germanic_silesian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_baltic_german = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_hessian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_gothic_new = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_saxon = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_franconian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_swabian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_swiss = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_bavarian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_austrian = {
+	num_accepted_cultures = 1
+}
+
+free_slot_for_Outremer_germanic = {
+	num_accepted_cultures = 1
+}
