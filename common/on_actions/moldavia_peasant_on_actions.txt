@@ -457,6 +457,28 @@ on_dependency_gained = {
 				override_country_name = JAP_commune
 				add_government_reform = ikko_ikki_republic_reform
 			}
+			else_if = {
+				limit = { tag = ROP}
+				if = {
+					limit = {
+						ROP = {
+							NOT = {
+								government = republic
+							}
+						}
+					}
+					ROP = {
+						change_government = republic
+						add_government_reform = peasants_republic
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = GER
+				}
+				override_country_name = GER_commune
+			}
 		}
 	}
 }

@@ -1048,3 +1048,9 @@ mop_frankfurt_commune = {
 	placed_merchant_power = 3
 	picture = "commune_province_modifier_icon"
 }
+
+mop_freude = {
+	prestige = 1
+	tolerance_own = 2
+	tolerance_heretic = 2
+}

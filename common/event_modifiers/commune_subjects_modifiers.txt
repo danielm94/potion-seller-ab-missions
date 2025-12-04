@@ -268,7 +268,7 @@ integrated_commune_hessian_bonus = {
 }
 
 integrated_commune_german_bonus_1 = {
-	min_autonomy = -5
+	global_autonomy = -0.05
 }
 integrated_commune_german_bonus_2 = {
 	discipline = 0.025

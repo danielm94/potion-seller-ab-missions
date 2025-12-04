@@ -120,6 +120,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = GER_ideas_list
+		trigger = {
+			FROM = {
+				tag = GER
+			}
+		}
+	}
 }
 
 defined_text = {
