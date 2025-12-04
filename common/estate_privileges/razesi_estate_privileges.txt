@@ -976,6 +976,14 @@ estate_razesi_internationalism = {
 			max_absolutism = 2
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = internationalist_mandate_buff
+		}
+		modifier = {
+			ship_trade_power_modifier = 0.2
+		}
+	}
 	loyalty = 0.05
 	influence = 0.15
 	is_valid = {

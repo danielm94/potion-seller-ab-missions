@@ -9788,4 +9788,92 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_hamburg = {
+		icon = mission_heart_of_the_hansa
+		position = 35
+		required_missions = {
+			mop_saxons
+		}
+		provinces_to_highlight = {
+			province_id = 44
+			OR = {
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = hamburg
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				44 = {
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = hamburg
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			44 = {
+				remove_province_modifier = mop_hamburg_commune
+				add_province_modifier = {
+					name = mop_great_hamburg_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = internationalist_mandate_buff_tt
+			set_country_flag = internationalist_mandate_buff
+			custom_tooltip = AB_EMPTY
+			44 = {
+				add_unit_construction = {
+					type = heavy_ship
+					amount = 5
+					speed = 0.1
+					cost = 0
+				}
+				add_unit_construction = {
+					type = light_ship
+					amount = 10
+					speed = 0.1
+					cost = 0
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 }
