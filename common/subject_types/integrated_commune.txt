@@ -619,4 +619,74 @@ integrated_commune = {
 			total_development = 2500
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_cosmopolitan_french_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_cosmopolitan_french_bonus_flag
+			}
+			culture = cosmopolitan_french
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_gascon_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_gascon_bonus_flag
+			}
+			culture = gascon
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_occitain_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_occitain_bonus_flag
+			}
+			culture = occitain
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_burgundian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_burgundian_bonus_flag
+			}
+			culture = burgundian
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_wallonian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_wallonian_bonus_flag
+			}
+			culture = wallonian
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_breton_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_breton_bonus_flag
+			}
+			culture = breton
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_normand_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_normand_bonus_flag
+			}
+			culture = normand
+			total_development = 400
+		}
+	}
 }

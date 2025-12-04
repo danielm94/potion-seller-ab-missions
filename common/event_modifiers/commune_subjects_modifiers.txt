@@ -270,15 +270,47 @@ integrated_commune_hessian_bonus = {
 integrated_commune_german_bonus_1 = {
 	global_autonomy = -0.05
 }
+
 integrated_commune_german_bonus_2 = {
 	discipline = 0.025
 }
+
 integrated_commune_german_bonus_3 = {
 	production_efficiency = 0.05
 }
+
 integrated_commune_german_bonus_4 = {
 	prestige = 0.5
 }
+
 integrated_commune_german_bonus_5 = {
 	administrative_efficiency = 0.05
+}
+
+integrated_commune_cosmopolitan_french_bonus = {
+	land_morale = 0.05
+}
+
+integrated_commune_gascon_bonus = {
+	leader_land_fire = 1
+}
+
+integrated_commune_occitain_bonus = {
+	trade_efficiency = 0.05
+}
+
+integrated_commune_burgundian_bonus = {
+	cavalry_flanking = 0.1
+}
+
+integrated_commune_wallonian_bonus = {
+	artillery_cost = -0.1
+}
+
+integrated_commune_breton_bonus = {
+	heavy_ship_cost = -0.1
+}
+
+integrated_commune_normand_bonus = {
+	global_tax_modifier = 0.1
 }
