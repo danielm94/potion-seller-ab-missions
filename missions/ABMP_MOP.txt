@@ -7495,6 +7495,86 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_alexandria_patriarch = {
+		icon = promote_the_patriarchate
+		position = 28
+		required_missions = {
+			mop_egypt
+		}
+		provinces_to_highlight = {
+			province_id = 358
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				358 = {
+					owned_by = root
+					development = 30
+					religion = orthodox
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			358 = {
+				upgrade_tax_building = yes
+				add_province_modifier = {
+					name = wallachia_patriarchate_of_alexandria
+					duration = -1
+				}
+			}
+			set_country_flag = patriarch_of_alexandria
+			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_misr_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Alexandria"
+				location = 358
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 	mop_austria = {
 		icon = prosper_in_piedmont
 		position = 31
@@ -9514,7 +9594,7 @@ ab_mop_5 = {
 	}
 	mop_egypt = {
 		icon = gfx_wal_conquer_egypt
-		position = 26
+		position = 27
 		required_missions = {
 			mop_reestablish_the_patriarchs
 		}
@@ -9567,34 +9647,26 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_alexandria_patriarch = {
-		icon = promote_the_patriarchate
-		position = 27
+	mop_tunisia = {
+		icon = mission_conquer_tunisia
+		position = 28
 		required_missions = {
 			mop_egypt
 		}
 		provinces_to_highlight = {
-			province_id = 358
 			OR = {
-				NOT = {
-					owned_by = root
+				area = tunisia_area
+				area = djerba_area
+				area = north_saharan_area
+				area = tripolitania_area
+				area = fezzan_area
+				area = kabylia_area
+				area = ouled_nail_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
 				}
-				NOT = {
-					religion = orthodox
-				}
-				NOT = {
-					development = 30
-				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 2
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_tax_building_trigger = no
-				has_trade_building_trigger = no
-				has_road_building_trigger = no
-				has_fort_building_trigger = no
 			}
 		}
 		trigger = {
@@ -9605,44 +9677,77 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				358 = {
-					owned_by = root
-					development = 30
-					religion = orthodox
-					num_of_times_expanded_infrastructure = 2
-					province_has_center_of_trade_of_level = 2
-					has_tax_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
+				tunisia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				djerba_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				north_saharan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				tripolitania_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				fezzan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				kabylia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				ouled_nail_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 			}
 		}
 		effect = {
-			358 = {
-				upgrade_tax_building = yes
+			341 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
 				add_province_modifier = {
-					name = wallachia_patriarchate_of_alexandria
+					name = mop_tunis_commune
 					duration = -1
 				}
 			}
-			set_country_flag = patriarch_of_alexandria
-			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = patriarch
-				skill = 3
-				cost_multiplier = 0.25
-				culture = al_misr_arabic
-				religion = orthodox
-				age = 40
-				name = "The Patriarch of Alexandria"
-				location = 358
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = 10950
 			}
-			custom_tooltip = AB_EMPTY
-			add_patriarch_authority = 0.1
+			define_admiral = {
+				shock = 4
+				fire = 4
+				manuever = 4
+				siege = 4
+			}
+			add_yearly_sailors = 1
+			add_navy_tradition = 15
+			change_peasant_zeal = {
+				value = 10
+			}
 			add_faction_influence = {
-				faction = exemplarists_faction
+				faction = abolitionists_faction
 				influence = 10
 			}
 		}

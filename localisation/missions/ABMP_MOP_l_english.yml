@@ -408,3 +408,5 @@
  integrated_commune_wallonian_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YWaloon§! culture will grant us §G-10.0%§! Artillery Cost if they have at least §Y400§! total development."
  integrated_commune_breton_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YBreton§! culture will grant us §G-10.0%§! Heavy Ship Cost if they have at least §Y400§! total development."
  integrated_commune_normand_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YNorman§! culture will grant us §G+10.0%§! Global Tax Modifier if they have at least §Y400§! total development."
+ mop_tunisia_title: "The Barbary Coast"
+ mop_tunisia_desc: "For centuries, the corsairs of Tunis have preyed upon the weak. We shall storm their citadels and break the chains of their galley slaves. By seizing this coast, we transform a nest of pirates into a shield for our merchant marine."
