@@ -410,3 +410,5 @@
  integrated_commune_normand_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YNorman§! culture will grant us §G+10.0%§! Global Tax Modifier if they have at least §Y400§! total development."
  mop_tunisia_title: "The Barbary Coast"
  mop_tunisia_desc: "For centuries, the corsairs of Tunis have preyed upon the weak. We shall storm their citadels and break the chains of their galley slaves. By seizing this coast, we transform a nest of pirates into a shield for our merchant marine."
+ mop_dev_tunisia_title: "The Pearl of the Maghreb"
+ mop_dev_tunisia_desc: "Tunis must be rebuilt into a modern metropolis, eclipsing its Carthaginian ancestors. By expanding the port and fortifying the city, we create a secure base of operations. From this stronghold, we shall project our power southwards, seizing the ancient salt routes of the Sahara and bringing the desert itself under Federal administration."
