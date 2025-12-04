@@ -9770,7 +9770,7 @@ ab_mop_5 = {
 				type = trader
 				culture = lower_saxon
 				skill = 3
-				cost_multiplier = -0.25
+				cost_multiplier = 0.25
 				location = 44
 			}
 			custom_tooltip = AB_EMPTY
