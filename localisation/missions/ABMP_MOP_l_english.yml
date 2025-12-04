@@ -424,3 +424,6 @@
  mop_low_countries_title: "Liberate the Lowlands"
  mop_low_countries_desc: "The wealth of the Low Countries is legendary, built on the backs of weavers and sailors but hoarded by merchant princes. We must sweep through the polders and seize the great ports. By nationalizing the Dutch trade network, we ensure the Revolution will never want for gold."
  unlock_UNN_commune_diplomatic_actions_tt: "Unlock §YCommune Interactions§!£integrated_commune£ that allow you to establish @UNN §YBatavia§! in one of your £integrated_commune£§YIntegrated Communes§! that is of §YDutch§!, §YFlemish§!, or §YFrisian§! culture. Once @UNN §YBatavia§! is established, you will be able to transfer §YDutch§!, §YFlemish§!, and §YFrisian§! provinces, as well as provinces in the §YLow Countries Region§!, from your other £integrated_commune£§YIntegrated Communes§! to @UNN §YBatavia§!."
+ isolationist_mandate_buff_tt: "The §YIsolationist Mandate§! estate privilege will now grant us §G-50.0%§! Expand Infrastructure Cost Modifier."
+ mop_amsterdam_title: "The World's Warehouse"
+ mop_amsterdam_desc: "Amsterdam must rise as the supreme model of urban planning. We shall expand the canal network and drain the surrounding marshlands until the city stands as a monument to human ingenuity. The mastery of nature demonstrated here will serve as a blueprint for the entire Federation."

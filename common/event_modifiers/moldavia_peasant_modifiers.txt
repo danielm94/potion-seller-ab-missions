@@ -1091,6 +1091,7 @@ mop_tunis_commune = {
 	galley_number_of_cannons_modifier = 0.1
 	picture = "commune_province_modifier_icon"
 }
+
 mop_great_tunis_commune = {
 	min_local_autonomy = 15
 	local_governing_cost = -1
@@ -1134,5 +1135,14 @@ mop_amsterdam_commune = {
 	province_trade_power_value = 10
 	local_development_cost = -0.1
 	development_cost = -0.05
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_amsterdam_commune = {
+	min_local_autonomy = 10
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.2
+	development_cost = -0.1
 	picture = "commune_province_modifier_icon"
 }
