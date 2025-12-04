@@ -7577,7 +7577,7 @@ ab_mop_4 = {
 	}
 	mop_dev_tunisia = {
 		icon = mission_conquer_tunisia
-		position = 29
+		position = 30
 		required_missions = {
 			mop_tunisia
 		}
@@ -9731,7 +9731,7 @@ ab_mop_5 = {
 	}
 	mop_tunisia = {
 		icon = mission_conquer_tunis
-		position = 28
+		position = 29
 		required_missions = {
 			mop_egypt
 		}
@@ -9831,6 +9831,144 @@ ab_mop_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+		}
+	}
+	mop_maghreb = {
+		icon = mission_moroccan_ports
+		position = 30
+		required_missions = {
+			mop_tunisia
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hautes_plaines_area
+				area = barbary_coast_area
+				area = algiers_area
+				area = tafilalt_area
+				area = marrekesh_area
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = southern_morocco_area
+				area = sus_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				hautes_plaines_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				barbary_coast_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				algiers_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				tafilalt_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				marrekesh_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				northern_morocco_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				western_morocco_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				southern_morocco_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				sus_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			4568 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_demnat_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_into_the_unknown
+				duration = 7300
+			}
+			define_explorer = {
+				shock = 3
+				fire = 3
+				manuever = 3
+				siege = 3
+			}
+			custom_tooltip = AB_EMPTY
+			1127 = {
+				add_siberian_construction = 100
+				hidden_effect = {
+					change_trade_goods = gold
+					change_culture = root
+					change_religion = root
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_still_have_the_pax_navalis_modifier
+				first_limit = "has_country_modifier = wallachia_pax_navalis"
+				first_effect = "hidden_effect = {
+				remove_country_modifier = wallachia_pax_navalis
+			}
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = -1
+			}"
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
 			}
 		}
 	}

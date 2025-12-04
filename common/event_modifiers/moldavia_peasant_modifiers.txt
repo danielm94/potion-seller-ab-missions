@@ -392,7 +392,7 @@ mop_commune_of_khiva = {
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
-	caravan_power = 0.05
+	caravan_power = 0.1
 	picture = "commune_province_modifier_icon"
 }
 
@@ -1097,5 +1097,14 @@ mop_great_tunis_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	galley_number_of_cannons_modifier = 0.2
+	picture = "commune_province_modifier_icon"
+}
+
+mop_demnat_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	envoy_travel_time = -0.1
 	picture = "commune_province_modifier_icon"
 }
