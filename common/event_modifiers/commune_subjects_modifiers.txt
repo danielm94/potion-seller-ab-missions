@@ -266,3 +266,19 @@ integrated_commune_hannoverian_bonus = {
 integrated_commune_hessian_bonus = {
 	technology_cost = -0.03
 }
+
+integrated_commune_german_bonus_1 = {
+	min_autonomy = -5
+}
+integrated_commune_german_bonus_2 = {
+	discipline = 0.025
+}
+integrated_commune_german_bonus_3 = {
+	production_efficiency = 0.05
+}
+integrated_commune_german_bonus_4 = {
+	prestige = 0.5
+}
+integrated_commune_german_bonus_5 = {
+	administrative_efficiency = 0.05
+}

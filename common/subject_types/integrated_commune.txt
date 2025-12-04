@@ -554,4 +554,69 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_german_bonus_1
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_germanic_bonus_flag
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+			total_development = 500
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_german_bonus_2
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_germanic_bonus_flag
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+			total_development = 1000
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_german_bonus_3
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_germanic_bonus_flag
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+			total_development = 1500
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_german_bonus_4
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_germanic_bonus_flag
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+			total_development = 2000
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_german_bonus_5
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_germanic_bonus_flag
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = united_germanic
+			}
+			total_development = 2500
+		}
+	}
 }
