@@ -121,5 +121,6 @@ is_formable_commune_subject = {
 		tag = FRP
 		tag = CLT
 		tag = ABO
+		tag = GBR
 	}
 }

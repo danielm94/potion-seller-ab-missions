@@ -499,6 +499,12 @@ on_dependency_gained = {
 				}
 				override_country_name = ABO_commune
 			}
+			else_if = {
+				limit = {
+					tag = GBR
+				}
+				override_country_name = GBR_commune
+			}
 		}
 	}
 }

@@ -160,6 +160,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = GBR_ideas_list
+		trigger = {
+			FROM = {
+				tag = GBR
+			}
+		}
+	}
 }
 
 defined_text = {
