@@ -487,6 +487,18 @@ on_dependency_gained = {
 				}
 				override_country_name = UNN_commune
 			}
+			else_if = {
+				limit = {
+					tag = CLT
+				}
+				override_country_name = CLT_commune
+			}
+			else_if = {
+				limit = {
+					tag = ABO
+				}
+				override_country_name = ABO_commune
+			}
 		}
 	}
 }

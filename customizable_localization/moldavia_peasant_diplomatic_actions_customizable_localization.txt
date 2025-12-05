@@ -152,6 +152,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = ABO_ideas_list
+		trigger = {
+			FROM = {
+				tag = ABO
+			}
+		}
+	}
 }
 
 defined_text = {

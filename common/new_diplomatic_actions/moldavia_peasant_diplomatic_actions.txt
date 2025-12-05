@@ -4036,3 +4036,147 @@ integrate_into_celtic_communes = {
 		always = no
 	}
 }
+
+establish_scottish_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = ABO
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_ABO_commune_diplomatic_actions
+		FROM = {
+			OR = {
+				culture = scottish
+				culture = scottish_new
+			}
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = ABO
+			override_country_name = ABO_commune
+			set_government_rank_force = 2
+			change_integrated_commune_color = yes
+			every_province = {
+				limit = {
+					OR = {
+						culture = scottish
+						culture = scottish_new
+						culture = english
+						culture = english_new
+						region = british_isles_region
+					}
+				}
+				add_permanent_claim = ABO
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_scottish_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_ABO_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = ABO
+		ABO = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = ABO
+			}
+			any_owned_province = {
+				OR = {
+					culture = scottish
+					culture = scottish_new
+					culture = english
+					culture = english_new
+					region = british_isles_region
+				}
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = scottish
+						culture = scottish_new
+						culture = english
+						culture = english_new
+						region = british_isles_region
+					}
+				}
+				add_core = ABO
+				cede_province = ABO
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
