@@ -1121,6 +1121,19 @@ ab_mop_1 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_rome
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_rome_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_rome
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_malta = {
@@ -1198,6 +1211,60 @@ ab_mop_1 = {
 				influence = 10
 			}
 		}
+	}
+}
+
+mop_rome_locked_series_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_rome
+		}
+	}
+	mop_roman_patriarch_locked = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_rome_locked
+		}
+		position = 35
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_rome_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_rome_locked_desc
+		}
+	}
+	mop_pentarchy_locked = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_roman_patriarch_locked
+		}
+		position = 35
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_rome_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_rome_locked_desc
+		}
+	}
+}
+
+mop_rome_unlocked_series_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_rome
 	}
 	mop_roman_patriarch = {
 		icon = mission_most_holy_synod
@@ -3247,7 +3314,71 @@ ab_mop_2 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_rome
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_rome_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_rome
+					swap_non_generic_missions = yes
+				}
+			}
 		}
+	}
+}
+
+mop_rome_locked_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_rome
+		}
+	}
+	mop_rome_locked = {
+		icon = mission_locked_mission
+		position = 35
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_rome_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_rome_locked_desc
+		}
+	}
+	mop_italy_locked = {
+		icon = mission_locked_mission
+		position = 35
+		required_missions = {
+			mop_rome_locked
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_rome_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_rome_locked_desc
+		}
+	}
+}
+
+mop_rome_unlocked_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_rome
 	}
 	mop_rome = {
 		icon = gfx_wal_rome
