@@ -446,3 +446,8 @@
  mop_lothian_north_series_title: "The Northern Foundry"
  mop_lothian_north_series_desc: "Supply lines from the Danube are stretched to breaking. We cannot liberate the south with empty muskets. Transform Edinburg into a self-sufficient fortress-factory to arm the invasion."
  quartermaster_attrition_bonus_tt: "§YQuartermaster§! advisors now grant a scaling §G-5.0%§! Land Attrition bonus."
+ integrated_commune_english_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YEnglish§! culture will grant us §G+1.00§! Naval Combat Bonus off owned coast if they have at least §Y300§! total development."
+ integrated_commune_welsh_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YWelsh§! culture will grant us §G-10.0%§! Fort Maintenance if they have at least §Y300§! total development."
+ integrated_commune_cornish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YCornish§! culture will grant us §G-10.0%§! Culture Conversion Time if they have at least §Y300§! total development."
+ mop_england_north_series_title: "Shatter the Witan"
+ mop_england_north_series_desc: "The Ænglish suffer a unique tyranny: the illusion of choice. Their Parliament is a theater where Earls trade lives for gold. We must march south and burn down their house of lies."

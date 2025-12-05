@@ -10909,4 +10909,147 @@ mop_britain_north_series_unlocked_5 = {
 			}
 		}
 	}
+	mop_england_north_series = {
+		icon = mission_behead
+		position = 38
+		required_missions = {
+			mop_scotland_north_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = scottish_marches_area
+				area = yorkshire_area
+				area = west_midlands_area
+				area = east_midlands_area
+				area = east_anglia_area
+				area = wessex_area
+				area = home_counties_area
+				area = wales_area
+				area = cornwall_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				east_anglia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				east_midlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				west_midlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				yorkshire_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				scottish_marches_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				wessex_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				home_counties_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				cornwall_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				wales_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_english_bonus_tt
+			set_country_flag = integrated_commune_english_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_welsh_bonus_tt
+			set_country_flag = integrated_commune_welsh_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_cornish_bonus_tt
+			set_country_flag = integrated_commune_cornish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			236 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_londra_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_integrating_the_english
+				duration = -1
+			}
+			halves_parliament_bribe_costs = yes
+			simple_unlock_issue = {
+				issue = tuh_the_tea_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_witchcraft_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_black_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_act_of_representation
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_sugar_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_gold_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_spice_act
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
 }

@@ -761,4 +761,37 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_english_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_english_bonus_flag
+			}
+			OR = {
+				culture = english
+				culture = english_new
+			}
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_welsh_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_welsh_bonus_flag
+			}
+			culture = welsh
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_cornish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_cornish_bonus_flag
+			}
+			culture = cornish
+			total_development = 300
+		}
+	}
 }

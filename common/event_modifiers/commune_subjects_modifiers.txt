@@ -223,10 +223,6 @@ integrated_commune_latin_bonus_4 = {
 	core_creation = -1
 }
 
-integrated_commune_umbrian_bonus = {
-	morale_damage_received = -0.05
-}
-
 integrated_commune_austrian_bonus = {
 	diplomatic_upkeep = 1
 }
@@ -341,4 +337,16 @@ integrated_commune_norse_gael_bonus = {
 
 integrated_commune_manx_bonus = {
 	all_power_cost = -0.025
+}
+
+integrated_commune_english_bonus = {
+	own_coast_naval_combat_bonus = 1
+}
+
+integrated_commune_welsh_bonus = {
+	fort_maintenance_modifier = -0.1
+}
+
+integrated_commune_cornish_bonus = {
+	culture_conversion_time = -0.1
 }

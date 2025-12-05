@@ -60,8 +60,8 @@
 209 = "Biscaya"
 210 = "Navara"
 224 = "Sevilia"
-227 = "Lisabona"
-236 = "Londra"
+227 = {"Lisabona" "Lisabona"}
+236 = {"Londra" "Londra"}
 253 = "Hebridele Exterioare"
 257 = "Varsovia"
 261 = "Halici"
