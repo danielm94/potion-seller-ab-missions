@@ -430,3 +430,8 @@
  unlock_FRP_commune_diplomatic_actions_tt: "Unlock §YCommune Interactions§!£integrated_commune£ that allow you to establish @FRP §YLa Fédération§! in one of your £integrated_commune£§YIntegrated Communes§! that is of the §YFrench§! culture group. Once @FRP §YLa Fédération§! is established, you will be able to transfer §YFrench§! culture group provinces and provinces in the §YFrance region§! from your other £integrated_commune£§YIntegrated Communes§! to @FRP §YLa Fédération§!."
  mop_france_title: "The Fall of Tyranny"
  mop_france_desc: "The heart of the French monarchy, the ancient enemy of the free peasant, lies exposed. We shall march on Paris, tear down the symbols of absolutism, and extinguish the monarchy forever. The city of kings will be remade as a beacon of the Revolution, governed by the people it once oppressed."
+ mop_low_countries_locked_title: "§gLiberate the Lowlands§!"
+ mop_low_countries_locked_desc: "You must have completed §YThe Fall of Tyranny§! or §YTochter Aus Elysium§! to unlock these series of missions." #TODO ACCOUNT FOR ENGLAND MISSION
+ mop_amsterdam_locked_title: "§gThe World's Warehouse§!"
+ mop_amsterdam_locked_desc: "You must have completed §YThe Fall of Tyranny§! or §YTochter Aus Elysium§! to unlock these series of missions." #TODO ACCOUNT FOR ENGLAND MISSION
+ unlock_low_countries_series_tt: "§GUnlock§! the §YLow Countries§! series of missions."

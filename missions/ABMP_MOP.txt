@@ -6051,6 +6051,11 @@ ab_mop_3 = {
 				faction = abolitionists_faction
 				influence = 20
 			}
+			custom_tooltip = unlock_low_countries_series_tt
+			hidden_effect = {
+				set_country_flag = mop_france_completed
+				swap_non_generic_missions = yes
+			}
 		}
 	}
 }
@@ -8129,14 +8134,77 @@ ab_mop_4 = {
 			change_peasant_zeal = {
 				value = 50
 			}
+			custom_tooltip = unlock_low_countries_series_tt
+			hidden_effect = {
+				set_country_flag = mop_germany_completed
+				swap_non_generic_missions = yes
+			}
+		}
+	}
+}
+
+mop_low_countries_series_locked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = mop_france_completed
+		}
+		NOT = {
+			has_country_flag = mop_germany_completed
+		}
+		# NOT = {
+		# 	mission_completed = mop_england
+		# }
+	}
+	mop_low_countries_locked = {
+		icon = mission_locked_mission
+		position = 36
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_low_countries_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_low_countries_locked_desc
+		}
+	}
+	mop_amsterdam_locked = {
+		icon = mission_locked_mission
+		position = 37
+		required_missions = {
+			mop_low_countries_locked
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_low_countries_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_low_countries_locked_desc
+		}
+	}
+}
+
+mop_low_countries_series_unlocked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		OR = {
+			has_country_flag = mop_france_completed
+			has_country_flag = mop_germany_completed
+			# 	mission_completed = mop_england
 		}
 	}
 	mop_low_countries = {
 		icon = mission_lowlands
-		position = 37
-		required_missions = {
-			mop_germany
-		}
+		position = 36
 		provinces_to_highlight = {
 			region = low_countries_region
 			NOT = {
@@ -8204,6 +8272,84 @@ ab_mop_4 = {
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
+	mop_amsterdam = {
+		icon = mission_ned_amsterdam_bourse
+		position = 37
+		required_missions = {
+			mop_low_countries
+		}
+		provinces_to_highlight = {
+			province_id = 97
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = dutch_polders
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				97 = {
+					owned_by = root
+					development = 45
+					province_has_center_of_trade_of_level = 3
+					num_of_times_expanded_infrastructure = 3
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = dutch_polders
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			97 = {
+				remove_province_modifier = mop_amsterdam_commune
+				add_province_modifier = {
+					name = mop_great_amsterdam_commune
+					duration = -1
+				}
+			}
+			simple_unlock_issue = {
+				issue = land_reclamation_issue
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = isolationist_mandate_buff_tt
+			set_country_flag = isolationist_mandate_buff
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
 				influence = 15
 			}
 		}
@@ -10549,84 +10695,6 @@ ab_mop_5 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
-			}
-		}
-	}
-	mop_amsterdam = {
-		icon = mission_ned_amsterdam_bourse
-		position = 38
-		required_missions = {
-			mop_low_countries
-		}
-		provinces_to_highlight = {
-			province_id = 97
-			OR = {
-				NOT = {
-					owned_by = root
-				}
-				NOT = {
-					development = 45
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 3
-				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 3
-				}
-				has_trade_building_trigger = no
-				has_production_building_trigger = no
-				has_manufactory_trigger = no
-				has_fort_building_trigger = no
-				NOT = {
-					has_great_project = {
-						type = dutch_polders
-						tier = 2
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				97 = {
-					owned_by = root
-					development = 45
-					province_has_center_of_trade_of_level = 3
-					num_of_times_expanded_infrastructure = 3
-					has_trade_building_trigger = yes
-					has_production_building_trigger = yes
-					has_manufactory_trigger = yes
-					has_fort_building_trigger = yes
-					has_great_project = {
-						type = dutch_polders
-						tier = 2
-					}
-				}
-			}
-		}
-		effect = {
-			97 = {
-				remove_province_modifier = mop_amsterdam_commune
-				add_province_modifier = {
-					name = mop_great_amsterdam_commune
-					duration = -1
-				}
-			}
-			simple_unlock_issue = {
-				issue = land_reclamation_issue
-			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = isolationist_mandate_buff_tt
-			set_country_flag = isolationist_mandate_buff
-			add_mercantilism = 2
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 15
 			}
 		}
 	}
