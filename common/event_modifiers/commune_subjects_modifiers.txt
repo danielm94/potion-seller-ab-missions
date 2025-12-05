@@ -326,3 +326,19 @@ integrated_commune_dutch_bonus = {
 integrated_commune_flemish_bonus = {
 	build_cost = -0.075
 }
+
+integrated_commune_scottish_bonus = {
+	production_efficiency = 0.05
+}
+
+integrated_commune_highland_scottish_bonus = {
+	shock_damage = 0.05
+}
+
+integrated_commune_norse_gael_bonus = {
+	galley_cost = -0.1
+}
+
+integrated_commune_manx_bonus = {
+	all_power_cost = -0.025
+}

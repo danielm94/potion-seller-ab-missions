@@ -1160,3 +1160,17 @@ mop_peasants_in_paris = {
 	diplomatic_annexation_cost = -0.1
 	peasant_zeal_gain_modifier = 0.1
 }
+
+mop_lothian_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	shock_damage = 0.05
+	picture = "commune_province_modifier_icon"
+}
+
+mop_highland_charge = {
+	movement_speed = 0.5
+	shock_damage = 0.1
+}

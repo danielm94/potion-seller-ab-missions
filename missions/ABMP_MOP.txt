@@ -10718,3 +10718,96 @@ ab_mop_5 = {
 		}
 	}
 }
+
+#Player completes Scandanavia mission before France mission
+mop_britain_north_series_unlocked = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_britain_north
+	}
+	mop_scotland_north_series = {
+		icon = mission_rb_conquer_scotland
+		position = 37
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				lowlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				highlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				kingdom_of_the_isles_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_scottish_bonus_tt
+			set_country_flag = integrated_commune_scottish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_highland_scottish_bonus_tt
+			set_country_flag = integrated_commune_highland_scottish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_norse_gael_bonus_tt
+			set_country_flag = integrated_commune_norse_gael_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_manx_bonus_tt
+			set_country_flag = integrated_commune_manx_bonus_flag
+			custom_tooltip = AB_EMPTY
+			248 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_lothian_commune
+					duration = -1
+				}
+			}
+			custom_tooltip  = enable_highland_charge_tt
+			tooltip = {
+				add_country_modifier = {
+					name = mop_highland_charge
+					duration = 15
+				}
+			}
+			set_country_flag = enable_highland_charge
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+}

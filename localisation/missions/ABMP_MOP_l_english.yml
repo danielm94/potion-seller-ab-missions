@@ -436,3 +436,10 @@
  mop_amsterdam_locked_desc: "You must have completed §YThe Fall of Tyranny§! or §YTochter Aus Elysium§! to unlock these series of missions." #TODO ACCOUNT FOR ENGLAND MISSION
  unlocked_mop_low_countries_tt: "§GUnlock§! the §YLow Countries§! series of missions."
  unlocked_mop_britain_north_tt: "§GUnlock§! the §YBritania§! series of missions.\n§VScroll all the way down!§!"
+ mop_scotland_north_series_title: "Liberate Scotland"
+ mop_scotland_north_series_desc: "The winds of the north carry the seeds of revolution. The clans and crofters of Scotland have long suffered under distant kings. We shall descend from the isles, shatter the feudal yoke, and turn Edinburgh into a beacon of communal liberty."
+ integrated_commune_scottish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YScottish§! culture will grant us §G+5.0%§! Production Efficiency if they have at least §Y300§! total development."
+ integrated_commune_highland_scottish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YHighlander§! culture will grant us §G+5.0%§! Shock Damage if they have at least §Y300§! total development."
+ integrated_commune_norse_gael_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YNorse-Gaelic§! culture will grant us §G-10.0%§! Galley Cost if they have at least §Y300§! total development."
+ integrated_commune_manx_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YManx§! culture will grant us §G-2.5%§! All Power Cost if they have at least §Y300§! total development."
+ enable_highland_charge_tt: "Winning battle on §YHighland§! or §YHills§! provinces will grant the following modifier for §Y15 days§!:"

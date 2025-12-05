@@ -458,7 +458,9 @@ on_dependency_gained = {
 				add_government_reform = ikko_ikki_republic_reform
 			}
 			else_if = {
-				limit = { tag = ROP}
+				limit = {
+					tag = ROP
+				}
 				if = {
 					limit = {
 						ROP = {
@@ -990,6 +992,32 @@ on_religion_change = {
 		add_country_modifier = {
 			name = pentarchy_converted_subject_to_orthodox
 			duration = 15209
+		}
+	}
+}
+
+on_battle_lost_province = {
+	if = {
+		limit = {
+			OR = {
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			FROM = {
+				has_country_flag = enable_highland_charge
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_country_modifier = mop_highland_charge
+				}
+				remove_country_modifier = mop_highland_charge
+			}
+			add_country_modifier = {
+				name = mop_highland_charge
+				duration = 15
+			}
 		}
 	}
 }

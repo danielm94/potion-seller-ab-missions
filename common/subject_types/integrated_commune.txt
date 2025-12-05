@@ -718,4 +718,47 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_scottish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_scottish_bonus_flag
+			}
+			OR = {
+				culture = scottish
+				culture = scottish_new
+			}
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_highland_scottish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_highland_scottish_bonus_flag
+			}
+			culture = highland_scottish
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_norse_gael_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_norse_gael_bonus_flag
+			}
+			culture = norse_gael
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_manx_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_manx_bonus_flag
+			}
+			culture = manx
+			total_development = 300
+		}
+	}
 }
