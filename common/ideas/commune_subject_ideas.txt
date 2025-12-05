@@ -193,3 +193,78 @@ ROP_ideas = {
 		church_power_modifier = 0.1
 	}
 }
+
+FRP_ideas = {
+	free = yes
+	trigger = {
+		tag = FRP
+	}
+	start = {
+		land_morale = 0.2
+		spy_offence = 0.25
+	}
+	bonus = {
+		siege_ability = 0.1
+	}
+	FRP_first = {
+		governing_capacity_modifier = 0.1
+	}
+	FRP_second = {
+		production_efficiency = 0.15
+		inflation_reduction = 0.05
+	}
+	FRP_third = {
+		no_religion_penalty = yes
+	}
+	FRP_fourth = {
+		development_cost = -0.1
+	}
+	FRP_fifth = {
+		diplomatic_reputation = 1
+	}
+	FRP_sixth = {
+		manpower_recovery_speed = 0.25
+	}
+	FRP_seventh = {
+		candidate_random_bonus = 2
+		republican_tradition = 0.1
+	}
+}
+
+CLT_peasant_ideas = {
+	free = yes
+	trigger = {
+		tag = CLT
+		is_peasant_republic = yes
+	}
+	start = {
+		defensiveness = 0.25
+		naval_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		global_heretic_missionary_strength = 0.03
+	}
+	CLT_peasant_first = {
+		manpower_in_true_faith_provinces = 0.33
+	}
+	CLT_peasant_second = {
+		culture_conversion_cost = -0.25
+		tolerance_own = 1
+	}
+	CLT_peasant_third = {
+		morale_damage_received = -0.1
+		missionaries = 1
+	}
+	CLT_peasant_fourth = {
+		development_cost_modifier = -0.05
+	}
+	CLT_peasant_fifth = {
+		global_own_trade_power = 0.25
+	}
+	CLT_peasant_sixth = {
+		centralize_state_cost = -0.5
+	}
+	CLT_peasant_seventh = {
+		reelection_cost = -0.5
+	}
+}
