@@ -3380,105 +3380,6 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_southern_france = {
-		icon = mission_invade_occitania
-		position = 37
-		required_missions = {
-			mop_italy
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = provence_area
-				area = savoy_dauphine_area
-				area = languedoc_area
-				area = massif_central_area
-				area = pyrenees_area
-				area = guyenne_area
-			}
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = root
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				provence_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				savoy_dauphine_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				languedoc_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				massif_central_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				pyrenees_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				guyenne_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = integrated_commune_gascon_bonus_tt
-			set_country_flag = integrated_commune_gascon_bonus_flag
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_occitain_bonus_tt
-			set_country_flag = integrated_commune_occitain_bonus_flag
-			custom_tooltip = AB_EMPTY
-			174 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bordeaux_commune
-					duration = -1
-				}
-			}
-			add_country_modifier = {
-				name = mop_march_to_paris
-				duration = 7300
-			}
-			add_army_tradition_or_mil_power = {
-				amount = 10
-			}
-			change_peasant_zeal = {
-				value = 15
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 15
-			}
-		}
-	}
 }
 
 ab_mop_3 = {
@@ -5970,6 +5871,105 @@ ab_mop_3 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+	mop_southern_france = {
+		icon = mission_invade_occitania
+		position = 36
+		required_missions = {
+			# mop_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = provence_area
+				area = savoy_dauphine_area
+				area = languedoc_area
+				area = massif_central_area
+				area = pyrenees_area
+				area = guyenne_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				provence_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				savoy_dauphine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				languedoc_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				massif_central_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				pyrenees_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				guyenne_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_gascon_bonus_tt
+			set_country_flag = integrated_commune_gascon_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_occitain_bonus_tt
+			set_country_flag = integrated_commune_occitain_bonus_flag
+			custom_tooltip = AB_EMPTY
+			174 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_bordeaux_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_march_to_paris
+				duration = 7300
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
 			}
 		}
 	}
