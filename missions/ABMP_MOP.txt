@@ -10794,7 +10794,7 @@ ab_mop_5 = {
 	}
 	mop_hamburg = {
 		icon = mission_heart_of_the_hansa
-		position = 35
+		position = 36
 		required_missions = {
 			mop_saxons
 		}
