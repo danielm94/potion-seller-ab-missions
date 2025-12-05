@@ -7049,19 +7049,6 @@ ab_mop_4 = {
 				faction = exemplarists_faction
 				influence = 20
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_britain_south
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_britain_north_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_britain_north
-					swap_non_generic_missions = yes
-				}
-			}
 		}
 	}
 	mop_vladivostoc = {
@@ -9476,6 +9463,19 @@ ab_mop_5 = {
 				faction = abolitionists_faction
 				influence = 25
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_britain_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_britain_north_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_britain_north
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_north_sea = {
@@ -10718,6 +10718,68 @@ ab_mop_5 = {
 		}
 	}
 }
+mop_britain_series_locked_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_britain_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_britain_south
+		}
+	}
+	mop_britain_series_dev_locked_1 = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_britain_series_conquest_locked_1
+		}
+		position = 38
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+	mop_britain_series_dev_locked_2 = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_britain_series_conquest_locked_2
+		}
+		position = 39
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+	mop_britain_series_dev_locked_3 = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_britain_series_conquest_locked_3
+		}
+		position = 40
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+}
 
 #Player completes Scandanavia mission before France mission
 mop_britain_north_series_unlocked_4 = {
@@ -10974,7 +11036,81 @@ mop_britain_north_series_unlocked_4 = {
 		}
 	}
 }
-
+mop_britain_series_locked_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_britain_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_britain_south
+		}
+	}
+	mop_britain_series_conquest_locked_1 = {
+		icon = mission_locked_mission
+		position = 37
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+	mop_britain_series_conquest_locked_2 = {
+		icon = mission_locked_mission
+		position = 38
+		required_missions = {
+			mop_britain_series_conquest_locked_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+	mop_britain_series_conquest_locked_3 = {
+		icon = mission_locked_mission
+		position = 39
+		required_missions = {
+			mop_britain_series_conquest_locked_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+	mop_britain_series_conquest_locked_4 = {
+		icon = mission_locked_mission
+		position = 40
+		required_missions = {
+			mop_britain_series_conquest_locked_3
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_britain_series_conquest_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_britain_series_conquest_locked_1_desc
+		}
+	}
+}
 mop_britain_north_series_unlocked_5 = {
 	slot = 5
 	generic = no
