@@ -10720,7 +10720,7 @@ ab_mop_5 = {
 }
 
 #Player completes Scandanavia mission before France mission
-mop_britain_north_series_unlocked = {
+mop_britain_north_series_unlocked_5 = {
 	slot = 5
 	generic = no
 	ai = yes
