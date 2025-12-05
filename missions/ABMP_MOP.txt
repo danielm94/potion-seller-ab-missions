@@ -11130,4 +11130,89 @@ mop_britain_north_series_unlocked_5 = {
 			}
 		}
 	}
+	mop_ireland_north_series = {
+		icon = mission_rb_rule_britannia_irish_version
+		position = 39
+		required_missions = {
+			mop_england_north_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ulster_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				munster_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				connacht_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				leinster_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_irish_bonus_tt
+			set_country_flag = integrated_commune_irish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			373 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_pale_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_irish_defiance
+				duration = -1
+			}
+			add_accepted_culture_or_dip_power_stated = {
+				culture = irish
+				dip_reward = yes
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
 }

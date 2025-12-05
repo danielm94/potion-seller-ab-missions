@@ -350,3 +350,7 @@ integrated_commune_welsh_bonus = {
 integrated_commune_cornish_bonus = {
 	culture_conversion_time = -0.1
 }
+
+integrated_commune_irish_bonus = {
+	global_colonial_growth = 10
+}

@@ -1203,3 +1203,16 @@ mop_great_londra_commune = {
 	naval_morale = 0.2
 	picture = "commune_province_modifier_icon"
 }
+
+mop_pale_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	rebel_support_efficiency = 1
+	picture = "commune_province_modifier_icon"
+}
+
+mop_irish_defiance = {
+	attack_bonus_in_capital_terrain = 1
+}

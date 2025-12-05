@@ -179,3 +179,7 @@ free_slot_for_austrian = {
 free_slot_for_Outremer_germanic = {
 	num_accepted_cultures = 1
 }
+
+free_slot_for_irish = {
+	num_accepted_cultures = 1
+}

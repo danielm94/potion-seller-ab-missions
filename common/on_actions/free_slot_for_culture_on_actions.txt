@@ -413,4 +413,13 @@ on_culture_demoted = {
 		}
 		remove_country_modifier = free_slot_for_Outremer_germanic
 	}
+	if = {
+		limit = {
+			NOT = {
+				accepted_culture = irish
+			}
+			has_country_modifier = free_slot_for_irish
+		}
+		remove_country_modifier = free_slot_for_irish
+	}
 }

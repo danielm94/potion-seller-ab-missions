@@ -794,4 +794,14 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_irish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_irish_bonus_flag
+			}
+			culture = irish
+			total_development = 300
+		}
+	}
 }
