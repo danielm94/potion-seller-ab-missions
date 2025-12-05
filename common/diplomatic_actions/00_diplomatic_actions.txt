@@ -11,10 +11,8 @@
 # 	allow					Determines if the action is valid or not
 #
 # effect				A diplomatic action can only have one effect block
-
 # ROOT					actor
 # FROM					target
-
 ########################################
 # DIPLOMATIC ACTIONS
 ########################################
@@ -84,8 +82,6 @@
 # tributary_state_action
 # ask_for_tributary_state_action
 # knowledge_sharing
-
-
 enforce_peace = {
 }
 
@@ -95,12 +91,14 @@ royal_marriage = {
 		potential = {
 		}
 		allow = {
-			NOT = { war_with = FROM }
+			NOT = {
+				war_with = FROM
+			}
 		}
 	}
 	condition = {
 		tooltip = tuh_from_cant_marry_tooltip
-		potential = { 
+		potential = {
 			FROM = {
 				has_government_attribute = can_only_marry_subjects
 			}
@@ -114,7 +112,7 @@ royal_marriage = {
 	}
 	condition = {
 		tooltip = tuh_root_cant_marry_tooltip
-		potential = { 
+		potential = {
 			has_government_attribute = can_only_marry_subjects
 			NOT = {
 				FROM = {
@@ -195,7 +193,9 @@ vassalaction = {
 					value = 190
 				}
 			}
-			FROM = { is_at_war = no }
+			FROM = {
+				is_at_war = no
+			}
 		}
 	}
 }
@@ -214,7 +214,7 @@ abandon_union = {
 form_coalition = {
 	condition = {
 		tooltip = form_coalition_tooltip
-		potential = {	
+		potential = {
 		}
 		allow = {
 			has_opinion_modifier = {
@@ -307,8 +307,12 @@ tributary_state_action = {
 		}
 		allow = {
 			FROM = {
-				NOT = { has_reform = chinawarlord }
-				NOT = { has_reform = daimyo }
+				NOT = {
+					has_reform = chinawarlord
+				}
+				NOT = {
+					has_reform = daimyo
+				}
 			}
 		}
 	}
@@ -320,8 +324,12 @@ ask_for_tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			NOT = { has_reform = chinawarlord }
-			NOT = { has_reform = daimyo }
+			NOT = {
+				has_reform = chinawarlord
+			}
+			NOT = {
+				has_reform = daimyo
+			}
 		}
 	}
 }
@@ -338,11 +346,30 @@ support_rebels = {
 			}
 			random = {
 				chance = 10
+				set_country_flag = defenestration_happened
 				country_event = {
 					id = moldavia_peasant_events.10
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = come_out_ye_black_and_tans
+				NOT = {
+					has_country_flag = defenestration_happened
+				}
+				NOT = {
+					has_country_modifier = mop_successful_bombing
+				}
+			}
+			random = {
+				chance = 10
+				country_event = {
+					id = moldavia_peasant_events.12
+				}
+			}
+		}
+		clr_country_flag = defenestration_happened
 		FROM = {
 			set_country_flag = support_rebels_against_@THIS
 			PREV = {

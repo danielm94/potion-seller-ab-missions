@@ -1212,7 +1212,19 @@ mop_pale_commune = {
 	rebel_support_efficiency = 1
 	picture = "commune_province_modifier_icon"
 }
+mop_great_pale_commune = {
+	min_local_autonomy = 10
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	rebel_support_efficiency = 2
+	picture = "commune_province_modifier_icon"
+}
 
 mop_irish_defiance = {
 	attack_bonus_in_capital_terrain = 1
+}
+
+mop_successful_bombing = {
+	rebel_support_efficiency = 10
 }

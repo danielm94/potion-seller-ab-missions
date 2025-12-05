@@ -436,7 +436,7 @@
  mop_amsterdam_locked_desc: "You must have completed §YThe Fall of Tyranny§! or §YTochter Aus Elysium§! to unlock these series of missions." #TODO ACCOUNT FOR ENGLAND MISSION
  unlocked_mop_low_countries_tt: "§GUnlock§! the §YLow Countries§! series of missions."
  unlocked_mop_britain_north_tt: "§GUnlock§! the §YBritania§! series of missions.\n§VScroll all the way down!§!"
- mop_scotland_north_series_title: "Liberate Scotland"
+ mop_scotland_north_series_title: "Shatter the Clans"
  mop_scotland_north_series_desc: "The winds of the north carry the seeds of revolution. The clans and crofters of Scotland have long suffered under distant kings. We shall descend from the isles, shatter the feudal yoke, and turn Edinburgh into a beacon of communal liberty."
  integrated_commune_scottish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YScottish§! culture will grant us §G+5.0%§! Production Efficiency if they have at least §Y300§! total development."
  integrated_commune_highland_scottish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YHighlander§! culture will grant us §G+5.0%§! Shock Damage if they have at least §Y300§! total development."
@@ -458,3 +458,6 @@
  integrated_commune_irish_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YIrish§! culture will grant us §G+10§! Global Settler Increase if they have at least §Y300§! total development."
  mop_ireland_north_series_title: "Shatter the High King"
  mop_ireland_north_series_desc: "The Ruirech bow to Tara. The peasants bow to the Ruirech. It is a pyramid of parasites built on the backs of the poor. We shall cross the Irish Sea and prove that no man stands higher than his brothers."
+ mop_pale_north_series_title: "Weaponize the Irish"
+ mop_pale_north_series_desc: "The Irish have a natural talent for resisting authority. We must refine this instinct into a science. Expand the local infrastructure to support the mass training of professional saboteurs."
+ come_out_ye_black_and_tans_tt: "Supporting rebels now has a §Y10%§! chance of granting §G+1000%§! Rebel Support Efficiency against the target, allowing you declare war with the §YGreat Peasant Uprising§! casus belli §Gimmediately§!."

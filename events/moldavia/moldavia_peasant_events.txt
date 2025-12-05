@@ -641,7 +641,7 @@ country_event = {
 		name = AB_EMPTY
 	}
 }
-#Successfull defenestration
+#successful defenestration
 country_event = {
 	id = moldavia_peasant_events.10
 	title = moldavia_peasant_events.10.t
@@ -729,5 +729,21 @@ country_event = {
 			duration = 27375
 		}
 		set_country_flag = bank
+	}
+}
+
+#Successfull IRA
+country_event = {
+	id = moldavia_peasant_events.12
+	title = moldavia_peasant_events.12.t
+	desc = moldavia_peasant_events.12.d
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_peasant_events.12.a
+		add_country_modifier = {
+			name = mop_successful_bombing
+			duration = 60
+		}
 	}
 }

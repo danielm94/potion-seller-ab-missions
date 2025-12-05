@@ -66,3 +66,6 @@
  moldavia_peasant_events.10.a: "We must seize upon this window of opportunity!"
  moldavia_peasant_events.11.t: "The Federal Bank of Frankfurt"
  moldavia_peasant_events.11.d: "Frankfurt's financial machinery has been seized and retooled for the Federation. We have centralized the debts of the communes, issuing a standardized currency backed by the collective wealth of the League. We now dictate the terms of credit ourselves, ensuring the revolution is funded by a stable and rational treasury."
+ moldavia_peasant_events.12.t: "From Dublin With Love"
+ moldavia_peasant_events.12.d: "Success. One of our agents, a lad born on a Dublin street, slipped past the guard. He stacked the powder kegs beneath the headquarters just as the senior officers sat down to feast. The detonation vaporized the building and everyone inside. The enemy command structure is decapitated."
+ moldavia_peasant_events.12.a: "We need to move, now!"
