@@ -536,10 +536,18 @@ tower_of_london = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			culture = normand
-			culture = Anglois
+			AND = {
+				OR = {
+					culture = normand
+					culture = Anglois
+				}
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_unlocked_great_project_through_mission_tt
+				owner = { has_country_flag = can_use_tower_of_london }
+			}
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	#what to do when it's built
@@ -555,19 +563,35 @@ tower_of_london = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			culture = normand
-			culture = Anglois
+			AND = {
+				OR = {
+					culture = normand
+					culture = Anglois
+				}
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_unlocked_great_project_through_mission_tt
+				owner = { has_country_flag = can_use_tower_of_london }
+			}
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			culture = normand
-			culture = Anglois
+			AND = {
+				OR = {
+					culture = normand
+					culture = Anglois
+				}
+				province_is_or_accepts_culture = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_unlocked_great_project_through_mission_tt
+				owner = { has_country_flag = can_use_tower_of_london }
+			}
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?

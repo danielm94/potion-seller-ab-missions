@@ -1193,3 +1193,13 @@ mop_londra_commune = {
 	naval_morale = 0.1
 	picture = "commune_province_modifier_icon"
 }
+
+mop_great_londra_commune = {
+	min_local_autonomy = 10
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	amount_of_man_of_war = 10
+	naval_morale = 0.2
+	picture = "commune_province_modifier_icon"
+}
