@@ -434,4 +434,5 @@
  mop_low_countries_locked_desc: "You must have completed §YThe Fall of Tyranny§! or §YTochter Aus Elysium§! to unlock these series of missions." #TODO ACCOUNT FOR ENGLAND MISSION
  mop_amsterdam_locked_title: "§gThe World's Warehouse§!"
  mop_amsterdam_locked_desc: "You must have completed §YThe Fall of Tyranny§! or §YTochter Aus Elysium§! to unlock these series of missions." #TODO ACCOUNT FOR ENGLAND MISSION
- unlock_low_countries_series_tt: "§GUnlock§! the §YLow Countries§! series of missions."
+ unlocked_mop_low_countries_tt: "§GUnlock§! the §YLow Countries§! series of missions."
+ unlocked_mop_britain_north_tt: "§GUnlock§! the §YBritania§! series of missions.\n§VScroll all the way down!§!"

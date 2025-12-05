@@ -6051,10 +6051,18 @@ ab_mop_3 = {
 				faction = abolitionists_faction
 				influence = 20
 			}
-			custom_tooltip = unlock_low_countries_series_tt
-			hidden_effect = {
-				set_country_flag = mop_france_completed
-				swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_low_countries
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_low_countries_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_low_countries
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -7040,6 +7048,19 @@ ab_mop_4 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_britain_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_britain_north_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_britain_north
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8134,10 +8155,18 @@ ab_mop_4 = {
 			change_peasant_zeal = {
 				value = 50
 			}
-			custom_tooltip = unlock_low_countries_series_tt
-			hidden_effect = {
-				set_country_flag = mop_germany_completed
-				swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_low_countries
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_low_countries_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_low_countries
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8150,14 +8179,8 @@ mop_low_countries_series_locked = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 		NOT = {
-			has_country_flag = mop_france_completed
+			has_country_flag = unlocked_mop_low_countries
 		}
-		NOT = {
-			has_country_flag = mop_germany_completed
-		}
-		# NOT = {
-		# 	mission_completed = mop_england
-		# }
 	}
 	mop_low_countries_locked = {
 		icon = mission_locked_mission
@@ -8196,11 +8219,7 @@ mop_low_countries_series_unlocked = {
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
-		OR = {
-			has_country_flag = mop_france_completed
-			has_country_flag = mop_germany_completed
-			# 	mission_completed = mop_england
-		}
+		has_country_flag = unlocked_mop_low_countries
 	}
 	mop_low_countries = {
 		icon = mission_lowlands
