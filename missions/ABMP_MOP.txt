@@ -10720,6 +10720,105 @@ ab_mop_5 = {
 }
 
 #Player completes Scandanavia mission before France mission
+mop_britain_north_series_unlocked_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_britain_north
+	}
+	mop_lothian_north_series = {
+		icon = GFX_mop_edinburgh
+		position = 38
+		required_missions = {
+			mop_scotland_north_series
+		}
+		provinces_to_highlight = {
+			province_id = 248
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_production_building_trigger = no
+				has_trade_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_manpower_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = edinburgh_castle
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				248 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = edinburgh_castle
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			248 = {
+				remove_province_modifier = mop_lothian_commune
+				add_province_modifier = {
+					name = mop_great_lothian_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = quartermaster_attrition_bonus_tt
+			set_country_flag = quartermaster_attrition_bonus
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = quartermaster
+				skill = 3
+				culture = scottish
+				cost_multiplier = 0.5
+				location = 248
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
 mop_britain_north_series_unlocked_5 = {
 	slot = 5
 	generic = no
@@ -10793,7 +10892,7 @@ mop_britain_north_series_unlocked_5 = {
 					duration = -1
 				}
 			}
-			custom_tooltip  = enable_highland_charge_tt
+			custom_tooltip = enable_highland_charge_tt
 			tooltip = {
 				add_country_modifier = {
 					name = mop_highland_charge

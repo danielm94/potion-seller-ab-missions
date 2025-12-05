@@ -2127,6 +2127,16 @@ quartermaster = {
 			discipline = 0.01
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = quartermaster_attrition_bonus
+			}
+		}
+		modifier = { 
+			land_attrition = -0.05
+		}
+	}
 	# ]]]
 
 	chance = {

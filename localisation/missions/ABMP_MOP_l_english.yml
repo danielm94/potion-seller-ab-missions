@@ -443,3 +443,6 @@
  integrated_commune_norse_gael_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YNorse-Gaelic§! culture will grant us §G-10.0%§! Galley Cost if they have at least §Y300§! total development."
  integrated_commune_manx_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YManx§! culture will grant us §G-2.5%§! All Power Cost if they have at least §Y300§! total development."
  enable_highland_charge_tt: "Winning battle on §YHighland§! or §YHills§! provinces will grant the following modifier for §Y15 days§!:"
+ mop_lothian_north_series_title: "The Northern Foundry"
+ mop_lothian_north_series_desc: "Supply lines from the Danube are stretched to breaking. We cannot liberate the south with empty muskets. Transform Edinburg into a self-sufficient fortress-factory to arm the invasion."
+ quartermaster_attrition_bonus_tt: "§YQuartermaster§! advisors now grant a scaling §G-5.0%§! Land Attrition bonus."

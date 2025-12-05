@@ -1170,6 +1170,15 @@ mop_lothian_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_lothian_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	shock_damage = 0.1
+	picture = "commune_province_modifier_icon"
+}
+
 mop_highland_charge = {
 	movement_speed = 0.5
 	shock_damage = 0.1
