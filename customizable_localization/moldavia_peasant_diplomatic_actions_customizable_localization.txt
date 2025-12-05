@@ -136,6 +136,22 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = FRP_ideas_list
+		trigger = {
+			FROM = {
+				tag = FRP
+			}
+		}
+	}
+	text = {
+		localisation_key =  CLT_peasant_ideas_list
+		trigger = {
+			FROM = {
+				tag = CLT
+			}
+		}
+	}
 }
 
 defined_text = {
