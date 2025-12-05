@@ -6064,6 +6064,22 @@ ab_mop_3 = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_britain_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_britain_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_britain_south_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_britain_south
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -8279,6 +8295,22 @@ mop_low_countries_series_unlocked = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_britain_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_britain_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_britain_south_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_britain_south
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -10718,6 +10750,7 @@ ab_mop_5 = {
 		}
 	}
 }
+
 mop_britain_series_locked_4 = {
 	slot = 4
 	generic = no
@@ -11036,6 +11069,262 @@ mop_britain_north_series_unlocked_4 = {
 		}
 	}
 }
+
+mop_britain_south_series_unlocked_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_britain_south
+	}
+	mop_londra_south_series = {
+		icon = mission_londres
+		position = 38
+		required_missions = {
+			mop_england_south_series
+		}
+		provinces_to_highlight = {
+			province_id = 236
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+				has_dock_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_coast_defense_building_trigger = no
+				has_fort_building_trigger = no
+				has_manufactory_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				236 = {
+					owned_by = root
+					development = 45
+					province_has_center_of_trade_of_level = 3
+					num_of_times_expanded_infrastructure = 3
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_road_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+		effect = {
+			236 = {
+				remove_province_modifier = mop_londra_commune
+				add_province_modifier = {
+					name = mop_great_londra_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = can_use_tower_of_london_tt
+			set_country_flag = can_use_tower_of_london
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = spy_network_for_soldiers_killed_enabled_tt
+			set_country_flag = spy_network_for_soldiers_killed_enabled
+			custom_tooltip = AB_EMPTY
+			add_navy_tradition = 20
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
+			}
+		}
+	}
+	mop_lothian_south_series = {
+		icon = GFX_mop_edinburgh
+		position = 39
+		required_missions = {
+			mop_scotland_south_series
+		}
+		provinces_to_highlight = {
+			province_id = 248
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				has_production_building_trigger = no
+				has_trade_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_manpower_building_trigger = no
+				has_fort_building_trigger = no
+				NOT = {
+					has_great_project = {
+						type = edinburgh_castle
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				248 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					province_has_center_of_trade_of_level = 2
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_great_project = {
+						type = edinburgh_castle
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			248 = {
+				remove_province_modifier = mop_lothian_commune
+				add_province_modifier = {
+					name = mop_great_lothian_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = quartermaster_attrition_bonus_tt
+			set_country_flag = quartermaster_attrition_bonus
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = quartermaster
+				skill = 3
+				culture = scottish
+				cost_multiplier = 0.5
+				location = 248
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_pale_south_series = {
+		icon = mission_tara
+		position = 40
+		required_missions = {
+			mop_ireland_south_series
+		}
+		provinces_to_highlight = {
+			province_id = 373
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_trade_building_trigger = no
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = hill_tara
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				373 = {
+					owned_by = root
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+					has_trade_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = hill_tara
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			373 = {
+				remove_province_modifier = mop_pale_commune
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_great_pale_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = come_out_ye_black_and_tans_tt
+			set_country_flag = come_out_ye_black_and_tans
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
 mop_britain_series_locked_5 = {
 	slot = 5
 	generic = no
@@ -11111,6 +11400,7 @@ mop_britain_series_locked_5 = {
 		}
 	}
 }
+
 mop_britain_north_series_unlocked_5 = {
 	slot = 5
 	generic = no
@@ -11413,6 +11703,383 @@ mop_britain_north_series_unlocked_5 = {
 		position = 40
 		required_missions = {
 			mop_ireland_north_series
+		}
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				british_isles_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_GBR_commune_diplomatic_actions_tt
+			set_country_flag = unlock_GBR_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = unlock_ABO_commune_diplomatic_actions_tt
+			set_country_flag = unlock_ABO_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = unlock_CLT_commune_diplomatic_actions_tt
+			set_country_flag = unlock_CLT_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_rule_britania
+				duration = -1
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_tea_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_witchcraft_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_black_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_act_of_representation
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_sugar_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_gold_act
+			}
+			simple_unlock_issue = {
+				issue = tuh_the_spice_act
+			}
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			change_peasant_zeal = {
+				value = 50
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 25
+			}
+		}
+	}
+}
+
+mop_britain_south_series_unlocked_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_britain_south
+	}
+	mop_england_south_series = {
+		icon = mission_behead
+		position = 37
+		provinces_to_highlight = {
+			OR = {
+				area = scottish_marches_area
+				area = yorkshire_area
+				area = west_midlands_area
+				area = east_midlands_area
+				area = east_anglia_area
+				area = wessex_area
+				area = home_counties_area
+				area = wales_area
+				area = cornwall_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				east_anglia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				east_midlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				west_midlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				yorkshire_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				scottish_marches_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				wessex_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				home_counties_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				cornwall_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				wales_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_english_bonus_tt
+			set_country_flag = integrated_commune_english_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_welsh_bonus_tt
+			set_country_flag = integrated_commune_welsh_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_cornish_bonus_tt
+			set_country_flag = integrated_commune_cornish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			236 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_londra_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_integrating_the_english
+				duration = -1
+			}
+			halves_parliament_bribe_costs = yes
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
+	mop_scotland_south_series = {
+		icon = mission_rb_conquer_scotland
+		position = 38
+		required_missions = {
+			mop_england_south_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				lowlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				highlands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				kingdom_of_the_isles_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_scottish_bonus_tt
+			set_country_flag = integrated_commune_scottish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_highland_scottish_bonus_tt
+			set_country_flag = integrated_commune_highland_scottish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_norse_gael_bonus_tt
+			set_country_flag = integrated_commune_norse_gael_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_manx_bonus_tt
+			set_country_flag = integrated_commune_manx_bonus_flag
+			custom_tooltip = AB_EMPTY
+			248 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_lothian_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = enable_highland_charge_tt
+			tooltip = {
+				add_country_modifier = {
+					name = mop_highland_charge
+					duration = 15
+				}
+			}
+			set_country_flag = enable_highland_charge
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_ireland_south_series = {
+		icon = mission_rb_rule_britannia_irish_version
+		position = 39
+		required_missions = {
+			mop_scotland_south_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				ulster_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				munster_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				connacht_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				leinster_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_irish_bonus_tt
+			set_country_flag = integrated_commune_irish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			373 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_pale_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_irish_defiance
+				duration = -1
+			}
+			add_accepted_culture_or_dip_power_stated = {
+				culture = irish
+				dip_reward = yes
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_unite_britain_south_series = {
+		icon = mission_thrones
+		position = 40
+		required_missions = {
+			mop_ireland_south_series
 		}
 		provinces_to_highlight = {
 			region = british_isles_region
