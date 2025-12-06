@@ -3509,6 +3509,22 @@ mop_rome_unlocked_series_2 = {
 				faction = abolitionists_faction
 				influence = 25
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -3740,7 +3756,7 @@ mop_france_northern_series_2 = {
 					duration = -1
 				}
 			}
-			custom_tooltip  = drill_master_fire_damage_buff_tt
+			custom_tooltip = drill_master_fire_damage_buff_tt
 			set_country_flag = drill_master_fire_damage_buff
 			custom_tooltip = AB_EMPTY
 			add_army_professionalism = 0.05
@@ -3750,6 +3766,201 @@ mop_france_northern_series_2 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+}
+
+mop_france_southern_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_france_south
+	}
+	mop_bordeaux_southern_series = {
+		icon = GFX_mop_bordeaux
+		position = 37
+		required_missions = {
+			mop_southern_france_southern_series
+		}
+		provinces_to_highlight = {
+			province_id = 174
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				has_road_building_trigger = no
+				has_manufactory_trigger = no
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				174 = {
+					owned_by = root
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_road_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			174 = {
+				remove_province_modifier = mop_bordeaux_commune
+				add_province_modifier = {
+					name = mop_great_bordeaux_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = drill_master_fire_damage_buff_tt
+			set_country_flag = drill_master_fire_damage_buff
+			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_paris_southern_series = {
+		icon = fra_crown_seat_capital
+		position = 38
+		required_missions = {
+			mop_northern_france_southern_series
+		}
+		provinces_to_highlight = {
+			province_id = 183
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				has_tax_building_trigger = no
+				has_manpower_building_trigger = no
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_fort_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = notre_dame_cathedral
+						tier = 2
+					}
+				}
+				NOT = {
+					has_great_project = {
+						type = versailles
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				183 = {
+					owned_by = root
+					development = 45
+					religion = orthodox
+					province_has_center_of_trade_of_level = 3
+					num_of_times_expanded_infrastructure = 3
+					has_tax_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = notre_dame_cathedral
+						tier = 2
+					}
+					has_great_project = {
+						type = versailles
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			183 = {
+				remove_province_modifier = mop_paris_commune
+				add_province_modifier = {
+					name = mop_great_paris_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.5
+				culture = cosmopolitan_french
+				religion = orthodox
+				name = "Patriarch of Paris"
+				location = 183
+			}
+			custom_tooltip = AB_EMPTY
+			183 = {
+				add_province_modifier = {
+					name = mop_patriarchate_of_paris
+					duration = -1
+				}
+			}
+			custom_tooltip = orthodox_notre_dame_bonus_tt
+			set_country_flag = orthodox_notre_dame_bonus
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 20
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
 			}
 		}
 	}
@@ -5991,6 +6202,22 @@ ab_mop_3 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_genoa = {
@@ -6164,6 +6391,19 @@ ab_mop_3 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_low_countries
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_low_countries_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_low_countries
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -6582,6 +6822,336 @@ mop_france_northern_series_3 = {
 		position = 38
 		required_missions = {
 			mop_southern_france_northern_series
+		}
+		provinces_to_highlight = {
+			region = france_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				france_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_FRP_commune_diplomatic_actions_tt
+			set_country_flag = unlock_FRP_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = peasant_zeal_french_upgrade_tt
+			set_country_flag = peasant_zeal_french_upgrade
+			custom_tooltip = AB_EMPTY
+			simple_unlock_issue = {
+				issue = wine_parliament_issue
+			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = philosopher
+				skill = 3
+				culture = cosmopolitan_french
+				religion = catholic
+				name = "Jean Meslier"
+				location = 183
+				cost_multiplier = 0.1
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 50
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 25
+			}
+		}
+	}
+}
+
+mop_france_southern_series_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_france_south
+	}
+	mop_southern_france_southern_series = {
+		icon = mission_invade_occitania
+		position = 36
+		provinces_to_highlight = {
+			OR = {
+				area = provence_area
+				area = savoy_dauphine_area
+				area = languedoc_area
+				area = massif_central_area
+				area = pyrenees_area
+				area = guyenne_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				provence_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				savoy_dauphine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				languedoc_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				massif_central_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				pyrenees_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				guyenne_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_gascon_bonus_tt
+			set_country_flag = integrated_commune_gascon_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_occitain_bonus_tt
+			set_country_flag = integrated_commune_occitain_bonus_flag
+			custom_tooltip = AB_EMPTY
+			174 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_bordeaux_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_march_to_paris
+				duration = 7300
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
+	mop_northern_france_southern_series = {
+		icon = mission_downfall
+		position = 37
+		required_missions = {
+			mop_southern_france_southern_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = brittany_area
+				area = normandy_area
+				area = lorraine_area
+				area = picardy_area
+				area = champagne_area
+				area = ile_de_france_area
+				area = loire_area
+				area = bourgogne_area
+				area = west_burgundy_area
+				area = poitou_area
+				area = orleans_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				brittany_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				normandy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lorraine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				picardy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				champagne_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				ile_de_france_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				loire_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				bourgogne_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				west_burgundy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				poitou_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				orleans_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_cosmopolitan_french_bonus_tt
+			set_country_flag = integrated_commune_cosmopolitan_french_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_burgundian_bonus_tt
+			set_country_flag = integrated_commune_burgundian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_wallonian_bonus_tt
+			set_country_flag = integrated_commune_wallonian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			183 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_paris_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_peasants_in_paris
+				duration = -1
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_low_countries
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_low_countries_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_low_countries
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_britain_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_britain_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_britain_south_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_britain_south
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_france_liberated_southern_series = {
+		icon = centralize_france
+		position = 38
+		required_missions = {
+			mop_northern_france_southern_series
 		}
 		provinces_to_highlight = {
 			region = france_region
@@ -8713,19 +9283,6 @@ ab_mop_4 = {
 			change_peasant_zeal = {
 				value = 50
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_low_countries
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_low_countries_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_low_countries
-					swap_non_generic_missions = yes
-				}
-			}
 		}
 	}
 }
@@ -8877,7 +9434,7 @@ mop_low_countries_series_unlocked = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_france_north_tt
+				custom_tooltip = unlocked_mop_france_series_tt
 				hidden_effect = {
 					set_country_flag = unlocked_mop_france_north
 					swap_non_generic_missions = yes
@@ -12182,6 +12739,35 @@ mop_britain_north_series_unlocked_5 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_north
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_low_countries
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_low_countries_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_low_countries
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_ireland_north_series = {
@@ -12345,35 +12931,6 @@ mop_britain_north_series_unlocked_5 = {
 				faction = abolitionists_faction
 				influence = 25
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_france_north
-					}
-					NOT = {
-						has_country_flag = unlocked_mop_france_south
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_france_north_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_france_north
-					swap_non_generic_missions = yes
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_low_countries
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_low_countries_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_low_countries
-					swap_non_generic_missions = yes
-				}
-			}
 		}
 	}
 }
@@ -12502,6 +13059,35 @@ mop_britain_south_series_unlocked_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_north
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_low_countries
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_low_countries_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_low_countries
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -12750,35 +13336,6 @@ mop_britain_south_series_unlocked_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 25
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_france_north
-					}
-					NOT = {
-						has_country_flag = unlocked_mop_france_south
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_france_north_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_france_north
-					swap_non_generic_missions = yes
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_low_countries
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_low_countries_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_low_countries
-					swap_non_generic_missions = yes
-				}
 			}
 		}
 	}
