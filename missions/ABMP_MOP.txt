@@ -3966,6 +3966,66 @@ mop_france_southern_series_2 = {
 	}
 }
 
+mop_iberia_locked_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_iberia_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_iberia_south
+		}
+	}
+	mop_iberia_locked_series_2_1 = {
+		icon = mission_locked_mission
+		position = 39
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_iberia_locked_series_2_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_iberia_locked_series_2_1_desc
+		}
+	}
+	mop_iberia_locked_series_2_2 = {
+		icon = mission_locked_mission
+		position = 40
+		required_missions = {
+			mop_iberia_locked_series_2_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_iberia_locked_series_2_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_iberia_locked_series_2_1_desc
+		}
+	}
+	mop_iberia_locked_series_2_3 = {
+		icon = mission_locked_mission
+		position = 41
+		required_missions = {
+			mop_iberia_locked_series_2_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_iberia_locked_series_2_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_iberia_locked_series_2_1_desc
+		}
+	}
+}
+
 ab_mop_3 = {
 	slot = 3
 	generic = no
