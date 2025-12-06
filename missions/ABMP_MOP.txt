@@ -3513,6 +3513,52 @@ mop_rome_unlocked_series_2 = {
 	}
 }
 
+mop_france_locked_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_france_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_france_south
+		}
+	}
+	mop_france_locked_series_2_1 = {
+		icon = mission_locked_mission
+		position = 37
+		required_missions = {
+			mop_france_locked_series_3_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_france_locked_series_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_france_locked_series_3_1_desc
+		}
+	}
+	mop_france_locked_series_2_2 = {
+		icon = mission_locked_mission
+		position = 38
+		required_missions = {
+			mop_france_locked_series_3_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_france_locked_series_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_france_locked_series_3_1_desc
+		}
+	}
+}
 ab_mop_3 = {
 	slot = 3
 	generic = no
