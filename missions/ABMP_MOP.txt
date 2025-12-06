@@ -3578,6 +3578,9 @@ mop_france_northern_series_2 = {
 			province_id = 183
 			OR = {
 				NOT = {
+					owned_by = root
+				}
+				NOT = {
 					development = 45
 				}
 				NOT = {
@@ -3618,6 +3621,7 @@ mop_france_northern_series_2 = {
 			}
 			else = {
 				183 = {
+					owned_by = root
 					development = 45
 					religion = orthodox
 					province_has_center_of_trade_of_level = 3
@@ -3674,6 +3678,78 @@ mop_france_northern_series_2 = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 20
+			}
+		}
+	}
+	mop_bordeaux_northern_series = {
+		icon = GFX_mop_bordeaux
+		position = 38
+		required_missions = {
+			mop_southern_france_northern_series
+		}
+		provinces_to_highlight = {
+			province_id = 174
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				has_road_building_trigger = no
+				has_manufactory_trigger = no
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				174 = {
+					owned_by = root
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_road_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			174 = {
+				remove_province_modifier = mop_bordeaux_commune
+				add_province_modifier = {
+					name = mop_great_bordeaux_commune
+					duration = -1
+				}
+			}
+			custom_tooltip  = drill_master_fire_damage_buff_tt
+			set_country_flag = drill_master_fire_damage_buff
+			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}
@@ -6354,6 +6430,7 @@ mop_france_northern_series_3 = {
 				remove_core = owner
 				add_core = root
 				cede_province = root
+				center_of_trade = 1
 				add_province_modifier = {
 					name = mop_paris_commune
 					duration = -1

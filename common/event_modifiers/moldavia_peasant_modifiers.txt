@@ -1085,6 +1085,16 @@ mop_bordeaux_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_bordeaux_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	leader_land_fire = 1
+	fire_damage = 0.05
+	picture = "commune_province_modifier_icon"
+}
+
 mop_tunis_commune = {
 	min_local_autonomy = 25
 	local_governing_cost = -0.75
