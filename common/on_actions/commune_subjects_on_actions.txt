@@ -169,3 +169,15 @@ on_dependency_lost = {
 		}
 	}
 }
+
+on_province_religion_changed = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = reconquista_convert_religion_converts_culture
+			}
+			culture = andalucian
+		}
+		change_culture = owner
+	}
+}

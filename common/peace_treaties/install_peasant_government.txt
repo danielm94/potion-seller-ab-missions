@@ -2,13 +2,13 @@ po_install_peasant_government = {
 	# Show in treaties tab
 	category = 6
 	prestige_base = 0.25
-	ae_base = 0.25
+	ae_base = 0.4
 	power_projection = vassalized_rival
 	power_cost_base = 1
 	# Warscore cost scales directly according to the warscore cost of the provinces that the owner retains
 	# IE: If you take some provinces, the cost of forced conversion is reduced
 	warscore_cost = {
-		all_provinces = 1
+		all_provinces = 0.75
 		owner_keeps = 0		# The provinces that are not of any of the types below
 		conquered = 0		# Provinces that are selected by a Demand Province treaty
 		returned_core = 0		# Provinces that are selected by a Return Core treaty
@@ -71,8 +71,7 @@ po_install_peasant_government = {
 				value = 50
 			}
 		}
-		create_subject = {
-			subject_type = allied_commune
+		create_allied_commune = {
 			who = FROM
 		}
 		if = {
@@ -121,30 +120,47 @@ po_install_peasant_government = {
 		FROM = {
 			save_global_event_target_as = new_peasant_subject
 		}
-		identify_releasable_countries_for_target = {
-			target = event_target:new_peasant_subject
-		}
 		if = {
 			limit = {
 				FROM = {
-					can_be_balkanized = yes
+					is_or_was_tag = {
+						tag = ADU
+					}
+					any_owned_province = {
+						region = iberia_region
+					}
 				}
 			}
 			country_event = {
-				id = moldavia_peasant_events.3
+				id = moldavia_peasant_events.13
 			}
 		}
 		else = {
-			clear_releasable_countries_event_targets = yes
-			clear_identified_releasable_flags = yes
-			if  = {
+			identify_releasable_countries_for_target = {
+				target = event_target:new_peasant_subject
+			}
+			if = {
 				limit = {
 					FROM = {
-						tag = PAP
+						can_be_balkanized = yes
 					}
 				}
 				country_event = {
-					id = moldavia_peasant_events.8
+					id = moldavia_peasant_events.3
+				}
+			}
+			else = {
+				clear_releasable_countries_event_targets = yes
+				clear_identified_releasable_flags = yes
+				if = {
+					limit = {
+						FROM = {
+							tag = PAP
+						}
+					}
+					country_event = {
+						id = moldavia_peasant_events.8
+					}
 				}
 			}
 		}

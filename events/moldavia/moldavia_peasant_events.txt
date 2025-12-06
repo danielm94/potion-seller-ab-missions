@@ -757,10 +757,62 @@ country_event = {
 	id = moldavia_peasant_events.13
 	title = moldavia_peasant_events.13.t
 	desc = moldavia_peasant_events.13.d
-	picture = SIEGE_eventPicture
+	picture = muslimgfx_OVEREXTENSION_eventPicture
 	is_triggered_only = yes
 	option = {
 		name = moldavia_peasant_events.13.a
-		
+		andalusia_balkanization_galicia_effect = yes
+		andalusia_balkanization_leon_effect = yes
+		andalusia_balkanization_asturias_effect = yes
+		andalusia_balkanization_navarra_effect = yes
+		andalusia_balkanization_aragon_effect = yes
+		andalusia_balkanization_catalonia_effect = yes
+		andalusia_balkanization_majorica_effect = yes
+		andalusia_balkanization_lusitania_effect = yes
+		andalusia_balkanization_castille_effect = yes
+		andalusia_balkanization_valencia_effect = yes
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = reconquista_convert_religion_converts_culture_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					capital_scope = {
+						region = iberia_region
+					}
+				}
+				set_country_flag = reconquista_convert_religion_converts_culture
+				capital_scope = {
+					change_religion = owner
+					change_culture = owner
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = balkanized_released_us
+				}
+				add_liberty_desire = -10
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		reverse_add_opinion = {
+			who = event_target:new_peasant_subject
+			modifier = balkanized_our_nation
+			multiplier = 10
+		}
+		event_target:new_peasant_subject = {
+			add_trust = {
+				who = root
+				value = -100
+			}
+		}
+		custom_tooltip = pissed_off_adu_tt
+		hidden_effect = {
+			free_vassal = event_target:new_peasant_subject
+		}
 	}
 }

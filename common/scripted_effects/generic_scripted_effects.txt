@@ -3738,3 +3738,13 @@ display_tooltip_if_has_country_flag = {
 	}
 	]
 }
+
+#SCOPE = COUNTRY
+set_capital_if_owned = {
+	if = {
+		limit = {
+			owns = $id$
+		}
+		set_capital = $id$
+	}
+}
