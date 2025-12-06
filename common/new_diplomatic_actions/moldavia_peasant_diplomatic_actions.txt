@@ -305,8 +305,7 @@ invite_to_peasant_league = {
 		}
 	}
 	on_accept = {
-		create_subject = {
-			subject_type = allied_commune
+		create_allied_commune = {
 			who = FROM
 		}
 		add_faction_influence = {

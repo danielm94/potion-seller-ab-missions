@@ -1,4 +1,12 @@
 #SCOPE = COUNTRY
+create_allied_commune = {
+	create_subject = {
+		subject_type = allied_commune
+		who = $who$
+	}
+}
+
+#SCOPE = COUNTRY
 enable_commune_integration_subject = {
 	set_country_flag = commune_is_being_integrated_subject
 }
@@ -973,8 +981,7 @@ release_balkanized_commune_country = {
 		}
 		hidden_effect = {
 			ROOT = {
-				create_subject = {
-					subject_type = allied_commune
+				create_allied_commune = {
 					who = $target$
 				}
 			}

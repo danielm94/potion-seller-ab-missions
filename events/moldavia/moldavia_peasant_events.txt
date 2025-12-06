@@ -578,8 +578,7 @@ country_event = {
 					who = ROP
 					modifier = liberated_us_from_nobles
 				}
-				create_subject = {
-					subject_type = allied_commune
+				create_allied_commune = {
 					who = ROP
 				}
 			}
@@ -641,6 +640,7 @@ country_event = {
 		name = AB_EMPTY
 	}
 }
+
 #successful defenestration
 country_event = {
 	id = moldavia_peasant_events.10
@@ -703,7 +703,9 @@ country_event = {
 				full_idea_group = economic_ideas
 			}
 		}
-		ai_chance = { factor = 5 }
+		ai_chance = {
+			factor = 5
+		}
 		add_inflation = -5
 		add_stability_or_adm_power = yes
 		add_years_of_income = 1
@@ -719,7 +721,9 @@ country_event = {
 			full_idea_group = economic_ideas
 		}
 		highlight = yes
-		ai_chance = { factor = 5 }
+		ai_chance = {
+			factor = 5
+		}
 		add_inflation = -7.5
 		add_stability_or_adm_power = yes
 		add_adm_power = 50
@@ -745,5 +749,18 @@ country_event = {
 			name = mop_successful_bombing
 			duration = 60
 		}
+	}
+}
+
+#Andalusia Carved Up
+country_event = {
+	id = moldavia_peasant_events.13
+	title = moldavia_peasant_events.13.t
+	desc = moldavia_peasant_events.13.d
+	picture = SIEGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_peasant_events.13.a
+		
 	}
 }

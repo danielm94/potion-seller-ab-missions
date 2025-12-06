@@ -42,8 +42,7 @@ po_reintegrate_into_peasant_league = {
 			}
 		}
 		else = {
-			create_subject = {
-				subject_type = allied_commune
+			create_allied_commune = {
 				who = FROM
 			}
 		}

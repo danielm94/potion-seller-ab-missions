@@ -30,8 +30,7 @@ po_force_into_peasant_league = {
 		always = yes
 	}
 	effect = {
-		create_subject = {
-			subject_type = allied_commune
+		create_allied_commune = {
 			who = FROM
 		}
 		FROM = {
