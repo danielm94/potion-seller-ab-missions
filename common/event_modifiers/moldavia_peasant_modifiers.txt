@@ -198,6 +198,8 @@ mop_patriarchate_of_stamboli = {
 	yearly_patriarch_authority = 0.001
 	republican_tradition = 0.25
 	prestige_decay = -0.01
+	local_development_cost = -0.1
+	local_build_cost = -0.1
 	local_great_project_upgrade_cost = -0.1
 	religion = yes
 }
@@ -1161,6 +1163,15 @@ mop_paris_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
+mop_great_paris_commune = {
+	local_governing_cost = -1
+	province_trade_power_value = 20
+	local_development_cost = -0.1
+	prestige = 1
+	num_accepted_cultures = 1
+	picture = "commune_province_modifier_icon"
+}
+
 mop_peasants_in_paris = {
 	diplomatic_annexation_cost = -0.1
 	peasant_zeal_gain_modifier = 0.1
@@ -1217,8 +1228,9 @@ mop_pale_commune = {
 	rebel_support_efficiency = 1
 	picture = "commune_province_modifier_icon"
 }
+
 mop_great_pale_commune = {
-    min_local_autonomy = 15
+	min_local_autonomy = 15
 	local_governing_cost = -1
 	province_trade_power_value = 15
 	local_development_cost = -0.1
@@ -1237,4 +1249,12 @@ mop_successful_bombing = {
 mop_rule_britania = {
 	global_naval_engagement_modifier = 0.1
 	navy_tradition_decay = -0.02
+}
+
+mop_patriarchate_of_paris = {
+	yearly_patriarch_authority = 0.001
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	prestige_per_development_from_conversion = 0.2
+	religion = yes
 }

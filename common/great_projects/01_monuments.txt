@@ -3741,7 +3741,19 @@ notre_dame_cathedral = {
 			church_power_modifier = 0.05
 			tolerance_own = 0.5
 		}
-
+		conditional_modifier = {
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = has_unlocked_bonus_through_mission_tt
+					owner = {
+						has_country_flag = orthodox_notre_dame_bonus
+					}
+				}
+			}
+			modifier = { 
+				yearly_patriarch_authority = 0.001
+			}
+		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
@@ -3773,7 +3785,19 @@ notre_dame_cathedral = {
 			church_power_modifier = 0.1
 			tolerance_own = 1
 		}
-
+		conditional_modifier = {
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = has_unlocked_bonus_through_mission_tt
+					owner = {
+						has_country_flag = orthodox_notre_dame_bonus
+					}
+				}
+			}
+			modifier = { 
+				yearly_patriarch_authority = 0.002
+			}
+		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
@@ -3806,7 +3830,19 @@ notre_dame_cathedral = {
 			tolerance_own = 2
 			religious_unity = 0.1
 		}
-
+		conditional_modifier = {
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = has_unlocked_bonus_through_mission_tt
+					owner = {
+						has_country_flag = orthodox_notre_dame_bonus
+					}
+				}
+			}
+			modifier = { 
+				yearly_patriarch_authority = 0.005
+			}
+		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
 		}
