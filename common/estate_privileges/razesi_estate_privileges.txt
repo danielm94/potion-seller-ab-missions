@@ -623,10 +623,13 @@ estate_razesi_monopoly_of_livestock = {
 			trade_goods = livestock
 		}
 		NOT = {
-			has_estate_privilege = estate_razesi_monopoly_of_livestock
+			has_estate_privilege = estate_nobles_monopoly_of_livestock
 		}
 	}
 	can_select = {
+		NOT = {
+			has_estate_privilege = estate_nobles_monopoly_of_livestock
+		}
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = {
