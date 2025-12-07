@@ -804,4 +804,104 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_lusitanian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_lusitanian_bonus_flag
+			}
+			culture = lusitanian
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_leonese_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_leonese_bonus_flag
+			}
+			culture = leonese
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_castillian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_castillian_bonus_flag
+			}
+			culture = castillian
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_aragonese_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_aragonese_bonus_flag
+			}
+			culture = aragonese
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_valencian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_valencian_bonus_flag
+			}
+			culture = valencian
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_catalan_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_catalan_bonus_flag
+			}
+			culture = catalan
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_galician_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_galician_bonus_flag
+			}
+			culture = galician
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_asturian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_asturian_bonus_flag
+			}
+			culture = asturian
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_basque_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_basque_bonus_flag
+			}
+			culture = basque
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_andalucian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_andalucian_bonus_flag
+			}
+			culture = andalucian
+			total_development = 450
+		}
+	}
 }
