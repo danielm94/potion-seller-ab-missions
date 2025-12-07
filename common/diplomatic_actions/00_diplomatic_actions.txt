@@ -193,9 +193,7 @@ vassalaction = {
 					value = 190
 				}
 			}
-			FROM = {
-				is_at_war = no
-			}
+			FROM = { is_at_war = no }
 		}
 	}
 }
@@ -307,12 +305,8 @@ tributary_state_action = {
 		}
 		allow = {
 			FROM = {
-				NOT = {
-					has_reform = chinawarlord
-				}
-				NOT = {
-					has_reform = daimyo
-				}
+				NOT = { has_reform = chinawarlord }
+				NOT = { has_reform = daimyo }
 			}
 		}
 	}
@@ -324,12 +318,8 @@ ask_for_tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			NOT = {
-				has_reform = chinawarlord
-			}
-			NOT = {
-				has_reform = daimyo
-			}
+			NOT = { has_reform = chinawarlord }
+			NOT = { has_reform = daimyo }
 		}
 	}
 }

@@ -1748,8 +1748,13 @@ roman_republic_government = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
 	potential = {
-		has_dlc = "Domination"
-		primary_culture = roman 
+		OR = {
+			AND = {
+				has_dlc = "Domination"
+				primary_culture = roman 
+			}
+			tag = RMR
+		}
 	}
 	modifiers = {
 		administrative_efficiency = 0.05
