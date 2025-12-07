@@ -16,5 +16,6 @@
  for_every_province_that_meets_the_missions_requirements: "For every province that meets the mission's requirements:"
  has_unlocked_great_project_through_mission_tt: "We have unlocked access to this great project through a mission."
  has_unlocked_bonus_through_mission_tt: "We have unlocked this bonus through a mission."
+ unlocked_this_through_a_mission_reward_tt: "Unlocked this through a mission reward."
  show_verbose_tooltips_tt: "§VEnable Detailed Tooltips: §YCTRL+T§!§!"
  hide_verbose_tooltips_tt: "§VDisable Detailed Tooltips: §YCTRL+T§!§!"

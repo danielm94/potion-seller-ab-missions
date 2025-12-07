@@ -1208,7 +1208,10 @@ country_event = {
 		name = peasant_election_events.4.leaguists_colonialism_plan
 		highlight = yes
 		trigger = {
-			has_country_flag = leaguists_colonialism_plan_enabled
+			custom_trigger_tooltip = {
+				tooltip = unlocked_this_through_a_mission_reward_tt
+				has_country_flag = leaguists_colonialism_plan_enabled
+			}
 		}
 		custom_tooltip = ten_years_plan_tt
 		tooltip = {
@@ -1715,26 +1718,26 @@ country_event = {
 
 #10 Year Plan Fruition - Colonialism
 country_event = {
-    id = peasant_election_events.21
-    title = peasant_election_events.plan_success_title
-    desc = peasant_election_events.21.d
-    picture = TRADE_GOODS_eventPicture
-    trigger = {
-        had_ruler_flag = {
-            flag = leaguists_colonialism_plan_flag
-            days = 3650
-        }
-    }
-    immediate = {
-        hidden_effect = {
-            clr_ruler_flag = leaguists_colonialism_plan_flag
-        }
-    }
-    option = {
-        name = peasant_election_events.plan_success_ok
-        add_ruler_modifier = {
-            name = leaguists_colonialism_plan
-            duration = -1
-        }
-    }
+	id = peasant_election_events.21
+	title = peasant_election_events.plan_success_title
+	desc = peasant_election_events.21.d
+	picture = TRADE_GOODS_eventPicture
+	trigger = {
+		had_ruler_flag = {
+			flag = leaguists_colonialism_plan_flag
+			days = 3650
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clr_ruler_flag = leaguists_colonialism_plan_flag
+		}
+	}
+	option = {
+		name = peasant_election_events.plan_success_ok
+		add_ruler_modifier = {
+			name = leaguists_colonialism_plan
+			duration = -1
+		}
+	}
 }
