@@ -298,6 +298,14 @@ ab_building_manpower_effect = {
 	if = {
 		limit = {
 			FROM = {
+				has_country_flag = jap_building_manpower
+			}
+		}
+		add_army_professionalism = 0.001
+	}
+	if = {
+		limit = {
+			FROM = {
 				has_country_flag = ab_barrack_grant_extra_manpower_flag
 			}
 		}
@@ -311,9 +319,39 @@ ab_building_manpower_effect = {
 ab_removing_manpower_effect = {
 	if = {
 		limit = {
+			FROM = {
+				has_country_flag = jap_building_manpower
+			}
+		}
+		add_army_professionalism = -0.001
+	}
+	if = {
+		limit = {
 			has_province_modifier = ivr_extra_manpower_1
 		}
 		remove_province_modifier = ivr_extra_manpower_1
+	}
+}
+
+ab_building_forcelimit_effect = {
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = jap_building_manpower
+			}
+		}
+		add_army_professionalism = 0.001
+	}
+}
+
+ab_removing_forcelimit_effect = {
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = jap_building_manpower
+			}
+		}
+		add_army_professionalism = -0.001
 	}
 }
 

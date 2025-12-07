@@ -7096,6 +7096,13 @@ pyramid_of_cheops = {
 				culture_group = turko_semitic
 				province_is_or_accepts_culture = yes
 			}
+			AND = {
+				mission_completed = rmr_egyptian_ambition
+				OR = {
+					tag = RMR
+					was_tag = RMR
+				}
+			}
 		}
 	}
 
@@ -7137,6 +7144,13 @@ pyramid_of_cheops = {
 			AND = {
 				culture_group = turko_semitic
 				province_is_or_accepts_culture = yes
+			}
+			AND = {
+				mission_completed = rmr_egyptian_ambition
+				OR = {
+					tag = RMR
+					was_tag = RMR
+				}
 			}
 		}
 	}
