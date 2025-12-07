@@ -49,6 +49,11 @@ leaguists_establish_spheres_of_influence_plan = {
 	can_transfer_vassal_wargoal = yes
 }
 
+leaguists_colonialism_plan = {
+	colonists = 1
+	may_explore = yes
+}
+
 abolitionists_spy_plan = {
 	rebel_support_efficiency = 1
 	spy_action_cost_modifier = -0.25

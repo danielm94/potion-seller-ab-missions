@@ -1205,16 +1205,20 @@ country_event = {
 		}
 	}
 	option = {
-		name = peasant_election_events.4.leaguists_establish_spheres_of_influence_plan
+		name = peasant_election_events.4.leaguists_colonialism_plan
+		highlight = yes
+		trigger = {
+			has_country_flag = leaguists_colonialism_plan_enabled
+		}
 		custom_tooltip = ten_years_plan_tt
 		tooltip = {
 			add_ruler_modifier = {
-				name = leaguists_establish_spheres_of_influence_plan
+				name = leaguists_colonialism_plan
 				duration = -1
 			}
 		}
 		hidden_effect = {
-			set_ruler_flag = leaguists_establish_spheres_of_influence_plan_flag
+			set_ruler_flag = leaguists_colonialism_plan_flag
 		}
 		ten_year_plan_cost_scripted_effect = {
 			leaguists = yes
@@ -1707,4 +1711,30 @@ country_event = {
 			duration = -1
 		}
 	}
+}
+
+#10 Year Plan Fruition - Colonialism
+country_event = {
+    id = peasant_election_events.21
+    title = peasant_election_events.plan_success_title
+    desc = peasant_election_events.21.d
+    picture = TRADE_GOODS_eventPicture
+    trigger = {
+        had_ruler_flag = {
+            flag = leaguists_colonialism_plan_flag
+            days = 3650
+        }
+    }
+    immediate = {
+        hidden_effect = {
+            clr_ruler_flag = leaguists_colonialism_plan_flag
+        }
+    }
+    option = {
+        name = peasant_election_events.plan_success_ok
+        add_ruler_modifier = {
+            name = leaguists_colonialism_plan
+            duration = -1
+        }
+    }
 }
