@@ -603,6 +603,7 @@ country_event = {
 	}
 }
 
+#Oktoberfest event
 country_event = {
 	id = moldavia_peasant_events.9
 	title = AB_EMPTY
