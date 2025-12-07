@@ -2312,7 +2312,7 @@ andalusia_balkanization_castille_effect = {
 						change_government = republic
 						add_government_reform = peasants_republic
 						set_capital_if_owned = {
-							id = 217
+							id = 219
 						}
 					}
 				}
