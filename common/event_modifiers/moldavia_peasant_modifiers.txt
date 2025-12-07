@@ -1268,3 +1268,12 @@ mop_patriarchate_of_paris = {
 	prestige_per_development_from_conversion = 0.2
 	religion = yes
 }
+
+mop_granada_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	global_heathen_missionary_strength = 0.01
+	picture = "commune_province_modifier_icon"
+}

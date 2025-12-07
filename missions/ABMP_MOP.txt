@@ -1407,6 +1407,232 @@ mop_rome_unlocked_series_1 = {
 	}
 }
 
+mop_iberia_locked_series_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_iberia_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_iberia_south
+		}
+	}
+	mop_iberia_locked_series_1_1 = {
+		icon = mission_locked_mission
+		position = 38
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_iberia_locked_series_2_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_iberia_locked_series_2_1_desc
+		}
+	}
+	mop_iberia_locked_series_1_2 = {
+		icon = mission_locked_mission
+		position = 39
+		required_missions = {
+			mop_iberia_locked_series_1_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_iberia_locked_series_2_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_iberia_locked_series_2_1_desc
+		}
+	}
+	mop_iberia_locked_series_1_3 = {
+		icon = mission_locked_mission
+		position = 40
+		required_missions = {
+			mop_iberia_locked_series_1_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_iberia_locked_series_2_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_iberia_locked_series_2_1_desc
+		}
+	}
+}
+
+mop_iberia_north_series_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_iberia_north
+	}
+}
+
+mop_iberia_south_series_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_iberia_south
+	}
+	mop_south_iberia_south_series = {
+		icon = mission_reclaim_andalucia
+		position = 38
+		provinces_to_highlight = {
+			OR = {
+				area = alentejo_area
+				area = upper_andalucia_area
+				area = lower_andalucia_area
+				area = extremadura_area
+				area = toledo_area
+				area = valencia_area
+				area = baleares_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				alentejo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				upper_andalucia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lower_andalucia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				extremadura_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				toledo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				valencia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				baleares_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_lusitanian_bonus_tt
+			set_country_flag = integrated_commune_lusitanian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_leonese_bonus_tt
+			set_country_flag = integrated_commune_leonese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_castillian_bonus_tt
+			set_country_flag = integrated_commune_castillian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_valencian_bonus_tt
+			set_country_flag = integrated_commune_valencian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_andalucian_bonus_tt
+			set_country_flag = integrated_commune_andalucian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			223 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_granada_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = leaguists_colonialism_plan_enabled_tt
+			set_country_flag = leaguists_colonialism_plan_enabled
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = subjects_perma_claim_rest_of_iberia_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							region = iberia_region
+						}
+					}
+					every_province = {
+						limit = {
+							region = iberia_region
+							NOT = {
+								owned_by = prev
+							}
+							NOT = {
+								owned_by = root
+							}
+							NOT = {
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+						add_permanent_claim = prev
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = spanish_inquisition_kek_tt
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.5
+				religion = root
+				culture = Valencian
+				location = 223
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
+}
+
 ab_mop_2 = {
 	slot = 2
 	generic = no
@@ -3982,6 +4208,9 @@ mop_iberia_locked_series_2 = {
 	mop_iberia_locked_series_2_1 = {
 		icon = mission_locked_mission
 		position = 39
+		required_missions = {
+			mop_iberia_locked_series_1_1
+		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_iberia_locked_series_2_1_desc
@@ -3996,7 +4225,7 @@ mop_iberia_locked_series_2 = {
 		icon = mission_locked_mission
 		position = 40
 		required_missions = {
-			mop_iberia_locked_series_2_1
+			mop_iberia_locked_series_1_2
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -4008,21 +4237,25 @@ mop_iberia_locked_series_2 = {
 			custom_tooltip = mop_iberia_locked_series_2_1_desc
 		}
 	}
-	mop_iberia_locked_series_2_3 = {
-		icon = mission_locked_mission
-		position = 41
-		required_missions = {
-			mop_iberia_locked_series_2_2
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = mop_iberia_locked_series_2_1_desc
-				always = no
-			}
-		}
-		effect = {
-			custom_tooltip = mop_iberia_locked_series_2_1_desc
-		}
+}
+
+mop_iberia_north_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_iberia_north
+	}
+}
+
+mop_iberia_south_series_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_iberia_south
 	}
 }
 
