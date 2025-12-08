@@ -60,6 +60,7 @@ po_force_into_peasant_league = {
 			who = FROM
 			modifier = had_war_with_us
 		}
+		calculate_total_development_of_commune_subjects = yes
 	}
 	ai_weight = {
 		export_to_variable = {

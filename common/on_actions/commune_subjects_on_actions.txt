@@ -116,7 +116,6 @@ on_dependency_gained = {
 						}
 						add_truce_with = PREV
 					}
-					
 				}
 			}
 			if = {
@@ -321,5 +320,23 @@ on_dependency_gained = {
 				rename_iberia_effect = yes
 			}
 		}
+	}
+}
+
+on_monthly_pulse = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		calculate_total_development_of_commune_subjects = yes
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		calculate_total_development_of_commune_subjects = yes
 	}
 }

@@ -228,3 +228,28 @@ tercio_on_development_scripted_effect = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+moldavian_peasant_government_reform_initialization_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = peasant_variables_initialized
+			}
+		}
+		faction_fatigue_initialize_faction_fatigue_variables = yes
+		set_variable = {
+			hre_nations_liberated = 0
+		}
+		set_variable = {
+			hre_nations_diplo_annexed = 0
+		}
+		set_variable = {
+			number_of_mass_peasant_uprisings = 0
+		}
+		set_variable = {
+			total_commune_development = 0
+		}
+		set_country_flag = peasant_variables_initialized
+	}
+}

@@ -77,24 +77,7 @@ moldavian_commune_reform = {
 	effect = {
 		hidden_effect = {
 			mark_country_has_been_spreader_of_radicalized_peasants = yes
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = peasant_variables_initialized
-					}
-				}
-				faction_fatigue_initialize_faction_fatigue_variables = yes
-				set_variable = {
-					hre_nations_liberated = 0
-				}
-				set_variable = {
-					hre_nations_diplo_annexed = 0
-				}
-				set_variable = {
-					number_of_mass_peasant_uprisings = 0
-				}
-				set_country_flag = peasant_variables_initialized
-			}
+			moldavian_peasant_government_reform_initialization_effect = yes
 		}
 	}
 }
@@ -149,24 +132,7 @@ dacian_commune_reform = {
 	effect = {
 		hidden_effect = {
 			mark_country_has_been_spreader_of_radicalized_peasants = yes
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = peasant_variables_initialized
-					}
-				}
-				faction_fatigue_initialize_faction_fatigue_variables = yes
-				set_variable = {
-					hre_nations_liberated = 0
-				}
-				set_variable = {
-					hre_nations_diplo_annexed = 0
-				}
-				set_variable = {
-					number_of_mass_peasant_uprisings = 0
-				}
-				set_country_flag = peasant_variables_initialized
-			}
+			moldavian_peasant_government_reform_initialization_effect = yes
 		}
 	}
 }

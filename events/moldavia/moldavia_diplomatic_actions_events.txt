@@ -104,6 +104,7 @@ country_event = {
 					add_government_reform = peasants_republic
 				}
 			}
+			calculate_total_development_of_commune_subjects = yes
 		}
 	}
 	option = {

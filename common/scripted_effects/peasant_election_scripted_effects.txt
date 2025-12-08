@@ -209,24 +209,7 @@ calculate_leaguist_candidate_stat_gain_effect = {
 
 #SCOPE = COUNTRY
 calculate_leaguist_stat_gain_from_commune_development_effect = {
-	set_variable = {
-		total_commune_development = 0
-	}
-	every_subject_country = {
-		limit = {
-			is_commune_subject = yes
-		}
-		export_to_variable = {
-			which = total_commune_development
-			value = total_development
-		}
-		overlord = {
-			change_variable = {
-				which = total_commune_development
-				which = PREV
-			}
-		}
-	}
+	calculate_total_development_of_commune_subjects = yes
 	set_variable = {
 		which = stat_gain_from_commune_development
 		which = total_commune_development

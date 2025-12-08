@@ -163,6 +163,7 @@ po_install_peasant_government = {
 					}
 				}
 			}
+			calculate_total_development_of_commune_subjects = yes
 		}
 	}
 	ai_weight = {

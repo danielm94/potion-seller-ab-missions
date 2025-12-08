@@ -2421,3 +2421,25 @@ rename_iberia_effect = {
 		override_country_name = IBE_commune_spanish
 	}
 }
+
+#SCOPE = COUNTRY
+calculate_total_development_of_commune_subjects = {
+	set_variable = {
+		total_commune_development = 0
+	}
+	every_subject_country = {
+		limit = {
+			is_commune_subject = yes
+		}
+		export_to_variable = {
+			which = total_commune_development
+			value = total_development
+		}
+		overlord = {
+			change_variable = {
+				which = total_commune_development
+				which = PREV
+			}
+		}
+	}
+}

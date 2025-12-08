@@ -308,6 +308,7 @@ invite_to_peasant_league = {
 		create_allied_commune = {
 			who = FROM
 		}
+		calculate_total_development_of_commune_subjects = yes
 		add_faction_influence = {
 			faction = leaguists_faction
 			influence = 5
