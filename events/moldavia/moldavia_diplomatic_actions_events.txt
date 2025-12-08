@@ -115,39 +115,51 @@ country_event = {
 					has_country_flag = no_integrate_penalty
 				}
 			}
-			tooltip = {
-				if = {
-					limit = {
-						event_target:commune_being_integrated = {
-							is_subject_of_type = integrated_commune
-						}
-					}
-					create_subject = {
-						subject_type = integrated_commune
-						who = event_target:commune_being_integrated
-					}
-				}
-				else_if = {
-					limit = {
-						event_target:commune_being_integrated = {
-							is_subject_of_type = sister_commune
-						}
-					}
-					create_subject = {
-						subject_type = sister_commune
-						who = event_target:commune_being_integrated
-					}
-				}
-				else = {
-					create_allied_commune = {
-						who = event_target:commune_being_integrated
-					}
-				}
-			}
 			add_country_modifier = {
 				name = "annexers_legacy"
 				duration = 3650
 			}
+		}
+		tooltip = {
+			if = {
+				limit = {
+					event_target:commune_being_integrated = {
+						is_subject_of_type = integrated_commune
+					}
+				}
+				create_subject = {
+					subject_type = integrated_commune
+					who = event_target:commune_being_integrated
+				}
+			}
+			else_if = {
+				limit = {
+					event_target:commune_being_integrated = {
+						is_subject_of_type = sister_commune
+					}
+				}
+				create_subject = {
+					subject_type = sister_commune
+					who = event_target:commune_being_integrated
+				}
+			}
+			else = {
+				create_allied_commune = {
+					who = event_target:commune_being_integrated
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = peasant_zeal_on_commune_integration
+			}
+			change_peasant_zeal = {
+				value = 5
+			}
+		}
+		add_faction_influence = {
+			faction = leaguists_faction
+			influence = 10
 		}
 		hidden_effect = {
 			clear_global_event_target = commune_being_integrated
