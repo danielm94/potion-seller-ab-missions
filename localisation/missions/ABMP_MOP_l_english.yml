@@ -608,3 +608,5 @@
  bonus_development_on_dev_click_basarabia_tooltip: "Developing §Y[1756.GetName]§! has a §Y20%§! chance to grant §G+1§! §Ydevelopment§!."
  mop_new_capital_title: "The New Capital"
  mop_new_capital_desc: "The cobblestones of Suceava are forever stained by the betrayal of the boieri and the blood of the Last Honorable Voivode, [assassinated_moldavian_voivode.GetName]. We cannot build a future in the slaughterhouse of the past. Instead, we shall look to the sea. Basarabia, the fortress that sheltered our fledgling republic during the civil war, will be transformed. Where there were once only barracks and fishing huts, we shall raise a metropolis of marble and brick."
+ mop_moldavian_wineries_title: "Moldavian Wineries"
+ mop_moldavian_wineries_desc: "The fertile hills of Moldavia have long produced wine, but under the Republic, this local craft will be forged into a grand industry. We will invest heavily in the vineyards, transforming them into state-managed cooperatives. Our goal is to create a vintage so fine that it becomes the drink of choice in every court in Europe."
