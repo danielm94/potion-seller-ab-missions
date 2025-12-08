@@ -1,5 +1,5 @@
 ﻿l_english:
- reconquista_convert_religion_converts_culture_tt: "Whenever one of these subjects converts an §YAndalusian§! province to §YOrthodox§!, that province’s culture will also change to match the subject’s own."
+ reconquista_convert_religion_converts_culture_tt: "Whenever one of these subjects converts an §YAndalusian§! province to their own religion, that province’s culture will also change to match the subject’s own."
  andalusian_balkanization_GAL_tt: "@GAL §Y[GAL.GetName]§! will be released as our £allied_commune£§YAllied Commune§! subject."
  andalusian_balkanization_LON_tt: "@LON §Y[LON.GetName]§! will be released as our £allied_commune£§YAllied Commune§! subject."
  andalusian_balkanization_ASU_tt: "@ASU §Y[ASU.GetName]§! will be released as our £allied_commune£§YAllied Commune§! subject."

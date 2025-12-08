@@ -1864,7 +1864,7 @@ andalusia_balkanization_galicia_effect = {
 						}
 					}
 					GAL = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = galician
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -1921,7 +1921,7 @@ andalusia_balkanization_leon_effect = {
 						}
 					}
 					LON = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = leonese
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -1974,7 +1974,7 @@ andalusia_balkanization_asturias_effect = {
 						}
 					}
 					ASU = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = Asturian
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2027,7 +2027,7 @@ andalusia_balkanization_navarra_effect = {
 						}
 					}
 					NAV = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = basque
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2080,7 +2080,7 @@ andalusia_balkanization_aragon_effect = {
 						}
 					}
 					ARA = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = aragonese
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2133,7 +2133,7 @@ andalusia_balkanization_catalonia_effect = {
 						}
 					}
 					CAT = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = catalan
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2180,7 +2180,7 @@ andalusia_balkanization_majorica_effect = {
 						}
 					}
 					MJO = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = catalan
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2235,7 +2235,7 @@ andalusia_balkanization_lusitania_effect = {
 						}
 					}
 					POR = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = Lusitanian
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2307,7 +2307,7 @@ andalusia_balkanization_castille_effect = {
 						}
 					}
 					CAS = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = castillian
 						change_government = republic
 						add_government_reform = peasants_republic
@@ -2364,7 +2364,7 @@ andalusia_balkanization_valencia_effect = {
 						}
 					}
 					VAL = {
-						change_religion = root
+						change_religion = catholic
 						change_primary_culture = Valencian
 						change_government = republic
 						add_government_reform = peasants_republic
