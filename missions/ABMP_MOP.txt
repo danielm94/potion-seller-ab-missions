@@ -1,3 +1,5 @@
+#Total Number of Duplicate/Locked Missions: 40
+
 ab_mop_1 = {
 	slot = 1
 	generic = no
@@ -7984,6 +7986,22 @@ mop_france_northern_series_3 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_iberia_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_iberia_north
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_france_liberated_northern_series = {
@@ -8149,6 +8167,23 @@ mop_france_southern_series_3 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_iberia_tt
+				custom_tooltip = mop_scroll_down_mt_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_iberia_north
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -12626,6 +12661,22 @@ ab_mop_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_iberia_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_iberia_south
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
