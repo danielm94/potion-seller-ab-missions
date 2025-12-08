@@ -156,11 +156,19 @@ ab_mop_misc_2 = {
 			}
 		}
 		trigger = {
-			owns_core_province = 1756
-			1756 = {
-				has_state_patriach = yes
-				has_tax_building_trigger = yes
-				num_of_times_improved = 3
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				owns_core_province = 1756
+				1756 = {
+					has_state_patriach = yes
+					has_tax_building_trigger = yes
+					num_of_times_improved = 3
+				}
 			}
 		}
 		effect = {
@@ -206,10 +214,18 @@ ab_mop_misc_3 = {
 			}
 		}
 		trigger = {
-			1756 = {
-				owned_by = ROOT
-				development = 20
-				renaissance = 70
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1756 = {
+					owned_by = ROOT
+					development = 20
+					renaissance = 70
+				}
 			}
 		}
 		effect = {
@@ -226,6 +242,79 @@ ab_mop_misc_3 = {
 				}
 			}
 			change_innovativeness = 3
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_new_capital = {
+		icon = GFX_mop_new_capital
+		position = 2
+		required_missions = {
+			mop_renaissance
+			mop_seat_of_the_metropolitan
+			mop_develop_moldavia
+		}
+		provinces_to_highlight = {
+			province_id = 1756
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_tax_building_trigger = no
+				has_trade_building_trigger = no
+				has_manpower_building_trigger = no
+				has_production_building_trigger = no
+				has_road_building_trigger = no
+				has_forcelimit_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1756 = {
+					owned_by = root
+					development = 30
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_manpower_building_trigger = yes
+					has_production_building_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					num_of_times_expanded_infrastructure = 2
+				}
+			}
+		}
+		effect = {
+			1756 = {
+				custom_tooltip = bonus_development_on_dev_click_basarabia_tooltip
+				enable_bonus_development_on_dev_click_for_province = {
+					chance = 20
+				}
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_jewel_of_the_black_sea
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = architect
+				skill = 2
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
@@ -263,23 +352,31 @@ ab_mop_misc_4 = {
 			}
 		}
 		trigger = {
-			moldavia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-				num_of_times_improved = 5
-				NOT = {
-					devastation = 1
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
 				}
-				num_of_times_expanded_infrastructure = 1
+				always = yes
 			}
-			bessarabia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-				num_of_times_improved = 5
-				NOT = {
-					devastation = 1
+			else = {
+				moldavia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = root
+					num_of_times_improved = 5
+					NOT = {
+						devastation = 1
+					}
+					num_of_times_expanded_infrastructure = 1
 				}
-				num_of_times_expanded_infrastructure = 1
+				bessarabia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = root
+					num_of_times_improved = 5
+					NOT = {
+						devastation = 1
+					}
+					num_of_times_expanded_infrastructure = 1
+				}
 			}
 		}
 		effect = {

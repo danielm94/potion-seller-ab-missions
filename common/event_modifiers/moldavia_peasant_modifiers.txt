@@ -1336,3 +1336,12 @@ mop_great_kabul_commune = {
 	trade_company_governing_cost = -0.2
 	picture = "commune_province_modifier_icon"
 }
+
+mop_jewel_of_the_black_sea = {
+	local_development_cost = -0.2
+	local_build_cost = -0.20
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_regiment_cost = -0.25
+	local_governing_cost = -0.5
+}
