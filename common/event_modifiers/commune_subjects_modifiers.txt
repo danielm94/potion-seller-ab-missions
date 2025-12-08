@@ -394,3 +394,7 @@ integrated_commune_basque_bonus = {
 integrated_commune_andalucian_bonus = {
 	tolerance_heathen = 1
 }
+
+integrated_commune_iranian_bonus = {
+	development_cost_modifier = -0.05
+}

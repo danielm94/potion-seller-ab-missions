@@ -6742,6 +6742,9 @@ ab_mop_3 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_iranian_bonus_tt
+			set_country_flag = integrated_commune_iranian_bonus_flag
+			custom_tooltip = AB_EMPTY
 			431 = {
 				remove_core = owner
 				add_core = root
