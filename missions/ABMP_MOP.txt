@@ -9,6 +9,14 @@ ab_mop_misc_1 = {
 	mop_establish_league = {
 		icon = mission_diplomatic_relation
 		position = 1
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				any_owned_province = {
+					has_province_modifier = radicalized_peasantry
+				}
+			}
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -41,6 +49,78 @@ ab_mop_misc_1 = {
 			}
 			add_prestige_or_monarch_power = {
 				amount = 10
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_strengthen_league_ties = {
+		icon = personal_diplomacy
+		position = 2
+		required_missions = {
+			mop_establish_league
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject_of_type_with_overlord = {
+					who = root
+					type = allied_commune
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				calc_true_if = {
+					amount = 4
+					custom_trigger_tooltip = {
+						tooltip = mop_strengthen_league_ties_tt
+						all_subject_country = {
+						OR = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = sister_commune
+							}
+						}
+						OR = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = peasant_zeal_on_commune_integration_tt
+			set_country_flag = peasant_zeal_on_commune_integration
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					has_country_modifier = annexers_legacy
+				}
+				custom_tooltip = LIT_INTEGRATE_YES
+				hidden_effect = {
+					remove_country_modifier = annexers_legacy
+				}
+			}
+			else = {
+				custom_tooltip = LIT_INTEGRATE_NO
+			}
+			custom_tooltip = AB_EMPTY
+			add_republican_tradition = 5
+			change_peasant_zeal = {
+				value = 10
 			}
 			add_faction_influence = {
 				faction = leaguists_faction
