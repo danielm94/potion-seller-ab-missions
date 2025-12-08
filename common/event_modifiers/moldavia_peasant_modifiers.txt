@@ -1294,3 +1294,8 @@ mop_northern_tercios = {
 	tolerance_of_heretics_capacity = 1
 	tolerance_heretic = 1
 }
+
+mop_viva_iberia = {
+	infantry_power = 0.1
+	treasure_fleet_income = 0.25
+}

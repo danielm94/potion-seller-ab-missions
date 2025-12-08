@@ -1749,6 +1749,70 @@ mop_iberia_south_series_1 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_iberia_liberated_south_series = {
+		icon = hispaniae
+		position = 40
+		required_missions = {
+			mop_north_iberia_south_series
+		}
+		provinces_to_highlight = {
+			region = iberia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				iberia_region = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_IBE_commune_diplomatic_actions_tt
+			set_country_flag = unlock_IBE_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_viva_iberia
+				duration = -1
+			}
+			set_country_flag = por_bandeirantes_flag
+			custom_tooltip = por_bandeirantes_tooltip
+			change_peasant_zeal = {
+				value = 50
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 25
+			}
 		}
 	}
 }
@@ -3690,6 +3754,10 @@ mop_rome_locked_series_2 = {
 	mop_rome_locked = {
 		icon = mission_locked_mission
 		position = 35
+		required_missions = {
+			mop_sicily
+			mop_central_italy
+		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_rome_locked_desc
