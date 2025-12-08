@@ -591,3 +591,5 @@
  integrated_commune_iranian_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YIranian§! culture will grant us §G-5.0%§! Development Cost Modifier if they have at least §Y450§! total development."
  mop_kabul_title: "The Gateway to the East"
  mop_kabul_desc: "Kabul is the hinge upon which the gate to India swings. To support the vast operations of the Dacian India Company, a simple outpost is insufficient. We must transform this mountain citadel into a modern metropolis—a fortress of bureaucracy and trade where the riches of the subcontinent are cataloged, taxed, and secured before their journey west."
+ mop_renaissance_title: "The Vlach Renaissance"
+ mop_renaissance_desc: "A new spirit of art and learning is sweeping across the world. In our lands, this spirit will be channeled through our deep Orthodox faith. Our artists will perfect the sacred art of iconography, and our architects will raise magnificent churches to the heavens. [1756.GetName]  will become the heart of this holy flourishing, a beacon of faith and culture that will define our age."
