@@ -140,7 +140,7 @@
 448 = "Gazne"
 449 = "Gorhea"
 450 = "Bahtra Megale"
-451 = "Cabura"
+451 = {"Cabura" "Cabura"}
 452 = "Oropise"
 457 = "Taskent"
 462 = "Colchis Micri"

@@ -1,5 +1,4 @@
 #Total Number of Duplicate/Locked Missions: 40
-
 ab_mop_1 = {
 	slot = 1
 	generic = no
@@ -6862,6 +6861,79 @@ ab_mop_3 = {
 			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_khorasan = {
+		icon = mission_pertribes
+		position = 28
+		required_missions = {
+			mop_portul_abas
+		}
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				khorasan_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			add_claim_multi_provinces = {
+				target = sindh_area
+			}
+			add_claim_multi_provinces = {
+				target = northern_sindh_area
+			}
+			add_claim_multi_provinces = {
+				target = multan_area
+			}
+			add_claim_multi_provinces = {
+				target = sind_sagar_area
+			}
+			add_claim_multi_provinces = {
+				target = kashmir_area
+			}
+			custom_tooltip = tooltip_line_divider
+			451 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_kabul_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_dacian_india_company
+				duration = -1
+			}
+			add_country_modifier = {
+				name = wallachia_rise_of_the_dacian_india_company
+				duration = 7300
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
 				influence = 10
 			}
 		}

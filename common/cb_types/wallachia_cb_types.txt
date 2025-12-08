@@ -87,22 +87,28 @@ cb_persian_campaign = {
 	}
 	war_goal = conquer_persia_wargoal
 }
+
 cb_dacian_indian_campaign = {
 	valid_for_subject = no
 	prerequisites_self = {
 		has_country_modifier = wallachia_rise_of_the_dacian_india_company
 	}
 	prerequisites = {
-		is_neighbor_of = FROM
+		OR = {
+			is_neighbor_of = FROM
+			any_subject_country = {
+				is_neighbor_of = FROM
+			}
+		}
 		FROM = {
 			any_owned_province = {
 				superregion = india_superregion
 			}
 		}
 	}
-
 	war_goal = conquer_india_wargoal
 }
+
 cb_imperial_retribution = {
 	ai_peace_desire = -80
 	valid_for_subject = no
@@ -113,39 +119,33 @@ cb_imperial_retribution = {
 cb_jihad_against_dajjal = {
 	valid_for_subject = no
 	holy_war = yes
-
 	prerequisites_self = {
 		religion_group = muslim
 	}
-
 	prerequisites = {
 		FROM = {
 			has_boiled_andalusia_ruler = yes
 			NOT = {
 				had_country_flag = {
 					flag = boiled_adu
-					days = 43800 #120 years
+					days = 43800					#120 years
 				}
 			}
 		}
 	}
-
 	war_goal = destroy_the_dajjal
 }
 
 cb_avenge_pope = {
 	valid_for_subject = no
 	holy_war = yes
-
 	prerequisites_self = {
 		religion = catholic
 	}
-
 	prerequisites = {
 		FROM = {
 			has_impaled_pope = yes
 		}
 	}
-
 	war_goal = destroy_the_dajjal
 }

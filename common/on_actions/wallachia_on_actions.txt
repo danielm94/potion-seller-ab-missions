@@ -516,11 +516,24 @@ on_bi_yearly_pulse = {
 on_siege_won_country = {
 	if = {
 		limit = {
-			is_in_war = {
-				casus_belli = cb_dacian_indian_campaign
-				attacker_leader = ROOT
+			OR = {
+				AND = {
+					is_in_war = {
+						casus_belli = cb_dacian_indian_campaign
+						attacker_leader = ROOT
+					}
+					has_country_modifier = wallachia_rise_of_the_dacian_india_company
+				}
+				AND = {
+					is_in_war = {
+						casus_belli = cb_dacian_indian_campaign
+						attacker_leader = overlord
+					}
+					overlord = {
+						has_country_modifier = wallachia_rise_of_the_dacian_india_company
+					}
+				}
 			}
-			has_country_modifier = wallachia_rise_of_the_dacian_india_company
 			FROM = {
 				superregion = india_superregion
 				owner = {

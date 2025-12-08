@@ -660,6 +660,8 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 			which = army_prof
 			value = trigger_value:army_professionalism
 		}
+		#TODO: PLAYER SHOULD GET +1 for every 20 army professionalism
+		# AND +1 for every 20 army tradition
 		multiply_variable = {
 			army_prof = 10
 		}
