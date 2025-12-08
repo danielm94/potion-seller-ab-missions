@@ -544,6 +544,10 @@ ab_mop_misc_4 = {
 					duration = 4380
 				}
 			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
 		}
 	}
 }
