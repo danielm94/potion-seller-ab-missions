@@ -1475,6 +1475,336 @@ mop_iberia_north_series_1 = {
 		have_access_to_peasant_moldavia_missions = yes
 		has_country_flag = unlocked_mop_iberia_north
 	}
+	mop_north_iberia_north_series = {
+		icon = spa_new_capital
+		position = 38
+		provinces_to_highlight = {
+			OR = {
+				area = beieras_area
+				area = galicia_area
+				area = leon_area
+				area = castille_area
+				area = aragon_area
+				area = catalonia_area
+				area = basque_country
+				area = asturias_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				beieras_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				galicia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				leon_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				castille_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				aragon_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				catalonia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				basque_country = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				asturias_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_aragonese_bonus_tt
+			set_country_flag = integrated_commune_aragonese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_catalan_bonus_tt
+			set_country_flag = integrated_commune_catalan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_galician_bonus_tt
+			set_country_flag = integrated_commune_galician_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_asturian_bonus_tt
+			set_country_flag = integrated_commune_asturian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_basque_bonus_tt
+			set_country_flag = integrated_commune_basque_bonus_flag
+			custom_tooltip = AB_EMPTY
+			213 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_barcelona_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_northern_tercios
+				duration = -1
+			}
+			custom_tooltip = developing_iberian_provinces_gives_tercio_tt
+			set_country_flag = developing_iberian_provinces_gives_tercio
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = subjects_perma_claim_rest_of_iberia_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							region = iberia_region
+						}
+					}
+					every_province = {
+						limit = {
+							region = iberia_region
+							NOT = {
+								owned_by = prev
+							}
+							NOT = {
+								owned_by = root
+							}
+							NOT = {
+								owner = {
+									is_subject_of = root
+								}
+							}
+						}
+						add_permanent_claim = prev
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_south_iberia_north_series = {
+		icon = mission_reclaim_andalucia
+		position = 39
+		required_missions = {
+			mop_north_iberia_north_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alentejo_area
+				area = upper_andalucia_area
+				area = lower_andalucia_area
+				area = extremadura_area
+				area = toledo_area
+				area = valencia_area
+				area = baleares_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				alentejo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				upper_andalucia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lower_andalucia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				extremadura_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				toledo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				valencia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				baleares_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_lusitanian_bonus_tt
+			set_country_flag = integrated_commune_lusitanian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_leonese_bonus_tt
+			set_country_flag = integrated_commune_leonese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_castillian_bonus_tt
+			set_country_flag = integrated_commune_castillian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_valencian_bonus_tt
+			set_country_flag = integrated_commune_valencian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_andalucian_bonus_tt
+			set_country_flag = integrated_commune_andalucian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			223 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_granada_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = leaguists_colonialism_plan_enabled_tt
+			set_country_flag = leaguists_colonialism_plan_enabled
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = spanish_inquisition_kek_tt
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.5
+				religion = root
+				culture = Valencian
+				location = 223
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
+	mop_iberia_liberated_north_series = {
+		icon = hispaniae
+		position = 40
+		required_missions = {
+			mop_south_iberia_north_series
+		}
+		provinces_to_highlight = {
+			region = iberia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				iberia_region = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_IBE_commune_diplomatic_actions_tt
+			set_country_flag = unlock_IBE_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_viva_iberia
+				duration = -1
+			}
+			set_country_flag = por_bandeirantes_flag
+			custom_tooltip = por_bandeirantes_tooltip
+			change_peasant_zeal = {
+				value = 50
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 25
+			}
+		}
+	}
 }
 
 mop_iberia_south_series_1 = {
@@ -4434,6 +4764,185 @@ mop_iberia_north_series_2 = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 		has_country_flag = unlocked_mop_iberia_north
+	}
+	mop_barcelona_north_series = {
+		icon = mission_guilds_of_barcelona
+		position = 39
+		required_missions = {
+			mop_north_iberia_north_series
+		}
+		provinces_to_highlight = {
+			province_id = 213
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 45
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 3
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				has_road_building_trigger = no
+				has_fort_building_trigger = no
+				has_shipyard_building_trigger = no
+				has_dock_building_trigger = no
+				has_coast_defense_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				213 = {
+					owned_by = root
+					development = 45
+					num_of_times_expanded_infrastructure = 3
+					province_has_center_of_trade_of_level = 3
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_road_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+					has_coast_defense_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			213 = {
+				remove_province_modifier = mop_barcelona_commune
+				add_province_modifier = {
+					name = mop_great_barcelona_commune
+					duration = -1
+				}
+			}
+			set_country_flag = rmg_monetary_policy_no_power_cost_flag
+			custom_tooltip = RMG_MONETARY_POLICY_NO_POWER
+			custom_tooltip = AB_EMPTY
+			add_years_of_income = 1
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_granada_north_series = {
+		icon = mission_develop_alhambra
+		position = 40
+		required_missions = {
+			mop_south_iberia_north_series
+		}
+		provinces_to_highlight = {
+			province_id = 223
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					religion = orthodox
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_tax_building_trigger = no
+				has_road_building_trigger = no
+				has_trade_building_trigger = no
+				has_fort_building_trigger = no
+				has_production_building_trigger = no
+				has_manufactory_trigger = no
+				NOT = {
+					has_great_project = {
+						type = alhambra
+						tier = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				223 = {
+					owned_by = root
+					development = 30
+					religion = orthodox
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_tax_building_trigger = yes
+					has_road_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					has_great_project = {
+						type = alhambra
+						tier = 2
+					}
+				}
+			}
+		}
+		effect = {
+			223 = {
+				remove_province_modifier = mop_granada_commune
+				add_province_modifier = {
+					name = mop_great_granada_commune
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					223 = {
+						has_great_project = {
+							type = alhambra
+							tier = 2
+						}
+					}
+				}
+				223 = {
+					add_great_project_tier = {
+						type = alhambra
+						tier = 1
+					}
+				}
+			}
+			else = {
+				add_treasury = 3000
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = negate_revolutionary_mandate_improve_relations_penalty_tt
+			set_country_flag = negate_revolutionary_mandate_improve_relations_penalty
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
 	}
 }
 
