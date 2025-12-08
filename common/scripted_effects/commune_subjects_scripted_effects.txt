@@ -2377,3 +2377,45 @@ andalusia_balkanization_valencia_effect = {
 		}
 	}
 }
+
+rename_iberia_effect = {
+	if = {
+		limit = {
+			culture = Lusitanian
+		}
+		override_country_name = IBE_commune_portuguese
+	}
+	else_if = {
+		limit = {
+			culture = galician
+		}
+		override_country_name = IBE_commune_galician
+	}
+	else_if = {
+		limit = {
+			culture = Asturian
+		}
+		override_country_name = IBE_commune_asturian
+	}
+	else_if = {
+		limit = {
+			culture = basque
+		}
+		override_country_name = IBE_commune_basque
+	}
+	else_if = {
+		limit = {
+			culture = aragonese
+		}
+		override_country_name = IBE_commune_aragonese
+	}
+	else_if = {
+		limit = {
+			culture = catalan
+		}
+		override_country_name = IBE_commune_catalan
+	}
+	else = {
+		override_country_name = IBE_commune_spanish
+	}
+}

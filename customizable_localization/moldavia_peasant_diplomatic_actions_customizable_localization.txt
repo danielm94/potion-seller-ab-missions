@@ -145,7 +145,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key =  CLT_peasant_ideas_list
+		localisation_key = CLT_peasant_ideas_list
 		trigger = {
 			FROM = {
 				tag = CLT
@@ -165,6 +165,14 @@ defined_text = {
 		trigger = {
 			FROM = {
 				tag = GBR
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_ideas_list
+		trigger = {
+			FROM = {
+				tag = IBE
 			}
 		}
 	}
@@ -307,6 +315,68 @@ defined_text = {
 					}
 				}
 			}
+		}
+	}
+}
+
+defined_text = {
+	name = get_iberian_communes_rename
+	random = no
+	text = {
+		localisation_key = IBE_commune_portuguese
+		trigger = {
+			FROM = {
+				OR = {
+					culture = Lusitanian
+					culture = portugese
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_commune_galician
+		trigger = {
+			FROM = {
+				culture = galician
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_commune_catalan
+		trigger = {
+			FROM = {
+				culture = catalan
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_commune_basque
+		trigger = {
+			FROM = {
+				culture = basque
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_commune_aragonese
+		trigger = {
+			FROM = {
+				culture = aragonese
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_commune_asturian
+		trigger = {
+			FROM = {
+				culture = Asturian
+			}
+		}
+	}
+	text = {
+		localisation_key = IBE_commune_spanish
+		trigger = {
+			always = yes
 		}
 	}
 }

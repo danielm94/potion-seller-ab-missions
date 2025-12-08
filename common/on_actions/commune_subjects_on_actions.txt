@@ -314,6 +314,12 @@ on_dependency_gained = {
 				}
 				override_country_name = GBR_commune
 			}
+			else_if = {
+				limit = {
+					tag = IBE
+				}
+				rename_iberia_effect = yes
+			}
 		}
 	}
 }
