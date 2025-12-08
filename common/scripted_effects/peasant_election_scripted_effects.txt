@@ -583,3 +583,9 @@ ten_year_plan_cost_scripted_effect = {
 		]
 	}
 }
+
+increment_leaguist_ten_year_plan_count_by_1 = {
+	change_variable = {
+		total_leaguist_ten_year_plans_enacted = 1
+	}
+}

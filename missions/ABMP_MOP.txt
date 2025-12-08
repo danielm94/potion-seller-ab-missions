@@ -124,7 +124,66 @@ ab_mop_misc_1 = {
 			}
 			add_faction_influence = {
 				faction = leaguists_faction
-				influence = 10
+				influence = 15
+			}
+		}
+	}
+	mop_league_integration = {
+		icon = GFX_mop_league_integration
+		position = 3
+		required_missions = {
+			mop_strengthen_league_ties
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				OR = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = allied_commune
+					}
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = sister_commune
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				has_ruler_modifier = leaguists_integration_plan
+				check_variable = {
+					total_commune_development = 600
+				}
+				calc_true_if = {
+					amount = 5
+					custom_trigger_tooltip = {
+						tooltip = mop_league_integration_tt
+						all_subject_country = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = base_monthly_commune_intergation_rate_increase_tt
+			set_country_flag = base_monthly_commune_intergation_rate_increase
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 20
 			}
 		}
 	}
@@ -531,7 +590,7 @@ ab_mop_misc_3 = {
 			}
 		}
 		effect = {
-			custom_tooltip  = isolationist_mandate_buff_2_tt
+			custom_tooltip = isolationist_mandate_buff_2_tt
 			set_country_flag = isolationist_mandate_buff_2
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = for_every_province_that_meets_the_missions_requirements

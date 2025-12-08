@@ -139,4 +139,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_new_capital.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_league_integration"
+		texturefile = "gfx/interface/missions/mop/mop_league_integration.dds"
+		loadType = "INGAME"
+	}
 }

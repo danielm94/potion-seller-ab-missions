@@ -250,6 +250,12 @@ moldavian_peasant_government_reform_initialization_effect = {
 		set_variable = {
 			total_commune_development = 0
 		}
+		set_variable = {
+			total_leaguist_candidates_elected = 0
+		}
+		set_variable = {
+			total_leaguist_ten_year_plans_enacted = 0
+		}
 		set_country_flag = peasant_variables_initialized
 	}
 }

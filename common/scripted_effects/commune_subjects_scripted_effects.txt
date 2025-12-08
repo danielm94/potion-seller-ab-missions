@@ -361,6 +361,16 @@ calculate_monthly_commune_integration_progress = {
 			which = commune_integration_progress_change
 			value = 400
 		}
+		if = {
+			limit = {
+				overlord = {
+					has_country_flag = base_monthly_commune_intergation_rate_increase
+				}
+			}
+			change_variable = {
+				commune_integration_progress_change = 0.5
+			}
+		}
 	}
 	else = {
 		overlord = {

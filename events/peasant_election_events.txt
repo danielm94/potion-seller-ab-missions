@@ -314,6 +314,9 @@ country_event = {
 		hidden_effect = {
 			add_ruler_personality = leaguist_personality
 			set_ruler_flag = leaguist_ruler
+			change_variable = {
+				total_leaguist_candidates_elected = 1
+			}
 		}
 		add_faction_influence = {
 			faction = leaguists_faction
@@ -1480,6 +1483,9 @@ country_event = {
 			duration = -1
 		}
 	}
+	after = {
+		increment_leaguist_ten_year_plan_count_by_1 = yes
+	}
 }
 
 #10 Year Plan Fruition - Leaguists Diplomatic Corps
@@ -1505,6 +1511,9 @@ country_event = {
 			name = leaguists_expand_diplomatic_corps_plan
 			duration = -1
 		}
+	}
+	after = {
+		increment_leaguist_ten_year_plan_count_by_1 = yes
 	}
 }
 
@@ -1532,6 +1541,9 @@ country_event = {
 			duration = -1
 		}
 	}
+	after = {
+		increment_leaguist_ten_year_plan_count_by_1 = yes
+	}
 }
 
 #10 Year Plan Fruition - Leaguists Trade
@@ -1558,6 +1570,9 @@ country_event = {
 			duration = -1
 		}
 	}
+	after = {
+		increment_leaguist_ten_year_plan_count_by_1 = yes
+	}
 }
 
 #10 Year Plan Fruition - Leaguists Spheres
@@ -1583,6 +1598,9 @@ country_event = {
 			name = leaguists_establish_spheres_of_influence_plan
 			duration = -1
 		}
+	}
+	after = {
+		increment_leaguist_ten_year_plan_count_by_1 = yes
 	}
 }
 
