@@ -1274,7 +1274,16 @@ mop_granada_commune = {
 	local_governing_cost = -0.75
 	province_trade_power_value = 10
 	local_development_cost = -0.05
-	global_heathen_missionary_strength = 0.01
+	global_heathen_missionary_strength = 0.015
+	picture = "commune_province_modifier_icon"
+}
+
+mop_great_granada_commune = {
+	min_local_autonomy = 15
+	local_governing_cost = -1
+	province_trade_power_value = 15
+	local_development_cost = -0.1
+	global_heathen_missionary_strength = 0.03
 	picture = "commune_province_modifier_icon"
 }
 
