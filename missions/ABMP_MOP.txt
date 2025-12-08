@@ -6932,11 +6932,91 @@ ab_mop_3 = {
 				name = wallachia_rise_of_the_dacian_india_company
 				duration = 7300
 			}
+			custom_tooltip = wallachia_rise_of_the_dacian_india_company_mechanics_tooltip
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 10
 			}
 			add_faction_influence = {
 				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_kabul = {
+		icon = GFX_mop_kabul
+		position = 29
+		required_missions = {
+			mop_khorasan
+		}
+		provinces_to_highlight = {
+			province_id = 451
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					development = 30
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 2
+				}
+				has_courthouse_building_trigger = no
+				has_trade_building_trigger = no
+				has_production_building_trigger = no
+				has_fort_building_trigger = no
+				has_road_building_trigger = no
+				has_manufactory_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				451 = {
+					owned_by = root
+					development = 30
+					province_has_center_of_trade_of_level = 2
+					num_of_times_expanded_infrastructure = 2
+					has_courthouse_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+					has_fort_building_trigger = yes
+					has_road_building_trigger = yes
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+		effect = {
+			451 = {
+				remove_province_modifier = mop_kabul_commune
+				add_province_modifier = {
+					name = mop_great_kabul_commune
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = wallachia_rise_of_the_dacian_india_company
+				}
+				remove_country_modifier = wallachia_rise_of_the_dacian_india_company
+			}
+			add_country_modifier = {
+				name = wallachia_rise_of_the_dacian_india_company
+				duration = 7300
+			}
+			custom_tooltip = wallachia_rise_of_the_dacian_india_company_mechanics_tooltip
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
 				influence = 10
 			}
 		}
@@ -9946,7 +10026,7 @@ ab_mop_4 = {
 	}
 	mop_moca = {
 		icon = yem_coffee
-		position = 27
+		position = 28
 		required_missions = {
 			mop_arabia
 		}
@@ -10016,7 +10096,7 @@ ab_mop_4 = {
 	}
 	mop_alexandria_patriarch = {
 		icon = promote_the_patriarchate
-		position = 28
+		position = 29
 		required_missions = {
 			mop_egypt
 		}
@@ -12443,7 +12523,7 @@ ab_mop_5 = {
 	}
 	mop_egypt = {
 		icon = gfx_wal_conquer_egypt
-		position = 27
+		position = 28
 		required_missions = {
 			mop_reestablish_the_patriarchs
 		}

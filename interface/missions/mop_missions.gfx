@@ -124,4 +124,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_bordeaux.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_kabul"
+		texturefile = "gfx/interface/missions/mop/mop_kabul.dds"
+		loadType = "INGAME"
+	}
 }
