@@ -917,6 +917,15 @@ estate_razesi_exemplarism = {
 			expand_infrastructure_cost_modifier = -0.5
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = isolationist_mandate_buff_2
+		}
+		modifier = {
+			development_cost_in_primary_culture = -0.1
+			max_absolutism = 10
+		}
+	}
 	loyalty = 0.05
 	influence = 0.15
 	is_valid = {

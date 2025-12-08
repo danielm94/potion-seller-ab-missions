@@ -189,6 +189,106 @@ ab_mop_misc_2 = {
 			}
 		}
 	}
+	mop_romanian_churches = {
+		icon = gfx_wal_romanian_churches
+		position = 2
+		required_missions = {
+			mop_seat_of_the_metropolitan
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture_group = romanian_culture_group
+			OR = {
+				has_tax_building_trigger = no
+				NOT = {
+					num_of_times_improved = 6
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1756 = {
+					owned_by = ROOT
+					has_tax_building_trigger = yes
+					num_of_times_improved = 6
+				}
+				calc_true_if = {
+					amount = 6
+					all_owned_province = {
+						culture_group = romanian_culture_group
+						has_tax_building_trigger = yes
+						num_of_times_improved = 6
+					}
+				}
+			}
+		}
+		effect = {
+			1756 = {
+				upgrade_tax_building = yes
+				add_province_modifier = {
+					name = wallachia_tirgoviste_metropolitan_cathedral
+					duration = -1
+				}
+			}
+			custom_tooltip = mop_romanian_churches_province_reward_tooltip
+			tooltip = {
+				add_patriarch_authority = 0.01
+				add_province_modifier = {
+					name = wallachia_pillar_of_the_faith
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = {
+							province_id = 1756
+						}
+						culture_group = romanian_culture_group
+						has_tax_building_trigger = yes
+						num_of_times_improved = 6
+					}
+					add_province_modifier = {
+						name = wallachia_pillar_of_the_faith
+						duration = -1
+					}
+					owner = {
+						add_patriarch_authority = 0.01
+					}
+				}
+			}
+			set_country_flag = buffed_development_of_temples
+			custom_tooltip = buffed_development_of_temples_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_province_modifier = estate_church_development_of_temples_mod
+					}
+					remove_province_modifier = estate_church_development_of_temples_mod
+					add_province_modifier = {
+						name = buffed_estate_church_development_of_temples_mod
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 15
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_misc_3 = {
@@ -313,6 +413,175 @@ ab_mop_misc_3 = {
 				type = architect
 				skill = 2
 				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_mare_dacia = {
+		icon = gfx_wal_mare_dacia
+		position = 3
+		required_missions = {
+			mop_moldavian_wineries
+			mop_mountain_infrastructure
+			mop_new_capital
+			mop_romanian_churches
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = moldavia_area
+				area = bessarabia_area
+				province_id = 4706
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 15
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					num_of_buildings_in_province = 2
+				}
+				has_road_building_trigger = no
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				wallachia_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					num_of_times_expanded_infrastructure = 1
+					custom_trigger_tooltip = {
+						tooltip = wal_mare_dacia_buildings_trigger_tooltip
+						num_of_buildings_in_province = 2
+					}
+					has_road_building_trigger = yes
+				}
+				transylvania_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					num_of_times_expanded_infrastructure = 1
+					custom_trigger_tooltip = {
+						tooltip = wal_mare_dacia_buildings_trigger_tooltip
+						num_of_buildings_in_province = 2
+					}
+					has_road_building_trigger = yes
+				}
+				southern_transylvania_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					num_of_times_expanded_infrastructure = 1
+					custom_trigger_tooltip = {
+						tooltip = wal_mare_dacia_buildings_trigger_tooltip
+						num_of_buildings_in_province = 2
+					}
+					has_road_building_trigger = yes
+				}
+				moldavia_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					num_of_times_expanded_infrastructure = 1
+					custom_trigger_tooltip = {
+						tooltip = wal_mare_dacia_buildings_trigger_tooltip
+						num_of_buildings_in_province = 2
+					}
+					has_road_building_trigger = yes
+				}
+				bessarabia_area = {
+					type = all
+					owned_by = ROOT
+					development = 15
+					num_of_times_expanded_infrastructure = 1
+					custom_trigger_tooltip = {
+						tooltip = wal_mare_dacia_buildings_trigger_tooltip
+						num_of_buildings_in_province = 2
+					}
+					has_road_building_trigger = yes
+				}
+				4706 = {
+					owned_by = ROOT
+					development = 15
+					num_of_times_expanded_infrastructure = 1
+					custom_trigger_tooltip = {
+						tooltip = wal_mare_dacia_buildings_trigger_tooltip
+						num_of_buildings_in_province = 2
+					}
+					has_road_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip  = isolationist_mandate_buff_2_tt
+			set_country_flag = isolationist_mandate_buff_2
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_adm_power = 5
+				add_province_modifier = {
+					name = wallachia_pillar_of_the_realm
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = wallachia_area
+							area = transylvania_area
+							area = southern_transylvania_area
+							area = moldavia_area
+							area = bessarabia_area
+							province_id = 4706
+						}
+						development = 15
+						num_of_times_expanded_infrastructure = 1
+						num_of_buildings_in_province = 2
+						has_road_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = wallachia_pillar_of_the_realm
+						duration = -1
+					}
+					owner = {
+						add_adm_power = 5
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = wal_road_bonus_tooltip
+			set_country_flag = wal_road_bonus
+			hidden_effect = {
+				every_province = {
+					limit = {
+						has_road_building_trigger = yes
+					}
+					ab_building_road_effect = yes
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			156 = {
+				center_of_trade = 1
+				change_trade_goods = cloth
 			}
 			custom_tooltip = AB_EMPTY
 			add_faction_influence = {
@@ -558,6 +827,80 @@ ab_mop_misc_5 = {
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
+	}
+	mop_mountain_infrastructure = {
+		icon = gfx_wal_mountain_infrastructure
+		position = 2
+		required_missions = {
+			mop_develop_moldavia
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			OR = {
+				has_terrain = mountain
+				has_terrain = hills
+				has_terrain = highlands
+			}
+			OR = {
+				has_road_building_trigger = no
+				NOT = {
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 6
+					region = carpathia_region
+					OR = {
+						has_terrain = mountain
+						has_terrain = hills
+						has_terrain = highlands
+					}
+					has_road_building_trigger = yes
+					development = 10
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				custom_tooltip = gain_25_prosperity
+				add_province_modifier = {
+					name = wallachia_thriving_carpathian_settlement
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = carpathia_region
+						OR = {
+							has_terrain = mountain
+							has_terrain = hills
+							has_terrain = highlands
+						}
+						has_road_building_trigger = yes
+						development = 10
+					}
+					add_prosperity = 25
+					add_province_modifier = {
+						name = wallachia_thriving_carpathian_settlement
+						duration = 10950
+					}
+				}
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_wal_mountain_expansion
+			}
+		}
 	}
 }
 
