@@ -6,6 +6,48 @@ ab_mop_misc_1 = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
+	mop_establish_league = {
+		icon = mission_diplomatic_relation
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				OR = {
+					check_variable = {
+						total_commune_development = 100
+					}
+					calc_true_if = {
+						amount = 2
+						custom_trigger_tooltip = {
+							tooltip = commune_subject_amount_trigger_tt
+							all_subject_country = {
+								is_commune_subject = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = statesman
+				skill = 1
+				cost_multiplier = 0.5
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_misc_2 = {
