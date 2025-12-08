@@ -137,6 +137,50 @@ ab_mop_misc_2 = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
+	mop_seat_of_the_metropolitan = {
+		icon = gfx_wal_seat_of_the_metropolitan
+		position = 1
+		provinces_to_highlight = {
+			province_id = 1756
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					num_of_times_improved = 3
+				}
+				NOT = {
+					has_tax_building_trigger = yes
+				}
+				has_state_patriach = no
+			}
+		}
+		trigger = {
+			owns_core_province = 1756
+			1756 = {
+				has_state_patriach = yes
+				has_tax_building_trigger = yes
+				num_of_times_improved = 3
+			}
+		}
+		effect = {
+			1756 = {
+				add_province_modifier = {
+					name = wallachia_tirgoviste_metropolitan
+					duration = 5475
+				}
+			}
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
 }
 
 ab_mop_misc_3 = {
