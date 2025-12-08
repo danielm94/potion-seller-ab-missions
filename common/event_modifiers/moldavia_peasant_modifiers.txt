@@ -1277,3 +1277,20 @@ mop_granada_commune = {
 	global_heathen_missionary_strength = 0.01
 	picture = "commune_province_modifier_icon"
 }
+
+mop_barcelona_commune = {
+	min_local_autonomy = 25
+	local_governing_cost = -0.75
+	province_trade_power_value = 10
+	local_development_cost = -0.05
+	amount_of_tercio = 5
+	ship_power_propagation = 0.1
+	picture = "commune_province_modifier_icon"
+}
+
+mop_northern_tercios = {
+	has_tercio = yes
+	amount_of_tercio = 5
+	tolerance_of_heretics_capacity = 1
+	tolerance_heretic = 1
+}

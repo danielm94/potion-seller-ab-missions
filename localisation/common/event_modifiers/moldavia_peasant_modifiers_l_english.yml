@@ -325,3 +325,7 @@
  desc_mop_great_bordeaux_commune: "The armory of the Atlantic. Here, the art of the volley is perfected."
  mop_granada_commune: "The Granada Commune"
  desc_mop_granada_commune: "The Caliph and his family have been removed from the Alhambra, which now functions as the Federation's command center for the entire region. From these captured halls, we direct the dismantling of the Moorish state and the creation of a new Iberia."
+ mop_barcelona_commune: "The Barcelona Commune"
+ desc_mop_barcelona_commune: "The oligarchic Council of One Hundred has been dissolved. In its place, a General Assembly of shipwrights and dockworkers now manages the port, ensuring that Catalonia's immense naval capacity serves the common interest of the Federation."
+ mop_northern_tercios: "The Northern Brotherhoods"
+ desc_mop_northern_tercios: "The aristocratic officers have been purged, but the discipline of the northern infantry remains. We have reorganized the local defense pacts into revolutionary Tercio squares."

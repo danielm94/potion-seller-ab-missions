@@ -1631,6 +1631,126 @@ mop_iberia_south_series_1 = {
 			}
 		}
 	}
+	mop_north_iberia_south_series = {
+		icon = spa_new_capital
+		position = 39
+		required_missions = {
+			mop_south_iberia_south_series
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = beieras_area
+				area = galicia_area
+				area = leon_area
+				area = castille_area
+				area = aragon_area
+				area = catalonia_area
+				area = basque_country
+				area = asturias_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				beieras_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				galicia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				leon_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				castille_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				aragon_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				catalonia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				basque_country = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				asturias_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_aragonese_bonus_tt
+			set_country_flag = integrated_commune_aragonese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_catalan_bonus_tt
+			set_country_flag = integrated_commune_catalan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_galician_bonus_tt
+			set_country_flag = integrated_commune_galician_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_asturian_bonus_tt
+			set_country_flag = integrated_commune_asturian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_basque_bonus_tt
+			set_country_flag = integrated_commune_basque_bonus_flag
+			custom_tooltip = AB_EMPTY
+			213 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_barcelona_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mop_northern_tercios
+				duration = -1
+			}
+			custom_tooltip = developing_iberian_provinces_gives_tercio_tt
+			set_country_flag = developing_iberian_provinces_gives_tercio
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+		}
+	}
 }
 
 ab_mop_2 = {

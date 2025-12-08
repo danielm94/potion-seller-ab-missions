@@ -127,7 +127,6 @@ mop_purge_ten_houses_effect = {
 	}
 }
 
-
 #SCOPE = COUNTRY
 export_egyptian_grain_cost_effect = {
 	add_years_of_income = -0.05
@@ -183,6 +182,47 @@ export_egyptian_grain_cost_effect = {
 				variable_effect = {
 					var = subject_grain_payment
 					effect = add_treasury
+				}
+			}
+		}
+	}
+}
+
+tercio_on_development_scripted_effect = {
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_country_flag = developing_iberian_provinces_gives_tercio
+					overlord = {
+						has_country_flag = developing_iberian_provinces_gives_tercio
+					}
+				}
+			}
+			religion_group = christian
+			culture_group = iberian
+		}
+		random = {
+			chance = 5
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = developing_iberian_provinces_gives_tercio
+					}
+				}
+				owner = {
+					capital_scope = {
+						tercio_infantry = owner
+					}
+				}
+			}
+			else = {
+				owner = {
+					overlord = {
+						capital_scope = {
+							tercio_infantry = owner
+						}
+					}
 				}
 			}
 		}

@@ -903,3 +903,15 @@ on_battle_lost_province = {
 		}
 	}
 }
+
+on_adm_development = {
+	tercio_on_development_scripted_effect = yes
+}
+
+on_dip_development = {
+	tercio_on_development_scripted_effect = yes
+}
+
+on_mil_development = {
+	tercio_on_development_scripted_effect = yes
+}
