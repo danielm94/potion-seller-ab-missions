@@ -824,7 +824,7 @@ calculate_integration_progress_percentage = {
 get_adm_to_integration_progress_exchange_rate = {
 	set_variable = {
 		which = $var$
-		value = 0.5
+		value = 0.6
 	}
 }
 
@@ -832,7 +832,7 @@ get_adm_to_integration_progress_exchange_rate = {
 get_dip_to_integration_progress_exchange_rate = {
 	set_variable = {
 		which = $var$
-		value = 0.75
+		value = 1
 	}
 }
 
@@ -840,7 +840,7 @@ get_dip_to_integration_progress_exchange_rate = {
 get_mil_to_integration_progress_exchange_rate = {
 	set_variable = {
 		which = $var$
-		value = 0.4
+		value = 0.5
 	}
 }
 
