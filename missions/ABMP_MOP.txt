@@ -84,19 +84,19 @@ ab_mop_misc_1 = {
 					custom_trigger_tooltip = {
 						tooltip = mop_strengthen_league_ties_tt
 						all_subject_country = {
-						OR = {
-							is_subject_of_type_with_overlord = {
-								who = root
-								type = sister_commune
+							OR = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = sister_commune
+								}
+							}
+							OR = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = integrated_commune
+								}
 							}
 						}
-						OR = {
-							is_subject_of_type_with_overlord = {
-								who = root
-								type = integrated_commune
-							}
-						}
-					}
 					}
 				}
 			}
@@ -182,6 +182,10 @@ ab_mop_misc_3 = {
 				}
 			}
 			change_innovativeness = 3
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
 		}
 	}
 }
@@ -192,6 +196,75 @@ ab_mop_misc_4 = {
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
+	}
+	mop_develop_moldavia = {
+		icon = GFX_mop_develop_moldavia
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = moldavia_area
+				area = bessarabia_area
+			}
+			OR = {
+				NOT = {
+					num_of_times_improved = 5
+				}
+				NOT = {
+					num_of_times_expanded_infrastructure = 1
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				devastation = 1
+			}
+		}
+		trigger = {
+			moldavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+				num_of_times_improved = 5
+				NOT = {
+					devastation = 1
+				}
+				num_of_times_expanded_infrastructure = 1
+			}
+			bessarabia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+				num_of_times_improved = 5
+				NOT = {
+					devastation = 1
+				}
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			moldavia_area = {
+				add_prosperity = 25
+				add_province_modifier = {
+					name = wallachia_prospering
+					duration = 7300
+				}
+			}
+			bessarabia_area = {
+				add_prosperity = 25
+				add_province_modifier = {
+					name = wallachia_prospering
+					duration = 7300
+				}
+			}
+			define_advisor = {
+				type = planner
+				skill = 1
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
 	}
 }
 

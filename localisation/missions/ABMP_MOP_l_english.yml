@@ -601,3 +601,5 @@
  mop_strengthen_league_ties_desc: "A loose collection of allies is vulnerable to subversion and drift. To ensure the long-term survival of the revolution, we must weave the isolated strands of our alliance into a single, unbreakable rope."
  peasant_zeal_on_commune_integration_tt: "We will now gain §G+5§! §YPeasant Zeal§! whenever we integrate a £allied_commune£§YCommune Subject§!."
  mop_strengthen_league_ties_tt: "Countries that are our £sister_commune£§YSister Commune§!, or £integrated_commune£§YIntegrated Commune§! subjects."
+ mop_develop_moldavia_title: "Develop the Heartland"
+ mop_develop_moldavia_desc: "To prove the superiority of the Peasant Republic, we must transform the cradle of the revolution into a model of agrarian prosperity. By expanding infrastructure and investing in the soil of Moldavia and Bessarabia, we shall demonstrate that free men work harder and build stronger than any serf under bondage. Let our homeland be the envy of the feudal world."
