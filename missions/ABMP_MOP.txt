@@ -1060,9 +1060,8 @@ ab_mop_misc_5 = {
 			}
 		}
 	}
-
 	mop_stabilize_the_government = {
-		icon = GFX_mop_stabilize_the_government
+		icon = balance_the_estates
 		position = 3
 		trigger = {
 			if = {
@@ -1074,11 +1073,28 @@ ab_mop_misc_5 = {
 			else = {
 				stability = 1
 				check_variable = {
-					total_peasant_elections = 4
+					total_peasant_elections = 5
 				}
+				check_variable = {
+					issues_passed = 1
+				}
+				# custom_trigger_tooltip = {
+				# 	tooltip = equal_number_of_peasant_faction_candidates_elected_tt
+				# 	is_variable_equal = {
+				# 		which = total_exemplarist_candidates_elected
+				# 		which = total_leaguist_candidates_elected
+				# 	}
+				# 	is_variable_equal = {
+				# 		which = total_leaguist_candidates_elected
+				# 		which = total_abolitionist_candidates_elected
+				# 	}
+				# }
 			}
 		}
 		effect = {
+			add_republican_tradition = 10
+			add_stability_or_adm_power = yes
+			balance_peasant_faction_influence_effect = yes
 		}
 	}
 }
