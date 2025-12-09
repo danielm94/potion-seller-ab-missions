@@ -182,7 +182,7 @@ forbidden_city_peasant = {
 	}
 }
 
-preasant_sfatul_tarii = {
+peasant_sfatul_tarii = {
 	# province it starts in
 	start = 1756
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
