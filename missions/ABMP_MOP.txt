@@ -7600,6 +7600,78 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_strong_razesi = {
+		icon = GFX_mop_strong_razesi
+		position = 22
+		required_missions = {
+			mop_razesi
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_razesi
+					value = 5
+				}
+				OR = {
+					estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 70
+					}
+					estate_influence = {
+						estate = estate_razesi
+						influence = 90
+					}
+				}
+				num_of_estate_privileges = {
+					estate = estate_razesi
+					value = 5
+				}
+				calc_true_if = {
+					amount = 5
+					custom_trigger_tooltip = {
+						tooltip = has_farm_estate_tt
+						all_owned_province = {
+							has_building = farm_estate
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = razesi_farm_estate_bonus_tt
+			set_country_flag = razesi_farm_estate_bonus
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = buffed_grain_monopoly_tt
+			set_country_flag = buffed_grain_monopoly
+			tooltip = {
+				add_province_modifier = {
+					name = mop_grain_monopoly_province
+					duration = 4380
+				}
+			}
+			custom_tooltip = buffed_livestock_monopoly_tt
+			set_country_flag = buffed_livestock_monopoly
+			tooltip = {
+				add_province_modifier = {
+					name = mop_livestock_monopoly_province
+					duration = 4380
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 20
+			}
+		}
+	}
 	mop_dismantle_the_stratocracy = {
 		icon = mission_nicaea
 		position = 23
@@ -13440,7 +13512,7 @@ ab_mop_5 = {
 	}
 	mop_korea = {
 		icon = mjz_into_korea
-		position = 17
+		position = 18
 		required_missions = {
 			mop_manchuria
 		}
@@ -13498,7 +13570,7 @@ ab_mop_5 = {
 	}
 	mop_pyongyang = {
 		icon = GFX_mop_pyongyang
-		position = 19
+		position = 20
 		required_missions = {
 			mop_korea
 		}

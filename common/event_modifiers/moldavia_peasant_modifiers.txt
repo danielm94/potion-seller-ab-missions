@@ -1339,7 +1339,7 @@ mop_great_kabul_commune = {
 
 mop_jewel_of_the_black_sea = {
 	local_development_cost = -0.2
-	local_build_cost = -0.20
+	local_build_cost = -0.2
 	local_manpower_modifier = 0.25
 	local_production_efficiency = 0.25
 	local_regiment_cost = -0.25
@@ -1355,4 +1355,14 @@ mop_sfatul_tarii_supremancy = {
 mop_spread_the_revolution = {
 	rebel_support_efficiency = 2
 	spy_action_cost_modifier = -0.1
+}
+
+mop_grain_monopoly_province = {
+	trade_goods_size = 1
+	trade_goods_size_modifier = 0.25
+}
+
+mop_livestock_monopoly_province = {
+	trade_goods_size = 1
+	trade_goods_size_modifier = 0.25
 }

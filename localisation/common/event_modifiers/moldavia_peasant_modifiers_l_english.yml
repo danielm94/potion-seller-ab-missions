@@ -345,3 +345,7 @@
  desc_mop_sfatul_tarii_supremancy: "The Council has eclipsed all rival institutions, concentrating the full authority of the state within a single chamber."
  mop_spread_the_revolution: "Revolutionary Agitation"
  desc_mop_spread_the_revolution: "Our agents are active catalysts of class warfare. By funneling gold and propaganda to dissident groups abroad, we turn the grievances of foreign peasants into a weaponized political force, dismantling rival states from the inside out."
+ mop_grain_monopoly_province: "State Grain Reserves"
+ desc_mop_grain_monopoly_province: "The integration of local Farm Estates into the Razesi monopoly system allows for the total mobilization of the harvest. Centralized threshing floors and state-managed silos ensure that grain production is maximized and waste is virtually eliminated."
+ mop_livestock_monopoly_province: "Nationalized Stockyards"
+ desc_mop_livestock_monopoly_province: "The monopoly grants the Razesi exclusive rights to federal grazing lands. Backed by modern estate infrastructure, herd sizes are expanded through selective breeding programs and the centralized processing of animal byproducts."

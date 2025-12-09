@@ -593,6 +593,24 @@ estate_razesi_monopoly_of_livestock = {
 	}
 	conditional_modifier = {
 		trigger = {
+			has_country_flag = buffed_livestock_monopoly
+			has_absolutism_reduction_for_estate_privileges = no
+		}
+		modifier = {
+			max_absolutism = 5
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_livestock_monopoly
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 3
+		}
+	}
+	conditional_modifier = {
+		trigger = {
 			has_government_mechanic = boieri_vs_razesi_mechanic
 		}
 		modifier = {
@@ -606,7 +624,34 @@ estate_razesi_monopoly_of_livestock = {
 			limit = {
 				livestock = 1
 			}
-			add_mercantilism = 1
+			if = {
+				limit = {
+					has_country_flag = buffed_livestock_monopoly
+				}
+				add_mercantilism = 2
+				custom_tooltip = every_owned_farm_estate_livestock_province_tooltip
+				tooltip = {
+					add_province_modifier = {
+						name = mop_livestock_monopoly_province
+						duration = 4380
+					}
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_building = farm_estate
+							trade_goods = livestock
+						}
+						add_province_modifier = {
+							name = mop_livestock_monopoly_province
+							duration = 4380
+						}
+					}
+				}
+			}
+			else = {
+				add_mercantilism = 1
+			}
 		}
 		add_years_of_owned_provinces_production_income = {
 			years = 8
@@ -710,6 +755,24 @@ estate_razesi_monopoly_of_grain = {
 	}
 	conditional_modifier = {
 		trigger = {
+			has_country_flag = buffed_grain_monopoly
+			has_absolutism_reduction_for_estate_privileges = no
+		}
+		modifier = {
+			max_absolutism = 5
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_grain_monopoly
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 3
+		}
+	}
+	conditional_modifier = {
+		trigger = {
 			has_government_mechanic = boieri_vs_razesi_mechanic
 		}
 		modifier = {
@@ -723,7 +786,34 @@ estate_razesi_monopoly_of_grain = {
 			limit = {
 				grain = 1
 			}
-			add_mercantilism = 1
+			if = {
+				limit = {
+					has_country_flag = buffed_grain_monopoly
+				}
+				add_mercantilism = 2
+				custom_tooltip = every_owned_farm_estate_grain_province_tooltip
+				tooltip = {
+					add_province_modifier = {
+						name = mop_grain_monopoly_province
+						duration = 4380
+					}
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_building = farm_estate
+							trade_goods = grain
+						}
+						add_province_modifier = {
+							name = mop_grain_monopoly_province
+							duration = 4380
+						}
+					}
+				}
+			}
+			else = {
+				add_mercantilism = 1
+			}
 		}
 		add_years_of_owned_provinces_production_income = {
 			years = 8
