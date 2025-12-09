@@ -1060,6 +1060,27 @@ ab_mop_misc_5 = {
 			}
 		}
 	}
+
+	mop_stabilize_the_government = {
+		icon = GFX_mop_stabilize_the_government
+		position = 3
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				stability = 1
+				check_variable = {
+					total_peasant_elections = 4
+				}
+			}
+		}
+		effect = {
+		}
+	}
 }
 
 ab_mop_1 = {

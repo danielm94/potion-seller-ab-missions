@@ -93,6 +93,9 @@ country_event = {
 	after = {
 		clr_country_flag = in_peasant_elections_event
 		clr_country_flag = death_election
+		change_variable = {
+			total_peasant_elections = 1
+		}
 	}
 	#Keep non protector of little folk
 	option = {
@@ -228,6 +231,9 @@ country_event = {
 		hidden_effect = {
 			add_ruler_personality = exemplarist_personality
 			set_ruler_flag = exemplarist_ruler
+			change_variable = {
+				total_exemplarist_candidates_elected = 1
+			}
 		}
 		add_faction_influence = {
 			faction = exemplarists_faction
@@ -407,6 +413,9 @@ country_event = {
 		hidden_effect = {
 			add_ruler_personality = abolitionist_personality
 			set_ruler_flag = abolitionist_ruler
+			change_variable = {
+				total_abolitionist_candidates_elected = 1
+			}
 		}
 		add_faction_influence = {
 			faction = abolitionists_faction

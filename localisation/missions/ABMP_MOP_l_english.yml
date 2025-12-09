@@ -629,3 +629,4 @@
  rally_the_communes_trust_buff_tt: "The §YRally the Communes§! interaction will now grant us §G+5§! trust with all of our £allied_commune£§YCommune Subjects§!."
  mop_giga_league_title: "Pax Communalis"
  mop_giga_league_desc: "Eight decades of planning. Ten administrations. One vision. We have replaced the chaotic wars of princes with a stable, federal peace. The map is no longer a patchwork of dynastic feuds but a cohesive network of Integrated Communes working in concert. We have built an edifice of diplomacy so robust that it will stand for a thousand years."
+ total_peasant_elections: "Total number of peasant elections"
