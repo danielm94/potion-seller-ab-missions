@@ -27,6 +27,11 @@ sfatul_tarii_reform = {
 		enables_estate_razesi = yes
 		election_on_death = yes
 	}
+	effect = {
+		hidden_effect = {
+			moldavian_peasant_government_reform_initialization_effect = yes
+		}
+	}
 }
 
 moldavian_commune_reform = {

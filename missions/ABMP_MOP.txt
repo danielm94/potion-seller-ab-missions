@@ -1078,22 +1078,64 @@ ab_mop_misc_5 = {
 				check_variable = {
 					issues_passed = 1
 				}
-				# custom_trigger_tooltip = {
-				# 	tooltip = equal_number_of_peasant_faction_candidates_elected_tt
-				# 	is_variable_equal = {
-				# 		which = total_exemplarist_candidates_elected
-				# 		which = total_leaguist_candidates_elected
-				# 	}
-				# 	is_variable_equal = {
-				# 		which = total_leaguist_candidates_elected
-				# 		which = total_abolitionist_candidates_elected
-				# 	}
-				# }
+				reform_level = 3
 			}
 		}
 		effect = {
-			add_republican_tradition = 10
+			add_republican_tradition = 5
 			add_stability_or_adm_power = yes
+			balance_peasant_faction_influence_effect = yes
+		}
+	}
+	mop_strengthen_government = {
+		icon = the_balance_of_power
+		position = 4
+		required_missions = {
+			mop_stabilize_the_government
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_elections = 12
+				}
+				check_variable = {
+					issues_passed = 3
+				}
+				custom_trigger_tooltip = {
+					tooltip = equal_number_of_peasant_faction_candidates_elected_tt
+					is_variable_equal = {
+						which = total_exemplarist_candidates_elected
+						which = total_leaguist_candidates_elected
+					}
+					is_variable_equal = {
+						which = total_leaguist_candidates_elected
+						which = total_abolitionist_candidates_elected
+					}
+				}
+				is_variable_equal = {
+					which = faction_fatigue_min
+					value = 0
+				}
+				reform_level = 6
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_peasant_sfatul_tarii_great_project_tt
+			set_country_flag = unlock_peasant_sfatul_tarii_great_project
+			custom_tooltip = AB_EMPTY
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			custom_tooltip = AB_EMPTY
+			add_republican_tradition = 10
 			balance_peasant_faction_influence_effect = yes
 		}
 	}

@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "GFX_great_project_forbidden_city_peasant"
 		texturefile = "gfx//interface//great_projects//great_project_forbidden_city.dds"
 	}
+	spriteType = {
+		name = "GFX_great_project_preasant_sfatul_tarii"
+		texturefile = "gfx/interface/great_projects/great_project_peasant_sfatul_tarii.dds"
+	}
 }
