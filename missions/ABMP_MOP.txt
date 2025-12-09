@@ -1095,6 +1095,7 @@ ab_mop_misc_5 = {
 			add_republican_tradition = 10
 			add_stability_or_adm_power = yes
 			balance_peasant_faction_influence_effect = yes
+			#penis
 		}
 	}
 }
