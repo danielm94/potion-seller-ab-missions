@@ -1351,3 +1351,8 @@ mop_sfatul_tarii_supremancy = {
 	num_of_parliament_issues = 1
 	parliament_backing_chance = 0.05
 }
+
+mop_spread_the_revolution = {
+	rebel_support_efficiency = 2
+	spy_action_cost_modifier = -0.1
+}

@@ -647,3 +647,7 @@
  develop_razesi_loyalty_tt: "Developing §YGrain§!, §YLivestock§! and §YWine§! provinces has a §G25%§! chance of granting §G+1%§! Razesi loyalty."
  mop_razesi_title: "Fulfill the Promise"
  mop_razesi_desc: "We swept away the boyars with promises of a government built for the common man. Now, the Razesi wait to see if we are liberators or merely new masters. To legitimize our nascent republic, we must move beyond rhetoric and directly address the grievances of the free peasantry. We must fulfill their agendas and ensure their voice resonates in the halls of power."
+ mop_overthrow_title: "Break the Chains"
+ mop_overthrow_desc: "Our brothers and sisters across the border groan under the lash of the nobility. We are duty-bound to answer their silent prayers. We must send agents to incite unrest among the foreign serfs and march our armies to liberate them. By toppling the thrones of tyrants and installing peasant councils, we prove the universality of our cause."
+ total_peasant_governments_installed: "Commune subjects established"
+ total_incited_peasants: "The number of times we have used 'Incite Peasants'"

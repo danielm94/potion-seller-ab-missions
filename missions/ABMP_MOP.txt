@@ -11056,6 +11056,35 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_overthrow = {
+		icon = GFX_mop_overthrow
+		position = 20
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_governments_installed = 2
+				}
+				check_variable = {
+					total_incited_peasants = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mop_spread_the_revolution
+				duration = 5475
+			}
+			change_peasant_zeal = {
+				value = 5
+			}
+		}
+	}
 	mop_iraq = {
 		icon = mission_cradle_of_civilization
 		position = 28
@@ -13469,7 +13498,7 @@ ab_mop_5 = {
 	}
 	mop_pyongyang = {
 		icon = GFX_mop_pyongyang
-		position = 18
+		position = 19
 		required_missions = {
 			mop_korea
 		}

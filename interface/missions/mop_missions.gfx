@@ -154,4 +154,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_razesi.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_overthrow"
+		texturefile = "gfx/interface/missions/mop/mop_overthrow.dds"
+		loadType = "INGAME"
+	}
 }

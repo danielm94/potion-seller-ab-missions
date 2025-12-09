@@ -31,6 +31,9 @@ po_install_peasant_government = {
 		always = yes
 	}
 	effect = {
+		change_variable = {
+			total_peasant_governments_installed = 1
+		}
 		if = {
 			limit = {
 				FROM = {
