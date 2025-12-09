@@ -71,6 +71,7 @@ calculate_stage_mass_peasant_uprising_cost = {
 
 #SCOPE = COUNTRY
 balance_peasant_faction_influence_effect = {
+	custom_tooltip = balance_peasant_faction_influence_effect_tt
 	hidden_effect = {
 		set_faction_influence_to_0_effect = {
 			faction = exemplarists_faction
