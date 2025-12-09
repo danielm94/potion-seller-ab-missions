@@ -159,6 +159,23 @@ peasant_zealotry = {
 						multiplier = 0.05
 					}
 				}
+				if = {
+					limit = {
+						has_country_flag = rally_the_communes_trust_buff
+					}
+					custom_tooltip = gain_5_trust_with_all_communes_tt
+					hidden_effect = {
+						every_subject_country = {
+							limit = {
+								is_commune_subject = yes
+							}
+							add_trust = {
+								who = overlord
+								value = 5
+							}
+						}
+					}
+				}
 			}
 			cooldown_years = 10
 			ai_chance = {

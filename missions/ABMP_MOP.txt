@@ -164,7 +164,7 @@ ab_mop_misc_1 = {
 				calc_true_if = {
 					amount = 5
 					custom_trigger_tooltip = {
-						tooltip = mop_league_integration_tt
+						tooltip = countries_that_are_our_integrated_communes_tt
 						all_subject_country = {
 							is_subject_of_type_with_overlord = {
 								who = root
@@ -217,8 +217,9 @@ ab_mop_misc_1 = {
 			}
 		}
 		effect = {
-			custom_tooltip = reduce_sister_commune_annexation_cost_multiplier_tt
-			set_country_flag = reduce_sister_commune_annexation_cost_multiplier
+			simple_unlock_issue = {
+				issue = commune_integration_issue
+			}
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = internationalist_mandate_buff_2_tt
 			set_country_flag = internationalist_mandate_buff_2
@@ -229,6 +230,59 @@ ab_mop_misc_1 = {
 			add_faction_influence = {
 				faction = leaguists_faction
 				influence = 20
+			}
+		}
+	}
+	mop_giga_league = {
+		icon = unite_the_league
+		position = 5
+		required_missions = {
+			mop_internationalism
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_commune_development = 2000
+				}
+				calc_true_if = {
+					amount = 15
+					custom_trigger_tooltip = {
+						tooltip = countries_that_are_our_integrated_communes_tt
+						all_subject_country = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+				}
+				check_variable = {
+					total_leaguist_candidates_elected = 10
+				}
+				check_variable = {
+					total_leaguist_ten_year_plans_enacted = 8
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = reduce_sister_commune_annexation_cost_multiplier_tt
+			set_country_flag = reduce_sister_commune_annexation_cost_multiplier
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = rally_the_communes_trust_buff_tt
+			set_country_flag = rally_the_communes_trust_buff
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 30
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 30
 			}
 		}
 	}

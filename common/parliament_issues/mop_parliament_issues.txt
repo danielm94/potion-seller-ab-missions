@@ -1,0 +1,39 @@
+commune_integration_issue = {
+	category = 2
+	allow = {
+		has_issue_unlocked = {
+			issue = commune_integration_issue
+		}
+	}
+	effect = {
+		custom_tooltip = 25_percent_integration_progress_gain_tt
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_commune_subject_being_integrated = yes
+				}
+				change_commune_integration_progress_as_percentage_of_cost = {
+					percentage = 0.25
+				}
+			}
+		}
+	}
+	modifier = {
+		diplomatic_annexation_cost = -0.1
+		diplomatic_reputation = 1
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_subject_country = {
+					is_commune_subject_being_integrated = yes
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}

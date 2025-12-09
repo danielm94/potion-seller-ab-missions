@@ -134,7 +134,9 @@ calculate_commune_integration_cost = {
 		}
 		if = {
 			limit = {
-				has_country_flag = reduce_sister_commune_annexation_cost_multiplier
+				overlord = {
+					has_country_flag = reduce_sister_commune_annexation_cost_multiplier
+				}
 			}
 			get_discounted_sister_commune_annexation_cost_multiplier = {
 				var = subject_type_annexation_cost_multiplier
