@@ -620,3 +620,7 @@
  base_monthly_commune_intergation_rate_increase_tt: "The base monthly commune integration progress is increased by §G+0.5§!"
  mop_league_integration_title: "The Federal Charter"
  mop_league_integration_desc: "The decade spent implementing the 'Bind the League' plan has prepared the ground for this decisive step. We now ratify the Federal Charter, a supreme constitution that supersedes local statutes across all Member Republics. This document harmonizes administrative protocols, standardizes currency, and dismantles internal borders. With the legal machinery now fully aligned, the integration of our subjects becomes a seamless bureaucratic formality rather than a diplomatic struggle."
+ internationalist_mandate_buff_2_tt: "The §OInternationalist Mandate§! §YRazesi§! estate privilege §Gno longer grants§! §R+3.00§! National Unrest or penalties to Absolutism."
+ reduce_sister_commune_annexation_cost_multiplier_tt: "The base annexation cost per point of development for £sister_commune£§YSister Communes§! has been §Greduced§! from §Y5§! to §G4§!."
+ mop_internationalism_title: "Center of the League"
+ mop_internationalism_desc: "Our capital has evolved from a regional stronghold into the nerve center of a continental movement. By constructing the Grand Consulate and formally recognizing the distinct cultures within our borders, we affirm that the revolution transcends language. This administrative hub ensures that envoys from every Member Republic find a home here, dismantling the cultural friction that slows integration."

@@ -179,7 +179,52 @@ ab_mop_misc_1 = {
 			custom_tooltip = base_monthly_commune_intergation_rate_increase_tt
 			set_country_flag = base_monthly_commune_intergation_rate_increase
 			change_peasant_zeal = {
-				value = 10
+				value = 20
+			}
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 20
+			}
+		}
+	}
+	mop_internationalism = {
+		icon = mission_explore_the_world
+		position = 4
+		required_missions = {
+			mop_league_integration
+		}
+		provinces_to_highlight = {
+			is_capital_of = root
+			NOT = {
+				has_building = consulate
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				capital_scope = {
+					has_building = consulate
+				}
+				has_estate_privilege = estate_razesi_internationalism
+				num_accepted_cultures = 4
+				ruler_has_personality = leaguist_personality
+				dip = 5
+			}
+		}
+		effect = {
+			custom_tooltip = reduce_sister_commune_annexation_cost_multiplier_tt
+			set_country_flag = reduce_sister_commune_annexation_cost_multiplier
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = internationalist_mandate_buff_2_tt
+			set_country_flag = internationalist_mandate_buff_2
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
 			}
 			add_faction_influence = {
 				faction = leaguists_faction
@@ -15679,4 +15724,3 @@ mop_britain_south_series_unlocked_5 = {
 		}
 	}
 }
-

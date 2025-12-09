@@ -132,8 +132,18 @@ calculate_commune_integration_cost = {
 		limit = {
 			is_subject_of_type = sister_commune
 		}
-		get_sister_commune_annexation_cost_multiplier = {
-			var = subject_type_annexation_cost_multiplier
+		if = {
+			limit = {
+				has_country_flag = reduce_sister_commune_annexation_cost_multiplier
+			}
+			get_discounted_sister_commune_annexation_cost_multiplier = {
+				var = subject_type_annexation_cost_multiplier
+			}
+		}
+		else = {
+			get_sister_commune_annexation_cost_multiplier = {
+				var = subject_type_annexation_cost_multiplier
+			}
 		}
 	}
 	else_if = {
@@ -898,6 +908,13 @@ get_allied_commune_annexation_cost_multiplier = {
 get_sister_commune_annexation_cost_multiplier = {
 	set_variable = {
 		$var$ = 5
+	}
+}
+
+#SCOPE = ANY
+get_discounted_sister_commune_annexation_cost_multiplier = {
+	set_variable = {
+		$var$ = 4
 	}
 }
 
