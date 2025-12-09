@@ -1345,3 +1345,9 @@ mop_jewel_of_the_black_sea = {
 	local_regiment_cost = -0.25
 	local_governing_cost = -0.5
 }
+
+mop_sfatul_tarii_supremancy = {
+	max_absolutism = 10
+	num_of_parliament_issues = 1
+	parliament_backing_chance = 0.05
+}

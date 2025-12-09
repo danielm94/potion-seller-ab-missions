@@ -144,4 +144,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_league_integration.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_gigachad_government"
+		texturefile = "gfx/interface/missions/mop/mop_gigachad_government.dds"
+		loadType = "INGAME"
+	}
 }

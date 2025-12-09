@@ -239,6 +239,12 @@ ab_mop_misc_1 = {
 		required_missions = {
 			mop_internationalism
 		}
+		provinces_to_highlight = {
+			is_capital_of = root
+			NOT = {
+				has_building = externalministry
+			}
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -267,6 +273,9 @@ ab_mop_misc_1 = {
 				}
 				check_variable = {
 					total_leaguist_ten_year_plans_enacted = 8
+				}
+				capital_scope = {
+					has_building = externalministry
 				}
 			}
 		}
@@ -1094,6 +1103,13 @@ ab_mop_misc_5 = {
 			mop_stabilize_the_government
 		}
 		provinces_to_highlight = {
+			province_id = 1756
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				has_courthouse_building_trigger = no
+			}
 		}
 		trigger = {
 			if = {
@@ -1103,6 +1119,10 @@ ab_mop_misc_5 = {
 				always = yes
 			}
 			else = {
+				1756 = {
+					owned_by = root
+					has_courthouse_building_trigger = yes
+				}
 				check_variable = {
 					total_peasant_elections = 12
 				}
@@ -1136,6 +1156,69 @@ ab_mop_misc_5 = {
 			add_mil_power = 50
 			custom_tooltip = AB_EMPTY
 			add_republican_tradition = 10
+			balance_peasant_faction_influence_effect = yes
+		}
+	}
+	mop_gigachad_government = {
+		icon = GFX_mop_gigachad_government
+		position = 5
+		required_missions = {
+			mop_strengthen_government
+		}
+		provinces_to_highlight = {
+			province_id = 1756
+			OR = {
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					base_tax = 20
+				}
+				NOT = {
+					has_building = state_house
+				}
+				NOT = {
+					has_great_project = {
+						type = peasant_sfatul_tarii
+						tier = 3
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				1756 = {
+					owned_by = root
+					base_tax = 20
+					has_building = state_house
+					has_great_project = {
+						type = peasant_sfatul_tarii
+						tier = 3
+					}
+				}
+				check_variable = {
+					total_peasant_elections = 30
+				}
+				check_variable = {
+					issues_passed = 10
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mop_sfatul_tarii_supremancy
+				duration = -1
+			}
+			custom_tooltip = parliament_issues_reduce_faction_fatigue_tt
+			set_country_flag = parliament_issues_reduce_faction_fatigue
+			custom_tooltip = AB_EMPTY
+			add_republican_tradition = 20
 			balance_peasant_faction_influence_effect = yes
 		}
 	}
