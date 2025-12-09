@@ -929,3 +929,15 @@ on_parliament_debate_succeeded = {
 		}
 	}
 }
+
+on_adm_development = {
+	razesi_loyalty_on_province_developed_effect = yes
+}
+
+on_dip_development = {
+	razesi_loyalty_on_province_developed_effect = yes
+}
+
+on_mil_development = {
+	razesi_loyalty_on_province_developed_effect = yes
+}

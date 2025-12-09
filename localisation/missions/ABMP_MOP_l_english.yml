@@ -644,3 +644,6 @@
  unlock_issue_faction_fatigue_issue_tt: "We will unlock §YThe Political Standards Act§! parliament issue."
  mop_gigachad_government_title: "The Grand Sfatul Tarii"
  mop_gigachad_government_desc: "A revolution as vast as requires a proper seat for our administration. We must construct a monumental legislative complex in [1756.GetName] to house the delegates of the Federation. By expanding the bureaucracy, and fully expanding the Sfatul Tarii to its glorious potential, we will forge a legislative engine capable of governing a continent."
+ develop_razesi_loyalty_tt: "Developing §YGrain§!, §YLivestock§! and §YWine§! provinces has a §G25%§! chance of granting §G+1%§! Razesi loyalty."
+ mop_razesi_title: "Fulfill the Promise"
+ mop_razesi_desc: "We swept away the boyars with promises of a government built for the common man. Now, the Razesi wait to see if we are liberators or merely new masters. To legitimize our nascent republic, we must move beyond rhetoric and directly address the grievances of the free peasantry. We must fulfill their agendas and ensure their voice resonates in the halls of power."

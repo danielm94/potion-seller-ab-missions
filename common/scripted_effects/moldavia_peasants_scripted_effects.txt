@@ -188,6 +188,7 @@ export_egyptian_grain_cost_effect = {
 	}
 }
 
+#SCOPE = PROVINCE
 tercio_on_development_scripted_effect = {
 	if = {
 		limit = {
@@ -266,5 +267,30 @@ moldavian_peasant_government_reform_initialization_effect = {
 			total_peasant_elections = 0
 		}
 		set_country_flag = peasant_variables_initialized
+	}
+}
+
+#SCOPE = PROVINCE
+razesi_loyalty_on_province_developed_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = develop_razesi_loyalty
+			}
+			OR = {
+				trade_goods = livestock
+				trade_goods = grain
+				trade_goods = wine
+			}
+		}
+		random = {
+			chance = 20
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_razesi
+					loyalty = 1
+				}
+			}
+		}
 	}
 }

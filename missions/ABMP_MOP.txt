@@ -7560,6 +7560,46 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_razesi = {
+		icon = GFX_mop_razesi
+		position = 21
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_estate_agendas_completed = {
+					estate = estate_razesi
+					value = 2
+				}
+				OR = {
+					estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 60
+					}
+					estate_influence = {
+						estate = estate_razesi
+						influence = 75
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = develop_razesi_loyalty_tt
+			set_country_flag = develop_razesi_loyalty
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 5
+			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 10
+			}
+		}
+	}
 	mop_dismantle_the_stratocracy = {
 		icon = mission_nicaea
 		position = 23
