@@ -792,3 +792,43 @@ ab_building_soldier_households_effect = {
 
 ab_removing_soldier_households_effect = {
 }
+
+#SCOPE = PROVINCE
+ab_building_farm_estate_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = razesi_farm_estate_bonus
+			}
+		}
+		owner = {
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 10
+			}
+			change_peasant_zeal = {
+				value = 5
+			}
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+ab_removing_farm_estate_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = razesi_farm_estate_bonus
+			}
+		}
+		owner = {
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = -10
+			}
+			change_peasant_zeal = {
+				value = -5
+			}
+		}
+	}
+}

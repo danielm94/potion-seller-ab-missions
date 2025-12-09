@@ -2323,6 +2323,7 @@ farm_estate = {
 			}
 			add_base_production = 1
 		}
+		ab_building_farm_estate_effect = yes
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2343,6 +2344,7 @@ farm_estate = {
 			}
 			add_base_production = -1
 		}
+		ab_removing_farm_estate_effect = yes
 	}
 	on_obsolete = {
 	}
