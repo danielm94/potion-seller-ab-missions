@@ -640,6 +640,7 @@
  mop_strengthen_government_desc: "Internal friction is the death of republics. We must refine our political machine until it runs without resistance. By carefully managing re-elections to eliminate faction fatigue and ensuring equal representation for all three ideologies, we will create a government capable of enduring for centuries."
  faction_fatigue_min: "Current minimum faction fatigue"
  unlock_peasant_sfatul_tarii_great_project_tt: "We can now construct the §YSfatul Tarii§! great project in §Y[1756.GetName]§!."
- parliament_issues_reduce_faction_fatigue_tt: "Passing parliament issues will now reduce the §YCurrent Faction Fatigue Gain Modifier§! by §G[Root.fatigue_gain_modifier_reelect_candidate_change.GetValue]§! and the §YCurrent Minimum Faction Fatigue§! by §G[Root.min_faction_fatigue_reelect_candidate_change.GetValue]§!."
+ parliament_issues_reduce_faction_fatigue_tt: "Passing parliament issues will now reduce the §YCurrent Faction Fatigue Gain Modifier§! by §G[Root.fatigue_gain_modifier_parliament_on_action_change.GetValue]§! and the §YCurrent Minimum Faction Fatigue§! by §G[Root.min_faction_fatigue_parliament_on_action_change.GetValue]§!."
+ unlock_issue_faction_fatigue_issue_tt: "We will unlock §YThe Political Standards Act§! parliament issue."
  mop_gigachad_government_title: "The Grand Sfatul Tarii"
  mop_gigachad_government_desc: "A revolution as vast as requires a proper seat for our administration. We must construct a monumental legislative complex in [1756.GetName] to house the delegates of the Federation. By expanding the bureaucracy, and fully expanding the Sfatul Tarii to its glorious potential, we will forge a legislative engine capable of governing a continent."

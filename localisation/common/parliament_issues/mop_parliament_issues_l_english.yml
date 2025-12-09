@@ -2,3 +2,5 @@
  25_percent_integration_progress_gain_tt: "We will gain §G+25%§! integration progress with the £allied_commune£§YCommune Subject§! we are trying to integrate."
  commune_integration_issue: "The League Integration Act"
  unlock_issue_commune_integration_issue_tt: "Unlock the §YThe League Integration Act§! parliament issue."
+ faction_fatigue_issue: "The Political Standards Act"
+ faction_fatigue_issue_effect_tt: "The §YCurrent Faction Fatigue Gain Modifier§! will be reduced by §G[Root.fatigue_gain_modifier_parliament_issue_change.GetValue]§! and the §YCurrent Minimum Faction Fatigue§! by §G[Root.min_faction_fatigue_parliament_issue_change.GetValue]§!."

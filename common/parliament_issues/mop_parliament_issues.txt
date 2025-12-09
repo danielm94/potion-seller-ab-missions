@@ -37,3 +37,65 @@ commune_integration_issue = {
 		factor = 500
 	}
 }
+
+faction_fatigue_issue = {
+	category = 1
+	allow = {
+		has_issue_unlocked = {
+			issue = faction_fatigue_issue
+		}
+	}
+	effect = {
+		custom_tooltip = faction_fatigue_issue_effect_tt
+		hidden_effect = {
+			faction_fatigue_change_fatigue_gain_modifier = {
+				var = fatigue_gain_modifier_parliament_issue_change
+			}
+			faction_fatigue_change_minimum_faction_fatigue = {
+				var = min_faction_fatigue_parliament_issue_change
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		balance_peasant_faction_influence_effect = yes
+	}
+	modifier = {
+		republican_tradition = 0.25
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_variable_equal = {
+				which = faction_fatigue_min
+				value = 0
+			}
+		}
+		modifier = {
+			factor = 1.5
+			check_variable = {
+				faction_fatigue_min = 1
+			}
+		}
+		modifier = {
+			factor = 2
+			check_variable = {
+				faction_fatigue_min = 2
+			}
+		}
+		modifier = {
+			factor = 2.5
+			check_variable = {
+				faction_fatigue_min = 3
+			}
+		}
+		modifier = {
+			factor = 3
+			check_variable = {
+				faction_fatigue_min = 4
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}

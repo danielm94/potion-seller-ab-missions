@@ -22,10 +22,22 @@ faction_fatigue_initialize_faction_fatigue_variables = {
 		fatigue_gain_modifier_reelect_candidate_change = -0.1
 	}
 	set_variable = {
+		fatigue_gain_modifier_parliament_on_action_change = -0.05
+	}
+	set_variable = {
+		fatigue_gain_modifier_parliament_issue_change = -0.2
+	}
+	set_variable = {
 		min_faction_fatigue_new_candidate_change = 0.15
 	}
 	set_variable = {
 		min_faction_fatigue_reelect_candidate_change = -0.25
+	}
+	set_variable = {
+		min_faction_fatigue_parliament_on_action_change = -0.125
+	}
+	set_variable = {
+		min_faction_fatigue_parliament_issue_change = -0.5
 	}
 	set_variable = {
 		which = current_fatigue_gain_modifier

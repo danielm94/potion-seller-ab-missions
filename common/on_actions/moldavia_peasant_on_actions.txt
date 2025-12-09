@@ -922,10 +922,10 @@ on_parliament_debate_succeeded = {
 			has_country_flag = parliament_issues_reduce_faction_fatigue
 		}
 		faction_fatigue_change_fatigue_gain_modifier = {
-			var = fatigue_gain_modifier_reelect_candidate_change
+			var = fatigue_gain_modifier_parliament_on_action_change
 		}
 		faction_fatigue_change_minimum_faction_fatigue = {
-			var = min_faction_fatigue_reelect_candidate_change
+			var = min_faction_fatigue_parliament_on_action_change
 		}
 	}
 }

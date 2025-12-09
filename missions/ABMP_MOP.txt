@@ -1151,9 +1151,9 @@ ab_mop_misc_5 = {
 			custom_tooltip = unlock_peasant_sfatul_tarii_great_project_tt
 			set_country_flag = unlock_peasant_sfatul_tarii_great_project
 			custom_tooltip = AB_EMPTY
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			simple_unlock_issue = {
+				issue = faction_fatigue_issue
+			}
 			custom_tooltip = AB_EMPTY
 			add_republican_tradition = 10
 			balance_peasant_faction_influence_effect = yes
