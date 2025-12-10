@@ -817,3 +817,50 @@ country_event = {
 		}
 	}
 }
+
+province_event = {
+	id = moldavia_peasant_events.14
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	trigger = {
+		has_province_modifier = negate_moldavian_commune_reform_ccr
+		has_construction = core
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = target_core_progress
+				value = trigger_value:always
+			}
+			change_variable = {
+				which = target_core_progress
+				value = 1
+			}
+			export_to_variable = {
+				which = country_ccr
+				value = modifier:core_creation 
+				who = owner
+			}
+			change_variable = {
+				which = country_ccr
+				value = 1
+			}
+			divide_variable = {
+				which = target_core_progress
+				which = country_ccr
+			}
+			export_to_variable = {
+				which = current_progress
+				value = trigger_value:construction_progress
+			}
+			check_variable = {
+				which = current_progress
+				which = target_core_progress
+			}
+		}
+	}
+	option = {
+		name = moldavia_peasant_events.14.a
+		add_core = owner
+	}
+}
