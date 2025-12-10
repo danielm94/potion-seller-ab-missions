@@ -6409,6 +6409,7 @@ ab_mop_3 = {
 			hidden_effect = {
 				set_country_flag = mop_no_coring_penalty_in_perma_claim_provinces
 			}
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 25
 				scaled_with_gain_modifier = yes
@@ -12511,14 +12512,6 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
-				num_of_estate_agendas_completed = {
-					estate = estate_cossacks
-					value = 3
-				}
-				estate_loyalty = {
-					estate = estate_cossacks
-					loyalty = 65
-				}
 				dip_power = 125
 				if = {
 					limit = {
