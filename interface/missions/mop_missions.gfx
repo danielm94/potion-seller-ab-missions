@@ -169,4 +169,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/mop/mop_overthrow_3.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_mop_peasant_tide"
+		texturefile = "gfx/interface/missions/mop/mop_peasant_tide.dds"
+		loadType = "INGAME"
+	}
 }

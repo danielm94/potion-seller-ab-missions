@@ -13882,6 +13882,61 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_peasant_tide = {
+		icon = GFX_mop_peasant_tide
+		position = 27
+		required_missions = {
+			mop_adopt_gunpowder
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				monthly_mil = 12
+				army_size = 200
+				army_professionalism = 0.75
+				OR = {
+					army_tradition = 80
+					has_government_power = {
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						value = 80
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = boh_biggest_eu_army
+					NOT = {
+						any_country = {
+							capital_scope = {
+								continent = europe
+							}
+							army_size = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mop_peasant_tide_mod
+				duration = -1
+			}
+			create_general = {
+				tradition = 100
+				add_shock = 2
+				add_fire = 2
+				add_manuever = 2
+				add_siege = 2
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = peasant_zeal_reinforcement_buff_tt
+			set_country_flag = peasant_zeal_reinforcement_buff
+		}
+	}
 	mop_holy_land = {
 		icon = convert_the_holy_lands
 		position = 28

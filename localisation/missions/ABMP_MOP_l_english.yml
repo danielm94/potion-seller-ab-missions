@@ -672,3 +672,6 @@
  blood_tax_privilege_buff_tt: "§YThe Blood Tax§! estate privilege will now grant §G-5.0%§! Regiment Costs and no Absolutism penalties."
  mop_adopt_gunpowder_title: "The Powder Edict"
  mop_adopt_gunpowder_desc: "The age of bow and pike is ending. Victory on the modern battlefield will be decided by disciplined fire and the roar of cannon. We must embrace this revolution, investing in artillery and retraining our soldiers in the art of gunpowder warfare. Under the guidance of a true military innovator, the federal army will master this new technology and wield it to devastating effect." 
+ peasant_zeal_reinforcement_buff_tt: "§YPeasant Zealotry§! now grants up to §G+30.0%§! Reinforce Speed."
+ mop_peasant_tide_title: "The Peasant Tide"
+ mop_peasant_tide_desc: "From the Carpathian passes to the western seas, our banners darken the horizon. No longer a rabble with pitchforks, the communes now field Europe’s mightiest host—drilled in gunpowder, hardened by war, and aflame with zeal. When the dark tide of the people rises to consume the horizon, there is nothing left for kings to do but weep."

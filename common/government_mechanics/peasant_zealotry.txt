@@ -19,9 +19,19 @@ peasant_zealotry = {
 				}
 			}
 			scaled_modifier = {
-				modifier = { land_morale = 0.1 }
+				modifier = {
+					land_morale = 0.1
+				}
 				trigger = {
 					has_country_flag = peasant_zeal_french_upgrade
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = peasant_zeal_reinforcement_buff
+				}
+				modifier = {
+					reinforce_speed = 0.3
 				}
 			}
 		}
