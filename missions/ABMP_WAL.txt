@@ -6489,7 +6489,7 @@ ab_wal_5 = {
 		}
 	}
 	wal_adopt_gunpowder = {
-		icon = gfx_wal_adopt_gunpowder
+		icon = mission_guns_of_urban
 		position = 22
 		required_missions = {
 			wal_military_infrastructure

@@ -13839,6 +13839,49 @@ ab_mop_5 = {
 			set_country_flag = blood_tax_privilege_buff
 		}
 	}
+	mop_adopt_gunpowder = {
+		icon = mission_guns_of_urban
+		position = 25
+		required_missions = {
+			mop_military_infrastructure
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_artillery = 15
+				OR = {
+					army_tradition = 50
+					has_government_power = {
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						value = 50
+					}
+				}
+				army_professionalism = 0.5
+				custom_trigger_tooltip = {
+					tooltip = employed_skill_3_army_reformer_tooltip
+					employed_advisor = {
+						type = army_reformer
+						skill = 3
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wallachia_gunpowder
+				duration = 29200
+			}
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+		}
+	}
 	mop_holy_land = {
 		icon = convert_the_holy_lands
 		position = 28
