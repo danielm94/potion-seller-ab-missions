@@ -479,6 +479,32 @@ declarewar = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = extra_peasants_spawn_peasants_war
+				}
+				FROM = {
+					random_owned_province = {
+						limit = {
+							has_province_modifier = radicalized_peasantry
+						}
+						spawn_rebels = {
+							size = 1
+							type = anti_tax_rebels
+							friend = ROOT
+						}
+					}
+					every_owned_province = {
+						limit = {
+							likely_rebels = anti_tax_rebels
+						}
+						add_province_modifier = {
+							name = recent_uprising
+							duration = 3650
+						}
+					}
+				}			
+			}
 		}
 		if = {
 			limit = {	

@@ -11130,7 +11130,7 @@ ab_mop_4 = {
 	}
 	mop_overthrow = {
 		icon = GFX_mop_overthrow
-		position = 20
+		position = 21
 		trigger = {
 			if = {
 				limit = {
@@ -11154,6 +11154,47 @@ ab_mop_4 = {
 			}
 			change_peasant_zeal = {
 				value = 5
+			}
+		}
+	}
+	mop_overthrow_2 = {
+		icon = mission_thirty_years_war
+		position = 23
+		required_missions = {
+			mop_overthrow
+			mop_strong_razesi
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_governments_installed = 12
+				}
+				check_variable = {
+					total_incited_peasants = 6
+				}
+				check_variable = {
+					total_staged_coups_against_commune = 1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = extra_peasants_spawn_peasants_war_tt
+			set_country_flag = extra_peasants_spawn_peasants_war
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = spymaster
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
 			}
 		}
 	}

@@ -1124,6 +1124,9 @@ stage_coup_commune_integration = {
 		}
 	}
 	on_accept = {
+		change_variable = {
+			total_staged_coups_against_commune = 1
+		}
 		calculate_spy_action_cost_values = yes
 		set_variable = {
 			which = spy_network_deduction_var
