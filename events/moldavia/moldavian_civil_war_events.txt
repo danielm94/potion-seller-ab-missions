@@ -10,18 +10,11 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = started_moldavian_civil_war
 			set_country_flag = in_moldavian_civil_war
-			define_heir = {
-				name = "Anti Crash The Magnificent"
-				adm = 6
-				dip = 6
-				mil = 6
-				age = 20
-			}
 			exile_ruler_as = {
 				name = assassinated_moldavian_voivode
 			}
-			setup_MOP_effect = yes
 			setup_boyar_MOL_effect = yes
+			setup_MOP_effect = yes
 		}
 	}
 	option = {
