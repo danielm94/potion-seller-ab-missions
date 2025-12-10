@@ -11198,6 +11198,49 @@ ab_mop_4 = {
 			}
 		}
 	}
+	mop_overthrow_3 = {
+		icon = GFX_mop_overthrow_3
+		position = 27
+		required_missions = {
+			mop_overthrow_2
+		}
+		provinces_to_highlight = {
+			is_capital_of = root
+			NOT = {
+				has_building = intelministry
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_governments_installed = 25
+				}
+				check_variable = {
+					total_incited_peasants = 12
+				}
+				capital_scope = {
+					has_building = intelministry
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = spymaster_rebel_support_efficiency_buff_tt
+			set_country_flag = spymaster_rebel_support_efficiency_buff
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = revolutionary_mandate_buff_tt
+			set_country_flag = revolutionary_mandate_buff
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+		}
+	}
 	mop_iraq = {
 		icon = mission_cradle_of_civilization
 		position = 28

@@ -661,3 +661,7 @@
  total_staged_coups_against_commune: "Total number of times we have used 'Stage Coup in Commune' covert action while integrating our £allied_commune£Commune Subject"
  mop_overthrow_2_title: "Total Liberation"
  mop_overthrow_2_desc: "The time for cautious diplomacy is over. Our existence is an existential threat to every noble on this continent, and they will not stop until we are destroyed. We must strike first and everywhere. We will export our model of governance by the sword, creating a buffer of friendly states deep into enemy territory. Simultaneously, we must police our own sphere of influence, ruthlessly removing any commune leadership that drifts back toward oligarchy. The revolution must be exported, and it must remain pure."
+ spymaster_rebel_support_efficiency_buff_tt: "§YSpymaster§! advisors now grant §G+50%§! Rebel Support Efficiency per skill level."
+ revolutionary_mandate_buff_tt: "The §ORevolutionary Mandate§! §YRazesi§! estate privilege will now grant §G+25%§! Foreign Spy Detection and no Absolutism penalties."
+ mop_overthrow_3_title: "The Architect of Ruin"
+ mop_overthrow_3_desc: "We have turned regicide into an administrative process. What began as a local revolt has become a continental machine, churning out fallen dynasties and liberated communes with terrifying regularity. The sheer scale of this operation, with continents set ablaze and dozens of thrones overturned, demands a nerve center worthy of the task."

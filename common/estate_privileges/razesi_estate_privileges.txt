@@ -1010,10 +1010,21 @@ estate_razesi_exemplarism = {
 	conditional_modifier = {
 		trigger = {
 			has_country_flag = isolationist_mandate_buff_2
+			has_absolutism_reduction_for_estate_privileges = no
 		}
 		modifier = {
 			development_cost_in_primary_culture = -0.1
 			max_absolutism = 10
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = isolationist_mandate_buff_2
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			development_cost_in_primary_culture = -0.1
+			max_absolutism = 8
 		}
 	}
 	loyalty = 0.05
@@ -1097,10 +1108,21 @@ estate_razesi_internationalism = {
 	conditional_modifier = {
 		trigger = {
 			has_country_flag = internationalist_mandate_buff_2
+			has_absolutism_reduction_for_estate_privileges = no
 		}
 		modifier = {
 			global_unrest = 3
 			max_absolutism = 10
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = internationalist_mandate_buff_2
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			global_unrest = 3
+			max_absolutism = 8
 		}
 	}
 	loyalty = 0.05
@@ -1168,6 +1190,26 @@ estate_razesi_revolution = {
 		}
 		modifier = {
 			improve_relation_modifier = 0.15
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = revolutionary_mandate_buff
+			has_absolutism_reduction_for_estate_privileges = no
+		}
+		modifier = {
+			max_absolutism = 10
+			global_spy_defence = 0.25
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = revolutionary_mandate_buff
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 8
+			global_spy_defence = 0.25
 		}
 	}
 	influence = 0.15

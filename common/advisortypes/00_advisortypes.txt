@@ -1487,6 +1487,14 @@ spymaster = {
 			monthly_southernfrenchness = -0.05
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_country_flag = spymaster_rebel_support_efficiency_buff
+			}
+		}
+		modifier = { rebel_support_efficiency = 0.5 }
+	}
 	# ]]]
 	
 	chance = {
