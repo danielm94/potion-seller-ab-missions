@@ -1366,3 +1366,8 @@ mop_livestock_monopoly_province = {
 	trade_goods_size = 1
 	trade_goods_size_modifier = 0.25
 }
+
+mop_federal_army = {
+	yearly_army_professionalism = 0.005
+	army_tradition_decay = -0.005
+}

@@ -13736,6 +13736,39 @@ ab_mop_5 = {
 			add_corruption = 4
 		}
 	}
+	mop_establish_army = {
+		icon = mission_hundred_years_war
+		position = 21
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				army_size = 20
+				army_professionalism = 0.1
+				OR = {
+					army_tradition = 30
+					has_government_power = {
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						value = 30
+					}
+				}
+			}
+		}
+		effect = {
+			add_army_professionalism = 0.05
+			add_country_modifier_for_age = {
+				name = mop_federal_army
+				age = age_of_discovery
+				else = "add_army_tradition = 10
+			add_army_professionalism = 0.05"
+			}
+		}
+	}
 	mop_holy_land = {
 		icon = convert_the_holy_lands
 		position = 28

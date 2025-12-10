@@ -349,3 +349,5 @@
  desc_mop_grain_monopoly_province: "The integration of local Farm Estates into the Razesi monopoly system allows for the total mobilization of the harvest. Centralized threshing floors and state-managed silos ensure that grain production is maximized and waste is virtually eliminated."
  mop_livestock_monopoly_province: "Nationalized Stockyards"
  desc_mop_livestock_monopoly_province: "The monopoly grants the Razesi exclusive rights to federal grazing lands. Backed by modern estate infrastructure, herd sizes are expanded through selective breeding programs and the centralized processing of animal byproducts."
+ mop_federal_army: "The Federal Army"
+ desc_mop_federal_army: "The chaotic militias of the early revolt have been reorganized into a cohesive, drilled fighting force under central command, allowing the Republic to project power with the efficiency of a modern state."
