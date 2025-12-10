@@ -13785,11 +13785,19 @@ ab_mop_5 = {
 			}
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 10
-				has_manpower_building_trigger = yes
-				has_forcelimit_building_trigger = yes
-				base_manpower = 5
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 10
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+					base_manpower = 5
+				}
 			}
 		}
 		effect = {
@@ -13827,7 +13835,7 @@ ab_mop_5 = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip  = blood_tax_privilege_buff_tt
+			custom_tooltip = blood_tax_privilege_buff_tt
 			set_country_flag = blood_tax_privilege_buff
 		}
 	}
