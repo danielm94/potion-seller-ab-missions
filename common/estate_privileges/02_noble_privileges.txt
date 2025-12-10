@@ -252,6 +252,9 @@ estate_nobles_nobility_primacy = {
 			estate = estate_nobles
 			type = mil
 		}
+		NOT = {
+			has_estate_privilege = estate_razesi_primacy
+		}
 	}
 	can_revoke = {
 		if = {
