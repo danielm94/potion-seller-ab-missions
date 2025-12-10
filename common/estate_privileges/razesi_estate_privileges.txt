@@ -348,6 +348,8 @@ estate_razesi_strong_communes = {
 estate_razesi_blood_tax = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.1
 	conditional_modifier = {
 		trigger = {
 			has_absolutism_reduction_for_estate_privileges = yes
@@ -356,8 +358,6 @@ estate_razesi_blood_tax = {
 			max_absolutism = 1
 		}
 	}
-	influence = 0.1
-	loyalty = 0.1
 	conditional_modifier = {
 		trigger = {
 			has_government_mechanic = boieri_vs_razesi_mechanic
@@ -367,6 +367,26 @@ estate_razesi_blood_tax = {
 			nobles_loyalty_modifier = -0.1
 		}
 		is_bad = yes
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = blood_tax_privilege_buff
+			has_absolutism_reduction_for_estate_privileges = no
+		}
+		modifier = {
+			global_regiment_cost = -0.05
+			max_absolutism = 5
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = blood_tax_privilege_buff
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			global_regiment_cost = -0.05
+			max_absolutism = 4
+		}
 	}
 	on_granted = {
 		boieri_vs_razesi_privilege_razesi_on_granted_effect = yes

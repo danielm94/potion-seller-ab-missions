@@ -11163,6 +11163,7 @@ ab_mop_4 = {
 		required_missions = {
 			mop_overthrow
 			mop_strong_razesi
+			mop_military_infrastructure
 		}
 		trigger = {
 			if = {
@@ -13767,6 +13768,67 @@ ab_mop_5 = {
 				else = "add_army_tradition = 10
 			add_army_professionalism = 0.05"
 			}
+		}
+	}
+	mop_military_infrastructure = {
+		icon = gfx_wal_military_infrastructure
+		position = 22
+		required_missions = {
+			mop_establish_army
+		}
+		provinces_to_highlight = {
+			owned_by = root
+			OR = {
+				has_manpower_building_trigger = no
+				has_forcelimit_building_trigger = no
+				base_manpower = 5
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+				base_manpower = 5
+			}
+		}
+		effect = {
+			add_yearly_manpower = 2
+			add_army_professionalism = 0.05
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = for_every_province_that_meets_the_missions_requirements
+			tooltip = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = wallachia_local_military_infrastructure
+					duration = 10950
+				}
+				custom_tooltip = wal_soldiers_household_bonus_tooltip
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_manpower_building_trigger = yes
+						has_forcelimit_building_trigger = yes
+						base_manpower = 5
+					}
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = wallachia_local_military_infrastructure
+						duration = 10950
+					}
+					if = {
+						limit = {
+							has_building = soldier_households
+						}
+						upgrade_manpower_building = yes
+						add_base_manpower = 1
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip  = blood_tax_privilege_buff_tt
+			set_country_flag = blood_tax_privilege_buff
 		}
 	}
 	mop_holy_land = {
