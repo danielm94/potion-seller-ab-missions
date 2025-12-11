@@ -48,8 +48,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			disable_commune_integration_overlord = yes
-			clear_commune_integration_investments = yes
+			clear_commune_integration_modifiers = yes
 			FROM = {
+				clear_commune_integration_flags = yes
 				disable_commune_integration_subject = yes
 				set_country_flag = commune_integrated_recently
 			}

@@ -23,6 +23,15 @@ on_monthly_pulse = {
 					is_commune_subject = yes
 				}
 				overlord = {
+					set_variable = {
+						commune_adm_investment_monthly_cost = 0
+					}
+					set_variable = {
+						commune_dip_investment_monthly_cost = 0
+					}
+					set_variable = {
+						commune_mil_investment_monthly_cost = 0
+					}
 					calculate_overlord_adm_investment_integration_progress_gain = yes
 					apply_overlord_adm_investment_costs = yes
 					calculate_overlord_dip_investment_integration_progress_gain = yes

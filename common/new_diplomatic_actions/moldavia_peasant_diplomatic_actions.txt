@@ -820,8 +820,9 @@ cancel_commune_integration = {
 			disable_commune_integration_subject = yes
 			initialize_commune_integration_progress = yes
 			initialize_integration_progress_percentage_variable = yes
+			clear_commune_integration_flags = yes
 		}
-		clear_commune_integration_investments = yes
+		clear_commune_integration_modifiers = yes
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
@@ -865,7 +866,9 @@ invest_adm_commune_integration = {
 		}
 	}
 	on_accept = {
-		set_country_flag = investing_adm_in_commune
+		FROM = {
+			set_country_flag = investing_adm_in_commune
+		}
 		add_country_modifier = {
 			name = investing_admin_commune
 			duration = -1
@@ -896,8 +899,9 @@ cancel_invest_adm_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		clear_commune_integration_investments = yes
+		clear_commune_integration_modifiers = yes
 		FROM = {
+			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
 	}
@@ -931,7 +935,9 @@ invest_dip_commune_integration = {
 		}
 	}
 	on_accept = {
-		set_country_flag = investing_dip_in_commune
+		FROM = {
+			set_country_flag = investing_dip_in_commune
+		}
 		add_country_modifier = {
 			name = investing_dip_commune
 			duration = -1
@@ -962,8 +968,9 @@ cancel_invest_dip_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		clear_commune_integration_investments = yes
+		clear_commune_integration_modifiers = yes
 		FROM = {
+			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
 	}
@@ -996,7 +1003,9 @@ invest_mil_commune_integration = {
 		}
 	}
 	on_accept = {
-		set_country_flag = investing_mil_in_commune
+		FROM = {
+			set_country_flag = investing_mil_in_commune
+		}
 		add_country_modifier = {
 			name = investing_mil_commune
 			duration = -1
@@ -1027,8 +1036,9 @@ cancel_invest_mil_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		clear_commune_integration_investments = yes
+		clear_commune_integration_modifiers = yes
 		FROM = {
+			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
 	}

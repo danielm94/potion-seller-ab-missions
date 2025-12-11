@@ -470,7 +470,9 @@ calculate_monthly_subject_to_commune_integration_progress = {
 calculate_overlord_adm_investment_integration_progress_gain = {
 	if = {
 		limit = {
-			is_investing_adm_power_in_commune = yes
+			PREV = {
+				is_investing_adm_power_in_commune = yes
+			}
 		}
 		get_base_adm_investment_monthly_cost = {
 			var = commune_adm_investment_monthly_cost
@@ -567,7 +569,9 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 calculate_overlord_dip_investment_integration_progress_gain = {
 	if = {
 		limit = {
-			is_investing_dip_power_in_commune = yes
+			PREV = {
+				is_investing_dip_power_in_commune = yes
+			}
 		}
 		get_base_dip_investment_monthly_cost = {
 			var = commune_dip_investment_monthly_cost
@@ -673,7 +677,9 @@ calculate_overlord_dip_investment_integration_progress_gain = {
 calculate_overlord_mil_investment_integration_progress_gain = {
 	if = {
 		limit = {
-			is_investing_mil_power_in_commune = yes
+			PREV = {
+				is_investing_mil_power_in_commune = yes
+			}
 		}
 		get_base_mil_investment_monthly_cost = {
 			var = commune_mil_investment_monthly_cost
@@ -755,64 +761,49 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 
 #SCOPE = COUNTRY
 apply_overlord_adm_investment_costs = {
-	if = {
-		limit = {
-			is_investing_adm_power_in_commune = yes
-		}
-		set_variable = {
-			which = commune_adm_cost
-			which = commune_adm_investment_monthly_cost
-		}
-		multiply_variable = {
-			which = commune_adm_cost
-			value = -1
-		}
-		variable_effect = {
-			var = commune_adm_cost
-			effect = add_adm_power
-		}
+	set_variable = {
+		which = commune_adm_cost
+		which = commune_adm_investment_monthly_cost
+	}
+	multiply_variable = {
+		which = commune_adm_cost
+		value = -1
+	}
+	variable_effect = {
+		var = commune_adm_cost
+		effect = add_adm_power
 	}
 }
 
 #SCOPE = COUNTRY
 apply_overlord_dip_investment_costs = {
-	if = {
-		limit = {
-			is_investing_dip_power_in_commune = yes
-		}
-		set_variable = {
-			which = commune_dip_cost
-			which = commune_dip_investment_monthly_cost
-		}
-		multiply_variable = {
-			which = commune_dip_cost
-			value = -1
-		}
-		variable_effect = {
-			var = commune_dip_cost
-			effect = add_dip_power
-		}
+	set_variable = {
+		which = commune_dip_cost
+		which = commune_dip_investment_monthly_cost
+	}
+	multiply_variable = {
+		which = commune_dip_cost
+		value = -1
+	}
+	variable_effect = {
+		var = commune_dip_cost
+		effect = add_dip_power
 	}
 }
 
 #SCOPE = COUNTRY
 apply_overlord_mil_investment_costs = {
-	if = {
-		limit = {
-			is_investing_mil_power_in_commune = yes
-		}
-		set_variable = {
-			which = commune_mil_cost
-			which = commune_mil_investment_monthly_cost
-		}
-		multiply_variable = {
-			which = commune_mil_cost
-			value = -1
-		}
-		variable_effect = {
-			var = commune_mil_cost
-			effect = add_mil_power
-		}
+	set_variable = {
+		which = commune_mil_cost
+		which = commune_mil_investment_monthly_cost
+	}
+	multiply_variable = {
+		which = commune_mil_cost
+		value = -1
+	}
+	variable_effect = {
+		var = commune_mil_cost
+		effect = add_mil_power
 	}
 }
 
@@ -890,10 +881,14 @@ get_base_mil_investment_monthly_cost = {
 }
 
 #SCOPE = COUNTRY
-clear_commune_integration_investments = {
+clear_commune_integration_flags = {
 	clr_country_flag = investing_adm_in_commune
 	clr_country_flag = investing_dip_in_commune
 	clr_country_flag = investing_mil_in_commune
+}
+
+#SCOPE = COUNTRY
+clear_commune_integration_modifiers = {
 	remove_country_modifier = investing_admin_commune
 	remove_country_modifier = investing_dip_commune
 	remove_country_modifier = investing_mil_commune
