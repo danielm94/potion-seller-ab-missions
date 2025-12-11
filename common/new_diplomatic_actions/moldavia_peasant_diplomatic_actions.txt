@@ -242,7 +242,7 @@ stage_mass_peasant_uprising = {
 					has_province_modifier = radicalized_peasantry
 				}
 				spawn_rebels = {
-					size = 2
+					size = 3
 					type = anti_tax_rebels
 				}
 			}
@@ -435,7 +435,7 @@ invite_to_peasant_league = {
 			#4 dev = -1
 			multiply_variable = {
 				which = ai_value
-				value = -0.4
+				value = -0.35
 			}
 		}
 		add_entry = {
