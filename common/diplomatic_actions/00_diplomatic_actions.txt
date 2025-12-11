@@ -365,6 +365,17 @@ support_rebels = {
 			PREV = {
 				set_country_flag = support_rebels_against_@PREV
 			}
+			every_owned_province = {
+				limit = {
+					has_province_modifier = radicalized_peasantry
+					NOT = {
+						has_province_modifier = recent_uprising
+					}
+				}
+				set_province_unrest_to_value_if_negative = {
+					value = 10
+				}
+			}
 			country_event = {
 				id = moldavia_diplomatic_actions_events.3
 				days = 1825

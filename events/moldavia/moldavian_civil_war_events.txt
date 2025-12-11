@@ -13,8 +13,9 @@ country_event = {
 			exile_ruler_as = {
 				name = assassinated_moldavian_voivode
 			}
-			setup_boyar_MOL_effect = yes
-			setup_MOP_effect = yes
+			define_ruler = {
+				regency = yes
+			}
 		}
 	}
 	option = {
@@ -22,6 +23,10 @@ country_event = {
 		add_ruler_personality = impaler_personality
 		add_prestige = -25
 		add_legitimacy = -50
+	}
+	after = {
+		setup_boyar_MOL_effect = yes
+		setup_MOP_effect = yes
 		hidden_effect = {
 			if = {
 				limit = {

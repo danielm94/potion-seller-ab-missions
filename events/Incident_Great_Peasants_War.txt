@@ -83,7 +83,12 @@ country_event = {
 	
 	option = { # become a peasant republic
 		trigger = {
-			NOT = { total_development = 100 }
+			OR = {
+				NOT = { total_development = 100 }
+				any_owned_province = {
+					has_province_modifier = radicalized_peasantry
+				}
+			}
 			is_emperor = no
 			is_lesser_in_union = no
 			NOT = { tag = PAP }

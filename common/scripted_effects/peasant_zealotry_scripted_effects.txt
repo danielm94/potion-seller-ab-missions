@@ -22,6 +22,7 @@ get_incite_peasants_base_cost_var = {
 		$var$ = 40
 	}
 }
+
 #SCOPE = ANY
 get_stage_coup_base_cost_var = {
 	set_variable = {
@@ -99,7 +100,6 @@ balance_peasant_faction_influence_effect = {
 		}
 	}
 }
-
 
 #SCOPE = COUNTRY
 calculate_support_rebel_monthly_increase_chance = {
@@ -272,7 +272,6 @@ apply_neighboring_peasant_opinion = {
 mark_country_has_been_spreader_of_radicalized_peasants = {
 	set_country_flag = has_been_spreader_of_radicalized_peasants_flag
 }
-
 
 #SCOPE = COUNTRY
 get_number_of_provinces_without_radicalized_peasantry = {

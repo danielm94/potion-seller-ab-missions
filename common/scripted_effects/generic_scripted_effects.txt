@@ -3748,3 +3748,33 @@ set_capital_if_owned = {
 		set_capital = $id$
 	}
 }
+
+set_province_unrest_to_value_if_negative = {
+	export_to_variable = {
+		which = province_unrest
+		value = unrest
+	}
+	if = {
+		limit = {
+			is_variable_less_than_or_equal_to = {
+				var = province_unrest
+				value = 0
+			}
+		}
+		set_variable = {
+			unrest_gain = 0
+		}
+		subtract_variable = {
+			which = unrest_gain
+			which = province_unrest
+		}
+		change_variable = {
+			which = unrest_gain
+			value = $value$
+		}
+		variable_effect = {
+			var = unrest_gain
+			effect = add_unrest
+		}
+	}
+}

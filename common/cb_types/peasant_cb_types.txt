@@ -29,164 +29,138 @@ cb_great_peasant_uprising = {
 		}
 		else = {
 			has_country_flag = support_rebels_against_@FROM
-			variable_arithmetic_trigger = {
-				export_to_variable = {
-					which = required_peasant_progress
-					value = trigger_value:always
-				}
-				change_variable = {
-					which = required_peasant_progress
-					value = 100
-				}
-				export_to_variable = {
-					which = rebel_support_var
-					value = modifier:rebel_support_efficiency
-				}
-				round_variable = {
-					which = rebel_support_var
-					value = -1
-				}
-				multiply_variable = {
-					which = rebel_support_var
-					value = 10
-				}
-				subtract_variable = {
-					which = required_peasant_progress
-					which = rebel_support_var
-				}
-				if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 100
-						}
-					}
-					has_spawned_supported_rebels = FROM
-					FROM = {
-						has_spawned_rebels = anti_tax_rebels
+			if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 100
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 90
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 90
-						}
+				has_spawned_supported_rebels = FROM
+				FROM = {
+					has_spawned_rebels = anti_tax_rebels
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 90
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 80
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 80
-						}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 90
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 70
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 70
-						}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 80
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 60
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 60
-						}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 80
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 50
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 50
-						}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 70
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 40
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 40
-						}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 70
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 30
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 30
-						}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 60
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 20
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 20
-						}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 60
 					}
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							required_peasant_progress = 10
-						}
-					}
-					FROM = {
-						rebel_progress_at_least = {
-							rebel_type = anti_tax_rebels
-							value = 10
-						}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 50
 					}
 				}
-				else = {
-					FROM = {
-						any_owned_province = {
-							likely_rebels = anti_tax_rebels
-						}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 50
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 40
+					}
+				}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 40
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 30
+					}
+				}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 30
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 20
+					}
+				}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 20
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						required_progress_for_early_great_peasant_uprising_cb = 10
+					}
+				}
+				FROM = {
+					rebel_progress_at_least = {
+						rebel_type = anti_tax_rebels
+						value = 10
+					}
+				}
+			}
+			else = {
+				FROM = {
+					any_owned_province = {
+						likely_rebels = anti_tax_rebels
 					}
 				}
 			}
