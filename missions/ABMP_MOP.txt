@@ -85,16 +85,8 @@ ab_mop_misc_1 = {
 						tooltip = mop_strengthen_league_ties_tt
 						all_subject_country = {
 							OR = {
-								is_subject_of_type_with_overlord = {
-									who = root
-									type = sister_commune
-								}
-							}
-							OR = {
-								is_subject_of_type_with_overlord = {
-									who = root
-									type = integrated_commune
-								}
+								is_subject_of_type = sister_commune
+								is_subject_of_type = integrated_commune
 							}
 						}
 					}
@@ -272,7 +264,7 @@ ab_mop_misc_1 = {
 					total_leaguist_candidates_elected = 10
 				}
 				check_variable = {
-					total_leaguist_ten_year_plans_enacted = 8
+					total_leaguist_ten_year_plans_enacted = 4
 				}
 				capital_scope = {
 					has_building = externalministry
@@ -502,7 +494,7 @@ ab_mop_misc_3 = {
 			}
 			custom_tooltip = church_prestige_bonus_tooltip
 			custom_tooltip = AB_EMPTY
-			161 = {
+			1756 = {
 				add_institution_embracement = {
 					which = renaissance
 					value = 30
@@ -6505,9 +6497,6 @@ ab_mop_3 = {
 				NOT = {
 					development = 20
 				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
 				has_dock_building_trigger = no
 				has_shipyard_building_trigger = no
 				has_coast_defense_building_trigger = no
@@ -6526,7 +6515,6 @@ ab_mop_3 = {
 				1756 = {
 					owned_by = ROOT
 					development = 20
-					province_has_center_of_trade_of_level = 2
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 					has_coast_defense_building_trigger = yes
@@ -6536,7 +6524,6 @@ ab_mop_3 = {
 				4706 = {
 					owned_by = ROOT
 					development = 20
-					province_has_center_of_trade_of_level = 2
 					has_dock_building_trigger = yes
 					has_shipyard_building_trigger = yes
 					has_coast_defense_building_trigger = yes
