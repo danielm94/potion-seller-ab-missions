@@ -48,13 +48,6 @@ po_install_peasant_government = {
 			}
 		}
 		FROM = {
-			if = {
-				limit = {
-					tag = ABS
-				}
-				change_tag = EGY
-				swap_free_idea_group = yes
-			}
 			kill_consort = yes
 			kill_heir = {
 				allow_new_heir = no
@@ -76,6 +69,15 @@ po_install_peasant_government = {
 		}
 		create_allied_commune = {
 			who = FROM
+		}
+		FROM = {
+			if = {
+				limit = {
+					tag = ABS
+				}
+				change_tag = EGY
+				swap_free_idea_group = yes
+			}
 		}
 		if = {
 			limit = {
