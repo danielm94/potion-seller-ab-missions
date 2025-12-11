@@ -21,6 +21,7 @@ commune_integration_issue = {
 	modifier = {
 		diplomatic_annexation_cost = -0.1
 		diplomatic_reputation = 1
+		leaguists_faction_influence = 0.05
 	}
 	chance = {
 		factor = 5
@@ -94,6 +95,32 @@ faction_fatigue_issue = {
 				faction_fatigue_min = 4
 			}
 		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+spy_parliament_issue = {
+	category = 2
+	allow = {
+		has_government_mechanic = peasant_zealotry
+	}
+	effect = {
+		define_advisor_scaling_with_estate_attribute = {
+			tooltip = advisor_quality_scales_with_razesi_loyalty_tooltip
+			advisor_type = spymaster
+			estate = estate_razesi
+			attribute = loyalty
+		}
+	}
+	modifier = {
+		rebel_support_efficiency = 2
+		spy_action_cost_modifier = -0.1
+		abolitionists_faction_influence = 0.05
+	}
+	chance = {
+		factor = 5
 	}
 	ai_will_do = {
 		factor = 500
