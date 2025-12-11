@@ -44,62 +44,53 @@ country_event = {
 	title = moldavia_diplomatic_actions_events.2.t
 	desc = moldavia_diplomatic_actions_events.2.d
 	picture = DEBATE_REPUBLICAN_eventPicture
-	trigger = {
-		is_integrating_commune_subject = yes
-		any_subject_country = {
-			is_commune_subject_being_integrated = yes
-			check_variable = {
-				which = commune_integration_progress
-				which = commune_integration_cost
-			}
-		}
-	}
+	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
 			disable_commune_integration_overlord = yes
 			clear_commune_integration_investments = yes
-			event_target:commune_being_integrated = {
+			FROM = {
 				disable_commune_integration_subject = yes
 				set_country_flag = commune_integrated_recently
 			}
 			if = {
 				limit = {
-					event_target:commune_being_integrated = {
+					FROM = {
 						is_subject_of_type = sister_commune
 					}
 				}
 				create_subject = {
 					subject_type = integrated_commune
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
 			}
 			else_if = {
 				limit = {
-					event_target:commune_being_integrated = {
+					FROM = {
 						is_subject_of_type = allied_commune
 					}
 				}
 				create_subject = {
 					subject_type = sister_commune
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
 			}
 			else_if = {
 				limit = {
-					event_target:commune_being_integrated = {
+					FROM = {
 						is_subject_of_type = consulate_subject
 					}
 				}
 				create_allied_commune = {
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
 			}
 			else = {
 				create_subject = {
 					subject_type = sister_commune
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
-				event_target:commune_being_integrated = {
+				FROM = {
 					change_government = republic
 					add_government_reform = peasants_republic
 				}
@@ -123,29 +114,29 @@ country_event = {
 		tooltip = {
 			if = {
 				limit = {
-					event_target:commune_being_integrated = {
+					FROM = {
 						is_subject_of_type = integrated_commune
 					}
 				}
 				create_subject = {
 					subject_type = integrated_commune
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
 			}
 			else_if = {
 				limit = {
-					event_target:commune_being_integrated = {
+					FROM = {
 						is_subject_of_type = sister_commune
 					}
 				}
 				create_subject = {
 					subject_type = sister_commune
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
 			}
 			else = {
 				create_allied_commune = {
-					who = event_target:commune_being_integrated
+					who = FROM
 				}
 			}
 		}
@@ -161,17 +152,14 @@ country_event = {
 			faction = leaguists_faction
 			influence = 10
 		}
-		hidden_effect = {
-			clear_global_event_target = commune_being_integrated
-		}
 	}
 }
 
 #Clear support rebels flag
 country_event = {
 	id = moldavia_diplomatic_actions_events.3
-	title = moldavia_diplomatic_actions_events.3.t
-	desc = moldavia_diplomatic_actions_events.3.d
+	title = AB_EMPTY
+	desc = AB_EMPTY
 	picture = dev
 	hidden = yes
 	is_triggered_only = yes
@@ -182,6 +170,35 @@ country_event = {
 		clr_country_flag = support_rebels_against_@THIS
 	}
 	option = {
-		name = moldavia_diplomatic_actions_events.3.a
+		name = AB_EMPTY
+	}
+}
+
+#Integration Event Dispatcher
+country_event = {
+	id = moldavia_diplomatic_actions_events.4
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	trigger = {
+		is_commune_subject_being_integrated = yes
+		overlord = {
+			is_integrating_commune_subject = yes
+		}
+		check_variable = {
+			which = commune_integration_progress
+			which = commune_integration_cost
+		}
+	}
+	immediate = {
+		overlord = {
+			country_event = {
+				id = moldavia_diplomatic_actions_events.2
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
 	}
 }

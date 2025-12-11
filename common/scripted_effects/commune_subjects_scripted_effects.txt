@@ -457,7 +457,7 @@ calculate_monthly_subject_to_commune_integration_progress = {
 			which = commune_integration_progress_change
 			which = subject_to_commune_monthly_change
 		}
-		event_target:commune_being_integrated = {
+		PREV = {
 			set_variable = {
 				which = commune_integration_progress_change
 				which = PREV
@@ -553,7 +553,7 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 				which = commune_integration_progress_change
 				which = progress_from_adm_investment
 			}
-			event_target:commune_being_integrated = {
+			PREV = {
 				change_variable = {
 					which = commune_integration_progress_change
 					which = PREV
@@ -659,7 +659,7 @@ calculate_overlord_dip_investment_integration_progress_gain = {
 				which = commune_integration_progress_change
 				which = progress_from_dip_investment
 			}
-			event_target:commune_being_integrated = {
+			PREV = {
 				change_variable = {
 					which = commune_integration_progress_change
 					which = PREV
@@ -743,7 +743,7 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 				which = commune_integration_progress_change
 				which = progress_from_mil_investment
 			}
-			event_target:commune_being_integrated = {
+			PREV = {
 				change_variable = {
 					which = commune_integration_progress_change
 					which = PREV
