@@ -838,7 +838,7 @@ province_event = {
 			}
 			export_to_variable = {
 				which = country_ccr
-				value = modifier:core_creation 
+				value = modifier:core_creation
 				who = owner
 			}
 			change_variable = {
