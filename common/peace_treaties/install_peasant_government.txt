@@ -34,6 +34,20 @@ po_install_peasant_government = {
 		change_variable = {
 			total_peasant_governments_installed = 1
 		}
+		export_to_variable = {
+			which = zeal_gain
+			value = total_development
+			who = FROM
+		}
+		divide_variable = {
+			zeal_gain = 10
+		}
+		variable_government_power_effect = {
+			var = zeal_gain
+			mechanic_type = peasant_zealotry
+			power_type = peasant_zeal
+			scaled_with_gain_modifier = yes
+		}
 		if = {
 			limit = {
 				FROM = {
