@@ -3778,3 +3778,100 @@ set_province_unrest_to_value_if_negative = {
 		}
 	}
 }
+
+# SCOPE = COUNTRY
+# USAGE = get_country_raw_governing_capacity = { var = variable_name }
+get_country_raw_governing_capacity = {
+	export_to_variable = {
+		which = $var$
+		value = modifier:governing_capacity
+	}
+
+	# Tech 8: Courthouse (+100)
+	if = {
+		limit = {
+			adm_tech = 8
+		}
+		change_variable = {
+			which = $var$
+			value = 100
+		}
+	}
+
+	# Tech 12: Early Modern Administration (+100)
+	if = {
+		limit = {
+			adm_tech = 12
+		}
+		change_variable = {
+			which = $var$
+			value = 100
+		}
+	}
+
+	# Tech 17: University (+250)
+	if = {
+		limit = {
+			adm_tech = 17
+		}
+		change_variable = {
+			which = $var$
+			value = 250
+		}
+	}
+
+	# Tech 20: Absolute Rulership (+250)
+	if = {
+		limit = {
+			adm_tech = 20
+		}
+		change_variable = {
+			which = $var$
+			value = 250
+		}
+	}
+
+	# Tech 24: Bonds and Tontines (+250)
+	if = {
+		limit = {
+			adm_tech = 24
+		}
+		change_variable = {
+			which = $var$
+			value = 250
+		}
+	}
+
+	# Tech 27: Modern Bureaucracy (+250)
+	if = {
+		limit = {
+			adm_tech = 27
+		}
+		change_variable = {
+			which = $var$
+			value = 250
+		}
+	}
+
+	# Tech 31: Revolutionary Ideals (+500)
+	if = {
+		limit = {
+			adm_tech = 31
+		}
+		change_variable = {
+			which = $var$
+			value = 500
+		}
+	}
+
+	# Tech 34: Socialism (+500)
+	if = {
+		limit = {
+			adm_tech = 34
+		}
+		change_variable = {
+			which = $var$
+			value = 500
+		}
+	}
+}
