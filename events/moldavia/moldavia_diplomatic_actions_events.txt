@@ -47,13 +47,23 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			disable_commune_integration_overlord = yes
-			clear_commune_integration_modifiers = yes
 			FROM = {
 				clear_commune_integration_flags = yes
 				disable_commune_integration_subject = yes
 				set_country_flag = commune_integrated_recently
 			}
+			if = {
+				limit = {
+					NOT = {
+						any_subject_country = {
+							is_commune_subject_being_integrated = yes
+						}
+					}
+				}
+				disable_commune_integration_overlord = yes
+			}
+			
+			pop_commune_subject_investing_mana_modifier = yes
 			if = {
 				limit = {
 					FROM = {

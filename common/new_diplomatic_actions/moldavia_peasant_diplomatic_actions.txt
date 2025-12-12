@@ -726,23 +726,15 @@ integrate_commune = {
 		}
 	}
 	is_allowed = {
+		num_of_diplomats = 2
 		are_we_and_target_at_peace = {
 			target = FROM
 		}
 		FROM = {
 			is_commune_loyal_enough_to_integrate = yes
 		}
-		custom_trigger_tooltip = {
-			tooltip = not_currently_integrating_a_commune_subject
-			is_integrating_commune_subject = no
-		}
-		NOT = {
-			truce_with = FROM
-		}
-		NOT = {
-			FROM = {
-				truce_with = PREV
-			}
+		are_there_no_truces_with_target = {
+			target = FROM
 		}
 		custom_trigger_tooltip = {
 			tooltip = has_not_integrated_commune_recently_tt
@@ -762,30 +754,10 @@ integrate_commune = {
 			who = FROM
 			value = 190
 		}
-		if = {
-			limit = {
-				FROM = {
-					is_subject_of_type = allied_commune
-				}
-			}
-			FROM = {
-				trust = {
-					who = PREV
-					value = 70
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					is_subject_of_type = sister_commune
-				}
-			}
-			FROM = {
-				trust = {
-					who = PREV
-					value = 100
-				}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 50
 			}
 		}
 	}
@@ -1236,23 +1208,15 @@ convert_subject_to_commune = {
 			}
 		}
 		else = {
+			num_of_diplomats = 2
 			are_we_and_target_at_peace = {
 				target = FROM
 			}
 			FROM = {
 				does_subject_have_0_liberty_desire = yes
 			}
-			custom_trigger_tooltip = {
-				tooltip = not_currently_integrating_a_commune_subject
-				is_integrating_commune_subject = no
-			}
-			NOT = {
-				truce_with = FROM
-			}
-			NOT = {
-				FROM = {
-					truce_with = PREV
-				}
+			are_there_no_truces_with_target = {
+				target = FROM
 			}
 			reverse_has_opinion = {
 				who = FROM
@@ -1279,6 +1243,7 @@ convert_subject_to_commune = {
 	}
 	on_accept = {
 		enable_commune_integration_overlord = yes
+		push_commune_subject_investing_mana_modifier = yes
 		FROM = {
 			initialize_commune_integration_progress = yes
 			calculate_commune_integration_cost = yes
