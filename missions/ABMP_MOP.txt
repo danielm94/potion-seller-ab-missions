@@ -232,7 +232,7 @@ ab_mop_misc_1 = {
 			mop_internationalism
 		}
 		provinces_to_highlight = {
-			is_capital_of = root
+			owned_by = root
 			NOT = {
 				has_building = externalministry
 			}
@@ -261,12 +261,12 @@ ab_mop_misc_1 = {
 					}
 				}
 				check_variable = {
-					total_leaguist_candidates_elected = 10
+					total_leaguist_candidates_elected = 8
 				}
 				check_variable = {
 					total_leaguist_ten_year_plans_enacted = 4
 				}
-				capital_scope = {
+				any_owned_province = {
 					has_building = externalministry
 				}
 			}
