@@ -1,8 +1,13 @@
 #SCOPE = COUNTRY
 create_allied_commune = {
-	create_subject = {
-		subject_type = allied_commune
-		who = $who$
+	if = {
+		limit = {
+			exists = $who$
+		}
+		create_subject = {
+			subject_type = allied_commune
+			who = $who$
+		}
 	}
 }
 
