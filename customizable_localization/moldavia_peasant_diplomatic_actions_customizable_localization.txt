@@ -628,3 +628,145 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = can_integrate_commune_has_diplomats
+	random = no
+	text = {
+		localisation_key = yes_icon
+		trigger = {
+			num_of_diplomats = 2
+		}
+	}
+	text = {
+		localisation_key = no_icon
+		trigger = {
+			NOT = {
+				num_of_diplomats = 2
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = can_integrate_commune_at_peace
+	random = no
+	text = {
+		localisation_key = yes_icon
+		trigger = {
+			are_we_and_target_at_peace = {
+				target = FROM
+			}
+		}
+	}
+	text = {
+		localisation_key = no_icon
+		trigger = {
+			NOT = {
+				are_we_and_target_at_peace = {
+					target = FROM
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = can_integrate_commune_loyal
+	random = no
+	text = {
+		localisation_key = yes_icon
+		trigger = {
+			FROM = {
+				is_commune_loyal_enough_to_integrate = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = no_icon
+		trigger = {
+			NOT = {
+				FROM = {
+					is_commune_loyal_enough_to_integrate = yes
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = can_integrate_commune_no_truce
+	random = no
+	text = {
+		localisation_key = yes_icon
+		trigger = {
+			are_there_no_truces_with_target = {
+				target = FROM
+			}
+		}
+	}
+	text = {
+		localisation_key = no_icon
+		trigger = {
+			NOT = {
+				are_there_no_truces_with_target = {
+					target = FROM
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = can_integrate_commune_opinion
+	random = no
+	text = {
+		localisation_key = yes_icon
+		trigger = {
+			reverse_has_opinion = {
+				who = FROM
+				value = 190
+			}
+		}
+	}
+	text = {
+		localisation_key = no_icon
+		trigger = {
+			NOT = {
+				reverse_has_opinion = {
+					who = FROM
+					value = 190
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = can_integrate_commune_trust
+	random = no
+	text = {
+		localisation_key = yes_icon
+		trigger = {
+			FROM = {
+				trust = {
+					who = ROOT
+					value = 50
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = no_icon
+		trigger = {
+			NOT = {
+				FROM = {
+					trust = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
+		}
+	}
+}

@@ -51,6 +51,7 @@ country_event = {
 				clear_commune_integration_flags = yes
 				disable_commune_integration_subject = yes
 				set_country_flag = commune_integrated_recently
+				clr_country_flag = notified_overlord_ready_to_integrate
 			}
 			if = {
 				limit = {
@@ -62,7 +63,6 @@ country_event = {
 				}
 				disable_commune_integration_overlord = yes
 			}
-			
 			pop_commune_subject_investing_mana_modifier = yes
 			if = {
 				limit = {
@@ -211,5 +211,114 @@ country_event = {
 	}
 	option = {
 		name = AB_EMPTY
+	}
+}
+
+#Ready to Integrate Dispatcher Test
+country_event = {
+	id = moldavia_diplomatic_actions_events.5
+	title = AB_EMPTY
+	desc = AB_EMPTY
+	picture = dev
+	hidden = yes
+	trigger = {
+		NOT = {
+			has_country_flag = notified_overlord_ready_to_integrate
+		}
+		OR = {
+			is_subject_of_type = allied_commune
+			is_subject_of_type = sister_commune
+		}
+		is_commune_subject_being_integrated = no
+		OR = {
+			NOT = {
+				has_country_flag = commune_integrated_recently
+			}
+			had_country_flag = {
+				flag = commune_integrated_recently
+				days = 3650
+			}
+		}
+		are_we_and_target_at_peace = {
+			target = overlord
+		}
+		are_there_no_truces_with_target = {
+			target = overlord
+		}
+	}
+	immediate = {
+		set_country_flag = notified_overlord_ready_to_integrate
+		overlord = {
+			country_event = {
+				id = moldavia_diplomatic_actions_events.6				#Event that actually alerts the player about the subject being ready
+			}
+		}
+	}
+	option = {
+		name = AB_EMPTY
+	}
+}
+
+country_event = {
+	id = moldavia_diplomatic_actions_events.6
+	title = moldavia_diplomatic_actions_events.6.t
+	desc = moldavia_diplomatic_actions_events.6.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = moldavia_diplomatic_actions_events.6.start_integrating
+		custom_tooltip = integrating_commune_requirements_tt
+		custom_tooltip = integrating_commune_requirements_not_met_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_government_mechanic = peasant_zealotry
+					FROM = {
+						OR = {
+							is_subject_of_type = allied_commune
+							is_subject_of_type = sister_commune
+						}
+						is_commune_subject_being_integrated = no
+					}
+					num_of_diplomats = 2
+					are_we_and_target_at_peace = {
+						target = FROM
+					}
+					FROM = {
+						is_commune_loyal_enough_to_integrate = yes
+					}
+					are_there_no_truces_with_target = {
+						target = FROM
+					}
+					reverse_has_opinion = {
+						who = FROM
+						value = 190
+					}
+					FROM = {
+						trust = {
+							who = PREV
+							value = 50
+						}
+					}
+				}
+				enable_commune_integration_overlord = yes
+				FROM = {
+					initialize_integration_progress_percentage_variable = yes
+					enable_commune_integration_subject = yes
+					calculate_monthly_commune_integration_progress = yes
+				}
+				FROM = {
+					set_country_flag = investing_dip_in_commune
+				}
+				push_commune_subject_investing_mana_modifier = yes
+				FROM = {
+					calculate_monthly_commune_integration_progress = yes
+				}
+				calculate_overlord_dip_investment_integration_progress_gain = yes
+			}
+		}
+	}
+	option = {
+		name = moldavia_diplomatic_actions_events.6.dont_integrate
 	}
 }
