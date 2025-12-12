@@ -349,3 +349,30 @@ on_startup = {
 		calculate_total_development_of_commune_subjects = yes
 	}
 }
+
+#If player loses commune subject mid annexation.
+on_dependency_lost = {
+	if = {
+		limit = {
+			FROM = {
+				is_commune_subject_being_integrated = yes
+			}
+			is_integrating_commune_subject = yes
+		}
+		FROM = {
+			clear_commune_integration_flags = yes
+			disable_commune_integration_subject = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_subject_country = {
+						is_commune_subject_being_integrated = yes
+					}
+				}
+			}
+			disable_commune_integration_overlord = yes
+		}
+		pop_commune_subject_investing_mana_modifier = yes
+	}
+}
