@@ -12511,7 +12511,7 @@ ab_mop_5 = {
 					ZAZ = {
 						trust = {
 							who = ROOT
-							value = 100
+							value = 75
 						}
 					}
 					reverse_has_opinion = {

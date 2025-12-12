@@ -1220,7 +1220,7 @@ convert_subject_to_commune = {
 			FROM = {
 				trust = {
 					who = PREV
-					value = 100
+					value = 75
 				}
 			}
 			is_colonial_nation = no
@@ -1291,7 +1291,7 @@ establish_illyrian_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1362,7 +1362,7 @@ integrate_into_illyria = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1448,7 +1448,7 @@ establish_hellenic_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1519,7 +1519,7 @@ integrate_into_hellenic_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1571,7 +1571,7 @@ establish_turk_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1642,7 +1642,7 @@ integrate_into_turk_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1694,7 +1694,7 @@ establish_armenian_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1765,7 +1765,7 @@ integrate_into_armenian_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1824,7 +1824,7 @@ establish_polish_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1909,7 +1909,7 @@ integrate_into_polish_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -1968,7 +1968,7 @@ establish_rus_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2119,7 +2119,7 @@ establish_baltic_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2190,7 +2190,7 @@ integrate_into_baltic_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2247,7 +2247,7 @@ establish_chinese_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2342,7 +2342,7 @@ integrate_into_chinese_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2418,7 +2418,7 @@ establish_wendish_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2489,7 +2489,7 @@ integrate_into_wendish_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2541,7 +2541,7 @@ establish_finnic_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2612,7 +2612,7 @@ integrate_into_finnic_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2664,7 +2664,7 @@ establish_scandinavian_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2735,7 +2735,7 @@ integrate_into_scandinavian_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2787,7 +2787,7 @@ establish_korean_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2867,7 +2867,7 @@ integrate_into_korean_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2919,7 +2919,7 @@ establish_japanese_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -2991,7 +2991,7 @@ integrate_into_japanese_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3046,7 +3046,7 @@ establish_tibetan_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3310,7 +3310,7 @@ establish_roman_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3386,7 +3386,7 @@ integrate_into_roman_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3444,7 +3444,7 @@ establish_german_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3643,7 +3643,7 @@ establish_dutch_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3729,7 +3729,7 @@ integrate_into_dutch_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3789,7 +3789,7 @@ establish_french_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3865,7 +3865,7 @@ integrate_into_french_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3920,7 +3920,7 @@ establish_celtic_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -3997,7 +3997,7 @@ integrate_into_celtic_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -4055,7 +4055,7 @@ establish_scottish_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -4138,7 +4138,7 @@ integrate_into_scottish_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -4199,7 +4199,7 @@ establish_english_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -4282,7 +4282,7 @@ integrate_into_english_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -4340,7 +4340,7 @@ establish_iberian_commune = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
@@ -4417,7 +4417,7 @@ integrate_into_iberian_communes = {
 		FROM = {
 			trust = {
 				who = PREV
-				value = 100
+				value = 75
 			}
 		}
 		is_colonial_nation = no
