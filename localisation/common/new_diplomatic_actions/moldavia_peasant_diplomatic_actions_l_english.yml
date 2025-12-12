@@ -38,7 +38,7 @@
  cancel_commune_integration_desc: "Description"
  cancel_commune_integration_tooltip: "Current Integration Progress: §Y[From.commune_integration_progress.GetValue]§! / §Y[From.commune_integration_cost.GetValue]§!"
  cancel_commune_integration_alert_tooltip: "§OCancel Integration§!"
- has_not_integrated_commune_recently_tt: "We haven't integrated this commune in the last §Y10 years§!."
+ integrated_commune_recently_tt: "§R@[From.GetTag] §Y[From.GetName]§! has been integrated recently, and cannot be integrated for another §Y[commune_integration_cooldown_text]§!.§!"
  not_currently_integrating_a_commune_subject: "We are not currently integrating a commune subject."
  adm_efficiency_at_least_40_tt: "Our administrative efficiency is greater than §Y-40.0%§!."
  invest_adm_commune_integration: "£adm£ Administer Commune £adm£"

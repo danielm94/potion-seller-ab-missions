@@ -21,6 +21,7 @@
  hide_verbose_tooltips_tt: "§VDisable Detailed Tooltips: §YCTRL+T§!§!" 
  not_applicable: "N/A"
  ending_very_soon: "Ending Very Soon"
+ month: "month"
  1_month: "1 month"
  2_months: "2 months"
  3_months: "3 months"
