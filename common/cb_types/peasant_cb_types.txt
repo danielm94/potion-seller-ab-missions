@@ -3,9 +3,6 @@ cb_great_peasant_uprising = {
 	ai_peace_desire = -20
 	prerequisites_self = {
 		has_government_attribute = can_install_peasant_governments
-		NOT = {
-			truce_with = FROM
-		}
 	}
 	prerequisites = {
 		FROM = {
