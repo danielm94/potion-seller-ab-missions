@@ -11,3 +11,4 @@
  moldavia_diplomatic_actions_events.2.t: "[From.GetName] has Been Integrated!"
  moldavia_diplomatic_actions_events.2.d: "The artificial borders drawn by ancient kings have finally been erased. The [From.GetAdjective] councils have formally ratified the Act of Union, dissolving their separate charter to join the greater assembly. From the fields to the cities, the administrative barriers between our peoples have fallen. We are no longer merely allies in the struggle against tyranny, but one indivisible republic."
  moldavia_diplomatic_actions_events.2.a: "It is a glorious day for the [From.Culture.GetName] people, and all free men!"
+ gain_all_perma_claim_provinces_tt: "Every province owned by @[From.GetTag] §Y[From.GetName]§! that we have a permanent claim on will be transferred to us."
