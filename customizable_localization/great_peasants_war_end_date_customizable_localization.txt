@@ -2,7 +2,7 @@ defined_text = {
 	name = great_peasants_war_time_left
 	random = no
 	text = {
-		localisation_key = "N/A"
+		localisation_key = not_applicable
 		trigger = {
 			NOT = {
 				has_global_flag = great_peasants_war_flag
@@ -10,7 +10,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "Ending Very Soon"
+		localisation_key = ending_very_soon
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -20,7 +20,7 @@ defined_text = {
 	}
 	# MONTHS REMAINING (Decrement by 30 days)
 	text = {
-		localisation_key = "1 month"
+		localisation_key = 1_month
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -29,7 +29,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "2 months"
+		localisation_key = 2_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -38,7 +38,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "3 months"
+		localisation_key = 3_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -47,7 +47,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "4 months"
+		localisation_key = 4_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -56,7 +56,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "5 months"
+		localisation_key = 5_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -65,7 +65,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "6 months"
+		localisation_key = 6_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -74,7 +74,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "7 months"
+		localisation_key = 7_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -83,7 +83,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "8 months"
+		localisation_key = 8_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -92,7 +92,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "9 months"
+		localisation_key = 9_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -101,7 +101,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "10 months"
+		localisation_key = 10_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -110,7 +110,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "11 months"
+		localisation_key = 11_months
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -120,7 +120,7 @@ defined_text = {
 	}
 	# YEARS REMAINING (Decrement by 365 days)
 	text = {
-		localisation_key = "1 year"
+		localisation_key = 1_year
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -129,7 +129,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "2 years"
+		localisation_key = 2_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -138,7 +138,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "3 years"
+		localisation_key = 3_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -147,7 +147,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "4 years"
+		localisation_key = 4_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -156,7 +156,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "5 years"
+		localisation_key = 5_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -165,7 +165,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "6 years"
+		localisation_key = 6_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -174,7 +174,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "7 years"
+		localisation_key = 7_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -183,7 +183,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "8 years"
+		localisation_key = 8_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -192,7 +192,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "9 years"
+		localisation_key = 9_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -201,7 +201,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "10 years"
+		localisation_key = 10_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -210,7 +210,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "11 years"
+		localisation_key = 11_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -219,7 +219,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "12 years"
+		localisation_key = 12_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -228,7 +228,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "13 years"
+		localisation_key = 13_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -237,7 +237,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "14 years"
+		localisation_key = 14_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
@@ -246,7 +246,7 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = "15 years"
+		localisation_key = 15_years
 		trigger = {
 			had_global_flag = {
 				flag = great_peasants_war_flag
