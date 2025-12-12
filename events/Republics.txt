@@ -94,7 +94,11 @@ country_event = {
 	trigger = {
 		government = republic
 		is_colonial_nation = no
-		 OR = {
+		NOT = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_commune_subject = no
+		OR = {
             NOT = { has_dlc = "Res Publica" }
             NOT = { has_government_attribute = has_dutch_election }
         }
