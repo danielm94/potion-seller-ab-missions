@@ -518,7 +518,7 @@ defined_text = {
 	}
 	# YEARS REMAINING
 	text = {
-		localisation_key = 1_years
+		localisation_key = 1_year
 		trigger = {
 			FROM = {
 				had_country_flag = {
@@ -765,6 +765,254 @@ defined_text = {
 						who = ROOT
 						value = 50
 					}
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mass_peasant_uprising_cooldown_text
+	random = no
+	text = {
+		localisation_key = not_applicable
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = recent_mass_peasant_uprising
+				}
+			}
+		}
+	}
+	# MONTHS REMAINING
+	text = {
+		localisation_key = month
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3620
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 2_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3590
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 3_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3560
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 4_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3530
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 5_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3500
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 6_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3470
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 7_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3440
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 8_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3410
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 9_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3380
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 10_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3350
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 11_months
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3320
+				}
+			}
+		}
+	}
+	# YEARS REMAINING
+	text = {
+		localisation_key = 1_year
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 3285
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 2_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 2920
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 3_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 2555
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 4_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 2190
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 5_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 1825
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 6_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 1460
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 7_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 1095
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 8_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 730
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 9_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 365
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = 10_years
+		trigger = {
+			FROM = {
+				had_country_flag = {
+					flag = recent_mass_peasant_uprising
+					days = 0
 				}
 			}
 		}
