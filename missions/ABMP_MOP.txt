@@ -1905,8 +1905,8 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_province = {
-				province = 137
+			add_permanent_claim_for_commune_player = {
+				target = 137
 			}
 			custom_tooltip = AB_EMPTY
 			add_mil_power = 100
@@ -3405,13 +3405,13 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = alfold_area
 			}
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = centralhungary_area
 			}
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = eastslovakia_area
 			}
 			custom_tooltip = tooltip_line_divider
@@ -3647,13 +3647,13 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = transdanubia_area
 			}
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = slovakia_area
 			}
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = moravia_area
 			}
 			custom_tooltip = tooltip_line_divider
@@ -6384,17 +6384,17 @@ ab_mop_3 = {
 			has_won_moldavian_civil_war = yes
 		}
 		effect = {
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = wallachia_area
 			}
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = transylvania_area
 			}
-			add_permanent_claim_multi_provinces = {
+			add_permanent_claim_for_commune_player = {
 				target = southern_transylvania_area
 			}
-			add_permanent_claim_province = {
-				province = 4706
+			add_permanent_claim_for_commune_player = {
+				target = 4706
 			}
 			custom_tooltip = tooltip_line_divider
 			custom_tooltip = no_coring_penalty_in_perma_claim_provinces

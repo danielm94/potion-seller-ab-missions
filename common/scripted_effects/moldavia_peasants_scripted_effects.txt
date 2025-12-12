@@ -306,3 +306,32 @@ razesi_loyalty_on_province_developed_effect = {
 		}
 	}
 }
+
+add_permanent_claim_for_commune_player = {
+	$target$ = {
+		custom_tooltip = add_permanent_claim_for_commune_player_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						is_core = root
+					}
+					NOT = {
+						is_permanent_claim = root
+					}
+				}
+				add_permanent_claim = root
+			}
+			if = {
+				limit = {
+					owned_by = root
+				}
+				add_province_modifier = {
+					name = negate_moldavian_commune_reform_ccr
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+}
