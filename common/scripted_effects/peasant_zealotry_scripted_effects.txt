@@ -186,6 +186,7 @@ apply_radicalized_peasantry_to_neighbors = {
 				NOT = {
 					is_subject_of_type = consulate_subject
 				}
+				is_commune_subject = no
 			}
 		}
 		add_province_modifier = {
@@ -233,6 +234,7 @@ apply_neighboring_peasant_opinion = {
 				NOT = {
 					is_subject_of_type = consulate_subject
 				}
+				is_commune_subject = no
 			}
 			add_opinion = {
 				who = PREV
