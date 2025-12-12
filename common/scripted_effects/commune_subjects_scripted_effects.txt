@@ -2467,3 +2467,807 @@ calculate_total_development_of_commune_subjects = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+push_commune_subject_investing_mana_modifier = {
+	if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_49
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_50
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_48
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_49
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_47
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_48
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_46
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_47
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_45
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_46
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_44
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_45
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_43
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_44
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_42
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_43
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_41
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_42
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_40
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_41
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_39
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_40
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_38
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_39
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_37
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_38
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_36
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_37
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_35
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_36
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_34
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_35
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_33
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_34
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_32
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_33
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_31
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_32
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_30
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_31
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_29
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_30
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_28
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_29
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_27
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_28
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_26
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_27
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_25
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_26
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_24
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_25
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_23
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_24
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_22
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_23
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_21
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_22
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_20
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_21
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_19
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_20
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_18
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_19
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_17
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_18
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_16
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_17
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_15
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_16
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_14
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_15
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_13
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_14
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_12
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_13
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_11
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_12
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_10
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_11
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_9
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_10
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_8
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_9
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_7
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_8
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_6
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_7
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_5
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_6
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_4
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_5
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_3
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_4
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_2
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_3
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_1
+		}
+		add_country_modifier = {
+			name = investing_mana_commune_2
+			duration = -1
+			hidden = yes
+		}
+	}
+	else = {
+		add_country_modifier = {
+			name = investing_mana_commune_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+pop_commune_subject_investing_mana_modifier = {
+	if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_50
+		}
+		remove_country_modifier = investing_mana_commune_50
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_49
+		}
+		remove_country_modifier = investing_mana_commune_49
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_48
+		}
+		remove_country_modifier = investing_mana_commune_48
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_47
+		}
+		remove_country_modifier = investing_mana_commune_47
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_46
+		}
+		remove_country_modifier = investing_mana_commune_46
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_45
+		}
+		remove_country_modifier = investing_mana_commune_45
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_44
+		}
+		remove_country_modifier = investing_mana_commune_44
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_43
+		}
+		remove_country_modifier = investing_mana_commune_43
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_42
+		}
+		remove_country_modifier = investing_mana_commune_42
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_41
+		}
+		remove_country_modifier = investing_mana_commune_41
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_40
+		}
+		remove_country_modifier = investing_mana_commune_40
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_39
+		}
+		remove_country_modifier = investing_mana_commune_39
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_38
+		}
+		remove_country_modifier = investing_mana_commune_38
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_37
+		}
+		remove_country_modifier = investing_mana_commune_37
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_36
+		}
+		remove_country_modifier = investing_mana_commune_36
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_35
+		}
+		remove_country_modifier = investing_mana_commune_35
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_34
+		}
+		remove_country_modifier = investing_mana_commune_34
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_33
+		}
+		remove_country_modifier = investing_mana_commune_33
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_32
+		}
+		remove_country_modifier = investing_mana_commune_32
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_31
+		}
+		remove_country_modifier = investing_mana_commune_31
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_30
+		}
+		remove_country_modifier = investing_mana_commune_30
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_29
+		}
+		remove_country_modifier = investing_mana_commune_29
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_28
+		}
+		remove_country_modifier = investing_mana_commune_28
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_27
+		}
+		remove_country_modifier = investing_mana_commune_27
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_26
+		}
+		remove_country_modifier = investing_mana_commune_26
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_25
+		}
+		remove_country_modifier = investing_mana_commune_25
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_24
+		}
+		remove_country_modifier = investing_mana_commune_24
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_23
+		}
+		remove_country_modifier = investing_mana_commune_23
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_22
+		}
+		remove_country_modifier = investing_mana_commune_22
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_21
+		}
+		remove_country_modifier = investing_mana_commune_21
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_20
+		}
+		remove_country_modifier = investing_mana_commune_20
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_19
+		}
+		remove_country_modifier = investing_mana_commune_19
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_18
+		}
+		remove_country_modifier = investing_mana_commune_18
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_17
+		}
+		remove_country_modifier = investing_mana_commune_17
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_16
+		}
+		remove_country_modifier = investing_mana_commune_16
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_15
+		}
+		remove_country_modifier = investing_mana_commune_15
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_14
+		}
+		remove_country_modifier = investing_mana_commune_14
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_13
+		}
+		remove_country_modifier = investing_mana_commune_13
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_12
+		}
+		remove_country_modifier = investing_mana_commune_12
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_11
+		}
+		remove_country_modifier = investing_mana_commune_11
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_10
+		}
+		remove_country_modifier = investing_mana_commune_10
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_9
+		}
+		remove_country_modifier = investing_mana_commune_9
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_8
+		}
+		remove_country_modifier = investing_mana_commune_8
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_7
+		}
+		remove_country_modifier = investing_mana_commune_7
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_6
+		}
+		remove_country_modifier = investing_mana_commune_6
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_5
+		}
+		remove_country_modifier = investing_mana_commune_5
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_4
+		}
+		remove_country_modifier = investing_mana_commune_4
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_3
+		}
+		remove_country_modifier = investing_mana_commune_3
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_2
+		}
+		remove_country_modifier = investing_mana_commune_2
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = investing_mana_commune_1
+		}
+		remove_country_modifier = investing_mana_commune_1
+	}
+}

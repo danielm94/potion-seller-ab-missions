@@ -796,6 +796,14 @@ integrate_commune = {
 			enable_commune_integration_subject = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
+		FROM = {
+			set_country_flag = investing_dip_in_commune
+		}
+		push_commune_subject_investing_mana_modifier = yes
+		FROM = {
+			calculate_monthly_commune_integration_progress = yes
+		}
+		calculate_overlord_dip_investment_integration_progress_gain = yes
 	}
 	ai_will_do = {
 		always = no
@@ -822,7 +830,7 @@ cancel_commune_integration = {
 			initialize_integration_progress_percentage_variable = yes
 			clear_commune_integration_flags = yes
 		}
-		clear_commune_integration_modifiers = yes
+		pop_commune_subject_investing_mana_modifier = yes
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
@@ -836,19 +844,15 @@ invest_adm_commune_integration = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		is_investing_adm_power_in_commune = no
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_investing_adm_power_in_commune = no
 			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
 			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
-		custom_trigger_tooltip = {
-			tooltip = not_investing_mana_in_commune_tt
-			is_investing_mana_in_commune = no
-		}
 		adm_power = 1
 		variable_arithmetic_trigger = {
 			custom_tooltip = adm_efficiency_at_least_40_tt
@@ -867,11 +871,16 @@ invest_adm_commune_integration = {
 	}
 	on_accept = {
 		FROM = {
+			clear_commune_integration_flags = yes
 			set_country_flag = investing_adm_in_commune
 		}
-		add_country_modifier = {
-			name = investing_admin_commune
-			duration = -1
+		if = {
+			limit = {
+				FROM = {
+					is_investing_mana_in_commune = no
+				}
+			}
+			push_commune_subject_investing_mana_modifier = yes
 		}
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
@@ -887,9 +896,9 @@ cancel_invest_adm_commune_integration = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		is_investing_adm_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_investing_adm_power_in_commune = yes
 			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
 			is_commune_subject = yes
@@ -899,7 +908,7 @@ cancel_invest_adm_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		clear_commune_integration_modifiers = yes
+		pop_commune_subject_investing_mana_modifier = yes
 		FROM = {
 			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
@@ -914,19 +923,15 @@ invest_dip_commune_integration = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		is_investing_dip_power_in_commune = no
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_investing_dip_power_in_commune = no
 			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
 			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
-		custom_trigger_tooltip = {
-			tooltip = not_investing_mana_in_commune_tt
-			is_investing_mana_in_commune = no
-		}
 		dip_power = 1
 		diplomatic_reputation = -3
 		num_of_diplomats = 1
@@ -936,11 +941,16 @@ invest_dip_commune_integration = {
 	}
 	on_accept = {
 		FROM = {
+			clear_commune_integration_flags = yes
 			set_country_flag = investing_dip_in_commune
 		}
-		add_country_modifier = {
-			name = investing_dip_commune
-			duration = -1
+		if = {
+			limit = {
+				FROM = {
+					is_investing_mana_in_commune = no
+				}
+			}
+			push_commune_subject_investing_mana_modifier = yes
 		}
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
@@ -956,9 +966,9 @@ cancel_invest_dip_commune_integration = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		is_investing_dip_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_investing_dip_power_in_commune = yes
 			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
 			is_commune_subject = yes
@@ -968,7 +978,7 @@ cancel_invest_dip_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		clear_commune_integration_modifiers = yes
+		pop_commune_subject_investing_mana_modifier = yes
 		FROM = {
 			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
@@ -983,19 +993,15 @@ invest_mil_commune_integration = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		is_investing_mil_power_in_commune = no
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_investing_mil_power_in_commune = no
 			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
 			is_commune_subject = yes
 		}
 	}
 	is_allowed = {
-		custom_trigger_tooltip = {
-			tooltip = not_investing_mana_in_commune_tt
-			is_investing_mana_in_commune = no
-		}
 		mil_power = 1
 		num_of_diplomats = 1
 		FROM = {
@@ -1004,11 +1010,16 @@ invest_mil_commune_integration = {
 	}
 	on_accept = {
 		FROM = {
+			clear_commune_integration_flags = yes
 			set_country_flag = investing_mil_in_commune
 		}
-		add_country_modifier = {
-			name = investing_mil_commune
-			duration = -1
+		if = {
+			limit = {
+				FROM = {
+					is_investing_mana_in_commune = no
+				}
+			}
+			push_commune_subject_investing_mana_modifier = yes
 		}
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
@@ -1024,9 +1035,9 @@ cancel_invest_mil_commune_integration = {
 	category = league
 	require_acceptance = no
 	is_visible = {
-		is_investing_mil_power_in_commune = yes
 		has_government_mechanic = peasant_zealotry
 		FROM = {
+			is_investing_mil_power_in_commune = yes
 			is_subject_of = ROOT
 			is_commune_subject_being_integrated = yes
 			is_commune_subject = yes
@@ -1036,7 +1047,7 @@ cancel_invest_mil_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		clear_commune_integration_modifiers = yes
+		pop_commune_subject_investing_mana_modifier = yes
 		FROM = {
 			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes

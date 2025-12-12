@@ -1,14 +1,249 @@
-investing_admin_commune = {
+investing_mana_commune_1 = {
 	diplomats = -1
 	diplomatic_upkeep = -1
 }
 
-investing_dip_commune = {
+investing_mana_commune_2 = {
 	diplomats = -1
 	diplomatic_upkeep = -1
 }
 
-investing_mil_commune = {
+investing_mana_commune_3 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_4 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_5 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_6 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_7 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_8 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_9 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_10 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_11 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_12 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_13 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_14 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_15 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_16 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_17 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_18 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_19 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_20 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_21 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_22 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_23 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_24 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_25 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_26 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_27 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_28 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_29 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_30 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_31 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_32 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_33 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_34 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_35 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_36 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_37 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_38 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_39 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_40 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_41 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_42 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_43 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_44 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_45 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_46 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_47 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_48 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_49 = {
+	diplomats = -1
+	diplomatic_upkeep = -1
+}
+
+investing_mana_commune_50 = {
 	diplomats = -1
 	diplomatic_upkeep = -1
 }
@@ -376,7 +611,7 @@ integrated_commune_valencian_bonus = {
 }
 
 integrated_commune_catalan_bonus = {
-	global_ship_trade_power = 0.10
+	global_ship_trade_power = 0.1
 }
 
 integrated_commune_galician_bonus = {
@@ -384,7 +619,7 @@ integrated_commune_galician_bonus = {
 }
 
 integrated_commune_asturian_bonus = {
-	defensiveness = 0.10
+	defensiveness = 0.1
 }
 
 integrated_commune_basque_bonus = {
