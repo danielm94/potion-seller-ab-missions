@@ -1502,9 +1502,27 @@ are_we_and_target_at_peace = {
 	}
 }
 
+#SCOPE = COUNTRY
 has_dismantled_the_empire_of_china = {
 	custom_trigger_tooltip = {
 		tooltip = ab_has_dismantled_china_tt
 		has_country_flag = ab_has_dismantled_china
+	}
+}
+
+#SCOPE = COUNTRY
+are_there_no_truces_with_target = {
+	$target$ = {
+		custom_trigger_tooltip = {
+			tooltip = are_there_no_truces_with_target_tt
+			NOT = {
+				truce_with = ROOT
+			}
+			NOT = {
+				ROOT = {
+					truce_with = $target$
+				}
+			}
+		}
 	}
 }
