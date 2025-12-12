@@ -477,21 +477,31 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 		get_base_adm_investment_monthly_cost = {
 			var = commune_adm_investment_monthly_cost
 		}
-		export_to_variable = {
-			which = adm_eff
-			value = modifier:administrative_efficiency
+		get_country_raw_governing_capacity = {
+			var = gov_cap
 		}
-		#+1/-1 adm spent per month for every 10% admin efficiency above or below 0.
+		export_to_variable = {
+			which = gov_cap_mod
+			value = modifier:governing_capacity_modifier
+		}
+		change_variable = {
+			gov_cap_mod = 1
+		}
 		multiply_variable = {
-			adm_eff = 10
+			which = gov_cap
+			which = gov_cap_mod
+		}
+		# +1 adm spent per month for every 250 gov cap
+		divide_variable = {
+			gov_cap = 250
 		}
 		round_variable = {
-			which = adm_eff
+			which = gov_cap
 			value = -1
 		}
 		change_variable = {
 			which = commune_adm_investment_monthly_cost
-			which = adm_eff
+			which = gov_cap
 		}
 		if = {
 			limit = {
@@ -688,10 +698,8 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 			which = army_prof
 			value = trigger_value:army_professionalism
 		}
-		#TODO: PLAYER SHOULD GET +1 for every 20 army professionalism
-		# AND +1 for every 20 army tradition
 		multiply_variable = {
-			army_prof = 10
+			army_prof = 5
 		}
 		round_variable = {
 			which = army_prof
@@ -700,6 +708,21 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 		change_variable = {
 			which = commune_mil_investment_monthly_cost
 			which = army_prof
+		}
+		export_to_variable = {
+			which = army_trad
+			value = army_tradition
+		}
+		divide_variable = {
+			army_trad = 20
+		}
+		round_variable = {
+			which = army_trad
+			value = -1
+		}
+		change_variable = {
+			which = commune_mil_investment_monthly_cost
+			which = army_trad
 		}
 		if = {
 			limit = {
