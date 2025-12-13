@@ -164,8 +164,14 @@ po_install_peasant_government = {
 						can_be_balkanized = yes
 					}
 				}
+				FROM = {
+					set_variable = {
+						which = temp_releasable_countries
+						which = releasable_countries
+					}
+				}
 				country_event = {
-					id = moldavia_peasant_events.3
+					id = balkanization_events.0
 				}
 			}
 			else = {

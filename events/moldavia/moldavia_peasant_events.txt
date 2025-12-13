@@ -237,66 +237,6 @@ country_event = {
 	}
 }
 
-# Balkanization Event
-country_event = {
-	id = moldavia_peasant_events.3
-	title = moldavia_peasant_events.3.t
-	desc = moldavia_peasant_events.3.d
-	picture = muslimgfx_OVEREXTENSION_eventPicture
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			event_target:new_peasant_subject = {
-				set_variable = {
-					which = opinion_loss_from_balkanization
-					which = releasable_countries
-				}
-				multiply_variable = {
-					which = opinion_loss_from_balkanization
-					value = -20
-				}
-				set_variable = {
-					which = liberty_desire_gain_from_balkanization
-					which = releasable_countries
-				}
-				multiply_variable = {
-					which = liberty_desire_gain_from_balkanization
-					value = 5
-				}
-			}
-		}
-	}
-	option = {
-		name = moldavia_peasant_events.3.balkanize
-		custom_tooltip = balkanize_overlap_disclaimer_tt
-		custom_tooltip = AB_EMPTY
-		release_balkanized_communes_for_target = {
-			target = event_target:new_peasant_subject
-		}
-		custom_tooltip = AB_EMPTY
-		custom_tooltip = balkanize_effect_tt
-	}
-	option = {
-		name = moldavia_peasant_events.3.no
-		custom_tooltip = cant_balkanize_again_tt
-	}
-	after = {
-		if = {
-			limit = {
-				event_target:new_peasant_subject = {
-					tag = PAP
-				}
-			}
-			country_event = {
-				id = moldavia_peasant_events.8
-			}
-		}
-		clear_releasable_countries_event_targets = yes
-		clear_identified_releasable_flags = yes
-		clear_global_event_target = new_peasant_subject
-	}
-}
-
 #EOC Is Now PRC
 country_event = {
 	id = moldavia_peasant_events.4
