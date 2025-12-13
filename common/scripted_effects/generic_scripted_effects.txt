@@ -3636,6 +3636,7 @@ store_releasable_country_event_target = {
 	}
 }
 
+#SCOPE = ANY
 clear_identified_releasable_flags = {
 	every_country_including_inactive = {
 		limit = {
@@ -3786,7 +3787,6 @@ get_country_raw_governing_capacity = {
 		which = $var$
 		value = modifier:governing_capacity
 	}
-
 	# Tech 8: Courthouse (+100)
 	if = {
 		limit = {
@@ -3797,7 +3797,6 @@ get_country_raw_governing_capacity = {
 			value = 100
 		}
 	}
-
 	# Tech 12: Early Modern Administration (+100)
 	if = {
 		limit = {
@@ -3808,7 +3807,6 @@ get_country_raw_governing_capacity = {
 			value = 100
 		}
 	}
-
 	# Tech 17: University (+250)
 	if = {
 		limit = {
@@ -3819,7 +3817,6 @@ get_country_raw_governing_capacity = {
 			value = 250
 		}
 	}
-
 	# Tech 20: Absolute Rulership (+250)
 	if = {
 		limit = {
@@ -3830,7 +3827,6 @@ get_country_raw_governing_capacity = {
 			value = 250
 		}
 	}
-
 	# Tech 24: Bonds and Tontines (+250)
 	if = {
 		limit = {
@@ -3841,7 +3837,6 @@ get_country_raw_governing_capacity = {
 			value = 250
 		}
 	}
-
 	# Tech 27: Modern Bureaucracy (+250)
 	if = {
 		limit = {
@@ -3852,7 +3847,6 @@ get_country_raw_governing_capacity = {
 			value = 250
 		}
 	}
-
 	# Tech 31: Revolutionary Ideals (+500)
 	if = {
 		limit = {
@@ -3863,7 +3857,6 @@ get_country_raw_governing_capacity = {
 			value = 500
 		}
 	}
-
 	# Tech 34: Socialism (+500)
 	if = {
 		limit = {
