@@ -520,6 +520,19 @@ declarewar = {
 				set_country_flag = above_125_dev
 			}
 		}
+		if = {
+			limit = {
+				any_subject_country = {
+					is_commune_subject = yes
+				}
+			}
+			every_subject_country = {
+				limit = {
+					is_commune_subject = yes
+				}
+				calculate_peasant_zeal_call_to_arms_cost = yes
+			}
+		}
 	}
 }
 grant_freecity= {

@@ -929,3 +929,37 @@ on_dip_development = {
 on_mil_development = {
 	razesi_loyalty_on_province_developed_effect = yes
 }
+
+on_startup = {
+	if = {
+		limit = {
+			is_at_war = yes
+			any_subject_country = {
+				is_commune_subject = yes
+			}
+		}
+		every_subject_country = {
+			limit = {
+				is_commune_subject = yes
+			}
+			calculate_peasant_zeal_call_to_arms_cost = yes
+		}
+	}
+}
+
+on_monthly_pulse = {
+	if = {
+		limit = {
+			is_at_war = yes
+			any_subject_country = {
+				is_commune_subject = yes
+			}
+		}
+		every_subject_country = {
+			limit = {
+				is_commune_subject = yes
+			}
+			calculate_peasant_zeal_call_to_arms_cost = yes
+		}
+	}
+}

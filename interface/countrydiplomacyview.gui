@@ -1452,7 +1452,20 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scripted = yes
 		}
-
+		guiButtonType = {
+			name = "peasant_call_to_arms_enemy"
+			position = { x = 511 y = 342 }
+			quadTextureSprite ="GFX_peasant_call_to_arms"
+			scripted = yes
+			shortcut = "CTRL+c"
+		}
+		guiButtonType = {
+			name = "peasant_call_to_arms_ally"
+			position = { x = 511 y = 342 }
+			quadTextureSprite ="GFX_peasant_call_to_arms"
+			scripted = yes
+			shortcut = "CTRL+c"
+		}
 		windowType = {
 			name = "vassal_select_window"
 			backGround=""

@@ -129,3 +129,12 @@ has_great_peasants_war_ended = {
 		has_global_flag = gpw_peasants_win_minor
 	}
 }
+
+#SCOPE = COUNTRY
+has_peasant_zeal = {
+	has_government_power = {
+		mechanic_type = peasant_zealotry
+		power_type = peasant_zeal
+		value = $value$
+	}
+}

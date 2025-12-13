@@ -125,3 +125,2423 @@ is_formable_commune_subject = {
 		tag = IBE
 	}
 }
+
+#ROOT = SUBJECT
+#FROM = PLAYER
+can_call_this_commune_to_war = {
+	custom_trigger_tooltip = {
+		tooltip = can_call_this_commune_to_war_tt
+		if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 100
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 99.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 99.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 99.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 99.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 98.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 98.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 98.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 98.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 97.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 97.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 97.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 97.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 96.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 96.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 96.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 96.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 95.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 95.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 95.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 95.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 94.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 94.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 94.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 94.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 93.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 93.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 93.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 93.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 92.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 92.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 92.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 92.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 91.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 91.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 91.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 91.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 90.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 90.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 90.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 90.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 89.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 89.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 89.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 89.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 88.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 88.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 88.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 88.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 87.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 87.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 87.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 87.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 86.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 86.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 86.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 86.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 85.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 85.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 85.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 85.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 84.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 84.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 84.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 84.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 83.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 83.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 83.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 83.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 82.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 82.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 82.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 82.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 81.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 81.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 81.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 81.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 80.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 80.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 80.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 80.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 79.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 79.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 79.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 79.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 78.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 78.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 78.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 78.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 77.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 77.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 77.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 77.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 76.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 76.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 76.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 76.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 75.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 75.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 75.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 75.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 74.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 74.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 74.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 74.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 73.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 73.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 73.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 73.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 72.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 72.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 72.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 72.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 71.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 71.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 71.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 71.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 70.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 70.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 70.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 70.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 69.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 69.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 69.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 69.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 68.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 68.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 68.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 68.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 67.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 67.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 67.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 67.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 66.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 66.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 66.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 66.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 65.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 65.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 65.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 65.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 64.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 64.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 64.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 64.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 63.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 63.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 63.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 63.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 62.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 62.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 62.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 62.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 61.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 61.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 61.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 61.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 60.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 60.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 60.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 60.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 59.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 59.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 59.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 59.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 58.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 58.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 58.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 58.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 57.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 57.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 57.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 57.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 56.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 56.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 56.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 56.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 55.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 55.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 55.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 55.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 54.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 54.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 54.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 54.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 53.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 53.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 53.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 53.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 52.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 52.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 52.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 52.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 51.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 51.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 51.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 51.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 50.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 50.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 50.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 50.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 49.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 49.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 49.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 49.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 48.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 48.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 48.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 48.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 47.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 47.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 47.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 47.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 46.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 46.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 46.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 46.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 45.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 45.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 45.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 45.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 44.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 44.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 44.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 44.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 43.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 43.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 43.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 43.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 42.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 42.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 42.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 42.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 41.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 41.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 41.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 41.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 40.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 40.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 40.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 40.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 39.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 39.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 39.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 39.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 38.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 38.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 38.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 38.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 37.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 37.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 37.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 37.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 36.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 36.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 36.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 36.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 35.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 35.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 35.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 35.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 34.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 34.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 34.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 34.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 33.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 33.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 33.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 33.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 32.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 32.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 32.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 32.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 31.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 31.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 31.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 31.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 30.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 30.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 30.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 30.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 29.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 29.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 29.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 29.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 28.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 28.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 28.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 28.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 27.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 27.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 27.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 27.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 26.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 26.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 26.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 26.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 25.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 25.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 25.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 25.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 24.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 24.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 24.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 24.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 23.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 23.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 23.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 23.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 22.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 22.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 22.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 22.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 21.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 21.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 21.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 21.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 20.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 20.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 20.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 20.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 19.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 19.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 19.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 19.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 18.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 18.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 18.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 18.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 17.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 17.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 17.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 17.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 16.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 16.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 16.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 16.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 15.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 15.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 15.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 15.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 14.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 14.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 14.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 14.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 13.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 13.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 13.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 13.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 12.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 12.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 12.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 12.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 11.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 11.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 11.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 11.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 10.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 10.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 10.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 10.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 9.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 9.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 9.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 9.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 8.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 8.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 8.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 8.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 7.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 7.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 7.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 7.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 6.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 6.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 6.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 6.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 5.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 5.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 5.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 5.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 4.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 4.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 4.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 4.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 3.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 3.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 3.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 3.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 2.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 2.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 2.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 2.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 1.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 1.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 1.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 1.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 0.5
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					join_wars_peasant_zeal_cost = 0.0
+				}
+			}
+			FROM = {
+				has_peasant_zeal = {
+					value = 0.0
+				}
+			}
+		}
+	}
+}

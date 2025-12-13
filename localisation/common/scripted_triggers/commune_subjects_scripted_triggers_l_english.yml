@@ -1,0 +1,2 @@
+﻿l_english:
+ can_call_this_commune_to_war_tt: "We have at least §Y[Root.join_wars_peasant_zeal_cost.GetValue]§! Peasant Zeal"

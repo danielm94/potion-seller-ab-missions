@@ -4,4 +4,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/icon_diplomacy_commune.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_peasant_call_to_arms"
+		texturefile = "gfx/interface/buttons/peasant_call_to_arms/peasant_call_to_arms.dds"
+		loadtype = "INGAME"
+	}
 }

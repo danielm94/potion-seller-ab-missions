@@ -1,0 +1,4 @@
+﻿l_english:
+ commune_cant_join_any_wars_tt: "§RThere are no wars @[Root.GetTag] §Y[Root.GetName]§! can join.§!"
+ peasant_call_to_arms_ally_tt: "§OInvoke Article IX§!\n§gPursuant to Article IX of the Federal Charter, the Republic calls upon @[Root.GetTag] §Y[Root.GetName]§! to fulfill their military obligations.\n\nCalling in £allied_commune£§YCommune Subjects§! will cost you Peasant Zeal §Rfor each war they join§!, depending on the subject type:\n\n£allied_commune£ §YAllied Communes§!: §R5§! Peasant Zeal\n£sister_commune£ §YSister Communes§!: §R2.5§! Peasant Zeal\n£integrated_commune£ §YIntegrated Communes§!: §R1§! Peasant Zeal§!\n"
+ peasant_call_to_arms_ally_effect_tt: "@[Root.GetTag] §Y[Root.GetName]§! will join §Y[Root.num_wars_we_are_not_in.GetValue]§! war(s).\nWe will lose §R[Root.join_wars_peasant_zeal_cost.GetValue]§! Peasant Zeal."

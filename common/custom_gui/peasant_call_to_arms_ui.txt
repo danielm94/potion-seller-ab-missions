@@ -1,0 +1,101 @@
+#ROOT = COUNTRY YOU SELECTED
+#FROM = PLAYER
+custom_button = {
+	name = peasant_call_to_arms_ally
+	tooltip = peasant_call_to_arms_ally_tt
+	potential = {
+		is_commune_subject = yes
+		FROM = {
+			is_at_war = yes
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				FROM = {
+					any_war_enemy_country = {
+						NOT = {
+							truce_with = root
+						}
+						NOT = {
+							war_with = root
+						}
+						NOT = {
+							is_subject_of = root
+						}
+					}
+				}
+			}
+			NOT = {
+				liberty_desire = 50
+			}
+			can_call_this_commune_to_war = yes
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = commune_cant_join_any_wars_tt
+				always = no
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = peasant_call_to_arms_ally_effect_tt
+		hidden_effect = {
+			join_all_offensive_wars_of = from
+			join_all_defensive_wars_of = from
+			FROM = {
+				set_variable = {
+					which = join_wars_peasant_zeal_cost
+					which = ROOT
+				}
+				multiply_variable = {
+					which = join_wars_peasant_zeal_cost
+					value = -1
+				}
+				variable_government_power_effect = {
+					var = join_wars_peasant_zeal_cost
+					mechanic_type = peasant_zealotry
+					power_type = peasant_zeal
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = peasant_call_to_arms_enemy
+	tooltip = x
+	potential = {
+		war_with = FROM
+		FROM = {
+			is_at_war = yes
+		}
+	}
+	trigger = {
+		FROM = {
+			has_government_power = {
+				mechanic_type = peasant_zealotry
+				power_type = peasant_zeal
+				value = 1
+			}
+			any_subject_country = {
+				is_commune_subject = yes
+				NOT = {
+					war_with = root
+				}
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			every_subject_country = {
+				limit = {
+					is_commune_subject = yes
+				}
+				join_all_offensive_wars_of = from
+				join_all_defensive_wars_of = from
+			}
+		}
+	}
+}

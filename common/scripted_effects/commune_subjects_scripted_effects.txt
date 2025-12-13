@@ -4413,6 +4413,7 @@ set_selected_balkanization_flags = {
 	}
 }
 
+#SCOPE = COUNTRY
 balkanization_event_after_effect = {
 	hidden_effect = {
 		if = {
@@ -4429,5 +4430,109 @@ balkanization_event_after_effect = {
 		clear_releasable_countries_event_targets = yes
 		clear_identified_releasable_flags = yes
 		clear_global_event_target = new_peasant_subject
+	}
+}
+
+#SCOPE = ANY
+get_allied_commune_join_war_zeal_cost = {
+	set_variable = {
+		$var$ = 5
+	}
+}
+
+#SCOPE = ANY
+get_sister_commune_join_war_zeal_cost = {
+	set_variable = {
+		$var$ = 2.5
+	}
+}
+
+#SCOPE = ANY
+get_integrated_commune_join_war_zeal_cost = {
+	set_variable = {
+		$var$ = 1
+	}
+}
+
+#SCOPE = COUNTRY (COMMUNE SUBJECT)
+calculate_peasant_zeal_call_to_arms_cost = {
+	if = {
+		limit = {
+			is_commune_subject = yes
+		}
+		set_variable = {
+			num_wars_we_are_not_in = 0
+		}
+		save_event_target_as = this_subject
+		overlord = {
+			every_war_enemy_country = {
+				limit = {
+					NOT = {
+						war_with = event_target:this_subject
+					}
+					OR = {
+						is_in_war = {
+							attacker_leader = this
+							defender_leader = prev
+						}
+						is_in_war = {
+							attacker_leader = prev
+							defender_leader = this
+						}
+					}
+				}
+				event_target:this_subject = {
+					change_variable = {
+						num_wars_we_are_not_in = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject_of_type = allied_commune
+			}
+			get_allied_commune_join_war_zeal_cost = {
+				var = base_cost
+			}
+		}
+		else_if = {
+			limit = {
+				is_subject_of_type = sister_commune
+			}
+			get_sister_commune_join_war_zeal_cost = {
+				var = base_cost
+			}
+		}
+		else = {
+			get_integrated_commune_join_war_zeal_cost = {
+				var = base_cost
+			}
+		}
+		set_variable = {
+			which = join_wars_peasant_zeal_cost
+			which = base_cost
+		}
+		multiply_variable = {
+			which = join_wars_peasant_zeal_cost
+			which = num_wars_we_are_not_in
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = highest_coa_cost
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = join_wars_peasant_zeal_cost
+						which = event_target:highest_coa_cost
+					}
+				}
+				save_global_event_target_as = highest_coa_cost
+			}
+		}
+		else = {
+			save_global_event_target_as = highest_coa_cost
+		}
 	}
 }
