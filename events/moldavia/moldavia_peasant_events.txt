@@ -758,6 +758,7 @@ country_event = {
 	}
 }
 
+#Early CCR event
 province_event = {
 	id = moldavia_peasant_events.14
 	title = AB_EMPTY
