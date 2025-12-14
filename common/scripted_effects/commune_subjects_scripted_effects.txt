@@ -4467,8 +4467,13 @@ calculate_peasant_zeal_call_to_arms_cost = {
 		overlord = {
 			every_war_enemy_country = {
 				limit = {
-					NOT = {
-						war_with = event_target:this_subject
+					if = {
+						limit = {
+							has_saved_event_target = this_subject
+						}
+						NOT = {
+							war_with = event_target:this_subject
+						}
 					}
 					OR = {
 						is_in_war = {
@@ -4481,9 +4486,14 @@ calculate_peasant_zeal_call_to_arms_cost = {
 						}
 					}
 				}
-				event_target:this_subject = {
-					change_variable = {
-						num_wars_we_are_not_in = 1
+				if = {
+					limit = {
+						has_saved_event_target = this_subject
+					}
+					event_target:this_subject = {
+						change_variable = {
+							num_wars_we_are_not_in = 1
+						}
 					}
 				}
 			}
@@ -4691,62 +4701,67 @@ call_strongest_commune_subject_effect = {
 			save_global_event_target_as = strongest_commune_subject
 		}
 	}
-	event_target:strongest_commune_subject = {
-		set_variable = {
-			which = peasant_zeal_spent
-			which = overlord
+	if = {
+		limit = {
+			has_saved_global_event_target = strongest_commune_subject
 		}
-		change_variable = {
-			which = peasant_zeal_spent
-			which = join_wars_peasant_zeal_cost
-		}
-		set_variable = {
-			which = peasant_zeal_amount
-			which = overlord
-		}
-		subtract_variable = {
-			which = peasant_zeal_amount
-			which = join_wars_peasant_zeal_cost
-		}
-		set_variable = {
-			which = peasant_call_to_arms_zeal_budget
-			which = overlord
-		}
-		if = {
-			limit = {
-				is_variable_less_than_or_equal_to = {
-					var = peasant_zeal_spent
-					which = peasant_call_to_arms_zeal_budget
+		event_target:strongest_commune_subject = {
+			set_variable = {
+				which = peasant_zeal_spent
+				which = overlord
+			}
+			change_variable = {
+				which = peasant_zeal_spent
+				which = join_wars_peasant_zeal_cost
+			}
+			set_variable = {
+				which = peasant_zeal_amount
+				which = overlord
+			}
+			subtract_variable = {
+				which = peasant_zeal_amount
+				which = join_wars_peasant_zeal_cost
+			}
+			set_variable = {
+				which = peasant_call_to_arms_zeal_budget
+				which = overlord
+			}
+			if = {
+				limit = {
+					is_variable_less_than_or_equal_to = {
+						var = peasant_zeal_spent
+						which = peasant_call_to_arms_zeal_budget
+					}
+					check_variable = {
+						peasant_zeal_amount = 0
+					}
 				}
-				check_variable = {
-					peasant_zeal_amount = 0
+				join_all_offensive_wars_of = overlord
+				join_all_defensive_wars_of = overlord
+				PREV = {
+					set_variable = {
+						which = join_wars_peasant_zeal_cost
+						which = event_target:strongest_commune_subject
+					}
+					change_variable = {
+						which = peasant_zeal_spent
+						which = join_wars_peasant_zeal_cost
+					}
+					multiply_variable = {
+						join_wars_peasant_zeal_cost = -1
+					}
+					variable_government_power_effect = {
+						var = join_wars_peasant_zeal_cost
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						scaled_with_gain_modifier = no
+					}
 				}
 			}
-			join_all_offensive_wars_of = overlord
-			join_all_defensive_wars_of = overlord
-			PREV = {
-				set_variable = {
-					which = join_wars_peasant_zeal_cost
-					which = event_target:strongest_commune_subject
+			else = {
+				PREV = {
+					set_country_flag = abort_peasant_call_to_arms_loop
 				}
-				change_variable = {
-					which = peasant_zeal_spent
-					which = join_wars_peasant_zeal_cost
-				}
-				multiply_variable = {
-					join_wars_peasant_zeal_cost = -1
-				}
-				variable_government_power_effect = {
-					var = join_wars_peasant_zeal_cost
-					mechanic_type = peasant_zealotry
-					power_type = peasant_zeal
-					scaled_with_gain_modifier = no
-				}
-			}
-		}
-		else = {
-			PREV = {
-				set_country_flag = abort_peasant_call_to_arms_loop
 			}
 		}
 	}
@@ -4828,62 +4843,67 @@ call_nearest_commune_subject_effect = {
 			save_global_event_target_as = closest_commune_subject
 		}
 	}
-	event_target:closest_commune_subject = {
-		set_variable = {
-			which = peasant_zeal_spent
-			which = overlord
+	if = {
+		limit = {
+			has_saved_global_event_target = closest_commune_subject
 		}
-		change_variable = {
-			which = peasant_zeal_spent
-			which = join_wars_peasant_zeal_cost
-		}
-		set_variable = {
-			which = peasant_zeal_amount
-			which = overlord
-		}
-		subtract_variable = {
-			which = peasant_zeal_amount
-			which = join_wars_peasant_zeal_cost
-		}
-		set_variable = {
-			which = peasant_call_to_arms_zeal_budget
-			which = overlord
-		}
-		if = {
-			limit = {
-				is_variable_less_than_or_equal_to = {
-					var = peasant_zeal_spent
-					which = peasant_call_to_arms_zeal_budget
+		event_target:closest_commune_subject = {
+			set_variable = {
+				which = peasant_zeal_spent
+				which = overlord
+			}
+			change_variable = {
+				which = peasant_zeal_spent
+				which = join_wars_peasant_zeal_cost
+			}
+			set_variable = {
+				which = peasant_zeal_amount
+				which = overlord
+			}
+			subtract_variable = {
+				which = peasant_zeal_amount
+				which = join_wars_peasant_zeal_cost
+			}
+			set_variable = {
+				which = peasant_call_to_arms_zeal_budget
+				which = overlord
+			}
+			if = {
+				limit = {
+					is_variable_less_than_or_equal_to = {
+						var = peasant_zeal_spent
+						which = peasant_call_to_arms_zeal_budget
+					}
+					check_variable = {
+						peasant_zeal_amount = 0
+					}
 				}
-				check_variable = {
-					peasant_zeal_amount = 0
+				join_all_offensive_wars_of = overlord
+				join_all_defensive_wars_of = overlord
+				PREV = {
+					set_variable = {
+						which = join_wars_peasant_zeal_cost
+						which = event_target:closest_commune_subject
+					}
+					change_variable = {
+						which = peasant_zeal_spent
+						which = join_wars_peasant_zeal_cost
+					}
+					multiply_variable = {
+						join_wars_peasant_zeal_cost = -1
+					}
+					variable_government_power_effect = {
+						var = join_wars_peasant_zeal_cost
+						mechanic_type = peasant_zealotry
+						power_type = peasant_zeal
+						scaled_with_gain_modifier = no
+					}
 				}
 			}
-			join_all_offensive_wars_of = overlord
-			join_all_defensive_wars_of = overlord
-			PREV = {
-				set_variable = {
-					which = join_wars_peasant_zeal_cost
-					which = event_target:closest_commune_subject
+			else = {
+				PREV = {
+					set_country_flag = abort_peasant_call_to_arms_loop
 				}
-				change_variable = {
-					which = peasant_zeal_spent
-					which = join_wars_peasant_zeal_cost
-				}
-				multiply_variable = {
-					join_wars_peasant_zeal_cost = -1
-				}
-				variable_government_power_effect = {
-					var = join_wars_peasant_zeal_cost
-					mechanic_type = peasant_zealotry
-					power_type = peasant_zeal
-					scaled_with_gain_modifier = no
-				}
-			}
-		}
-		else = {
-			PREV = {
-				set_country_flag = abort_peasant_call_to_arms_loop
 			}
 		}
 	}
