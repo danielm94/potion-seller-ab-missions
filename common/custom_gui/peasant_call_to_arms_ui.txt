@@ -39,7 +39,28 @@ custom_button = {
 		}
 	}
 	effect = {
-		custom_tooltip = peasant_call_to_arms_ally_effect_tt
+		if = {
+			limit = {
+				FROM = {
+					any_war_enemy_country = {
+						NOT = {
+							truce_with = root
+						}
+						NOT = {
+							war_with = root
+						}
+						NOT = {
+							is_subject_of = root
+						}
+					}
+				}
+				NOT = {
+					liberty_desire = 50
+				}
+				can_call_this_commune_to_war = yes
+			}
+			custom_tooltip = peasant_call_to_arms_ally_effect_tt
+		}
 		hidden_effect = {
 			join_all_offensive_wars_of = from
 			join_all_defensive_wars_of = from
@@ -131,6 +152,12 @@ custom_button = {
 					tooltip = cost_to_call_less_than_budget_tt
 					has_peasant_zeal_cost_less_or_equal_to_budget = yes
 				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = peasant_call_to_arms_enemy_highest_zeal_tt
+			event_target:highest_coa_cost = {
+				can_call_this_commune_to_war = yes
 			}
 		}
 	}

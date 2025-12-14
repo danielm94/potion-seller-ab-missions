@@ -11,7 +11,7 @@
  peasant_call_to_arms_config_events.1_strongest_military: "Prioritize Strongest Militaries"
  peasant_call_to_arms_config_events.1_closest_to_target_strategy: "Prioritize Proximity to Target"
  peasant_call_to_arms_config_events.3.t: "Configure Peasant Zeal Budget"
- peasant_call_to_arms_config_events.3.d: "Set the maximum amount of Peasant Zeal to spend each time you call all subjects to arms. §GHighlighted§! options indicate the current budget."
+ peasant_call_to_arms_config_events.3.d: "Set the maximum amount of Peasant Zeal to spend each time you call all subjects to arms. §GHighlighted§! options indicate the current budget.\n\nCurrent Peasant Zeal Budget: §Y[Root.peasant_call_to_arms_zeal_budget.GetValue]§!"
  peasant_call_to_arms_zeal_budget: "Peasant Zeal Budget"
  current_zeal_budget_tt: "Current Peasant Zeal Budget: §Y[Root.peasant_call_to_arms_zeal_budget.GetValue]§!"
  peasant_call_to_arms_config_events.3_set_to_100: "100"
