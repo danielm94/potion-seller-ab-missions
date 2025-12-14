@@ -12,8 +12,6 @@ allied_commune = {
 	is_voluntary = yes
 	joins_overlords_wars = no
 	can_be_co_belligerented = yes
-	must_accept_cta_from_overlord = yes
-	favors_cost_to_join_offensive_wars = 10
 	overlord_can_attack = no
 	can_have_subjects_of_other_types = yes
 	takes_diplo_slot = yes
@@ -42,20 +40,17 @@ allied_commune = {
 	can_fight = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_rival = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 	}
 	can_ally = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}
@@ -63,6 +58,7 @@ allied_commune = {
 		independent_nations = yes
 		same_overlord = allied_commune
 		same_overlord = sister_commune
+		same_overlord = integrated_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}

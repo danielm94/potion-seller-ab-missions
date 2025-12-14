@@ -6,8 +6,8 @@ integrated_commune = {
 	diplomacy_subject_sprite = GFX_integrated_commune_am
 	# Properties:
 	transfer_trade_power = yes
-	joins_overlords_wars = yes
 	can_be_annexed = yes
+	joins_overlords_wars = no
 	has_power_projection = no
 	transfer_subjects_when_made = yes
 	gets_help_with_rebels = yes
@@ -19,7 +19,6 @@ integrated_commune = {
 	counts_for_borders = yes
 	max_government_rank = 2
 	can_be_co_belligerented = yes
-	must_accept_cta_from_overlord = yes
 	can_gain_favors = no
 	can_have_subjects_of_other_types = no
 	liberty_desire_development_ratio = 0.075

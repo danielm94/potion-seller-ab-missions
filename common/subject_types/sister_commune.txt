@@ -8,6 +8,7 @@ sister_commune = {
 	takes_diplo_slot = yes
 	uses_military_focus = yes
 	overlord_protects_external = yes
+	joins_overlords_wars = no
 	counts_for_borders = no
 	can_be_annexed = no
 	overlord_enforce_peace_attacking = yes
@@ -31,13 +32,11 @@ sister_commune = {
 	annex_cost_per_development = 50
 	# Diplomatic Actions
 	can_fight = {
-		same_overlord = allied_commune
 		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_rival = {
-		same_overlord = allied_commune
 		same_overlord = sister_commune
 		same_overlord = consulate_subject
 	}
