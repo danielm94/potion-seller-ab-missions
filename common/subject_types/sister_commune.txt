@@ -24,6 +24,7 @@ sister_commune = {
 	can_gain_favors = yes
 	trust_on_start = 0
 	should_quit_wars_on_activation = no
+	pays_overlord = 0.75
 	# Liberty Desire & Contributions
 	base_liberty_desire = -60
 	liberty_desire_development_ratio = 0.125
