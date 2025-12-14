@@ -1018,3 +1018,80 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = get_commune_subject_next_stage
+	random = no
+	text = {
+		localisation_key = sister_commune_with_icon
+		trigger = {
+			FROM = {
+				is_subject_of_type = allied_commune
+			}
+		}
+	}
+	text = {
+		localisation_key = integrated_commune_with_icon
+		trigger = {
+			FROM = {
+				is_subject_of_type = sister_commune
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = get_commune_subject_current_stage
+	random = no
+	text = {
+		localisation_key = allied_commune_with_icon
+		trigger = {
+			FROM = {
+				is_subject_of_type = allied_commune
+			}
+		}
+	}
+	text = {
+		localisation_key = sister_commune_with_icon
+		trigger = {
+			FROM = {
+				is_subject_of_type = sister_commune
+			}
+		}
+	}
+	text = {
+		localisation_key = integrated_commune_with_icon
+		trigger = {
+			FROM = {
+				is_subject_of_type = integrated_commune
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = get_commune_subject_mechanics
+	random = no
+	text = {
+		localisation_key = sister_commune_mechanics
+		trigger = {
+			FROM = {
+				is_subject = yes
+				NOT = {
+					is_subject_of_type = sister_commune
+				}
+				NOT = {
+					is_subject_of_type = integrated_commune
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = integrated_commune_mechanics
+		trigger = {
+			FROM = {
+				is_subject_of_type = sister_commune
+			}
+		}
+	}
+}
