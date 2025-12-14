@@ -146,6 +146,9 @@ custom_button = {
 					war_with = ROOT
 				}
 				NOT = {
+					truce_with = ROOT
+				}
+				NOT = {
 					liberty_desire = 50
 				}
 				custom_trigger_tooltip = {

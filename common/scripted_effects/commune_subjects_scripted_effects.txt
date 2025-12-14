@@ -4561,6 +4561,12 @@ call_all_peasant_subjects_to_arms_effect = {
 				NOT = {
 					liberty_desire = 50
 				}
+				NOT = {
+					truce_with = ROOT
+				}
+				NOT = {
+					war_with = ROOT
+				}
 				is_commune_subject = yes
 				if = {
 					limit = {
@@ -4597,9 +4603,6 @@ call_all_peasant_subjects_to_arms_effect = {
 					NOT = {
 						is_subject_of_type = integrated_commune
 					}
-				}
-				NOT = {
-					war_with = ROOT
 				}
 				has_peasant_zeal_cost_less_or_equal_to_budget = yes
 			}
@@ -4665,6 +4668,9 @@ call_strongest_commune_subject_effect = {
 			}
 			NOT = {
 				war_with = ROOT
+			}
+			NOT = {
+				truce_with = ROOT
 			}
 		}
 		if = {
@@ -4792,6 +4798,9 @@ call_nearest_commune_subject_effect = {
 			}
 			NOT = {
 				war_with = ROOT
+			}
+			NOT = {
+				truce_with = ROOT
 			}
 		}
 		export_to_variable = {
