@@ -10,24 +10,22 @@ peasant_expansion_mod_enhanced = {
 }
 
 peasant_development_mod = {
-	stability_cost_to_declare_war = 3
 	build_cost = -0.1
 	republican_tradition = 0.3
 	development_cost = -0.1
 }
 peasant_development_mod_enhanced = {
-	stability_cost_to_declare_war = 4
 	build_cost = -0.15
 	republican_tradition = 0.45
 	development_cost = -0.15
 }
 
 peasant_diplomacy_mod = {
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_cost = -0.075
 	reduced_liberty_desire = 10
 }
 
 peasant_diplomacy_mod_enhanced = {
-	diplomatic_annexation_cost = -0.15
+	diplomatic_annexation_cost = -0.125
 	reduced_liberty_desire = 15
 }

@@ -53,14 +53,14 @@ peasant_zealotry = {
 					has_government_power = {
 						mechanic_type = peasant_zealotry
 						power_type = peasant_zeal
-						value = 40
+						value = 20
 					}
 				}
 				else = {
 					has_government_power = {
 						mechanic_type = peasant_zealotry
 						power_type = peasant_zeal
-						value = 50
+						value = 25
 					}
 				}
 			}
@@ -70,13 +70,13 @@ peasant_zealotry = {
 						has_country_flag = mop_discounted_cultivate_the_land
 					}
 					change_peasant_zeal = {
-						value = -40
+						value = -20
 						scaled_with_gain_modifier = no
 					}
 				}
 				else = {
 					change_peasant_zeal = {
-						value = -50
+						value = -25
 						scaled_with_gain_modifier = no
 					}
 				}
@@ -117,14 +117,14 @@ peasant_zealotry = {
 					has_government_power = {
 						mechanic_type = peasant_zealotry
 						power_type = peasant_zeal
-						value = 40
+						value = 20
 					}
 				}
 				else = {
 					has_government_power = {
 						mechanic_type = peasant_zealotry
 						power_type = peasant_zeal
-						value = 50
+						value = 25
 					}
 				}
 			}
@@ -134,13 +134,13 @@ peasant_zealotry = {
 						has_country_flag = mop_discounted_rally_the_communes
 					}
 					change_peasant_zeal = {
-						value = -40
+						value = -20
 						scaled_with_gain_modifier = no
 					}
 				}
 				else = {
 					change_peasant_zeal = {
-						value = -50
+						value = -25
 						scaled_with_gain_modifier = no
 					}
 				}
@@ -157,7 +157,7 @@ peasant_zealotry = {
 						duration = 3650
 					}
 					add_subjects_development_manpower = {
-						multiplier = 0.075
+						multiplier = 0.05
 					}
 				}
 				else = {
@@ -166,7 +166,7 @@ peasant_zealotry = {
 						duration = 3650
 					}
 					add_subjects_development_manpower = {
-						multiplier = 0.05
+						multiplier = 0.025
 					}
 				}
 				if = {
@@ -207,14 +207,14 @@ peasant_zealotry = {
 					has_government_power = {
 						mechanic_type = peasant_zealotry
 						power_type = peasant_zeal
-						value = 40
+						value = 20
 					}
 				}
 				else = {
 					has_government_power = {
 						mechanic_type = peasant_zealotry
 						power_type = peasant_zeal
-						value = 50
+						value = 25
 					}
 				}
 			}
@@ -224,13 +224,13 @@ peasant_zealotry = {
 						has_country_flag = mop_discounted_continue_the_liberation
 					}
 					change_peasant_zeal = {
-						value = -40
+						value = -20
 						scaled_with_gain_modifier = no
 					}
 				}
 				else = {
 					change_peasant_zeal = {
-						value = -50
+						value = -25
 						scaled_with_gain_modifier = no
 					}
 				}
