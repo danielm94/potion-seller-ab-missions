@@ -1466,6 +1466,13 @@ guiTypes = {
 			scripted = yes
 			shortcut = "CTRL+c"
 		}
+		guiButtonType = {
+			name = "peasant_call_to_arms_ally_config"
+			position = { x = 511 y = 342 }
+			quadTextureSprite ="GFX_autonomy_macro_empty_button"
+			scripted = yes
+			shortcut = "CTRL+shift+c"
+		}
 		windowType = {
 			name = "vassal_select_window"
 			backGround=""

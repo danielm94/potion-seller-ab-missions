@@ -1,0 +1,1101 @@
+namespace = peasant_call_to_arms_config_events
+country_event = {
+	id = peasant_call_to_arms_config_events.0
+	title = peasant_call_to_arms_config_events.0.t
+	desc = peasant_call_to_arms_config_events.0.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = nevermind
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.0_strategy_config
+		if = {
+			limit = {
+				has_country_flag = peasant_call_to_arms_strongest_military_strategy
+			}
+			custom_tooltip = peasant_call_to_arms_strongest_military_strategy_active_tt
+		}
+		else = {
+			custom_tooltip = peasant_call_to_arms_closest_to_target_strategy_active_tt
+		}
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.1
+			}
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.0_commune_config
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.5
+			}
+		}
+		custom_tooltip = commune_status_tt
+		if = {
+			limit = {
+				has_country_flag = cta_allied_communes
+			}
+			custom_tooltip = cta_allied_communes_yes_tt
+		}
+		else = {
+			custom_tooltip = cta_allied_communes_no_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = cta_sister_communes
+			}
+			custom_tooltip = cta_sister_communes_yes_tt
+		}
+		else = {
+			custom_tooltip = cta_sister_communes_no_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = cta_integrated_communes
+			}
+			custom_tooltip = cta_integrated_communes_yes_tt
+		}
+		else = {
+			custom_tooltip = cta_integrated_communes_no_tt
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.0_zeal_budget_config
+		custom_tooltip = current_zeal_budget_tt
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.3
+			}
+		}
+	}
+}
+
+#Strategy Config
+country_event = {
+	id = peasant_call_to_arms_config_events.1
+	title = peasant_call_to_arms_config_events.1.t
+	desc = peasant_call_to_arms_config_events.1.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_peasant_cta_strategy_config
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_peasant_cta_strategy_config
+			}
+			country_event = {
+				id = peasant_call_to_arms_config_events.2
+			}
+		}
+	}
+	option = {
+		name = go_back
+		hidden_effect = {
+			clr_country_flag = in_peasant_cta_strategy_config
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
+			}
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_strongest_military
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = peasant_call_to_arms_strongest_military_strategy
+			}
+		}
+		set_country_flag = peasant_call_to_arms_strongest_military_strategy
+		clr_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_strongest_military
+		trigger = {
+			NOT = {
+				has_country_flag = peasant_call_to_arms_strongest_military_strategy
+			}
+		}
+		set_country_flag = peasant_call_to_arms_strongest_military_strategy
+		clr_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_closest_to_target_strategy
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = peasant_call_to_arms_closest_to_target_strategy
+			}
+		}
+		clr_country_flag = peasant_call_to_arms_strongest_military_strategy
+		set_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_closest_to_target_strategy
+		trigger = {
+			NOT = {
+				has_country_flag = peasant_call_to_arms_closest_to_target_strategy
+			}
+		}
+		clr_country_flag = peasant_call_to_arms_strongest_military_strategy
+		set_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+}
+
+#Strategy Config Duplicate
+country_event = {
+	id = peasant_call_to_arms_config_events.2
+	title = peasant_call_to_arms_config_events.1.t
+	desc = peasant_call_to_arms_config_events.1.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_peasant_cta_strategy_config
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_peasant_cta_strategy_config
+			}
+			country_event = {
+				id = peasant_call_to_arms_config_events.1
+			}
+		}
+	}
+	option = {
+		name = go_back
+		hidden_effect = {
+			clr_country_flag = in_peasant_cta_strategy_config
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
+			}
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_strongest_military
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = peasant_call_to_arms_strongest_military_strategy
+			}
+		}
+		set_country_flag = peasant_call_to_arms_strongest_military_strategy
+		clr_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_strongest_military
+		trigger = {
+			NOT = {
+				has_country_flag = peasant_call_to_arms_strongest_military_strategy
+			}
+		}
+		set_country_flag = peasant_call_to_arms_strongest_military_strategy
+		clr_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_closest_to_target_strategy
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = peasant_call_to_arms_closest_to_target_strategy
+			}
+		}
+		clr_country_flag = peasant_call_to_arms_strongest_military_strategy
+		set_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.1_closest_to_target_strategy
+		trigger = {
+			NOT = {
+				has_country_flag = peasant_call_to_arms_closest_to_target_strategy
+			}
+		}
+		clr_country_flag = peasant_call_to_arms_strongest_military_strategy
+		set_country_flag = peasant_call_to_arms_closest_to_target_strategy
+	}
+}
+
+#Zeal Budget Config
+country_event = {
+	id = peasant_call_to_arms_config_events.3
+	title = peasant_call_to_arms_config_events.3.t
+	desc = peasant_call_to_arms_config_events.3.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_peasant_cta_zeal_budget_config
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_peasant_cta_zeal_budget_config
+			}
+			country_event = {
+				id = peasant_call_to_arms_config_events.4
+			}
+		}
+	}
+	option = {
+		name = go_back
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
+			}
+			clr_country_flag = in_peasant_cta_zeal_budget_config
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_100
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 100
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 100
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_100
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 100
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 100
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_90
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 90
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 90
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_90
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 90
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 90
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_80
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 80
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 80
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_80
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 80
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 80
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_70
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 70
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 70
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_70
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 70
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 70
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_60
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 60
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 60
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_60
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 60
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 60
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_50
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 50
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 50
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_50
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 50
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 50
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_40
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 40
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 40
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_40
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 40
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 40
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_30
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 30
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 30
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_30
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 30
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 30
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_20
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 20
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 20
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_20
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 20
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 20
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_10
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 10
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 10
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_10
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 10
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 10
+		}
+	}
+}
+
+#Zeal Budget Config Duplicate
+country_event = {
+	id = peasant_call_to_arms_config_events.4
+	title = peasant_call_to_arms_config_events.3.t
+	desc = peasant_call_to_arms_config_events.3.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_peasant_cta_zeal_budget_config
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_peasant_cta_zeal_budget_config
+			}
+			country_event = {
+				id = peasant_call_to_arms_config_events.3
+			}
+		}
+	}
+	option = {
+		name = go_back
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
+			}
+			clr_country_flag = in_peasant_cta_zeal_budget_config
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_100
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 100
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 100
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_100
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 100
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 100
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_90
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 90
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 90
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_90
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 90
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 90
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_80
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 80
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 80
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_80
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 80
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 80
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_70
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 70
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 70
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_70
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 70
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 70
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_60
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 60
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 60
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_60
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 60
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 60
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_50
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 50
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 50
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_50
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 50
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 50
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_40
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 40
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 40
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_40
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 40
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 40
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_30
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 30
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 30
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_30
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 30
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 30
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_20
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 20
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 20
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_20
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 20
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 20
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_10
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = peasant_call_to_arms_zeal_budget
+					value = 10
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 10
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.3_set_to_10
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = peasant_call_to_arms_zeal_budget
+						value = 10
+					}
+				}
+			}
+		}
+		set_variable = {
+			peasant_call_to_arms_zeal_budget = 10
+		}
+	}
+}
+
+#Commune Subjects To Call In Config
+country_event = {
+	id = peasant_call_to_arms_config_events.5
+	title = peasant_call_to_arms_config_events.5.t
+	desc = peasant_call_to_arms_config_events.5.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_peasant_cta_subject_config
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_peasant_cta_subject_config
+			}
+			country_event = {
+				id = peasant_call_to_arms_config_events.6
+			}
+		}
+	}
+	option = {
+		name = go_back
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
+			}
+			clr_country_flag = in_peasant_cta_subject_config
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_allied_communes
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = cta_allied_communes
+			}
+		}
+		clr_country_flag = cta_allied_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_allied_communes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = cta_allied_communes
+				}
+			}
+		}
+		set_country_flag = cta_allied_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_sister_communes
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = cta_sister_communes
+			}
+		}
+		clr_country_flag = cta_sister_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_sister_communes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = cta_sister_communes
+				}
+			}
+		}
+		set_country_flag = cta_sister_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_integrated_communes
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = cta_integrated_communes
+			}
+		}
+		clr_country_flag = cta_integrated_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_integrated_communes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = cta_integrated_communes
+				}
+			}
+		}
+		set_country_flag = cta_integrated_communes
+	}
+}
+
+#Commune Subjects To Call In Config
+country_event = {
+	id = peasant_call_to_arms_config_events.6
+	title = peasant_call_to_arms_config_events.5.t
+	desc = peasant_call_to_arms_config_events.5.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_peasant_cta_subject_config
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_peasant_cta_subject_config
+			}
+			country_event = {
+				id = peasant_call_to_arms_config_events.5
+			}
+		}
+	}
+	option = {
+		name = go_back
+		hidden_effect = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
+			}
+			clr_country_flag = in_peasant_cta_subject_config
+		}
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_allied_communes
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = cta_allied_communes
+			}
+		}
+		clr_country_flag = cta_allied_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_allied_communes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = cta_allied_communes
+				}
+			}
+		}
+		set_country_flag = cta_allied_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_sister_communes
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = cta_sister_communes
+			}
+		}
+		clr_country_flag = cta_sister_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_sister_communes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = cta_sister_communes
+				}
+			}
+		}
+		set_country_flag = cta_sister_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_integrated_communes
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = cta_integrated_communes
+			}
+		}
+		clr_country_flag = cta_integrated_communes
+	}
+	option = {
+		name = peasant_call_to_arms_config_events.5_integrated_communes
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = cta_integrated_communes
+				}
+			}
+		}
+		set_country_flag = cta_integrated_communes
+	}
+}
