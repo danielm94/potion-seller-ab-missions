@@ -58,6 +58,12 @@ custom_button = {
 					power_type = peasant_zeal
 					scaled_with_gain_modifier = no
 				}
+				every_subject_country = {
+					limit = {
+						is_commune_subject = yes
+					}
+					calculate_peasant_zeal_call_to_arms_cost = yes
+				}
 			}
 		}
 	}
@@ -65,7 +71,7 @@ custom_button = {
 
 custom_button = {
 	name = peasant_call_to_arms_enemy
-	tooltip = x
+	tooltip = peasant_call_to_arms_enemy_tt
 	potential = {
 		war_with = FROM
 		FROM = {
@@ -74,27 +80,146 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			has_government_power = {
-				mechanic_type = peasant_zealotry
-				power_type = peasant_zeal
-				value = 1
-			}
 			any_subject_country = {
-				is_commune_subject = yes
+				custom_trigger_tooltip = {
+					tooltip = is_a_commune_subject_tt
+					is_commune_subject = yes
+				}
+				if = {
+					limit = {
+						PREV = {
+							NOT = {
+								has_country_flag = cta_allied_communes
+							}
+						}
+					}
+					NOT = {
+						is_subject_of_type = allied_commune
+					}
+				}
+				if = {
+					limit = {
+						PREV = {
+							NOT = {
+								has_country_flag = cta_sister_communes
+							}
+						}
+					}
+					NOT = {
+						is_subject_of_type = sister_commune
+					}
+				}
+				if = {
+					limit = {
+						PREV = {
+							NOT = {
+								has_country_flag = cta_integrated_communes
+							}
+						}
+					}
+					NOT = {
+						is_subject_of_type = integrated_commune
+					}
+				}
 				NOT = {
-					war_with = root
+					war_with = ROOT
+				}
+				NOT = {
+					liberty_desire = 50
+				}
+				custom_trigger_tooltip = {
+					tooltip = cost_to_call_less_than_budget_tt
+					has_peasant_zeal_cost_less_or_equal_to_budget = yes
 				}
 			}
 		}
 	}
 	effect = {
-		FROM = {
-			every_subject_country = {
-				limit = {
-					is_commune_subject = yes
+		custom_tooltip = peasant_call_to_arms_enemy_effect_tt
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = peasant_call_to_arms_strongest_military_strategy
 				}
-				join_all_offensive_wars_of = from
-				join_all_defensive_wars_of = from
+			}
+			custom_tooltip = peasant_call_to_arms_strongest_military_strategy_tt
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = peasant_call_to_arms_closest_to_target_strategy
+				}
+			}
+			custom_tooltip = peasant_call_to_arms_closest_to_target_strategy_tt
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = call_all_communes_type_tt
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = cta_allied_communes
+				}
+			}
+			custom_tooltip = cta_allied_communes_yes_tt
+		}
+		else = {
+			custom_tooltip = cta_allied_communes_no_tt
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = cta_sister_communes
+				}
+			}
+			custom_tooltip = cta_sister_communes_yes_tt
+		}
+		else = {
+			custom_tooltip = cta_sister_communes_no_tt
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = cta_integrated_communes
+				}
+			}
+			custom_tooltip = cta_integrated_communes_yes_tt
+		}
+		else = {
+			custom_tooltip = cta_integrated_communes_no_tt
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = peasant_zeal_budget_tt
+		hidden_effect = {
+			FROM = {
+				every_subject_country = {
+					limit = {
+						is_commune_subject = yes
+					}
+					calculate_peasant_zeal_call_to_arms_cost = yes
+				}
+				call_all_peasant_subjects_to_arms_effect = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = peasant_call_to_arms_ally_config
+	tooltip = AB_EMPTY
+	potential = {
+		war_with = FROM
+		FROM = {
+			is_at_war = yes
+		}
+	}
+	trigger = {
+		always = yes
+	}
+	effect = {
+		FROM = {
+			country_event = {
+				id = peasant_call_to_arms_config_events.0
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 ﻿l_english:
  peasant_call_to_arms_config_events.0.t: "Call to Arms Configuration"
- peasant_call_to_arms_config_events.0.d: "Here you can configure the behavior of the <BUTTON_NAME> button."
+ peasant_call_to_arms_config_events.0.d: "Here you can configure the behavior of the Call All Communes button."
  peasant_call_to_arms_config_events.0_strategy_config: "Configure Call to Arms Strategy"
  peasant_call_to_arms_strongest_military_strategy_active_tt: "Current Strategy: §YPrioritize Strongest Militaries§!"
  peasant_call_to_arms_closest_to_target_strategy_active_tt: "Current Strategy: §YPrioritize Proximity to Target§!"

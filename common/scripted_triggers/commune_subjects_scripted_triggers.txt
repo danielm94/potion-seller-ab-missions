@@ -158,12 +158,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 99.0
+					join_wars_peasant_zeal_cost = 99
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 99.0
+					value = 99
 				}
 			}
 		}
@@ -182,12 +182,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 98.0
+					join_wars_peasant_zeal_cost = 98
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 98.0
+					value = 98
 				}
 			}
 		}
@@ -206,12 +206,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 97.0
+					join_wars_peasant_zeal_cost = 97
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 97.0
+					value = 97
 				}
 			}
 		}
@@ -230,12 +230,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 96.0
+					join_wars_peasant_zeal_cost = 96
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 96.0
+					value = 96
 				}
 			}
 		}
@@ -254,12 +254,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 95.0
+					join_wars_peasant_zeal_cost = 95
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 95.0
+					value = 95
 				}
 			}
 		}
@@ -278,12 +278,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 94.0
+					join_wars_peasant_zeal_cost = 94
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 94.0
+					value = 94
 				}
 			}
 		}
@@ -302,12 +302,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 93.0
+					join_wars_peasant_zeal_cost = 93
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 93.0
+					value = 93
 				}
 			}
 		}
@@ -326,12 +326,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 92.0
+					join_wars_peasant_zeal_cost = 92
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 92.0
+					value = 92
 				}
 			}
 		}
@@ -350,12 +350,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 91.0
+					join_wars_peasant_zeal_cost = 91
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 91.0
+					value = 91
 				}
 			}
 		}
@@ -374,12 +374,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 90.0
+					join_wars_peasant_zeal_cost = 90
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 90.0
+					value = 90
 				}
 			}
 		}
@@ -398,12 +398,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 89.0
+					join_wars_peasant_zeal_cost = 89
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 89.0
+					value = 89
 				}
 			}
 		}
@@ -422,12 +422,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 88.0
+					join_wars_peasant_zeal_cost = 88
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 88.0
+					value = 88
 				}
 			}
 		}
@@ -446,12 +446,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 87.0
+					join_wars_peasant_zeal_cost = 87
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 87.0
+					value = 87
 				}
 			}
 		}
@@ -470,12 +470,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 86.0
+					join_wars_peasant_zeal_cost = 86
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 86.0
+					value = 86
 				}
 			}
 		}
@@ -494,12 +494,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 85.0
+					join_wars_peasant_zeal_cost = 85
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 85.0
+					value = 85
 				}
 			}
 		}
@@ -518,12 +518,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 84.0
+					join_wars_peasant_zeal_cost = 84
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 84.0
+					value = 84
 				}
 			}
 		}
@@ -542,12 +542,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 83.0
+					join_wars_peasant_zeal_cost = 83
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 83.0
+					value = 83
 				}
 			}
 		}
@@ -566,12 +566,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 82.0
+					join_wars_peasant_zeal_cost = 82
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 82.0
+					value = 82
 				}
 			}
 		}
@@ -590,12 +590,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 81.0
+					join_wars_peasant_zeal_cost = 81
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 81.0
+					value = 81
 				}
 			}
 		}
@@ -614,12 +614,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 80.0
+					join_wars_peasant_zeal_cost = 80
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 80.0
+					value = 80
 				}
 			}
 		}
@@ -638,12 +638,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 79.0
+					join_wars_peasant_zeal_cost = 79
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 79.0
+					value = 79
 				}
 			}
 		}
@@ -662,12 +662,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 78.0
+					join_wars_peasant_zeal_cost = 78
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 78.0
+					value = 78
 				}
 			}
 		}
@@ -686,12 +686,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 77.0
+					join_wars_peasant_zeal_cost = 77
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 77.0
+					value = 77
 				}
 			}
 		}
@@ -710,12 +710,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 76.0
+					join_wars_peasant_zeal_cost = 76
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 76.0
+					value = 76
 				}
 			}
 		}
@@ -734,12 +734,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 75.0
+					join_wars_peasant_zeal_cost = 75
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 75.0
+					value = 75
 				}
 			}
 		}
@@ -758,12 +758,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 74.0
+					join_wars_peasant_zeal_cost = 74
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 74.0
+					value = 74
 				}
 			}
 		}
@@ -782,12 +782,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 73.0
+					join_wars_peasant_zeal_cost = 73
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 73.0
+					value = 73
 				}
 			}
 		}
@@ -806,12 +806,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 72.0
+					join_wars_peasant_zeal_cost = 72
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 72.0
+					value = 72
 				}
 			}
 		}
@@ -830,12 +830,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 71.0
+					join_wars_peasant_zeal_cost = 71
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 71.0
+					value = 71
 				}
 			}
 		}
@@ -854,12 +854,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 70.0
+					join_wars_peasant_zeal_cost = 70
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 70.0
+					value = 70
 				}
 			}
 		}
@@ -878,12 +878,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 69.0
+					join_wars_peasant_zeal_cost = 69
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 69.0
+					value = 69
 				}
 			}
 		}
@@ -902,12 +902,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 68.0
+					join_wars_peasant_zeal_cost = 68
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 68.0
+					value = 68
 				}
 			}
 		}
@@ -926,12 +926,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 67.0
+					join_wars_peasant_zeal_cost = 67
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 67.0
+					value = 67
 				}
 			}
 		}
@@ -950,12 +950,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 66.0
+					join_wars_peasant_zeal_cost = 66
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 66.0
+					value = 66
 				}
 			}
 		}
@@ -974,12 +974,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 65.0
+					join_wars_peasant_zeal_cost = 65
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 65.0
+					value = 65
 				}
 			}
 		}
@@ -998,12 +998,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 64.0
+					join_wars_peasant_zeal_cost = 64
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 64.0
+					value = 64
 				}
 			}
 		}
@@ -1022,12 +1022,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 63.0
+					join_wars_peasant_zeal_cost = 63
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 63.0
+					value = 63
 				}
 			}
 		}
@@ -1046,12 +1046,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 62.0
+					join_wars_peasant_zeal_cost = 62
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 62.0
+					value = 62
 				}
 			}
 		}
@@ -1070,12 +1070,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 61.0
+					join_wars_peasant_zeal_cost = 61
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 61.0
+					value = 61
 				}
 			}
 		}
@@ -1094,12 +1094,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 60.0
+					join_wars_peasant_zeal_cost = 60
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 60.0
+					value = 60
 				}
 			}
 		}
@@ -1118,12 +1118,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 59.0
+					join_wars_peasant_zeal_cost = 59
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 59.0
+					value = 59
 				}
 			}
 		}
@@ -1142,12 +1142,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 58.0
+					join_wars_peasant_zeal_cost = 58
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 58.0
+					value = 58
 				}
 			}
 		}
@@ -1166,12 +1166,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 57.0
+					join_wars_peasant_zeal_cost = 57
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 57.0
+					value = 57
 				}
 			}
 		}
@@ -1190,12 +1190,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 56.0
+					join_wars_peasant_zeal_cost = 56
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 56.0
+					value = 56
 				}
 			}
 		}
@@ -1214,12 +1214,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 55.0
+					join_wars_peasant_zeal_cost = 55
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 55.0
+					value = 55
 				}
 			}
 		}
@@ -1238,12 +1238,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 54.0
+					join_wars_peasant_zeal_cost = 54
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 54.0
+					value = 54
 				}
 			}
 		}
@@ -1262,12 +1262,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 53.0
+					join_wars_peasant_zeal_cost = 53
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 53.0
+					value = 53
 				}
 			}
 		}
@@ -1286,12 +1286,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 52.0
+					join_wars_peasant_zeal_cost = 52
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 52.0
+					value = 52
 				}
 			}
 		}
@@ -1310,12 +1310,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 51.0
+					join_wars_peasant_zeal_cost = 51
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 51.0
+					value = 51
 				}
 			}
 		}
@@ -1334,12 +1334,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 50.0
+					join_wars_peasant_zeal_cost = 50
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 50.0
+					value = 50
 				}
 			}
 		}
@@ -1358,12 +1358,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 49.0
+					join_wars_peasant_zeal_cost = 49
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 49.0
+					value = 49
 				}
 			}
 		}
@@ -1382,12 +1382,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 48.0
+					join_wars_peasant_zeal_cost = 48
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 48.0
+					value = 48
 				}
 			}
 		}
@@ -1406,12 +1406,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 47.0
+					join_wars_peasant_zeal_cost = 47
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 47.0
+					value = 47
 				}
 			}
 		}
@@ -1430,12 +1430,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 46.0
+					join_wars_peasant_zeal_cost = 46
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 46.0
+					value = 46
 				}
 			}
 		}
@@ -1454,12 +1454,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 45.0
+					join_wars_peasant_zeal_cost = 45
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 45.0
+					value = 45
 				}
 			}
 		}
@@ -1478,12 +1478,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 44.0
+					join_wars_peasant_zeal_cost = 44
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 44.0
+					value = 44
 				}
 			}
 		}
@@ -1502,12 +1502,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 43.0
+					join_wars_peasant_zeal_cost = 43
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 43.0
+					value = 43
 				}
 			}
 		}
@@ -1526,12 +1526,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 42.0
+					join_wars_peasant_zeal_cost = 42
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 42.0
+					value = 42
 				}
 			}
 		}
@@ -1550,12 +1550,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 41.0
+					join_wars_peasant_zeal_cost = 41
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 41.0
+					value = 41
 				}
 			}
 		}
@@ -1574,12 +1574,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 40.0
+					join_wars_peasant_zeal_cost = 40
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 40.0
+					value = 40
 				}
 			}
 		}
@@ -1598,12 +1598,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 39.0
+					join_wars_peasant_zeal_cost = 39
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 39.0
+					value = 39
 				}
 			}
 		}
@@ -1622,12 +1622,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 38.0
+					join_wars_peasant_zeal_cost = 38
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 38.0
+					value = 38
 				}
 			}
 		}
@@ -1646,12 +1646,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 37.0
+					join_wars_peasant_zeal_cost = 37
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 37.0
+					value = 37
 				}
 			}
 		}
@@ -1670,12 +1670,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 36.0
+					join_wars_peasant_zeal_cost = 36
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 36.0
+					value = 36
 				}
 			}
 		}
@@ -1694,12 +1694,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 35.0
+					join_wars_peasant_zeal_cost = 35
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 35.0
+					value = 35
 				}
 			}
 		}
@@ -1718,12 +1718,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 34.0
+					join_wars_peasant_zeal_cost = 34
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 34.0
+					value = 34
 				}
 			}
 		}
@@ -1742,12 +1742,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 33.0
+					join_wars_peasant_zeal_cost = 33
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 33.0
+					value = 33
 				}
 			}
 		}
@@ -1766,12 +1766,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 32.0
+					join_wars_peasant_zeal_cost = 32
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 32.0
+					value = 32
 				}
 			}
 		}
@@ -1790,12 +1790,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 31.0
+					join_wars_peasant_zeal_cost = 31
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 31.0
+					value = 31
 				}
 			}
 		}
@@ -1814,12 +1814,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 30.0
+					join_wars_peasant_zeal_cost = 30
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 30.0
+					value = 30
 				}
 			}
 		}
@@ -1838,12 +1838,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 29.0
+					join_wars_peasant_zeal_cost = 29
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 29.0
+					value = 29
 				}
 			}
 		}
@@ -1862,12 +1862,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 28.0
+					join_wars_peasant_zeal_cost = 28
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 28.0
+					value = 28
 				}
 			}
 		}
@@ -1886,12 +1886,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 27.0
+					join_wars_peasant_zeal_cost = 27
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 27.0
+					value = 27
 				}
 			}
 		}
@@ -1910,12 +1910,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 26.0
+					join_wars_peasant_zeal_cost = 26
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 26.0
+					value = 26
 				}
 			}
 		}
@@ -1934,12 +1934,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 25.0
+					join_wars_peasant_zeal_cost = 25
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 25.0
+					value = 25
 				}
 			}
 		}
@@ -1958,12 +1958,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 24.0
+					join_wars_peasant_zeal_cost = 24
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 24.0
+					value = 24
 				}
 			}
 		}
@@ -1982,12 +1982,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 23.0
+					join_wars_peasant_zeal_cost = 23
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 23.0
+					value = 23
 				}
 			}
 		}
@@ -2006,12 +2006,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 22.0
+					join_wars_peasant_zeal_cost = 22
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 22.0
+					value = 22
 				}
 			}
 		}
@@ -2030,12 +2030,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 21.0
+					join_wars_peasant_zeal_cost = 21
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 21.0
+					value = 21
 				}
 			}
 		}
@@ -2054,12 +2054,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 20.0
+					join_wars_peasant_zeal_cost = 20
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 20.0
+					value = 20
 				}
 			}
 		}
@@ -2078,12 +2078,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 19.0
+					join_wars_peasant_zeal_cost = 19
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 19.0
+					value = 19
 				}
 			}
 		}
@@ -2102,12 +2102,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 18.0
+					join_wars_peasant_zeal_cost = 18
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 18.0
+					value = 18
 				}
 			}
 		}
@@ -2126,12 +2126,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 17.0
+					join_wars_peasant_zeal_cost = 17
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 17.0
+					value = 17
 				}
 			}
 		}
@@ -2150,12 +2150,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 16.0
+					join_wars_peasant_zeal_cost = 16
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 16.0
+					value = 16
 				}
 			}
 		}
@@ -2174,12 +2174,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 15.0
+					join_wars_peasant_zeal_cost = 15
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 15.0
+					value = 15
 				}
 			}
 		}
@@ -2198,12 +2198,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 14.0
+					join_wars_peasant_zeal_cost = 14
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 14.0
+					value = 14
 				}
 			}
 		}
@@ -2222,12 +2222,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 13.0
+					join_wars_peasant_zeal_cost = 13
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 13.0
+					value = 13
 				}
 			}
 		}
@@ -2246,12 +2246,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 12.0
+					join_wars_peasant_zeal_cost = 12
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 12.0
+					value = 12
 				}
 			}
 		}
@@ -2270,12 +2270,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 11.0
+					join_wars_peasant_zeal_cost = 11
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 11.0
+					value = 11
 				}
 			}
 		}
@@ -2294,12 +2294,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 10.0
+					join_wars_peasant_zeal_cost = 10
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 10.0
+					value = 10
 				}
 			}
 		}
@@ -2318,12 +2318,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 9.0
+					join_wars_peasant_zeal_cost = 9
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 9.0
+					value = 9
 				}
 			}
 		}
@@ -2342,12 +2342,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 8.0
+					join_wars_peasant_zeal_cost = 8
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 8.0
+					value = 8
 				}
 			}
 		}
@@ -2366,12 +2366,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 7.0
+					join_wars_peasant_zeal_cost = 7
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 7.0
+					value = 7
 				}
 			}
 		}
@@ -2390,12 +2390,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 6.0
+					join_wars_peasant_zeal_cost = 6
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 6.0
+					value = 6
 				}
 			}
 		}
@@ -2414,12 +2414,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 5.0
+					join_wars_peasant_zeal_cost = 5
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 5.0
+					value = 5
 				}
 			}
 		}
@@ -2438,12 +2438,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 4.0
+					join_wars_peasant_zeal_cost = 4
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 4.0
+					value = 4
 				}
 			}
 		}
@@ -2462,12 +2462,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 3.0
+					join_wars_peasant_zeal_cost = 3
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 3.0
+					value = 3
 				}
 			}
 		}
@@ -2486,12 +2486,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 2.0
+					join_wars_peasant_zeal_cost = 2
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 2.0
+					value = 2
 				}
 			}
 		}
@@ -2510,12 +2510,12 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 1.0
+					join_wars_peasant_zeal_cost = 1
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 1.0
+					value = 1
 				}
 			}
 		}
@@ -2534,14 +2534,148 @@ can_call_this_commune_to_war = {
 		else_if = {
 			limit = {
 				check_variable = {
-					join_wars_peasant_zeal_cost = 0.0
+					join_wars_peasant_zeal_cost = 0
 				}
 			}
 			FROM = {
 				has_peasant_zeal = {
-					value = 0.0
+					value = 0
 				}
 			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+has_peasant_zeal_cost_less_or_equal_to_budget = {
+	if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 100
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 100
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 90
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 90
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 80
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 80
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 70
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 70
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 60
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 60
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 50
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 50
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 40
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 40
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 30
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 30
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 20
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 20
+		}
+	}
+	else_if = {
+		limit = {
+			PREV = {
+				check_variable = {
+					peasant_call_to_arms_zeal_budget = 10
+				}
+			}
+		}
+		is_variable_less_than_or_equal_to = {
+			var = join_wars_peasant_zeal_cost
+			value = 10
 		}
 	}
 }

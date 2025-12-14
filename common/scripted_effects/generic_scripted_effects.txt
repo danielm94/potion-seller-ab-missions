@@ -469,8 +469,8 @@ remove_one_bad_ruler_personality = {
 # allows checking if the power is greater than or equal to a certain amount.
 #
 # Parameters:
-#   $mechanic_type$: The 'mechanic_type' associated with the government power.                
-#   $power_type$:    The specific 'power_type' within that mechanic.    
+#   mechanic_type: The 'mechanic_type' associated with the government power.                
+#   power_type:    The specific 'power_type' within that mechanic.    
 #
 # Output:
 #   Sets a variable in the current country scope named "$power_type$_amount".

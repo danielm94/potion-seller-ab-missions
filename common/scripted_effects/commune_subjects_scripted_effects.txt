@@ -4536,3 +4536,347 @@ calculate_peasant_zeal_call_to_arms_cost = {
 		}
 	}
 }
+
+call_all_peasant_subjects_to_arms_effect = {
+	set_variable = {
+		peasant_zeal_spent = 0
+	}
+	export_government_power_to_variable = {
+		mechanic_type = peasant_zealotry
+		power_type = peasant_zeal
+	}
+	while = {
+		limit = {
+			NOT = {
+				has_country_flag = abort_peasant_call_to_arms_loop
+			}
+			check_variable = {
+				peasant_zeal_amount = 1
+			}
+			is_variable_less_than_or_equal_to = {
+				var = peasant_zeal_spent
+				which = peasant_call_to_arms_zeal_budget
+			}
+			any_subject_country = {
+				NOT = {
+					liberty_desire = 50
+				}
+				is_commune_subject = yes
+				if = {
+					limit = {
+						PREV = {
+							NOT = {
+								has_country_flag = cta_allied_communes
+							}
+						}
+					}
+					NOT = {
+						is_subject_of_type = allied_commune
+					}
+				}
+				if = {
+					limit = {
+						PREV = {
+							NOT = {
+								has_country_flag = cta_sister_communes
+							}
+						}
+					}
+					NOT = {
+						is_subject_of_type = sister_commune
+					}
+				}
+				if = {
+					limit = {
+						PREV = {
+							NOT = {
+								has_country_flag = cta_integrated_communes
+							}
+						}
+					}
+					NOT = {
+						is_subject_of_type = integrated_commune
+					}
+				}
+				NOT = {
+					war_with = ROOT
+				}
+				has_peasant_zeal_cost_less_or_equal_to_budget = yes
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = peasant_call_to_arms_strongest_military_strategy
+			}
+			call_strongest_commune_subject_effect = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = peasant_call_to_arms_closest_to_target_strategy
+			}
+			call_nearest_commune_subject_effect = yes
+		}
+	}
+	clr_country_flag = abort_peasant_call_to_arms_loop
+}
+
+call_strongest_commune_subject_effect = {
+	every_subject_country = {
+		limit = {
+			NOT = {
+				liberty_desire = 50
+			}
+			is_commune_subject = yes
+			if = {
+				limit = {
+					PREV = {
+						NOT = {
+							has_country_flag = cta_allied_communes
+						}
+					}
+				}
+				NOT = {
+					is_subject_of_type = allied_commune
+				}
+			}
+			if = {
+				limit = {
+					PREV = {
+						NOT = {
+							has_country_flag = cta_sister_communes
+						}
+					}
+				}
+				NOT = {
+					is_subject_of_type = sister_commune
+				}
+			}
+			if = {
+				limit = {
+					PREV = {
+						NOT = {
+							has_country_flag = cta_integrated_communes
+						}
+					}
+				}
+				NOT = {
+					is_subject_of_type = integrated_commune
+				}
+			}
+			NOT = {
+				war_with = ROOT
+			}
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = strongest_commune_subject
+			}
+			if = {
+				limit = {
+					military_strength = {
+						who = event_target:strongest_commune_subject
+						value = 1.001
+					}
+				}
+				save_global_event_target_as = strongest_commune_subject
+			}
+		}
+		else = {
+			save_global_event_target_as = strongest_commune_subject
+		}
+	}
+	event_target:strongest_commune_subject = {
+		set_variable = {
+			which = peasant_zeal_spent
+			which = overlord
+		}
+		change_variable = {
+			which = peasant_zeal_spent
+			which = join_wars_peasant_zeal_cost
+		}
+		set_variable = {
+			which = peasant_zeal_amount
+			which = overlord
+		}
+		subtract_variable = {
+			which = peasant_zeal_amount
+			which = join_wars_peasant_zeal_cost
+		}
+		set_variable = {
+			which = peasant_call_to_arms_zeal_budget
+			which = overlord
+		}
+		if = {
+			limit = {
+				is_variable_less_than_or_equal_to = {
+					var = peasant_zeal_spent
+					which = peasant_call_to_arms_zeal_budget
+				}
+				check_variable = {
+					peasant_zeal_amount = 0
+				}
+			}
+			join_all_offensive_wars_of = overlord
+			join_all_defensive_wars_of = overlord
+			PREV = {
+				set_variable = {
+					which = join_wars_peasant_zeal_cost
+					which = event_target:strongest_commune_subject
+				}
+				change_variable = {
+					which = peasant_zeal_spent
+					which = join_wars_peasant_zeal_cost
+				}
+				multiply_variable = {
+					join_wars_peasant_zeal_cost = -1
+				}
+				variable_government_power_effect = {
+					var = join_wars_peasant_zeal_cost
+					mechanic_type = peasant_zealotry
+					power_type = peasant_zeal
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+		else = {
+			PREV = {
+				set_country_flag = abort_peasant_call_to_arms_loop
+			}
+		}
+	}
+	clear_global_event_target = strongest_commune_subject
+}
+
+call_nearest_commune_subject_effect = {
+	every_subject_country = {
+		limit = {
+			NOT = {
+				liberty_desire = 50
+			}
+			is_commune_subject = yes
+			if = {
+				limit = {
+					PREV = {
+						NOT = {
+							has_country_flag = cta_allied_communes
+						}
+					}
+				}
+				NOT = {
+					is_subject_of_type = allied_commune
+				}
+			}
+			if = {
+				limit = {
+					PREV = {
+						NOT = {
+							has_country_flag = cta_sister_communes
+						}
+					}
+				}
+				NOT = {
+					is_subject_of_type = sister_commune
+				}
+			}
+			if = {
+				limit = {
+					PREV = {
+						NOT = {
+							has_country_flag = cta_integrated_communes
+						}
+					}
+				}
+				NOT = {
+					is_subject_of_type = integrated_commune
+				}
+			}
+			NOT = {
+				war_with = ROOT
+			}
+		}
+		export_to_variable = {
+			which = distance
+			value = border_distance
+			who = root
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = closest_commune_subject
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = distance
+							which = event_target:closest_commune_subject
+						}
+					}
+				}
+				save_global_event_target_as = closest_commune_subject
+			}
+		}
+		else = {
+			save_global_event_target_as = closest_commune_subject
+		}
+	}
+	event_target:closest_commune_subject = {
+		set_variable = {
+			which = peasant_zeal_spent
+			which = overlord
+		}
+		change_variable = {
+			which = peasant_zeal_spent
+			which = join_wars_peasant_zeal_cost
+		}
+		set_variable = {
+			which = peasant_zeal_amount
+			which = overlord
+		}
+		subtract_variable = {
+			which = peasant_zeal_amount
+			which = join_wars_peasant_zeal_cost
+		}
+		set_variable = {
+			which = peasant_call_to_arms_zeal_budget
+			which = overlord
+		}
+		if = {
+			limit = {
+				is_variable_less_than_or_equal_to = {
+					var = peasant_zeal_spent
+					which = peasant_call_to_arms_zeal_budget
+				}
+				check_variable = {
+					peasant_zeal_amount = 0
+				}
+			}
+			join_all_offensive_wars_of = overlord
+			join_all_defensive_wars_of = overlord
+			PREV = {
+				set_variable = {
+					which = join_wars_peasant_zeal_cost
+					which = event_target:closest_commune_subject
+				}
+				change_variable = {
+					which = peasant_zeal_spent
+					which = join_wars_peasant_zeal_cost
+				}
+				multiply_variable = {
+					join_wars_peasant_zeal_cost = -1
+				}
+				variable_government_power_effect = {
+					var = join_wars_peasant_zeal_cost
+					mechanic_type = peasant_zealotry
+					power_type = peasant_zeal
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+		else = {
+			PREV = {
+				set_country_flag = abort_peasant_call_to_arms_loop
+			}
+		}
+	}
+	clear_global_event_target = closest_commune_subject
+}

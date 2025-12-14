@@ -1454,21 +1454,21 @@ guiTypes = {
 		}
 		guiButtonType = {
 			name = "peasant_call_to_arms_enemy"
-			position = { x = 511 y = 342 }
+			position = { x = 549 y = 337 }
 			quadTextureSprite ="GFX_peasant_call_to_arms"
 			scripted = yes
 			shortcut = "CTRL+c"
 		}
 		guiButtonType = {
 			name = "peasant_call_to_arms_ally"
-			position = { x = 511 y = 342 }
+			position = { x = 549 y = 337 }
 			quadTextureSprite ="GFX_peasant_call_to_arms"
 			scripted = yes
 			shortcut = "CTRL+c"
 		}
 		guiButtonType = {
 			name = "peasant_call_to_arms_ally_config"
-			position = { x = 511 y = 342 }
+			position = { x = 549 y = 337 }
 			quadTextureSprite ="GFX_autonomy_macro_empty_button"
 			scripted = yes
 			shortcut = "CTRL+shift+c"

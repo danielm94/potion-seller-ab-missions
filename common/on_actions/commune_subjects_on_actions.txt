@@ -376,3 +376,17 @@ on_dependency_lost = {
 		pop_commune_subject_investing_mana_modifier = yes
 	}
 }
+
+on_dependency_gained = {
+	if = {
+		limit = {
+			is_at_war = yes
+			FROM = {
+				is_commune_subject = yes
+			}
+		}
+		FROM = {
+			calculate_peasant_zeal_call_to_arms_cost = yes
+		}
+	}
+}

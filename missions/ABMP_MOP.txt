@@ -3965,7 +3965,7 @@ ab_mop_2 = {
 				}
 			}
 			add_mercantilism = 2
-			add_faction_influence = {
+		add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 5
 			}
