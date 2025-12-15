@@ -2467,6 +2467,12 @@ lottery_reform = {
 			NOT = { has_dlc = "Emperor" }
 		}
 		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
+		}
 	}
 	trigger = {
 		NOT = { 
@@ -2503,6 +2509,12 @@ force_reelection_reform = {
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
 		}
 	}
 	trigger = {
