@@ -217,7 +217,7 @@ estate_razesi_upgrade_roads = {
 		province_id = event_target:agenda_province
 	}
 	selection_weight = {
-		factor = 69
+		factor = 1
 	}
 	pre_effect = {
 		random_owned_province = {
@@ -380,6 +380,153 @@ estate_razesi_upgrade_roads = {
 		event_target:agenda_province = {
 			NOT = {
 				owned_by = root
+			}
+		}
+	}
+}
+
+estate_razesi_integrate_subject = {
+	can_select = {
+		has_government_mechanic = peasant_zealotry
+		any_subject_country = {
+			OR = {
+				is_subject_of_type = allied_commune
+				is_subject_of_type = sister_commune
+			}
+			is_commune_subject_being_integrated = no
+			OR = {
+				NOT = {
+					has_country_flag = commune_integrated_recently
+				}
+				had_country_flag = {
+					flag = commune_integrated_recently
+					days = 3650
+				}
+			}
+			is_at_war = no
+			is_commune_loyal_enough_to_integrate = yes
+			NOT = {
+				truce_with = ROOT
+			}
+		}
+		is_at_war = no
+		num_of_diplomats = 2
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_country_capital
+	}
+	selection_weight = {
+		factor = 1
+	}
+	pre_effect = {
+		random_subject_country = {
+			limit = {
+				OR = {
+					is_subject_of_type = allied_commune
+					is_subject_of_type = sister_commune
+				}
+				is_commune_subject_being_integrated = no
+				OR = {
+					NOT = {
+						has_country_flag = commune_integrated_recently
+					}
+					had_country_flag = {
+						flag = commune_integrated_recently
+						days = 3650
+					}
+				}
+				is_at_war = no
+				is_commune_loyal_enough_to_integrate = yes
+				NOT = {
+					truce_with = ROOT
+				}
+			}
+			if = {
+				limit = {
+					is_subject_of_type = allied_commune
+				}
+				set_country_flag = agenda_allied_commune
+			}
+			else_if = {
+				limit = {
+					is_subject_of_type = sister_commune
+				}
+				set_country_flag = agenda_sister_commune
+			}
+			save_event_target_as = agenda_country
+			capital_scope = {
+				save_event_target_as = agenda_country_capital
+			}
+		}
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_saved_event_target = agenda_country
+			}
+			event_target:agenda_country = {
+				if = {
+					limit = {
+						has_country_flag = agenda_allied_commune
+					}
+					is_subject_of_type = sister_commune
+				}
+				else_if = {
+					limit = {
+						has_country_flag = agenda_sister_commune
+					}
+					is_subject_of_type = integrated_commune
+				}
+			}
+		}
+	}
+	task_completed_effect = {
+		change_peasant_zeal = {
+			value = 10
+			scaled_with_gain_modifier = yes
+		}
+		custom_tooltip = remove_annexers_legacy_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_modifier = annexers_legacy
+				}
+				remove_country_modifier = annexers_legacy
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = agenda_country
+			}
+			hidden_effect = {
+				event_target:agenda_country = {
+					clr_country_flag = agenda_allied_commune
+					clr_country_flag = agenda_sister_commune
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = leaguists_faction
+			influence = 10
+		}
+	}
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		add_estate_loyalty_modifier = {
+			estate = estate_razesi
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+	}
+	fail_if = {
+		event_target:agenda_country = {
+			OR = {
+				exists = no
+				NOT = {
+					is_subject_of = root
+				}
 			}
 		}
 	}

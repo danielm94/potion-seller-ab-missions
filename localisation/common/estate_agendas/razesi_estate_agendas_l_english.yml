@@ -5,3 +5,6 @@
  estate_razesi_build_roads_desc: "The [get_razesi_name] of [agenda_province.GetName] are isolated from the capital, lacking a reliable route to transport their goods. We must finance the construction of a permanent road to integrate these remote communities into the Republic."
  estate_razesi_upgrade_roads: "Modernize Roads in [road_target_province.GetName]"
  estate_razesi_upgrade_roads_desc: "The highways of [road_target_province.GetName] are an embarrassment to a modern Republic. While foreign nations boast paved causeways, our wagons still fracture their axles in deep ruts. We must upgrade this infrastructure to prove that a peasant state can build better than any king."
+ remove_annexers_legacy_tt: "There will be no penalty to your Diplomatic Reputation for annexing @[agenda_country.GetTag] §Y[agenda_country.GetName]§!"
+ estate_razesi_integrate_subject: "Shieet"
+ estate_razesi_integrate_subject_desc: ""
