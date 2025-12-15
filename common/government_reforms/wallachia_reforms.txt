@@ -352,7 +352,7 @@ wallachia_carpathian_ambush_doctrine_reform = {
 	icon = "carpathian_ambush"
 	allow_normal_conversion = yes
 	potential = {
-		is_or_was_wallachia = yes
+		culture_group = romanian_culture_group
 	}
 	modifiers = {
 		hostile_attrition = 2
