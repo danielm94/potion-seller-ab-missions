@@ -285,6 +285,9 @@ moldavian_peasant_government_reform_initialization_effect = {
 		set_variable = {
 			total_staged_coups_against_commune = 0
 		}
+		set_variable = {
+			razesi_agendas_completed = 0
+		}
 		set_country_flag = peasant_variables_initialized
 	}
 }

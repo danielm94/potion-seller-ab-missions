@@ -71,6 +71,7 @@ estate_razesi = {
 		estate_razesi_build_roads
 		estate_razesi_upgrade_roads
 		estate_razesi_integrate_subject
+		estate_razesi_support_rebels
 	}
 	influence_from_dev_modifier = 1	#Determines percent influence from development
 }
