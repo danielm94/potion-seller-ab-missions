@@ -101,7 +101,7 @@ estate_razesi_build_roads = {
 		province_id = event_target:agenda_province
 	}
 	selection_weight = {
-		factor = 69
+		factor = 1
 	}
 	pre_effect = {
 		random_owned_province = {
@@ -190,6 +190,190 @@ estate_razesi_build_roads = {
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
+		}
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = {
+				owned_by = root
+			}
+		}
+	}
+}
+
+estate_razesi_upgrade_roads = {
+	can_select = {
+		any_owned_province = {
+			has_road_building_trigger = yes
+			OR = {
+				can_build = gravel_road
+				can_build = royal_road
+				can_build = macadam_road
+				can_build = rail_road
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	selection_weight = {
+		factor = 69
+	}
+	pre_effect = {
+		random_owned_province = {
+			limit = {
+				has_road_building_trigger = yes
+				OR = {
+					can_build = gravel_road
+					can_build = royal_road
+					can_build = macadam_road
+					can_build = rail_road
+				}
+			}
+			if = {
+				limit = {
+					has_building = early_road
+				}
+				set_province_flag = early_road_prov
+			}
+			else_if = {
+				limit = {
+					has_building = gravel_road
+				}
+				set_province_flag = gravel_road_prov
+			}
+			else_if = {
+				limit = {
+					has_building = royal_road
+				}
+				set_province_flag = royal_road_prov
+			}
+			else_if = {
+				limit = {
+					has_building = macadam_road
+				}
+				set_province_flag = macadam_road_prov
+			}
+			save_event_target_as = agenda_province
+		}
+	}
+	task_requirements = {
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					has_province_flag = early_road_prov
+				}
+				OR = {
+					has_building = gravel_road
+					has_building = royal_road
+					has_building = macadam_road
+					has_building = rail_road
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = gravel_road_prov
+				}
+				OR = {
+					has_building = royal_road
+					has_building = macadam_road
+					has_building = rail_road
+				}
+			}
+			else_if = {
+				limit = {
+					has_province_flag = royal_road_prov
+				}
+				OR = {
+					has_building = macadam_road
+					has_building = rail_road
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = macadam_road
+				}
+				has_building = rail_road
+			}
+		}
+	}
+	task_completed_effect = {
+		if = {
+			limit = {
+				has_saved_event_target = agenda_province
+			}
+			event_target:agenda_province = {
+				add_base_production = 1
+				if = {
+					limit = {
+						has_building = gravel_road
+					}
+					add_province_modifier = {
+						name = wallachia_road_2_bonus
+						duration = 3650
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = royal_road
+					}
+					add_province_modifier = {
+						name = wallachia_road_3_bonus
+						duration = 3650
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = macadam_road
+					}
+					add_province_modifier = {
+						name = wallachia_road_4_bonus
+						duration = 3650
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = rail_road
+					}
+					add_province_modifier = {
+						name = wallachia_road_5_bonus
+						duration = 3650
+					}
+				}
+				hidden_effect = {
+					clr_province_flag = early_road_prov
+					clr_province_flag = gravel_road_prov
+					clr_province_flag = royal_road_prov
+					clr_province_flag = macadam_road_prov
+				}
+			}
+		}
+		add_faction_influence = {
+			faction = exemplarists_faction
+			influence = 10
+		}
+	}
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		add_estate_loyalty_modifier = {
+			estate = estate_razesi
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+		if = {
+			limit = {
+				has_saved_event_target = agenda_province
+			}
+			hidden_effect = {
+				event_target:agenda_province = {
+					clr_province_flag = early_road_prov
+					clr_province_flag = gravel_road_prov
+					clr_province_flag = royal_road_prov
+					clr_province_flag = macadam_road_prov
+				}
+			}
 		}
 	}
 	fail_if = {
