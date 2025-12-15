@@ -1,5 +1,7 @@
 # PotionSeller's AB Mission Pack
 
+If you like what I do consider supporting me on [Ko-fi](https://ko-fi.com/danielm94).
+
 Adds missions and new features to AnteBellum. Currently there is new content for:
 
 - Wallachia
