@@ -504,18 +504,37 @@ ten_year_plan_cost_scripted_effect = {
 				full_idea_group = court_ideas
 			}
 		}
-		[[exemplarists]
-		add_adm_power = -50
-		add_years_of_income = -2.5
-		]
-		[[leaguists]
-		add_dip_power = -50
-		add_years_of_income = -2.5
-		]
-		[[abolitionists]
-		add_mil_power = -50
-		add_years_of_income = -2.5
-		]
+		if = {
+			limit = {
+				has_government_attribute = half_ten_year_plan_cost
+			}
+			[[exemplarists]
+			add_adm_power = -25
+			add_years_of_income = -1.25
+			]
+			[[leaguists]
+			add_dip_power = -25
+			add_years_of_income = -1.25
+			]
+			[[abolitionists]
+			add_mil_power = -25
+			add_years_of_income = -1.25
+			]
+		}
+		else = {
+			[[exemplarists]
+			add_adm_power = -50
+			add_years_of_income = -2.5
+			]
+			[[leaguists]
+			add_dip_power = -50
+			add_years_of_income = -2.5
+			]
+			[[abolitionists]
+			add_mil_power = -50
+			add_years_of_income = -2.5
+			]
+		}
 	}
 	else_if = {
 		limit = {
@@ -524,18 +543,37 @@ ten_year_plan_cost_scripted_effect = {
 				full_idea_group = court_ideas
 			}
 		}
-		[[exemplarists]
-		add_adm_power = -50
-		add_years_of_income = -2
-		]
-		[[leaguists]
-		add_dip_power = -50
-		add_years_of_income = -2
-		]
-		[[abolitionists]
-		add_mil_power = -50
-		add_years_of_income = -2
-		]
+		if = {
+			limit = {
+				has_government_attribute = half_ten_year_plan_cost
+			}
+			[[exemplarists]
+			add_adm_power = -25
+			add_years_of_income = -1
+			]
+			[[leaguists]
+			add_dip_power = -25
+			add_years_of_income = -1
+			]
+			[[abolitionists]
+			add_mil_power = -25
+			add_years_of_income = -1
+			]
+		}
+		else = {
+			[[exemplarists]
+			add_adm_power = -50
+			add_years_of_income = -2
+			]
+			[[leaguists]
+			add_dip_power = -50
+			add_years_of_income = -2
+			]
+			[[abolitionists]
+			add_mil_power = -50
+			add_years_of_income = -2
+			]
+		}
 	}
 	else_if = {
 		limit = {
@@ -544,18 +582,37 @@ ten_year_plan_cost_scripted_effect = {
 				full_idea_group = court_ideas
 			}
 		}
-		[[exemplarists]
-		add_adm_power = -50
-		add_years_of_income = -1.5
-		]
-		[[leaguists]
-		add_dip_power = -50
-		add_years_of_income = -1.5
-		]
-		[[abolitionists]
-		add_mil_power = -50
-		add_years_of_income = -1.5
-		]
+		if = {
+			limit = {
+				has_government_attribute = half_ten_year_plan_cost
+			}
+			[[exemplarists]
+			add_adm_power = -25
+			add_years_of_income = -0.75
+			]
+			[[leaguists]
+			add_dip_power = -25
+			add_years_of_income = -0.75
+			]
+			[[abolitionists]
+			add_mil_power = -25
+			add_years_of_income = -0.75
+			]
+		}
+		else = {
+			[[exemplarists]
+			add_adm_power = -50
+			add_years_of_income = -1.5
+			]
+			[[leaguists]
+			add_dip_power = -50
+			add_years_of_income = -1.5
+			]
+			[[abolitionists]
+			add_mil_power = -50
+			add_years_of_income = -1.5
+			]
+		}
 	}
 	else_if = {
 		limit = {
@@ -564,18 +621,37 @@ ten_year_plan_cost_scripted_effect = {
 				full_idea_group = court_ideas
 			}
 		}
-		[[exemplarists]
-		add_adm_power = -50
-		add_years_of_income = -1
-		]
-		[[leaguists]
-		add_dip_power = -50
-		add_years_of_income = -1
-		]
-		[[abolitionists]
-		add_mil_power = -50
-		add_years_of_income = -1
-		]
+		if = {
+			limit = {
+				has_government_attribute = half_ten_year_plan_cost
+			}
+			[[exemplarists]
+			add_adm_power = -25
+			add_years_of_income = -0.5
+			]
+			[[leaguists]
+			add_dip_power = -25
+			add_years_of_income = -0.5
+			]
+			[[abolitionists]
+			add_mil_power = -25
+			add_years_of_income = -0.5
+			]
+		}
+		else = {
+			[[exemplarists]
+			add_adm_power = -50
+			add_years_of_income = -1
+			]
+			[[leaguists]
+			add_dip_power = -50
+			add_years_of_income = -1
+			]
+			[[abolitionists]
+			add_mil_power = -50
+			add_years_of_income = -1
+			]
+		}
 	}
 	else_if = {
 		limit = {
@@ -584,18 +660,37 @@ ten_year_plan_cost_scripted_effect = {
 				full_idea_group = court_ideas
 			}
 		}
-		[[exemplarists]
-		add_adm_power = -50
-		add_years_of_income = -0.5
-		]
-		[[leaguists]
-		add_dip_power = -50
-		add_years_of_income = -0.5
-		]
-		[[abolitionists]
-		add_mil_power = -50
-		add_years_of_income = -0.5
-		]
+		if = {
+			limit = {
+				has_government_attribute = half_ten_year_plan_cost
+			}
+			[[exemplarists]
+			add_adm_power = -25
+			add_years_of_income = -0.25
+			]
+			[[leaguists]
+			add_dip_power = -25
+			add_years_of_income = -0.25
+			]
+			[[abolitionists]
+			add_mil_power = -25
+			add_years_of_income = -0.25
+			]
+		}
+		else = {
+			[[exemplarists]
+			add_adm_power = -50
+			add_years_of_income = -0.5
+			]
+			[[leaguists]
+			add_dip_power = -50
+			add_years_of_income = -0.5
+			]
+			[[abolitionists]
+			add_mil_power = -50
+			add_years_of_income = -0.5
+			]
+		}
 	}
 	if = {
 		limit = {

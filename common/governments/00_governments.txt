@@ -1336,6 +1336,8 @@ republic = {
 				zangid_power
 				rustysyatsky
 				# ]]]
+				#PotionSeller
+				ten_year_terms_reform
 			}
 		}
 		military_doctrines = {

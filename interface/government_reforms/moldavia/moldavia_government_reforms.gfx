@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "government_reform_dacian_commune_reform"
 		texturefile = "gfx/interface/government_reform_icons/dacian_commune.dds"
 	}
+	spriteType = {
+		name = "government_reform_ten_year_terms_reform"
+		texturefile = "gfx/interface/government_reform_icons/ten_year_terms.dds"
+	}
 }

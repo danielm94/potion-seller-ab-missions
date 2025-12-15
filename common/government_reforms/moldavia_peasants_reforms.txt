@@ -196,3 +196,23 @@ freemen_primacy_reform = {
 		factor = 1
 	}
 }
+
+# Tier 3 #
+ten_year_terms_reform = {
+	icon = "ten_year_terms_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_government_attribute = has_peasant_elections
+	}
+	modifiers = {
+		max_absolutism = 20
+		election_cycle = 6
+		idea_cost = 0.1
+	}
+	custom_attributes = {
+		half_ten_year_plan_cost = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
