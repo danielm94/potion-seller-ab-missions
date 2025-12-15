@@ -1,0 +1,9 @@
+#SCOPE = COUNTRY
+has_radicalized_peasantry_country = {
+	has_country_flag = has_radicalized_peasantry
+}
+
+#SCOPE = PROVINCE
+has_radicalized_peasantry_province = {
+	has_province_modifier = radicalized_peasantry
+}
