@@ -28,7 +28,7 @@ country_decisions = {
 			NOT = {
 				any_province = {
 					is_part_of_hre = yes
-					has_province_modifier = radicalized_peasantry
+					has_radicalized_peasantry_province = yes
 				}
 			}
 		}		
@@ -61,7 +61,7 @@ country_decisions = {
 			NOT = {
 				any_province = {
 					is_part_of_hre = yes
-					has_province_modifier = radicalized_peasantry
+					has_radicalized_peasantry_province = yes
 				}
 			}
 		}		

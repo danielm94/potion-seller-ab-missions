@@ -231,7 +231,7 @@ on_dependency_gained = {
 			}
 			every_owned_province = {
 				limit = {
-					has_province_modifier = radicalized_peasantry
+					has_radicalized_peasantry_province = yes
 				}
 				remove_province_modifier = radicalized_peasantry
 			}

@@ -12,7 +12,7 @@ cb_great_peasant_uprising = {
 		}
 		FROM = {
 			any_owned_province = {
-				has_province_modifier = radicalized_peasantry
+				has_radicalized_peasantry_province = yes
 			}
 		}
 		if = {

@@ -300,7 +300,7 @@ defined_text = {
 		trigger = {
 			FROM = {
 				any_owned_province = {
-					has_province_modifier = radicalized_peasantry
+					has_radicalized_peasantry_province = yes
 				}
 			}
 		}
@@ -311,7 +311,7 @@ defined_text = {
 			NOT = {
 				FROM = {
 					any_owned_province = {
-						has_province_modifier = radicalized_peasantry
+						has_radicalized_peasantry_province = yes
 					}
 				}
 			}

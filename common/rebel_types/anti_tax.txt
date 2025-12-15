@@ -29,7 +29,7 @@ anti_tax_rebels = {
 		factor = 2
 		modifier = {
 			factor = 1000
-			has_province_modifier = radicalized_peasantry
+			has_radicalized_peasantry_province = yes
 		}
 		modifier = {
 			factor = 100

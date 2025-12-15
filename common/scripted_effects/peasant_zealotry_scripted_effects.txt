@@ -150,7 +150,7 @@ apply_radicalized_peasantry_effect = {
 clear_all_radicalized_peasantry = {
 	every_province = {
 		limit = {
-			has_province_modifier = radicalized_peasantry
+			has_radicalized_peasantry_province = yes
 			owner = {
 				NOT = {
 					has_country_modifier = incited_peasantry
@@ -159,6 +159,9 @@ clear_all_radicalized_peasantry = {
 					has_country_modifier = incited_peasantry_great_peasants_war
 				}
 			}
+		}
+		owner ={
+			clr_country_flag = has_radicalized_peasantry
 		}
 		remove_province_modifier = radicalized_peasantry
 	}
@@ -188,6 +191,9 @@ apply_radicalized_peasantry_to_neighbors = {
 				}
 				is_commune_subject = no
 			}
+		}
+		owner = {
+			set_country_flag = has_radicalized_peasantry
 		}
 		add_province_modifier = {
 			name = radicalized_peasantry
@@ -298,7 +304,7 @@ get_number_of_provinces_without_radicalized_peasantry = {
 	}
 	every_owned_province = {
 		limit = {
-			has_province_modifier = radicalized_peasantry
+			has_radicalized_peasantry_province = yes
 		}
 		owner = {
 			change_variable = {
@@ -321,7 +327,7 @@ add_radicalized_peasantry_to_random_province_effect = {
 	random_owned_province = {
 		limit = {
 			NOT = {
-				has_province_modifier = radicalized_peasantry
+				has_radicalized_peasantry_province = yes
 			}
 		}
 		add_province_modifier = {

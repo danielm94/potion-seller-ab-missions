@@ -34,7 +34,7 @@ incite_peasants = {
 						tooltip = no_radicalized_peasantry_trigger_tt
 						any_owned_province = {
 							NOT = {
-								has_province_modifier = radicalized_peasantry
+								has_radicalized_peasantry_province = yes
 							}
 						}
 					}
@@ -107,7 +107,7 @@ incite_peasants = {
 			}
 			every_owned_province = {
 				limit = {
-					has_province_modifier = radicalized_peasantry
+					has_radicalized_peasantry_province = yes
 				}
 				if = {
 					limit = {
@@ -190,7 +190,7 @@ stage_mass_peasant_uprising = {
 		years_of_income = 0.25
 		FROM = {
 			any_owned_province = {
-				has_province_modifier = radicalized_peasantry
+				has_radicalized_peasantry_province = yes
 			}
 		}
 		custom_trigger_tooltip = {
@@ -239,7 +239,7 @@ stage_mass_peasant_uprising = {
 			}
 			every_owned_province = {
 				limit = {
-					has_province_modifier = radicalized_peasantry
+					has_radicalized_peasantry_province = yes
 				}
 				spawn_rebels = {
 					size = 3

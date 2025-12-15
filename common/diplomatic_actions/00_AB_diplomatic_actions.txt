@@ -460,7 +460,7 @@ declarewar = {
 				FROM = {
 					random_owned_province = {
 						limit = {
-							has_province_modifier = radicalized_peasantry
+							has_radicalized_peasantry_province = yes
 						}
 						spawn_rebels = {
 							size = 2
@@ -486,7 +486,7 @@ declarewar = {
 				FROM = {
 					random_owned_province = {
 						limit = {
-							has_province_modifier = radicalized_peasantry
+							has_radicalized_peasantry_province = yes
 						}
 						spawn_rebels = {
 							size = 1
