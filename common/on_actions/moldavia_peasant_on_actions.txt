@@ -156,6 +156,7 @@ on_war_ended = {
 }
 
 on_startup = {
+	#This on action fires for EVERYONE on startup, so queue the radicalized peasantry cycle for the next day and make it happen only once.
 	if = {
 		limit = {
 			NOT = {
