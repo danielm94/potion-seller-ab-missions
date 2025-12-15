@@ -3963,7 +3963,7 @@ ab_mop_2 = {
 				}
 			}
 			add_mercantilism = 2
-		add_faction_influence = {
+			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 5
 			}
@@ -7557,9 +7557,8 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				num_of_estate_agendas_completed = {
-					estate = estate_razesi
-					value = 2
+				has_completed_n_razesi_agendas = {
+					n = 2
 				}
 				OR = {
 					estate_loyalty = {
@@ -7600,9 +7599,8 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				num_of_estate_agendas_completed = {
-					estate = estate_razesi
-					value = 5
+				has_completed_n_razesi_agendas = {
+					n = 5
 				}
 				OR = {
 					estate_loyalty = {

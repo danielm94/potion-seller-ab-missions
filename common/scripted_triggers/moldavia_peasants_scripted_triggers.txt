@@ -138,3 +138,9 @@ has_peasant_zeal = {
 		value = $value$
 	}
 }
+
+has_completed_n_razesi_agendas = {
+	check_variable = {
+		razesi_agendas_completed = $n$
+	}
+}

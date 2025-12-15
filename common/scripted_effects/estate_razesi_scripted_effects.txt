@@ -8,6 +8,11 @@ on_completed_agenda_effect_estate_razesi = {
 			value = 15
 		}
 	}
+	hidden_effect = {
+		change_variable = {
+			razesi_agendas_completed = 1
+		}
+	}
 }
 
 ab_on_completed_agenda_effect_estate_razesi = {
