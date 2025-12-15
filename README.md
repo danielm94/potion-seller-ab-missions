@@ -1,4 +1,4 @@
-If you like what I do consider supporting me on [Ko-fi](https://ko-fi.com/danielm94).
+If you like what I do please consider supporting me on [Ko-fi](https://ko-fi.com/danielm94).
 
 # PotionSeller's AB Mission Pack
 
