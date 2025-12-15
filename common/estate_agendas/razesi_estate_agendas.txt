@@ -641,7 +641,7 @@ estate_razesi_support_rebels = {
 		province_id = event_target:agenda_country_capital
 	}
 	selection_weight = {
-		factor = 69
+		factor = 3
 	}
 	pre_effect = {
 		random_country = {
@@ -678,6 +678,9 @@ estate_razesi_support_rebels = {
 		add_faction_influence = {
 			faction = abolitionists_faction
 			influence = 5
+		}
+		on_completed_agenda_effect = {
+			estate = estate_razesi
 		}
 	}
 	failing_effect = {
