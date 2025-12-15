@@ -20,7 +20,7 @@ estate_razesi_spy_on_threats = {
 		}
 	}
 	selection_weight = {
-		factor = 1
+		factor = 3
 	}
 	pre_effect = {
 		random_country = {
@@ -180,6 +180,9 @@ estate_razesi_build_roads = {
 		add_faction_influence = {
 			faction = exemplarists_faction
 			influence = 10
+		}
+		on_completed_agenda_effect = {
+			estate = estate_razesi
 		}
 	}
 	failing_effect = {
@@ -352,6 +355,9 @@ estate_razesi_upgrade_roads = {
 			faction = exemplarists_faction
 			influence = 10
 		}
+		on_completed_agenda_effect = {
+			estate = estate_razesi
+		}
 	}
 	failing_effect = {
 		on_failed_agenda_effect = yes
@@ -403,20 +409,17 @@ estate_razesi_integrate_subject = {
 					days = 3650
 				}
 			}
-			is_at_war = no
 			is_commune_loyal_enough_to_integrate = yes
 			NOT = {
 				truce_with = ROOT
 			}
 		}
-		is_at_war = no
-		num_of_diplomats = 2
 	}
 	provinces_to_highlight = {
 		province_id = event_target:agenda_country_capital
 	}
 	selection_weight = {
-		factor = 1
+		factor = 3
 	}
 	pre_effect = {
 		random_subject_country = {
@@ -435,7 +438,6 @@ estate_razesi_integrate_subject = {
 						days = 3650
 					}
 				}
-				is_at_war = no
 				is_commune_loyal_enough_to_integrate = yes
 				NOT = {
 					truce_with = ROOT
@@ -508,6 +510,9 @@ estate_razesi_integrate_subject = {
 		add_faction_influence = {
 			faction = leaguists_faction
 			influence = 10
+		}
+		on_completed_agenda_effect = {
+			estate = estate_razesi
 		}
 	}
 	failing_effect = {
