@@ -85,9 +85,7 @@ country_event = {
 		trigger = {
 			OR = {
 				NOT = { total_development = 100 }
-				any_owned_province = {
-					has_radicalized_peasantry_province = yes
-				}
+				has_radicalized_peasantry_country = yes
 			}
 			is_emperor = no
 			is_lesser_in_union = no

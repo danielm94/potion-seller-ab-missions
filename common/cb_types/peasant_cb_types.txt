@@ -11,9 +11,7 @@ cb_great_peasant_uprising = {
 			}
 		}
 		FROM = {
-			any_owned_province = {
-				has_radicalized_peasantry_province = yes
-			}
+			has_radicalized_peasantry_country = yes
 		}
 		if = {
 			limit = {

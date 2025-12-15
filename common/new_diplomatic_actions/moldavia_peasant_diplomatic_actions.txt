@@ -189,9 +189,7 @@ stage_mass_peasant_uprising = {
 		}
 		years_of_income = 0.25
 		FROM = {
-			any_owned_province = {
-				has_radicalized_peasantry_province = yes
-			}
+			has_radicalized_peasantry_country = yes
 		}
 		custom_trigger_tooltip = {
 			tooltip = mass_peasant_uprising_cooldown_tt

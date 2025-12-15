@@ -12,9 +12,7 @@ ab_mop_misc_1 = {
 		provinces_to_highlight = {
 			is_capital = yes
 			owner = {
-				any_owned_province = {
-					has_radicalized_peasantry_province = yes
-				}
+				has_radicalized_peasantry_country = yes
 			}
 		}
 		trigger = {
