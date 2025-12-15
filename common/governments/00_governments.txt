@@ -1489,6 +1489,8 @@ republic = {
 				ab_condottiero_reform
 				rhl_imperial_guards
 				# ]]]
+				#PotionSeller
+				wallachia_carpathian_ambush_doctrine_reform 
 			}
 		}
 		republic_and_religion = {
@@ -2259,6 +2261,8 @@ theocracy = {
 				rhl_imperial_guards
 				teu_hussars
 				# ]]]
+				#PotionSeller
+				wallachia_carpathian_ambush_doctrine_reform 
 			}
 		}
 		religoius_doctrine = {
