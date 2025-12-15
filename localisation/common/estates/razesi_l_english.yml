@@ -1,6 +1,6 @@
 ﻿l_english:
  estate_razesi: "Razesi"
- estate_razesi_desc: "$TODO$"
+ estate_razesi_desc: "This estate represents a distinctive class of freeholding peasants native to the Moldavian lands. Unlike serfs bound to noble estates, these men possess title to their own plots and owe no labor service to any lord. Long forming the backbone of the local militia, this independent yeomanry constitutes a proud and resilient social stratum, distinct from both the aristocracy and the indentured masses."
  razesi_loyalty_modifier: "Razesi Loyalty Equilibrium"
  razesi_influence_modifier: "Razesi Influence"
  razesi_privilege_slots: "Razesi Privilege Slots"
