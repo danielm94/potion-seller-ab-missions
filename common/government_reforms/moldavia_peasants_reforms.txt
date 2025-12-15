@@ -177,3 +177,22 @@ ganden_phodrang_reform = {
 	}
 	duration = 8
 }
+
+# Tier2 #
+freemen_primacy_reform = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+		has_estate = estate_razesi
+		is_peasant_republic = yes
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		razesi_influence_modifier = 0.1
+		razesi_loyalty_modifier = 0.05
+		razesi_privilege_slots = 1
+	}
+	ai = {
+		factor = 1
+	}
+}

@@ -1312,6 +1312,8 @@ republic = {
 				# Blood and Iron
 				bav_council_of_eight
 				# ]]]
+				# PotionSeller
+				freemen_primacy_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
