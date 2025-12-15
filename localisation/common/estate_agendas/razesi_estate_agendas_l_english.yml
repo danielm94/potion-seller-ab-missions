@@ -1,6 +1,6 @@
 ﻿l_english:
- estate_razesi_spy_on_threats: "Infiltrate [spy_agenda_target.GetName]"
- estate_razesi_spy_on_threats_desc: "The [get_razesi_name] feel threatened by [spy_agenda_target.GetName] and want us to infiltrate their lands to see what their next move is."
+ estate_razesi_spy_on_threats: "Infiltrate [agenda_country.GetName]"
+ estate_razesi_spy_on_threats_desc: "The [get_razesi_name] feel threatened by [agenda_country.GetName] and want us to infiltrate their lands to see what their next move is."
  estate_razesi_build_roads: "Build Roadways in [agenda_province.GetName]"
  estate_razesi_build_roads_desc: "The [get_razesi_name] of [agenda_province.GetName] are isolated from the capital, lacking a reliable route to transport their goods. We must finance the construction of a permanent road to integrate these remote communities into the Republic."
  estate_razesi_upgrade_roads: "Modernize Roads in [road_target_province.GetName]"
