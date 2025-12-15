@@ -29,3 +29,26 @@ romanian_monarchy_government_name = {
 		3 = romanian_empire_heir_female
 	}
 }
+
+romanian_commune_government_name = {
+	trigger = {
+		culture_group = romanian_culture_group
+		government = republic
+		is_peasant_republic = yes
+	}
+	rank = {
+		1 = romanian_commune
+		2 = romanian_united_communes
+		3 = romanian_great_league
+	}
+	ruler_male = {
+		1 = romanian_jude1
+		2 = romanian_jude2
+		3 = romanian_jude3
+	}
+	ruler_female = {
+		1 = romanian_judef1
+		2 = romanian_judef2
+		3 = romanian_judef3
+	}
+}
