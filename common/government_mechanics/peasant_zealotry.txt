@@ -43,9 +43,6 @@ peasant_zealotry = {
 			cost_type = peasant_zeal
 			center = no
 			trigger = {
-				NOT = {
-					has_country_modifier = peasant_expansion_mod
-				}
 				if = {
 					limit = {
 						has_country_flag = mop_discounted_cultivate_the_land
@@ -101,6 +98,8 @@ peasant_zealotry = {
 				}
 			}
 			cooldown_years = 10
+			cooldown_token = peasant_zeal_mechanic
+			cooldown_desc = a_peasant_zealotry_policy
 			ai_chance = {
 			}
 		}
@@ -188,6 +187,8 @@ peasant_zealotry = {
 				}
 			}
 			cooldown_years = 10
+			cooldown_token = peasant_zeal_mechanic
+			cooldown_desc = a_peasant_zealotry_policy
 			ai_chance = {
 			}
 		}
@@ -197,9 +198,6 @@ peasant_zealotry = {
 			cost_type = peasant_zeal
 			center = no
 			trigger = {
-				NOT = {
-					has_country_modifier = peasant_development_mod
-				}
 				if = {
 					limit = {
 						has_country_flag = mop_discounted_continue_the_liberation
@@ -255,6 +253,8 @@ peasant_zealotry = {
 				}
 			}
 			cooldown_years = 10
+			cooldown_token = peasant_zeal_mechanic
+			cooldown_desc = a_peasant_zealotry_policy
 			ai_chance = {
 			}
 		}
