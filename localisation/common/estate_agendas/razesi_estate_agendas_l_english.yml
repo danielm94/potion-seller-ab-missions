@@ -8,6 +8,6 @@
  remove_annexers_legacy_tt: "There will be no penalty to your Diplomatic Reputation for annexing @[agenda_country.GetTag] §Y[agenda_country.GetName]§!"
  estate_razesi_integrate_subject: "Absorb the [agenda_country.GetAdjective] Commune"
  estate_razesi_integrate_subject_desc: "Maintaining a separate puppet administration in [agenda_country.GetName] is a waste of federal resources. The [get_razesi_name] urge us to integrate them, streamlining tax collection and recruitment for the Federation."
- estate_razesi_support_rebels: "Fund Agitators in [target_country.GetName]"
- estate_razesi_support_rebels_desc: "The revolutionary fever has crossed the border into [target_country.GetName]. To ensure the spark becomes a fire, we must support the radicalized elements within their peasantry."
+ estate_razesi_support_rebels: "Fund Agitators in [agenda_country.GetName]"
+ estate_razesi_support_rebels_desc: "The revolutionary fever has crossed the border into [agenda_country.GetName]. To ensure the spark becomes a fire, we must support the radicalized elements within their peasantry."
  estate_razesi_support_rebels_trigger_tt: "We are currently supporting rebels against @[agenda_country.GetTag] §Y[agenda_country.GetName]§!"
