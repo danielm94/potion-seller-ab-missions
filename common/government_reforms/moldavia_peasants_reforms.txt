@@ -122,9 +122,9 @@ dacian_commune_reform = {
 		has_parliament = yes
 		has_peasant_elections = yes
 		is_peasants_republic = yes
-		centralize_state_no_reform_cost = yes
 		non_peasant_neighbors_gain_unrest = yes
 		can_install_peasant_governments = yes
+		centralize_state_half_refund = yes
 	}
 	factions = {
 		exemplarists_faction
@@ -367,7 +367,6 @@ peasants_enslave_romani_reform = {
 }
 
 # Tier 9 #
-
 embrace_the_churn_reform = {
 	icon = "dutch_republic"
 	allow_normal_conversion = yes
@@ -387,10 +386,61 @@ embrace_the_churn_reform = {
 	}
 	modifiers = {
 		max_absolutism = -10
-		republican_tradition = 0.5 
+		republican_tradition = 0.5
 		election_cycle = -1
 	}
 	ai = {
 		factor = 0
+	}
+}
+
+# Tier 10 #
+exemplarists_principle_reform = {
+	icon = "dutch_flag"
+	allow_normal_conversion = yes
+	potential = {
+		has_faction = exemplarists_faction
+	}
+	custom_attributes = {
+		centralize_state_no_reform_cost = yes
+	}
+	modifiers = {
+		development_cost_modifier = -0.05
+		possible_adm_policy = 1
+		exemplarists_faction_influence = 0.05
+	}
+}
+
+leaguists_principle_reform = {
+	icon = "constitution"
+	allow_normal_conversion = yes
+	potential = {
+		has_faction = leaguists_faction
+	}
+	custom_attributes = {
+		MAY_free_diplo_annexation = yes
+	}
+	modifiers = {
+		diplomats = 1
+		diplomatic_upkeep = 1
+		possible_dip_policy = 1
+		leaguists_faction_influence = 0.05
+	}
+}
+
+abolitionists_principle_reform = {
+	icon = "fist_in_air"
+	allow_normal_conversion = yes
+	potential = {
+		has_faction = abolitionists_faction
+	}
+	custom_attributes = {
+		army_tradition_on_stackwipe = yes
+	}
+	modifiers = {
+		rebel_support_efficiency = 3
+		military_tactics = 0.1
+		possible_mil_policy = 1
+		abolitionists_faction_influence = 0.05
 	}
 }

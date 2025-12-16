@@ -132,6 +132,9 @@ country_event = {
 				NOT = {
 					has_country_flag = no_integrate_penalty
 				}
+				NOT = {
+					has_government_attribute = MAY_free_diplo_annexation
+				}
 			}
 			add_country_modifier = {
 				name = "annexers_legacy"
