@@ -471,3 +471,25 @@ suffrage_of_the_sword_reform = {
 		factor = 1
 	}
 }
+
+# Tier 12 #
+
+public_tribunals_reform = {
+	icon = "conciliarism_reform"
+	allow_normal_conversion = yes
+		potential = {
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	custom_attributes = {
+		no_negative_ruler_traits = yes
+	}
+	modifiers = {
+		yearly_corruption = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}

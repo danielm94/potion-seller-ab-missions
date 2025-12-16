@@ -1696,6 +1696,8 @@ republic = {
 				# AB [[[
 				ottoman_lodge
 				# ]]]
+				#PotionSeller
+				public_tribunals_reform
 			}
 		}
 		question_of_dictatorship = {

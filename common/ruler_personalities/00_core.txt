@@ -2465,7 +2465,7 @@ babbling_buffoon_personality = {
 			NOT = { has_country_flag = boh_prevent_negative_traits }
 			NOT = { dip = 5 }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2497,7 +2497,7 @@ babbling_buffoon_personality = {
 			NOT = { has_country_flag = boh_prevent_negative_traits }
 			NOT = { heir_dip = 5 }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2576,7 +2576,7 @@ embezzler_personality = {
 		allow = {
 			NOT = { ruler_has_personality = incorruptible_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2605,7 +2605,7 @@ embezzler_personality = {
 		allow = {
 			NOT = { heir_has_personality = incorruptible_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2682,7 +2682,7 @@ infertile_personality = {
 		allow = {
 			NOT = { ruler_has_personality = fertile_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2715,7 +2715,7 @@ infertile_personality = {
 		allow = {
 			NOT = { heir_has_personality = fertile_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2803,7 +2803,7 @@ drunkard_personality = {
 			NOT = { ruler_has_personality = entrepreneur_personality }
 			NOT = { ruler_has_personality = zealot_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2834,7 +2834,7 @@ drunkard_personality = {
 			NOT = { heir_has_personality = entrepreneur_personality }
 			NOT = { heir_has_personality = zealot_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -2912,7 +2912,7 @@ sinner_personality = {
 		allow = {
 			NOT = { ruler_has_personality = pious_personality }
 			NOT = { ruler_has_personality = zealot_personality }
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 		}
 	
 		chance = {
@@ -2941,7 +2941,7 @@ sinner_personality = {
 			NOT = { heir_has_personality = pious_personality }
 			NOT = { heir_has_personality = zealot_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3023,7 +3023,7 @@ greedy_personality = {
 		allow = {
 			NOT = { ruler_has_personality = midas_touched_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3052,7 +3052,7 @@ greedy_personality = {
 		allow = {
 			NOT = { heir_has_personality = midas_touched_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3162,7 +3162,7 @@ cruel_personality = {
 			NOT = { ruler_has_personality = kind_hearted_personality }
 			NOT = { has_country_flag = hsn_prevent_leader_trait }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3193,7 +3193,7 @@ cruel_personality = {
 			NOT = { heir_has_personality = kind_hearted_personality }
 			NOT = { has_country_flag = hsn_prevent_leader_trait }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3266,7 +3266,7 @@ naive_personality = {
 			NOT = { ruler_has_personality = careful_personality }
 			NOT = { has_country_flag = boh_prevent_negative_traits }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3301,7 +3301,7 @@ naive_personality = {
 			NOT = { heir_has_personality = careful_personality }
 			NOT = { has_country_flag = boh_prevent_negative_traits }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3389,7 +3389,7 @@ craven_personality = {
 			NOT = { ruler_has_personality = bold_fighter_personality }
 			NOT = { has_country_flag = hsn_prevent_leader_trait }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3430,7 +3430,7 @@ craven_personality = {
 			NOT = { heir_has_personality = bold_fighter_personality }
 			NOT = { has_country_flag = hsn_prevent_leader_trait }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3516,7 +3516,7 @@ loose_lips_personality = {
 			NOT = { ruler_has_personality = intricate_web_weaver_personality }
 			NOT = { ruler_has_personality = secretive_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3546,7 +3546,7 @@ loose_lips_personality = {
 			NOT = { heir_has_personality = intricate_web_weaver_personality }
 			NOT = { heir_has_personality = secretive_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3623,7 +3623,7 @@ obsessive_perfectionist_personality = {
 				NOT = { ruler_has_personality = architectural_visionary_personality }
 			}
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3652,7 +3652,7 @@ obsessive_perfectionist_personality = {
 		allow = {
 			NOT = { heir_has_personality = architectural_visionary_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3725,7 +3725,7 @@ malevolent_personality = {
 			NOT = { ruler_has_personality = benevolent_personality }
 			NOT = { ruler_has_personality = kind_hearted_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3755,7 +3755,7 @@ malevolent_personality = {
 			NOT = { heir_has_personality = benevolent_personality }
 			NOT = { heir_has_personality = kind_hearted_personality }
 			# AB {{{
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 			# }}}
 		}
 	
@@ -3973,7 +3973,7 @@ petty_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = humane_personality }
-			NOT = { has_country_flag = ab_prevent_ruler_negative_trait }
+			has_prevent_ruler_negative_trait = no
 		}
 	
 		chance = {

@@ -1526,3 +1526,11 @@ are_there_no_truces_with_target = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+has_prevent_ruler_negative_trait = {
+	OR = {
+		has_country_flag = ab_prevent_ruler_negative_trait
+		has_government_attribute = no_negative_ruler_traits
+	}
+}
