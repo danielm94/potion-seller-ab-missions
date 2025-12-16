@@ -3856,7 +3856,14 @@ pirates_become_republic_reform = {
 seize_executive_power_reform = {
 	icon = "king_2_highlighted"
 	allow_normal_conversion = yes
-
+	potential = {
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
+		}
+	}
 	trigger = {
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		stability = 2
@@ -3898,6 +3905,14 @@ seize_executive_power_reform = {
 proclaim_divine_guidance_reform = {
 	icon = "religious_leader_highlighted"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
+		}
+	}
 	trigger = {
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		stability = 2
