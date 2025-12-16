@@ -446,7 +446,6 @@ abolitionists_principle_reform = {
 }
 
 # Tier 11 #
-
 suffrage_of_the_sword_reform = {
 	icon = "line_infantry"
 	allow_normal_conversion = yes
@@ -473,11 +472,10 @@ suffrage_of_the_sword_reform = {
 }
 
 # Tier 12 #
-
 public_tribunals_reform = {
 	icon = "conciliarism_reform"
 	allow_normal_conversion = yes
-		potential = {
+	potential = {
 		OR = {
 			tag = MOP
 			tag = TUC
@@ -488,6 +486,28 @@ public_tribunals_reform = {
 	}
 	modifiers = {
 		yearly_corruption = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+# Tier 13 #
+administrative_absolutism_reform = {
+	icon = "leviathan"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	trigger = {
+		full_idea_group = state_governance_ideas
+	}
+	modifiers = {
+		administrative_efficiency = 0.2
+		max_absolutism = -200
 	}
 	ai = {
 		factor = 1

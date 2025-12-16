@@ -1713,6 +1713,8 @@ republic = {
 				scourge_of_the_seven_sea_reform
 				#1.35
 				peters_government_reform
+				#PotionSeller
+				administrative_absolutism_reform
 			}
 		}
 	}

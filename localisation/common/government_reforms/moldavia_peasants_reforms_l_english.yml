@@ -42,3 +42,5 @@
  public_tribunals_reform: "Public Tribunals"
  public_tribunals_reform_desc: "Candidates for state office are required to undergo public interrogation concerning their finances, conduct, and loyalty. All administrators are vetted in open tribunals, where citizens directly examine their fitness for office. This process is intended to deter corruption and to ensure that authority is entrusted only to those who endure sustained public scrutiny without reproach."
  mechanic_no_negative_ruler_traits_yes: "Our rulers will no longer gain negative personality traits."
+ administrative_absolutism_reform: "The Leviathan"
+ administrative_absolutism_reform_desc: "The Republic has evolved into a singular, all-encompassing entity. We strip the executive of all discretionary power, replacing personal judgment with a rigid, inescapable code of governance. While the ruler becomes a mere functionary, the state itself gains the capacity to digest territories and mobilize resources with a mechanical precision that no autocracy could ever replicate."
