@@ -44,3 +44,9 @@ balkanized_released_us = {
 	max = 50
 	yearly_decay = 2
 }
+
+elected_our_men = {
+	opinion = 25
+	max = 200
+	yearly_decay = 2
+}

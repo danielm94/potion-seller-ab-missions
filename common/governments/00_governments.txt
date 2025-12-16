@@ -1648,6 +1648,8 @@ republic = {
 				# Blood and Iron
 				ab_regional_signora_reform
 				# ]]]
+				#PotionSeller
+				embrace_the_churn_reform
 			}
 		}
 		guiding_principle_of_administration = {

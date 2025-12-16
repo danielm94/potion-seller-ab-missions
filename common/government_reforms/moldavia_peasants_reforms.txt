@@ -204,6 +204,11 @@ ten_year_terms_reform = {
 	potential = {
 		has_government_attribute = has_peasant_elections
 	}
+	trigger = {
+		NOT = {
+			has_reform = embrace_the_churn_reform
+		}
+	}
 	modifiers = {
 		max_absolutism = 20
 		election_cycle = 6
@@ -358,5 +363,34 @@ peasants_enslave_romani_reform = {
 	}
 	removed_effect = {
 		clr_country_flag = hide_state_appropriation_of_the_robie_tooltip
+	}
+}
+
+# Tier 9 #
+
+embrace_the_churn_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	potential = {
+		has_government_attribute = has_peasant_elections
+	}
+	trigger = {
+		NOT = {
+			has_reform = ten_year_terms_reform
+		}
+	}
+	custom_attributes = {
+		disables_faction_fatigue_mechanics = yes
+		peasant_elections_cant_reelect = yes
+		peasant_elections_no_ten_year_plan = yes
+		peasant_elections_foreign_candidates = yes
+	}
+	modifiers = {
+		max_absolutism = -10
+		republican_tradition = 0.5 
+		election_cycle = -1
+	}
+	ai = {
+		factor = 0
 	}
 }

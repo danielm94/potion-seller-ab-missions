@@ -88,6 +88,65 @@ country_event = {
 				faction = abolitionists
 			}
 			set_country_flag = in_peasant_elections_event
+			if = {
+				limit = {
+					has_government_attribute = peasant_elections_foreign_candidates
+					any_subject_country = {
+						is_commune_subject_being_integrated = yes
+					}
+				}
+				#Find country with highest net gain
+				every_subject_country = {
+					limit = {
+						is_commune_subject_being_integrated = yes
+					}
+					set_variable = {
+						which = commune_integration_cost_temp
+						which = commune_integration_cost
+					}
+					set_variable = {
+						which = commune_integration_progress_temp
+						which = commune_integration_progress
+					}
+					subtract_variable = {
+						which = commune_integration_cost_temp
+						which = commune_integration_progress_temp
+					}
+					if = {
+						limit = {
+							has_saved_event_target = highest_progress_gain_commune
+						}
+						if = {
+							limit = {
+								check_variable = {
+									which = commune_integration_cost_temp
+									which = event_target:highest_progress_gain_commune
+								}
+							}
+							save_event_target_as = highest_progress_gain_commune
+						}
+					}
+					else = {
+						save_event_target_as = highest_progress_gain_commune
+					}
+				}
+				if = {
+					limit = {
+						has_saved_event_target = highest_progress_gain_commune
+					}
+					event_target:highest_progress_gain_commune = {
+						define_exiled_ruler = {
+							exiled_as = foreign_commune_candidate
+							min_age = 15
+							max_age = 75
+							option = 0
+							change_mil = -2
+							change_adm = -2
+							change_dip = -2
+						}
+					}
+				}
+			}
 		}
 	}
 	after = {
@@ -108,6 +167,9 @@ country_event = {
 				NOT = {
 					has_country_flag = death_election
 				}
+			}
+			NOT = {
+				has_government_attribute = peasant_elections_cant_reelect
 			}
 		}
 		toggle_verbose_election_event_tooltip_effect = yes
@@ -178,6 +240,9 @@ country_event = {
 				NOT = {
 					has_country_flag = death_election
 				}
+			}
+			NOT = {
+				has_government_attribute = peasant_elections_cant_reelect
 			}
 		}
 		toggle_verbose_election_event_tooltip_effect = yes
@@ -283,46 +348,60 @@ country_event = {
 		}
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
-		custom_tooltip = tooltip_line_divider
-		custom_tooltip = faction_fatigue_exemplarists_tt
 		if = {
 			limit = {
-				is_variable_greater_than = {
-					var = new_exemplarists_count
-					which = new_candidate_equilibrium
+				NOT = {
+					has_government_attribute = disables_faction_fatigue_mechanics
 				}
 			}
-			display_verbose_election_event_tooltip_if_toggled = {
-				tooltip = exemplarists_excess_tooltip
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = faction_fatigue_exemplarists_tt
+			if = {
+				limit = {
+					is_variable_greater_than = {
+						var = new_exemplarists_count
+						which = new_candidate_equilibrium
+					}
+				}
+				display_verbose_election_event_tooltip_if_toggled = {
+					tooltip = exemplarists_excess_tooltip
+				}
+			}
+			custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
+			custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
+			if = {
+				limit = {
+					is_variable_greater_than = {
+						var = faction_fatigue_exemplarists
+						value = 0
+					}
+				}
+				faction_fatigue_apply_candidate_penalties = {
+					faction = exemplarists
+				}
+			}
+			hidden_effect = {
+				faction_fatigue_change_fatigue_gain_modifier = {
+					var = fatigue_gain_modifier_new_candidate_change
+				}
+				faction_fatigue_change_minimum_faction_fatigue = {
+					var = min_faction_fatigue_new_candidate_change
+				}
+				faction_fatigue_increment_exemplarists_new_candidate_victories = yes
 			}
 		}
-		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
-		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
 		if = {
 			limit = {
-				is_variable_greater_than = {
-					var = faction_fatigue_exemplarists
-					value = 0
+				NOT = {
+					has_government_attribute = peasant_elections_no_ten_year_plan
 				}
 			}
-			faction_fatigue_apply_candidate_penalties = {
-				faction = exemplarists
-			}
-		}
-		hidden_effect = {
-			faction_fatigue_change_fatigue_gain_modifier = {
-				var = fatigue_gain_modifier_new_candidate_change
-			}
-			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_faction_fatigue_new_candidate_change
-			}
-			faction_fatigue_increment_exemplarists_new_candidate_victories = yes
-		}
-		custom_tooltip = tooltip_line_divider
-		custom_tooltip = ten_year_plan_event_exemplarists_tt
-		hidden_effect = {
-			country_event = {
-				id = peasant_election_events.3
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = ten_year_plan_event_exemplarists_tt
+			hidden_effect = {
+				country_event = {
+					id = peasant_election_events.3
+				}
 			}
 		}
 	}
@@ -376,46 +455,60 @@ country_event = {
 		}
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
-		custom_tooltip = tooltip_line_divider
-		custom_tooltip = faction_fatigue_leaguists_tt
 		if = {
 			limit = {
-				is_variable_greater_than = {
-					var = new_leaguists_count
-					which = new_candidate_equilibrium
+				NOT = {
+					has_government_attribute = disables_faction_fatigue_mechanics
 				}
 			}
-			display_verbose_election_event_tooltip_if_toggled = {
-				tooltip = leaguists_excess_tooltip
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = faction_fatigue_leaguists_tt
+			if = {
+				limit = {
+					is_variable_greater_than = {
+						var = new_leaguists_count
+						which = new_candidate_equilibrium
+					}
+				}
+				display_verbose_election_event_tooltip_if_toggled = {
+					tooltip = leaguists_excess_tooltip
+				}
+			}
+			custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
+			custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
+			if = {
+				limit = {
+					is_variable_greater_than = {
+						var = faction_fatigue_leaguists
+						value = 0
+					}
+				}
+				faction_fatigue_apply_candidate_penalties = {
+					faction = leaguists
+				}
+			}
+			hidden_effect = {
+				faction_fatigue_change_fatigue_gain_modifier = {
+					var = fatigue_gain_modifier_new_candidate_change
+				}
+				faction_fatigue_change_minimum_faction_fatigue = {
+					var = min_faction_fatigue_new_candidate_change
+				}
+				faction_fatigue_increment_leaguists_new_candidate_victories = yes
 			}
 		}
-		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
-		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
 		if = {
 			limit = {
-				is_variable_greater_than = {
-					var = faction_fatigue_leaguists
-					value = 0
+				NOT = {
+					has_government_attribute = peasant_elections_no_ten_year_plan
 				}
 			}
-			faction_fatigue_apply_candidate_penalties = {
-				faction = leaguists
-			}
-		}
-		hidden_effect = {
-			faction_fatigue_change_fatigue_gain_modifier = {
-				var = fatigue_gain_modifier_new_candidate_change
-			}
-			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_faction_fatigue_new_candidate_change
-			}
-			faction_fatigue_increment_leaguists_new_candidate_victories = yes
-		}
-		custom_tooltip = tooltip_line_divider
-		custom_tooltip = ten_year_plan_event_leaguists_tt
-		hidden_effect = {
-			country_event = {
-				id = peasant_election_events.4
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = ten_year_plan_event_leaguists_tt
+			hidden_effect = {
+				country_event = {
+					id = peasant_election_events.4
+				}
 			}
 		}
 	}
@@ -469,47 +562,102 @@ country_event = {
 		}
 		custom_tooltip = tooltip_line_divider
 		add_protector_little_folk_personality_on_election_effect = yes
-		custom_tooltip = tooltip_line_divider
-		custom_tooltip = faction_fatigue_abolitionists_tt
 		if = {
 			limit = {
-				is_variable_greater_than = {
-					var = new_abolitionists_count
-					which = new_candidate_equilibrium
+				NOT = {
+					has_government_attribute = disables_faction_fatigue_mechanics
 				}
 			}
-			display_verbose_election_event_tooltip_if_toggled = {
-				tooltip = abolitionists_excess_tooltip
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = faction_fatigue_abolitionists_tt
+			if = {
+				limit = {
+					is_variable_greater_than = {
+						var = new_abolitionists_count
+						which = new_candidate_equilibrium
+					}
+				}
+				display_verbose_election_event_tooltip_if_toggled = {
+					tooltip = abolitionists_excess_tooltip
+				}
+			}
+			custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
+			custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
+			if = {
+				limit = {
+					is_variable_greater_than = {
+						var = faction_fatigue_abolitionists
+						value = 0
+					}
+				}
+				faction_fatigue_apply_candidate_penalties = {
+					faction = abolitionists
+				}
+			}
+			hidden_effect = {
+				faction_fatigue_change_fatigue_gain_modifier = {
+					var = fatigue_gain_modifier_new_candidate_change
+				}
+				faction_fatigue_change_minimum_faction_fatigue = {
+					var = min_faction_fatigue_new_candidate_change
+				}
+				faction_fatigue_increment_abolitionists_new_candidate_victories = yes
 			}
 		}
-		custom_tooltip = faction_fatigue_change_fatigue_gain_modifier_tt
-		custom_tooltip = faction_fatigue_change_minimum_faction_fatigue_tt
 		if = {
 			limit = {
-				is_variable_greater_than = {
-					var = faction_fatigue_abolitionists
-					value = 0
+				NOT = {
+					has_government_attribute = peasant_elections_no_ten_year_plan
 				}
 			}
-			faction_fatigue_apply_candidate_penalties = {
-				faction = abolitionists
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = ten_year_plan_event_abolitionists_tt
+			hidden_effect = {
+				country_event = {
+					id = peasant_election_events.5
+				}
 			}
 		}
-		hidden_effect = {
-			faction_fatigue_change_fatigue_gain_modifier = {
-				var = fatigue_gain_modifier_new_candidate_change
+	}
+	option = {
+		name = peasant_election_events.1.foreign_candidate
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = foreign_candidate_election_trigger_tt
+				has_government_attribute = peasant_elections_foreign_candidates
+				any_subject_country = {
+					is_commune_subject_being_integrated = yes
+				}
+				has_saved_event_target = highest_progress_gain_commune
 			}
-			faction_fatigue_change_minimum_faction_fatigue = {
-				var = min_faction_fatigue_new_candidate_change
-			}
-			faction_fatigue_increment_abolitionists_new_candidate_victories = yes
 		}
-		custom_tooltip = tooltip_line_divider
-		custom_tooltip = ten_year_plan_event_abolitionists_tt
-		hidden_effect = {
-			country_event = {
-				id = peasant_election_events.5
+		if = {
+			limit = {
+				has_saved_event_target = highest_progress_gain_commune
 			}
+			set_ruler = foreign_commune_candidate
+			reverse_add_opinion = {
+				who = event_target:highest_progress_gain_commune
+				modifier = elected_our_men
+			}
+			event_target:highest_progress_gain_commune = {
+				add_trust = {
+					who = root
+					value = 5
+				}
+			}
+			custom_tooltip = gain_integration_progress_with_commune_tt
+			event_target:highest_progress_gain_commune = {
+				hidden_effect = {
+					calculate_commune_integration_cost = yes
+					change_commune_integration_progress_as_percentage_of_cost = {
+						percentage = 0.1
+					}
+				}
+			}
+			add_scaled_republican_tradition = -5
+			add_prestige = -10
 		}
 	}
 }
