@@ -32,9 +32,10 @@ romanian_monarchy_government_name = {
 
 romanian_commune_government_name = {
 	trigger = {
-		culture_group = romanian_culture_group
-		government = republic
-		is_peasant_republic = yes
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
 	}
 	rank = {
 		1 = romanian_commune
