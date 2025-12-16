@@ -68,6 +68,7 @@ incite_peasants = {
 		is_within_range_of_the_peasants_revolution = yes
 	}
 	on_accept = {
+		set_country_flag = has_radicalized_peasantry
 		change_variable = {
 			total_incited_peasants = 1
 		}
