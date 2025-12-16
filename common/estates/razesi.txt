@@ -7,7 +7,11 @@ estate_razesi = {
 	}
 	# If true, country will get estate
 	trigger = {
-		has_government_attribute = enables_estate_razesi
+		OR = {
+			has_government_attribute = enables_estate_razesi
+			tag = MOP
+			tag = TUC
+		}
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
