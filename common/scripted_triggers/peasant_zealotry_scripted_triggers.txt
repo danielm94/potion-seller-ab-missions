@@ -1,6 +1,9 @@
 #SCOPE = COUNTRY
 has_radicalized_peasantry_country = {
-	has_country_flag = has_radicalized_peasantry
+	custom_trigger_tooltip = {
+		tooltip = has_radicalized_peasantry_country_tt
+		has_country_flag = has_radicalized_peasantry
+	}
 }
 
 #SCOPE = PROVINCE
