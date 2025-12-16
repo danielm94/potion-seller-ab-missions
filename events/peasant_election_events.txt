@@ -161,6 +161,13 @@ country_event = {
 			tooltip = protector_of_the_little_folk_bonus_tt
 		}
 		add_protector_little_folk_personality_on_election_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = reelection_increases_absolutism
+			}
+			custom_tooltip = AB_EMPTY
+			add_absolutism = 10
+		}
 	}
 	option = {
 		name = peasant_election_events.1.keep_protector
@@ -221,6 +228,13 @@ country_event = {
 			faction_fatigue_change_minimum_faction_fatigue = {
 				var = min_faction_fatigue_reelect_candidate_change
 			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = reelection_increases_absolutism
+			}
+			custom_tooltip = AB_EMPTY
+			add_absolutism = 10
 		}
 	}
 	option = {
