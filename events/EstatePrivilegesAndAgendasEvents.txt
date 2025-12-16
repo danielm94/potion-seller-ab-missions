@@ -1090,6 +1090,22 @@ country_event = {
 			factor = 0
 		}
 	}
+
+	option = {
+		name = estate_privileges_and_agendas_events.7.razesi
+		trigger = {
+			has_estate = estate_razesi
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_razesi } }
+			estate_territory = {
+				estate = estate_razesi
+				territory = 5
+			}
+		}
+		seize_land_estate_effect = { estate = estate_razesi }
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 #Select Grand Vizier from Estate
