@@ -1,7 +1,7 @@
 ﻿l_english:
  mop_win_civil_war_title: "Crush the Boieri"
  mop_win_civil_war_desc: "$TODO$"
- no_coring_penalty_in_perma_claim_provinces: "The insane core creation cost penalty will be §Gnegated§! in provinces we have a §Ypermanent claim§! on until the end of the game.\nCoring will automatically complete when progress reaches §G14.3%§!. This threshold scales dynamically: reducing your Core Creation Cost further will raise the required progress threshold."
+ no_coring_penalty_in_perma_claim_provinces: "§VThe insane §Rcore creation cost penalty§! will be §Gnegated§! in provinces we have a §Ypermanent claim§! on until the §Gend of the game§!.\n\n§YCoring§! will §Gautomatically complete§! when progress reaches §Y14.3%§!. This threshold §Oscales dynamically§!: §Greducing§! your §YCore Creation Cost§! further will §Oraise the required progress§! threshold.§!"
  mop_cossack_relations_title: "Courting the Steppe"
  mop_cossack_relations_desc: "$TODO$"
  improved_relations_with_zaz_tt: "@ZAZ §Y[ZAZ.GetName]§! has an §YImproved Relations§! value of §G+100§! with us."
