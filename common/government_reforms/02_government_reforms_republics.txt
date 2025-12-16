@@ -3630,6 +3630,12 @@ admiralty_reform = {
 	potential = {
 		is_revolutionary = no
 		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
+		}
 	}
 	trigger = {
 		num_of_ports = 1
@@ -3658,6 +3664,12 @@ military_rulership_reform = {
 	potential = {
 		is_revolutionary = no
 		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
+		}
 	}
 	modifiers = {
 		leader_land_shock = 1
@@ -3680,6 +3692,12 @@ dynastic_rulership_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = {
+			has_reform = moldavian_commune_reform
+		}
+		NOT = {
+			has_reform = dacian_commune_reform
+		}
 	}
 	modifiers = {
 		diplomatic_reputation = 2
