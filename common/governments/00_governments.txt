@@ -1566,6 +1566,8 @@ republic = {
 				enforced_autocracy_reform
 				#1.37
 				seven_provinces_reform
+				#PotionSeller
+				sfatul_tarii_supremacy_reform
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {

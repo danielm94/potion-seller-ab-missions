@@ -236,7 +236,6 @@ peasant_tide_reform = {
 }
 
 # Tier 5 #
-
 peasant_bulwark_of_the_faith = {
 	icon = "bulwark_of_the_faith"
 	allow_normal_conversion = yes
@@ -257,3 +256,20 @@ peasant_bulwark_of_the_faith = {
 	}
 }
 
+# Tier 6 #
+sfatul_tarii_supremacy_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	modifiers = {
+		max_absolutism = -20
+		same_culture_advisor_cost = -0.10
+		parliament_backing_chance = 0.10
+		num_of_parliament_issues = 1
+	}
+}
