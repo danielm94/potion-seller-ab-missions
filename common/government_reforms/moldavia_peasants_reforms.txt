@@ -444,3 +444,30 @@ abolitionists_principle_reform = {
 		abolitionists_faction_influence = 0.05
 	}
 }
+
+# Tier 11 #
+
+suffrage_of_the_sword_reform = {
+	icon = "line_infantry"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	modifiers = {
+		army_tradition = 0.5
+		navy_tradition = 0.5
+		global_regiment_recruit_speed = -0.1
+		global_ship_recruit_speed = -0.1
+		republican_tradition = -0.25
+		global_tax_modifier = -0.25
+	}
+	custom_attributes = {
+		winning_wars_gives_rt = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
