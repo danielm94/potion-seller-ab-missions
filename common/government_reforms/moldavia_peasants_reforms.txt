@@ -266,10 +266,42 @@ sfatul_tarii_supremacy_reform = {
 			tag = TUC
 		}
 	}
+	trigger = {
+		NOT = {
+			has_reform = jude_authority_reform
+		}
+	}
 	modifiers = {
 		max_absolutism = -20
-		same_culture_advisor_cost = -0.10
-		parliament_backing_chance = 0.10
+		same_culture_advisor_cost = -0.1
+		parliament_backing_chance = 0.1
 		num_of_parliament_issues = 1
+	}
+}
+
+#Tier 7#
+jude_authority_reform = {
+	icon = "jude_authority_reform"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	trigger = {
+		NOT = {
+			has_reform = sfatul_tarii_supremacy_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = 10
+		republican_tradition = -0.1
+		num_of_parliament_issues = -1
+	}
+	custom_attributes = {
+		can_sell_crownland_to_single_estates = yes
+		can_seize_crownland_of_single_estates = yes
+		seizing_land_no_rebels = yes
 	}
 }

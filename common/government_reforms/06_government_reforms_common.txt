@@ -4526,6 +4526,12 @@ superiority_of_the_state_reform = {
 	icon = russian_queen	
 	potential = {
 		NOT = { has_unlocked_government_reform = { government_reform = divided_aristocracy_reform } }
+		NOT = { 
+			has_reform = moldavian_commune_reform
+		}
+		NOT = { 
+			has_reform = dacian_commune_reform
+		}
 	}
 	trigger = {
 		OR = {

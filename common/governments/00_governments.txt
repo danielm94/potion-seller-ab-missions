@@ -1587,6 +1587,8 @@ republic = {
 				htm_kurin
 				ab_roman_provinces
 				# ]]]
+				#PotionSeller
+				jude_authority_reform
 			}
 		}
 		economical_matters_republic = {

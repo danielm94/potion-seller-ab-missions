@@ -19,4 +19,8 @@ spriteTypes = {
 		name = "government_reform_peasant_tide_reform"
 		texturefile = "gfx/interface/government_reform_icons/peasant_tide_reform.dds"
 	}
+	spriteType = {
+		name = "government_reform_jude_authority_reform"
+		texturefile = "gfx/interface/government_reform_icons/jude_authority_reform.dds"
+	}
 }
