@@ -68,7 +68,6 @@ incite_peasants = {
 		is_within_range_of_the_peasants_revolution = yes
 	}
 	on_accept = {
-		set_country_flag = has_radicalized_peasantry
 		change_variable = {
 			total_incited_peasants = 1
 		}
@@ -90,6 +89,7 @@ incite_peasants = {
 			modifier = incited_peasants_opinion
 		}
 		FROM = {
+			set_country_flag = has_radicalized_peasantry
 			if = {
 				limit = {
 					is_part_of_hre = yes
