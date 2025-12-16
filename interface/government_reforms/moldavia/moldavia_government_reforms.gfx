@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "government_reform_ten_year_terms_reform"
 		texturefile = "gfx/interface/government_reform_icons/ten_year_terms.dds"
 	}
+	spriteType = {
+		name = "government_reform_peasant_tide_reform"
+		texturefile = "gfx/interface/government_reform_icons/peasant_tide_reform.dds"
+	}
 }

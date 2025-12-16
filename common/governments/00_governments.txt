@@ -1490,7 +1490,8 @@ republic = {
 				rhl_imperial_guards
 				# ]]]
 				#PotionSeller
-				wallachia_carpathian_ambush_doctrine_reform 
+				wallachia_carpathian_ambush_doctrine_reform
+				peasant_tide_reform
 			}
 		}
 		republic_and_religion = {

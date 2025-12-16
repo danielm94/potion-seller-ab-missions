@@ -216,3 +216,21 @@ ten_year_terms_reform = {
 		factor = 1
 	}
 }
+
+# Tier 4 #
+peasant_tide_reform = {
+	icon = "peasant_tide_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_peasant_republic = yes
+	}
+	modifiers = {
+		reinforce_speed = 0.4
+		reinforce_cost_modifier = -0.4
+		manpower_recovery_speed = 0.1
+		movement_speed = -0.05
+	}
+	ai = {
+		factor = 5
+	}
+}
