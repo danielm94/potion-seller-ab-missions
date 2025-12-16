@@ -234,3 +234,26 @@ peasant_tide_reform = {
 		factor = 5
 	}
 }
+
+# Tier 5 #
+
+peasant_bulwark_of_the_faith = {
+	icon = "bulwark_of_the_faith"
+	allow_normal_conversion = yes
+	potential = {
+		religion = orthodox
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	modifiers = {
+		global_missionary_strength = 0.02
+		yearly_patriarch_authority = 0.005
+		manpower_in_true_faith_provinces = 0.05
+	}
+	custom_attributes = {
+		improved_defender_of_faith = yes
+	}
+}
+

@@ -1541,6 +1541,8 @@ republic = {
 				# Blood and Iron
 				rhl_atheist_ideas
 				# ]]]
+				#PotionSeller
+				peasant_bulwark_of_the_faith
 			}
 		}
 		parliamentary_vs_presidential = {
