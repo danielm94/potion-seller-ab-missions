@@ -279,7 +279,7 @@ sfatul_tarii_supremacy_reform = {
 	}
 }
 
-#Tier 7#
+# Tier 7 #
 jude_authority_reform = {
 	icon = "jude_authority_reform"
 	allow_normal_conversion = yes
@@ -303,5 +303,60 @@ jude_authority_reform = {
 		can_sell_crownland_to_single_estates = yes
 		can_seize_crownland_of_single_estates = yes
 		seizing_land_no_rebels = yes
+	}
+}
+
+# Tier 8 #
+peasants_enslave_romani_reform = {
+	icon = "state_appropriation_of_the_robie"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = MOP
+			tag = TUC
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = has_not_abolished_slavery_tooltip
+			NOT = {
+				has_country_modifier = the_abolish_slavery_act
+			}
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.15
+		build_cost = -0.1
+		development_cost = -0.1
+		republican_tradition = -0.5
+		stability_cost_modifier = 0.25
+	}
+	custom_attributes = {
+		blocks_humanist_ideas = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = hide_state_appropriation_of_the_robie_tooltip
+				}
+			}
+			if = {
+				limit = {
+					has_idea_group = humanist_ideas
+				}
+				custom_tooltip = state_appropriation_of_the_robie_warning_tooltip
+				hidden_effect = {
+					country_event = {
+						id = AB_wallachia_events.11
+						days = 1
+					}
+				}
+			}
+			set_country_flag = hide_state_appropriation_of_the_robie_tooltip
+		}
+	}
+	removed_effect = {
+		clr_country_flag = hide_state_appropriation_of_the_robie_tooltip
 	}
 }

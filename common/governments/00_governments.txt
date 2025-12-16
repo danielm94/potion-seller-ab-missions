@@ -1622,6 +1622,8 @@ republic = {
 				# Blood and Iron
 				ab_customs_union
 				# ]]]
+				# PotionSeller
+				peasants_enslave_romani_reform
 			}
 		}
 		consolidation_of_power_category = {

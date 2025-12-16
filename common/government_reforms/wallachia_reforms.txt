@@ -409,6 +409,12 @@ state_appropriation_of_the_robie = {
 	allow_normal_conversion = yes
 	potential = {
 		culture_group = romanian_culture_group
+		NOT = {
+			tag = MOP
+		}
+		NOT = {
+			tag = TUC
+		}
 	}
 	trigger = {
 		custom_trigger_tooltip = {
