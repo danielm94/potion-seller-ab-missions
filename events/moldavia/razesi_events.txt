@@ -131,7 +131,7 @@ country_event = {
 		add_estate_influence_modifier = {
 			estate = estate_razesi
 			influence = -10
-			duration = 3650
+			duration = 7300
 			desc = starving_razesi_desc
 		}
 		if = {
@@ -141,7 +141,7 @@ country_event = {
 			event_target:famine_province = {
 				add_province_modifier = {
 					name = razesi_famine
-					duration = 3650
+					duration = 7300
 				}
 			}
 		}
@@ -209,7 +209,7 @@ country_event = {
 		}
 		add_estate_influence_modifier = {
 			influence = 10
-			duration = 3650
+			duration = 7300
 			desc = razesi_tax_evading
 		}
 		if = {
@@ -242,7 +242,7 @@ country_event = {
 			event_target:tax_evading_province = {
 				add_province_modifier = {
 					name = razesi_community_investment
-					duration = 3650
+					duration = 7300
 				}
 			}
 		}
@@ -278,7 +278,7 @@ country_event = {
 		}
 		add_estate_influence_modifier = {
 			influence = -10
-			duration = 3650
+			duration = 7300
 			estate = estate_razesi
 			desc = put_razesi_in_place
 		}
@@ -327,7 +327,7 @@ country_event = {
 		}
 		add_estate_influence_modifier = {
 			influence = -20
-			duration = 3650
+			duration = 7300
 			estate = estate_razesi
 			desc = terrified_razesi
 		}
@@ -355,6 +355,140 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 50
+		}
+	}
+}
+
+#Build Farm Estate Daddy
+country_event = {
+	id = razesi_events.4
+	title = razesi_events.4.t
+	desc = razesi_events.4.d
+	picture = FARMING_WIFE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			can_build = farm_estate
+			NOT = {
+				has_construction = any
+			}
+		}
+		treasury = 250
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					can_build = farm_estate
+					NOT = {
+						has_construction = any
+					}
+				}
+				save_event_target_as = farm_estate_target
+			}
+		}
+	}
+	option = {
+		name = razesi_events.4.build_farm_estate
+		trigger = {
+			NOT = {
+				ruler_has_personality = architectural_visionary_personality
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = farm_estate_target
+			}
+			event_target:farm_estate_target = {
+				add_building_construction = {
+					building = farm_estate
+					cost = 0.5
+					speed = 1
+				}
+			}
+		}
+		add_prestige = -10
+		add_estate_loyalty = {
+			estate = estate_razesi
+			loyalty = 5
+		}
+		add_estate_influence_modifier = {
+			influence = 10
+			estate = estate_razesi
+			duration = 7300
+			desc = granted_razesi_funding
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = razesi_events.4.architectural_visionary_personality
+		highlight = yes
+		trigger = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+		event_target:farm_estate_target = {
+			add_building_construction = {
+				building = farm_estate
+				cost = 0.25
+				speed = 0.5
+			}
+		}
+		add_innovativeness_small_effect = yes
+		add_estate_loyalty = {
+			estate = estate_razesi
+			loyalty = 5
+		}
+		add_estate_influence_modifier = {
+			influence = 10
+			estate = estate_razesi
+			duration = 7300
+			desc = granted_razesi_funding
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = razesi_events.4.dont_build
+		add_estate_loyalty = {
+			estate = estate_razesi
+			loyalty = -20
+		}
+		add_estate_influence_modifier = {
+			influence = -10
+			estate = estate_razesi
+			duration = 7300
+			desc = denied_funding_razesi_desc
+		}
+		add_legitimacy_equivalent = {
+			amount = 10
+			republican_tradition = 5
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = -10
+			}
 		}
 	}
 }
