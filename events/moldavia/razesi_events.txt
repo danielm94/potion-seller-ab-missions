@@ -42,3 +42,125 @@ country_event = {
 		name = monopoly_privileges.1.b
 	}
 }
+
+#Crop Failure
+country_event = {
+	id = razesi_events.2
+	title = razesi_events.2.t
+	desc = razesi_events.2.d
+	picture = FAMINE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_estate = estate_razesi
+		any_owned_province = {
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = wine
+				has_terrain = farmlands
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = wine
+						has_terrain = farmlands
+					}
+				}
+				save_event_target_as = famine_province
+			}
+		}
+	}
+	option = {
+		name = razesi_events.2.help
+		add_years_of_income = -0.2
+		add_estate_loyalty = {
+			estate = estate_razesi
+			loyalty = 10
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = 10
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = razesi_events.2.well_connected_personality
+		highlight = yes
+		trigger = {
+			ruler_has_personality = well_connected_personality
+		}
+		add_years_of_income = -0.1
+		add_estate_loyalty = {
+			estate = estate_razesi
+			loyalty = 10
+		}
+		add_mercantilism = 1
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = 10
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = razesi_events.2.dont_help
+		add_estate_loyalty = {
+			estate = estate_razesi
+			loyalty = -15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_razesi
+			influence = -10
+			duration = 3650
+			desc = starving_razesi_desc
+		}
+		if = {
+			limit = {
+				has_saved_event_target = famine_province
+			}
+			event_target:famine_province = {
+				add_province_modifier = {
+					name = razesi_famine
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = -10
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

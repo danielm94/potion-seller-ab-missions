@@ -1,0 +1,6 @@
+razesi_famine = {
+	local_monthly_devastation = 0.1
+	local_production_efficiency = -0.5
+	local_tax_modifier = -0.5
+	local_manpower_modifier = -1
+}
