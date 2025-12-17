@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "RAZESI_ESTATE_UPSET_eventPicture"
+		texturefile = "gfx/interface/events/moldavia/RAZESI_ESTATE_UPSET_eventPicture.dds"
+	}
+}
