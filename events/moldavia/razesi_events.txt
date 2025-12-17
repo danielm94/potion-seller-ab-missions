@@ -542,6 +542,9 @@ country_event = {
 				value = 10
 			}
 		}
+		ai_chance = {
+			factor = 20
+		}
 	}
 	option = {
 		name = razesi_events.6.greedy_personality
@@ -570,6 +573,9 @@ country_event = {
 				value = -20
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 	option = {
 		name = razesi_events.5.razesi_keeps
@@ -592,6 +598,120 @@ country_event = {
 				mechanic_type = boieri_vs_razesi_mechanic
 				power_type = boieri_vs_razesi_power
 				value = -10
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Deteriorating Relations With Razesi
+# Disloyal Razesi
+country_event = {
+	id = razesi_events.6
+	title = razesi_events.6.t
+	desc = razesi_events.6.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_estate = estate_razesi
+		NOT = {
+			estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 30
+			}
+		}
+		any_owned_province = {
+			is_capital = no
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = wine
+				has_terrain = farmlands
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				razesi_revolt_count = 0
+			}
+			while = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = razesi_revolt_count
+							value = 4
+						}
+					}
+					any_owned_province = {
+						is_capital = no
+						NOT = {
+							has_province_flag = razesi_revolt_active
+						}
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+							has_terrain = farmlands
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_capital = no
+						NOT = {
+							has_province_flag = razesi_revolt_active
+						}
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+							has_terrain = farmlands
+						}
+					}
+					set_province_flag = razesi_revolt_active
+				}
+				change_variable = {
+					which = razesi_revolt_count
+					value = 1
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = razesi_events.6.a
+		add_stability = -1
+		every_owned_province = {
+			limit = {
+				has_province_flag = razesi_revolt_active
+			}
+			clr_province_flag = razesi_revolt_active
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = -20
+			}
+		}
+		else_if = {
+			limit = {
+				has_government_mechanic = peasant_zealotry
+			}
+			change_peasant_zeal = {
+				value = -20
 			}
 		}
 	}
