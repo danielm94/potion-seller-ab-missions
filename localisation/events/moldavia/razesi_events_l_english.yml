@@ -45,3 +45,7 @@
  razesi_events.8.t: "Strong [get_razesi_name]"
  razesi_events.8.d: "While many rulers can rely on the support of the [get_razesi_name], few have as strong supporters as we do. A long tradition of close cooperation and loyalty between us and the [get_razesi_name] has resulted in a situation where the free peasantry thinks of itself as a part of the state administration rather than an oppressed class. Throughout our state, the [get_razesi_name] are spreading word of the justice and strength of our [Root.Monarch.GetTitle]."
  razesi_events.8.a: "Excellent."
+ razesi_events.9.t: "[get_razesi_name] Contentment"
+ razesi_events.9.d: "It is a rare year when the grievances of the [get_razesi_name] fall silent. Thanks to a combination of fair weather, light-handed administration, and stable markets, the free peasantry has found little cause for complaint. With their bellies full and their rights secure, the elders have retreated from court politics to tend to their own affairs, trusting the state to govern in their best interests."
+ razesi_events.9.a: "A welcome silence."
+ razesi_complacency_desc: "Political Complacency: §Y$VAL$%§!"
