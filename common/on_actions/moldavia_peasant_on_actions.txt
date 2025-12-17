@@ -972,5 +972,6 @@ on_five_year_pulse_2 = {
 		100 = razesi_events.2
 		100 = razesi_events.3
 		100 = razesi_events.4
+		100 = razesi_events.5
 	}
 }
