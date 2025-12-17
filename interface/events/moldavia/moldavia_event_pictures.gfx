@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "RAZESI_ESTATE_UPSET_eventPicture"
 		texturefile = "gfx/interface/events/moldavia/RAZESI_ESTATE_UPSET_eventPicture.dds"
 	}
+	spriteType = {
+		name = "RAZESI_ESTATE_eventPicture"
+		texturefile = "gfx/interface/events/moldavia/RAZESI_ESTATE_eventPicture.dds"
+	}
 }

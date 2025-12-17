@@ -852,3 +852,79 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = razesi_events.8
+	title = razesi_events.8.t
+	desc = razesi_events.8.d
+	picture = RAZESI_ESTATE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_estate = estate_razesi
+		estate_loyalty = {
+			estate = estate_razesi
+			loyalty = 70
+		}
+		estate_influence = {
+			estate = estate_razesi
+			influence = 70
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						stability = 3
+					}
+				}
+				random_list = {
+					65 = {
+						set_country_flag = razesi_political_support
+					}
+					35 = {
+						set_country_flag = razesi_local_admin
+					}
+				}
+			}
+			if = {
+				limit = {
+					stability = 3
+				}
+				set_country_flag = razesi_political_support
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = razesi_events.8.a
+		trigger_switch = {
+			on_trigger = has_country_flag
+			razesi_political_support = {
+				add_legitimacy_equivalent = {
+					amount = 15
+					republican_tradition = 10
+				}
+			}
+			razesi_local_admin = {
+				add_stability_or_adm_power = yes
+			}
+		}
+		if = {
+			limit = {
+				has_government_mechanic = boieri_vs_razesi_mechanic
+			}
+			add_government_power = {
+				mechanic_type = boieri_vs_razesi_mechanic
+				power_type = boieri_vs_razesi_power
+				value = 10
+			}
+		}
+	}
+	after = {
+		clr_country_flag = razesi_political_support
+		clr_country_flag = razesi_local_admin
+	}
+}
