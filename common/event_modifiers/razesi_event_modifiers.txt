@@ -4,3 +4,9 @@ razesi_famine = {
 	local_tax_modifier = -0.5
 	local_manpower_modifier = -1
 }
+
+razesi_community_investment = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_tax_modifier = -0.25
+}

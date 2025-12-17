@@ -970,5 +970,6 @@ on_five_year_pulse_2 = {
 	random_events = {
 		#Razesi
 		100 = razesi_events.2
+		100 = razesi_events.3
 	}
 }
