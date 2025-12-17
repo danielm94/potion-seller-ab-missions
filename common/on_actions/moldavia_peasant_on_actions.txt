@@ -977,5 +977,6 @@ on_five_year_pulse_2 = {
 		400 = razesi_events.7 #Influential
 		100 = razesi_events.8 #Loyal
 		100 = razesi_events.9
+		100 = razesi_events.10
 	}
 }

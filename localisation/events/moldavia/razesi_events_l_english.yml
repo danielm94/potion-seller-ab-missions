@@ -49,3 +49,8 @@
  razesi_events.9.d: "It is a rare year when the grievances of the [get_razesi_name] fall silent. Thanks to a combination of fair weather, light-handed administration, and stable markets, the free peasantry has found little cause for complaint. With their bellies full and their rights secure, the elders have retreated from court politics to tend to their own affairs, trusting the state to govern in their best interests."
  razesi_events.9.a: "A welcome silence."
  razesi_complacency_desc: "Political Complacency: §Y$VAL$%§!"
+ razesi_events.10.t: "The Agrarian Prodigy"
+ razesi_events.10.d: "A legendary figure has emerged from the [get_razesi_name] communities, a man whose understanding of the soil borders on the supernatural. Local folklore claims he could coax a golden harvest from a cobblestone street. In the provinces he has managed, yields have reportedly surged by fifty percent in a single season. He stands before the court offering to replicate these miracles on a national scale, provided his substantial fee is met."
+ razesi_events.10.hire_him: "His talents will serve the state well."
+ razesi_events.10.negotiate: "Surely the honor of serving is payment enough?"
+ razesi_events.10.dont_hire_him: "Go fry an egg, Farmer John."
