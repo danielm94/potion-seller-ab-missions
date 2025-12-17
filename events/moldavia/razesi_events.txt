@@ -282,7 +282,6 @@ country_event = {
 			estate = estate_razesi
 			desc = put_razesi_in_place
 		}
-		
 		if = {
 			limit = {
 				has_saved_event_target = tax_evading_province
