@@ -779,7 +779,12 @@ integrate_commune = {
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
-		calculate_overlord_dip_investment_integration_progress_gain = yes
+		FROM = {
+			ROOT = {
+				calculate_overlord_dip_investment_integration_progress_gain = yes
+			}
+		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -799,7 +804,16 @@ cancel_commune_integration = {
 		always = yes
 	}
 	on_accept = {
-		disable_commune_integration_overlord = yes
+		if = {
+			limit = {
+				NOT = {
+					any_subject_country = {
+						is_commune_subject_being_integrated = yes
+					}
+				}
+			}
+			disable_commune_integration_overlord = yes
+		}
 		FROM = {
 			disable_commune_integration_subject = yes
 			initialize_commune_integration_progress = yes
@@ -810,6 +824,7 @@ cancel_commune_integration = {
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -851,7 +866,12 @@ invest_adm_commune_integration = {
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
-		calculate_overlord_adm_investment_integration_progress_gain = yes
+		FROM = {
+			ROOT = {
+				calculate_overlord_adm_investment_integration_progress_gain = yes
+			}
+		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -879,6 +899,7 @@ cancel_invest_adm_commune_integration = {
 			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -921,7 +942,12 @@ invest_dip_commune_integration = {
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
-		calculate_overlord_dip_investment_integration_progress_gain = yes
+		FROM = {
+			ROOT = {
+				calculate_overlord_dip_investment_integration_progress_gain = yes
+			}
+		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -949,6 +975,7 @@ cancel_invest_dip_commune_integration = {
 			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -990,7 +1017,12 @@ invest_mil_commune_integration = {
 		FROM = {
 			calculate_monthly_commune_integration_progress = yes
 		}
-		calculate_overlord_mil_investment_integration_progress_gain = yes
+		FROM = {
+			ROOT = {
+				calculate_overlord_mil_investment_integration_progress_gain = yes
+			}
+		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -1018,6 +1050,7 @@ cancel_invest_mil_commune_integration = {
 			clear_commune_integration_flags = yes
 			calculate_monthly_commune_integration_progress = yes
 		}
+		map_all_integrating_commune_subjects_to_slots = yes
 	}
 	ai_will_do = {
 		always = no
@@ -1244,6 +1277,8 @@ convert_subject_to_commune = {
 			initialize_integration_progress_percentage_variable = yes
 			enable_commune_integration_subject = yes
 			calculate_monthly_commune_integration_progress = yes
+			set_country_flag = investing_dip_in_commune
+			map_all_integrating_commune_subjects_to_slots = yes
 		}
 	}
 	ai_will_do = {

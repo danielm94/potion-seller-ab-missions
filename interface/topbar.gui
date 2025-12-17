@@ -609,8 +609,14 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_adm"
 		}
-
-
+		iconType = {
+			name ="icon_ADM_integrating"
+			spriteType = "GFX_admin_glow"
+			position = { x= 498 y = 49 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_adm"
+			scripted = yes
+		}
 		instantTextBoxType = {
 			name = "text_DIP"
 			position = { x = 581 y = 52 }
@@ -629,7 +635,13 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_dip"
 		}
-
+		iconType = {
+			name ="icon_DIP_integrating"
+			spriteType = "GFX_dip_glow"
+			position = { x= 558 y = 49 }
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
 		instantTextBoxType = {
 			name = "text_MIL"
 			position = { x = 639 y = 52 }
@@ -648,7 +660,13 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_mil"
 		}
-
+		iconType = {
+			name ="icon_MIL_integrating"
+			spriteType ="GFX_mil_glow"
+			position = { x= 616 y = 49 }
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
 		iconType = {
 			name = "button_base"
 			spriteType ="GFX_age_frame_addon"

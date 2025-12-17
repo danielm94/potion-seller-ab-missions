@@ -549,6 +549,12 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 				}
 			}
 		}
+		PREV = {
+			set_variable = {
+				which = commune_adm_investment_monthly_cost
+				which = PREV
+			}
+		}
 		if = {
 			limit = {
 				check_variable = {
@@ -657,6 +663,12 @@ calculate_overlord_dip_investment_integration_progress_gain = {
 				}
 			}
 		}
+		PREV = {
+			set_variable = {
+				which = commune_dip_investment_monthly_cost
+				which = PREV
+			}
+		}
 		if = {
 			limit = {
 				check_variable = {
@@ -754,6 +766,12 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 			set_variable = {
 				which = commune_mil_investment_monthly_cost
 				which = mil_power_var
+			}
+		}
+		PREV = {
+			set_variable = {
+				which = commune_mil_investment_monthly_cost
+				which = PREV
 			}
 		}
 		if = {
@@ -4908,4 +4926,473 @@ call_nearest_commune_subject_effect = {
 		}
 	}
 	clear_global_event_target = closest_commune_subject
+}
+
+#SCOPE = COUNTRY
+clear_all_integrating_commune_type_slots = {
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_1
+		}
+		clear_global_event_target = $type$_integration_1
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_2
+		}
+		clear_global_event_target = $type$_integration_2
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_3
+		}
+		clear_global_event_target = $type$_integration_3
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_4
+		}
+		clear_global_event_target = $type$_integration_4
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_5
+		}
+		clear_global_event_target = $type$_integration_5
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_6
+		}
+		clear_global_event_target = $type$_integration_6
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_7
+		}
+		clear_global_event_target = $type$_integration_7
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_8
+		}
+		clear_global_event_target = $type$_integration_8
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_9
+		}
+		clear_global_event_target = $type$_integration_9
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_10
+		}
+		clear_global_event_target = $type$_integration_10
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_11
+		}
+		clear_global_event_target = $type$_integration_11
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_12
+		}
+		clear_global_event_target = $type$_integration_12
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_13
+		}
+		clear_global_event_target = $type$_integration_13
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_14
+		}
+		clear_global_event_target = $type$_integration_14
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_15
+		}
+		clear_global_event_target = $type$_integration_15
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_16
+		}
+		clear_global_event_target = $type$_integration_16
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_17
+		}
+		clear_global_event_target = $type$_integration_17
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_18
+		}
+		clear_global_event_target = $type$_integration_18
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_19
+		}
+		clear_global_event_target = $type$_integration_19
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_20
+		}
+		clear_global_event_target = $type$_integration_20
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_21
+		}
+		clear_global_event_target = $type$_integration_21
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_22
+		}
+		clear_global_event_target = $type$_integration_22
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_23
+		}
+		clear_global_event_target = $type$_integration_23
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_24
+		}
+		clear_global_event_target = $type$_integration_24
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_25
+		}
+		clear_global_event_target = $type$_integration_25
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_26
+		}
+		clear_global_event_target = $type$_integration_26
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_27
+		}
+		clear_global_event_target = $type$_integration_27
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_28
+		}
+		clear_global_event_target = $type$_integration_28
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_29
+		}
+		clear_global_event_target = $type$_integration_29
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = $type$_integration_30
+		}
+		clear_global_event_target = $type$_integration_30
+	}
+}
+
+assign_integrating_commune_type_slot = {
+	if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_1
+			}
+		}
+		save_global_event_target_as = $type$_integration_1
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_2
+			}
+		}
+		save_global_event_target_as = $type$_integration_2
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_3
+			}
+		}
+		save_global_event_target_as = $type$_integration_3
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_4
+			}
+		}
+		save_global_event_target_as = $type$_integration_4
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_5
+			}
+		}
+		save_global_event_target_as = $type$_integration_5
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_6
+			}
+		}
+		save_global_event_target_as = $type$_integration_6
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_7
+			}
+		}
+		save_global_event_target_as = $type$_integration_7
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_8
+			}
+		}
+		save_global_event_target_as = $type$_integration_8
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_9
+			}
+		}
+		save_global_event_target_as = $type$_integration_9
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_10
+			}
+		}
+		save_global_event_target_as = $type$_integration_10
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_11
+			}
+		}
+		save_global_event_target_as = $type$_integration_11
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_12
+			}
+		}
+		save_global_event_target_as = $type$_integration_12
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_13
+			}
+		}
+		save_global_event_target_as = $type$_integration_13
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_14
+			}
+		}
+		save_global_event_target_as = $type$_integration_14
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_15
+			}
+		}
+		save_global_event_target_as = $type$_integration_15
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_16
+			}
+		}
+		save_global_event_target_as = $type$_integration_16
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_17
+			}
+		}
+		save_global_event_target_as = $type$_integration_17
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_18
+			}
+		}
+		save_global_event_target_as = $type$_integration_18
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_19
+			}
+		}
+		save_global_event_target_as = $type$_integration_19
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_20
+			}
+		}
+		save_global_event_target_as = $type$_integration_20
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_21
+			}
+		}
+		save_global_event_target_as = $type$_integration_21
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_22
+			}
+		}
+		save_global_event_target_as = $type$_integration_22
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_23
+			}
+		}
+		save_global_event_target_as = $type$_integration_23
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_24
+			}
+		}
+		save_global_event_target_as = $type$_integration_24
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_25
+			}
+		}
+		save_global_event_target_as = $type$_integration_25
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_26
+			}
+		}
+		save_global_event_target_as = $type$_integration_26
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_27
+			}
+		}
+		save_global_event_target_as = $type$_integration_27
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_28
+			}
+		}
+		save_global_event_target_as = $type$_integration_28
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_29
+			}
+		}
+		save_global_event_target_as = $type$_integration_29
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_saved_global_event_target = $type$_integration_30
+			}
+		}
+		save_global_event_target_as = $type$_integration_30
+	}
+}
+
+#SCOPE = COUNTRY
+map_all_integrating_commune_subjects_to_slots = {
+	clear_all_integrating_commune_type_slots = {
+		type = adm
+	}
+	clear_all_integrating_commune_type_slots = {
+		type = dip
+	}
+	clear_all_integrating_commune_type_slots = {
+		type = mil
+	}
+	every_subject_country = {
+		limit = {
+			is_commune_subject_being_integrated = yes
+		}
+		if = {
+			limit = {
+				is_investing_adm_power_in_commune = yes
+			}
+			assign_integrating_commune_type_slot = {
+				type = adm
+			}
+		}
+		else_if = {
+			limit = {
+				is_investing_dip_power_in_commune = yes
+			}
+			assign_integrating_commune_type_slot = {
+				type = dip
+			}
+		}
+		else_if = {
+			limit = {
+				is_investing_mil_power_in_commune = yes
+			}
+			assign_integrating_commune_type_slot = {
+				type = mil
+			}
+		}
+	}
 }

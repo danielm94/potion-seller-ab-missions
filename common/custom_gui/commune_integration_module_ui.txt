@@ -4,10 +4,42 @@ custom_icon = {
 		is_commune_subject_being_integrated = yes
 	}
 }
+
 custom_text_box = {
 	name = commune_integration_amount
 	potential = {
 		is_commune_subject_being_integrated = yes
 	}
 	tooltip = commune_integration_amount_tt
+}
+
+custom_icon = {
+	name = icon_ADM_integrating
+	tooltip = icon_adm_integrating_tt
+	potential = {
+		any_subject_country = {
+			is_commune_subject_being_integrated = yes
+			is_investing_adm_power_in_commune = yes
+		}
+	}
+}
+custom_icon = {
+	name = icon_DIP_integrating
+	tooltip = icon_dip_integrating_tt
+	potential = {
+		any_subject_country = {
+			is_commune_subject_being_integrated = yes
+			is_investing_dip_power_in_commune = yes
+		}
+	}
+}
+custom_icon = {
+	name = icon_MIL_integrating
+	tooltip = icon_mil_integrating_tt
+	potential = {
+		any_subject_country = {
+			is_commune_subject_being_integrated = yes
+			is_investing_mil_power_in_commune = yes
+		}
+	}
 }

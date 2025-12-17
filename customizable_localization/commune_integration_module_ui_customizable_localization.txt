@@ -1,0 +1,1715 @@
+#ADM
+
+defined_text = {
+	name = adm_integration_1_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_1_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_1
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_1
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_2_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_2_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_2
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_2
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_3_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_3_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_3
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_3
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_4_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_4_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_4
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_4
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_5_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_5_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_5
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_5
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_6_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_6_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_6
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_6
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_7_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_7_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_7
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_7
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_8_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_8_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_8
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_8
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_9_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_9_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_9
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_9
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_10_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_10_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_10
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_10
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_11_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_11_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_11
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_11
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_12_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_12_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_12
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_12
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_13_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_13_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_13
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_13
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_14_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_14_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_14
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_14
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_15_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_15_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_15
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_15
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_16_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_16_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_16
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_16
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_17_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_17_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_17
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_17
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_18_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_18_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_18
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_18
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_19_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_19_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_19
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_19
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_20_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_20_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_20
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_20
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_21_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_21_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_21
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_21
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_22_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_22_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_22
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_22
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_23_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_23_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_23
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_23
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_24_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_24_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_24
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_24
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_25_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_25_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_25
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_25
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_26_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_26_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_26
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_26
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_27_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_27_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_27
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_27
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_28_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_28_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_28
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_28
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_29_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_29_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_29
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_29
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = adm_integration_30_loc
+	random = no
+	text = {
+		localisation_key = adm_integration_30_loc_tt
+		trigger = {
+			has_saved_global_event_target = adm_integration_30
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = adm_integration_30
+			}
+		}
+	}
+}
+
+#DIP
+
+defined_text = {
+	name = dip_integration_1_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_1_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_1
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_1
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_2_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_2_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_2
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_2
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_3_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_3_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_3
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_3
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_4_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_4_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_4
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_4
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_5_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_5_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_5
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_5
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_6_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_6_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_6
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_6
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_7_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_7_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_7
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_7
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_8_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_8_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_8
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_8
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_9_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_9_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_9
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_9
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_10_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_10_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_10
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_10
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_11_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_11_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_11
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_11
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_12_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_12_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_12
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_12
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_13_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_13_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_13
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_13
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_14_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_14_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_14
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_14
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_15_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_15_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_15
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_15
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_16_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_16_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_16
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_16
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_17_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_17_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_17
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_17
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_18_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_18_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_18
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_18
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_19_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_19_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_19
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_19
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_20_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_20_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_20
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_20
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_21_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_21_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_21
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_21
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_22_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_22_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_22
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_22
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_23_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_23_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_23
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_23
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_24_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_24_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_24
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_24
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_25_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_25_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_25
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_25
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_26_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_26_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_26
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_26
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_27_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_27_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_27
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_27
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_28_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_28_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_28
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_28
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_29_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_29_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_29
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_29
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = dip_integration_30_loc
+	random = no
+	text = {
+		localisation_key = dip_integration_30_loc_tt
+		trigger = {
+			has_saved_global_event_target = dip_integration_30
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = dip_integration_30
+			}
+		}
+	}
+}
+
+#MIL
+
+defined_text = {
+	name = mil_integration_1_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_1_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_1
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_1
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_2_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_2_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_2
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_2
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_3_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_3_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_3
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_3
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_4_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_4_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_4
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_4
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_5_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_5_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_5
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_5
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_6_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_6_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_6
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_6
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_7_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_7_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_7
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_7
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_8_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_8_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_8
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_8
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_9_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_9_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_9
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_9
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_10_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_10_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_10
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_10
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_11_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_11_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_11
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_11
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_12_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_12_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_12
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_12
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_13_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_13_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_13
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_13
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_14_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_14_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_14
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_14
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_15_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_15_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_15
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_15
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_16_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_16_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_16
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_16
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_17_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_17_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_17
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_17
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_18_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_18_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_18
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_18
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_19_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_19_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_19
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_19
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_20_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_20_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_20
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_20
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_21_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_21_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_21
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_21
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_22_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_22_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_22
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_22
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_23_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_23_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_23
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_23
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_24_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_24_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_24
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_24
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_25_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_25_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_25
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_25
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_26_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_26_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_26
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_26
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_27_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_27_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_27
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_27
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_28_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_28_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_28
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_28
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_29_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_29_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_29
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_29
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = mil_integration_30_loc
+	random = no
+	text = {
+		localisation_key = mil_integration_30_loc_tt
+		trigger = {
+			has_saved_global_event_target = mil_integration_30
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			NOT = {
+				has_saved_global_event_target = mil_integration_30
+			}
+		}
+	}
+}

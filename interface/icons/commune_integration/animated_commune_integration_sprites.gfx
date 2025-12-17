@@ -1,0 +1,26 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_admin_glow"
+		texturefile = "gfx/interface/icons/commune_integration/adm_animated.dds"
+		noOfFrames = 90
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_dip_glow"
+		texturefile = "gfx/interface/icons/commune_integration/dip_animated.dds"
+		noOfFrames = 90
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_mil_glow"
+		texturefile = "gfx/interface/icons/commune_integration/mil_animated.dds"
+		noOfFrames = 90
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+	}
+}

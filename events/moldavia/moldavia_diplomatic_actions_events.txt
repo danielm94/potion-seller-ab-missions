@@ -123,6 +123,7 @@ country_event = {
 				}
 			}
 			calculate_total_development_of_commune_subjects = yes
+			map_all_integrating_commune_subjects_to_slots = yes
 		}
 	}
 	option = {
