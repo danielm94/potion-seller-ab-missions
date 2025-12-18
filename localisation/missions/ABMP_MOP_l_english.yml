@@ -682,4 +682,4 @@
  mop_transylvanian_negate_ccr_penalties_tt: "The §Oinsane coring cost penalty§! will be negated in §YTransylvanian§! provinces that we have a §Ypermanent claim§! on.\n§g(Coring will complete at §G14.3%§! progress, or later if you have modifiers which decrease the Core Creation Cost.)§!"
  every_transylvanian_subject_will_become_orthodox_tt: "Every subject that owns provinces in §YTransylvania§! will become §YOrthodox§!."
  mop_dobruja_negate_ccr_penalties_tt: "The §Oinsane coring cost penalty§! will be negated in §Y[4706.GetName]§! if we have a §Ypermanent claim§! on it.\n§g(Coring will complete at §G14.3%§! progress, or later if you have modifiers which decrease the Core Creation Cost.)§!"
- all_carpathian_subjects_will_become_panonic_tt: "All of our §YCarpathian§! culture subjects will adopt the §YPanonic§! culture. Their country will slowly become §YRomanianized§!."
+ all_carpathian_subjects_will_become_panonic_tt: "All of our §YCarpathian§! culture subjects will adopt the §YPanonic§! culture. Their country will slowly become §YRomanianized§!. §VThis effect will continue once we integrate them.§!"

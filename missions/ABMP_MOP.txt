@@ -3685,19 +3685,8 @@ ab_mop_2 = {
 						area = moravia_area
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				AND = {
-					owned_by = ROOT
-					OR = {
-						area = slovakia_area
-						area = eastslovakia_area
-					}
-					OR = {
-						has_fort_building_trigger = no
-						NOT = {
-							num_of_times_improved = 5
+						country_or_commune_subject_or_subject_of_commune_subject_holds = {
+							who = root
 						}
 					}
 				}
@@ -3713,71 +3702,77 @@ ab_mop_2 = {
 			else = {
 				transdanubia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 				slovakia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 				moravia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				any_owned_province = {
-					area = slovakia_area
-					has_fort_building_trigger = yes
-					num_of_times_improved = 5
-				}
-				any_owned_province = {
-					area = eastslovakia_area
-					has_fort_building_trigger = yes
-					num_of_times_improved = 5
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 			}
 		}
 		effect = {
-			set_country_flag = wal_buffed_carpathian_forts
-			custom_tooltip = wal_buffed_carpathian_forts_tooltip
-			tooltip = {
-				custom_tooltip = upgraded_fort_tooltip
-				hidden_effect = {
-					upgrade_fort_building = yes
-				}
-				add_province_modifier = {
-					name = wallachia_carpathian_defenses
-					duration = -1
-				}
-				custom_tooltip = this_will_apply_to_all_new_forts_constructed_tooltip
-				custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
+				first_limit = "transdanubia_area = {
+									type = all
+									country_or_non_sovereign_subject_holds = root
+								}
+								slovakia_area = {
+									type = all
+									country_or_non_sovereign_subject_holds = root
+								}
+								moravia_area = {
+									type = all
+									country_or_non_sovereign_subject_holds = root
+								}"
+				first_effect = "custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
+								set_country_flag = panonic_spread_extra
+								add_adm_power = 100"
+				second_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
+				second_limit = "transdanubia_area = {
+									type = all
+									owner = {
+										is_commune_subject = yes
+										is_subject_of = root
+									}
+								}
+								slovakia_area = {
+									type = all
+									owner = {
+										is_commune_subject = yes
+										is_subject_of = root
+									}
+								}
+								moravia_area = {
+									type = all
+									owner = {
+										is_commune_subject = yes
+										is_subject_of = root
+									}
+								}"
+				second_effect = "mop_seal_the_carpathians_install_peasant_government_reward_effect = yes"
 			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						region = carpathia_region
-						has_fort_building_trigger = yes
-					}
-					upgrade_fort_building = yes
-					add_province_modifier = {
-						name = wallachia_carpathian_defenses
-						duration = -1
-					}
-				}
-			}
-			custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
-			set_country_flag = panonic_spread_extra
 			custom_tooltip = AB_EMPTY
 			define_advisor = {
-				type = fortification_expert
+				type = planner
 				skill = 2
 				cost_multiplier = 0.5
 				culture = transylvanian
-				religion = root
 			}
 			custom_tooltip = AB_EMPTY
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
-			}
+			custom_tooltip = buffed_bran_castle_reward_tooltip
+			set_country_flag = upgraded_bran_castle
+			custom_tooltip = AB_EMPTY
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10

@@ -364,5 +364,48 @@ mop_hungary_install_peasant_government_reward_effect = {
 				set_country_flag = wal_romanianization_of_hungary
 			}
 		}
+		set_country_flag = wal_romanianization_of_hungary
+	}
+}
+
+mop_seal_the_carpathians_install_peasant_government_reward_effect = {
+	custom_tooltip = subjects_will_romanianize_deeper_tt
+	add_dip_power = 100
+	hidden_effect = {
+		every_subject_country = {
+			limit = {
+				any_owned_province = {
+					region = carpathia_region
+				}
+				OR = {
+					NOT = {
+						has_country_flag = wal_romanianization_of_hungary
+					}
+					NOT = {
+						has_country_flag = panonic_spread_extra
+					}
+				}
+			}
+			set_country_flag = wal_romanianization_of_hungary
+			set_country_flag = panonic_spread_extra
+			every_subject_country = {
+				limit = {
+					any_owned_province = {
+						region = carpathia_region
+					}
+					OR = {
+						NOT = {
+							has_country_flag = wal_romanianization_of_hungary
+						}
+						NOT = {
+							has_country_flag = panonic_spread_extra
+						}
+					}
+				}
+				set_country_flag = wal_romanianization_of_hungary
+				set_country_flag = panonic_spread_extra
+			}
+		}
+		set_country_flag = panonic_spread_extra
 	}
 }
