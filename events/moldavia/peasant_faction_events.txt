@@ -1,0 +1,13 @@
+namespace = peasant_faction_events
+
+country_event = {
+	id = peasant_faction_events.0
+	title = peasant_faction_events.0.t
+	desc = peasant_faction_events.0.d
+	picture = dev
+	is_triggered_only = yes
+	option = {
+		name = peasant_faction_events.0.a
+		
+	}
+}
