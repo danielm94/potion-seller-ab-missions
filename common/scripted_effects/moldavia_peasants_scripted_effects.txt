@@ -80,53 +80,6 @@ mop_cossack_relations_conquered_reward_effect = {
 	}
 }
 
-mop_wallachia_already_purged_effect = {
-	custom_tooltip = mop_wallachia_already_purged_tt
-	tooltip = {
-		161 = {
-			add_unrest = -20
-			add_nationalism = -20
-		}
-	}
-	hidden_effect = {
-		every_owned_province = {
-			limit = {
-				area = wallachia_area
-			}
-			add_unrest = -20
-			add_nationalism = -20
-		}
-	}
-}
-
-#SCOPE = COUNTRY
-mop_purge_ten_houses_effect = {
-	custom_tooltip = mop_purge_ten_houses_tt
-	tooltip = {
-		161 = {
-			add_devastation = 40
-			loot_province = yes
-			add_province_modifier = {
-				name = mop_purging_the_ten_houses
-				duration = 3650
-			}
-		}
-	}
-	hidden_effect = {
-		every_owned_province = {
-			limit = {
-				area = wallachia_area
-			}
-			add_devastation = 40
-			loot_province = yes
-			add_province_modifier = {
-				name = mop_purging_the_ten_houses
-				duration = 3650
-			}
-		}
-	}
-}
-
 #SCOPE = COUNTRY
 export_egyptian_grain_cost_effect = {
 	add_years_of_income = -0.05

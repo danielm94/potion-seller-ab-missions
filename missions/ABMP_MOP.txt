@@ -1230,7 +1230,9 @@ ab_mop_1 = {
 		provinces_to_highlight = {
 			area = wallachia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -1243,22 +1245,31 @@ ab_mop_1 = {
 			else = {
 				wallachia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
 				}
 			}
 		}
 		effect = {
 			complex_dynamic_effect = {
-				first_custom_tooltip = if_the_butcher_has_already_purged_the_ten_houses_tt
-				first_limit = "WAL = {
-					has_won_wallachian_civil_war = yes
-				}"
-				first_effect = "mop_wallachia_already_purged_effect = yes"
-				second_custom_tooltip = if_the_butcher_hasnt_already_purged_the_ten_houses_tt
-				second_limit = "WAL = {
-					has_won_wallachian_civil_war = no
-				}"
-				second_effect = "mop_purge_ten_houses_effect = yes"
+				first_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
+				first_limit = "wallachia_area = {
+									type = all
+									owner = {
+										is_commune_subject = yes
+										is_subject_of = root
+									}
+								}"
+				first_effect = "custom_tooltip = we_will_annex_all_provinces_in_the_wallachia_area_when_integrating_commune_tt
+								add_dip_power = 50"
+				second_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
+				second_limit = "wallachia_area = {
+									type = all
+									owned_by = root
+								}"
+				second_effect = "custom_tooltip = mop_wallachia_negate_ccr_penalties_tt
+								 add_adm_power = 50"
 			}
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
