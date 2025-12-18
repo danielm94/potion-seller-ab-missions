@@ -1266,7 +1266,7 @@ ab_mop_1 = {
 				second_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
 				second_limit = "wallachia_area = {
 									type = all
-									owned_by = root
+									country_or_non_sovereign_subject_holds = root
 								}"
 				second_effect = "custom_tooltip = mop_wallachia_negate_ccr_penalties_tt
 								 add_adm_power = 50"
@@ -3451,11 +3451,11 @@ ab_mop_2 = {
 				second_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
 				second_limit = "transylvania_area = {
 									type = all
-									owned_by = root
+									country_or_non_sovereign_subject_holds = root
 								}
 								southern_transylvania_area = {
 									type = all
-									owned_by = root
+									country_or_non_sovereign_subject_holds = root
 								}"
 				second_effect = "hidden_effect = {
 									transylvania_area = {
@@ -3665,7 +3665,9 @@ ab_mop_2 = {
 				area = eastslovakia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
 			}
 		}
 		trigger = {
@@ -3678,15 +3680,21 @@ ab_mop_2 = {
 			else = {
 				alfold_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 				centralhungary_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 				eastslovakia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 			}
 		}
@@ -3701,12 +3709,50 @@ ab_mop_2 = {
 				target = moravia_area
 			}
 			custom_tooltip = tooltip_line_divider
-			define_advisor = {
-				type = inquisitor
-				skill = 2
-				cost_multiplier = 0.5
-				religion = ROOT
-				culture = ROOT
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
+				first_limit = "alfold_area = {
+									type = all
+									country_or_non_sovereign_subject_holds = root
+								}
+								centralhungary_area = {
+									type = all
+									country_or_non_sovereign_subject_holds = root
+								}
+								eastslovakia_area = {
+									type = all
+									country_or_non_sovereign_subject_holds = root
+								}"
+				first_effect = "define_advisor = {
+									type = inquisitor
+									skill = 2
+									cost_multiplier = 0.5
+									religion = ROOT
+									culture = ROOT
+								}
+								custom_tooltip = wal_transylvania_romanianization_tooltip
+								custom_tooltip = wal_hungary_romanianization_tooltip
+								set_country_flag = wal_romanianization_of_hungary"
+				second_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
+				second_limit = "alfold_area = {
+									type = all
+									country_or_commune_subject_or_subject_of_commune_subject_holds = {
+										who = root
+									}
+								}
+								centralhungary_area = {
+									type = all
+									country_or_commune_subject_or_subject_of_commune_subject_holds = {
+										who = root
+									}
+								}
+								eastslovakia_area = {
+									type = all
+									country_or_commune_subject_or_subject_of_commune_subject_holds = {
+										who = root
+									}
+								}"
+				second_effect = "mop_hungary_install_peasant_government_reward_effect = yes"
 			}
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
@@ -3716,9 +3762,6 @@ ab_mop_2 = {
 								}"
 				first_effect = "add_mil_power = 150"
 			}
-			custom_tooltip = wal_transylvania_romanianization_tooltip
-			custom_tooltip = wal_hungary_romanianization_tooltip
-			set_country_flag = wal_romanianization_of_hungary
 			custom_tooltip = AB_EMPTY
 			add_faction_influence = {
 				faction = abolitionists_faction
@@ -6485,7 +6528,7 @@ ab_mop_3 = {
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
 				first_limit = "4706 = {
-									owned_by = root
+									country_or_non_sovereign_subject_holds = root
 								}"
 				first_effect = "4706 = {
 									remove_core = BUL

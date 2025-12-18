@@ -327,3 +327,42 @@ mop_liberate_transylvania_install_peasant_government_reward_effect = {
 	custom_tooltip = every_transylvanian_subject_will_become_orthodox_tt
 	custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt
 }
+
+mop_hungary_install_peasant_government_reward_effect = {
+	custom_tooltip = all_carpathian_subjects_will_become_panonic_tt
+	custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt
+	hidden_effect = {
+		every_subject_country = {
+			limit = {
+				culture_group = carpathian
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = orthodox
+					}
+				}
+				change_religion = orthodox
+			}
+			change_primary_culture = panonic
+			set_ruler_culture = panonic
+			set_country_flag = wal_romanianization_of_hungary
+			every_subject_country = {
+				limit = {
+					culture_group = carpathian
+				}
+				if = {
+					limit = {
+						NOT = {
+							religion = orthodox
+						}
+					}
+					change_religion = orthodox
+				}
+				change_primary_culture = panonic
+				set_ruler_culture = panonic
+				set_country_flag = wal_romanianization_of_hungary
+			}
+		}
+	}
+}
