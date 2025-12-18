@@ -1412,7 +1412,7 @@ ab_mop_1 = {
 	}
 	mop_war_for_the_bulgars = {
 		icon = gfx_wal_drive_out_the_bulgars
-		position = 15
+		position = 11
 		required_missions = {
 			mop_arm_the_bulgar_peasants
 		}
@@ -1517,7 +1517,7 @@ ab_mop_1 = {
 	}
 	mop_liberate_the_bulgars = {
 		icon = dom_ara_remensa_war
-		position = 18
+		position = 14
 		required_missions = {
 			mop_war_for_the_bulgars
 		}
@@ -1669,7 +1669,7 @@ ab_mop_1 = {
 	}
 	mop_bulgars_are_free = {
 		icon = GFX_mop_bulgars_are_free
-		position = 21
+		position = 17
 		required_missions = {
 			mop_liberate_the_bulgars
 		}
@@ -1723,11 +1723,79 @@ ab_mop_1 = {
 			}
 		}
 	}
+	mop_integrate_the_bulgars = {
+		icon = mission_jawal_silver_mine
+		position = 21
+		required_missions = {
+			mop_bulgars_are_free
+		}
+		provinces_to_highlight = {
+			culture = bulgarian
+			region = balkan_region
+			owner = {
+				OR = {
+					is_commune_subject = no
+					is_subject_of_type = allied_commune
+				}
+				NOT = {
+					tag = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_integrate_the_bulgars_trigger_tt
+					NOT = {
+						any_province = {
+							culture = bulgarian
+							region = balkan_region
+							owner = {
+								OR = {
+									is_commune_subject = no
+									is_subject_of_type = allied_commune
+								}
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = will_be_able_to_integrate_bulgarians_again_immediately_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						any_owned_province = {
+							culture = bulgarian
+							region = balkan_region
+						}
+						has_country_flag = commune_integrated_recently
+					}
+					clr_country_flag = commune_integrated_recently
+				}
+			}
+			add_dip_power = 100
+			add_faction_influence = {
+				faction = leaguists_faction
+				influence = 10
+			}
+		}
+	}
 	mop_liberate_the_serbs = {
 		icon = defeat_the_serbs
 		position = 23
 		required_missions = {
-			mop_bulgars_are_free
+			mop_integrate_the_bulgars
 		}
 		provinces_to_highlight = {
 			culture = serbian
@@ -4768,7 +4836,7 @@ ab_mop_2 = {
 		icon = byz_city_of_worlds_desire
 		position = 22
 		required_missions = {
-			mop_bulgars_are_free
+			mop_integrate_the_bulgars
 		}
 		provinces_to_highlight = {
 			area = thrace_area
