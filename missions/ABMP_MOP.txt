@@ -3655,6 +3655,9 @@ ab_mop_2 = {
 								}"
 				second_effect = "mop_hungary_install_peasant_government_reward_effect = yes"
 			}
+			hidden_effect = {
+				set_country_flag = wal_romanianization_of_hungary
+			}
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_the_magyars_do_not_exist_tt
@@ -3762,6 +3765,9 @@ ab_mop_2 = {
 								}"
 				second_effect = "mop_seal_the_carpathians_install_peasant_government_reward_effect = yes"
 			}
+			hidden_effect = {
+				set_country_flag = panonic_spread_extra
+			}
 			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = planner
@@ -3848,12 +3854,40 @@ ab_mop_2 = {
 						tier = 2
 					}
 				}
+				num_of_owned_provinces_with = {
+					region = carpathia_region
+					has_fort_building_trigger = yes
+					value = 6
+				}
 			}
 		}
 		effect = {
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 30
+			set_country_flag = wal_buffed_carpathian_forts
+			custom_tooltip = wal_buffed_carpathian_forts_tooltip
+			tooltip = {
+				custom_tooltip = upgraded_fort_tooltip
+				hidden_effect = {
+					upgrade_fort_building = yes
+				}
+				add_province_modifier = {
+					name = wallachia_carpathian_defenses
+					duration = -1
+				}
+				custom_tooltip = this_will_apply_to_all_new_forts_constructed_tooltip
+				custom_tooltip = AB_EMPTY
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = carpathia_region
+						has_fort_building_trigger = yes
+					}
+					upgrade_fort_building = yes
+					add_province_modifier = {
+						name = wallachia_carpathian_defenses
+						duration = -1
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -3883,6 +3917,10 @@ ab_mop_2 = {
 			add_country_modifier = {
 				name = mop_exemplary_society
 				duration = -1
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 30
 			}
 		}
 	}

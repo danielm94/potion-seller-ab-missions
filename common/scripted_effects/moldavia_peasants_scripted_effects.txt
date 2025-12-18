@@ -406,6 +406,5 @@ mop_seal_the_carpathians_install_peasant_government_reward_effect = {
 				set_country_flag = panonic_spread_extra
 			}
 		}
-		set_country_flag = panonic_spread_extra
 	}
 }
