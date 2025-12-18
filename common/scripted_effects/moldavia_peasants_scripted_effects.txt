@@ -298,3 +298,32 @@ add_permanent_claim_for_commune_player = {
 		}
 	}
 }
+
+mop_liberate_transylvania_install_peasant_government_reward_effect = {
+	hidden_effect = {
+		every_subject_country = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						area = transylvania_area
+						area = southern_transylvania_area
+					}
+				}
+			}
+			change_religion = orthodox
+			every_subject_country = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							area = transylvania_area
+							area = southern_transylvania_area
+						}
+					}
+				}
+				change_religion = orthodox
+			}
+		}
+	}
+	custom_tooltip = every_transylvanian_subject_will_become_orthodox_tt
+	custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt
+}

@@ -3447,32 +3447,7 @@ ab_mop_2 = {
 										is_subject_of = root
 									}
 								}"
-				first_effect = "hidden_effect = {
-									every_subject_country = {
-										limit = {
-											any_owned_province = {
-												OR = {
-													area = transylvania_area
-													area = southern_transylvania_area
-												}
-											}
-										}
-										change_religion = orthodox
-										every_subject_country = {
-											limit = {
-												any_owned_province = {
-													OR = {
-														area = transylvania_area
-														area = southern_transylvania_area
-													}
-												}
-											}
-											change_religion = orthodox
-										}
-									}
-								}
-								custom_tooltip = every_transylvanian_subject_will_become_orthodox_tt
-								custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt"
+				first_effect = "mop_liberate_transylvania_install_peasant_government_reward_effect = yes"
 				second_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
 				second_limit = "transylvania_area = {
 									type = all
@@ -6486,7 +6461,9 @@ ab_mop_3 = {
 		provinces_to_highlight = {
 			province_id = 4706
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
 			}
 		}
 		trigger = {
@@ -6498,11 +6475,45 @@ ab_mop_3 = {
 			}
 			else = {
 				4706 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
 				}
 			}
 		}
 		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
+				first_limit = "4706 = {
+									owned_by = root
+								}"
+				first_effect = "4706 = {
+									remove_core = BUL
+									add_nationalism = -30
+									add_unrest = -20
+								}
+								add_adm_power = 50
+								add_army_tradition_or_mil_power = {
+									amount = 10
+								}
+								custom_tooltip = mop_dobruja_negate_ccr_penalties_tt"
+				second_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
+				second_limit = "4706 = {
+									owner = {
+										is_commune_subject = yes
+										is_subject_of = root
+									}
+								}"
+				second_effect = "4706 = {
+									owner = {
+										add_liberty_desire = -10
+									}
+								}
+								add_dip_power = 25
+								custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt
+								"
+			}
+			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
 				first_limit = "is_bogdan_razesul_ruling = yes"
@@ -6534,16 +6545,6 @@ ab_mop_3 = {
 				first_custom_tooltip = if_bulgaria_is_our_rival_tt
 				first_limit = "is_rival = BUL"
 				first_effect = "add_splendor = 100"
-			}
-			custom_tooltip = AB_EMPTY
-			4706 = {
-				add_nationalism = -30
-				add_unrest = -20
-				remove_core = BUL
-			}
-			add_adm_power = 50
-			add_army_tradition_or_mil_power = {
-				amount = 10
 			}
 		}
 	}
