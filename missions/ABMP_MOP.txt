@@ -1309,160 +1309,9 @@ ab_mop_1 = {
 			}
 		}
 	}
-	mop_vlach_emancipation = {
-		icon = gfx_wal_unite_the_vlachs
-		position = 7
-		required_missions = {
-			mop_liberate_dobruja
-			mop_liberate_transylvania
-			mop_wallachia
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = wallachia_area
-				area = transylvania_area
-				area = southern_transylvania_area
-				area = moldavia_area
-				area = bessarabia_area
-				province_id = 4706
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				wallachia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				transylvania_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				southern_transylvania_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				moldavia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				bessarabia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				4706 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-		}
-		effect = {
-			change_tag = TUC
-			set_government_rank = 2
-			custom_tooltip = unlock_dacian_commune_reform_tt
-			hidden_effect = {
-				add_government_reform = dacian_commune_reform
-			}
-			restore_country_name = yes
-			set_country_flag = free_rename
-			set_country_flag = set_tuc_united_communes_name_EN
-			custom_tooltip = tuc_unlock_new_renames_tt
-			country_event = {
-				id = moldavia_peasant_events.2
-			}
-			custom_tooltip = tooltip_line_divider
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
-				first_limit = "is_bogdan_razesul_ruling = yes"
-				first_effect = "
-					change_peasant_zeal = {
-						value = 50
-					}
-					add_faction_influence = {
-						faction = abolitionists_faction
-						influence = 10
-					}
-					add_estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 20
-					}"
-				second_custom_tooltip = if_bogdan_razesul_isnt_ruling_tt
-				second_limit = "is_bogdan_razesul_ruling = no"
-				second_effect = "
-					change_peasant_zeal = {
-						value = 25
-					}
-					add_faction_influence = {
-						faction = abolitionists_faction
-						influence = 5
-					}
-					add_estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 10
-					}"
-			}
-			custom_tooltip = AB_EMPTY
-			complex_dynamic_effect = {
-				first_custom_tooltip = ruler_has_protector_of_the_little_folk_personality_tt
-				first_limit = "ruler_has_personality = peasant_revolt_leader_personality"
-				first_effect = "change_peasant_zeal = {
-									value = 25
-								}
-								add_republican_tradition = 10"
-				second_custom_tooltip = ruler_doesnt_have_protector_of_the_little_folk_personality_tt
-				second_limit = "NOT = {
-									ruler_has_personality = peasant_revolt_leader_personality
-								}"
-				second_effect = "get_number_of_ruler_personalities = {
-									var_name = personalities
-								}
-								if = {
-									limit = {
-										check_variable = {
-											personalities = 3
-										}
-									}
-									country_event = {
-										id = peasant_election_events.2
-									}
-								}
-								else = {
-									add_ruler_personality = peasant_revolt_leader_personality
-								}"
-			}
-			custom_tooltip = AB_EMPTY
-			add_power_projection = {
-				type = wallachia_unified_vlachs_pp
-				amount = 15
-			}
-			add_prestige_or_monarch_power = {
-				amount = 15
-			}
-			custom_tooltip = wal_unite_the_vlachs_autonomy_tooltip
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						culture_group = romanian_culture_group
-					}
-					add_local_autonomy = -10
-					add_nationalism = -5
-				}
-			}
-			hidden_effect = {
-				complete_mission = mop_vlach_emancipation
-			}
-		}
-	}
 	mop_arm_the_bulgar_peasants = {
 		icon = push_on_to_bulgaria
-		position = 11
+		position = 8
 		required_missions = {
 			mop_vlach_emancipation
 		}
@@ -3553,24 +3402,26 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_carpathian_fortifications = {
-		icon = gfx_wal_carpathian_fortifications
+	mop_vlach_emancipation = {
+		icon = gfx_wal_unite_the_vlachs
 		position = 7
 		required_missions = {
+			mop_liberate_dobruja
 			mop_liberate_transylvania
+			mop_wallachia
 		}
 		provinces_to_highlight = {
 			OR = {
-				has_fort_building_trigger = no
-				NOT = {
-					grown_by_development = 3
-				}
-			}
-			OR = {
-				area = southern_transylvania_area
+				area = wallachia_area
 				area = transylvania_area
+				area = southern_transylvania_area
+				area = moldavia_area
+				area = bessarabia_area
+				province_id = 4706
 			}
-			owned_by = ROOT
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			if = {
@@ -3580,75 +3431,125 @@ ab_mop_2 = {
 				always = yes
 			}
 			else = {
-				num_of_owned_provinces_with = {
-					value = 3
-					OR = {
-						area = southern_transylvania_area
-						area = transylvania_area
-					}
-					has_fort_building_trigger = yes
-					grown_by_development = 3
+				wallachia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				transylvania_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				southern_transylvania_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				moldavia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				bessarabia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4706 = {
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = for_every_province_that_meets_the_missions_requirements
-			tooltip = {
-				add_province_modifier = {
-					name = wallachia_carpathian_fort
-					duration = -1
-				}
+			change_tag = TUC
+			set_government_rank = 2
+			custom_tooltip = unlock_dacian_commune_reform_tt
+			hidden_effect = {
+				add_government_reform = dacian_commune_reform
 			}
+			restore_country_name = yes
+			set_country_flag = free_rename
+			set_country_flag = set_tuc_united_communes_name_EN
+			custom_tooltip = tuc_unlock_new_renames_tt
+			country_event = {
+				id = moldavia_peasant_events.2
+			}
+			custom_tooltip = tooltip_line_divider
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
+				first_limit = "is_bogdan_razesul_ruling = yes"
+				first_effect = "
+					change_peasant_zeal = {
+						value = 50
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 20
+					}"
+				second_custom_tooltip = if_bogdan_razesul_isnt_ruling_tt
+				second_limit = "is_bogdan_razesul_ruling = no"
+				second_effect = "
+					change_peasant_zeal = {
+						value = 25
+					}
+					add_faction_influence = {
+						faction = abolitionists_faction
+						influence = 5
+					}
+					add_estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 10
+					}"
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = ruler_has_protector_of_the_little_folk_personality_tt
+				first_limit = "ruler_has_personality = peasant_revolt_leader_personality"
+				first_effect = "change_peasant_zeal = {
+									value = 25
+								}
+								add_republican_tradition = 10"
+				second_custom_tooltip = ruler_doesnt_have_protector_of_the_little_folk_personality_tt
+				second_limit = "NOT = {
+									ruler_has_personality = peasant_revolt_leader_personality
+								}"
+				second_effect = "get_number_of_ruler_personalities = {
+									var_name = personalities
+								}
+								if = {
+									limit = {
+										check_variable = {
+											personalities = 3
+										}
+									}
+									country_event = {
+										id = peasant_election_events.2
+									}
+								}
+								else = {
+									add_ruler_personality = peasant_revolt_leader_personality
+								}"
+			}
+			custom_tooltip = AB_EMPTY
+			add_power_projection = {
+				type = wallachia_unified_vlachs_pp
+				amount = 15
+			}
+			add_prestige_or_monarch_power = {
+				amount = 15
+			}
+			custom_tooltip = wal_unite_the_vlachs_autonomy_tooltip
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						OR = {
-							area = southern_transylvania_area
-							area = transylvania_area
-						}
-						has_fort_building_trigger = yes
-						grown_by_development = 3
+						culture_group = romanian_culture_group
 					}
-					add_province_modifier = {
-						name = wallachia_carpathian_fort
-						duration = -1
-					}
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = wallachia_carpathian_fortifications_ramparts_bonus_tooltip
-			tooltip = {
-				add_province_modifier = {
-					name = wallachia_carpathian_fortifications_ramparts_bonus
-					duration = -1
+					add_local_autonomy = -10
+					add_nationalism = -5
 				}
 			}
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						OR = {
-							area = southern_transylvania_area
-							area = transylvania_area
-						}
-						has_fort_building_trigger = yes
-						grown_by_development = 3
-						has_building = ramparts
-					}
-					owner = {
-						add_treasury = 50
-					}
-					add_province_modifier = {
-						name = wallachia_carpathian_fortifications_ramparts_bonus
-						duration = -1
-					}
-				}
-			}
-			custom_tooltip = buffed_bran_castle_reward_tooltip
-			set_country_flag = upgraded_bran_castle
-			custom_tooltip = AB_EMPTY
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
+				complete_mission = mop_vlach_emancipation
 			}
 		}
 	}
@@ -3656,7 +3557,7 @@ ab_mop_2 = {
 		icon = gfx_wal_crush_the_magyars
 		position = 8
 		required_missions = {
-			mop_carpathian_fortifications
+			mop_vlach_emancipation
 		}
 		provinces_to_highlight = {
 			OR = {
