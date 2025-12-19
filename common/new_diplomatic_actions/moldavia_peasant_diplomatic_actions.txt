@@ -1286,6 +1286,69 @@ convert_subject_to_commune = {
 	}
 }
 
+enforce_peace_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			OR = {
+				is_subject_of_type = allied_commune
+				is_subject_of_type = sister_commune
+			}
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = is_in_offensive_war_against_commune_subject_tt
+			FROM = {
+				any_war_enemy_country = {
+					is_commune_subject = yes
+					is_subject_of = ROOT
+					is_in_war = {
+						defender_leader = THIS
+						attacker_leader = FROM
+					}
+				}
+			}
+		}
+		FROM = {
+			NOT = {
+				liberty_desire = 50
+			}
+		}
+		has_government_power = {
+			mechanic_type = peasant_zealotry
+			power_type = peasant_zeal
+			value = 10
+		}
+	}
+	on_accept = {
+		change_peasant_zeal = {
+			value = -10
+			scaled_with_gain_modifier = no
+		}
+		FROM = {
+			every_war_enemy_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = FROM
+						defender_leader = this
+					}
+				}
+				PREV = {
+					white_peace = PREV
+				}
+			}
+			add_liberty_desire = 10
+			set_country_flag = cant_declare_war_on_communes_10_years
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
 establish_illyrian_commune = {
 	category = league
 	require_acceptance = no

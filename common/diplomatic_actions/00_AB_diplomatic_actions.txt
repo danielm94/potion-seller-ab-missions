@@ -145,6 +145,25 @@ declarewar = {
 			}
 		}
 	}
+	condition = {
+		tooltip = cant_declare_on_commune_subjects_10_years_tt
+		potential = {
+			has_country_flag = cant_declare_war_on_communes_10_years
+			NOT = {
+				had_country_flag = {
+					flag = cant_declare_war_on_communes_10_years
+					days = 3650
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				overlord = {
+					overlord_of = FROM
+				}
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 		# AB [[[
