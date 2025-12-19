@@ -335,8 +335,11 @@ country_event = {
 				push_commune_subject_investing_mana_modifier = yes
 				FROM = {
 					calculate_monthly_commune_integration_progress = yes
+					ROOT = {
+						calculate_overlord_dip_investment_integration_progress_gain = yes
+					}
 				}
-				calculate_overlord_dip_investment_integration_progress_gain = yes
+				map_all_integrating_commune_subjects_to_slots = yes
 			}
 		}
 	}
