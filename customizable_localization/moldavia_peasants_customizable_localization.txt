@@ -73,6 +73,7 @@ defined_text = {
 		}
 	}
 }
+
 defined_text = {
 	name = mop_wallachia_desc_loc
 	random = no
@@ -151,16 +152,78 @@ defined_text = {
 
 defined_text = {
 	name = get_moldavian_peasant_flag
-	text = { 
+	text = {
 		localisation_key = mop_flag
 		trigger = {
 			tag = MOP
 		}
 	}
-	text = { 
+	text = {
 		localisation_key = tuc_flag
 		trigger = {
 			tag = TUC
+		}
+	}
+}
+
+defined_text = {
+	name = install_peasant_government_special_country
+	random = no
+	text = {
+		localisation_key = become_egy_tt
+		trigger = {
+			FROM = {
+				OR = {
+					tag = ABS
+					tag = NAZ
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = pap_destroyed
+		trigger = {
+			FROM = {
+				tag = PAP
+			}
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = install_peasant_government_balkanization
+	random = no
+	text = {
+		localisation_key = adu_expulsion
+		trigger = {
+			FROM = {
+				is_or_was_tag = {
+					tag = ADU
+				}
+				any_owned_province = {
+					region = iberia_region
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = from_will_become_balkanized
+		trigger = {
+			FROM = {
+				can_be_balkanized = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = AB_EMPTY
+		trigger = {
+			always = yes
 		}
 	}
 }

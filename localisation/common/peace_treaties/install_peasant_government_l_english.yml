@@ -1,5 +1,5 @@
 ﻿l_english:
- po_install_peasant_government: "$TODO$"
- po_install_peasant_government_desc: "$TODO$"
- CB_ALLOWED_po_install_peasant_government: "$TODO$"
- PEACE_po_install_peasant_government: "$TODO$"
+ po_install_peasant_government: "Install Peasant Government"
+ po_install_peasant_government_desc: "A peasant government will be installed in  @[From.GetTag] §Y[From.GetName]§!:\n- Their [From.Monarch.GetTitle], §Y[From.Monarch.GetName]§! will be §Rexecuted§!.\n- They will become a £republican_tradition£ §YPeasant's Republic§!.\n- They will become our £allied_commune£§YAllied Commune§! subject.\n\nRelations with them will be §Greset§!:\n- Aggressive Expansion will be reset to §G0§!.\n- Trust will be reset to §G50§!.\n- They will §Gno longer be mad§! at us for §Yspying§! on them, §Ydeclaring war§! on them, §Yinciting peasants§!, or §Yspreading radicalized peasantry§!.\n\nWe will gain §G10%§! of their §YTotal Development§! as §YPeasant Zeal§!.[install_peasant_government_special_country][install_peasant_government_balkanization]"
+ CB_ALLOWED_po_install_peasant_government: "Install Peasant Government"
+ PEACE_po_install_peasant_government: "Install Peasant Government"

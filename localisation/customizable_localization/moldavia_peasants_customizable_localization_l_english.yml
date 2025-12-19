@@ -7,3 +7,7 @@
  mop_wallachia_desc_dead_wal: "At long last, the shadow of the Boieri has been lifted from our land. The banners of tyranny are torn, their manors stand empty, and the last chains on the Vlach soul are broken. From the Prut to the Olt, there are no lords and no serfs—only free men who till their own soil and answer to none but God and their conscience. We have paid dearly for this dawn, but through our struggle, the Vlachs stand as a free people once more."
  mop_flag: "@MOP"
  tuc_flag: "@TUC"
+ become_egy_tt: "\n\n§V@[From.GetTag] §Y[From.GetName]§! will become @EGY §Y[EGY.GetName]§!§!"
+ from_will_become_balkanized: "\n\n§VWe will be able to §Ybalkanize§! them.§!"
+ adu_expulsion: "\n\n§V@[From.GetTag] §Y[From.GetName]§! will be expelled by §YIberia§!, and replaced with §YChristian Iberian§! £allied_commune£§YCommune Subjects§!.§!"
+ pap_destroyed: "\n\nWe will establish the @ROP §YRoman Communes§!."
