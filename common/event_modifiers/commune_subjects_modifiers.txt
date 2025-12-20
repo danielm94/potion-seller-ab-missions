@@ -585,3 +585,47 @@ integrated_commune_andalucian_bonus = {
 integrated_commune_iranian_bonus = {
 	development_cost_modifier = -0.05
 }
+
+integrated_commune_al_misr_arabic_bonus = {
+	expand_administration_cost = -0.05
+}
+
+integrated_commune_al_suryah_arabic_bonus = {
+	trade_efficiency = 0.05
+}
+
+integrated_commune_al_iraqiya_arabic_bonus = {
+	technology_cost = -0.05
+}
+
+integrated_commune_bedouin_arabic_bonus = {
+	land_attrition = -0.10
+}
+
+integrated_commune_hejazi_culture_bonus = {
+	global_heathen_missionary_strength = 0.015
+}
+
+integrated_commune_yemeni_culture_bonus = {
+	defensiveness = 0.10
+}
+
+integrated_commune_gulf_arabic_bonus = {
+	production_efficiency = 0.05
+}
+
+integrated_commune_omani_culture_bonus = {
+	trade_steering = 0.05
+}
+
+integrated_commune_mahri_culture_bonus = {
+	naval_attrition = -0.10
+}
+
+integrated_commune_assyrian_bonus = {
+	all_power_cost = -0.025
+}
+
+integrated_commune_kurdish_bonus = {
+	cavalry_fire = 0.2
+}
