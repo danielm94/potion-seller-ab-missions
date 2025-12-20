@@ -11390,6 +11390,15 @@ ab_mop_4 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_al_iraqiya_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_iraqiya_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_kurdish_bonus_tt
+			set_country_flag = integrated_commune_kurdish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_assyrian_bonus_tt
+			set_country_flag = integrated_commune_assyrian_bonus_flag
+			custom_tooltip = AB_EMPTY
 			410 = {
 				remove_core = owner
 				add_core = root
@@ -11553,6 +11562,21 @@ ab_mop_4 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_hejazi_culture_bonus_tt
+			set_country_flag = integrated_commune_hejazi_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_yemeni_culture_bonus_tt
+			set_country_flag = integrated_commune_yemeni_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_gulf_arabic_bonus_tt
+			set_country_flag = integrated_commune_gulf_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_omani_culture_bonus_tt
+			set_country_flag = integrated_commune_omani_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_mahri_culture_bonus_tt
+			set_country_flag = integrated_commune_mahri_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
 			387 = {
 				remove_core = owner
 				add_core = root
@@ -14091,6 +14115,12 @@ ab_mop_5 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_al_suryah_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_suryah_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_bedouin_arabic_bonus_tt
+			set_country_flag = integrated_commune_bedouin_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
 			2313 = {
 				remove_core = owner
 				add_core = root
@@ -14296,6 +14326,9 @@ ab_mop_5 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_al_misr_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_misr_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
 			358 = {
 				remove_core = owner
 				add_core = root
