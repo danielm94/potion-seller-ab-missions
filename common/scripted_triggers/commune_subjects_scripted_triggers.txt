@@ -2679,3 +2679,189 @@ has_peasant_zeal_cost_less_or_equal_to_budget = {
 		}
 	}
 }
+
+does_not_already_have_formable_idea_group = {
+	FROM = {
+		if = {
+			limit = {
+				tag = ILR
+			}
+			NOT = {
+				has_idea_group = ILR_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = HLE
+			}
+			NOT = {
+				has_idea_group = HLE_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = RUM
+			}
+			NOT = {
+				has_idea_group = RUM_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ARM
+			}
+			NOT = {
+				has_idea_group = ARM_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = PLC
+			}
+			NOT = {
+				has_idea_group = PLC_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = UKR
+			}
+			NOT = {
+				has_idea_group = UKR_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = BLT
+			}
+			NOT = {
+				has_idea_group = BLT_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = PCC
+			}
+			NOT = {
+				has_idea_group = PCC_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = WEE
+			}
+			NOT = {
+				has_idea_group = WEE_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = SLU
+			}
+			NOT = {
+				has_idea_group = SLU_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = NSE
+			}
+			NOT = {
+				has_idea_group = NSE_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = KOR
+			}
+			NOT = {
+				has_idea_group = KOR_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = JAP
+			}
+			NOT = {
+				has_idea_group = JAP_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = GPH
+			}
+			NOT = {
+				has_idea_group = GPH_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ROP
+			}
+			NOT = {
+				has_idea_group = ROP_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = GER
+			}
+			NOT = {
+				has_idea_group = GER_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = UNN
+			}
+			NOT = {
+				has_idea_group = NED_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = FRP
+			}
+			NOT = {
+				has_idea_group = FRP_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = CLT
+			}
+			NOT = {
+				has_idea_group = CLT_peasant_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ABO
+			}
+			NOT = {
+				has_idea_group = ABO_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = GBR
+			}
+			NOT = {
+				has_idea_group = GBR_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = IBE
+			}
+			NOT = {
+				has_idea_group = IBE_ideas
+			}
+		}
+		else = {
+			# If the tag is not one of the formables above, 
+			# the trigger returns true by default.
+			always = yes
+		}
+	}
+}

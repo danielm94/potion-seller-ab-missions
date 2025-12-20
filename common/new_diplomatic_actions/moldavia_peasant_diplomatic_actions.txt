@@ -1562,6 +1562,7 @@ adopt_new_ideas_commune = {
 				liberty_desire = 50
 			}
 		}
+		does_not_already_have_formable_idea_group = yes
 	}
 	on_accept = {
 		FROM = {
