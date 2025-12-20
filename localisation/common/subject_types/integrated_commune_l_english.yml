@@ -1,6 +1,6 @@
 ﻿l_english:
  integrated_commune: "Integrated Commune"
- integrated_commune_long_desc: "$TODO$"
+ integrated_commune_long_desc: "Having completely synchronized their governance with our own, these communes act as seamless extensions of the central revolutionary administration. They represent the final stage of political transition toward total unification within our borders.\n\n§V£integrated_commune£§YIntegrated Communes§! provide the following bonuses depending on their §YTotal Development§!:\n\n§OAt 250 Total Development§!:\n§G+0.02§! Monthly Peasant Zeal\n§OAt 500 Total Development§!:\n§G+1§! Merchant\n§OAt 1000 Total Development§!:\n§G+0.02§! Monthly Peasant Zeal\n§G+1.0%§! Peasant Zeal Gain Modifier§!"
  integrated_commune_is_our: "$NAME|Y$ is an integrated commune."
  integrated_commune_title: "Integrated Commune"
  integrated_commune_title_plural: "Integrated Communes"

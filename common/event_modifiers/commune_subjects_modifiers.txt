@@ -216,16 +216,14 @@ integrated_commune_overlord = {
 }
 
 large_integrated_commune_bonus_1 = {
-	merchants = 1
+	monthly_peasant_zeal = 0.02
 }
 
 large_integrated_commune_bonus_2 = {
 	merchants = 1
-	monthly_peasant_zeal = 0.01
 }
 
 large_integrated_commune_bonus_3 = {
-	merchants = 1
 	monthly_peasant_zeal = 0.02
 	peasant_zeal_gain_modifier = 0.01
 }
