@@ -672,6 +672,16 @@ leave_peasant_league = {
 		}
 	}
 	on_accept = {
+		if = {
+			limit = {
+				has_country_flag = model_commune
+			}
+			clr_country_flag = model_commune
+			remove_opinion = {
+				who = overlord
+				modifier = designated_us_as_model_comune
+			}
+		}
 		overlord = {
 			add_opinion = {
 				who = PREV

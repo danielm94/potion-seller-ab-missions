@@ -390,3 +390,20 @@ on_dependency_gained = {
 		}
 	}
 }
+
+on_dependency_lost = {
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = model_commune
+			}
+		}
+		FROM = {
+			clr_country_flag = model_commune
+			remove_opinion = {
+				who = root
+				modifier = designated_us_as_model_comune
+			}
+		}
+	}
+}
