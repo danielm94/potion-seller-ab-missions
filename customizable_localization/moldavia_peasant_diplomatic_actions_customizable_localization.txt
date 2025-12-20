@@ -1089,3 +1089,207 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = designate_model_commune_cooldown_text
+	random = no
+	text = {
+		localisation_key = not_applicable
+		trigger = {
+			NOT = {
+				has_country_flag = set_model_commune
+			}
+		}
+	}
+	# MONTHS REMAINING
+	text = {
+		localisation_key = month
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3620
+			}
+		}
+	}
+	text = {
+		localisation_key = 2_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3590
+			}
+		}
+	}
+	text = {
+		localisation_key = 3_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3560
+			}
+		}
+	}
+	text = {
+		localisation_key = 4_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3530
+			}
+		}
+	}
+	text = {
+		localisation_key = 5_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3500
+			}
+		}
+	}
+	text = {
+		localisation_key = 6_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3470
+			}
+		}
+	}
+	text = {
+		localisation_key = 7_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3440
+			}
+		}
+	}
+	text = {
+		localisation_key = 8_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3410
+			}
+		}
+	}
+	text = {
+		localisation_key = 9_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3380
+			}
+		}
+	}
+	text = {
+		localisation_key = 10_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3350
+			}
+		}
+	}
+	text = {
+		localisation_key = 11_months
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3320
+			}
+		}
+	}
+	# YEARS REMAINING
+	text = {
+		localisation_key = 1_year
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 3285
+			}
+		}
+	}
+	text = {
+		localisation_key = 2_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 2920
+			}
+		}
+	}
+	text = {
+		localisation_key = 3_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 2555
+			}
+		}
+	}
+	text = {
+		localisation_key = 4_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 2190
+			}
+		}
+	}
+	text = {
+		localisation_key = 5_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 1825
+			}
+		}
+	}
+	text = {
+		localisation_key = 6_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 1460
+			}
+		}
+	}
+	text = {
+		localisation_key = 7_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 1095
+			}
+		}
+	}
+	text = {
+		localisation_key = 8_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 730
+			}
+		}
+	}
+	text = {
+		localisation_key = 9_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 365
+			}
+		}
+	}
+	text = {
+		localisation_key = 10_years
+		trigger = {
+			had_country_flag = {
+				flag = set_model_commune
+				days = 0
+			}
+		}
+	}
+}

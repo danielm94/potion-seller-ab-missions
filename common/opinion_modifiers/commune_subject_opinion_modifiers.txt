@@ -50,3 +50,7 @@ elected_our_men = {
 	max = 200
 	yearly_decay = 2
 }
+
+designated_us_as_model_comune = {
+	opinion = 50
+}

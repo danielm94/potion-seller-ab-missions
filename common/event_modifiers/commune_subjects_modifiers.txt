@@ -198,6 +198,10 @@ investing_mana_commune_50 = {
 	diplomats = -1
 }
 
+designated_model_commune = {
+	diplomatic_upkeep = -1
+}
+
 allied_commune_overlord = {
 	monthly_peasant_zeal = 0.002
 }

@@ -135,3 +135,5 @@
  integrated_commune_basque_bonus: "Integrated Basque Commune"
  integrated_commune_andalucian_bonus: "Integrated Andalusian Commune"
  integrated_commune_iranian_bonus: "Iranian Mountain Development"
+ designated_model_commune: "Designated Model Commune"
+ desc_designated_model_commune: "We have designated @[model_commune_country.GetTag] §Y[model_commune_country.GetName]§! as a model commune."

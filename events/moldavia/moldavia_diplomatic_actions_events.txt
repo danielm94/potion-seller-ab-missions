@@ -89,6 +89,19 @@ country_event = {
 						}
 						cede_province = root
 					}
+					if = {
+						limit = {
+							has_country_flag = model_commune
+						}
+						clr_country_flag = model_commune
+						reverse_remove_opinion = {
+							who = root
+							modifier = designated_us_as_model_comune
+						}
+						root = {
+							remove_country_modifier = designated_model_commune
+						}
+					}
 				}
 			}
 			else_if = {
