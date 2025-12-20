@@ -1296,6 +1296,7 @@ enforce_peace_commune = {
 				is_subject_of_type = allied_commune
 				is_subject_of_type = sister_commune
 			}
+			is_at_war = yes
 		}
 	}
 	is_allowed = {

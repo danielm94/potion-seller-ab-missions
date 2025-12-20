@@ -327,7 +327,7 @@
  is_in_offensive_war_against_commune_subject_tt: " @[From.GetTag] §Y[From.GetName]§! declared war on one of our £allied_commune£§YCommune Subjects§!."
  cant_declare_on_commune_subjects_10_years_tt: "We can't declare war on @[Root.Overlord.GetTag] §Y[Root.Overlord.GetName]§!'s subjects for the next §Y10 years§!."
  has_designated_model_commune_recently_tt: "§RWe have recently designated @[model_commune_country.GetTag] §Y[model_commune_country.GetName]§! as a model commune recently and cannot do it again for another §Y[designate_model_commune_cooldown_text]§!.§!"
- cannot_revoke_for_another_ten_years_tt: "§RWe cannot revoke their model commune status for another [designate_model_commune_cooldown_text]§!"
+ cannot_revoke_for_another_ten_years_tt: "§RWe cannot revoke their model commune status for another §Y[designate_model_commune_cooldown_text]§!§!"
  cant_declare_on_model_commune_tt: "They have been designated as a model commune by our overlord."
  designate_model_commune: "Designate Model Commune"
  designate_model_commune_title: "Designate Model Commune"
