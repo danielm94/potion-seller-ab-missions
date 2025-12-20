@@ -1,6 +1,6 @@
 ﻿l_english:
  allied_commune: "Allied Commune"
- allied_commune_long_desc: "Fraternal partners in the revolution, these states have cast off their feudal chains to join our collective league in ideological solidarity. They maintain local autonomy while standing united with us against the reactionary powers of the old world.\n\n§V£allied_commune£§YAllied Communes§! grant us §G+0.002§! Peasant Zeal per month.\n\nThey can declare war on other £allied_commune£§YAllied Communes§!.\n\nThey can §Rvoluntarily stop being your subject§! if:\n- their liberty desire is greater than or equal to §Y50§!\n- their opinion of you is less than §Y0§!.\n- their Trust with you is less than §Y30§!§!."
+ allied_commune_long_desc: "Fraternal partners in the revolution, these states have cast off their feudal chains to join our collective league in ideological solidarity. They maintain local autonomy while standing united with us against the reactionary powers of the old world.\n\n§V£allied_commune£§YAllied Communes§! grant us §G+0.002§! Peasant Zeal per month.\n\nThey can declare war on other £allied_commune£§YAllied Communes§!.\n\nThey can §Rvoluntarily stop being your subject§! if:\n- their liberty desire is greater than or equal to §Y50§!\n- their opinion of you is less than §Y0§!.\n- their Trust with you is less than §Y30§!.§!"
  allied_commune_is_our: "$NAME|Y$ is an allied commune."
  allied_commune_title: "Allied Commune"
  allied_commune_title_plural: "Allied Communes"
