@@ -11502,6 +11502,9 @@ ab_mop_4 = {
 			}
 		}
 		effect = {
+			custom_tooltip = unlock_MPL_commune_diplomatic_actions_tt
+			set_country_flag = unlock_MPL_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
 			410 = {
 				remove_province_modifier = mop_bagdad_commune
 				add_province_modifier = {

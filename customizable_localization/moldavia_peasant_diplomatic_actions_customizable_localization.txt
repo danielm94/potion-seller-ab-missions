@@ -184,6 +184,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = MPL_ideas_list
+		trigger = {
+			FROM = {
+				tag = MPL
+			}
+		}
+	}
 }
 
 defined_text = {
