@@ -305,3 +305,42 @@ UAC_ideas = {
 		same_religion_advisor_cost = -0.2
 	}
 }
+
+MPL_ideas = {
+	free = yes
+	trigger = {
+		tag = MPL
+	}
+	start = {
+		development_cost_modifier = -0.05
+		promote_culture_cost = -0.5
+	}
+	bonus = {
+		idea_cost = -0.1
+	}
+	MPL_first = {
+		num_accepted_cultures = 2
+	}
+	MPL_second = {
+		technology_cost = -0.1
+	}
+	MPL_third = {
+		advisor_cost = -0.2
+		advisor_pool = 1
+	}
+	MPL_fourth = {
+		tolerance_heathen = 2
+		tolerance_of_heathens_capacity = 1
+	}
+	MPL_fifth = {
+		production_efficiency = 0.15
+	}
+	MPL_sixth = {
+		land_forcelimit_modifier = 0.25
+		free_land_leader_pool = 1
+	}
+	MPL_seventh = { # Reference to Jalayirids
+		cavalry_cost = -0.2
+		cav_to_inf_ratio = 0.25
+	}
+}
