@@ -62,7 +62,7 @@
  moldavia_peasant_events.12.t: "From Dublin With Love"
  moldavia_peasant_events.12.d: "Success. One of our agents, a lad born on a Dublin street, slipped past the guard. He stacked the powder kegs beneath the headquarters just as the senior officers sat down to feast. The detonation vaporized the building and everyone inside. The enemy command structure is decapitated."
  moldavia_peasant_events.12.a: "We need to move, now!"
- pissed_off_adu_tt: "§R@[new_peasant_subject.GetTag] §Y[new_peasant_subject.GetName]§! will no longer be our subject.§!"
+ pissed_off_adu_tt: "§R@[andalusian_subject.GetTag] §Y[andalusian_subject.GetName]§! will no longer be our subject.§!"
  moldavia_peasant_events.13.t: "The Expulsion of the Andalusians"
  moldavia_peasant_events.13.d: "The Andalusian Caliphate once strutted across Iberia as if it were eternal, its emirs fat on tithe and jizya while the commoners toiled. No more. The fortresses are taken, the court scattered, and the banners of the communes fly where the crescent once ruled.\n\nNow comes the true work. We will carve Iberia into a patchwork of free realms, each ruled by councils answerable to the people and to the Federation. The land will be restored to those who till it, the Andalusian nobility driven from Europe, and a new order raised upon the ruins of both cross and crescent."
  moldavia_peasant_events.13.a: "Adiós!"
