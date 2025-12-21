@@ -123,6 +123,7 @@ is_formable_commune_subject = {
 		tag = ABO
 		tag = GBR
 		tag = IBE
+		tag = UAC
 	}
 }
 
@@ -2856,6 +2857,14 @@ does_not_already_have_formable_idea_group = {
 			}
 			NOT = {
 				has_idea_group = IBE_ideas
+			}
+		}
+		else_if = {
+			limit = {
+				tag = UAC
+			}
+			NOT = {
+				has_idea_group = UAC_ideas
 			}
 		}
 		else = {

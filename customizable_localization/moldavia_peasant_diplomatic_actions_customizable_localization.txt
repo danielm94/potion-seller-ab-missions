@@ -176,6 +176,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = UAC_ideas_list
+		trigger = {
+			FROM = {
+				tag = UAC
+			}
+		}
+	}
 }
 
 defined_text = {

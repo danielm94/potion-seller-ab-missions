@@ -4550,6 +4550,152 @@ integrate_into_iberian_communes = {
 	}
 }
 
+establish_arab_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = UAC
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_UAC_commune_diplomatic_actions
+		FROM = {
+			culture_group = turko_semitic
+			NOT = {
+				culture = al_iraqiya_arabic
+			}
+			NOT = {
+				culture = assyrian
+			}
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 75
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = UAC
+			set_government_rank_force = 2
+			change_integrated_commune_color = yes
+			every_province = {
+				limit = {
+					culture_group = turko_semitic
+					NOT = {
+						culture = al_iraqiya_arabic
+					}
+					NOT = {
+						culture = assyrian
+					}
+				}
+				add_permanent_claim = UAC
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_arab_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_UAC_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = UAC
+		UAC = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = UAC
+			}
+			any_owned_province = {
+				culture_group = turko_semitic
+				NOT = {
+					culture = al_iraqiya_arabic
+				}
+				NOT = {
+					culture = assyrian
+				}
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 75
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = turko_semitic
+					NOT = {
+						culture = al_iraqiya_arabic
+					}
+					NOT = {
+						culture = assyrian
+					}
+				}
+				add_core = UAC
+				cede_province = UAC
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
 designate_model_commune = {
 	category = league
 	require_acceptance = no
