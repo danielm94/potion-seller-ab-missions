@@ -328,6 +328,17 @@ on_dependency_gained = {
 				}
 				rename_iberia_effect = yes
 			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = PER
+						tag = PRZ
+						tag = PRC
+						tag = PMN
+					}
+				}
+				override_country_name = PER_commune
+			}
 		}
 	}
 }

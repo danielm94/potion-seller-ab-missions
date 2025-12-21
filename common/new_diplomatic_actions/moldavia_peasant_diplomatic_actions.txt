@@ -4956,6 +4956,248 @@ integrate_into_atlas_communes = {
 	}
 }
 
+establish_persian_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = PER
+		}
+		NOT = {
+			exists = PRZ
+		}
+		NOT = {
+			exists = PRC
+		}
+		NOT = {
+			exists = PMN
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_PER_commune_diplomatic_actions
+		FROM = {
+			culture_group = iranian
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 75
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			if = {
+				limit = {
+					religion_group = muslim
+				}
+				change_tag = PRZ
+			}
+			else_if = {
+				limit = {
+					religion_group = christian
+				}
+				change_tag = PRC
+			}
+			else_if = {
+				limit = {
+					religion = manichaean
+				}
+				change_tag = PMN
+			}
+			else = {
+				change_tag = PER
+			}
+			save_global_event_target_as = AB_Persia_target
+			override_country_name = PER_commune
+			set_government_rank_force = 2
+			change_integrated_commune_color = yes
+			random_subject_country = {
+				limit = {
+					OR = {
+						tag = PER
+						tag = PRZ
+						tag = PRC
+						tag = PMN
+					}
+				}
+				every_province = {
+					limit = {
+						culture_group = iranian
+					}
+					add_permanent_claim = PREV
+				}
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_persian_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_PER_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		OR = {
+			exists = PER
+			exists = PRZ
+			exists = PRC
+			exists = PMN
+		}
+		any_subject_country = {
+			is_subject_of_type = integrated_commune
+			OR = {
+				tag = PER
+				tag = PRZ
+				tag = PRC
+				tag = PMN
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = PER
+			}
+			NOT = {
+				tag = PRZ
+			}
+			NOT = {
+				tag = PRC
+			}
+			NOT = {
+				tag = PMN
+			}
+			any_owned_province = {
+				culture_group = iranian
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = iranian
+				}
+				if = {
+					limit = {
+						PER = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+					PER = {
+						PREV = {
+							add_core = prev
+							cede_province = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						PRZ = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+					PRZ = {
+						PREV = {
+							add_core = prev
+							cede_province = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						PRC = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+					PRC = {
+						PREV = {
+							add_core = prev
+							cede_province = PREV
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						PMN = {
+							is_subject_of_type_with_overlord = {
+								who = root
+								type = integrated_commune
+							}
+						}
+					}
+					PMN = {
+						PREV = {
+							add_core = prev
+							cede_province = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
 designate_model_commune = {
 	category = league
 	require_acceptance = no

@@ -1317,3 +1317,38 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = get_formable_persian_commune_tag
+	random = no
+	text = {
+		localisation_key = PRZ_tag
+		trigger = {
+			FROM = {
+				religion_group = muslim
+			}
+		}
+	}
+	text = {
+		localisation_key = PRC_tag
+		trigger = {
+			FROM = {
+				religion_group = christian
+			}
+		}
+	}
+	text = {
+		localisation_key = PMN_tag
+		trigger = {
+			FROM = {
+				religion = manichaean
+			}
+		}
+	}
+	text = {
+		localisation_key = PER_tag
+		trigger = {
+			always = yes
+		}
+	}
+}

@@ -363,4 +363,12 @@
  integrate_into_atlas_communes: "@ATF Transfer to Atlas Federation"
  integrate_into_atlas_communes_title: "@ATF Transfer to Atlas Federation"
  integrate_into_atlas_communes_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YMaghrebi§! culture provinces to @ATF §Y[ATF.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YMaghrebi§! culture, they will be §Rfully annexed§! by @ATF §Y[ATF.GetName]§!."
- integrate_into_atlas_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YMaghrebi§! culture provinces to @ATF §Y[ATF.GetName]§!
+ integrate_into_atlas_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YMaghrebi§! culture provinces to @ATF §Y[ATF.GetName]§!"
+ establish_persian_commune: "@PER Establish Eran"
+ establish_persian_commune_title: "@PER Establish Eran"
+ establish_persian_commune_desc: "\n- @[From.GetTag] §Y[From.GetName]§! will become [get_formable_persian_commune_tag] §YCommonwealth of Eran§!.\n\n- The government rank of [get_formable_persian_commune_tag] §YCommonwealth of Eran§! changes to §YKingdom§!.\n\n- They will gain a permanent claim on all §YIranian§! culture provinces.\n\n\nYou can ask loyal £integrated_commune£§YIntegrated Commune§! or §YCossack Protectorate§! subjects to transfer §YIranian§! culture provinces to [get_formable_persian_commune_tag] §YCommonwealth of Eran§!.\n\n§RYOU CANNOT UNDO THIS DECISION! Think carefully on whether or not @[From.GetTag] §Y[From.GetName]§! is the best candidate to form [get_formable_persian_commune_tag] §YCommonwealth of Eran§!."
+ establish_persian_commune_tooltip: "@[From.GetTag] §Y[From.GetName]§! will become [get_formable_persian_commune_tag] §YCommonwealth of Eran§!"
+ integrate_into_persian_communes: "@PER Transfer to Eran"
+ integrate_into_persian_communes_title: "@PER Transfer to Eran"
+ integrate_into_persian_communes_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YIranian§! culture provinces to @[AB_Persia_target.GetTag] §Y[AB_Persia_target.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YIranian§! culture, they will be §Rfully annexed§! by @[AB_Persia_target.GetTag] §Y[AB_Persia_target.GetName]§!."
+ integrate_into_persian_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YIranian§! culture provinces to @[AB_Persia_target.GetTag] §Y[AB_Persia_target.GetName]§!"

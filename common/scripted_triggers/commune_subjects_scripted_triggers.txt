@@ -125,6 +125,10 @@ is_formable_commune_subject = {
 		tag = IBE
 		tag = UAC
 		tag = MPL
+		tag = PER
+		tag = PRZ
+		tag = PRC
+		tag = PMN
 	}
 }
 
