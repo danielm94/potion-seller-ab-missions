@@ -2200,6 +2200,9 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_sicilian_bonus_tt
+			set_country_flag = integrated_commune_sicilian_bonus_flag
+			custom_tooltip = AB_EMPTY
 			custom_tooltip = integrated_commune_sardinian_bonus_tt
 			set_country_flag = integrated_commune_sardinian_bonus_flag
 			custom_tooltip = AB_EMPTY
@@ -14434,6 +14437,12 @@ ab_mop_5 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_tunisian_bonus_tt
+			set_country_flag = integrated_commune_tunisian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_berber_bonus_tt
+			set_country_flag = integrated_commune_berber_bonus_flag
+			custom_tooltip = AB_EMPTY
 			341 = {
 				remove_core = owner
 				add_core = root
@@ -14553,6 +14562,12 @@ ab_mop_5 = {
 			}
 		}
 		effect = {
+			custom_tooltip = integrated_commune_moroccan_bonus_tt
+			set_country_flag = integrated_commune_moroccan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_algerian_bonus_tt
+			set_country_flag = integrated_commune_algerian_bonus_flag
+			custom_tooltip = AB_EMPTY
 			4568 = {
 				remove_core = owner
 				add_core = root

@@ -629,3 +629,22 @@ integrated_commune_assyrian_bonus = {
 integrated_commune_kurdish_bonus = {
 	cavalry_fire = 0.2
 }
+integrated_commune_moroccan_bonus = {
+	defensiveness = 0.10
+}
+
+integrated_commune_berber_bonus = {
+	movement_speed = 0.05
+}
+
+integrated_commune_algerian_bonus = {
+	privateer_efficiency = 0.25
+}
+
+integrated_commune_tunisian_bonus = {
+	galley_power = 0.10
+}
+
+integrated_commune_sicilian_bonus = {
+	may_perform_slave_raid = yes
+}

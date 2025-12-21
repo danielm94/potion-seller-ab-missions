@@ -1023,4 +1023,54 @@ integrated_commune = {
 			total_development = 300
 		}
 	}
+	modifier_overlord = {
+		modifier = integrated_commune_moroccan_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_moroccan_bonus_flag
+			}
+			culture = moroccan
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_berber_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_berber_bonus_flag
+			}
+			culture = berber
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_algerian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_algerian_bonus_flag
+			}
+			culture = algerian
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_tunisian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_tunisian_bonus_flag
+			}
+			culture = tunisian
+			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_sicilian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_sicilian_bonus_flag
+			}
+			culture = sicilian
+			total_development = 300
+		}
+	}
 }
