@@ -2206,44 +2206,51 @@ change_integrated_commune_color = {
 }
 
 andalusia_balkanization_galicia_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					area = galicia_area
-				}
-				NOT = {
-					exists = GAL
+				event_target:andalusian_subject = {
+					any_owned_province = {
+						area = galicia_area
+					}
+					NOT = {
+						exists = GAL
+					}
 				}
 			}
 			custom_tooltip = andalusian_balkanization_GAL_tt
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						area = galicia_area
-					}
-					remove_core = owner
-					add_core = GAL
-					cede_province = GAL
-				}
-			}
-			if = {
-				limit = {
-					exists = GAL
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = GAL
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							area = galicia_area
 						}
+						remove_core = owner
+						add_core = GAL
+						cede_province = GAL
 					}
-					GAL = {
-						change_religion = catholic
-						change_primary_culture = galician
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 206
+					if = {
+						limit = {
+							exists = GAL
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = GAL
+								}
+							}
+							GAL = {
+								change_religion = catholic
+								change_primary_culture = galician
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 206
+								}
+							}
 						}
 					}
 				}
@@ -2253,25 +2260,14 @@ andalusia_balkanization_galicia_effect = {
 }
 
 andalusia_balkanization_leon_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = leon_area
-						area = extremadura_area
-						culture = leonese
-						province_id = 4548
-					}
-				}
-				NOT = {
-					exists = LON
-				}
-			}
-			custom_tooltip = andalusian_balkanization_LON_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = leon_area
 							area = extremadura_area
@@ -2279,28 +2275,46 @@ andalusia_balkanization_leon_effect = {
 							province_id = 4548
 						}
 					}
-					remove_core = owner
-					add_core = LON
-					cede_province = LON
+					NOT = {
+						exists = LON
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = LON
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = LON
+			custom_tooltip = andalusian_balkanization_LON_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = leon_area
+								area = extremadura_area
+								culture = leonese
+								province_id = 4548
+							}
 						}
+						remove_core = owner
+						add_core = LON
+						cede_province = LON
 					}
-					LON = {
-						change_religion = catholic
-						change_primary_culture = leonese
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 208
+					if = {
+						limit = {
+							exists = LON
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = LON
+								}
+							}
+							LON = {
+								change_religion = catholic
+								change_primary_culture = leonese
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 208
+								}
+							}
 						}
 					}
 				}
@@ -2310,50 +2324,57 @@ andalusia_balkanization_leon_effect = {
 }
 
 andalusia_balkanization_asturias_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = asturias_area
-						culture = Asturian
-					}
-				}
-				NOT = {
-					exists = ASU
-				}
-			}
-			custom_tooltip = andalusian_balkanization_ASU_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = asturias_area
 							culture = Asturian
 						}
 					}
-					remove_core = owner
-					add_core = ASU
-					cede_province = ASU
+					NOT = {
+						exists = ASU
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = ASU
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = ASU
+			custom_tooltip = andalusian_balkanization_ASU_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = asturias_area
+								culture = Asturian
+							}
 						}
+						remove_core = owner
+						add_core = ASU
+						cede_province = ASU
 					}
-					ASU = {
-						change_religion = catholic
-						change_primary_culture = Asturian
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 207
+					if = {
+						limit = {
+							exists = ASU
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = ASU
+								}
+							}
+							ASU = {
+								change_religion = catholic
+								change_primary_culture = Asturian
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 207
+								}
+							}
 						}
 					}
 				}
@@ -2363,50 +2384,57 @@ andalusia_balkanization_asturias_effect = {
 }
 
 andalusia_balkanization_navarra_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = basque_country
-						culture = basque
-					}
-				}
-				NOT = {
-					exists = NAV
-				}
-			}
-			custom_tooltip = andalusian_balkanization_NAV_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = basque_country
 							culture = basque
 						}
 					}
-					remove_core = owner
-					add_core = NAV
-					cede_province = NAV
+					NOT = {
+						exists = NAV
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = NAV
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = NAV
+			custom_tooltip = andalusian_balkanization_NAV_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = basque_country
+								culture = basque
+							}
 						}
+						remove_core = owner
+						add_core = NAV
+						cede_province = NAV
 					}
-					NAV = {
-						change_religion = catholic
-						change_primary_culture = basque
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 210
+					if = {
+						limit = {
+							exists = NAV
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = NAV
+								}
+							}
+							NAV = {
+								change_religion = catholic
+								change_primary_culture = basque
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 210
+								}
+							}
 						}
 					}
 				}
@@ -2416,50 +2444,57 @@ andalusia_balkanization_navarra_effect = {
 }
 
 andalusia_balkanization_aragon_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = aragon_area
-						culture = aragonese
-					}
-				}
-				NOT = {
-					exists = ARA
-				}
-			}
-			custom_tooltip = andalusian_balkanization_ARA_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = aragon_area
 							culture = aragonese
 						}
 					}
-					remove_core = owner
-					add_core = ARA
-					cede_province = ARA
+					NOT = {
+						exists = ARA
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = ARA
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = ARA
+			custom_tooltip = andalusian_balkanization_ARA_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = aragon_area
+								culture = aragonese
+							}
 						}
+						remove_core = owner
+						add_core = ARA
+						cede_province = ARA
 					}
-					ARA = {
-						change_religion = catholic
-						change_primary_culture = aragonese
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 214
+					if = {
+						limit = {
+							exists = ARA
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = ARA
+								}
+							}
+							ARA = {
+								change_religion = catholic
+								change_primary_culture = aragonese
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 214
+								}
+							}
 						}
 					}
 				}
@@ -2469,50 +2504,57 @@ andalusia_balkanization_aragon_effect = {
 }
 
 andalusia_balkanization_catalonia_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = catalonia_area
-						culture = catalan
-					}
-				}
-				NOT = {
-					exists = CAT
-				}
-			}
-			custom_tooltip = andalusian_balkanization_CAT_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = catalonia_area
 							culture = catalan
 						}
 					}
-					remove_core = owner
-					add_core = CAT
-					cede_province = CAT
+					NOT = {
+						exists = CAT
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = CAT
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = CAT
+			custom_tooltip = andalusian_balkanization_CAT_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = catalonia_area
+								culture = catalan
+							}
 						}
+						remove_core = owner
+						add_core = CAT
+						cede_province = CAT
 					}
-					CAT = {
-						change_religion = catholic
-						change_primary_culture = catalan
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 213
+					if = {
+						limit = {
+							exists = CAT
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = CAT
+								}
+							}
+							CAT = {
+								change_religion = catholic
+								change_primary_culture = catalan
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 213
+								}
+							}
 						}
 					}
 				}
@@ -2522,44 +2564,51 @@ andalusia_balkanization_catalonia_effect = {
 }
 
 andalusia_balkanization_majorica_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					area = baleares_area
-				}
-				NOT = {
-					exists = MJO
+				event_target:andalusian_subject = {
+					any_owned_province = {
+						area = baleares_area
+					}
+					NOT = {
+						exists = MJO
+					}
 				}
 			}
 			custom_tooltip = andalusian_balkanization_MJO_tt
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						area = baleares_area
-					}
-					remove_core = owner
-					add_core = MJO
-					cede_province = MJO
-				}
-			}
-			if = {
-				limit = {
-					exists = MJO
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = MJO
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							area = baleares_area
 						}
+						remove_core = owner
+						add_core = MJO
+						cede_province = MJO
 					}
-					MJO = {
-						change_religion = catholic
-						change_primary_culture = catalan
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 333
+					if = {
+						limit = {
+							exists = MJO
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = MJO
+								}
+							}
+							MJO = {
+								change_religion = catholic
+								change_primary_culture = catalan
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 333
+								}
+							}
 						}
 					}
 				}
@@ -2569,59 +2618,66 @@ andalusia_balkanization_majorica_effect = {
 }
 
 andalusia_balkanization_lusitania_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = beieras_area
-						area = alentejo_area
-						area = macaronesia_area
-					}
-				}
-				NOT = {
-					exists = POR
-				}
-			}
-			custom_tooltip = andalusian_balkanization_POR_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = beieras_area
 							area = alentejo_area
 							area = macaronesia_area
 						}
 					}
-					remove_core = owner
-					add_core = POR
-					cede_province = POR
+					NOT = {
+						exists = POR
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = POR
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = POR
-						}
-					}
-					POR = {
-						change_religion = catholic
-						change_primary_culture = Lusitanian
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 231
-						}
-						every_owned_province = {
-							limit = {
+			custom_tooltip = andalusian_balkanization_POR_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
 								area = beieras_area
-								religion_group = christian
+								area = alentejo_area
+								area = macaronesia_area
 							}
-							change_culture = Lusitanian
+						}
+						remove_core = owner
+						add_core = POR
+						cede_province = POR
+					}
+					if = {
+						limit = {
+							exists = POR
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = POR
+								}
+							}
+							POR = {
+								change_religion = catholic
+								change_primary_culture = Lusitanian
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 231
+								}
+								every_owned_province = {
+									limit = {
+										area = beieras_area
+										religion_group = christian
+									}
+									change_culture = Lusitanian
+								}
+							}
 						}
 					}
 				}
@@ -2631,29 +2687,14 @@ andalusia_balkanization_lusitania_effect = {
 }
 
 andalusia_balkanization_castille_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = castille_area
-						province_id = 219
-						province_id = 2751
-						province_id = 2754
-						province_id = 4547
-						province_id = 1748
-						province_id = 225
-						province_id = 224
-					}
-				}
-				NOT = {
-					exists = CAS
-				}
-			}
-			custom_tooltip = andalusian_balkanization_CAS_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = castille_area
 							province_id = 219
@@ -2665,28 +2706,50 @@ andalusia_balkanization_castille_effect = {
 							province_id = 224
 						}
 					}
-					remove_core = owner
-					add_core = CAS
-					cede_province = CAS
+					NOT = {
+						exists = CAS
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = CAS
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = CAS
+			custom_tooltip = andalusian_balkanization_CAS_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = castille_area
+								province_id = 219
+								province_id = 2751
+								province_id = 2754
+								province_id = 4547
+								province_id = 1748
+								province_id = 225
+								province_id = 224
+							}
 						}
+						remove_core = owner
+						add_core = CAS
+						cede_province = CAS
 					}
-					CAS = {
-						change_religion = catholic
-						change_primary_culture = castillian
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 219
+					if = {
+						limit = {
+							exists = CAS
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = CAS
+								}
+							}
+							CAS = {
+								change_religion = catholic
+								change_primary_culture = castillian
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 219
+								}
+							}
 						}
 					}
 				}
@@ -2696,25 +2759,14 @@ andalusia_balkanization_castille_effect = {
 }
 
 andalusia_balkanization_valencia_effect = {
-	event_target:new_peasant_subject = {
+	if = {
+		limit = {
+			has_saved_global_event_target = andalusian_subject
+		}
 		if = {
 			limit = {
-				any_owned_province = {
-					OR = {
-						area = valencia_area
-						province_id = 221
-						province_id = 1749
-						area = upper_andalucia_area
-					}
-				}
-				NOT = {
-					exists = VAL
-				}
-			}
-			custom_tooltip = andalusian_balkanization_VAL_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
+				event_target:andalusian_subject = {
+					any_owned_province = {
 						OR = {
 							area = valencia_area
 							province_id = 221
@@ -2722,28 +2774,46 @@ andalusia_balkanization_valencia_effect = {
 							area = upper_andalucia_area
 						}
 					}
-					remove_core = owner
-					add_core = VAL
-					cede_province = VAL
+					NOT = {
+						exists = VAL
+					}
 				}
 			}
-			if = {
-				limit = {
-					exists = VAL
-				}
-				hidden_effect = {
-					root = {
-						create_allied_commune = {
-							who = VAL
+			custom_tooltip = andalusian_balkanization_VAL_tt
+			hidden_effect = {
+				event_target:andalusian_subject = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = valencia_area
+								province_id = 221
+								province_id = 1749
+								area = upper_andalucia_area
+							}
 						}
+						remove_core = owner
+						add_core = VAL
+						cede_province = VAL
 					}
-					VAL = {
-						change_religion = catholic
-						change_primary_culture = Valencian
-						change_government = republic
-						add_government_reform = peasants_republic
-						set_capital_if_owned = {
-							id = 220
+					if = {
+						limit = {
+							exists = VAL
+						}
+						hidden_effect = {
+							root = {
+								create_allied_commune = {
+									who = VAL
+								}
+							}
+							VAL = {
+								change_religion = catholic
+								change_primary_culture = Valencian
+								change_government = republic
+								add_government_reform = peasants_republic
+								set_capital_if_owned = {
+									id = 220
+								}
+							}
 						}
 					}
 				}

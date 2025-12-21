@@ -740,21 +740,29 @@ country_event = {
 			}
 		}
 		custom_tooltip = AB_EMPTY
-		reverse_add_opinion = {
-			who = event_target:new_peasant_subject
-			modifier = balkanized_our_nation
-			multiplier = 10
-		}
-		event_target:new_peasant_subject = {
-			add_trust = {
-				who = root
-				value = -100
+		if = {
+			limit = {
+				has_saved_global_event_target = andalusian_subject
+			}
+			reverse_add_opinion = {
+				who = event_target:andalusian_subject
+				modifier = balkanized_our_nation
+				multiplier = 10
+			}
+			event_target:andalusian_subject = {
+				add_trust = {
+					who = root
+					value = -100
+				}
+			}
+			custom_tooltip = pissed_off_adu_tt
+			hidden_effect = {
+				free_vassal = event_target:andalusian_subject
 			}
 		}
-		custom_tooltip = pissed_off_adu_tt
-		hidden_effect = {
-			free_vassal = event_target:new_peasant_subject
-		}
+	}
+	after = {
+		clear_global_event_target = andalusian_subject
 	}
 }
 
