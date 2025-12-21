@@ -1004,13 +1004,23 @@ release_balkanized_commune_country = {
 		change_government = republic
 		add_government_reform = peasants_republic
 	}
-	if = {
-		limit = {
+	hidden_effect = {
+		if = {
+			limit = {
+				$target$ = {
+					is_part_of_hre = yes
+				}
+			}
 			$target$ = {
-				has_country_flag = has_core_on_capital
+				set_in_empire = no
 			}
 		}
-		hidden_effect = {
+		if = {
+			limit = {
+				$target$ = {
+					has_country_flag = has_core_on_capital
+				}
+			}
 			capital_scope = {
 				add_core = $target$
 			}
@@ -1018,8 +1028,6 @@ release_balkanized_commune_country = {
 				clr_country_flag = has_core_on_capital
 			}
 		}
-	}
-	hidden_effect = {
 		$target$ = {
 			change_religion = capital
 			if = {
@@ -1038,20 +1046,16 @@ release_balkanized_commune_country = {
 				}
 			}
 		}
-	}
-	if = {
-		limit = {
-			exists = $target$
-		}
-		hidden_effect = {
+		if = {
+			limit = {
+				exists = $target$
+			}
 			every_core_province = {
 				limit = {
 					owned_by = $target$
 				}
 				remove_core = PREV
 			}
-		}
-		hidden_effect = {
 			ROOT = {
 				create_allied_commune = {
 					who = $target$
