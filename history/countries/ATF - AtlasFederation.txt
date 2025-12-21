@@ -6,5 +6,3 @@ technology_group = muslim
 capital = 344 # Marrakech
 add_accepted_culture = berber
 religious_school = maliki_school
-
-
