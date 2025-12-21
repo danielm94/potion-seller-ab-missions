@@ -2876,6 +2876,14 @@ does_not_already_have_formable_idea_group = {
 				has_idea_group = MPL_ideas
 			}
 		}
+		else_if = {
+			limit = {
+				tag = ATF
+			}
+			NOT = {
+				has_idea_group = ATF_ideas
+			}
+		}
 		else = {
 			# If the tag is not one of the formables above, 
 			# the trigger returns true by default.

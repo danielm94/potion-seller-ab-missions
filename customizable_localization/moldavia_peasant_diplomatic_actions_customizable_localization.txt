@@ -192,6 +192,14 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = ATF_ideas_list
+		trigger = {
+			FROM = {
+				tag = ATF
+			}
+		}
+	}
 }
 
 defined_text = {

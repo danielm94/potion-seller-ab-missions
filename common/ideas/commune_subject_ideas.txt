@@ -344,3 +344,43 @@ MPL_ideas = {
 		cav_to_inf_ratio = 0.25
 	}
 }
+
+ATF_ideas = {
+	free = yes
+	trigger = {
+		tag = ATF
+	}
+	start = {
+		naval_morale = 0.2
+		galley_power = 0.25
+	}
+	bonus = {
+		privateer_efficiency = 0.5
+	}
+	ATF_first = {
+		caravan_power = 0.25
+		merchants = 1
+	}
+	ATF_second = {
+		development_cost = -0.05
+		build_cost = -0.05
+	}
+	ATF_third = {
+		center_of_trade_upgrade_cost = -0.2
+	}
+	ATF_fourth = {
+		regiment_disembark_speed = 1
+		global_sailors_modifier = 0.25
+	}
+	ATF_fifth = {
+		global_naval_barrage_cost = -0.5
+		galley_cost = -0.25
+	}
+	ATF_sixth = { #Kasbah
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.1
+	}
+	ATF_seventh = {
+		centralize_state_cost = -0.25
+	}
+}
