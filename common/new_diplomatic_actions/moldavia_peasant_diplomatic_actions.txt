@@ -4834,6 +4834,128 @@ integrate_into_iraqi_communes = {
 	}
 }
 
+establish_atlas_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		NOT = {
+			exists = ATF
+		}
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = unlock_ATF_commune_diplomatic_actions
+		FROM = {
+			culture_group = maghrebi
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 190
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 75
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			change_tag = ATF
+			set_government_rank_force = 2
+			change_integrated_commune_color = yes
+			every_province = {
+				limit = {
+					culture_group = maghrebi
+				}
+				add_permanent_claim = ATF
+			}
+			enable_adopt_new_ideas_commune = yes
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+integrate_into_atlas_communes = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_country_flag = unlock_ATF_commune_diplomatic_actions
+		has_government_mechanic = peasant_zealotry
+		exists = ATF
+		ATF = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = integrated_commune
+			}
+		}
+		FROM = {
+			NOT = {
+				tag = ATF
+			}
+			any_owned_province = {
+				culture_group = maghrebi
+			}
+			OR = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = cossack_protectorate
+				}
+			}
+		}
+	}
+	is_allowed = {
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 100
+			}
+		}
+		is_colonial_nation = no
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					culture_group = maghrebi
+				}
+				add_core = ATF
+				cede_province = ATF
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
 designate_model_commune = {
 	category = league
 	require_acceptance = no
