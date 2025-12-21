@@ -200,6 +200,38 @@ defined_text = {
 			}
 		}
 	}
+	text = {
+		localisation_key = PER_ideas_list
+		trigger = {
+			FROM = {
+				tag = PER
+			}
+		}
+	}
+	text = {
+		localisation_key = PRZ_ideas_list
+		trigger = {
+			FROM = {
+				tag = PRZ
+			}
+		}
+	}
+	text = {
+		localisation_key = PRC_ideas_list
+		trigger = {
+			FROM = {
+				tag = PRC
+			}
+		}
+	}
+	text = {
+		localisation_key = PMN_ideas_list
+		trigger = {
+			FROM = {
+				tag = PMN
+			}
+		}
+	}
 }
 
 defined_text = {
