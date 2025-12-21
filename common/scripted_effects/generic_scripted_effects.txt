@@ -3677,6 +3677,26 @@ identify_releasable_countries_for_target = {
 				}
 				set_country_flag = identified_releasable
 				store_releasable_country_event_target = yes
+				set_variable = {
+					external_core_provinces = 0
+				}
+				every_core_province = {
+					limit = {
+						owner = {
+							NOT = {
+								tag = ROOT
+							}
+							NOT = {
+								is_subject_of = ROOT
+							}
+						}
+					}
+					PREV = {
+						change_variable = {
+							external_core_provinces = 1
+						}
+					}
+				}
 				$target$ = {
 					change_variable = {
 						releasable_countries = 1
