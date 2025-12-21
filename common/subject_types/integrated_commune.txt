@@ -913,123 +913,114 @@ integrated_commune = {
 			total_development = 450
 		}
 	}
-}
-modifier_overlord = {
-	modifier = integrated_commune_al_misr_arabic_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_al_misr_arabic_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_al_misr_arabic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_al_misr_arabic_bonus_flag
+			}
+			culture = al_misr_arabic
+			total_development = 400
 		}
-		culture = al_misr_arabic
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_al_suryah_arabic_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_al_suryah_arabic_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_al_suryah_arabic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_al_suryah_arabic_bonus_flag
+			}
+			culture = al_suryah_arabic
+			total_development = 400
 		}
-		culture = al_suryah_arabic
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_al_iraqiya_arabic_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_al_iraqiya_arabic_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_al_iraqiya_arabic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_al_iraqiya_arabic_bonus_flag
+			}
+			culture = al_iraqiya_arabic
+			total_development = 300
 		}
-		culture = al_iraqiya_arabic
-		total_development = 300
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_bedouin_arabic_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_bedouin_arabic_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_bedouin_arabic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_bedouin_arabic_bonus_flag
+			}
+			culture = bedouin_arabic
+			total_development = 400
 		}
-		culture = bedouin_arabic
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_hejazi_culture_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_hejazi_culture_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_hejazi_culture_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_hejazi_culture_bonus_flag
+			}
+			culture = hejazi_culture
+			total_development = 400
 		}
-		culture = hejazi_culture
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_yemeni_culture_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_yemeni_culture_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_yemeni_culture_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_yemeni_culture_bonus_flag
+			}
+			culture = yemeni_culture
+			total_development = 400
 		}
-		culture = yemeni_culture
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_gulf_arabic_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_gulf_arabic_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_gulf_arabic_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_gulf_arabic_bonus_flag
+			}
+			culture = gulf_arabic
+			total_development = 400
 		}
-		culture = gulf_arabic
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_omani_culture_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_omani_culture_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_omani_culture_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_omani_culture_bonus_flag
+			}
+			culture = omani_culture
+			total_development = 400
 		}
-		culture = omani_culture
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_mahri_culture_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_mahri_culture_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_mahri_culture_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_mahri_culture_bonus_flag
+			}
+			culture = mahri_culture
+			total_development = 400
 		}
-		culture = mahri_culture
-		total_development = 400
 	}
-}
-
-modifier_overlord = {
-	modifier = integrated_commune_assyrian_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_assyrian_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_assyrian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_assyrian_bonus_flag
+			}
+			culture = assyrian
+			total_development = 300
 		}
-		culture = assyrian
-		total_development = 300
 	}
-}
-modifier_overlord = {
-	modifier = integrated_commune_kurdish_bonus 
-	trigger = {
-		overlord = {
-			has_country_flag = integrated_commune_kurdish_bonus_flag
+	modifier_overlord = {
+		modifier = integrated_commune_kurdish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_kurdish_bonus_flag
+			}
+			culture = kurdish
+			total_development = 300
 		}
-		culture = kurdish
-		total_development = 300
 	}
 }
