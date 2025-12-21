@@ -1048,7 +1048,7 @@ estate_razesi_exemplarism = {
 		}
 	}
 	loyalty = 0.05
-	influence = 0.15
+	influence = 0.1
 	is_valid = {
 		has_government_mechanic = peasant_zealotry
 	}
@@ -1104,7 +1104,7 @@ estate_razesi_exemplarism = {
 		}
 		is_bad = yes
 	}
-	cooldown_years = 25
+	cooldown_years = 10
 	ai_will_do = {
 		factor = 1
 	}
@@ -1151,7 +1151,7 @@ estate_razesi_internationalism = {
 		}
 	}
 	loyalty = 0.05
-	influence = 0.15
+	influence = 0.1
 	is_valid = {
 		has_government_mechanic = peasant_zealotry
 	}
@@ -1195,7 +1195,7 @@ estate_razesi_internationalism = {
 	mechanics = {
 		exempt_from_seize_land
 	}
-	cooldown_years = 25
+	cooldown_years = 10
 	ai_will_do = {
 		factor = 1
 	}
@@ -1241,7 +1241,7 @@ estate_razesi_revolution = {
 			global_spy_defence = 0.25
 		}
 	}
-	influence = 0.15
+	influence = 0.1
 	loyalty = 0.05
 	is_valid = {
 		has_government_mechanic = peasant_zealotry
@@ -1283,7 +1283,7 @@ estate_razesi_revolution = {
 	mechanics = {
 		exempt_from_seize_land
 	}
-	cooldown_years = 25
+	cooldown_years = 10
 	ai_will_do = {
 		factor = 1
 	}
