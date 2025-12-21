@@ -48,17 +48,110 @@ po_install_peasant_government = {
 			power_type = peasant_zeal
 			scaled_with_gain_modifier = yes
 		}
-		if = {
-			limit = {
-				FROM = {
-					is_part_of_hre = yes
+		FROM = {
+			every_subject_country = {
+				limit = {
+					is_lesser_in_union = yes
 				}
-			}
-			change_variable = {
-				hre_nations_liberated = 1
-			}
-			FROM = {
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					ROOT = {
+						change_variable = {
+							hre_nations_liberated = 1
+						}
+					}
+					set_in_empire = no
+				}
+				change_government = republic
+				add_government_reform = peasants_republic
+				kill_ruler = yes
+				remove_country_modifier = incited_peasantry
+				remove_country_modifier = incited_peasantry_great_peasants_war
+				remove_all_rebels_in_country = yes
+				add_trust = {
+					who = ROOT
+					value = -100
+				}
+				add_trust = {
+					who = ROOT
+					value = 50
+				}
+				ROOT = {
+					create_allied_commune = {
+						who = PREV
+					}
+				}
+				add_aggressive_expansion = {
+					who = ROOT
+					value = -1000
+					apply_calc = no
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = declared_war_on_us
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = had_war_with_us
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = caught_spy
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = peasant_scum_opinion
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = incited_peasants_opinion
+				}
+				ROOT = {
+					remove_opinion = {
+						who = PREV
+						modifier = tyrant_scum_opinion
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = liberated_us_from_nobles
+				}
+				if = {
+					limit = {
+						is_or_was_tag = {
+							tag = ADU
+						}
+						any_owned_province = {
+							region = iberia_region
+						}
+					}
+					save_global_event_target_as = andalusian_subject
+					ROOT = {
+						country_event = {
+							id = moldavia_peasant_events.13
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						tag = PAP
+					}
+					ROOT = {
+						country_event = {
+							id = moldavia_peasant_events.8
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						tag = ABS
+					}
+					change_tag = EGY
+					swap_free_idea_group = yes
+				}
+				calculate_total_development_of_commune_subjects = yes
 			}
 		}
 		FROM = {
@@ -79,6 +172,19 @@ po_install_peasant_government = {
 		}
 		create_allied_commune = {
 			who = FROM
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_part_of_hre = yes
+				}
+			}
+			change_variable = {
+				hre_nations_liberated = 1
+			}
+			FROM = {
+				set_in_empire = no
+			}
 		}
 		FROM = {
 			if = {
@@ -132,9 +238,6 @@ po_install_peasant_government = {
 			who = FROM
 			modifier = liberated_us_from_nobles
 		}
-		FROM = {
-			save_global_event_target_as = new_peasant_subject
-		}
 		if = {
 			limit = {
 				FROM = {
@@ -146,11 +249,17 @@ po_install_peasant_government = {
 					}
 				}
 			}
+			FROM = {
+				save_global_event_target_as = andalusian_subject
+			}
 			country_event = {
 				id = moldavia_peasant_events.13
 			}
 		}
 		else = {
+			FROM = {
+				save_global_event_target_as = new_peasant_subject
+			}
 			identify_releasable_countries_for_target = {
 				target = event_target:new_peasant_subject
 			}
