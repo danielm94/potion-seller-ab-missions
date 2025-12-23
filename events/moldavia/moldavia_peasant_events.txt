@@ -755,10 +755,7 @@ country_event = {
 					value = -100
 				}
 			}
-			custom_tooltip = pissed_off_adu_tt
-			hidden_effect = {
-				free_vassal = event_target:andalusian_subject
-			}
+			add_liberty_desire = 50
 		}
 	}
 	after = {
