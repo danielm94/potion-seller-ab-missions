@@ -301,6 +301,13 @@ development_of_infrastructure = {
 			factor = 2
 			has_idea_group = infrastructure_ideas
 		}
+		modifier = {
+			factor = 3
+			faction_influence = {
+				faction = exemplarists_faction
+				influence = 50
+			}
+		}
 	}
 
 	ai_will_do = {
