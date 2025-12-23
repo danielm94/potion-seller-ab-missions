@@ -54,6 +54,9 @@ cossack_protectorate = {
 			}
 		}
 	}
+	can_fight = {
+		independent_nations = yes
+	}
 	overlord_opinion_modifier = cossack_protectorate_opinion
 	subject_opinion_modifier = cossack_protectorate_opinion
 	modifier_subject = {

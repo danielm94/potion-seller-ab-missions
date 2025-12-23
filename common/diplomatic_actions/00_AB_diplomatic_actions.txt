@@ -604,6 +604,18 @@ declarewar = {
 				calculate_peasant_zeal_call_to_arms_cost = yes
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of_type = cossack_protectorate
+				}
+			}
+			FROM = {
+				overlord = {
+					join_all_defensive_wars_of = FROM
+				}
+			}
+		}
 	}
 }
 
