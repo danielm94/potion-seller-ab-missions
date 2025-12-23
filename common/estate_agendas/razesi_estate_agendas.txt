@@ -635,6 +635,7 @@ estate_razesi_support_rebels = {
 		has_government_mechanic = peasant_zealotry
 		any_country = {
 			has_radicalized_peasantry_country = yes
+			is_subject = no
 		}
 	}
 	provinces_to_highlight = {
@@ -647,6 +648,7 @@ estate_razesi_support_rebels = {
 		random_country = {
 			limit = {
 				has_radicalized_peasantry_country = yes
+				is_subject = no
 			}
 			save_event_target_as = agenda_country
 			capital_scope = {
