@@ -149,10 +149,20 @@ country_event = {
 				NOT = {
 					has_government_attribute = MAY_free_diplo_annexation
 				}
+				FROM = {
+					NOT = {
+						has_country_flag = remove_annexers_legacy_token
+					}
+				}
 			}
 			add_country_modifier = {
 				name = "annexers_legacy"
 				duration = 3650
+			}
+		}
+		else = {
+			FROM = {
+				clr_country_flag = remove_annexers_legacy_token
 			}
 		}
 		tooltip = {

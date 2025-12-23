@@ -588,6 +588,16 @@ estate_razesi_integrate_subject = {
 				}
 				remove_country_modifier = annexers_legacy
 			}
+			else = {
+				if = {
+					limit = {
+						has_saved_event_target = agenda_country
+					}
+					event_target:agenda_country = {
+						set_country_flag = remove_annexers_legacy_token
+					}
+				}
+			}
 		}
 		if = {
 			limit = {
