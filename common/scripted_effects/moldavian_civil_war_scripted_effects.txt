@@ -76,6 +76,33 @@ setup_MOP_effect = {
 			trait = inspirational_leader_general_personality
 		}
 	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+		MOP = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				galley = owner
+				galley = owner
+				galley = owner
+				galley = owner
+				transport = owner
+				transport = owner
+				transport = owner
+				transport = owner
+				transport = owner
+				light_ship = owner
+				light_ship = owner
+			}
+		}
+	}
 }
 
 #SCOPE = COUNTRY
@@ -96,5 +123,15 @@ setup_boyar_MOL_effect = {
 		manuever = 2
 		siege = 3
 		trait = born_to_the_saddle_personality
+	}
+	if = {
+		limit = {
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+		}
+		disband_all_ships = yes
 	}
 }
