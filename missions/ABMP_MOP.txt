@@ -772,7 +772,7 @@ ab_mop_misc_4 = {
 					num_of_times_expanded_infrastructure = 1
 				}
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = root
 				}
 				devastation = 1
 			}
@@ -787,7 +787,7 @@ ab_mop_misc_4 = {
 			else = {
 				moldavia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = root
+					owned_by = root
 					num_of_times_improved = 5
 					NOT = {
 						devastation = 1
@@ -796,7 +796,7 @@ ab_mop_misc_4 = {
 				}
 				bessarabia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = root
+					owned_by = root
 					num_of_times_improved = 5
 					NOT = {
 						devastation = 1
