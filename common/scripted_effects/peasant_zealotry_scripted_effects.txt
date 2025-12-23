@@ -160,8 +160,8 @@ clear_all_radicalized_peasantry = {
 				}
 			}
 		}
-		owner ={
-			clr_country_flag = has_radicalized_peasantry
+		owner = {
+			remove_radicalized_peasantry_flag = yes
 		}
 		remove_province_modifier = radicalized_peasantry
 	}
@@ -345,4 +345,9 @@ refresh_radicalized_peasantry_in_province = {
 		name = radicalized_peasantry
 		duration = 3650
 	}
+}
+
+#SCOPE = COUNTRY
+remove_radicalized_peasantry_flag = {
+	clr_country_flag = has_radicalized_peasantry
 }

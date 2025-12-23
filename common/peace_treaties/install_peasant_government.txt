@@ -65,6 +65,7 @@ po_install_peasant_government = {
 					limit = {
 						is_lesser_in_union = yes
 					}
+					remove_radicalized_peasantry_flag = yes
 					change_government = republic
 					add_government_reform = peasants_republic
 					kill_ruler = yes
@@ -155,8 +156,7 @@ po_install_peasant_government = {
 					calculate_total_development_of_commune_subjects = yes
 				}
 			}
-		}
-		FROM = {
+			remove_radicalized_peasantry_flag = yes
 			change_government = republic
 			add_government_reform = peasants_republic
 			kill_ruler = yes
