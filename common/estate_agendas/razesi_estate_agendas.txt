@@ -636,19 +636,25 @@ estate_razesi_support_rebels = {
 		any_country = {
 			has_radicalized_peasantry_country = yes
 			is_subject = no
+			NOT = {
+				war_with = root
+			}
 		}
 	}
 	provinces_to_highlight = {
 		province_id = event_target:agenda_country_capital
 	}
 	selection_weight = {
-		factor = 3
+		factor = 2
 	}
 	pre_effect = {
 		random_country = {
 			limit = {
 				has_radicalized_peasantry_country = yes
 				is_subject = no
+				NOT = {
+					war_with = root
+				}
 			}
 			save_event_target_as = agenda_country
 			capital_scope = {
