@@ -92,7 +92,7 @@ great_kievan_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	global_manpower_modifier = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 azov_commune = {

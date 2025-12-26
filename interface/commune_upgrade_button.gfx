@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_commune_upgrade_button"
+		texturefile = "gfx/interface/buttons/upgrade_commune/commune_upgrade_button.dds"
+		loadType = "INGAME"
+	}
+}
