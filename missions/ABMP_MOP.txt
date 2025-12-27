@@ -4069,145 +4069,11 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_develop_north_china = {
-		icon = jap_conquer_north_china
-		position = 17
-		required_missions = {
-			mop_north_china
-		}
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 1816
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 45
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 3
-						}
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-						has_courthouse_building_trigger = no
-						NOT = {
-							has_building = state_house
-						}
-						has_road_building_trigger = no
-						has_fort_building_trigger = no
-						NOT = {
-							has_great_project = {
-								type = forbidden_city_peasant
-								tier = 1
-							}
-						}
-						NOT = {
-							has_great_project = {
-								type = northern_canal
-								tier = 2
-							}
-						}
-					}
-				}
-				AND = {
-					province_id = 700
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_production_building_trigger = no
-						has_fort_building_trigger = no
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				1816 = {
-					owned_by = root
-					development = 45
-					num_of_times_expanded_infrastructure = 3
-					province_has_center_of_trade_of_level = 2
-					has_courthouse_building_trigger = yes
-					has_building = state_house
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_great_project = {
-						type = forbidden_city_peasant
-						tier = 1
-					}
-					has_great_project = {
-						type = northern_canal
-						tier = 2
-					}
-				}
-				700 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
-					province_has_center_of_trade_of_level = 2
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_production_building_trigger = yes
-					has_fort_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			1816 = {
-				remove_province_modifier = mop_beijing_commune
-				add_province_modifier = {
-					name = mop_great_beijing_commune
-					duration = -1
-				}
-			}
-			700 = {
-				remove_province_modifier = mop_xian_commune
-				add_province_modifier = {
-					name = mop_great_xian_commune
-					duration = -1
-				}
-			}
-			custom_tooltip = mop_enhanced_rally_the_communes_tt
-			set_country_flag = mop_enhanced_rally_the_communes
-			tooltip = {
-				add_country_modifier = {
-					name = peasant_diplomacy_mod_enhanced
-					duration = -1
-				}
-			}
-			add_reform_progress_big_effect = yes
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 20
-			}
-		}
-	}
 	mop_xinan = {
 		icon = GFX_mop_xinan
 		position = 18
 		required_missions = {
-			mop_develop_north_china
+			mop_north_china
 		}
 		provinces_to_highlight = {
 			region = xinan_region
@@ -6851,7 +6717,7 @@ ab_mop_3 = {
 		icon = mission_to_the_south_china_sea
 		position = 18
 		required_missions = {
-			mop_develop_north_china
+			mop_north_china
 		}
 		provinces_to_highlight = {
 			region = south_china_region

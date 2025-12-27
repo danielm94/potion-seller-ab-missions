@@ -1145,6 +1145,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = tooltip_line_divider
 		remove_province_modifier = mop_beijing_commune
 		add_province_modifier = {
 			name = mop_great_beijing_commune
@@ -1163,6 +1164,65 @@ custom_button = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 20
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = xian_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 700
+		has_province_modifier = mop_xian_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			num_of_times_expanded_infrastructure = 2
+			province_has_center_of_trade_of_level = 2
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_road_building_trigger = yes
+			has_fort_building_trigger = yes
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_xian_commune
+		add_province_modifier = {
+			name = mop_great_xian_commune
+			duration = -1
+		}
+		owner = {
+			define_advisor = {
+				type = trader
+				skill = 3
+				culture = xibei
+				religion = confucianism
+				cost_multiplier = 0.25
+				location = 700
+			}
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}
