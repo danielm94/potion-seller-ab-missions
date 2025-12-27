@@ -6773,92 +6773,11 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_qaraqorum = {
-		icon = GFX_mop_qaraqorum
-		position = 16
-		required_missions = {
-			mop_mongolia
-		}
-		provinces_to_highlight = {
-			province_id = 2190
-			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
-				NOT = {
-					cavalry_in_province = 20
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				NOT = {
-					development = 25
-				}
-				NOT = {
-					base_manpower = 12
-				}
-				has_fort_building_trigger = no
-				has_manpower_building_trigger = no
-				has_forcelimit_building_trigger = no
-				has_road_building_trigger = no
-				has_trade_building_trigger = no
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				2190 = {
-					owned_by = ROOT
-					cavalry_in_province = 20
-					province_has_center_of_trade_of_level = 2
-					development = 25
-					base_manpower = 12
-					has_fort_building_trigger = yes
-					has_manpower_building_trigger = yes
-					has_forcelimit_building_trigger = yes
-					has_road_building_trigger = yes
-					has_trade_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			2190 = {
-				kill_units = {
-					who = owner
-					type = cavalry
-					amount = 20
-				}
-				remove_province_modifier = mop_qaraqorum_commune
-				add_province_modifier = {
-					name = mop_great_qaraqorum_commune
-					duration = -1
-				}
-			}
-			add_army_professionalism = 0.05
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
-			}
-			custom_tooltip = YUA_FESTIVAL
-			custom_tooltip = YUA_FESTIVAL_2
-			set_country_flag = yua_can_earn_festival_bonus
-			hidden_effect = {
-				country_event = {
-					id = moldavia_peasant_events.5
-				}
-			}
-		}
-	}
 	mop_manchuria = {
 		icon = mission_mukden
 		position = 17
 		required_missions = {
-			mop_qaraqorum
+			mop_mongolia
 		}
 		provinces_to_highlight = {
 			region = manchuria_region
