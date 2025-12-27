@@ -221,7 +221,7 @@ mop_great_commune_of_dubrovnik = {
 	local_development_cost = -0.1
 	local_great_project_upgrade_cost = -0.5
 	sailors_recovery_speed = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_prepare_to_confront_venice = {
@@ -284,7 +284,7 @@ mop_great_fortress_commune_of_moscow = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	land_maintenance_modifier = -0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_great_krakow_commune = {
@@ -293,7 +293,7 @@ mop_great_krakow_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	land_attrition = -0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 agitated_guilds_mod = {
@@ -322,7 +322,7 @@ mop_great_kazan_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	movement_speed = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_krepost = {
@@ -386,7 +386,7 @@ mop_holy_commune_of_riga = {
 	local_development_cost = -0.1
 	global_trade_goods_size_modifier = 0.1
 	global_missionary_strength = 0.02
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_commune_of_khiva = {
@@ -404,7 +404,7 @@ mop_great_commune_of_khiva = {
 	province_trade_power_value = 25
 	local_development_cost = -0.1
 	caravan_power = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_siberian_frontier_subject = {
@@ -427,7 +427,7 @@ mop_great_qaraqorum_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	cavalry_power = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_dragon_slayer = {
@@ -449,7 +449,7 @@ mop_great_beijing_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	vassal_income = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_hangzhou_commune = {
@@ -467,7 +467,7 @@ mop_great_hangzhou_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	production_efficiency = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_canton_commune = {
@@ -485,7 +485,7 @@ mop_great_canton_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	diplomatic_upkeep = 2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_chengdu_commune = {
@@ -503,7 +503,7 @@ mop_great_chengdu_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	manpower_recovery_speed = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_xian_commune = {
@@ -521,7 +521,7 @@ mop_great_xian_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	global_trade_power = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_vladivostoc_commune = {
@@ -539,7 +539,7 @@ mop_great_vladivostoc_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	heavy_ship_cost = -0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_venture_into_pacific = {
@@ -574,7 +574,7 @@ mop_great_berlin_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	army_tradition = 1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_wendish_fortifications = {
@@ -598,7 +598,7 @@ mop_great_bergenhus_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	ship_trade_power_modifier = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_copenhaga_commune = {
@@ -616,7 +616,7 @@ mop_great_copenhaga_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	galley_power = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_gotland_commune = {
@@ -634,7 +634,7 @@ mop_great_gotland_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	naval_tradition_from_trade = 0.5
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_aland_commune = {
@@ -652,7 +652,7 @@ mop_great_aland_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	naval_tradition_from_battle = 0.5
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_reykjavik_commune = {
@@ -670,7 +670,7 @@ mop_great_reykjavik_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	range = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_sound_toll = {
@@ -701,7 +701,7 @@ mop_great_pyeongyang_commune = {
 	local_development_cost = -0.1
 	monthly_peasant_zeal = 0.1
 	peasant_zeal_gain_modifier = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_chioto_commune = {
@@ -719,7 +719,7 @@ mop_great_chioto_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	infantry_shock = 0.3
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_thimpu_commune = {
@@ -737,7 +737,7 @@ mop_great_thimpu_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	infantry_fire = 0.3
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_dzong_citadels = {
@@ -776,7 +776,7 @@ mop_great_satrapeia_commune = {
 	local_development_cost = -0.1
 	fire_damage = 0.05
 	max_general_fire = 1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_antiohia_commune = {
@@ -813,7 +813,7 @@ mop_great_bagdad_commune = {
 	local_development_cost = -0.1
 	technology_cost = -0.05
 	idea_cost = -0.05
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_restore_grand_library_of_bagdad = {
@@ -835,7 +835,7 @@ mop_great_moca_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	global_trade_goods_size = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_alexandria_commune = {
@@ -867,7 +867,7 @@ mop_great_portul_abas_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	trade_company_investment_cost = -0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_explore_indian_ocean = {
@@ -910,7 +910,7 @@ mop_great_malta_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	privateer_efficiency = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_venice_commune = {
@@ -948,7 +948,7 @@ mop_great_genoa_commune = {
 	local_development_cost = -0.15
 	light_ship_cost = -0.1
 	sea_repair = yes
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_roman_commune = {
@@ -999,7 +999,7 @@ mop_great_viena_commune = {
 	local_development_cost = -0.1
 	diplomatic_annexation_cost = -0.05
 	diplomatic_reputation = 0.5
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_oktoberfest = {
@@ -1022,7 +1022,7 @@ mop_great_nurnberg_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	adm_tech_cost_modifier = -0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_federation_standard_time = {
@@ -1048,7 +1048,7 @@ mop_great_hamburg_commune = {
 	province_trade_power_value = 10
 	local_development_cost = -0.05
 	global_trade_power = 0.05
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_frankfurt_commune = {
@@ -1067,7 +1067,7 @@ mop_great_frankfurt_commune = {
 	local_development_cost = -0.1
 	placed_merchant_power = 3
 	interest = -0.5
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_freude = {
@@ -1092,7 +1092,7 @@ mop_great_bordeaux_commune = {
 	local_development_cost = -0.1
 	leader_land_fire = 1
 	fire_damage = 0.05
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_tunis_commune = {
@@ -1110,7 +1110,7 @@ mop_great_tunis_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	galley_number_of_cannons_modifier = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_demnat_commune = {
@@ -1128,7 +1128,7 @@ mop_great_demnat_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	envoy_travel_time = -0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_agadir_system = {
@@ -1161,7 +1161,7 @@ mop_great_amsterdam_commune = {
 	province_trade_power_value = 20
 	local_development_cost = -0.2
 	development_cost = -0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_paris_commune = {
@@ -1179,7 +1179,7 @@ mop_great_paris_commune = {
 	local_development_cost = -0.1
 	prestige = 1
 	num_accepted_cultures = 1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_peasants_in_paris = {
@@ -1202,7 +1202,7 @@ mop_great_lothian_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	shock_damage = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_highland_charge = {
@@ -1227,7 +1227,7 @@ mop_great_londra_commune = {
 	local_development_cost = -0.1
 	amount_of_man_of_war = 10
 	naval_morale = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_pale_commune = {
@@ -1245,7 +1245,7 @@ mop_great_pale_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	rebel_support_efficiency = 2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_irish_defiance = {
@@ -1284,7 +1284,7 @@ mop_great_granada_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	global_heathen_missionary_strength = 0.03
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_barcelona_commune = {
@@ -1304,7 +1304,7 @@ mop_great_barcelona_commune = {
 	local_development_cost = -0.1
 	amount_of_tercio = 10
 	ship_power_propagation = 0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_northern_tercios = {
@@ -1334,7 +1334,7 @@ mop_great_kabul_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	trade_company_governing_cost = -0.2
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_jewel_of_the_black_sea = {
