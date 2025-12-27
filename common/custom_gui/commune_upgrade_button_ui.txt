@@ -1,6 +1,6 @@
 custom_button = {
 	name = kiev_commune_upgrade_button
-	tooltip = AB_EMPTY
+	tooltip = construct_great_commune_tt
 	potential = {
 		province_id = 280
 		has_province_modifier = kievan_commune
@@ -76,7 +76,7 @@ custom_button = {
 
 custom_button = {
 	name = ragusa_commune_upgrade_button
-	tooltip = AB_EMPTY
+	tooltip = construct_great_commune_tt
 	potential = {
 		province_id = 137
 		has_province_modifier = mop_commune_of_dubrovnik
@@ -167,7 +167,7 @@ custom_button = {
 
 custom_button = {
 	name = azov_commune_upgrade_button
-	tooltip = AB_EMPTY
+	tooltip = azov_commune_upgrade_button_tt
 	potential = {
 		province_id = 286
 		has_province_modifier = azov_commune
@@ -222,6 +222,74 @@ custom_button = {
 			}
 		}
 		owner = {
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = astrakhan_commune_upgrade_button
+	tooltip = astrakhan_commune_upgrade_button_tt
+	potential = {
+		province_id = 464
+		has_province_modifier = astrakhan_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 25
+			province_has_center_of_trade_of_level = 2
+			has_trade_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		upgrade_center_of_trade = yes
+		upgrade_trade_building = yes
+		add_province_modifier = {
+			name = astrakhan_gate
+			duration = -1
+		}
+		4341 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 15
+				key = control_of_trade_to_black_sea_desc
+			}
+		}
+		owner = {
+			define_advisor = {
+				type = trader
+				skill = 1
+				cost_multiplier = 0.25
+				min_age = 18
+				max_age = 25
+			}
+			custom_tooltip = AB_EMPTY
 			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction

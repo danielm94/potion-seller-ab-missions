@@ -3995,84 +3995,84 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_the_caspian_gate = {
-		icon = toulon_dockyards
-		position = 11
-		required_missions = {
-			mop_march_to_sarai
-		}
-		provinces_to_highlight = {
-			province_id = 464
-			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
-				NOT = {
-					development = 25
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_dock_building_trigger = no
-				has_shipyard_building_trigger = no
-				has_coast_defense_building_trigger = no
-				has_trade_building_trigger = no
-				has_fort_building_trigger = no
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				464 = {
-					owned_by = ROOT
-					development = 25
-					province_has_center_of_trade_of_level = 2
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
-					has_coast_defense_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_fort_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			add_permanent_claim_province = {
-				province = 421
-			}
-			add_permanent_claim_province = {
-				province = 4341
-			}
-			custom_tooltip = tooltip_line_divider
-			464 = {
-				upgrade_center_of_trade = yes
-				upgrade_trade_building = yes
-				add_province_modifier = {
-					name = astrakhan_gate
-					duration = -1
-				}
-			}
-			add_mercantilism = 2
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 5
-			}
-			define_advisor = {
-				type = trader
-				skill = 1
-				cost_multiplier = 0.25
-				min_age = 18
-				max_age = 25
-			}
-			custom_tooltip = tooltip_line_divider
-			set_country_flag = enable_establish_consulate_po
-			custom_tooltip = enable_establish_consulate_po_tt
-		}
-	}
+	# mop_the_caspian_gate = {
+	# 	icon = toulon_dockyards
+	# 	position = 11
+	# 	required_missions = {
+	# 		mop_march_to_sarai
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		province_id = 464
+	# 		OR = {
+	# 			NOT = {
+	# 				owned_by = ROOT
+	# 			}
+	# 			NOT = {
+	# 				development = 25
+	# 			}
+	# 			NOT = {
+	# 				province_has_center_of_trade_of_level = 2
+	# 			}
+	# 			has_dock_building_trigger = no
+	# 			has_shipyard_building_trigger = no
+	# 			has_coast_defense_building_trigger = no
+	# 			has_trade_building_trigger = no
+	# 			has_fort_building_trigger = no
+	# 		}
+	# 	}
+	# 	trigger = {
+	# 		if = {
+	# 			limit = {
+	# 				is_debug_mode_enabled = yes
+	# 			}
+	# 			always = yes
+	# 		}
+	# 		else = {
+	# 			464 = {
+	# 				owned_by = ROOT
+	# 				development = 25
+	# 				province_has_center_of_trade_of_level = 2
+	# 				has_dock_building_trigger = yes
+	# 				has_shipyard_building_trigger = yes
+	# 				has_coast_defense_building_trigger = yes
+	# 				has_trade_building_trigger = yes
+	# 				has_fort_building_trigger = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_permanent_claim_province = {
+	# 			province = 421
+	# 		}
+	# 		add_permanent_claim_province = {
+	# 			province = 4341
+	# 		}
+	# 		custom_tooltip = tooltip_line_divider
+	# 		464 = {
+	# 			upgrade_center_of_trade = yes
+	# 			upgrade_trade_building = yes
+	# 			add_province_modifier = {
+	# 				name = astrakhan_gate
+	# 				duration = -1
+	# 			}
+	# 		}
+	# 		add_mercantilism = 2
+	# 		add_faction_influence = {
+	# 			faction = exemplarists_faction
+	# 			influence = 5
+	# 		}
+	# 		define_advisor = {
+	# 			type = trader
+	# 			skill = 1
+	# 			cost_multiplier = 0.25
+	# 			min_age = 18
+	# 			max_age = 25
+	# 		}
+	# 		custom_tooltip = tooltip_line_divider
+	# 		set_country_flag = enable_establish_consulate_po
+	# 		custom_tooltip = enable_establish_consulate_po_tt
+	# 	}
+	# }
 	mop_central_asia = {
 		icon = mission_central_asian_steppes
 		position = 12
