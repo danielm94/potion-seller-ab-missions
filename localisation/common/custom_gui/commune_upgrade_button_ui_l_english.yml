@@ -2,3 +2,4 @@
  construct_great_commune_tt: "§OConstruct Great Commune in [This.GetName]§!"
  azov_commune_upgrade_button_tt: "§OConstruct the Azov Gate§!"
  astrakhan_commune_upgrade_button_tt: "§OConstruct the Caspian Gate§!"
+ khiva_commune_random_silk_tt: "A random owned §YWool§!-producing province that we own will §Gstart producing§! §YSilk§!!"

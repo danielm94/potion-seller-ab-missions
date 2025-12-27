@@ -27,6 +27,7 @@ custom_button = {
 			}
 			has_tax_building_trigger = yes
 			has_manpower_building_trigger = yes
+			has_road_building_trigger = yes
 			has_fort_building_trigger = yes
 		}
 	}
@@ -107,6 +108,7 @@ custom_button = {
 				has_fort_building_trigger = yes
 			}
 			has_trade_building_trigger = yes
+			has_road_building_trigger = yes
 			has_great_project = {
 				type = walls_ston
 				tier = 1
@@ -197,6 +199,7 @@ custom_button = {
 				has_coast_defense_building_trigger = yes
 				has_fort_building_trigger = yes
 			}
+			has_road_building_trigger = yes
 		}
 	}
 	effect = {
@@ -263,6 +266,7 @@ custom_button = {
 				has_coast_defense_building_trigger = yes
 				has_fort_building_trigger = yes
 			}
+			has_road_building_trigger = yes
 		}
 	}
 	effect = {
@@ -290,6 +294,91 @@ custom_button = {
 				max_age = 25
 			}
 			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = khiva_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 441
+		has_province_modifier = mop_commune_of_khiva
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			has_production_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_road_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = itchan_kala
+				tier = 1
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		change_trade_goods = silk
+		custom_tooltip = khiva_commune_random_silk_tt
+		hidden_effect = {
+			owner = {
+				random_owned_province = {
+					limit = {
+						trade_goods = wool
+						NOT = {
+							province_id = 441
+						}
+					}
+					change_trade_goods = silk
+				}
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		remove_province_modifier = mop_commune_of_khiva
+		add_province_modifier = {
+			name = mop_great_commune_of_khiva
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = itchan_kala
+					tier = 3
+				}
+			}
+			owner = {
+				add_treasury = 3000
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = itchan_kala
+				tier = 1
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
 			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
