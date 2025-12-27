@@ -9876,13 +9876,6 @@ ab_mop_4 = {
 					duration = -1
 				}
 			}
-			define_advisor = {
-				type = trader
-				skill = 3
-				culture = baltic_german
-				location = 43
-				cost_multiplier = 0.5
-			}
 			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = patriarch

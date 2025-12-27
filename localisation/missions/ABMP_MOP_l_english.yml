@@ -163,7 +163,7 @@
  integrated_commune_baltic_bonus_tt: "£integrated_commune£§YIntegrated Commune§! subjects of §YBaltic§! culture will grant us §G+1.00§! Max General Shock if they have more than §Y200§! total development."
  mop_baltic_ports_title: "Dominion of the Baltic"
  mop_baltic_ports_desc: "The twin cities of the Baltic must serve the dual pillars of our Republic: Wealth and Faith. Gdansc shall be forged into an unsinkable fortress of trade, funneling the grain of the Vistula to the world. Riga, the former seat of the Crusades, must be purged of its Latin heresy and consecrated as the spiritual capital of the North."
- control_danzig_and_riga_desc: "Controls the key Baltic ports of Gdansc and Riga."
+ control_danzig_and_riga_desc: "Controls the key Baltic port of Gdansc."
  mop_central_asia_title: "Taming the Silk Road"
  mop_central_asia_desc: "The fabled cities of the Silk Road—Samarkand, Khiva, Bukhara—are the beating heart of Asian commerce. Yet, they are ruled by petty Khans and tribal warlords. The Hetmanate must ride south to break their power. We will seize the key nodes of the Silk Road and redirect its wealth exclusively towards the Republic."
  mop_central_asia_trigger_tt: "Every province in the §YCentral Asia§! region is owned by us, our £allied_commune£§YCommune Subject§!, a non-sovereign subject of our £allied_commune£§YCommune Subject§!, or our @HTM §YCossack Protectorate§!."
