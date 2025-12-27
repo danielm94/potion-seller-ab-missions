@@ -7,6 +7,7 @@ custom_button = {
 		owner = {
 			has_government_mechanic = peasant_zealotry
 		}
+		owned_by = FROM
 	}
 	trigger = {
 		if = {
@@ -18,7 +19,6 @@ custom_button = {
 			always = yes
 		}
 		else = {
-			owned_by = FROM
 			development = 30
 			num_of_times_expanded_infrastructure = 2
 			has_great_project = {
@@ -68,7 +68,7 @@ custom_button = {
 			add_patriarch_authority = 0.1
 			add_faction_influence = {
 				faction = exemplarists_faction
-				influence = 5
+				influence = 10
 			}
 		}
 	}
@@ -80,6 +80,7 @@ custom_button = {
 	potential = {
 		province_id = 137
 		has_province_modifier = mop_commune_of_dubrovnik
+		owned_by = FROM
 		owner = {
 			has_government_mechanic = peasant_zealotry
 		}
@@ -94,7 +95,6 @@ custom_button = {
 			always = yes
 		}
 		else = {
-			owned_by = FROM
 			development = 30
 			province_has_center_of_trade_of_level = 2
 			num_of_times_expanded_infrastructure = 2
@@ -157,6 +157,72 @@ custom_button = {
 			}
 			custom_tooltip = AB_EMPTY
 			add_yearly_sailors = 1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = azov_commune_upgrade_button
+	tooltip = AB_EMPTY
+	potential = {
+		province_id = 286
+		has_province_modifier = azov_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 25
+			province_has_center_of_trade_of_level = 2
+			has_trade_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		upgrade_center_of_trade = yes
+		upgrade_trade_building = yes
+		if = {
+			limit = {
+				has_province_modifier = azov_abolition_shock
+			}
+			remove_province_modifier = azov_abolition_shock
+		}
+		add_province_modifier = {
+			name = azov_gate
+			duration = -1
+		}
+		464 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 15
+				key = control_of_trade_to_black_sea_desc
+			}
+		}
+		owner = {
+			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10

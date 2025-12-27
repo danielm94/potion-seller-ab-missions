@@ -10079,82 +10079,82 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_the_black_sea_gate = {
-		icon = GFX_mop_the_black_sea_gate
-		position = 9
-		required_missions = {
-			mop_secure_crimea
-		}
-		provinces_to_highlight = {
-			province_id = 286
-			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
-				NOT = {
-					development = 25
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_dock_building_trigger = no
-				has_shipyard_building_trigger = no
-				has_coast_defense_building_trigger = no
-				has_trade_building_trigger = no
-				has_fort_building_trigger = no
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				286 = {
-					owned_by = ROOT
-					development = 25
-					province_has_center_of_trade_of_level = 2
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
-					has_coast_defense_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_fort_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			286 = {
-				upgrade_center_of_trade = yes
-				upgrade_trade_building = yes
-				if = {
-					limit = {
-						has_province_modifier = azov_abolition_shock
-					}
-					remove_province_modifier = azov_abolition_shock
-				}
-				add_province_modifier = {
-					name = azov_gate
-					duration = -1
-				}
-			}
-			add_mercantilism = 2
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 5
-			}
-			custom_tooltip = AB_EMPTY
-			464 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 15
-					key = control_of_trade_to_black_sea_desc
-				}
-			}
-		}
-	}
+	# mop_the_black_sea_gate = {
+	# 	icon = GFX_mop_the_black_sea_gate
+	# 	position = 9
+	# 	required_missions = {
+	# 		mop_secure_crimea
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		province_id = 286
+	# 		OR = {
+	# 			NOT = {
+	# 				owned_by = ROOT
+	# 			}
+	# 			NOT = {
+	# 				development = 25
+	# 			}
+	# 			NOT = {
+	# 				province_has_center_of_trade_of_level = 2
+	# 			}
+	# 			has_dock_building_trigger = no
+	# 			has_shipyard_building_trigger = no
+	# 			has_coast_defense_building_trigger = no
+	# 			has_trade_building_trigger = no
+	# 			has_fort_building_trigger = no
+	# 		}
+	# 	}
+	# 	trigger = {
+	# 		if = {
+	# 			limit = {
+	# 				is_debug_mode_enabled = yes
+	# 			}
+	# 			always = yes
+	# 		}
+	# 		else = {
+	# 			286 = {
+	# 				owned_by = ROOT
+	# 				development = 25
+	# 				province_has_center_of_trade_of_level = 2
+	# 				has_dock_building_trigger = yes
+	# 				has_shipyard_building_trigger = yes
+	# 				has_coast_defense_building_trigger = yes
+	# 				has_trade_building_trigger = yes
+	# 				has_fort_building_trigger = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		286 = {
+	# 			upgrade_center_of_trade = yes
+	# 			upgrade_trade_building = yes
+	# 			if = {
+	# 				limit = {
+	# 					has_province_modifier = azov_abolition_shock
+	# 				}
+	# 				remove_province_modifier = azov_abolition_shock
+	# 			}
+	# 			add_province_modifier = {
+	# 				name = azov_gate
+	# 				duration = -1
+	# 			}
+	# 		}
+	# 		add_mercantilism = 2
+	# 		add_faction_influence = {
+	# 			faction = exemplarists_faction
+	# 			influence = 5
+	# 		}
+	# 		custom_tooltip = AB_EMPTY
+	# 		464 = {
+	# 			add_trade_modifier = {
+	# 				who = ROOT
+	# 				duration = -1
+	# 				power = 15
+	# 				key = control_of_trade_to_black_sea_desc
+	# 			}
+	# 		}
+	# 	}
+	# }
 	mop_east_ukraine = {
 		icon = mission_early_russian_army
 		position = 10
