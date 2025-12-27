@@ -3,3 +3,5 @@
  azov_commune_upgrade_button_tt: "§OConstruct the Azov Gate§!"
  astrakhan_commune_upgrade_button_tt: "§OConstruct the Caspian Gate§!"
  khiva_commune_random_silk_tt: "A random owned §YWool§!-producing province that we own will §Gstart producing§! §YSilk§!!"
+ danube_gate_upgrade_button_tt: "§OConstruct the Gate of the Danube in [This.GetName]§!"
+ if_we_already_have_built_the_other_danubian_gate_tt: "If we have already constructed the §YGate of the Danube§! in the other province:"

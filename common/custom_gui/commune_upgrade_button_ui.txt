@@ -174,6 +174,9 @@ custom_button = {
 		province_id = 286
 		has_province_modifier = azov_commune
 		owned_by = FROM
+		NOT = {
+			has_province_modifier = azov_gate
+		}
 		owner = {
 			has_government_mechanic = peasant_zealotry
 		}
@@ -199,6 +202,7 @@ custom_button = {
 				has_coast_defense_building_trigger = yes
 				has_fort_building_trigger = yes
 			}
+			has_courthouse_building_trigger = yes
 			has_road_building_trigger = yes
 		}
 	}
@@ -244,6 +248,9 @@ custom_button = {
 		owner = {
 			has_government_mechanic = peasant_zealotry
 		}
+		NOT = {
+			has_province_modifier = astrakhan_gate
+		}
 	}
 	trigger = {
 		if = {
@@ -267,6 +274,7 @@ custom_button = {
 				has_fort_building_trigger = yes
 			}
 			has_road_building_trigger = yes
+			has_courthouse_building_trigger = yes
 		}
 	}
 	effect = {
@@ -383,6 +391,97 @@ custom_button = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = danube_gate_upgrade_button
+	tooltip = danube_gate_upgrade_button_tt
+	potential = {
+		OR = {
+			province_id = 1756
+			province_id = 4706
+		}
+		owned_by = FROM
+		owner = {
+			has_country_flag = danubian_toll_construction_enabled
+			has_government_mechanic = peasant_zealotry
+		}
+		NOT = {
+			has_province_modifier = gate_of_the_danube
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 20
+			num_of_times_expanded_infrastructure = 1
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+			has_trade_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_road_building_trigger = yes
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		complex_dynamic_effect = {
+			first_custom_tooltip = if_we_already_have_built_the_other_danubian_gate_tt
+			first_limit = "OR = {
+								1756 = {
+									has_province_modifier = gate_of_the_danube
+								}
+								4706 = {
+									has_province_modifier = gate_of_the_danube
+								}
+							}"
+			first_effect = "153 = {
+								add_trade_modifier = {
+									who = ROOT
+									duration = -1
+									power = 15
+									key = control_of_trade_to_black_sea_desc
+								}
+							}
+							134 = {
+								add_trade_modifier = {
+									who = ROOT
+									duration = -1
+									power = 10
+									key = control_of_trade_to_black_sea_desc
+								}
+							}
+							owner = {
+								add_treasury = 250
+								add_mercantilism = 1
+							}"
+		}
+		custom_tooltip = AB_EMPTY
+		center_of_trade = 1
+		add_province_modifier = {
+			name = gate_of_the_danube
+			duration = -1
+		}
+		owner = {
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 5
 			}
 		}
 	}
