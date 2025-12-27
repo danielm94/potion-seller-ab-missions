@@ -1105,3 +1105,65 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = beijing_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 1816
+		has_province_modifier = mop_beijing_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			num_of_times_expanded_infrastructure = 3
+			province_has_center_of_trade_of_level = 2
+			has_courthouse_building_trigger = yes
+			has_building = state_house
+			has_road_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_great_project = {
+				type = forbidden_city_peasant
+				tier = 1
+			}
+			has_great_project = {
+				type = northern_canal
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		remove_province_modifier = mop_beijing_commune
+		add_province_modifier = {
+			name = mop_great_beijing_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = mop_enhanced_rally_the_communes_tt
+			set_country_flag = mop_enhanced_rally_the_communes
+			tooltip = {
+				add_country_modifier = {
+					name = peasant_diplomacy_mod_enhanced
+					duration = -1
+				}
+			}
+			add_reform_progress_big_effect = yes
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
+			}
+		}
+	}
+}
