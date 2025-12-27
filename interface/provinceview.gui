@@ -1124,7 +1124,7 @@ guiTypes = {
 				scripted = yes
 			}
 			guiButtonType = {
-				name ="azov_commune_upgrade_button"
+				name ="azov_gate_upgrade_button"
 				scripted = yes
 				position = { x= 450 y = 60 }
 				quadTextureSprite ="GFX_commune_upgrade_button"
@@ -1137,7 +1137,7 @@ guiTypes = {
 				scripted = yes
 			}
 			guiButtonType = {
-				name ="astrakhan_commune_upgrade_button"
+				name ="astrakhan_gate_upgrade_button"
 				scripted = yes
 				position = { x= 450 y = 60 }
 				quadTextureSprite ="GFX_commune_upgrade_button"
@@ -1164,6 +1164,19 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name ="danube_gate_upgrade_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite ="GFX_commune_upgrade_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+			guiButtonType = {
+				name ="krakow_commune_upgrade_button"
 				scripted = yes
 				position = { x= 450 y = 60 }
 				quadTextureSprite ="GFX_commune_upgrade_button"

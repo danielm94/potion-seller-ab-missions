@@ -168,8 +168,8 @@ custom_button = {
 }
 
 custom_button = {
-	name = azov_commune_upgrade_button
-	tooltip = azov_commune_upgrade_button_tt
+	name = azov_gate_upgrade_button
+	tooltip = azov_gate_upgrade_button_tt
 	potential = {
 		province_id = 286
 		has_province_modifier = azov_commune
@@ -239,8 +239,8 @@ custom_button = {
 }
 
 custom_button = {
-	name = astrakhan_commune_upgrade_button
-	tooltip = astrakhan_commune_upgrade_button_tt
+	name = astrakhan_gate_upgrade_button
+	tooltip = astrakhan_gate_upgrade_button_tt
 	potential = {
 		province_id = 464
 		has_province_modifier = astrakhan_commune
@@ -482,6 +482,58 @@ custom_button = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 5
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = krakow_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 262
+		has_province_modifier = mop_krakow_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			base_production = 12
+			num_of_times_expanded_infrastructure = 2
+			province_has_center_of_trade_of_level = 2
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_road_building_trigger = yes
+			has_manufactory_trigger = yes
+		}
+	}
+	effect = {
+		remove_province_modifier = mop_krakow_commune
+		add_province_modifier = {
+			name = mop_great_krakow_commune
+			duration = -1
+		}
+		custom_tooltip = unlock_krakow_salt_mine_bonus_tt
+		owner = {
+			set_country_flag = unlock_krakow_salt_mine_bonus
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
 			}
 		}
 	}
