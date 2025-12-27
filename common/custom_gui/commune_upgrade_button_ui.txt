@@ -1356,3 +1356,79 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = bergenhus_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 23
+		has_province_modifier = mop_bergenhus_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			base_production = 12
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			has_trade_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_fort_building_trigger = yes
+				has_coast_defense_building_trigger = yes
+			}
+			has_great_project = {
+				type = bergen
+				tier = 1
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_bergenhus_commune
+		add_province_modifier = {
+			name = mop_great_bergenhus_commune
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = bergen
+					tier = 3
+				}
+			}
+			owner = {
+				add_treasury = 3000
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = bergen
+				tier = 1
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
+			add_navy_tradition = 25
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
