@@ -762,3 +762,94 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = riga_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 38
+		has_province_modifier = mop_riga_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			religion = orthodox
+			num_of_times_expanded_infrastructure = 2
+			province_has_center_of_trade_of_level = 2
+			has_tax_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_road_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = amber_coast
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		hidden_effect = {
+			if = {
+				limit = {
+					has_building = wharf
+				}
+				set_province_flag = had_wharf
+			}
+		}
+		change_trade_goods = gems
+		hidden_effect = {
+			if = {
+				limit = {
+					has_province_flag = had_wharf
+				}
+				add_building = mills
+				clr_province_flag = had_wharf
+			}
+		}
+		tooltip = {
+			if = {
+				limit = {
+					has_building = wharf
+				}
+				remove_building = wharf
+				add_building = mills
+			}
+		}
+		remove_province_modifier = mop_riga_commune
+		add_province_modifier = {
+			name = mop_holy_commune_of_riga
+			duration = -1
+		}
+		owner = {
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				culture = baltic_german
+				religion = orthodox
+				location = 38
+				name = "Patriarch of Riga"
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_patriarch_authority = 0.1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
