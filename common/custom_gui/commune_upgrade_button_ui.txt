@@ -564,6 +564,7 @@ custom_button = {
 			development = 30
 			base_manpower = 12
 			num_of_times_expanded_infrastructure = 2
+			has_road_building_trigger = yes
 			has_fort_building_trigger = yes
 			has_manpower_building_trigger = yes
 			has_forcelimit_building_trigger = yes
@@ -622,6 +623,7 @@ custom_button = {
 			base_manpower = 12
 			num_of_times_expanded_infrastructure = 2
 			has_fort_building_trigger = yes
+			has_road_building_trigger = yes
 			has_manpower_building_trigger = yes
 			has_forcelimit_building_trigger = yes
 			has_manufactory_trigger = yes
@@ -846,6 +848,107 @@ custom_button = {
 			custom_tooltip = AB_EMPTY
 			add_mercantilism = 2
 			add_patriarch_authority = 0.1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = arhanghel_commune_upgrade_button
+	tooltip = arhanghel_commune_upgrade_button_tt
+	potential = {
+		province_id = 1955
+		NOT = {
+			has_province_modifier = mop_port_of_arhanghel
+		}
+		has_province_modifier = mop_arhanghel_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			has_courthouse_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_road_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		add_province_modifier = {
+			name = mop_port_of_arhanghel
+			duration = -1
+		}
+		23 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 10
+				key = port_of_anhanghel_desc
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		97 = {
+			add_trade_modifier = {
+				who = root
+				duration = -1
+				power = 5
+				key = port_of_anhanghel_desc
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
+			custom_tooltip = mop_arctic_provinces_dock_bonus_tt
+			set_country_flag = mop_arctic_provinces_dock_bonus
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_climate = arctic
+						has_dock_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = mop_dock_arctic_negation
+						duration = -1
+					}
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							has_climate = arctic
+							has_dock_building_trigger = yes
+						}
+						add_province_modifier = {
+							name = mop_dock_arctic_negation
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
