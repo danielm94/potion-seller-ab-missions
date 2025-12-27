@@ -596,3 +596,87 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = kazan_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 1082
+		has_province_modifier = mop_kazan_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			base_manpower = 12
+			num_of_times_expanded_infrastructure = 2
+			has_fort_building_trigger = yes
+			has_manpower_building_trigger = yes
+			has_forcelimit_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = kazan_kremlin
+				tier = 1
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		upgrade_fort_building = yes
+		remove_province_modifier = mop_kazan_commune
+		add_province_modifier = {
+			name = mop_great_kazan_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = mop_unlock_krepost_system_tt
+			set_country_flag = mop_unlock_krepost_system
+			tooltip = {
+				add_province_modifier = {
+					name = mop_krepost
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_a_krepost_province = yes
+						has_fort_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = mop_krepost
+						duration = -1
+					}
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							is_a_krepost_province = yes
+							has_fort_building_trigger = yes
+						}
+						add_province_modifier = {
+							name = mop_krepost
+							duration = -1
+						}
+					}
+				}
+			}
+			add_army_professionalism = 0.05
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
