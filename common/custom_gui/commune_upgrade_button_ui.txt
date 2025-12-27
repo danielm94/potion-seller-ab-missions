@@ -73,3 +73,94 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = ragusa_commune_upgrade_button
+	tooltip = AB_EMPTY
+	potential = {
+		province_id = 137
+		has_province_modifier = mop_commune_of_dubrovnik
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			owned_by = FROM
+			development = 30
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+			has_trade_building_trigger = yes
+			has_great_project = {
+				type = walls_ston
+				tier = 1
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_commune_of_dubrovnik
+		add_province_modifier = {
+			name = mop_great_commune_of_dubrovnik
+			duration = -1
+		}
+		add_unit_construction = {
+			type = heavy_ship
+			cost = 0.25
+			speed = 0.25
+		}
+		add_unit_construction = {
+			type = heavy_ship
+			cost = 0.25
+			speed = 0.25
+		}
+		add_unit_construction = {
+			type = heavy_ship
+			cost = 0.25
+			speed = 0.25
+		}
+		add_unit_construction = {
+			type = heavy_ship
+			cost = 0.25
+			speed = 0.25
+		}
+		add_unit_construction = {
+			type = heavy_ship
+			cost = 0.25
+			speed = 0.25
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
+			define_advisor = {
+				type = naval_reformer
+				skill = 3
+				cost_multiplier = 0.5
+				culture = dalmatian
+				religion = catholic
+				location = 137
+			}
+			custom_tooltip = AB_EMPTY
+			add_yearly_sailors = 1
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
