@@ -922,14 +922,14 @@ mop_venice_commune = {
 	picture = "commune_province_modifier_icon"
 }
 
-mop_serene_venice_commune = {
+mop_great_venice_commune = {
 	min_local_autonomy = 10
 	local_governing_cost = -1
 	province_trade_power_value = 20
 	local_development_cost = -0.15
 	galley_cost = -0.1
 	ship_durability = 0.1
-	picture = "commune_province_modifier_icon"
+	picture = "upgraded_commune"
 }
 
 mop_genoa_commune = {
