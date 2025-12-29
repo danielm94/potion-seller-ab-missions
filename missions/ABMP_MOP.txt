@@ -8737,6 +8737,7 @@ mop_low_countries_series_unlocked = {
 			}
 			else = {
 				low_countries_region = {
+					type = all
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
 						who = root
 					}
