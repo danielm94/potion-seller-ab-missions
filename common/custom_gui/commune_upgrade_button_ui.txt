@@ -2243,6 +2243,9 @@ custom_button = {
 	potential = {
 		province_id = 2313
 		has_province_modifier = mop_antiohia_commune
+		NOT = {
+			has_province_modifier = wallachia_patriarchate_of_antiohia
+		}
 		owned_by = FROM
 		owner = {
 			has_government_mechanic = peasant_zealotry
@@ -2308,6 +2311,9 @@ custom_button = {
 	potential = {
 		province_id = 379
 		has_province_modifier = mop_ierusalim_commune
+		NOT = {
+			has_province_modifier = wallachia_patriarchate_of_ierusalim
+		}
 		owned_by = FROM
 		owner = {
 			has_government_mechanic = peasant_zealotry
