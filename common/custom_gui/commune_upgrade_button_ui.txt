@@ -3503,3 +3503,192 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = lothian_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 248
+		has_province_modifier = mop_lothian_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			num_of_times_expanded_infrastructure = 2
+			province_has_center_of_trade_of_level = 2
+			has_production_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_road_building_trigger = yes
+			has_manpower_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_great_project = {
+				type = edinburgh_castle
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_lothian_commune
+		add_province_modifier = {
+			name = mop_great_lothian_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = quartermaster_attrition_bonus_tt
+			set_country_flag = quartermaster_attrition_bonus
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = quartermaster
+				skill = 3
+				culture = scottish
+				cost_multiplier = 0.5
+				location = 248
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = london_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 236
+		has_province_modifier = mop_londra_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			province_has_center_of_trade_of_level = 3
+			num_of_times_expanded_infrastructure = 3
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_road_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+			has_manufactory_trigger = yes
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_londra_commune
+		add_province_modifier = {
+			name = mop_great_londra_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = can_use_tower_of_london_tt
+			set_country_flag = can_use_tower_of_london
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = spy_network_for_soldiers_killed_enabled_tt
+			set_country_flag = spy_network_for_soldiers_killed_enabled
+			custom_tooltip = AB_EMPTY
+			add_navy_tradition = 20
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 20
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = pale_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 373
+		has_province_modifier = mop_pale_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			num_of_times_expanded_infrastructure = 2
+			has_trade_building_trigger = yes
+			has_manpower_building_trigger = yes
+			has_forcelimit_building_trigger = yes
+			has_road_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = hill_tara
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		center_of_trade = 1
+		remove_province_modifier = mop_pale_commune
+		add_province_modifier = {
+			name = mop_great_pale_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = come_out_ye_black_and_tans_tt
+			set_country_flag = come_out_ye_black_and_tans
+			custom_tooltip = AB_EMPTY
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}

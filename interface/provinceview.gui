@@ -1734,6 +1734,45 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				scripted = yes
 			}
+			guiButtonType = {
+				name ="lothian_commune_upgrade_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite ="GFX_commune_upgrade_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+			guiButtonType = {
+				name ="london_commune_upgrade_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite ="GFX_commune_upgrade_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+			guiButtonType = {
+				name ="pale_commune_upgrade_button"
+				scripted = yes
+				position = { x= 450 y = 60 }
+				quadTextureSprite ="GFX_commune_upgrade_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
 
 			### INCOME
 
