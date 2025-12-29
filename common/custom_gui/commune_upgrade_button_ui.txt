@@ -1781,3 +1781,82 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = kyoto_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 1020
+		has_province_modifier = mop_chioto_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			num_of_times_expanded_infrastructure = 3
+			has_tax_building_trigger = yes
+			has_manpower_building_trigger = yes
+			has_production_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_road_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = imperial_city_kyoto
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_chioto_commune
+		add_province_modifier = {
+			name = mop_great_chioto_commune
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = imperial_city_kyoto
+					tier = 3
+				}
+			}
+			owner = {
+				add_treasury = 2500
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = imperial_city_kyoto
+				tier = 1
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
+			custom_tooltip = mop_enhanced_cultivate_the_land_tt
+			set_country_flag = mop_enhanced_cultivate_the_land
+			tooltip = {
+				add_country_modifier = {
+					name = peasant_development_mod_enhanced
+					duration = 3650
+				}
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
