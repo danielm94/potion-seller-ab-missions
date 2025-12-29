@@ -1706,3 +1706,78 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = hangzhou_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 684
+		has_province_modifier = mop_hangzhou_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			has_trade_building_trigger = yes
+			has_road_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_production_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = southern_canal
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_hangzhou_commune
+		add_province_modifier = {
+			name = mop_great_hangzhou_commune
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = southern_canal
+					tier = 3
+				}
+			}
+			owner = {
+				add_treasury = 3000
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = southern_canal
+				tier = 1
+			}
+		}
+		owner = {
+			custom_tooltip = eng_trade_income
+			hidden_effect = {
+				add_years_of_trade_income = {
+					years = 1
+				}
+			}
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
