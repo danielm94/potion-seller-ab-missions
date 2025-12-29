@@ -3291,6 +3291,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = tooltip_line_divider
 		center_of_trade = 1
 		remove_province_modifier = mop_malta_commune
 		add_province_modifier = {
@@ -3374,6 +3375,7 @@ custom_button = {
 			duration = -1
 		}
 		owner = {
+			custom_tooltip = tooltip_line_divider
 			custom_tooltip = orthodox_notre_dame_bonus_tt
 			set_country_flag = orthodox_notre_dame_bonus
 			custom_tooltip = AB_EMPTY
@@ -3385,6 +3387,63 @@ custom_button = {
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = amsterdam_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 97
+		has_province_modifier = mop_amsterdam_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			province_has_center_of_trade_of_level = 3
+			num_of_times_expanded_infrastructure = 3
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_fort_building_trigger = yes
+			has_great_project = {
+				type = dutch_polders
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_amsterdam_commune
+		add_province_modifier = {
+			name = mop_great_amsterdam_commune
+			duration = -1
+		}
+		owner = {
+			simple_unlock_issue = {
+				issue = land_reclamation_issue
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = isolationist_mandate_buff_tt
+			set_country_flag = isolationist_mandate_buff
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 15
 			}
 		}
 	}
