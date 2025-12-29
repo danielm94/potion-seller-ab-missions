@@ -3179,3 +3179,72 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = roman_patriarchate_upgrade_button
+	tooltip = patriarchate_commune_upgrade_button_tt
+	potential = {
+		province_id = 118
+		has_province_modifier = mop_roman_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			religion = orthodox
+			num_of_times_expanded_infrastructure = 3
+			has_tax_building_trigger = yes
+			has_road_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = st_pauls_basilica
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_roman_commune
+		add_province_modifier = {
+			name = mop_eternal_roman_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = patriarch_of_rome_tooltip
+			set_country_flag = patriarch_of_rome
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				religion = orthodox
+				culture = umbrian
+				location = 118
+				min_age = 40
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
