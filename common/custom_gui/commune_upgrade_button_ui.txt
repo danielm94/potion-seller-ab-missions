@@ -2039,6 +2039,7 @@ custom_button = {
 		owned_by = FROM
 		owner = {
 			has_government_mechanic = peasant_zealotry
+			has_country_flag = bosporus_toll_construction_enabled
 		}
 	}
 	trigger = {
