@@ -9439,9 +9439,9 @@ ab_mop_4 = {
 	}
 	mop_arabia = {
 		icon = mission_into_arabia
-		position = 30
+		position = 29
 		required_missions = {
-			mop_reestablish_the_patriarchs
+			mop_holy_land
 			mop_iraq
 		}
 		provinces_to_highlight = {
