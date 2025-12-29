@@ -7044,111 +7044,11 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_portul_abas = {
-		icon = mission_dominate_persian_gulf
-		position = 31
-		required_missions = {
-			mop_persia
-		}
-		provinces_to_highlight = {
-			province_id = 431
-			OR = {
-				NOT = {
-					owned_by = root
-				}
-				NOT = {
-					development = 30
-				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 2
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_trade_building_trigger = no
-				has_dock_building_trigger = no
-				has_shipyard_building_trigger = no
-				has_coast_defense_building_trigger = no
-				has_road_building_trigger = no
-				has_fort_building_trigger = no
-				NOT = {
-					has_great_project = {
-						type = shapurshahr
-						tier = 2
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				431 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
-					province_has_center_of_trade_of_level = 2
-					has_trade_building_trigger = yes
-					has_dock_building_trigger = yes
-					has_shipyard_building_trigger = yes
-					has_coast_defense_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_great_project = {
-						type = shapurshahr
-						tier = 2
-					}
-				}
-			}
-		}
-		effect = {
-			431 = {
-				remove_province_modifier = mop_portul_abas_commune
-				add_province_modifier = {
-					name = mop_great_portul_abas_commune
-					duration = -1
-				}
-			}
-			if = {
-				limit = {
-					431 = {
-						has_great_project = {
-							type = shapurshahr
-							tier = 3
-						}
-					}
-				}
-				add_treasury = 3000
-			}
-			else = {
-				431 = {
-					add_great_project_tier = {
-						type = shapurshahr
-						tier = 1
-					}
-				}
-			}
-			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = mop_explore_indian_ocean
-				duration = 10950
-			}
-			add_mercantilism = 2
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
-			}
-		}
-	}
 	mop_khorasan = {
 		icon = mission_pertribes
 		position = 32
 		required_missions = {
-			mop_portul_abas
+			mop_persia
 		}
 		provinces_to_highlight = {
 			region = khorasan_region
