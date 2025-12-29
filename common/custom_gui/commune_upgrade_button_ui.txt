@@ -3311,3 +3311,81 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = paris_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 183
+		has_province_modifier = mop_paris_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			religion = orthodox
+			province_has_center_of_trade_of_level = 3
+			num_of_times_expanded_infrastructure = 3
+			has_tax_building_trigger = yes
+			has_manpower_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = notre_dame_cathedral
+				tier = 2
+			}
+			has_great_project = {
+				type = versailles
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		remove_province_modifier = mop_paris_commune
+		add_province_modifier = {
+			name = mop_great_paris_commune
+			duration = -1
+		}
+		define_advisor = {
+			type = patriarch
+			skill = 3
+			cost_multiplier = 0.5
+			culture = cosmopolitan_french
+			religion = orthodox
+			name = "Patriarch of Paris"
+			location = 183
+		}
+		custom_tooltip = AB_EMPTY
+		add_province_modifier = {
+			name = mop_patriarchate_of_paris
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = orthodox_notre_dame_bonus_tt
+			set_country_flag = orthodox_notre_dame_bonus
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
