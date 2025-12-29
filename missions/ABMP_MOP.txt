@@ -4143,96 +4143,11 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_develop_xinan = {
-		icon = mng_expand_bogue
-		position = 19
-		required_missions = {
-			mop_xinan
-		}
-		provinces_to_highlight = {
-			province_id = 679
-			OR = {
-				NOT = {
-					development = 45
-				}
-				NOT = {
-					num_of_times_expanded_infrastructure = 3
-				}
-				NOT = {
-					has_great_project = {
-						type = dujiangyan
-						tier = 2
-					}
-				}
-				NOT = {
-					province_has_center_of_trade_of_level = 2
-				}
-				has_production_building_trigger = no
-				has_trade_building_trigger = no
-				has_road_building_trigger = no
-				has_fort_building_trigger = no
-				has_manufactory_trigger = no
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				679 = {
-					owned_by = root
-					development = 45
-					num_of_times_expanded_infrastructure = 3
-					has_great_project = {
-						type = dujiangyan
-						tier = 2
-					}
-					province_has_center_of_trade_of_level = 2
-					has_production_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_manufactory_trigger = yes
-				}
-			}
-		}
-		effect = {
-			679 = {
-				remove_province_modifier = mop_chengdu_commune
-				add_province_modifier = {
-					name = mop_great_chengdu_commune
-					duration = -1
-				}
-			}
-			custom_tooltip = enable_dujiangyan_bonus_tt
-			set_country_flag = enable_dujiangyan_bonus
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = planner
-				skill = 3
-				cost_multiplier = 0.75
-				culture = sichuanese
-				location = 679
-			}
-			custom_tooltip = AB_EMPTY
-			add_faction_influence = {
-				faction = leaguists_faction
-				influence = 15
-			}
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 10
-			}
-		}
-	}
 	mop_tibet = {
 		icon = GFX_mop_tibet
 		position = 20
 		required_missions = {
-			mop_develop_xinan
+			mop_xinan
 		}
 		provinces_to_highlight = {
 			region = tibet_region
@@ -6863,8 +6778,8 @@ ab_mop_3 = {
 		icon = GFX_mop_slay_the_dragon
 		position = 20
 		required_missions = {
-			mop_develop_south_china
-			mop_develop_xinan
+			mop_south_china
+			mop_xinan
 		}
 		provinces_to_highlight = {
 			is_empty = no
