@@ -191,7 +191,7 @@
  mop_tea_monopoly: "The Tea Monopoly"
  desc_mop_tea_monopoly: "We have sold a nation to secure a market. In exchange for surrendering the Tibetan plateau, the Federation has been granted the exclusive monopoly on the tea trade of the entire Middle Kingdom. The silver flows into our treasury like water, though the tea often tastes bitter to those who remember the price of its purchase."
  mop_great_thimpu_commune: "The Great Thimphu Commune"
- desc_mop_great_thimpu_commune: "The valley has been transformed into a singular, sprawling fortification. The expanded Dzongs loom over the passes, housing a garrison trained to fight where the air is too thin for invaders to breathe."
+ desc_mop_great_thimpu_commune: "The valley has been transformed into a singular, sprawling fortification. The expanded Dzongs loom over the passes, housing a garrison trained to fight where the air is too thin for invaders to breathe.\n\n§V§YForts§! constructed by us or our subjects on §Ymountain§! provinces will receive the §YThe Dzong System§! modifier as a §Gbonus§!.§!"
  mop_dzong_citadels: "The Dzong System"
  desc_mop_dzong_citadels: "We have adopted the Bhutanese genius for mountain architecture. Our mountain fortifications now integrate administrative and religious facilities directly into the walls, creating self-sufficient citadels that can withstand sieges for years."
  mop_satrapeia_commune: "The Satrapeia Commune"
