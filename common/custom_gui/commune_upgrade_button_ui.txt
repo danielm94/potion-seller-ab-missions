@@ -2301,3 +2301,73 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = jerusalem_commune_upgrade_button
+	tooltip = jerusalem_commune_upgrade_button_tt
+	potential = {
+		province_id = 379
+		has_province_modifier = mop_ierusalim_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			religion = orthodox
+			num_of_times_expanded_infrastructure = 2
+			has_tax_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_road_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_great_project = {
+				type = holy_city_jerusalem
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		center_of_trade = 1
+		add_province_modifier = {
+			name = wallachia_patriarchate_of_ierusalim
+			duration = -1
+		}
+		owner = {
+			set_country_flag = patriarch_of_jerusalem
+			custom_tooltip = patriarch_of_jerusalem_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_suryah_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Ierusalim"
+				location = 379
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}

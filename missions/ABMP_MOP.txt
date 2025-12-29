@@ -6849,7 +6849,6 @@ ab_mop_3 = {
 			}
 		}
 	}
-
 	mop_free_anatolia = {
 		icon = anatolian_frontier
 		position = 27
@@ -6984,7 +6983,6 @@ ab_mop_3 = {
 			}
 		}
 	}
-
 	mop_persia = {
 		icon = per_reborn_in_fire
 		position = 29
@@ -11549,146 +11547,11 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_reestablish_the_patriarchs = {
-		icon = gfx_wal_conquer_antioch
-		position = 29
-		required_missions = {
-			mop_holy_land
-		}
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 379
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							religion = orthodox
-						}
-						has_tax_building_trigger = no
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_fort_building_trigger = no
-						NOT = {
-							has_great_project = {
-								type = holy_city_jerusalem
-								tier = 2
-							}
-						}
-					}
-				}
-				AND = {
-					province_id = 2313
-					OR = {
-						NOT = {
-							owned_by = root
-						}
-						NOT = {
-							development = 30
-						}
-						NOT = {
-							num_of_times_expanded_infrastructure = 2
-						}
-						NOT = {
-							religion = orthodox
-						}
-						has_tax_building_trigger = no
-						has_trade_building_trigger = no
-						has_road_building_trigger = no
-						has_fort_building_trigger = no
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				379 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
-					religion = orthodox
-					has_tax_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-					has_great_project = {
-						type = holy_city_jerusalem
-						tier = 2
-					}
-				}
-				2313 = {
-					owned_by = root
-					development = 30
-					num_of_times_expanded_infrastructure = 2
-					religion = orthodox
-					has_tax_building_trigger = yes
-					has_trade_building_trigger = yes
-					has_road_building_trigger = yes
-					has_fort_building_trigger = yes
-				}
-			}
-		}
-		effect = {
-			2313 = {
-				center_of_trade = 1
-				add_province_modifier = {
-					name = wallachia_patriarchate_of_antiohia
-					duration = -1
-				}
-			}
-			set_country_flag = patriarch_of_antioch
-			custom_tooltip = patriarch_of_antioch_bonus_tooltip
-			custom_tooltip = AB_EMPTY
-			379 = {
-				center_of_trade = 1
-				add_province_modifier = {
-					name = wallachia_patriarchate_of_ierusalim
-					duration = -1
-				}
-			}
-			set_country_flag = patriarch_of_jerusalem
-			custom_tooltip = patriarch_of_jerusalem_bonus_tooltip
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = patriarch
-				skill = 3
-				cost_multiplier = 0.25
-				culture = al_suryah_arabic
-				religion = orthodox
-				age = 40
-				name = "The Patriarch of Ierusalim"
-				location = 151
-			}
-			custom_tooltip = AB_EMPTY
-			add_patriarch_authority = 0.2
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 20
-			}
-			add_faction_influence = {
-				faction = exemplarists_faction
-				influence = 20
-			}
-		}
-	}
 	mop_egypt = {
 		icon = gfx_wal_conquer_egypt
 		position = 32
 		required_missions = {
-			mop_reestablish_the_patriarchs
+			mop_holy_land
 		}
 		provinces_to_highlight = {
 			region = egypt_region

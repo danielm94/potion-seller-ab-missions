@@ -10,3 +10,4 @@
  if_we_already_have_built_the_other_bosporus_gate_tt: "If we have already constructed the §YGate of the Bosporus§! in the other province:"
  bosporus_gate_upgrade_button_tt: "§OConstruct the Gate of the Bosporus in [This.GetName]§!"
  antioch_commune_upgrade_button_tt: "§ORestore the Patriarchate of [2313.GetName]§!"
+ jerusalem_commune_upgrade_button_tt: "§ORestore the Patriarchate of [379.GetCapitalName]§!"
