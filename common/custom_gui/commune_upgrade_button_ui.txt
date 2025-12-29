@@ -3355,6 +3355,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = tooltip_line_divider
 		remove_province_modifier = mop_paris_commune
 		add_province_modifier = {
 			name = mop_great_paris_commune
@@ -3375,7 +3376,6 @@ custom_button = {
 			duration = -1
 		}
 		owner = {
-			custom_tooltip = tooltip_line_divider
 			custom_tooltip = orthodox_notre_dame_bonus_tt
 			set_country_flag = orthodox_notre_dame_bonus
 			custom_tooltip = AB_EMPTY
@@ -3684,6 +3684,143 @@ custom_button = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 5
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = barcelona_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 213
+		has_province_modifier = mop_barcelona_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			num_of_times_expanded_infrastructure = 3
+			province_has_center_of_trade_of_level = 3
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_road_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_fort_building_trigger = yes
+				has_coast_defense_building_trigger = yes
+			}
+			has_manufactory_trigger = yes
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_barcelona_commune
+		add_province_modifier = {
+			name = mop_great_barcelona_commune
+			duration = -1
+		}
+		owner = {
+			set_country_flag = rmg_monetary_policy_no_power_cost_flag
+			custom_tooltip = RMG_MONETARY_POLICY_NO_POWER
+			custom_tooltip = AB_EMPTY
+			add_years_of_income = 1
+			add_mercantilism = 5
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = granada_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 223
+		has_province_modifier = mop_granada_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			religion = orthodox
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			has_tax_building_trigger = yes
+			has_road_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_production_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = alhambra
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_granada_commune
+		add_province_modifier = {
+			name = mop_great_granada_commune
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = alhambra
+					tier = 3
+				}
+			}
+			owner = {
+				add_treasury = 3000
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = alhambra
+				tier = 1
+			}
+		}
+		owner = {
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = negate_revolutionary_mandate_improve_relations_penalty_tt
+			set_country_flag = negate_revolutionary_mandate_improve_relations_penalty
+			custom_tooltip = AB_EMPTY
+			add_prestige_or_monarch_power = {
+				amount = 10
 			}
 			add_faction_influence = {
 				faction = exemplarists_faction
