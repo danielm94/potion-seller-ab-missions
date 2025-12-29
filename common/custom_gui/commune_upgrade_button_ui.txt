@@ -3104,3 +3104,78 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = hamburg_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 44
+		has_province_modifier = mop_hamburg_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			province_has_center_of_trade_of_level = 2
+			num_of_times_expanded_infrastructure = 2
+			has_trade_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_road_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_coast_defense_building_trigger = yes
+				has_fort_building_trigger = yes
+			}
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = hamburg
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_hamburg_commune
+		add_province_modifier = {
+			name = mop_great_hamburg_commune
+			duration = -1
+		}
+		add_unit_construction = {
+			type = heavy_ship
+			amount = 5
+			speed = 0.1
+			cost = 0
+		}
+		add_unit_construction = {
+			type = light_ship
+			amount = 10
+			speed = 0.1
+			cost = 0
+		}
+		custom_tooltip = AB_EMPTY
+		owner = {
+			custom_tooltip = internationalist_mandate_buff_tt
+			set_country_flag = internationalist_mandate_buff
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
