@@ -2920,3 +2920,66 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = genoa_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 101
+		has_province_modifier = mop_genoa_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 45
+			num_of_times_expanded_infrastructure = 3
+			province_has_center_of_trade_of_level = 3
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_road_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			OR = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			OR = {
+				has_fort_building_trigger = yes
+				has_coast_defense_building_trigger = yes
+			}
+			has_manufactory_trigger = yes
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_genoa_commune
+		add_province_modifier = {
+			name = mop_great_genoa_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = unlock_genoese_rigging_tt
+			set_country_flag = unlocked_genoese_rigging
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = repay_loan_reduces_inflation_tt
+			set_country_flag = repay_loan_reduces_inflation
+			custom_tooltip = AB_EMPTY
+			add_mercantilism = 2
+			add_navy_tradition = 20
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
