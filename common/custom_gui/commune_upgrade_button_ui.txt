@@ -2240,7 +2240,7 @@ custom_button = {
 
 custom_button = {
 	name = antioch_commune_upgrade_button
-	tooltip = antioch_commune_upgrade_button_tt
+	tooltip = patriarchate_commune_upgrade_button_tt
 	potential = {
 		province_id = 2313
 		has_province_modifier = mop_antiohia_commune
@@ -2308,7 +2308,7 @@ custom_button = {
 
 custom_button = {
 	name = jerusalem_commune_upgrade_button
-	tooltip = jerusalem_commune_upgrade_button_tt
+	tooltip = patriarchate_commune_upgrade_button_tt
 	potential = {
 		province_id = 379
 		has_province_modifier = mop_ierusalim_commune
@@ -2567,6 +2567,72 @@ custom_button = {
 			custom_tooltip = wallachia_rise_of_the_dacian_india_company_mechanics_tooltip
 			custom_tooltip = AB_EMPTY
 			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = alexandria_commune_upgrade_button
+	tooltip = patriarchate_commune_upgrade_button_tt
+	potential = {
+		province_id = 358
+		has_province_modifier = mop_alexandria_commune
+		NOT = {
+			has_province_modifier = wallachia_patriarchate_of_alexandria
+		}
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			religion = orthodox
+			num_of_times_expanded_infrastructure = 2
+			province_has_center_of_trade_of_level = 2
+			has_tax_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_road_building_trigger = yes
+			has_fort_building_trigger = yes
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		upgrade_tax_building = yes
+		add_province_modifier = {
+			name = wallachia_patriarchate_of_alexandria
+			duration = -1
+		}
+		owner = {
+			set_country_flag = patriarch_of_alexandria
+			custom_tooltip = patriarch_of_alexandria_bonus_tooltip
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = patriarch
+				skill = 3
+				cost_multiplier = 0.25
+				culture = al_misr_arabic
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Alexandria"
+				location = 358
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
 			add_faction_influence = {
 				faction = exemplarists_faction
 				influence = 10

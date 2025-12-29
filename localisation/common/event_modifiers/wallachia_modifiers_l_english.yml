@@ -141,7 +141,7 @@
  wallachia_coptic_tolerance: "Imperial Tolerance"
  desc_wallachia_coptic_tolerance: "This province is under the Emperor's protection, allowing its people to practice their faith without fear of persecution."
  wallachia_patriarchate_of_alexandria: "Patriarchate of Alexandria"
- desc_wallachia_patriarchate_of_alexandria: "The ancient seat of the Patriarch of Alexandria has been restored. From this holy city, the true faith will once again spread throughout the lands of Egypt."
+ desc_wallachia_patriarchate_of_alexandria: "The ancient seat of the Patriarch of Alexandria has been restored. From this holy city, the true faith will once again spread throughout the lands of Egypt.\n\n§V§YPatriarch§! advisors now grant §G+0.5%§! §YMissionary Strength vs Heathens§! per skill level.§!"
  wallachia_granaries_of_egypt: "The Granary of the Empire"
  desc_wallachia_granaries_of_egypt: "The vast harvests of the Nile now sustain our legions and fuel the ambitions of the Empire."
  wallachia_patriarchate_of_constantinople: "Patriarchate of Constantinopol"
