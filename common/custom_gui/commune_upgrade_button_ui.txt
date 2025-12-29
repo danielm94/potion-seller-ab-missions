@@ -2857,3 +2857,66 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = viena_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 134
+		has_province_modifier = mop_viena_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			religion = orthodox
+			num_of_times_expanded_infrastructure = 2
+			province_has_center_of_trade_of_level = 2
+			has_tax_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_fort_building_trigger = yes
+			has_road_building_trigger = yes
+			has_courthouse_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_great_project = {
+				type = schonbrunn_palace
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		remove_province_modifier = mop_viena_commune
+		add_province_modifier = {
+			name = mop_great_viena_commune
+			duration = -1
+		}
+		owner = {
+			custom_tooltip = unlock_schonbrunn_bonus_tooltip
+			set_country_flag = unlock_schonbrunn_bonus
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = statesman
+				skill = 2
+				cost_multiplier = 0.5
+				culture = austrian
+				location = 134
+			}
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
