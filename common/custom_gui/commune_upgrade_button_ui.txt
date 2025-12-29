@@ -1849,7 +1849,7 @@ custom_button = {
 				}
 			}
 			owner = {
-				add_treasury = 2500
+				add_treasury = 3000
 			}
 		}
 		else = {
@@ -2704,6 +2704,80 @@ custom_button = {
 		custom_tooltip = AB_EMPTY
 		owner = {
 			add_navy_tradition = 10
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = exemplarists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = demnat_commune_upgrade_button
+	tooltip = construct_great_commune_tt
+	potential = {
+		province_id = 4568
+		has_province_modifier = mop_demnat_commune
+		owned_by = FROM
+		owner = {
+			has_government_mechanic = peasant_zealotry
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				owner = {
+					is_debug_mode_enabled = yes
+				}
+			}
+			always = yes
+		}
+		else = {
+			development = 30
+			num_of_times_expanded_infrastructure = 2
+			has_courthouse_building_trigger = yes
+			has_trade_building_trigger = yes
+			has_production_building_trigger = yes
+			has_manufactory_trigger = yes
+			has_fort_building_trigger = yes
+			has_great_project = {
+				type = ait_benhaddou
+				tier = 2
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = tooltip_line_divider
+		center_of_trade = 1
+		remove_province_modifier = mop_demnat_commune
+		add_province_modifier = {
+			name = mop_great_demnat_commune
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = ait_benhaddou
+					tier = 2
+				}
+			}
+			add_great_project_tier = {
+				type = ait_benhaddou
+				tier = 1
+			}
+		}
+		else = {
+			owner = {
+				add_treasury = 3000
+			}
+		}
+		owner = {
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_agadir_system
+				duration = -1
+			}
 			add_mercantilism = 2
 			add_faction_influence = {
 				faction = exemplarists_faction
