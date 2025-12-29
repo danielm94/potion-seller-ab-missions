@@ -408,3 +408,50 @@ mop_seal_the_carpathians_install_peasant_government_reward_effect = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+#TODO - INCLUDE THIS EFFECT IN THE MOCA OR PERSIA UPGRADE BUTTON REWARD
+unlock_consulate_peace_offer_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = enable_establish_consulate_po
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		set_country_flag = enable_establish_consulate_po
+		custom_tooltip = enable_establish_consulate_po_tt
+	}
+}
+
+#SCOPE = PROVINCE
+bosporus_gate_bonus_effect = {
+	146 = {
+		add_trade_modifier = {
+			who = root
+			duration = -1
+			power = 15
+			key = control_of_the_bosporus_desc
+		}
+	}
+	112 = {
+		add_trade_modifier = {
+			who = root
+			duration = -1
+			power = 10
+			key = control_of_the_bosporus_desc
+		}
+	}
+	101 = {
+		add_trade_modifier = {
+			who = root
+			duration = -1
+			power = 10
+			key = control_of_the_bosporus_desc
+		}
+	}
+	owner = {
+		add_mercantilism = 1
+		add_treasury = 500
+	}
+}
