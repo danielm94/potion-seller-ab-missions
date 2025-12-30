@@ -1909,6 +1909,25 @@ ab_mop_1 = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_ne
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -4435,11 +4454,189 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_venice = {
-		icon = mission_raid_on_venice
+}
+
+mop_north_italy_locked_series = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_north_italy_ne
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_north_italy_nw
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_north_italy_south
+		}
+	}
+	mop_north_italy_locked_series_1 = {
+		icon = mission_locked_mission
 		position = 25
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_north_italy_locked_series_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_north_italy_locked_series_1_desc
+		}
+	}
+	mop_north_italy_locked_series_2 = {
+		icon = mission_locked_mission
+		position = 26
 		required_missions = {
-			mop_liberate_the_balkans
+			mop_north_italy_locked_series_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_north_italy_locked_series_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_north_italy_locked_series_1_desc
+		}
+	}
+	mop_north_italy_locked_series_3 = {
+		icon = mission_locked_mission
+		position = 26
+		required_missions = {
+			mop_north_italy_locked_series_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_north_italy_locked_series_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_north_italy_locked_series_1_desc
+		}
+	}
+}
+
+mop_north_italy_nw = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_north_italy_nw
+	}
+	mop_north_italy_nw = {
+		icon = mission_conquer_north_italy
+		position = 25
+		provinces_to_highlight = {
+			OR = {
+				area = po_valley_area
+				area = lombardy_area
+				area = piedmont_area
+				area = liguria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				po_valley_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lombardy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				piedmont_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				liguria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_lombard_bonus_tt
+			set_country_flag = integrated_commune_lombard_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_piedmontese_bonus_tt
+			set_country_flag = integrated_commune_piedmontese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_ligurian_bonus_tt
+			set_country_flag = integrated_commune_ligurian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			101 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_genoa_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				culture = ligurian
+				religion = catholic
+				location = 101
+				name = "Furio Giunta"
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = AB_EMPTY
+			add_years_of_income = 1
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_venice_nw = {
+		icon = mission_raid_on_venice
+		position = 26
+		required_missions = {
+			mop_north_italy_nw
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -4521,11 +4718,179 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_north_italy = {
+	mop_central_italy_nw = {
+		icon = conquer_tuscany
+		position = 27
+		required_missions = {
+			mop_venice_nw
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = emilia_romagna_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				tuscany_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				emilia_romagna_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_tuscan_bonus_tt
+			set_country_flag = integrated_commune_tuscan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_romagnan_bonus_tt
+			set_country_flag = integrated_commune_romagnan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = artist
+				skill = 2
+				culture = tuscan
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_innovativeness_big_effect = yes
+			add_reform_progress_big_effect = yes
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_rome
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_rome_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_rome
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+
+mop_north_italy_ne = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_north_italy_ne
+	}
+	mop_venice_ne = {
+		icon = mission_raid_on_venice
+		position = 25
+		provinces_to_highlight = {
+			OR = {
+				area = venetia_area
+				province_id = 110
+				province_id = 4738
+				province_id = 130
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				venetia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				110 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				4738 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				130 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_venetian_bonus_tt
+			set_country_flag = integrated_commune_venetian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			112 = {
+				remove_core = root
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_venice_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = BYZ_buff_free_enterprise
+			set_country_flag = BYZ_free_enterprise_buff
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = galleass_galley_in_venice_tt
+			hidden_effect = {
+				112 = {
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_north_italy_ne = {
 		icon = mission_conquer_north_italy
 		position = 26
 		required_missions = {
-			mop_venice
+			mop_venice_ne
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -4611,13 +4976,29 @@ ab_mop_2 = {
 				faction = abolitionists_faction
 				influence = 20
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
-	mop_central_italy = {
+	mop_central_italy_ne = {
 		icon = conquer_tuscany
 		position = 27
 		required_missions = {
-			mop_north_italy
+			mop_north_italy_ne
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -4690,6 +5071,282 @@ ab_mop_2 = {
 	}
 }
 
+mop_north_italy_south = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_north_italy_south
+	}
+	mop_central_italy_south = {
+		icon = conquer_tuscany
+		position = 25
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = emilia_romagna_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				tuscany_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				emilia_romagna_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_tuscan_bonus_tt
+			set_country_flag = integrated_commune_tuscan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_romagnan_bonus_tt
+			set_country_flag = integrated_commune_romagnan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = artist
+				skill = 2
+				culture = tuscan
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_innovativeness_big_effect = yes
+			add_reform_progress_big_effect = yes
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_rome
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_rome_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_rome
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_north_italy_south = {
+		icon = mission_conquer_north_italy
+		position = 26
+		required_missions = {
+			mop_central_italy_south
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = po_valley_area
+				area = lombardy_area
+				area = piedmont_area
+				area = liguria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				po_valley_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lombardy_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				piedmont_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				liguria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_lombard_bonus_tt
+			set_country_flag = integrated_commune_lombard_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_piedmontese_bonus_tt
+			set_country_flag = integrated_commune_piedmontese_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_ligurian_bonus_tt
+			set_country_flag = integrated_commune_ligurian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			101 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_genoa_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				culture = ligurian
+				religion = catholic
+				location = 101
+				name = "Furio Giunta"
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = AB_EMPTY
+			add_years_of_income = 1
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_france_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_france_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_france_series_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_france_south
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_venice_south = {
+		icon = mission_raid_on_venice
+		position = 27
+		required_missions = {
+			mop_north_italy_south
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = venetia_area
+				province_id = 110
+				province_id = 4738
+				province_id = 130
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				venetia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				110 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				4738 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				130 = {
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_venetian_bonus_tt
+			set_country_flag = integrated_commune_venetian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			112 = {
+				remove_core = root
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_venice_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = BYZ_buff_free_enterprise
+			set_country_flag = BYZ_free_enterprise_buff
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = galleass_galley_in_venice_tt
+			hidden_effect = {
+				112 = {
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+					galleass_galley = root
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
 mop_rome_locked_series_2 = {
 	slot = 2
 	generic = no
@@ -4705,9 +5362,11 @@ mop_rome_locked_series_2 = {
 		position = 28
 		required_missions = {
 			mop_south_italy_locked_series_2
+			mop_north_italy_locked_series_3
 			mop_south_italy_north
 			mop_south_italy_south
-			mop_central_italy
+			mop_central_italy_ne
+			mop_central_italy_nw
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -4825,6 +5484,25 @@ mop_rome_unlocked_series_2 = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_south
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_italy = {
@@ -4877,22 +5555,6 @@ mop_rome_unlocked_series_2 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 25
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_france_north
-					}
-					NOT = {
-						has_country_flag = unlocked_mop_france_south
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = unlocked_mop_france_series_tt
-				hidden_effect = {
-					set_country_flag = unlocked_mop_france_south
-					swap_non_generic_missions = yes
-				}
 			}
 		}
 	}
@@ -6147,6 +6809,25 @@ ab_mop_3_continued = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_nw
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_rhine = {
@@ -6603,6 +7284,25 @@ mop_france_northern_series_3 = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_nw
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_france_liberated_northern_series = {
@@ -6783,6 +7483,25 @@ mop_france_southern_series_3 = {
 				custom_tooltip = mop_scroll_down_mt_tt
 				hidden_effect = {
 					set_country_flag = unlocked_mop_iberia_north
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_nw
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
 					swap_non_generic_missions = yes
 				}
 			}
@@ -10066,6 +10785,25 @@ ab_mop_4_continued = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_ne
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
