@@ -8923,7 +8923,10 @@ mop_north_germany_capstone_locked = {
 			has_country_flag = unlock_mop_north_germany_capstone_south
 		}
 		NOT = {
-			has_country_flag = unlock_mop_south_germany_capstone_se
+			has_country_flag = unlock_mop_south_germany_capstone_nw
+		}
+		NOT = {
+			has_country_flag = unlock_mop_south_germany_capstone_ne
 		}
 	}
 	mop_north_germany_capstone_locked_1 = {
@@ -8946,7 +8949,6 @@ mop_north_germany_capstone_locked = {
 	}
 }
 
-#THIS MAKES NO SENSE, YOU CANT GET CAPSTONE IF YOU COME FROM SOUTH GERMANY!
 mop_germany_north_capstone_south = {
 	slot = 3
 	generic = no
