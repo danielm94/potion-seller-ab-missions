@@ -747,4 +747,5 @@
  mop_anatolia_series_locked_1_desc: "You must have completed §YTopple the Franks§!, §YShatter the Witan§!, or §YThe Rhine Confederation§! to unlock this series of missions."
  mop_anatolia_series_locked_2_title: "§g@SEL Anatolia: Locked§!"
  mop_anatolia_series_locked_2_desc: "You must have completed §YTopple the Franks§!, §YShatter the Witan§!, or §YThe Rhine Confederation§! to unlock this series of missions."
- mop_east_anatolia_title: ""
+ unlocked_mop_anatolia_tt: "Unlocks the §YAnatolia§! series of missions."
+ unlocked_mop_caucasia_tt: "Unlocks the §YCaucasia§! series of missions."

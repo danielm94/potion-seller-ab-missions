@@ -4831,6 +4831,16 @@ ab_mop_3 = {
 			ZAZ = {
 				add_liberty_desire = -20
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_caucasia
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_caucasia
+				custom_tooltip = unlocked_mop_caucasia_tt
+			}
 		}
 	}
 	mop_proclaim_the_hetmanate = {
@@ -5394,6 +5404,20 @@ ab_mop_3 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			custom_tooltip = AB_EMPTY
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
+			}
 		}
 	}
 	mop_liberate_the_greeks = {
@@ -5575,6 +5599,19 @@ mop_caucasia_series = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_east
+				custom_tooltip = unlocked_mop_anatolia_tt
 			}
 		}
 	}
@@ -8079,6 +8116,16 @@ mop_anatolia_west = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_caucasia
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_caucasia
+				custom_tooltip = unlocked_mop_caucasia_tt
+			}
 		}
 	}
 }
@@ -8947,6 +8994,16 @@ mop_persia_series_west = {
 				faction = abolitionists_faction
 				influence = 20
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_caucasia
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_caucasia
+				custom_tooltip = unlocked_mop_caucasia_tt
+			}
 		}
 	}
 	mop_khorasan_west = {
@@ -9163,6 +9220,16 @@ mop_persia_series_east = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_caucasia
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_caucasia
+				custom_tooltip = unlocked_mop_caucasia_tt
 			}
 		}
 	}
@@ -10579,6 +10646,19 @@ mop_middle_east_series_nw_5 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
+			}
 		}
 	}
 }
@@ -10695,6 +10775,19 @@ mop_middle_east_series_ne_5 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
+			}
 		}
 	}
 }
@@ -10807,6 +10900,19 @@ mop_middle_east_series_sw_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
 			}
 		}
 	}
