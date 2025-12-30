@@ -2535,6 +2535,22 @@ mop_iberia_north_series_1 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_west
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_iberia_liberated_north_series = {
@@ -2738,6 +2754,22 @@ mop_iberia_south_series_1 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_west
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8672,6 +8704,22 @@ mop_middle_east_series_nw_4 = {
 				faction = abolitionists_faction
 				influence = 20
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_east
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -9072,6 +9120,22 @@ mop_middle_east_series_ne_4 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_east
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -10896,6 +10960,22 @@ mop_middle_east_series_nw_5 = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_east
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -11011,6 +11091,22 @@ mop_middle_east_series_ne_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_east
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
