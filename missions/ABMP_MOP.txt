@@ -1893,88 +1893,81 @@ ab_mop_1 = {
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = bosnian_integrated_commune_bonus_tt
 			set_country_flag = bosnian_integrated_commune_bonus
-		}
-	}
-	mop_south_italy = {
-		icon = king_of_naples
-		position = 24
-		required_missions = {
-			mop_liberate_illyria
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = naples_area
-				area = apulia_area
-				area = calabria_area
-			}
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = root
-				}
-			}
-		}
-		trigger = {
 			if = {
 				limit = {
-					is_debug_mode_enabled = yes
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_south
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_north
+					}
 				}
-				always = yes
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_south_italy_north
+				custom_tooltip = unlocked_mop_south_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
-			else = {
-				naples_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				apulia_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				calabria_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
+		}
+	}
+}
+
+mop_south_italy_locked_series = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_south_italy_south
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_south_italy_north
+		}
+	}
+	mop_south_italy_locked_series_1 = {
+		icon = mission_locked_mission
+		position = 24
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_south_italy_locked_series_1_desc
+				always = no
 			}
 		}
 		effect = {
-			custom_tooltip = integrated_commune_neapolitan_bonus_tt
-			set_country_flag = integrated_commune_neapolitan_bonus_flag
-			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = wallachia_prepare_to_land_in_sicily
-				duration = 5475
-			}
-			add_navy_tradition = 20
-			add_yearly_sailors = 2
-			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = naval_reformer
-				skill = 2
-				culture = venetian
-				religion = catholic
-				cost_multiplier = 0.5
-			}
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 10
-			}
+			custom_tooltip = mop_south_italy_locked_series_1_desc
 		}
 	}
-	mop_sicily = {
-		icon = arb_sicily
-		position = 38
+	mop_south_italy_locked_series_2 = {
+		icon = mission_locked_mission
 		required_missions = {
-			mop_south_italy
+			mop_south_italy_locked_series_1
 		}
+		position = 27
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_south_italy_locked_series_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_south_italy_locked_series_1_desc
+		}
+	}
+}
+
+mop_south_italy_south_series = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_south_italy_south
+	}
+	mop_sicily_south = {
+		icon = arb_sicily
+		position = 24
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
@@ -2087,6 +2080,99 @@ ab_mop_1 = {
 			if = {
 				limit = {
 					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_middle
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_south_italy_south = {
+		icon = king_of_naples
+		position = 27
+		required_missions = {
+			mop_sicily_south
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = naples_area
+				area = apulia_area
+				area = calabria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				naples_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				apulia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				calabria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_neapolitan_bonus_tt
+			set_country_flag = integrated_commune_neapolitan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_prepare_to_land_in_sicily
+				duration = 5475
+			}
+			add_navy_tradition = 20
+			add_yearly_sailors = 2
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = naval_reformer
+				skill = 2
+				culture = venetian
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
 						has_country_flag = unlocked_mop_rome
 					}
 				}
@@ -2096,6 +2182,217 @@ ab_mop_1 = {
 					set_country_flag = unlocked_mop_rome
 					swap_non_generic_missions = yes
 				}
+			}
+		}
+	}
+}
+
+mop_south_italy_north_series = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_south_italy_north
+	}
+	mop_south_italy_north = {
+		icon = king_of_naples
+		position = 24
+		provinces_to_highlight = {
+			OR = {
+				area = naples_area
+				area = apulia_area
+				area = calabria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				naples_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				apulia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				calabria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_neapolitan_bonus_tt
+			set_country_flag = integrated_commune_neapolitan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = wallachia_prepare_to_land_in_sicily
+				duration = 5475
+			}
+			add_navy_tradition = 20
+			add_yearly_sailors = 2
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = naval_reformer
+				skill = 2
+				culture = venetian
+				religion = catholic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_rome
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_rome_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_rome
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_sicily_north = {
+		icon = arb_sicily
+		position = 27
+		required_missions = {
+			mop_south_italy_north
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = corsica_sardinia_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				sicily_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				western_sicily_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				corsica_sardinia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_sicilian_bonus_tt
+			set_country_flag = integrated_commune_sicilian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_sardinian_bonus_tt
+			set_country_flag = integrated_commune_sardinian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			126 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_malta_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = we_will_liberate_sicilian_slaves_tt
+			custom_tooltip = AB_EMPTY
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+					any_owned_province = {
+						has_province_flag = SIC_raided_province
+						NOT = {
+							had_province_flag = {
+								flag = SIC_raided_province
+								days = 14600
+							}
+						}
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = freed_our_enslaved_people
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						has_province_flag = SIC_raided_province
+						NOT = {
+							had_province_flag = {
+								flag = SIC_raided_province
+								days = 14600
+							}
+						}
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = return_slaves_home_tooltip
+				custom_tooltip = AB_EMPTY
+			}
+			add_ruler_modifier = {
+				name = wallachia_great_liberator
+				duration = 7300
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
 			}
 			if = {
 				limit = {
@@ -4407,7 +4704,9 @@ mop_rome_locked_series_2 = {
 		icon = mission_locked_mission
 		position = 39
 		required_missions = {
-			mop_sicily
+			mop_south_italy_locked_series_2
+			mop_south_italy_north
+			mop_south_italy_south
 			mop_central_italy
 		}
 		trigger = {
@@ -4467,13 +4766,7 @@ mop_rome_unlocked_series_2 = {
 				}
 				always = yes
 			}
-			else_if = {
-				limit = {
-					OR = {
-						mission_completed = mop_central_italy
-						mission_completed = mop_sicily
-					}
-				}
+			else = {
 				lazio_area = {
 					type = all
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
@@ -4485,12 +4778,6 @@ mop_rome_unlocked_series_2 = {
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
 						who = root
 					}
-				}
-			}
-			else = {
-				OR = {
-					mission_completed = mop_central_italy
-					mission_completed = mop_sicily
 				}
 			}
 		}
@@ -4521,6 +4808,22 @@ mop_rome_unlocked_series_2 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_south
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_north
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_south_italy_north
+				custom_tooltip = unlocked_mop_south_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -11736,6 +12039,22 @@ mop_north_africa_series_west_5 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_south
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_north
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_south_italy_south
+				custom_tooltip = unlocked_mop_south_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 	mop_egypt_west = {
@@ -11930,6 +12249,22 @@ mop_north_africa_series_middle_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_south
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_north
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_south_italy_south
+				custom_tooltip = unlocked_mop_south_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -12288,6 +12623,22 @@ mop_north_africa_series_east_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_south
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_south_italy_north
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_south_italy_south
+				custom_tooltip = unlocked_mop_south_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
