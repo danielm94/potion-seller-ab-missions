@@ -3725,6 +3725,9 @@ ab_mop_2 = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_persia_east
 				custom_tooltip = unlocked_mop_persia_scroll_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -4853,6 +4856,9 @@ ab_mop_3 = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_caucasia
 				custom_tooltip = unlocked_mop_caucasia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -5429,6 +5435,9 @@ ab_mop_3 = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_anatolia_west
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -5624,6 +5633,9 @@ mop_caucasia_series = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_anatolia_east
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 			if = {
 				limit = {
@@ -5637,6 +5649,9 @@ mop_caucasia_series = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_persia_west
 				custom_tooltip = unlocked_mop_persia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8150,6 +8165,28 @@ mop_anatolia_west = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_caucasia
 				custom_tooltip = unlocked_mop_caucasia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_nw
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8272,6 +8309,28 @@ mop_anatolia_east = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_caucasia
 				custom_tooltip = unlocked_mop_caucasia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_nw
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8518,8 +8577,11 @@ mop_middle_east_series_nw_4 = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
-				set_country_flag = unlocked_mop_anatolia_west
+				set_country_flag = unlocked_mop_anatolia_east
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 			if = {
 				limit = {
@@ -8533,6 +8595,9 @@ mop_middle_east_series_nw_4 = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_persia_west
 				custom_tooltip = unlocked_mop_persia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8786,8 +8851,11 @@ mop_middle_east_series_sw_4 = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
-				set_country_flag = unlocked_mop_anatolia_west
+				set_country_flag = unlocked_mop_anatolia_east
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 			if = {
 				limit = {
@@ -8801,6 +8869,9 @@ mop_middle_east_series_sw_4 = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_persia_west
 				custom_tooltip = unlocked_mop_persia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -8908,8 +8979,11 @@ mop_middle_east_series_ne_4 = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
-				set_country_flag = unlocked_mop_anatolia_west
+				set_country_flag = unlocked_mop_anatolia_east
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 			if = {
 				limit = {
@@ -8923,6 +8997,9 @@ mop_middle_east_series_ne_4 = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_persia_west
 				custom_tooltip = unlocked_mop_persia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -9116,6 +9193,28 @@ mop_persia_series_west = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_caucasia
 				custom_tooltip = unlocked_mop_caucasia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_ne
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -9343,6 +9442,28 @@ mop_persia_series_east = {
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_caucasia
 				custom_tooltip = unlocked_mop_caucasia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_ne
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -10769,8 +10890,11 @@ mop_middle_east_series_nw_5 = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
-				set_country_flag = unlocked_mop_anatolia_west
+				set_country_flag = unlocked_mop_anatolia_east
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -11011,8 +11135,11 @@ mop_middle_east_series_sw_5 = {
 					}
 				}
 				custom_tooltip = AB_EMPTY
-				set_country_flag = unlocked_mop_anatolia_west
+				set_country_flag = unlocked_mop_anatolia_east
 				custom_tooltip = unlocked_mop_anatolia_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
@@ -11413,6 +11540,25 @@ mop_north_africa_series_west_5 = {
 				faction = abolitionists_faction
 				influence = 20
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_sw
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -11477,6 +11623,25 @@ mop_north_africa_series_east_5 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_sw
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
 			}
 		}
 	}
