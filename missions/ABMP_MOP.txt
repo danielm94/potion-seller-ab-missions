@@ -8473,6 +8473,19 @@ mop_middle_east_series_nw_4 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
+			}
 		}
 	}
 	mop_arabia_nw = {
@@ -8715,6 +8728,19 @@ mop_middle_east_series_sw_4 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
+			}
 		}
 	}
 }
@@ -8810,6 +8836,19 @@ mop_middle_east_series_ne_4 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_anatolia_east
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_anatolia_west
+				custom_tooltip = unlocked_mop_anatolia_tt
 			}
 		}
 	}
