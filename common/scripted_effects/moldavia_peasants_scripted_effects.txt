@@ -455,3 +455,495 @@ bosporus_gate_bonus_effect = {
 		add_treasury = 500
 	}
 }
+
+#SCOPE = COUNTRY
+unlock_mop_south_italy_north_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_south_italy_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_south_italy_north
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_south_italy_north
+		custom_tooltip = unlocked_mop_south_italy_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_north_italy_ne_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_ne
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_nw
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_north_italy_ne
+		custom_tooltip = unlocked_mop_north_italy_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_north_africa_middle_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_east
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_middle
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_north_africa_middle
+		custom_tooltip = unlocked_mop_north_africa_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_rome_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_rome
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_rome_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_rome
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_persia_east_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_persia_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_persia_east
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_persia_east
+		custom_tooltip = unlocked_mop_persia_scroll_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_france_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_france_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_france_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_france_series_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_france_south
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_north_italy_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_ne
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_nw
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_north_italy_south
+		custom_tooltip = unlocked_mop_north_italy_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_north_italy_nw_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_ne
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_nw
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_italy_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_north_italy_nw
+		custom_tooltip = unlocked_mop_north_italy_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_low_countries_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_low_countries
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_low_countries_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_low_countries
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_caucasia_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_caucasia
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_caucasia
+		custom_tooltip = unlocked_mop_caucasia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_anatolia_west_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_anatolia_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_anatolia_east
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_anatolia_west
+		custom_tooltip = unlocked_mop_anatolia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_anatolia_east_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_anatolia_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_anatolia_east
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_anatolia_east
+		custom_tooltip = unlocked_mop_anatolia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_persia_west_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_persia_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_persia_east
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_persia_west
+		custom_tooltip = unlocked_mop_persia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_britain_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_britain_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_britain_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_britain_south_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_britain_south
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_iberia_north_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_iberia_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_iberia_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_iberia_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_iberia_north
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_iberia_north_scroll_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_iberia_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_iberia_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_iberia_tt
+		custom_tooltip = mop_scroll_down_mt_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_iberia_north
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_france_north_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_france_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_france_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_france_series_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_france_north
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_middle_east_nw_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_ne
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_nw
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_sw
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_middle_east_nw
+		custom_tooltip = unlocked_mop_middle_east_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_north_africa_east_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_east
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_middle
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_north_africa_east
+		custom_tooltip = unlocked_mop_north_africa_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_middle_east_ne_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_ne
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_nw
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_sw
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_middle_east_ne
+		custom_tooltip = unlocked_mop_middle_east_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_middle_east_sw_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_ne
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_nw
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_middle_east_sw
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_middle_east_sw
+		custom_tooltip = unlocked_mop_middle_east_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_britain_north_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_britain_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_britain_north_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_britain_north
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_iberia_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_iberia_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_iberia_south
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = unlocked_mop_iberia_tt
+		hidden_effect = {
+			set_country_flag = unlocked_mop_iberia_south
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_south_italy_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_south_italy_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_south_italy_north
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_south_italy_south
+		custom_tooltip = unlocked_mop_south_italy_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#SCOPE = COUNTRY
+unlock_mop_north_africa_west_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_east
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_west
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_north_africa_middle
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_north_africa_west
+		custom_tooltip = unlocked_mop_north_africa_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
