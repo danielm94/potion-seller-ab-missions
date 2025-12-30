@@ -5081,6 +5081,46 @@ ab_mop_2_continued = {
 	}
 }
 
+mop_germany_north_series_locked_2 = {
+	slot = 2
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_north_germany_south
+		}
+	}
+	mop_germany_north_series_locked_2_1 = {
+		icon = mission_locked_mission
+		position = 33
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+	mop_germany_north_series_locked_2_2 = {
+		icon = mission_locked_mission
+		position = 34
+		required_missions = {
+			mop_germany_north_series_locked_3_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+}
+
 ab_mop_3 = {
 	slot = 3
 	generic = no
@@ -7133,34 +7173,18 @@ mop_low_countries_series_unlocked = {
 	}
 }
 
-mop_germany_south_series_locked_3 = {
+mop_germany_gpw_locked = {
 	slot = 3
 	generic = no
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 		NOT = {
-			has_country_flag = unlocked_mop_south_germany_se
+			has_country_flag = mop_germany_gpw
 		}
 	}
-	mop_germany_south_series_locked_3_1 = {
+	mop_germany_gpw_locked_1 = {
 		icon = mission_locked_mission
-		position = 30
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = mop_germany_south_series_locked_3_1_desc
-				always = no
-			}
-		}
-		effect = {
-			custom_tooltip = mop_germany_south_series_locked_3_1_desc
-		}
-	}
-	mop_germany_south_series_locked_3_2 = {
-		icon = mission_locked_mission
-		position = 31
-		required_missions = {
-			mop_germany_south_series_locked_3_1
-		}
+		position = 29
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_germany_south_series_locked_3_1_desc
@@ -7173,184 +7197,12 @@ mop_germany_south_series_locked_3 = {
 	}
 }
 
-mop_germany_south_series_se_3 = {
+mop_germany_gpw = {
 	slot = 3
 	generic = no
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
-		has_country_flag = unlocked_mop_south_germany_se
-	}
-	mop_austria_se = {
-		icon = prosper_in_piedmont
-		position = 30
-		required_missions = {
-			mop_great_peasants_war
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = inner_austria_area
-				area = austria_proper_area
-				area = tirol_area
-				area = carinthia_area
-			}
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = root
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				inner_austria_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				austria_proper_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				tirol_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				carinthia_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = integrated_commune_austrian_bonus_tt
-			custom_tooltip = AB_EMPTY
-			134 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_viena_commune
-					duration = -1
-				}
-			}
-			custom_tooltip = hill_dev_20_percent_extra_dev_tt
-			set_country_flag = hill_dev_20_percent_extra_dev
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 10
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = unlocked_mop_north_italy_ne
-					}
-					NOT = {
-						has_country_flag = unlocked_mop_north_italy_nw
-					}
-					NOT = {
-						has_country_flag = unlocked_mop_north_italy_south
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				set_country_flag = unlocked_mop_north_italy_ne
-				custom_tooltip = unlocked_mop_north_italy_tt
-				hidden_effect = {
-					swap_non_generic_missions = yes
-				}
-			}
-		}
-	}
-	mop_bavaria_se = {
-		icon = duchy_of_bavaria
-		position = 31
-		required_missions = {
-			mop_austria_se
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = east_bavaria_area
-				area = lower_bavaria_area
-				area = upper_bavaria_area
-			}
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = root
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				east_bavaria_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				lower_bavaria_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-				upper_bavaria_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = integrated_commune_bavarian_bonus_tt
-			set_country_flag = integrated_commune_bavarian_bonus_flag
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = oktoberfest_enabled_tt
-			set_country_flag = oktoberfest_enabled
-			tooltip = {
-				add_province_modifier = {
-					name = mop_oktoberfest
-					duration = 31
-				}
-			}
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 10
-			}
-		}
-	}
-}
-
-ab_mop_3_continued = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = mop_germany_gpw
 	}
 	mop_great_peasants_war = {
 		icon = GFX_mop_great_peasants_war
@@ -7656,12 +7508,263 @@ ab_mop_3_continued = {
 			}
 		}
 	}
-	mop_germany = {
-		icon = interfere_in_germany
-		position = 34
+}
+
+mop_germany_south_series_locked_3 = {
+	slot = 3
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_south_germany_se
+		}
+	}
+	mop_germany_south_series_locked_3_1 = {
+		icon = mission_locked_mission
+		position = 30
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+	mop_germany_south_series_locked_3_2 = {
+		icon = mission_locked_mission
+		position = 31
 		required_missions = {
-			mop_rhine
-			mop_saxons
+			mop_germany_south_series_locked_3_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+}
+
+mop_germany_south_series_se_3 = {
+	slot = 3
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_south_germany_se
+	}
+	mop_austria_se = {
+		icon = prosper_in_piedmont
+		position = 30
+		provinces_to_highlight = {
+			OR = {
+				area = inner_austria_area
+				area = austria_proper_area
+				area = tirol_area
+				area = carinthia_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				inner_austria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				austria_proper_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				tirol_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				carinthia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_austrian_bonus_tt
+			custom_tooltip = AB_EMPTY
+			134 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_viena_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = hill_dev_20_percent_extra_dev_tt
+			set_country_flag = hill_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_italy_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_italy_ne
+				custom_tooltip = unlocked_mop_north_italy_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+	mop_bavaria_se = {
+		icon = duchy_of_bavaria
+		position = 31
+		required_missions = {
+			mop_austria_se
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_bavaria_area
+				area = lower_bavaria_area
+				area = upper_bavaria_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				east_bavaria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				lower_bavaria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				upper_bavaria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_bavarian_bonus_tt
+			set_country_flag = integrated_commune_bavarian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = oktoberfest_enabled_tt
+			set_country_flag = oktoberfest_enabled
+			tooltip = {
+				add_province_modifier = {
+					name = mop_oktoberfest
+					duration = 31
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+mop_germany_capstone_south_locked = {
+	slot = 3
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlock_mop_germany_capstone_upper
+		}
+		NOT = {
+			has_country_flag = unlock_mop_germany_capstone_lower
+		}
+	}
+	mop_germany_capstone_south_locked_1 = {
+		icon = mission_locked_mission
+		position = 32
+		required_missions = {
+			mop_germany_south_series_locked_2_1
+			mop_germany_south_series_locked_4_1
+			mop_germany_south_series_locked_3_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+}
+
+mop_germany_capstone_south_se = {
+	slot = 3
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlock_mop_germany_capstone_upper_se
+	}
+	mop_germany_capstone_south_se = {
+		icon = interfere_in_germany
+		position = 32
+		required_missions = {
+			mop_bavaria_se
+			mop_switzerland_se
+			mop_swabia_franconia_se
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -7735,6 +7838,79 @@ ab_mop_3_continued = {
 			change_peasant_zeal = {
 				value = 50
 			}
+		}
+	}
+}
+
+mop_germany_north_series_locked_3 = {
+	slot = 3
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_north_germany_south
+		}
+	}
+	mop_germany_north_series_locked_3_1 = {
+		icon = mission_locked_mission
+		position = 33
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+	mop_germany_north_series_locked_3_2 = {
+		icon = mission_locked_mission
+		position = 34
+		required_missions = {
+			mop_germany_north_series_locked_2_1
+			mop_germany_north_series_locked_3_1
+			mop_germany_north_series_locked_4_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+}
+mop_germany_capstone_north_locked = {
+	slot = 3
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlock_mop_germany_capstone_upper
+		}
+		NOT = {
+			has_country_flag = unlock_mop_germany_capstone_lower
+		}
+	}
+	mop_germany_capstone_north_locked_1 = {
+		icon = mission_locked_mission
+		position = 35
+		required_missions = {
+			mop_germany_north_series_locked_3_2
+			mop_germany_north_series_locked_4_2
+			mop_germany_north_series_locked_2_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
 		}
 	}
 }
@@ -11432,6 +11608,46 @@ mop_germany_south_series_se_4 = {
 	}
 }
 
+mop_germany_north_series_locked_4 = {
+	slot = 4
+	generic = no
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_north_germany_south
+		}
+	}
+	mop_germany_north_series_locked_4_1 = {
+		icon = mission_locked_mission
+		position = 33
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+	mop_germany_north_series_locked_4_2 = {
+		icon = mission_locked_mission
+		position = 34
+		required_missions = {
+			mop_germany_north_series_locked_3_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_germany_south_series_locked_3_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_germany_south_series_locked_3_1_desc
+		}
+	}
+}
 ab_mop_4_continued = {
 	slot = 4
 	generic = no
