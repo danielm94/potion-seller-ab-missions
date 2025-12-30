@@ -7963,12 +7963,67 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_iraq = {
-		icon = mission_cradle_of_civilization
-		position = 21
-		required_missions = {
-			mop_free_anatolia
+}
+
+mop_middle_east_series_locked_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_middle_east_nw
 		}
+		NOT = {
+			has_country_flag = unlocked_mop_middle_east_ne
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_middle_east_sw
+		}
+	}
+	mop_middle_east_series_locked_4_1 = {
+		icon = mission_locked_mission
+		position = 22
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_middle_east_series_locked_4_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_middle_east_series_locked_4_1_desc
+		}
+	}
+	mop_middle_east_series_locked_4_2 = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_middle_east_series_locked_4_1
+			mop_middle_east_series_locked_5_1
+		}
+		position = 23
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_middle_east_series_locked_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_middle_east_series_locked_5_1_desc
+		}
+	}
+}
+
+mop_middle_east_series_nw_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_middle_east_nw
+	}
+	mop_iraq_nw = {
+		icon = mission_cradle_of_civilization
+		position = 22
 		provinces_to_highlight = {
 			OR = {
 				area = al_jazira_area
@@ -8052,12 +8107,349 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_arabia = {
+	mop_arabia_nw = {
+		icon = mission_into_arabia
+		position = 23
+		required_missions = {
+			mop_holy_land_nw
+			mop_iraq_nw
+		}
+		provinces_to_highlight = {
+			region = arabia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				arabia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_UAC_commune_diplomatic_actions_tt
+			set_country_flag = unlock_UAC_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_hejazi_culture_bonus_tt
+			set_country_flag = integrated_commune_hejazi_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_yemeni_culture_bonus_tt
+			set_country_flag = integrated_commune_yemeni_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_gulf_arabic_bonus_tt
+			set_country_flag = integrated_commune_gulf_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_omani_culture_bonus_tt
+			set_country_flag = integrated_commune_omani_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_mahri_culture_bonus_tt
+			set_country_flag = integrated_commune_mahri_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			387 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_moca_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = desert_dev_20_percent_extra_dev_tt
+			set_country_flag = desert_dev_20_percent_extra_dev
+			custom_tooltip = coastal_desert_dev_20_percent_extra_dev_tt
+			set_country_flag = coastal_desert_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
+}
+
+mop_middle_east_series_sw_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_middle_east_sw
+	}
+	mop_arabia_sw = {
 		icon = mission_into_arabia
 		position = 22
+		provinces_to_highlight = {
+			region = arabia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				arabia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_UAC_commune_diplomatic_actions_tt
+			set_country_flag = unlock_UAC_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_hejazi_culture_bonus_tt
+			set_country_flag = integrated_commune_hejazi_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_yemeni_culture_bonus_tt
+			set_country_flag = integrated_commune_yemeni_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_gulf_arabic_bonus_tt
+			set_country_flag = integrated_commune_gulf_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_omani_culture_bonus_tt
+			set_country_flag = integrated_commune_omani_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_mahri_culture_bonus_tt
+			set_country_flag = integrated_commune_mahri_culture_bonus_flag
+			custom_tooltip = AB_EMPTY
+			387 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_moca_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = desert_dev_20_percent_extra_dev_tt
+			set_country_flag = desert_dev_20_percent_extra_dev
+			custom_tooltip = coastal_desert_dev_20_percent_extra_dev_tt
+			set_country_flag = coastal_desert_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
+	mop_iraq_sw = {
+		icon = mission_cradle_of_civilization
 		required_missions = {
-			mop_holy_land
-			mop_iraq
+			mop_arabia_sw
+			mop_holy_land_sw
+		}
+		position = 23
+		provinces_to_highlight = {
+			OR = {
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = basra_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				al_jazira_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				iraq_arabi_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				basra_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_al_iraqiya_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_iraqiya_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_kurdish_bonus_tt
+			set_country_flag = integrated_commune_kurdish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_assyrian_bonus_tt
+			set_country_flag = integrated_commune_assyrian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			410 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_bagdad_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = can_use_bagdad_library_tt
+			set_country_flag = can_use_bagdad_library
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_completed_innovative_ideas_tt
+				first_limit = "full_idea_group = innovativeness_ideas"
+				first_effect = "	410 = {
+										add_province_modifier = {
+											name = mop_restore_grand_library_of_bagdad
+											duration = -1
+										}
+									}"
+			}
+			add_innovativeness_or_monarch_power = {
+				amount = 5
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+}
+
+mop_middle_east_series_ne_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_middle_east_ne
+	}
+	mop_iraq_ne = {
+		icon = mission_cradle_of_civilization
+		position = 22
+		provinces_to_highlight = {
+			OR = {
+				area = al_jazira_area
+				area = iraq_arabi_area
+				area = basra_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				al_jazira_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				iraq_arabi_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				basra_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_al_iraqiya_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_iraqiya_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_kurdish_bonus_tt
+			set_country_flag = integrated_commune_kurdish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_assyrian_bonus_tt
+			set_country_flag = integrated_commune_assyrian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			410 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_bagdad_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = can_use_bagdad_library_tt
+			set_country_flag = can_use_bagdad_library
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_completed_innovative_ideas_tt
+				first_limit = "full_idea_group = innovativeness_ideas"
+				first_effect = "	410 = {
+										add_province_modifier = {
+											name = mop_restore_grand_library_of_bagdad
+											duration = -1
+										}
+									}"
+			}
+			add_innovativeness_or_monarch_power = {
+				amount = 5
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_arabia_ne = {
+		icon = mission_into_arabia
+		position = 23
+		required_missions = {
+			mop_iraq_ne
 		}
 		provinces_to_highlight = {
 			region = arabia_region
@@ -9707,12 +10099,294 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_holy_land = {
-		icon = convert_the_holy_lands
-		position = 21
-		required_missions = {
-			mop_free_anatolia
+}
+
+mop_middle_east_series_locked_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_middle_east_nw
 		}
+		NOT = {
+			has_country_flag = unlocked_mop_middle_east_ne
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_middle_east_sw
+		}
+	}
+	mop_middle_east_series_locked_5_1 = {
+		icon = mission_locked_mission
+		position = 22
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_middle_east_series_locked_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_middle_east_series_locked_5_1_desc
+		}
+	}
+	mop_middle_east_series_locked_5_2 = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_middle_east_series_locked_4_1
+			mop_middle_east_series_locked_5_1
+		}
+		position = 23
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_middle_east_series_locked_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_middle_east_series_locked_5_1_desc
+		}
+	}
+}
+
+mop_middle_east_series_nw_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_middle_east_nw
+	}
+	mop_holy_land_nw = {
+		icon = convert_the_holy_lands
+		position = 22
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				area = palestine_area
+				area = syrian_desert_area
+				area = trans_jordan_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				aleppo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				syria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				palestine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				syrian_desert_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				trans_jordan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_al_suryah_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_suryah_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_bedouin_arabic_bonus_tt
+			set_country_flag = integrated_commune_bedouin_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			2313 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_antiohia_commune
+					duration = -1
+				}
+			}
+			379 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_ierusalim_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				culture = al_suryah_arabic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+}
+mop_middle_east_series_ne_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_middle_east_ne
+	}
+	mop_holy_land_ne = {
+		icon = convert_the_holy_lands
+		position = 23
+		required_missions = {
+			mop_iraq_ne
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				area = palestine_area
+				area = syrian_desert_area
+				area = trans_jordan_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				aleppo_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				syria_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				palestine_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				syrian_desert_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				trans_jordan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_al_suryah_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_suryah_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_bedouin_arabic_bonus_tt
+			set_country_flag = integrated_commune_bedouin_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			2313 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_antiohia_commune
+					duration = -1
+				}
+			}
+			379 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_ierusalim_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				culture = al_suryah_arabic
+				cost_multiplier = 0.5
+			}
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.05
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+}
+mop_middle_east_series_sw_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_middle_east_sw
+	}
+	mop_holy_land_sw = {
+		icon = convert_the_holy_lands
+		position = 22
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
