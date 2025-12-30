@@ -2097,6 +2097,25 @@ ab_mop_1 = {
 					swap_non_generic_missions = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_east
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_north_africa_middle
+				custom_tooltip = unlocked_mop_north_africa_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
 		}
 	}
 }
@@ -2543,6 +2562,9 @@ mop_iberia_north_series_1 = {
 					NOT = {
 						has_country_flag = unlocked_mop_north_africa_west
 					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
+					}
 				}
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_north_africa_west
@@ -2762,6 +2784,9 @@ mop_iberia_south_series_1 = {
 					}
 					NOT = {
 						has_country_flag = unlocked_mop_north_africa_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
 					}
 				}
 				custom_tooltip = AB_EMPTY
@@ -5696,316 +5721,9 @@ ab_mop_3_continued = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
-	mop_great_peasants_war = {
-		icon = GFX_mop_great_peasants_war
-		position = 25
-		required_missions = {
-			mop_liberate_the_balkans
-		}
-		provinces_to_highlight = {
-			if = {
-				limit = {
-					NOT = {
-						hre_size = 1
-					}
-				}
-				always = no
-			}
-			else_if = {
-				limit = {
-					has_great_peasants_war_ended = yes
-					NOT = {
-						has_global_flag = great_peasants_war_flag
-					}
-				}
-				always = no
-			}
-			else_if = {
-				limit = {
-					has_global_flag = great_peasants_war_flag
-				}
-				is_capital = yes
-				is_part_of_hre = yes
-				owner = {
-					is_peasant_republic = yes
-				}
-			}
-			else = {
-				is_capital = yes
-				is_part_of_hre = yes
-				owner = {
-					is_peasant_republic = no
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					mission_completed = mop_great_peasants_war
-				}
-				always = yes
-			}
-			else_if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						hre_size = 1
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = hre_was_dismantled_trigger_tooltip
-					always = yes
-				}
-			}
-			else_if = {
-				limit = {
-					has_great_peasants_war_ended = yes
-					NOT = {
-						has_global_flag = great_peasants_war_flag
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = great_peasants_war_late_tt
-					always = yes
-				}
-			}
-			else_if = {
-				limit = {
-					has_global_flag = great_peasants_war_flag
-				}
-				custom_trigger_tooltip = {
-					tooltip = have_invited_3_hre_countries_to_league_tt
-					check_variable = {
-						hre_nations_diplo_annexed = 3
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = has_supported_2_mass_peasant_uprisings_tt
-					check_variable = {
-						number_of_mass_peasant_uprisings = 2
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = incited_peasants_in_hre_tt
-					calc_true_if = {
-						all_country = {
-							OR = {
-								has_country_modifier = incited_peasantry
-								has_country_modifier = incited_peasantry_great_peasants_war
-							}
-							is_part_of_hre = yes
-						}
-						amount = 4
-					}
-				}
-			}
-			else = {
-				dip_power = 100
-				mil_power = 100
-				custom_trigger_tooltip = {
-					tooltip = has_scornfully_insulted_the_hremperor_tt
-					emperor = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = scornfully_insulted
-						}
-					}
-				}
-				has_spy_network_in = {
-					who = emperor
-					value = 50
-				}
-				custom_trigger_tooltip = {
-					tooltip = liberated_peasants_in_hre_tt
-					check_variable = {
-						hre_nations_liberated = 2
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = incited_peasants_in_hre_tt
-					calc_true_if = {
-						all_country = {
-							OR = {
-								has_country_modifier = incited_peasantry
-								has_country_modifier = incited_peasantry_great_peasants_war
-							}
-							is_part_of_hre = yes
-						}
-						amount = 4
-					}
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					mission_completed = mop_great_peasants_war
-					has_global_flag = great_peasants_war_flag
-				}
-				custom_tooltip = gpw_basics_tt
-				custom_tooltip = gpw_new_icon_tt
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = incite_peasants_gpw_changes_tt
-				custom_tooltip = incite_peasants_verbose_gpw_changes_tt
-				tooltip = {
-					if = {
-						limit = {
-							hre_size = 1
-						}
-						emperor = {
-							add_country_modifier = {
-								name = incited_peasantry_great_peasants_war
-								duration = 3650
-							}
-						}
-					}
-					else = {
-						add_country_modifier = {
-							name = incited_peasantry_great_peasants_war
-							duration = 3650
-						}
-					}
-				}
-				custom_tooltip = gpw_unlock_stage_mass_uprising_tt
-				custom_tooltip = gpw_unlock_stage_mass_uprising_verbose_tt
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = gpw_opportunity_tt
-				custom_tooltip = gpw_opportunity_verbose_tt
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						hre_size = 1
-					}
-				}
-				add_mil_power = 50
-				add_dip_power = 50
-				add_adm_power = 50
-			}
-			else_if = {
-				limit = {
-					has_great_peasants_war_ended = yes
-					NOT = {
-						has_global_flag = great_peasants_war_flag
-					}
-				}
-				add_mil_power = 25
-				add_dip_power = 25
-				add_adm_power = 25
-			}
-			else_if = {
-				limit = {
-					has_global_flag = great_peasants_war_flag
-				}
-				add_country_modifier = {
-					name = mop_great_peasants_war_mod
-					duration = 3650
-				}
-				every_country = {
-					limit = {
-						has_country_modifier = incited_peasantry
-						is_part_of_hre = yes
-					}
-					add_spy_network_from = {
-						who = ROOT
-						value = 75
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				change_peasant_zeal = {
-					value = 20
-				}
-				add_faction_influence = {
-					faction = abolitionists_faction
-					influence = 10
-				}
-				add_faction_influence = {
-					faction = leaguists_faction
-					influence = 10
-				}
-			}
-			else = {
-				custom_tooltip = start_gpw_early_tt
-				custom_tooltip = AB_EMPTY
-				add_country_modifier = {
-					name = mop_great_peasants_war_mod
-					duration = 3650
-				}
-				every_country = {
-					limit = {
-						has_country_modifier = incited_peasantry
-						is_part_of_hre = yes
-					}
-					custom_tooltip = mop_great_peasants_war_each_incited_country_tt
-					tooltip = {
-						add_country_modifier = {
-							name = incited_peasantry_great_peasants_war
-							duration = 3650
-						}
-					}
-					hidden_effect = {
-						remove_country_modifier = incited_peasantry
-						add_country_modifier = {
-							name = incited_peasantry_great_peasants_war
-							duration = 3650
-						}
-						add_spy_network_from = {
-							who = ROOT
-							value = 75
-						}
-					}
-				}
-				add_spy_network_in = {
-					who = emperor
-					value = -50
-				}
-				emperor = {
-					add_country_modifier = {
-						name = incited_peasantry
-						duration = 3650
-					}
-					capital_scope = {
-						add_province_modifier = {
-							name = radicalized_peasantry
-							duration = 3650
-						}
-					}
-				}
-				custom_tooltip = mop_great_peasants_war_permanent_pp_tt
-				hidden_effect = {
-					add_power_projection = {
-						type = started_gpw_pp
-						amount = 10
-					}
-				}
-				change_peasant_zeal = {
-					value = 20
-				}
-				add_faction_influence = {
-					faction = abolitionists_faction
-					influence = 25
-				}
-				add_dip_power = -100
-				add_mil_power = -100
-				hidden_effect = {
-					emperor = {
-						set_country_flag = early_gpw
-						country_event = {
-							id = great_peasant_war.1
-						}
-					}
-				}
-			}
-		}
-	}
 	mop_switzerland = {
 		icon = reorganize_the_confederacy
-		position = 27
+		position = 29
 		required_missions = {
 			mop_austria
 		}
@@ -6130,7 +5848,7 @@ ab_mop_3_continued = {
 	}
 	mop_rhine = {
 		icon = rhineland_conquest
-		position = 29
+		position = 31
 		required_missions = {
 			mop_south_germany
 		}
@@ -8712,6 +8430,9 @@ mop_middle_east_series_nw_4 = {
 					NOT = {
 						has_country_flag = unlocked_mop_north_africa_west
 					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
+					}
 				}
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_north_africa_east
@@ -9129,6 +8850,9 @@ mop_middle_east_series_ne_4 = {
 					NOT = {
 						has_country_flag = unlocked_mop_north_africa_west
 					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
+					}
 				}
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_north_africa_east
@@ -9533,6 +9257,127 @@ mop_persia_series_east = {
 	}
 }
 
+mop_north_africa_series_locked_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_north_africa_east
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_north_africa_west
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_north_africa_middle
+		}
+	}
+	mop_north_africa_locked_4_1 = {
+		icon = mission_locked_mission
+		position = 25
+		required_missions = {
+			mop_north_africa_series_locked_5_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_north_africa_series_locked_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_north_africa_series_locked_5_1_desc
+		}
+	}
+}
+
+mop_north_africa_middle = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_north_africa_middle
+	}
+	mop_egypt_middle = {
+		icon = gfx_wal_conquer_egypt
+		position = 26
+		required_missions = {
+			mop_tunisia_middle
+		}
+		provinces_to_highlight = {
+			region = egypt_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				egypt_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_al_misr_arabic_bonus_tt
+			set_country_flag = integrated_commune_al_misr_arabic_bonus_flag
+			custom_tooltip = AB_EMPTY
+			358 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_alexandria_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = unlock_egyptian_grain_export_tt
+			set_country_flag = unlock_egyptian_grain_export
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = marsh_dev_20_percent_extra_dev_tt
+			set_country_flag = marsh_dev_20_percent_extra_dev
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_ne
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_nw
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_middle_east_sw
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				set_country_flag = unlocked_mop_middle_east_sw
+				custom_tooltip = unlocked_mop_middle_east_tt
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+
 ab_mop_4_continued = {
 	slot = 4
 	generic = no
@@ -9540,9 +9385,313 @@ ab_mop_4_continued = {
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
 	}
+	mop_great_peasants_war = {
+		icon = GFX_mop_great_peasants_war
+		position = 27
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					NOT = {
+						hre_size = 1
+					}
+				}
+				always = no
+			}
+			else_if = {
+				limit = {
+					has_great_peasants_war_ended = yes
+					NOT = {
+						has_global_flag = great_peasants_war_flag
+					}
+				}
+				always = no
+			}
+			else_if = {
+				limit = {
+					has_global_flag = great_peasants_war_flag
+				}
+				is_capital = yes
+				is_part_of_hre = yes
+				owner = {
+					is_peasant_republic = yes
+				}
+			}
+			else = {
+				is_capital = yes
+				is_part_of_hre = yes
+				owner = {
+					is_peasant_republic = no
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					mission_completed = mop_great_peasants_war
+				}
+				always = yes
+			}
+			else_if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						hre_size = 1
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = hre_was_dismantled_trigger_tooltip
+					always = yes
+				}
+			}
+			else_if = {
+				limit = {
+					has_great_peasants_war_ended = yes
+					NOT = {
+						has_global_flag = great_peasants_war_flag
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = great_peasants_war_late_tt
+					always = yes
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = great_peasants_war_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = have_invited_3_hre_countries_to_league_tt
+					check_variable = {
+						hre_nations_diplo_annexed = 3
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = has_supported_2_mass_peasant_uprisings_tt
+					check_variable = {
+						number_of_mass_peasant_uprisings = 2
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = incited_peasants_in_hre_tt
+					calc_true_if = {
+						all_country = {
+							OR = {
+								has_country_modifier = incited_peasantry
+								has_country_modifier = incited_peasantry_great_peasants_war
+							}
+							is_part_of_hre = yes
+						}
+						amount = 4
+					}
+				}
+			}
+			else = {
+				dip_power = 100
+				mil_power = 100
+				custom_trigger_tooltip = {
+					tooltip = has_scornfully_insulted_the_hremperor_tt
+					emperor = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+				}
+				has_spy_network_in = {
+					who = emperor
+					value = 50
+				}
+				custom_trigger_tooltip = {
+					tooltip = liberated_peasants_in_hre_tt
+					check_variable = {
+						hre_nations_liberated = 2
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = incited_peasants_in_hre_tt
+					calc_true_if = {
+						all_country = {
+							OR = {
+								has_country_modifier = incited_peasantry
+								has_country_modifier = incited_peasantry_great_peasants_war
+							}
+							is_part_of_hre = yes
+						}
+						amount = 4
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					mission_completed = mop_great_peasants_war
+					has_global_flag = great_peasants_war_flag
+				}
+				custom_tooltip = gpw_basics_tt
+				custom_tooltip = gpw_new_icon_tt
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = incite_peasants_gpw_changes_tt
+				custom_tooltip = incite_peasants_verbose_gpw_changes_tt
+				tooltip = {
+					if = {
+						limit = {
+							hre_size = 1
+						}
+						emperor = {
+							add_country_modifier = {
+								name = incited_peasantry_great_peasants_war
+								duration = 3650
+							}
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = incited_peasantry_great_peasants_war
+							duration = 3650
+						}
+					}
+				}
+				custom_tooltip = gpw_unlock_stage_mass_uprising_tt
+				custom_tooltip = gpw_unlock_stage_mass_uprising_verbose_tt
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = gpw_opportunity_tt
+				custom_tooltip = gpw_opportunity_verbose_tt
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						hre_size = 1
+					}
+				}
+				add_mil_power = 50
+				add_dip_power = 50
+				add_adm_power = 50
+			}
+			else_if = {
+				limit = {
+					has_great_peasants_war_ended = yes
+					NOT = {
+						has_global_flag = great_peasants_war_flag
+					}
+				}
+				add_mil_power = 25
+				add_dip_power = 25
+				add_adm_power = 25
+			}
+			else_if = {
+				limit = {
+					has_global_flag = great_peasants_war_flag
+				}
+				add_country_modifier = {
+					name = mop_great_peasants_war_mod
+					duration = 3650
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = incited_peasantry
+						is_part_of_hre = yes
+					}
+					add_spy_network_from = {
+						who = ROOT
+						value = 75
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				change_peasant_zeal = {
+					value = 20
+				}
+				add_faction_influence = {
+					faction = abolitionists_faction
+					influence = 10
+				}
+				add_faction_influence = {
+					faction = leaguists_faction
+					influence = 10
+				}
+			}
+			else = {
+				custom_tooltip = start_gpw_early_tt
+				custom_tooltip = AB_EMPTY
+				add_country_modifier = {
+					name = mop_great_peasants_war_mod
+					duration = 3650
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = incited_peasantry
+						is_part_of_hre = yes
+					}
+					custom_tooltip = mop_great_peasants_war_each_incited_country_tt
+					tooltip = {
+						add_country_modifier = {
+							name = incited_peasantry_great_peasants_war
+							duration = 3650
+						}
+					}
+					hidden_effect = {
+						remove_country_modifier = incited_peasantry
+						add_country_modifier = {
+							name = incited_peasantry_great_peasants_war
+							duration = 3650
+						}
+						add_spy_network_from = {
+							who = ROOT
+							value = 75
+						}
+					}
+				}
+				add_spy_network_in = {
+					who = emperor
+					value = -50
+				}
+				emperor = {
+					add_country_modifier = {
+						name = incited_peasantry
+						duration = 3650
+					}
+					capital_scope = {
+						add_province_modifier = {
+							name = radicalized_peasantry
+							duration = 3650
+						}
+					}
+				}
+				custom_tooltip = mop_great_peasants_war_permanent_pp_tt
+				hidden_effect = {
+					add_power_projection = {
+						type = started_gpw_pp
+						amount = 10
+					}
+				}
+				change_peasant_zeal = {
+					value = 20
+				}
+				add_faction_influence = {
+					faction = abolitionists_faction
+					influence = 25
+				}
+				add_dip_power = -100
+				add_mil_power = -100
+				hidden_effect = {
+					emperor = {
+						set_country_flag = early_gpw
+						country_event = {
+							id = great_peasant_war.1
+						}
+					}
+				}
+			}
+		}
+	}
 	mop_austria = {
 		icon = prosper_in_piedmont
-		position = 26
+		position = 28
 		required_missions = {
 			mop_great_peasants_war
 		}
@@ -9619,7 +9768,7 @@ ab_mop_4_continued = {
 	}
 	mop_bavaria = {
 		icon = duchy_of_bavaria
-		position = 27
+		position = 29
 		required_missions = {
 			mop_austria
 		}
@@ -9686,7 +9835,7 @@ ab_mop_4_continued = {
 	}
 	mop_south_germany = {
 		icon = mission_rhine
-		position = 28
+		position = 30
 		required_missions = {
 			mop_switzerland
 			mop_bavaria
@@ -9748,7 +9897,7 @@ ab_mop_4_continued = {
 	}
 	mop_germany = {
 		icon = interfere_in_germany
-		position = 30
+		position = 32
 		required_missions = {
 			mop_rhine
 			mop_saxons
@@ -10968,6 +11117,9 @@ mop_middle_east_series_nw_5 = {
 					NOT = {
 						has_country_flag = unlocked_mop_north_africa_west
 					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
+					}
 				}
 				custom_tooltip = AB_EMPTY
 				set_country_flag = unlocked_mop_north_africa_east
@@ -11099,6 +11251,9 @@ mop_middle_east_series_ne_5 = {
 					}
 					NOT = {
 						has_country_flag = unlocked_mop_north_africa_west
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_north_africa_middle
 					}
 				}
 				custom_tooltip = AB_EMPTY
@@ -11252,6 +11407,9 @@ mop_north_africa_series_locked_5 = {
 		}
 		NOT = {
 			has_country_flag = unlocked_mop_north_africa_west
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_north_africa_middle
 		}
 	}
 	mop_north_africa_series_locked_5_1 = {
@@ -11659,6 +11817,287 @@ mop_north_africa_series_west_5 = {
 	}
 }
 
+mop_north_africa_series_middle_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_north_africa_middle
+	}
+	mop_tunisia_middle = {
+		icon = mission_conquer_tunis
+		position = 25
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = djerba_area
+				area = north_saharan_area
+				area = tripolitania_area
+				area = fezzan_area
+				area = kabylia_area
+				area = ouled_nail_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				tunisia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				djerba_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				north_saharan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				tripolitania_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				fezzan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				kabylia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				ouled_nail_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_tunisian_bonus_tt
+			set_country_flag = integrated_commune_tunisian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_berber_bonus_tt
+			set_country_flag = integrated_commune_berber_bonus_flag
+			custom_tooltip = AB_EMPTY
+			341 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_tunis_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = 10950
+			}
+			define_admiral = {
+				shock = 4
+				fire = 4
+				manuever = 4
+				siege = 4
+			}
+			add_yearly_sailors = 1
+			add_navy_tradition = 15
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_maghreb_middle = {
+		icon = mission_moroccan_ports
+		position = 26
+		required_missions = {
+			mop_tunisia_middle
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hautes_plaines_area
+				area = barbary_coast_area
+				area = algiers_area
+				area = tafilalt_area
+				area = marrekesh_area
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = southern_morocco_area
+				area = sus_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				hautes_plaines_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				barbary_coast_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				algiers_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				tafilalt_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				marrekesh_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				northern_morocco_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				western_morocco_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				southern_morocco_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				sus_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_ATF_commune_diplomatic_actions_tt
+			set_country_flag = unlock_ATF_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_moroccan_bonus_tt
+			set_country_flag = integrated_commune_moroccan_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_algerian_bonus_tt
+			set_country_flag = integrated_commune_algerian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			4568 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_demnat_commune
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = wallachia_into_the_unknown
+				duration = 7300
+			}
+			define_explorer = {
+				shock = 3
+				fire = 3
+				manuever = 3
+				siege = 3
+			}
+			custom_tooltip = AB_EMPTY
+			1127 = {
+				add_siberian_construction = 100
+				hidden_effect = {
+					change_trade_goods = gold
+					change_culture = root
+					change_religion = root
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_still_have_the_pax_navalis_modifier
+				first_limit = "has_country_modifier = wallachia_pax_navalis"
+				first_effect = "hidden_effect = {
+				remove_country_modifier = wallachia_pax_navalis
+			}
+			add_country_modifier = {
+				name = wallachia_pax_navalis
+				duration = -1
+			}"
+			}
+			change_peasant_zeal = {
+				value = 15
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_north
+					}
+					NOT = {
+						has_country_flag = unlocked_mop_iberia_south
+					}
+				}
+				custom_tooltip = AB_EMPTY
+				custom_tooltip = unlocked_mop_iberia_tt
+				hidden_effect = {
+					set_country_flag = unlocked_mop_iberia_south
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+
 mop_north_africa_series_east_5 = {
 	slot = 5
 	generic = no
@@ -12026,7 +12465,7 @@ ab_mop_5_continued = {
 	}
 	mop_bohemia = {
 		icon = mission_crown_of_wenceslas
-		position = 27
+		position = 29
 		required_missions = {
 			mop_austria
 		}
@@ -12081,7 +12520,7 @@ ab_mop_5_continued = {
 	}
 	mop_saxons = {
 		icon = conquer_lower_saxony
-		position = 29
+		position = 31
 		required_missions = {
 			mop_south_germany
 		}
