@@ -7765,7 +7765,7 @@ ab_mop_4 = {
 	}
 	mop_strong_razesi = {
 		icon = GFX_mop_strong_razesi
-		position = 18
+		position = 19
 		required_missions = {
 			mop_razesi
 		}
@@ -7834,16 +7834,70 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_dismantle_the_stratocracy = {
-		icon = mission_nicaea
-		position = 19
-		required_missions = {
-			mop_liberate_thrace
+}
+
+mop_anatolia_series_locked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_anatolia_east
 		}
+		NOT = {
+			has_country_flag = unlocked_mop_anatolia_west
+		}
+	}
+	mop_anatolia_series_locked_1 = {
+		icon = mission_locked_mission
+		position = 20
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_anatolia_series_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_anatolia_series_locked_1_desc
+		}
+	}
+	mop_anatolia_series_locked_2 = {
+		icon = mission_locked_mission
+		required_missions = {
+			mop_anatolia_series_locked_1
+		}
+		position = 21
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_anatolia_series_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_anatolia_series_locked_1_desc
+		}
+	}
+}
+
+mop_anatolia_west = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_anatolia_west
+	}
+	mop_dismantle_the_stratocracy_west = {
+		icon = mission_nicaea
+		position = 20
 		provinces_to_highlight = {
 			OR = {
 				area = hudavendigar_area
 				area = aydin_area
+				area = germiyan_area
+				area = kastamonu_area
+				area = ankara_area
 			}
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
@@ -7862,13 +7916,31 @@ ab_mop_4 = {
 				hudavendigar_area = {
 					type = all
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
+						who = root
 					}
 				}
 				aydin_area = {
 					type = all
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
+						who = root
+					}
+				}
+				germiyan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				kastamonu_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				ankara_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
 					}
 				}
 			}
@@ -7904,14 +7976,21 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_free_anatolia = {
+	mop_east_anatolia_west = {
 		icon = anatolian_frontier
-		position = 20
+		position = 21
 		required_missions = {
-			mop_dismantle_the_stratocracy
+			mop_dismantle_the_stratocracy_west
 		}
 		provinces_to_highlight = {
-			region = anatolia_region
+			OR = {
+				area = karaman_area
+				area = cukurova_area
+				area = dulkadir_area
+				area = rum_area
+				area = north_kurdistan_area
+				area = erzurum_area
+			}
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = ROOT
@@ -7926,15 +8005,54 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				anatolia_region = {
+				karaman_area = {
 					type = all
 					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
+						who = root
+					}
+				}
+				cukurova_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				dulkadir_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				rum_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				north_kurdistan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				erzurum_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
 					}
 				}
 			}
 		}
 		effect = {
+			330 = {
+				add_core = root
+				remove_core = owner
+				cede_province = root
+				add_province_modifier = {
+					name = mop_trapezunt_commune
+					duration = -1
+				}
+			}
 			custom_tooltip = unlock_RUM_commune_diplomatic_actions_tt
 			set_country_flag = unlock_RUM_commune_diplomatic_actions
 			custom_tooltip = AB_EMPTY
@@ -7960,6 +8078,209 @@ ab_mop_4 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 10
+			}
+		}
+	}
+}
+
+mop_anatolia_east = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_anatolia_east
+	}
+	mop_east_anatolia_east = {
+		icon = anatolian_frontier
+		position = 20
+		provinces_to_highlight = {
+			OR = {
+				area = karaman_area
+				area = cukurova_area
+				area = dulkadir_area
+				area = rum_area
+				area = north_kurdistan_area
+				area = erzurum_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				karaman_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				cukurova_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				dulkadir_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				rum_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				north_kurdistan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				erzurum_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			330 = {
+				add_core = root
+				remove_core = owner
+				cede_province = root
+				add_province_modifier = {
+					name = mop_trapezunt_commune
+					duration = -1
+				}
+			}
+			custom_tooltip = unlock_RUM_commune_diplomatic_actions_tt
+			set_country_flag = unlock_RUM_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = unlock_ARM_commune_diplomatic_actions_tt
+			set_country_flag = unlock_ARM_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_turkish_orthodox_bonus_tt
+			set_country_flag = integrated_commune_turkish_orthodox_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_turkish_muslim_bonus_tt
+			set_country_flag = integrated_commune_turkish_muslim_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_armenian_bonus_tt
+			set_country_flag = integrated_commune_armenian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			add_republican_tradition = 5
+			add_army_tradition_or_mil_power = {
+				amount = 20
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_dismantle_the_stratocracy_east = {
+		icon = mission_nicaea
+		position = 21
+		required_missions = {
+			mop_east_anatolia_east
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+				area = germiyan_area
+				area = kastamonu_area
+				area = ankara_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				hudavendigar_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				aydin_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				germiyan_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				kastamonu_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				ankara_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			316 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_chalcedon_commune
+					duration = -1
+				}
+				add_unit_construction = {
+					type = galley
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+				center_of_trade = 1
+			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = bosporus_toll_construction_enabled
+			custom_tooltip = bosporus_toll_construction_enabled_tt
+			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
 			}
 		}
 	}
@@ -10017,7 +10338,7 @@ ab_mop_5 = {
 	}
 	mop_overthrow_2 = {
 		icon = mission_thirty_years_war
-		position = 19
+		position = 20
 		required_missions = {
 			mop_overthrow
 			mop_strong_razesi
@@ -10058,7 +10379,7 @@ ab_mop_5 = {
 	}
 	mop_overthrow_3 = {
 		icon = GFX_mop_overthrow_3
-		position = 20
+		position = 21
 		required_missions = {
 			mop_overthrow_2
 		}
@@ -10261,6 +10582,7 @@ mop_middle_east_series_nw_5 = {
 		}
 	}
 }
+
 mop_middle_east_series_ne_5 = {
 	slot = 5
 	generic = no
@@ -10376,6 +10698,7 @@ mop_middle_east_series_ne_5 = {
 		}
 	}
 }
+
 mop_middle_east_series_sw_5 = {
 	slot = 5
 	generic = no
