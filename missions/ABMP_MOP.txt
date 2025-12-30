@@ -1755,7 +1755,7 @@ ab_mop_1 = {
 	}
 	mop_liberate_the_serbs = {
 		icon = defeat_the_serbs
-		position = 23
+		position = 18
 		required_missions = {
 			mop_integrate_the_bulgars
 		}
@@ -1793,10 +1793,6 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_for_commune_player = {
-				target = 137
-			}
-			custom_tooltip = AB_EMPTY
 			add_mil_power = 100
 			change_peasant_zeal = {
 				value = 10
@@ -1811,58 +1807,11 @@ ab_mop_1 = {
 			set_country_flag = serbian_integrated_commune_bonus
 		}
 	}
-	mop_conquer_ragusa = {
-		icon = capture_adriatic_ports
-		position = 26
-		required_missions = {
-			mop_liberate_the_serbs
-		}
-		provinces_to_highlight = {
-			province_id = 137
-			NOT = {
-				owned_by = ROOT
-			}
-			NOT = {
-				is_core = ROOT
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				137 = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-		}
-		effect = {
-			add_adm_power = 25
-			change_peasant_zeal = {
-				value = 5
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 5
-			}
-			custom_tooltip = AB_EMPTY
-			137 = {
-				add_province_modifier = {
-					name = mop_commune_of_dubrovnik
-					duration = -1
-				}
-			}
-		}
-	}
 	mop_liberate_illyria = {
 		icon = secure_the_sava
-		position = 32
+		position = 20
 		required_missions = {
-			mop_conquer_ragusa
+			mop_liberate_the_serbs
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1912,6 +1861,15 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
+			137 = {
+				add_core = root
+				remove_core = owner
+				cede_province = root
+				add_province_modifier = {
+					name = mop_commune_of_dubrovnik
+					duration = -1
+				}
+			}
 			custom_tooltip = unlock_ILR_commune_diplomatic_actions_tt
 			set_country_flag = unlock_ILR_commune_diplomatic_actions
 			custom_tooltip = AB_EMPTY
@@ -3850,7 +3808,7 @@ ab_mop_2 = {
 	}
 	mop_xinan = {
 		icon = GFX_mop_xinan
-		position = 15
+		position = 16
 		required_missions = {
 			mop_north_china
 		}
@@ -3974,170 +3932,11 @@ ab_mop_2 = {
 			}
 		}
 	}
-	mop_liberate_thrace = {
-		icon = byz_city_of_worlds_desire
+	mop_protect_the_albanians = {
+		icon = mission_protect_albania
 		position = 18
 		required_missions = {
 			mop_integrate_the_bulgars
-		}
-		provinces_to_highlight = {
-			area = thrace_area
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = ROOT
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_control_all_thrace_provinces_tt
-					thrace_area = {
-						type = all
-						country_or_commune_subject_or_subject_of_commune_subject_holds = {
-							who = ROOT
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			151 = {
-				remove_core = owner
-				add_core = ROOT
-				cede_province = ROOT
-				if = {
-					limit = {
-						NOT = {
-							culture = greek
-						}
-						NOT = {
-							culture = ROOT
-						}
-					}
-					change_culture = greek
-				}
-				change_province_name = "Stamboli"
-				rename_capital = "Stamboli"
-				add_province_modifier = {
-					name = mop_stamboli_commune
-					duration = -1
-				}
-			}
-			define_advisor = {
-				type = patriarch
-				skill = 1
-				cost_multiplier = 0.25
-				culture = greek
-				religion = orthodox
-				age = 40
-				name = "The Patriarch of Stamboli"
-				location = 151
-			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = patriarch_constantinople_buff
-			set_country_flag = patriarch_of_constantinople
-			custom_tooltip = AB_EMPTY
-			add_patriarch_authority = 0.1
-			custom_tooltip = AB_EMPTY
-			151 = {
-				add_province_modifier = {
-					name = mop_patriarchate_of_stamboli
-					duration = -1
-				}
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 15
-			}
-		}
-	}
-	mop_liberate_the_greeks = {
-		icon = mission_parthenon
-		position = 25
-		required_missions = {
-			mop_liberate_thrace
-		}
-		provinces_to_highlight = {
-			culture = greek
-			OR = {
-				region = balkan_region
-				area = aegean_archipelago_area
-			}
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = ROOT
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_liberate_the_greeks_tt
-					NOT = {
-						any_province = {
-							culture = greek
-							OR = {
-								region = balkan_region
-								area = aegean_archipelago_area
-							}
-							NOT = {
-								country_or_commune_subject_or_subject_of_commune_subject_holds = {
-									who = ROOT
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = unlock_HLE_commune_diplomatic_actions_tt
-			set_country_flag = unlock_HLE_commune_diplomatic_actions
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 10
-			}
-			custom_tooltip = greek_integrated_commune_bonus_tt
-			set_country_flag = greek_integrated_commune_bonus
-			custom_tooltip = AB_EMPTY
-			add_accepted_culture_or_dip_power_stated = {
-				culture = greek
-				dip_reward = yes
-				free = yes
-			}
-			custom_tooltip = AB_EMPTY
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_have_completed_naval_ideas_tt
-				first_limit = "full_idea_group = naval_ideas"
-				first_effect = "add_country_modifier = {
-									name = byzantium_greekfire
-									duration = -1
-								}"
-			}
-		}
-	}
-	mop_protect_the_albanians = {
-		icon = mission_protect_albania
-		position = 30
-		required_missions = {
-			mop_liberate_the_greeks
 		}
 		provinces_to_highlight = {
 			area = albania_area
@@ -4191,9 +3990,10 @@ ab_mop_2 = {
 	}
 	mop_liberate_the_balkans = {
 		icon = mission_balkan_conquest
-		position = 33
+		position = 21
 		required_missions = {
 			mop_liberate_illyria
+			mop_liberate_the_greeks
 			mop_protect_the_albanians
 		}
 		provinces_to_highlight = {
@@ -5442,7 +5242,7 @@ ab_mop_3 = {
 	}
 	mop_slay_the_dragon = {
 		icon = GFX_mop_slay_the_dragon
-		position = 16
+		position = 17
 		required_missions = {
 			mop_south_china
 			mop_xinan
@@ -5512,50 +5312,19 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_razesi = {
-		icon = GFX_mop_razesi
-		position = 17
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				has_completed_n_razesi_agendas = {
-					n = 2
-				}
-				OR = {
-					estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 60
-					}
-					estate_influence = {
-						estate = estate_razesi
-						influence = 75
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = develop_razesi_loyalty_tt
-			set_country_flag = develop_razesi_loyalty
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 5
-			}
-			add_estate_loyalty = {
-				estate = estate_razesi
-				loyalty = 10
-			}
-		}
-	}
-	mop_strong_razesi = {
-		icon = GFX_mop_strong_razesi
+	mop_liberate_thrace = {
+		icon = byz_city_of_worlds_desire
 		position = 18
 		required_missions = {
-			mop_razesi
+			mop_integrate_the_bulgars
+		}
+		provinces_to_highlight = {
+			area = thrace_area
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
 		}
 		trigger = {
 			if = {
@@ -5565,73 +5334,79 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				has_completed_n_razesi_agendas = {
-					n = 5
-				}
-				OR = {
-					estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 70
-					}
-					estate_influence = {
-						estate = estate_razesi
-						influence = 90
-					}
-				}
-				num_of_estate_privileges = {
-					estate = estate_razesi
-					value = 5
-				}
-				calc_true_if = {
-					amount = 5
-					custom_trigger_tooltip = {
-						tooltip = has_farm_estate_tt
-						all_owned_province = {
-							has_building = farm_estate
+				custom_trigger_tooltip = {
+					tooltip = mop_control_all_thrace_provinces_tt
+					thrace_area = {
+						type = all
+						country_or_commune_subject_or_subject_of_commune_subject_holds = {
+							who = ROOT
 						}
 					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = razesi_farm_estate_bonus_tt
-			set_country_flag = razesi_farm_estate_bonus
+			151 = {
+				remove_core = owner
+				add_core = ROOT
+				cede_province = ROOT
+				if = {
+					limit = {
+						NOT = {
+							culture = greek
+						}
+						NOT = {
+							culture = ROOT
+						}
+					}
+					change_culture = greek
+				}
+				change_province_name = "Stamboli"
+				rename_capital = "Stamboli"
+				add_province_modifier = {
+					name = mop_stamboli_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = patriarch
+				skill = 1
+				cost_multiplier = 0.25
+				culture = greek
+				religion = orthodox
+				age = 40
+				name = "The Patriarch of Stamboli"
+				location = 151
+			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = buffed_grain_monopoly_tt
-			set_country_flag = buffed_grain_monopoly
-			tooltip = {
+			custom_tooltip = patriarch_constantinople_buff
+			set_country_flag = patriarch_of_constantinople
+			custom_tooltip = AB_EMPTY
+			add_patriarch_authority = 0.1
+			custom_tooltip = AB_EMPTY
+			151 = {
 				add_province_modifier = {
-					name = mop_grain_monopoly_province
-					duration = 4380
+					name = mop_patriarchate_of_stamboli
+					duration = -1
 				}
 			}
-			custom_tooltip = buffed_livestock_monopoly_tt
-			set_country_flag = buffed_livestock_monopoly
-			tooltip = {
-				add_province_modifier = {
-					name = mop_livestock_monopoly_province
-					duration = 4380
-				}
-			}
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_estate_loyalty = {
-				estate = estate_razesi
-				loyalty = 20
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 15
 			}
 		}
 	}
-	mop_dismantle_the_stratocracy = {
-		icon = mission_nicaea
-		position = 19
+	mop_liberate_the_greeks = {
+		icon = mission_parthenon
+		position = 20
 		required_missions = {
 			mop_liberate_thrace
 		}
 		provinces_to_highlight = {
+			culture = greek
 			OR = {
-				area = hudavendigar_area
-				area = aydin_area
+				region = balkan_region
+				area = aegean_archipelago_area
 			}
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
@@ -5647,101 +5422,29 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				hudavendigar_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
-					}
-				}
-				aydin_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
-					}
-				}
-			}
-		}
-		effect = {
-			316 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_chalcedon_commune
-					duration = -1
-				}
-				add_unit_construction = {
-					type = galley
-					amount = 5
-					speed = 0.5
-					cost = 0
-				}
-				center_of_trade = 1
-			}
-			custom_tooltip = AB_EMPTY
-			set_country_flag = bosporus_toll_construction_enabled
-			custom_tooltip = bosporus_toll_construction_enabled_tt
-			custom_tooltip = AB_EMPTY
-			add_army_professionalism = 0.05
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 5
-			}
-		}
-	}
-	mop_free_anatolia = {
-		icon = anatolian_frontier
-		position = 27
-		required_missions = {
-			mop_dismantle_the_stratocracy
-		}
-		provinces_to_highlight = {
-			region = anatolia_region
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = ROOT
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				anatolia_region = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
+				custom_trigger_tooltip = {
+					tooltip = mop_liberate_the_greeks_tt
+					NOT = {
+						any_province = {
+							culture = greek
+							OR = {
+								region = balkan_region
+								area = aegean_archipelago_area
+							}
+							NOT = {
+								country_or_commune_subject_or_subject_of_commune_subject_holds = {
+									who = ROOT
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = unlock_RUM_commune_diplomatic_actions_tt
-			set_country_flag = unlock_RUM_commune_diplomatic_actions
+			custom_tooltip = unlock_HLE_commune_diplomatic_actions_tt
+			set_country_flag = unlock_HLE_commune_diplomatic_actions
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = unlock_ARM_commune_diplomatic_actions_tt
-			set_country_flag = unlock_ARM_commune_diplomatic_actions
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_turkish_orthodox_bonus_tt
-			set_country_flag = integrated_commune_turkish_orthodox_bonus_flag
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_turkish_muslim_bonus_tt
-			set_country_flag = integrated_commune_turkish_muslim_bonus_flag
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_armenian_bonus_tt
-			set_country_flag = integrated_commune_armenian_bonus_flag
-			custom_tooltip = AB_EMPTY
-			add_republican_tradition = 5
-			add_army_tradition_or_mil_power = {
-				amount = 20
-			}
 			change_peasant_zeal = {
 				value = 10
 			}
@@ -5749,11 +5452,28 @@ ab_mop_3 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			custom_tooltip = greek_integrated_commune_bonus_tt
+			set_country_flag = greek_integrated_commune_bonus
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power_stated = {
+				culture = greek
+				dip_reward = yes
+				free = yes
+			}
+			custom_tooltip = AB_EMPTY
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_we_have_completed_naval_ideas_tt
+				first_limit = "full_idea_group = naval_ideas"
+				first_effect = "add_country_modifier = {
+									name = byzantium_greekfire
+									duration = -1
+								}"
+			}
 		}
 	}
 	mop_caucasia = {
 		icon = mission_the_caucasus_rus
-		position = 28
+		position = 21
 		required_missions = {
 			mop_free_anatolia
 		}
@@ -5828,7 +5548,7 @@ ab_mop_3 = {
 	}
 	mop_persia = {
 		icon = per_reborn_in_fire
-		position = 29
+		position = 22
 		required_missions = {
 			mop_iraq
 			mop_caucasia
@@ -5889,7 +5609,7 @@ ab_mop_3 = {
 	}
 	mop_khorasan = {
 		icon = mission_pertribes
-		position = 32
+		position = 23
 		required_missions = {
 			mop_persia
 		}
@@ -8099,8 +7819,8 @@ ab_mop_4 = {
 			}
 		}
 	}
-	mop_overthrow = {
-		icon = GFX_mop_overthrow
+	mop_razesi = {
+		icon = GFX_mop_razesi
 		position = 17
 		trigger = {
 			if = {
@@ -8110,30 +7830,39 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				check_variable = {
-					total_peasant_governments_installed = 2
+				has_completed_n_razesi_agendas = {
+					n = 2
 				}
-				check_variable = {
-					total_incited_peasants = 1
+				OR = {
+					estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 60
+					}
+					estate_influence = {
+						estate = estate_razesi
+						influence = 75
+					}
 				}
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = mop_spread_the_revolution
-				duration = 5475
-			}
+			custom_tooltip = develop_razesi_loyalty_tt
+			set_country_flag = develop_razesi_loyalty
+			custom_tooltip = AB_EMPTY
 			change_peasant_zeal = {
 				value = 5
 			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 10
+			}
 		}
 	}
-	mop_overthrow_2 = {
-		icon = mission_thirty_years_war
-		position = 19
+	mop_strong_razesi = {
+		icon = GFX_mop_strong_razesi
+		position = 18
 		required_missions = {
-			mop_overthrow
-			mop_strong_razesi
+			mop_razesi
 		}
 		trigger = {
 			if = {
@@ -8143,42 +7872,78 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				check_variable = {
-					total_peasant_governments_installed = 12
+				has_completed_n_razesi_agendas = {
+					n = 5
 				}
-				check_variable = {
-					total_incited_peasants = 6
+				OR = {
+					estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 70
+					}
+					estate_influence = {
+						estate = estate_razesi
+						influence = 90
+					}
 				}
-				check_variable = {
-					total_staged_coups_against_commune = 1
+				num_of_estate_privileges = {
+					estate = estate_razesi
+					value = 5
+				}
+				calc_true_if = {
+					amount = 5
+					custom_trigger_tooltip = {
+						tooltip = has_farm_estate_tt
+						all_owned_province = {
+							has_building = farm_estate
+						}
+					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = extra_peasants_spawn_peasants_war_tt
-			set_country_flag = extra_peasants_spawn_peasants_war
+			custom_tooltip = razesi_farm_estate_bonus_tt
+			set_country_flag = razesi_farm_estate_bonus
 			custom_tooltip = AB_EMPTY
-			define_advisor = {
-				type = spymaster
-				skill = 3
-				cost_multiplier = 0.25
+			custom_tooltip = buffed_grain_monopoly_tt
+			set_country_flag = buffed_grain_monopoly
+			tooltip = {
+				add_province_modifier = {
+					name = mop_grain_monopoly_province
+					duration = 4380
+				}
 			}
-			custom_tooltip = AB_EMPTY
+			custom_tooltip = buffed_livestock_monopoly_tt
+			set_country_flag = buffed_livestock_monopoly
+			tooltip = {
+				add_province_modifier = {
+					name = mop_livestock_monopoly_province
+					duration = 4380
+				}
+			}
 			change_peasant_zeal = {
 				value = 10
 			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 20
+			}
 		}
 	}
-	mop_overthrow_3 = {
-		icon = GFX_mop_overthrow_3
-		position = 20
+	mop_dismantle_the_stratocracy = {
+		icon = mission_nicaea
+		position = 19
 		required_missions = {
-			mop_overthrow_2
+			mop_liberate_thrace
 		}
 		provinces_to_highlight = {
-			is_capital_of = root
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+			}
 			NOT = {
-				has_building = intelministry
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -8189,32 +7954,113 @@ ab_mop_4 = {
 				always = yes
 			}
 			else = {
-				check_variable = {
-					total_peasant_governments_installed = 25
+				hudavendigar_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
 				}
-				check_variable = {
-					total_incited_peasants = 12
-				}
-				capital_scope = {
-					has_building = intelministry
+				aydin_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
 				}
 			}
 		}
 		effect = {
-			custom_tooltip = spymaster_rebel_support_efficiency_buff_tt
-			set_country_flag = spymaster_rebel_support_efficiency_buff
+			316 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_chalcedon_commune
+					duration = -1
+				}
+				add_unit_construction = {
+					type = galley
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+				center_of_trade = 1
+			}
 			custom_tooltip = AB_EMPTY
-			custom_tooltip = revolutionary_mandate_buff_tt
-			set_country_flag = revolutionary_mandate_buff
+			set_country_flag = bosporus_toll_construction_enabled
+			custom_tooltip = bosporus_toll_construction_enabled_tt
 			custom_tooltip = AB_EMPTY
+			add_army_professionalism = 0.05
 			change_peasant_zeal = {
-				value = 20
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 5
+			}
+		}
+	}
+	mop_free_anatolia = {
+		icon = anatolian_frontier
+		position = 20
+		required_missions = {
+			mop_dismantle_the_stratocracy
+		}
+		provinces_to_highlight = {
+			region = anatolia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				anatolia_region = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_RUM_commune_diplomatic_actions_tt
+			set_country_flag = unlock_RUM_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = unlock_ARM_commune_diplomatic_actions_tt
+			set_country_flag = unlock_ARM_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_turkish_orthodox_bonus_tt
+			set_country_flag = integrated_commune_turkish_orthodox_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_turkish_muslim_bonus_tt
+			set_country_flag = integrated_commune_turkish_muslim_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_armenian_bonus_tt
+			set_country_flag = integrated_commune_armenian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			add_republican_tradition = 5
+			add_army_tradition_or_mil_power = {
+				amount = 20
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
 			}
 		}
 	}
 	mop_iraq = {
 		icon = mission_cradle_of_civilization
-		position = 28
+		position = 21
 		required_missions = {
 			mop_free_anatolia
 		}
@@ -8303,7 +8149,7 @@ ab_mop_4 = {
 	}
 	mop_arabia = {
 		icon = mission_into_arabia
-		position = 29
+		position = 22
 		required_missions = {
 			mop_holy_land
 			mop_iraq
@@ -9439,9 +9285,122 @@ ab_mop_5 = {
 			}
 		}
 	}
+	mop_overthrow = {
+		icon = GFX_mop_overthrow
+		position = 17
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_governments_installed = 2
+				}
+				check_variable = {
+					total_incited_peasants = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mop_spread_the_revolution
+				duration = 5475
+			}
+			change_peasant_zeal = {
+				value = 5
+			}
+		}
+	}
+	mop_overthrow_2 = {
+		icon = mission_thirty_years_war
+		position = 19
+		required_missions = {
+			mop_overthrow
+			mop_strong_razesi
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_governments_installed = 12
+				}
+				check_variable = {
+					total_incited_peasants = 6
+				}
+				check_variable = {
+					total_staged_coups_against_commune = 1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = extra_peasants_spawn_peasants_war_tt
+			set_country_flag = extra_peasants_spawn_peasants_war
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = spymaster
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+		}
+	}
+	mop_overthrow_3 = {
+		icon = GFX_mop_overthrow_3
+		position = 20
+		required_missions = {
+			mop_overthrow_2
+		}
+		provinces_to_highlight = {
+			is_capital_of = root
+			NOT = {
+				has_building = intelministry
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				check_variable = {
+					total_peasant_governments_installed = 25
+				}
+				check_variable = {
+					total_incited_peasants = 12
+				}
+				capital_scope = {
+					has_building = intelministry
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = spymaster_rebel_support_efficiency_buff_tt
+			set_country_flag = spymaster_rebel_support_efficiency_buff
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = revolutionary_mandate_buff_tt
+			set_country_flag = revolutionary_mandate_buff
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 20
+			}
+		}
+	}
 	mop_holy_land = {
 		icon = convert_the_holy_lands
-		position = 28
+		position = 21
 		required_missions = {
 			mop_free_anatolia
 		}
@@ -9547,7 +9506,7 @@ ab_mop_5 = {
 	}
 	mop_egypt = {
 		icon = gfx_wal_conquer_egypt
-		position = 32
+		position = 22
 		required_missions = {
 			mop_holy_land
 		}
@@ -9605,7 +9564,7 @@ ab_mop_5 = {
 	}
 	mop_tunisia = {
 		icon = mission_conquer_tunis
-		position = 33
+		position = 23
 		required_missions = {
 			mop_egypt
 		}
@@ -9716,7 +9675,7 @@ ab_mop_5 = {
 	}
 	mop_maghreb = {
 		icon = mission_moroccan_ports
-		position = 34
+		position = 24
 		required_missions = {
 			mop_tunisia
 		}
