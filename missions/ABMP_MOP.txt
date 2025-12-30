@@ -2432,7 +2432,7 @@ mop_rome_locked_series_1 = {
 		required_missions = {
 			mop_rome_locked
 		}
-		position = 40
+		position = 29
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_rome_locked_desc
@@ -2455,7 +2455,7 @@ mop_rome_unlocked_series_1 = {
 	}
 	mop_pentarchy = {
 		icon = mission_pope
-		position = 40
+		position = 29
 		required_missions = {
 			mop_rome
 		}
@@ -4523,7 +4523,7 @@ ab_mop_2 = {
 	}
 	mop_north_italy = {
 		icon = mission_conquer_north_italy
-		position = 36
+		position = 26
 		required_missions = {
 			mop_venice
 		}
@@ -4615,7 +4615,7 @@ ab_mop_2 = {
 	}
 	mop_central_italy = {
 		icon = conquer_tuscany
-		position = 38
+		position = 27
 		required_missions = {
 			mop_north_italy
 		}
@@ -4702,7 +4702,7 @@ mop_rome_locked_series_2 = {
 	}
 	mop_rome_locked = {
 		icon = mission_locked_mission
-		position = 39
+		position = 28
 		required_missions = {
 			mop_south_italy_locked_series_2
 			mop_south_italy_north
@@ -4721,7 +4721,7 @@ mop_rome_locked_series_2 = {
 	}
 	mop_italy_locked = {
 		icon = mission_locked_mission
-		position = 40
+		position = 29
 		required_missions = {
 			mop_rome_locked
 		}
@@ -4747,7 +4747,7 @@ mop_rome_unlocked_series_2 = {
 	}
 	mop_rome = {
 		icon = gfx_wal_rome
-		position = 39
+		position = 28
 		provinces_to_highlight = {
 			OR = {
 				area = lazio_area
@@ -4829,7 +4829,7 @@ mop_rome_unlocked_series_2 = {
 	}
 	mop_italy = {
 		icon = mission_rule_italy
-		position = 40
+		position = 29
 		required_missions = {
 			mop_rome
 		}
