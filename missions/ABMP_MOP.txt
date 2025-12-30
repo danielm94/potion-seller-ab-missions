@@ -5471,12 +5471,44 @@ ab_mop_3 = {
 			}
 		}
 	}
+}
+
+mop_caucasia_series_locked = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_caucasia
+		}
+	}
+	mop_caucasia_locked = {
+		icon = mission_locked_mission
+		position = 24
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_caucasia_locked_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_caucasia_locked_desc
+		}
+	}
+}
+
+mop_caucasia_series = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_caucasia
+	}
 	mop_caucasia = {
 		icon = mission_the_caucasus_rus
-		position = 21
-		required_missions = {
-			mop_free_anatolia
-		}
+		position = 24
 		provinces_to_highlight = {
 			region = caucasia_region
 			NOT = {
@@ -5545,6 +5577,15 @@ ab_mop_3 = {
 				influence = 10
 			}
 		}
+	}
+}
+
+ab_mop_3_continued = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
 	}
 	mop_great_peasants_war = {
 		icon = GFX_mop_great_peasants_war
