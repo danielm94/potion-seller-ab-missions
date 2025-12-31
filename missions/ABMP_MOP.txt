@@ -5682,77 +5682,6 @@ ab_mop_3 = {
 			}
 		}
 	}
-	mop_mongolia = {
-		icon = mission_unify_mongolia
-		position = 14
-		required_missions = {
-			mop_push_into_siberia
-		}
-		provinces_to_highlight = {
-			region = mongolia_region
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = ROOT
-				}
-			}
-			NOT = {
-				owner = {
-					is_subject_of_type_with_overlord = {
-						who = root
-						type = cossack_protectorate
-					}
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_mongolia_trigger_tt
-					mongolia_region = {
-						type = all
-						OR = {
-							country_or_commune_subject_or_subject_of_commune_subject_holds = {
-								who = ROOT
-							}
-							owner = {
-								is_subject_of_type_with_overlord = {
-									who = root
-									type = cossack_protectorate
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = integrated_commune_mongolian_bonus_tt
-			set_country_flag = integrated_commune_mongolian_bonus
-			custom_tooltip = AB_EMPTY
-			2190 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_qaraqorum_commune
-					duration = -1
-				}
-			}
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_faction_influence = {
-				faction = abolitionists_faction
-				influence = 10
-			}
-		}
-	}
 	mop_south_china = {
 		icon = mission_to_the_south_china_sea
 		position = 15
@@ -8252,7 +8181,7 @@ ab_mop_4 = {
 	}
 	mop_free_the_wends = {
 		icon = mission_wendia
-		position = 14
+		position = 13
 		required_missions = {
 			mop_baltic
 		}
@@ -8309,6 +8238,77 @@ ab_mop_4 = {
 			unlock_mop_scandinavia_south_effect = yes
 			unlock_mop_saxons_effect = yes
 			custom_tooltip = mop_scroll_down_mt_tt
+		}
+	}
+	mop_mongolia = {
+		icon = mission_unify_mongolia
+		position = 14
+		required_missions = {
+			mop_push_into_siberia
+		}
+		provinces_to_highlight = {
+			region = mongolia_region
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = root
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_mongolia_trigger_tt
+					mongolia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = root
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_mongolian_bonus_tt
+			set_country_flag = integrated_commune_mongolian_bonus
+			custom_tooltip = AB_EMPTY
+			2190 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_qaraqorum_commune
+					duration = -1
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
 		}
 	}
 	mop_manchuria = {
@@ -11690,7 +11690,7 @@ ab_mop_5 = {
 	}
 	mop_russia = {
 		icon = mission_conquer_novgorod
-		position = 12
+		position = 15
 		required_missions = {
 			mop_destroy_the_princes
 		}
