@@ -475,6 +475,7 @@ unlock_mop_south_italy_north_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_north_italy_ne_effect = {
 	if = {
@@ -497,6 +498,7 @@ unlock_mop_north_italy_ne_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_north_africa_middle_effect = {
 	if = {
@@ -519,6 +521,7 @@ unlock_mop_north_africa_middle_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_rome_effect = {
 	if = {
@@ -535,6 +538,7 @@ unlock_mop_rome_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_persia_east_effect = {
 	if = {
@@ -554,6 +558,7 @@ unlock_mop_persia_east_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_france_south_effect = {
 	if = {
@@ -573,6 +578,7 @@ unlock_mop_france_south_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_north_italy_south_effect = {
 	if = {
@@ -595,6 +601,7 @@ unlock_mop_north_italy_south_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_north_italy_nw_effect = {
 	if = {
@@ -617,6 +624,7 @@ unlock_mop_north_italy_nw_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_low_countries_effect = {
 	if = {
@@ -633,6 +641,7 @@ unlock_mop_low_countries_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_caucasia_effect = {
 	if = {
@@ -649,6 +658,7 @@ unlock_mop_caucasia_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_anatolia_west_effect = {
 	if = {
@@ -668,6 +678,7 @@ unlock_mop_anatolia_west_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_anatolia_east_effect = {
 	if = {
@@ -687,6 +698,7 @@ unlock_mop_anatolia_east_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_persia_west_effect = {
 	if = {
@@ -706,6 +718,7 @@ unlock_mop_persia_west_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_britain_south_effect = {
 	if = {
@@ -725,6 +738,7 @@ unlock_mop_britain_south_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_iberia_north_effect = {
 	if = {
@@ -744,6 +758,7 @@ unlock_mop_iberia_north_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_iberia_north_scroll_effect = {
 	if = {
@@ -764,6 +779,7 @@ unlock_mop_iberia_north_scroll_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_france_north_effect = {
 	if = {
@@ -783,6 +799,7 @@ unlock_mop_france_north_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_middle_east_nw_effect = {
 	if = {
@@ -805,6 +822,7 @@ unlock_mop_middle_east_nw_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_north_africa_east_effect = {
 	if = {
@@ -827,6 +845,7 @@ unlock_mop_north_africa_east_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_middle_east_ne_effect = {
 	if = {
@@ -849,6 +868,7 @@ unlock_mop_middle_east_ne_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_middle_east_sw_effect = {
 	if = {
@@ -871,6 +891,7 @@ unlock_mop_middle_east_sw_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_britain_north_effect = {
 	if = {
@@ -887,6 +908,7 @@ unlock_mop_britain_north_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_iberia_south_effect = {
 	if = {
@@ -906,6 +928,7 @@ unlock_mop_iberia_south_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_south_italy_south_effect = {
 	if = {
@@ -925,6 +948,7 @@ unlock_mop_south_italy_south_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_north_africa_west_effect = {
 	if = {
@@ -947,6 +971,7 @@ unlock_mop_north_africa_west_effect = {
 		}
 	}
 }
+
 #SCOPE = COUNTRY
 unlock_mop_austria_effect = {
 	if = {
@@ -957,7 +982,7 @@ unlock_mop_austria_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_austria
-		custom_tooltip  = unlocked_mop_austria_tt
+		custom_tooltip = unlocked_mop_austria_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
@@ -974,7 +999,7 @@ unlock_mop_swiss_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_swiss
-		custom_tooltip  = unlocked_mop_swiss_tt
+		custom_tooltip = unlocked_mop_swiss_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
@@ -991,7 +1016,7 @@ unlock_mop_bavaria_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_bavaria
-		custom_tooltip  = unlocked_mop_bavaria_tt
+		custom_tooltip = unlocked_mop_bavaria_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
@@ -1008,7 +1033,7 @@ unlock_mop_swabia_franconia_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_swabia_franconia
-		custom_tooltip  = unlocked_mop_swabia_franconia_tt
+		custom_tooltip = unlocked_mop_swabia_franconia_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
@@ -1025,7 +1050,7 @@ unlock_mop_bohemia_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_bohemia
-		custom_tooltip  = unlocked_mop_bohemia_tt
+		custom_tooltip = unlocked_mop_bohemia_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
@@ -1042,7 +1067,7 @@ unlock_mop_rhine_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_rhine
-		custom_tooltip  = unlocked_mop_rhine_tt
+		custom_tooltip = unlocked_mop_rhine_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
@@ -1059,7 +1084,71 @@ unlock_mop_saxons_effect = {
 		}
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_saxons
-		custom_tooltip  = unlocked_mop_saxons_tt
+		custom_tooltip = unlocked_mop_saxons_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+unlock_mop_scandinavia_north_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_west
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_scandinavia_north
+		custom_tooltip = unlocked_mop_scandinavia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+unlock_mop_scandinavia_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_west
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_scandinavia_south
+		custom_tooltip = unlocked_mop_scandinavia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+unlock_mop_scandinavia_west_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_north
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_scandinavia_west
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_scandinavia_west
+		custom_tooltip = unlocked_mop_scandinavia_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}

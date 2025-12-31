@@ -11659,6 +11659,8 @@ ab_mop_5 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			unlock_mop_scandinavia_north_effect = yes
+			custom_tooltip = mop_scroll_down_mt_tt
 		}
 	}
 	mop_korea = {
