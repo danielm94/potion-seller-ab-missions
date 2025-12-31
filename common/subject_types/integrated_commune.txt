@@ -304,12 +304,32 @@ integrated_commune = {
 		}
 	}
 	modifier_overlord = {
-		modifier = integrated_commune_scandinavian_bonus
+		modifier = integrated_commune_swedish_bonus
 		trigger = {
 			overlord = {
-				has_country_flag = integrated_commune_scandinavian_bonus
+				has_country_flag = integrated_commune_swedish_bonus_flag
 			}
-			culture_group = scandinavian
+			culture = swedish
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_danish_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_danish_bonus_flag
+			}
+			culture = danish
+			total_development = 450
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_norwegian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_norwegian_bonus_flag
+			}
+			culture = norwegian
 			total_development = 450
 		}
 	}

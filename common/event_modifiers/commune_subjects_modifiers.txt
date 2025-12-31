@@ -335,9 +335,16 @@ integrated_commune_finnic_bonus = {
 	max_hostile_attrition = 1
 }
 
-integrated_commune_scandinavian_bonus = {
-	may_explore = yes
+integrated_commune_swedish_bonus = {
+	infantry_power = 0.075
+}
+
+integrated_commune_danish_bonus = {
 	may_perform_slave_raid = yes
+}
+
+integrated_commune_norwegian_bonus = {
+	may_explore = yes
 }
 
 integrated_commune_korean_bonus = {
