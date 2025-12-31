@@ -10839,6 +10839,145 @@ mop_britain_south_series_unlocked_4 = {
 	}
 }
 
+mop_scandinavia_locked_series_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_scandinavia_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_scandinavia_south
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_scandinavia_west
+		}
+	}
+	mop_scandinavia_locked_series_4_1 = {
+		icon = mission_locked_mission
+		position = 30
+		required_missions = {
+			mop_scandinavia_locked_series_5_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_scandinavia_locked_series_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_scandinavia_locked_series_5_1_desc
+		}
+	}
+}
+
+mop_scandinavia_north_series_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_scandinavia_north
+	}
+	mop_norway_north = {
+		icon = mission_norwegian_independence
+		position = 30
+		required_missions = {
+			mop_finnic_north
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_norway
+				area = eastern_norway
+				area = western_norway
+				area = subarctic_islands_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				northern_norway = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				eastern_norway = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				western_norway = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				subarctic_islands_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_norwegian_bonus_tt
+			set_country_flag = integrated_commune_norwegian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			23 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_bergenhus_commune
+					duration = -1
+				}
+			}
+			370 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				center_of_trade = 1
+				add_province_modifier = {
+					name = mop_reykjavik_commune
+					duration = -1
+				}
+			}
+			23 = {
+				add_unit_construction = {
+					type = heavy_ship
+					cost = 0.25
+					speed = 0.5
+					amount = 5
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			unlock_mop_britain_north_effect = yes
+		}
+	}
+}
+
 mop_bohemia_series_locked = {
 	slot = 4
 	generic = no
@@ -13872,13 +14011,76 @@ mop_iberia_south_series = {
 	}
 }
 
+mop_scandinavia_locked_series_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_scandinavia_north
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_scandinavia_south
+		}
+		NOT = {
+			has_country_flag = unlocked_mop_scandinavia_west
+		}
+	}
+	mop_scandinavia_locked_series_5_1 = {
+		icon = mission_locked_mission
+		position = 29
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_scandinavia_locked_series_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_scandinavia_locked_series_5_1_desc
+		}
+	}
+	mop_scandinavia_locked_series_5_2 = {
+		icon = mission_locked_mission
+		position = 30
+		required_missions = {
+			mop_scandinavia_locked_series_5_1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_scandinavia_locked_series_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_scandinavia_locked_series_5_1_desc
+		}
+	}
+	mop_scandinavia_locked_series_5_3 = {
+		icon = mission_locked_mission
+		position = 31
+		required_missions = {
+			mop_scandinavia_locked_series_5_2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_scandinavia_locked_series_5_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_scandinavia_locked_series_5_1_desc
+		}
+	}
+}
+
 mop_scandinavia_north_series_5 = {
 	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		have_access_to_peasant_moldavia_missions = yes
-		# has_country_flag = unlocked_mop_scandinavia_north
+		has_country_flag = unlocked_mop_scandinavia_north
 	}
 	mop_finnic_north = {
 		icon = mission_suomenusko
