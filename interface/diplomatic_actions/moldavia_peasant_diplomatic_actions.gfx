@@ -15,6 +15,46 @@ spriteTypes = {
 		loadtype = "INGAME"
 	}
 	spriteType = {
+		name = "GFX_invest_adm"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/invest_adm.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_invest_dip"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/invest_dip.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_invest_mil"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/invest_mil.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_invest_republican_tradition"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/invest_republican_tradition.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cancel_invest_adm"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_invest_adm.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cancel_invest_dip"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_invest_dip.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cancel_invest_mil"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_invest_mil.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cancel_invest_republican_tradition"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_invest_republican_tradition.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
 		name = "GFX_cancel_integrate_commune"
 		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_integrate_commune.dds"
 		loadtype = "INGAME"
