@@ -1,0 +1,436 @@
+#ROOT = COUNTRY YOU SELECTED
+#FROM = PLAYER
+custom_button = {
+	name = integrate_commune
+	tooltip = integrate_commune
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_subject_of_type = allied_commune
+		is_commune_subject_being_integrated = no
+	}
+	trigger = {
+		if = {
+			limit = {
+				has_country_flag = commune_integrated_recently
+				NOT = {
+					had_country_flag = {
+						flag = commune_integrated_recently
+						days = 3650
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = integrated_commune_recently_tt
+				always = no
+			}
+		}
+		else = {
+			FROM = {
+				num_of_diplomats = 2
+			}
+			is_commune_loyal_enough_to_integrate = yes
+			are_there_no_truces_with_target_diplomacy_gui = {
+				target = FROM
+			}
+			has_opinion = {
+				who = FROM
+				value = 190
+			}
+			trust = {
+				who = FROM
+				value = 50
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = gain_prestige
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = integrate_commune_desc
+		hidden_effect = {
+			FROM = {
+				enable_commune_integration_overlord = yes
+			}
+			initialize_integration_progress_percentage_variable = yes
+			enable_commune_integration_subject = yes
+			set_country_flag = investing_dip_in_commune
+			FROM = {
+				push_commune_subject_investing_mana_modifier = yes
+			}
+			calculate_commune_integration_cost = yes
+			calculate_monthly_commune_integration_progress = yes
+			calculate_integration_progress_percentage = yes
+			ROOT = {
+				FROM = {
+					calculate_overlord_dip_investment_integration_progress_gain = yes
+				}
+			}
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = cancel_integrate_commune
+	tooltip = cancel_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_commune_subject_being_integrated = yes
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = back_click
+			}
+		}
+		custom_tooltip = cancel_commune_integration_desc
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						NOT = {
+							any_subject_country = {
+								is_commune_subject_being_integrated = yes
+							}
+						}
+					}
+					disable_commune_integration_overlord = yes
+				}
+			}
+			disable_commune_integration_subject = yes
+			initialize_commune_integration_progress = yes
+			initialize_integration_progress_percentage_variable = yes
+			clear_commune_integration_flags = yes
+			FROM = {
+				pop_commune_subject_investing_mana_modifier = yes
+			}
+			calculate_monthly_commune_integration_progress = yes
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = invest_adm
+	tooltip = invest_adm_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_investing_adm_power_in_commune = no
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+		FROM = {
+			adm_power = 1
+			num_of_diplomats = 1
+		}
+		is_commune_loyal_enough_to_integrate = yes
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = tab_government
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = invest_adm_commune_integration_desc
+		hidden_effect = {
+			clear_commune_integration_flags = yes
+			set_country_flag = investing_adm_in_commune
+			if = {
+				limit = {
+					is_investing_mana_in_commune = no
+				}
+				FROM = {
+					push_commune_subject_investing_mana_modifier = yes
+				}
+			}
+			calculate_commune_integration_cost = yes
+			calculate_monthly_commune_integration_progress = yes
+			calculate_integration_progress_percentage = yes
+			ROOT = {
+				FROM = {
+					calculate_overlord_adm_investment_integration_progress_gain = yes
+				}
+			}
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = cancel_invest_adm
+	tooltip = cancel_invest_adm_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_investing_adm_power_in_commune = yes
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = back_click
+			}
+		}
+		custom_tooltip = cancel_invest_adm_commune_integration_desc
+		hidden_effect = {
+			FROM = {
+				pop_commune_subject_investing_mana_modifier = yes
+			}
+			clear_commune_integration_flags = yes
+			calculate_monthly_commune_integration_progress = yes
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = invest_dip
+	tooltip = invest_dip_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_investing_dip_power_in_commune = no
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+		FROM = {
+			dip_power = 1
+			diplomatic_reputation = -3
+			num_of_diplomats = 1
+		}
+		is_commune_loyal_enough_to_integrate = yes
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = tab_diplomacy
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = invest_dip_commune_integration_desc
+		hidden_effect = {
+			clear_commune_integration_flags = yes
+			set_country_flag = investing_dip_in_commune
+			if = {
+				limit = {
+					is_investing_mana_in_commune = no
+				}
+				FROM = {
+					push_commune_subject_investing_mana_modifier = yes
+				}
+			}
+			calculate_monthly_commune_integration_progress = yes
+			ROOT = {
+				FROM = {
+					calculate_overlord_dip_investment_integration_progress_gain = yes
+				}
+			}
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = cancel_invest_dip
+	tooltip = cancel_invest_dip_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_investing_dip_power_in_commune = yes
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = back_click
+			}
+		}
+		custom_tooltip = cancel_invest_dip_commune_integration_desc
+		hidden_effect = {
+			FROM = {
+				pop_commune_subject_investing_mana_modifier = yes
+			}
+			clear_commune_integration_flags = yes
+			calculate_monthly_commune_integration_progress = yes
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = invest_mil
+	tooltip = invest_mil_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_investing_mil_power_in_commune = no
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+		FROM = {
+			mil_power = 1
+			num_of_diplomats = 1
+		}
+		is_commune_loyal_enough_to_integrate = yes
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = tab_military
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = invest_mil_commune_integration_desc
+		hidden_effect = {
+			clear_commune_integration_flags = yes
+			set_country_flag = investing_mil_in_commune
+			if = {
+				limit = {
+					is_investing_mana_in_commune = no
+				}
+				FROM = {
+					push_commune_subject_investing_mana_modifier = yes
+				}
+			}
+			calculate_commune_integration_cost = yes
+			calculate_monthly_commune_integration_progress = yes
+			calculate_integration_progress_percentage = yes
+			ROOT = {
+				FROM = {
+					calculate_overlord_mil_investment_integration_progress_gain = yes
+				}
+			}
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = cancel_invest_mil
+	tooltip = cancel_invest_mil_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_investing_mil_power_in_commune = yes
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = back_click
+			}
+		}
+		custom_tooltip = cancel_invest_mil_commune_integration_desc
+		hidden_effect = {
+			FROM = {
+				pop_commune_subject_investing_mana_modifier = yes
+			}
+			clear_commune_integration_flags = yes
+			calculate_commune_integration_cost = yes
+			calculate_monthly_commune_integration_progress = yes
+			calculate_integration_progress_percentage = yes
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = invest_republican_tradition
+	tooltip = invest_republican_tradition_commune_integration
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_subject_of = FROM
+		is_commune_subject_being_integrated = yes
+		is_commune_subject = yes
+	}
+	trigger = {
+		FROM = {
+			republican_tradition = 10
+			custom_trigger_tooltip = {
+				tooltip = invest_republican_tradition_commune_cooldown_tt
+				OR = {
+					NOT = {
+						has_country_flag = invested_republican_tradition_in_commune_recently
+					}
+					had_country_flag = {
+						flag = invested_republican_tradition_in_commune_recently
+						days = 1825
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = royal_marriage
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = invest_republican_tradition_commune_integration_desc
+		hidden_effect = {
+			FROM = {
+				set_country_flag = invested_republican_tradition_in_commune_recently
+				add_republican_tradition = -10
+			}
+			calculate_commune_integration_cost = yes
+			change_commune_integration_progress_as_percentage_of_cost = {
+				percentage = 0.1
+			}
+			calculate_integration_progress_percentage = yes
+		}
+	}
+}

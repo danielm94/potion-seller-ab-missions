@@ -1528,6 +1528,21 @@ are_there_no_truces_with_target = {
 }
 
 #SCOPE = COUNTRY
+are_there_no_truces_with_target_diplomacy_gui = {
+	custom_trigger_tooltip = {
+		tooltip = are_there_no_truces_with_target_diplomacy_gui_tt
+		NOT = {
+			truce_with = $target$
+		}
+		NOT = {
+			$target$ = {
+				truce_with = ROOT
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
 has_prevent_ruler_negative_trait = {
 	OR = {
 		has_country_flag = ab_prevent_ruler_negative_trait

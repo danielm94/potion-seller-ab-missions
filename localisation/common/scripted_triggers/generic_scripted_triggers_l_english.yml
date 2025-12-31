@@ -10,3 +10,4 @@
  is_supporting_rebels_against_target_tt: "We are currently supporting rebels against §Y[This.GetName]§!."
  are_we_and_target_at_peace_tt: "Both we and @[This.GetTag] [This.GetName] are at peace."
  are_there_no_truces_with_target_tt: "Neither we nor @[This.GetTag] [This.GetName] hold a truce with the other."
+ are_there_no_truces_with_target_diplomacy_gui_tt: "Neither we nor @[Root.GetTag] [Root.GetName] hold a truce with the other."
