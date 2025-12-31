@@ -37,8 +37,9 @@ mop_zaz_subject_bonus = {
 }
 
 cossack_protectorate_subject_modifier = {
-	core_creation = -0.25
+	core_creation = -0.1
 	land_maintenance_modifier = -0.25
+	fort_maintenance_modifier = -0.25
 }
 
 cossack_protectorate_overlord_modifier = {
