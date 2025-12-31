@@ -1713,3 +1713,20 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = at_war_integration_penalty_explained
+	random = no
+	text = { 
+		localisation_key = AB_EMPTY
+		trigger = {
+			is_at_war = no
+		}
+	}
+	text = {
+		localisation_key = at_war_integration_penalty_explained_tt
+		trigger = {
+			is_at_war = yes
+		}
+	}
+}

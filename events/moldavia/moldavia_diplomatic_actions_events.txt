@@ -259,9 +259,6 @@ country_event = {
 				days = 3650
 			}
 		}
-		are_we_and_target_at_peace = {
-			target = overlord
-		}
 		are_there_no_truces_with_target = {
 			target = overlord
 		}
@@ -289,6 +286,12 @@ country_event = {
 		name = moldavia_diplomatic_actions_events.6.start_integrating
 		custom_tooltip = integrating_commune_requirements_tt
 		custom_tooltip = integrating_commune_requirements_not_met_tt
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			custom_tooltip = integration_slowed_down_by_war_tt
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -298,9 +301,6 @@ country_event = {
 						is_commune_subject_being_integrated = no
 					}
 					num_of_diplomats = 2
-					are_we_and_target_at_peace = {
-						target = FROM
-					}
 					FROM = {
 						is_commune_loyal_enough_to_integrate = yes
 					}

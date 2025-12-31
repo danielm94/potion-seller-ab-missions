@@ -564,6 +564,27 @@ calculate_overlord_adm_investment_integration_progress_gain = {
 				which = progress_from_adm_investment
 				which = adm_to_integration_progress_exchange_rate
 			}
+			if = {
+				limit = {
+					is_at_war = yes
+				}
+				divide_variable = {
+					progress_from_adm_investment = 2
+				}
+				divide_variable = {
+					commune_adm_investment_monthly_cost = 2
+				}
+				round_variable = {
+					which = commune_adm_investment_monthly_cost
+					value = -1
+				}
+				PREV = {
+					set_variable = {
+						which = commune_adm_investment_monthly_cost
+						which = PREV
+					}
+				}
+			}
 			set_variable = {
 				which = commune_integration_progress_change
 				which = progress_from_adm_investment
@@ -678,6 +699,27 @@ calculate_overlord_dip_investment_integration_progress_gain = {
 				which = progress_from_dip_investment
 				which = dip_to_integration_progress_exchange_rate
 			}
+			if = {
+				limit = {
+					is_at_war = yes
+				}
+				divide_variable = {
+					progress_from_dip_investment = 2
+				}
+				divide_variable = {
+					commune_dip_investment_monthly_cost = 2
+				}
+				round_variable = {
+					which = commune_dip_investment_monthly_cost
+					value = -1
+				}
+				PREV = {
+					set_variable = {
+						which = commune_dip_investment_monthly_cost
+						which = PREV
+					}
+				}
+			}
 			set_variable = {
 				which = commune_integration_progress_change
 				which = progress_from_dip_investment
@@ -782,6 +824,27 @@ calculate_overlord_mil_investment_integration_progress_gain = {
 			multiply_variable = {
 				which = progress_from_mil_investment
 				which = mil_to_integration_progress_exchange_rate
+			}
+			if = {
+				limit = {
+					is_at_war = yes
+				}
+				divide_variable = {
+					progress_from_mil_investment = 2
+				}
+				divide_variable = {
+					commune_mil_investment_monthly_cost = 2
+				}
+				round_variable = {
+					which = commune_mil_investment_monthly_cost
+					value = -1
+				}
+				PREV = {
+					set_variable = {
+						which = commune_mil_investment_monthly_cost
+						which = PREV
+					}
+				}
 			}
 			set_variable = {
 				which = commune_integration_progress_change

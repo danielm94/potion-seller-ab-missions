@@ -751,9 +751,6 @@ integrate_commune = {
 		}
 		else = {
 			num_of_diplomats = 2
-			are_we_and_target_at_peace = {
-				target = FROM
-			}
 			FROM = {
 				is_commune_loyal_enough_to_integrate = yes
 			}

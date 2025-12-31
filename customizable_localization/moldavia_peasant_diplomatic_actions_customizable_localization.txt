@@ -699,29 +699,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = can_integrate_commune_at_peace
-	random = no
-	text = {
-		localisation_key = yes_icon
-		trigger = {
-			are_we_and_target_at_peace = {
-				target = FROM
-			}
-		}
-	}
-	text = {
-		localisation_key = no_icon
-		trigger = {
-			NOT = {
-				are_we_and_target_at_peace = {
-					target = FROM
-				}
-			}
-		}
-	}
-}
-
-defined_text = {
 	name = can_integrate_commune_loyal
 	random = no
 	text = {
