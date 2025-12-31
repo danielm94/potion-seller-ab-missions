@@ -1482,6 +1482,13 @@ guiTypes = {
 			shortcut = "shift+z"
 		}
 		guiButtonType = {
+			name = "great_peasant_uprising"
+			position = { x = 549 y = 377 }
+			quadTextureSprite ="GFX_great_peasant_uprising"
+			scripted = yes
+			shortcut = "shift+x"
+		}
+		guiButtonType = {
 			name = "integrate_commune"
 			position = { x = 549 y = 630 }
 			quadTextureSprite ="GFX_integrate_commune"
