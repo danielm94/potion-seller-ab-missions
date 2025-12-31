@@ -11522,70 +11522,6 @@ ab_mop_5 = {
 			}
 		}
 	}
-	mop_finnic = {
-		icon = mission_suomenusko
-		position = 13
-		required_missions = {
-			mop_russia
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = finland_area
-				area = bothnia_area
-				area = laponia_area
-				area = norrland_area
-			}
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = ROOT
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				finland_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
-					}
-				}
-				bothnia_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
-					}
-				}
-				laponia_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
-					}
-				}
-				norrland_area = {
-					type = all
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = ROOT
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = unlock_SLU_commune_diplomatic_actions_tt
-			set_country_flag = unlock_SLU_commune_diplomatic_actions
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = integrated_commune_finnic_bonus_tt
-			set_country_flag = integrated_commune_finnic_bonus
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = forest_dev_20_percent_extra_dev_tt
-			set_country_flag = forest_dev_20_percent_extra_dev
-		}
-	}
 	mop_scandinavia = {
 		icon = mission_unite_scandinavia
 		position = 15
@@ -13931,6 +13867,168 @@ mop_iberia_south_series = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 25
+			}
+		}
+	}
+}
+
+mop_scandinavia_north_series_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		# has_country_flag = unlocked_mop_scandinavia_north
+	}
+	mop_finnic_north = {
+		icon = mission_suomenusko
+		position = 29
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = bothnia_area
+				area = laponia_area
+				area = norrland_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				finland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				bothnia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				laponia_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+				norrland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_SLU_commune_diplomatic_actions_tt
+			set_country_flag = unlock_SLU_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_finnic_bonus_tt
+			set_country_flag = integrated_commune_finnic_bonus
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = forest_dev_20_percent_extra_dev_tt
+			set_country_flag = forest_dev_20_percent_extra_dev
+		}
+	}
+	mop_sweden_north = {
+		icon = mission_swedish_great_power
+		position = 30
+		required_missions = {
+			mop_finnic_north
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = skaneland_area
+				area = ostra_svealand_area
+				area = gotaland_area
+				area = vastra_gotaland_area
+				area = svealand_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				skaneland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				ostra_svealand_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				gotaland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				vastra_gotaland_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+				svealand_area = {
+					type = all
+					country_or_commune_subject_or_subject_of_commune_subject_holds = {
+						who = root
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_swedish_bonus_tt
+			set_country_flag = integrated_commune_swedish_bonus_flag
+			custom_tooltip = AB_EMPTY
+			25 = {
+				remove_core = owner
+				add_core = root
+				cede_province = root
+				add_province_modifier = {
+					name = mop_gotland_commune
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = commandant
+				skill = 3
+				culture = swedish
+				religion = catholic
+				cost_multiplier = 0.5
+				location = 25
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
 			}
 		}
 	}
