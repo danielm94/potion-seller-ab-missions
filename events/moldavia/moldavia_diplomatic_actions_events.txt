@@ -68,7 +68,7 @@ country_event = {
 			if = {
 				limit = {
 					FROM = {
-						is_subject_of_type = sister_commune
+						is_subject_of_type = allied_commune
 					}
 				}
 				create_subject = {
@@ -107,17 +107,6 @@ country_event = {
 			else_if = {
 				limit = {
 					FROM = {
-						is_subject_of_type = allied_commune
-					}
-				}
-				create_subject = {
-					subject_type = sister_commune
-					who = FROM
-				}
-			}
-			else_if = {
-				limit = {
-					FROM = {
 						is_subject_of_type = consulate_subject
 					}
 				}
@@ -127,7 +116,7 @@ country_event = {
 			}
 			else = {
 				create_subject = {
-					subject_type = sister_commune
+					subject_type = allied_commune
 					who = FROM
 				}
 				FROM = {
@@ -176,17 +165,6 @@ country_event = {
 				custom_tooltip = AB_EMPTY
 				create_subject = {
 					subject_type = integrated_commune
-					who = FROM
-				}
-			}
-			else_if = {
-				limit = {
-					FROM = {
-						is_subject_of_type = sister_commune
-					}
-				}
-				create_subject = {
-					subject_type = sister_commune
 					who = FROM
 				}
 			}
@@ -270,10 +248,7 @@ country_event = {
 		NOT = {
 			has_country_flag = notified_overlord_ready_to_integrate
 		}
-		OR = {
-			is_subject_of_type = allied_commune
-			is_subject_of_type = sister_commune
-		}
+		is_subject_of_type = allied_commune
 		is_commune_subject_being_integrated = no
 		OR = {
 			NOT = {
@@ -319,10 +294,7 @@ country_event = {
 				limit = {
 					has_government_mechanic = peasant_zealotry
 					FROM = {
-						OR = {
-							is_subject_of_type = allied_commune
-							is_subject_of_type = sister_commune
-						}
+						is_subject_of_type = allied_commune
 						is_commune_subject_being_integrated = no
 					}
 					num_of_diplomats = 2

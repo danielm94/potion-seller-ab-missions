@@ -82,10 +82,7 @@ ab_mop_misc_1 = {
 					custom_trigger_tooltip = {
 						tooltip = mop_strengthen_league_ties_tt
 						all_subject_country = {
-							OR = {
-								is_subject_of_type = sister_commune
-								is_subject_of_type = integrated_commune
-							}
+							is_subject_of_type = integrated_commune
 						}
 					}
 				}
@@ -127,15 +124,9 @@ ab_mop_misc_1 = {
 		provinces_to_highlight = {
 			is_capital = yes
 			owner = {
-				OR = {
-					is_subject_of_type_with_overlord = {
-						who = root
-						type = allied_commune
-					}
-					is_subject_of_type_with_overlord = {
-						who = root
-						type = sister_commune
-					}
+				is_subject_of_type_with_overlord = {
+					who = root
+					type = allied_commune
 				}
 			}
 		}
@@ -270,8 +261,8 @@ ab_mop_misc_1 = {
 			}
 		}
 		effect = {
-			custom_tooltip = reduce_sister_commune_annexation_cost_multiplier_tt
-			set_country_flag = reduce_sister_commune_annexation_cost_multiplier
+			custom_tooltip = reduce_allied_commune_annexation_cost_multiplier_tt
+			set_country_flag = reduce_allied_commune_annexation_cost_multiplier
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = rally_the_communes_trust_buff_tt
 			set_country_flag = rally_the_communes_trust_buff
@@ -1634,7 +1625,7 @@ ab_mop_1 = {
 						}
 					}
 					create_subject = {
-						subject_type = sister_commune
+						subject_type = integrated_commune
 						who = BUL
 					}
 				}
@@ -3437,7 +3428,7 @@ ab_mop_2 = {
 								}
 							}"
 				first_effect = "create_subject = {
-									subject_type = sister_commune
+									subject_type = integrated_commune
 									who = ALB
 								}"
 			}

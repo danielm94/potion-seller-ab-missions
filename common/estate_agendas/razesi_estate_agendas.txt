@@ -488,10 +488,7 @@ estate_razesi_integrate_subject = {
 	can_select = {
 		has_government_mechanic = peasant_zealotry
 		any_subject_country = {
-			OR = {
-				is_subject_of_type = allied_commune
-				is_subject_of_type = sister_commune
-			}
+			is_subject_of_type = allied_commune
 			is_commune_subject_being_integrated = no
 			OR = {
 				NOT = {
@@ -517,10 +514,7 @@ estate_razesi_integrate_subject = {
 	pre_effect = {
 		random_subject_country = {
 			limit = {
-				OR = {
-					is_subject_of_type = allied_commune
-					is_subject_of_type = sister_commune
-				}
+				is_subject_of_type = allied_commune
 				is_commune_subject_being_integrated = no
 				OR = {
 					NOT = {
@@ -536,18 +530,6 @@ estate_razesi_integrate_subject = {
 					truce_with = ROOT
 				}
 			}
-			if = {
-				limit = {
-					is_subject_of_type = allied_commune
-				}
-				set_country_flag = agenda_allied_commune
-			}
-			else_if = {
-				limit = {
-					is_subject_of_type = sister_commune
-				}
-				set_country_flag = agenda_sister_commune
-			}
 			save_event_target_as = agenda_country
 			capital_scope = {
 				save_event_target_as = agenda_country_capital
@@ -560,18 +542,7 @@ estate_razesi_integrate_subject = {
 				has_saved_event_target = agenda_country
 			}
 			event_target:agenda_country = {
-				if = {
-					limit = {
-						has_country_flag = agenda_allied_commune
-					}
-					is_subject_of_type = sister_commune
-				}
-				else_if = {
-					limit = {
-						has_country_flag = agenda_sister_commune
-					}
-					is_subject_of_type = integrated_commune
-				}
+				is_subject_of_type = integrated_commune
 			}
 		}
 	}
@@ -596,17 +567,6 @@ estate_razesi_integrate_subject = {
 					event_target:agenda_country = {
 						set_country_flag = remove_annexers_legacy_token
 					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_saved_event_target = agenda_country
-			}
-			hidden_effect = {
-				event_target:agenda_country = {
-					clr_country_flag = agenda_allied_commune
-					clr_country_flag = agenda_sister_commune
 				}
 			}
 		}

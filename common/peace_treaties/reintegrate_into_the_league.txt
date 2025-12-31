@@ -30,21 +30,8 @@ po_reintegrate_into_peasant_league = {
 		always = yes
 	}
 	effect = {
-		if = {
-			limit = {
-				FROM = {
-					has_been_integrated_commune = yes
-				}
-			}
-			create_subject = {
-				subject_type = sister_commune
-				who = FROM
-			}
-		}
-		else = {
-			create_allied_commune = {
-				who = FROM
-			}
+		create_allied_commune = {
+			who = FROM
 		}
 		FROM = {
 			kill_ruler = yes

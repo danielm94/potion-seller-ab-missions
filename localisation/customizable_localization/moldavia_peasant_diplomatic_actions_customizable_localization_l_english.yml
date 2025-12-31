@@ -1,8 +1,6 @@
 ﻿l_english:
  allied_commune_with_icon: "£allied_commune£ §YAllied Commune§!"
- sister_commune_with_icon: "£sister_commune£ §YSister Commune§!"
  integrated_commune_with_icon: "£integrated_commune£ §YIntegrated Commune§!"
- sister_commune_mechanics: "£sister_commune£ §YSister Communes§! provide us with a §Ymodest amount§! of §Gincome§!.\nIt costs §Y2.5§! Peasant Zeal to call them into our wars.\nYou will have access to §Gmore§! §Ysubject interactions§!.\n\nYou will not be able to integrate @[From.GetTag] §Y[From.GetName]§! again for §Y10 years§!."
  integrated_commune_mechanics: "£integrated_commune£ §YIntegrated Communes§! provide us with a §Glarge amount§! of §Gincome§!, §Gmanpower§!, §Gsailors§!, §Gland force limit§!, and §Gnaval force limit§!.\nThey provide additional bonuses once they reach certain §Ytotal development thresholds§!.\nIt costs §G1§! Peasant Zeal to call them into our wars.\nYou will have access to §Gmore§! §Ysubject interactions§!.\n\nYou will not be able to integrate @[From.GetTag] §Y[From.GetName]§! further once they become an £integrated_commune£ §YIntegrated Commune§!"
  PER_tag: "@PER"
  PRZ_tag: "@PRZ"

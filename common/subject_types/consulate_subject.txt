@@ -42,28 +42,24 @@ consulate_subject = {
 	can_fight = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_rival = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_ally = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}
 	can_marry = {
 		independent_nations = yes
 		same_overlord = allied_commune
-		same_overlord = sister_commune
 		same_overlord = consulate_subject
 		other_overlord = all
 	}

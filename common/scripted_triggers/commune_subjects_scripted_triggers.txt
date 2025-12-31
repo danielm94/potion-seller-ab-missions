@@ -2,7 +2,6 @@
 is_commune_subject = {
 	OR = {
 		is_subject_of_type = allied_commune
-		is_subject_of_type = sister_commune
 		is_subject_of_type = integrated_commune
 	}
 }
@@ -78,11 +77,6 @@ is_investing_mana_in_commune = {
 #SCOPE = COUNTRY
 has_been_allied_commune = {
 	has_country_flag = was_allied_commune
-}
-
-#SCOPE = COUNTRY
-has_been_sister_commune = {
-	has_country_flag = was_sister_commune
 }
 
 #SCOPE = COUNTRY

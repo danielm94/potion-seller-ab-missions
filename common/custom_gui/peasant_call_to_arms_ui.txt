@@ -124,18 +124,6 @@ custom_button = {
 					limit = {
 						PREV = {
 							NOT = {
-								has_country_flag = cta_sister_communes
-							}
-						}
-					}
-					NOT = {
-						is_subject_of_type = sister_commune
-					}
-				}
-				if = {
-					limit = {
-						PREV = {
-							NOT = {
 								has_country_flag = cta_integrated_communes
 							}
 						}
@@ -197,17 +185,6 @@ custom_button = {
 		}
 		else = {
 			custom_tooltip = cta_allied_communes_no_tt
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_country_flag = cta_sister_communes
-				}
-			}
-			custom_tooltip = cta_sister_communes_yes_tt
-		}
-		else = {
-			custom_tooltip = cta_sister_communes_no_tt
 		}
 		if = {
 			limit = {

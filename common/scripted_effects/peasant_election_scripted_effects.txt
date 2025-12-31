@@ -5,9 +5,6 @@ calculate_protector_little_folk_personality_chances_effect = {
 			num_allied_communes = 0
 		}
 		set_variable = {
-			num_sister_communes = 0
-		}
-		set_variable = {
 			num_integrated_communes = 0
 		}
 		every_subject_country = {
@@ -18,16 +15,6 @@ calculate_protector_little_folk_personality_chances_effect = {
 				overlord = {
 					change_variable = {
 						num_allied_communes = 1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					is_subject_of_type = sister_commune
-				}
-				overlord = {
-					change_variable = {
-						num_sister_communes = 1
 					}
 				}
 			}
@@ -52,17 +39,6 @@ calculate_protector_little_folk_personality_chances_effect = {
 		set_variable = {
 			which = total_chance_of_little_folk_personality
 			which = chance_gain_from_allied_communes
-		}
-		set_variable = {
-			which = chance_gain_from_sister_communes
-			which = num_sister_communes
-		}
-		multiply_variable = {
-			chance_gain_from_sister_communes = 0.75
-		}
-		change_variable = {
-			which = total_chance_of_little_folk_personality
-			which = chance_gain_from_sister_communes
 		}
 		set_variable = {
 			which = chance_gain_from_integrated_communes

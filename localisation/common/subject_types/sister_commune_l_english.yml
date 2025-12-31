@@ -1,7 +1,0 @@
-﻿l_english:
- sister_commune: "Sister Commune"
- sister_commune_long_desc: "These communes are closely supervised revolutionary states that have harmonized their administration with our central leadership. Operating with guided autonomy, they represent an advanced stage of integration where local governance is strictly aligned with our ideological vision.\n\n§V£allied_commune£§YAllied Communes§! grant us §G+0.005§! Peasant Zeal per month.\n\nThey can declare war on other £sister_commune£§YSister Communes§!.§!"
- sister_commune_is_our: "$NAME|Y$ is a sister commune."
- sister_commune_title: "Sister Commune"
- sister_commune_title_plural: "Sister Communes"
- is_sister_commune: "Is a Sister Commune"

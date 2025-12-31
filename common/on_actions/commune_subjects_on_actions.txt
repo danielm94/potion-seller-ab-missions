@@ -135,13 +135,6 @@ on_dependency_gained = {
 				clear_was_commune_subject_flags = yes
 				mark_country_as_having_been_integrated_commune = yes
 			}
-			else_if = {
-				limit = {
-					is_subject_of_type = sister_commune
-				}
-				clear_was_commune_subject_flags = yes
-				mark_country_as_having_been_sister_commune = yes
-			}
 			else = {
 				clear_was_commune_subject_flags = yes
 				mark_country_as_having_been_allied_commune = yes
@@ -164,7 +157,6 @@ on_dependency_lost = {
 					exists = yes
 					OR = {
 						has_been_allied_commune = yes
-						has_been_sister_commune = yes
 						has_been_integrated_commune = yes
 					}
 				}

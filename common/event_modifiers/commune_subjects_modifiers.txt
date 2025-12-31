@@ -206,10 +206,6 @@ allied_commune_overlord = {
 	monthly_peasant_zeal = 0.002
 }
 
-sister_commune_overlord = {
-	monthly_peasant_zeal = 0.005
-}
-
 integrated_commune_overlord = {
 	monthly_peasant_zeal = 0.01
 	peasant_zeal_gain_modifier = 0.005
@@ -233,13 +229,6 @@ integrated_commune_subject = {
 	land_forcelimit = -5
 	global_regiment_recruit_speed = 0.25
 	core_creation = 0.1
-	province_warscore_cost = 0.25
-}
-
-sister_commune_subject = {
-	global_regiment_recruit_speed = 0.25
-	core_creation = 0.1
-	diplomatic_annexation_cost = 0.1
 	province_warscore_cost = 0.25
 }
 

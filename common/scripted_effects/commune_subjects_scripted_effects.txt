@@ -129,26 +129,18 @@ calculate_commune_integration_cost = {
 		limit = {
 			is_subject_of_type = allied_commune
 		}
-		get_allied_commune_annexation_cost_multiplier = {
-			var = subject_type_annexation_cost_multiplier
-		}
-	}
-	else_if = {
-		limit = {
-			is_subject_of_type = sister_commune
-		}
 		if = {
 			limit = {
 				overlord = {
-					has_country_flag = reduce_sister_commune_annexation_cost_multiplier
+					has_country_flag = reduce_allied_commune_annexation_cost_multiplier
 				}
 			}
-			get_discounted_sister_commune_annexation_cost_multiplier = {
+			get_discounted_allied_commune_annexation_cost_multiplier = {
 				var = subject_type_annexation_cost_multiplier
 			}
 		}
 		else = {
-			get_sister_commune_annexation_cost_multiplier = {
+			get_allied_commune_annexation_cost_multiplier = {
 				var = subject_type_annexation_cost_multiplier
 			}
 		}
@@ -943,21 +935,14 @@ clear_commune_integration_modifiers = {
 #SCOPE = ANY
 get_allied_commune_annexation_cost_multiplier = {
 	set_variable = {
-		$var$ = 3
+		$var$ = 9
 	}
 }
 
 #SCOPE = ANY
-get_sister_commune_annexation_cost_multiplier = {
+get_discounted_allied_commune_annexation_cost_multiplier = {
 	set_variable = {
-		$var$ = 5
-	}
-}
-
-#SCOPE = ANY
-get_discounted_sister_commune_annexation_cost_multiplier = {
-	set_variable = {
-		$var$ = 4
+		$var$ = 8
 	}
 }
 
@@ -971,25 +956,19 @@ get_consulate_annexation_cost_multiplier = {
 #SCOPE = ANY
 get_subject_to_commune_annexation_cost_multiplier = {
 	set_variable = {
-		$var$ = 8
+		$var$ = 4
 	}
 }
 
 #SCOPE = COUNTRY
 clear_was_commune_subject_flags = {
 	clr_country_flag = was_allied_commune
-	clr_country_flag = was_sister_commune
 	clr_country_flag = was_integrated_commune
 }
 
 #SCOPE = COUNTRY
 mark_country_as_having_been_allied_commune = {
 	set_country_flag = was_allied_commune
-}
-
-#SCOPE = COUNTRY
-mark_country_as_having_been_sister_commune = {
-	set_country_flag = was_sister_commune
 }
 
 #SCOPE = COUNTRY
@@ -4533,16 +4512,9 @@ get_allied_commune_join_war_zeal_cost = {
 }
 
 #SCOPE = ANY
-get_sister_commune_join_war_zeal_cost = {
-	set_variable = {
-		$var$ = 2.5
-	}
-}
-
-#SCOPE = ANY
 get_integrated_commune_join_war_zeal_cost = {
 	set_variable = {
-		$var$ = 1
+		$var$ = 2.5
 	}
 }
 
@@ -4595,14 +4567,6 @@ calculate_peasant_zeal_call_to_arms_cost = {
 				is_subject_of_type = allied_commune
 			}
 			get_allied_commune_join_war_zeal_cost = {
-				var = base_cost
-			}
-		}
-		else_if = {
-			limit = {
-				is_subject_of_type = sister_commune
-			}
-			get_sister_commune_join_war_zeal_cost = {
 				var = base_cost
 			}
 		}
@@ -4686,18 +4650,6 @@ call_all_peasant_subjects_to_arms_effect = {
 					limit = {
 						PREV = {
 							NOT = {
-								has_country_flag = cta_sister_communes
-							}
-						}
-					}
-					NOT = {
-						is_subject_of_type = sister_commune
-					}
-				}
-				if = {
-					limit = {
-						PREV = {
-							NOT = {
 								has_country_flag = cta_integrated_communes
 							}
 						}
@@ -4742,18 +4694,6 @@ call_strongest_commune_subject_effect = {
 				}
 				NOT = {
 					is_subject_of_type = allied_commune
-				}
-			}
-			if = {
-				limit = {
-					PREV = {
-						NOT = {
-							has_country_flag = cta_sister_communes
-						}
-					}
-				}
-				NOT = {
-					is_subject_of_type = sister_commune
 				}
 			}
 			if = {
@@ -4877,18 +4817,6 @@ call_nearest_commune_subject_effect = {
 				}
 				NOT = {
 					is_subject_of_type = allied_commune
-				}
-			}
-			if = {
-				limit = {
-					PREV = {
-						NOT = {
-							has_country_flag = cta_sister_communes
-						}
-					}
-				}
-				NOT = {
-					is_subject_of_type = sister_commune
 				}
 			}
 			if = {

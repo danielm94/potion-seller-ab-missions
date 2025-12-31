@@ -197,7 +197,6 @@ moldavian_peasant_government_reform_initialization_effect = {
 		calculate_required_progress_for_early_great_peasant_uprising_cb = yes
 		set_country_flag = peasant_call_to_arms_strongest_military_strategy
 		set_country_flag = cta_allied_communes
-		set_country_flag = cta_sister_communes
 		set_country_flag = cta_integrated_communes
 		set_variable = {
 			peasant_call_to_arms_zeal_budget = 100

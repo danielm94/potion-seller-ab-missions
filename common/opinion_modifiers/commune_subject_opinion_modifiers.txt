@@ -12,9 +12,6 @@ commune_staged_coup_against_another_commune = {
 allied_commune_opinion = {
 	opinion = 15
 }
-sister_commune_opinion = {
-	opinion = 30
-}
 integrated_commune_opinion = {
 	opinion = 50
 }

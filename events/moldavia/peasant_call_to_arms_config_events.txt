@@ -44,15 +44,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = cta_sister_communes
-			}
-			custom_tooltip = cta_sister_communes_yes_tt
-		}
-		else = {
-			custom_tooltip = cta_sister_communes_no_tt
-		}
-		if = {
-			limit = {
 				has_country_flag = cta_integrated_communes
 			}
 			custom_tooltip = cta_integrated_communes_yes_tt
@@ -961,27 +952,6 @@ country_event = {
 		set_country_flag = cta_allied_communes
 	}
 	option = {
-		name = peasant_call_to_arms_config_events.5_sister_communes
-		highlight = yes
-		trigger = {
-			hidden_trigger = {
-				has_country_flag = cta_sister_communes
-			}
-		}
-		clr_country_flag = cta_sister_communes
-	}
-	option = {
-		name = peasant_call_to_arms_config_events.5_sister_communes
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_country_flag = cta_sister_communes
-				}
-			}
-		}
-		set_country_flag = cta_sister_communes
-	}
-	option = {
 		name = peasant_call_to_arms_config_events.5_integrated_communes
 		highlight = yes
 		trigger = {
@@ -1055,27 +1025,6 @@ country_event = {
 			}
 		}
 		set_country_flag = cta_allied_communes
-	}
-	option = {
-		name = peasant_call_to_arms_config_events.5_sister_communes
-		highlight = yes
-		trigger = {
-			hidden_trigger = {
-				has_country_flag = cta_sister_communes
-			}
-		}
-		clr_country_flag = cta_sister_communes
-	}
-	option = {
-		name = peasant_call_to_arms_config_events.5_sister_communes
-		trigger = {
-			hidden_trigger = {
-				NOT = {
-					has_country_flag = cta_sister_communes
-				}
-			}
-		}
-		set_country_flag = cta_sister_communes
 	}
 	option = {
 		name = peasant_call_to_arms_config_events.5_integrated_communes

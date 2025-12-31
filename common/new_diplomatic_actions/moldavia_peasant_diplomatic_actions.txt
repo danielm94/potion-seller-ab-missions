@@ -727,10 +727,7 @@ integrate_commune = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
-			OR = {
-				is_subject_of_type = allied_commune
-				is_subject_of_type = sister_commune
-			}
+			is_subject_of_type = allied_commune
 			is_commune_subject_being_integrated = no
 		}
 	}
@@ -1302,10 +1299,7 @@ enforce_peace_commune = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
-			OR = {
-				is_subject_of_type = allied_commune
-				is_subject_of_type = sister_commune
-			}
+			is_subject_of_type = allied_commune
 			is_at_war = yes
 		}
 	}
@@ -5204,10 +5198,7 @@ designate_model_commune = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
-			OR = {
-				is_subject_of_type = allied_commune
-				is_subject_of_type = sister_commune
-			}
+			is_subject_of_type = allied_commune
 			NOT = {
 				has_country_flag = model_commune
 			}
@@ -5287,10 +5278,7 @@ revoke_model_commune = {
 	is_visible = {
 		has_government_mechanic = peasant_zealotry
 		FROM = {
-			OR = {
-				is_subject_of_type = allied_commune
-				is_subject_of_type = sister_commune
-			}
+			is_subject_of_type = allied_commune
 			has_country_flag = model_commune
 		}
 	}
