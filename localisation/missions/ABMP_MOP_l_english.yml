@@ -768,7 +768,7 @@
  mop_north_italy_locked_series_3_title: "§g@GEN N. Italy: Locked§!"
  mop_north_italy_locked_series_3_desc: "You must have completed §YLiberate Rome§!, §YLiberate Illyria§!, §YThe Alpine Bastion§!, §YThe Danubian Gateway§!, or §YLiberate the Midi§!."
  mop_germany_gpw_locked_1_title: "§g@HLR HRE: Locked§!"
- mop_germany_gpw_locked_1_desc: "You must have completed §YLiberate Rome§!, §YLiberate Illyria§!, §YThe Alpine Bastion§!, §YThe Danubian Gateway§!, or §YLiberate the Midi§!."
+ mop_germany_gpw_locked_1_desc: "Unlock §Yany German mission§! below to unlock this mission."
  mop_rhine_locked_title: "§g@RHL Rhineland: Locked§!"
  mop_rhine_locked_desc: "You must have completed"
  mop_swabia_franconia_locked_title: "§g@SWA Swabia: Locked§!"
