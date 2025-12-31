@@ -947,3 +947,121 @@ unlock_mop_north_africa_west_effect = {
 		}
 	}
 }
+#SCOPE = COUNTRY
+unlock_mop_austria_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_austria
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_austria
+		custom_tooltip  = unlocked_mop_austria_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+unlock_mop_swiss_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_swiss
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_swiss
+		custom_tooltip  = unlocked_mop_swiss_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+unlock_mop_bavaria_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_bavaria
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_bavaria
+		custom_tooltip  = unlocked_mop_bavaria_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+unlock_mop_swabia_franconia_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_swabia_franconia
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_swabia_franconia
+		custom_tooltip  = unlocked_mop_swabia_franconia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+unlock_mop_bohemia_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_bohemia
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_bohemia
+		custom_tooltip  = unlocked_mop_bohemia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+unlock_mop_rhine_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_rhine
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_rhine
+		custom_tooltip  = unlocked_mop_rhine_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+unlock_mop_saxons_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_saxons
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_saxons
+		custom_tooltip  = unlocked_mop_saxons_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
