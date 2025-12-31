@@ -83,7 +83,7 @@
  coup_leader_still_alive_tt: "The ruler we installed in a coup isn't still alive."
  stage_coup_commune_integration: "Stage Coup in Commune"
  stage_coup_commune_integration_title: "Stage Coup in Commune"
- stage_coup_commune_integration_desc: "We will stage a coup in @[Root.GetTag] §Y[Root.GetName]§! and install a loyal regime.\n\nThis will immediately grant §G20%§! of the total integration progress.\n\n@[Root.GetTag] §Y[Root.GetName]§! will gain §R+40§! Liberty Desire and lose §R40§! Trust with us.\n\nEvery £allied_commune£ §YCommune Subject§! will gain §R+20§! Liberty Desire and lose §R20§! Trust with us.\n\nThis interaction cannot be used again until the installed ruler has died or lost an election."
+ stage_coup_commune_integration_desc: "We will stage a coup in @[Root.GetTag] §Y[Root.GetName]§! and install a loyal regime.\n\nWe will reduce our spy network by §R[From.stage_coup_cost_var.GetValue]§!.\n\nThis will immediately grant §G20%§! of the total integration progress.\n\n@[Root.GetTag] §Y[Root.GetName]§! will gain §R+40§! Liberty Desire and lose §R40§! Trust with us.\n\nEvery £allied_commune£ §YCommune Subject§! will gain §R+20§! Liberty Desire and lose §R20§! Trust with us.\n\nThis interaction cannot be used again until the installed ruler has died or lost an election."
  stage_coup_commune_integration_tooltip: "We will gain §G20%§! of the required integration progress with @[Root.GetTag] §Y[Root.GetName]§!."
  stage_coup_commune_integration_alert_tooltip: "Stage Coup in Commune"
  convert_subject_to_commune: "Establish Commune"
