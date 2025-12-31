@@ -753,3 +753,130 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = great_peasant_uprising
+	tooltip = stage_mass_peasant_uprising
+	potential = {
+		has_global_flag = great_peasants_war_flag
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_part_of_hre = yes
+		NOT = {
+			is_subject_of = FROM
+		}
+		NOT = {
+			has_government_attribute = is_peasants_republic
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = recent_mass_peasant_uprising
+					}
+					had_country_flag = {
+						flag = recent_mass_peasant_uprising
+						days = 3650
+					}
+				}
+			}
+			FROM = {
+				custom_trigger_tooltip = {
+					tooltip = stage_mass_peasant_uprising_spy_network_size_tt
+					can_stage_mass_peasant_uprising = {
+						who = ROOT
+					}
+				}
+				years_of_income = 0.25
+			}
+			has_radicalized_peasantry_country = yes
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = mass_peasant_uprising_cooldown_tt
+				always = no
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = sfx_siege_sortie_01
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = stage_mass_peasant_uprising_desc
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					number_of_mass_peasant_uprisings = 1
+				}
+				set_global_flag = great_peasants_war_flag
+				calculate_spy_action_cost_values = yes
+				set_variable = {
+					which = spy_network_deduction_var
+					which = stage_mass_peasant_uprising_cost_var
+				}
+				multiply_variable = {
+					which = spy_network_deduction_var
+					value = -1
+				}
+				variable_change_spy_network_in = {
+					who = ROOT
+					var = spy_network_deduction_var
+				}
+				add_years_of_income = -0.25
+			}
+			every_owned_province = {
+				limit = {
+					likely_rebels = anti_tax_rebels
+				}
+				add_province_modifier = {
+					name = recent_uprising
+					duration = 3650
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_radicalized_peasantry_province = yes
+				}
+				spawn_rebels = {
+					size = 3
+					type = anti_tax_rebels
+				}
+			}
+			set_country_flag = recent_mass_peasant_uprising
+			remove_country_modifier = incited_peasantry
+			remove_country_modifier = incited_peasantry_great_peasants_war
+			FROM = {
+				apply_radicalized_peasantry_effect = yes
+				reverse_add_aggressive_expansion = {
+					who = ROOT
+					value = 5
+					apply_calc = yes
+				}
+				reverse_add_aggressive_expansion = {
+					who = emperor
+					value = 5
+					apply_calc = yes
+				}
+				every_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = {
+							has_government_attribute = is_peasants_republic
+						}
+					}
+					add_aggressive_expansion = {
+						who = FROM
+						value = 2
+						apply_calc = yes
+					}
+				}
+			}
+		}
+	}
+}

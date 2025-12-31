@@ -666,9 +666,7 @@ defined_text = {
 		localisation_key = not_applicable
 		trigger = {
 			NOT = {
-				FROM = {
-					has_country_flag = recent_mass_peasant_uprising
-				}
+				has_country_flag = recent_mass_peasant_uprising
 			}
 		}
 	}
@@ -676,121 +674,99 @@ defined_text = {
 	text = {
 		localisation_key = month
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3620
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3620
 			}
 		}
 	}
 	text = {
 		localisation_key = 2_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3590
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3590
 			}
 		}
 	}
 	text = {
 		localisation_key = 3_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3560
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3560
 			}
 		}
 	}
 	text = {
 		localisation_key = 4_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3530
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3530
 			}
 		}
 	}
 	text = {
 		localisation_key = 5_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3500
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3500
 			}
 		}
 	}
 	text = {
 		localisation_key = 6_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3470
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3470
 			}
 		}
 	}
 	text = {
 		localisation_key = 7_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3440
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3440
 			}
 		}
 	}
 	text = {
 		localisation_key = 8_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3410
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3410
 			}
 		}
 	}
 	text = {
 		localisation_key = 9_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3380
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3380
 			}
 		}
 	}
 	text = {
 		localisation_key = 10_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3350
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3350
 			}
 		}
 	}
 	text = {
 		localisation_key = 11_months
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3320
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3320
 			}
 		}
 	}
@@ -798,135 +774,95 @@ defined_text = {
 	text = {
 		localisation_key = 1_year
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 3285
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 3285
 			}
 		}
 	}
 	text = {
 		localisation_key = 2_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 2920
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 2920
 			}
 		}
 	}
 	text = {
 		localisation_key = 3_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 2555
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 2555
 			}
 		}
 	}
 	text = {
 		localisation_key = 4_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 2190
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 2190
 			}
 		}
 	}
 	text = {
 		localisation_key = 5_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 1825
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 1825
 			}
 		}
 	}
 	text = {
 		localisation_key = 6_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 1460
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 1460
 			}
 		}
 	}
 	text = {
 		localisation_key = 7_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 1095
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 1095
 			}
 		}
 	}
 	text = {
 		localisation_key = 8_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 730
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 730
 			}
 		}
 	}
 	text = {
 		localisation_key = 9_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 365
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 365
 			}
 		}
 	}
 	text = {
 		localisation_key = 10_years
 		trigger = {
-			FROM = {
-				had_country_flag = {
-					flag = recent_mass_peasant_uprising
-					days = 0
-				}
+			had_country_flag = {
+				flag = recent_mass_peasant_uprising
+				days = 0
 			}
 		}
 	}
 }
 
-defined_text = {
-	name = get_commune_subject_current_stage
-	random = no
-	text = {
-		localisation_key = allied_commune_with_icon
-		trigger = {
-			FROM = {
-				is_subject_of_type = allied_commune
-			}
-		}
-	}
-	text = {
-		localisation_key = integrated_commune_with_icon
-		trigger = {
-			FROM = {
-				is_subject_of_type = integrated_commune
-			}
-		}
-	}
-}
 
 defined_text = {
 	name = designate_model_commune_cooldown_text

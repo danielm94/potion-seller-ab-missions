@@ -1483,7 +1483,7 @@ guiTypes = {
 		}
 		guiButtonType = {
 			name = "great_peasant_uprising"
-			position = { x = 549 y = 377 }
+			position = { x = 549 y = 417 }
 			quadTextureSprite ="GFX_great_peasant_uprising"
 			scripted = yes
 			shortcut = "shift+x"
