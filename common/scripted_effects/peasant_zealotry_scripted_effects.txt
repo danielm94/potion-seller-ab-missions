@@ -26,14 +26,14 @@ get_incite_peasants_base_cost_var = {
 #SCOPE = ANY
 get_stage_coup_base_cost_var = {
 	set_variable = {
-		$var$ = 70
+		$var$ = 50
 	}
 }
 
 #SCOPE = ANY
 get_stage_mass_peasant_uprising_base_cost_var = {
 	set_variable = {
-		$var$ = 70
+		$var$ = 60
 	}
 }
 
