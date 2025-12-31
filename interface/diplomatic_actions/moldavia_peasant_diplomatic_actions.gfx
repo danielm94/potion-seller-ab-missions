@@ -59,4 +59,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/buttons/commune_diplo_actions/stage_coup.dds"
 		loadtype = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_incite_peasants"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/incite_peasants.dds"
+		loadtype = "INGAME"
+	}
 }

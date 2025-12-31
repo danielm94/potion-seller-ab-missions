@@ -81,16 +81,18 @@ is_within_range_of_the_peasants_revolution = {
 		OR = {
 			NOT = {
 				border_distance = {
-					who = FROM
+					who = ROOT
 					distance = 50
 				}
 			}
-			any_subject_country = {
-				is_country_that_spreads_radicalized_peasants = yes
-				NOT = {
-					border_distance = {
-						who = FROM
-						distance = 50
+			FROM = {
+				any_subject_country = {
+					is_country_that_spreads_radicalized_peasants = yes
+					NOT = {
+						border_distance = {
+							who = ROOT
+							distance = 50
+						}
 					}
 				}
 			}

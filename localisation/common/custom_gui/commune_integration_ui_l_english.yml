@@ -1,0 +1,4 @@
+﻿l_english:
+ incite_peasants_desc: "We will lose §R-[From.incite_peasants_cost_var.GetValue]§! Spy Network in @[Root.GetTag] §Y[Root.GetName]§!."
+ incite_peasants_desc_continued_tt: "Any temporary instance of the £radicalized_peasantry£ §YRadicalized Peasantry§! modifier will have its duration §Grefreshed§! to §Y10 years§!.\n\n§YPeasant Rebels§! will gain §G+50%§! uprising progress in @[Root.GetTag] §Y[Root.GetName]§!."
+ commune_integrate_while_at_war_penalty_tt: "We will be §R50% less§! effective at integrating @[Root.GetTag] §Y[Root.GetName]§! while we are at war."

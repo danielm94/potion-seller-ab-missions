@@ -51,6 +51,13 @@ custom_button = {
 			}
 		}
 		custom_tooltip = tooltip_line_divider
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			custom_tooltip = commune_integrate_while_at_war_penalty_tt
+			custom_tooltip = AB_EMPTY
+		}
 		custom_tooltip = integrate_commune_desc
 		hidden_effect = {
 			FROM = {
@@ -549,6 +556,199 @@ custom_button = {
 						modifier = commune_staged_coup_against_another_commune
 					}
 				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = incite_peasants
+	tooltip = incite_peasants
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		NOT = {
+			is_subject_of = FROM
+		}
+		NOT = {
+			has_government_attribute = is_peasants_republic
+		}
+	}
+	trigger = {
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = incite_peasants_spy_network_size_tt
+				can_incite_peasants = {
+					who = ROOT
+				}
+			}
+		}
+		FROM = {
+			is_within_range_of_the_peasants_revolution = yes
+		}
+		if = {
+			limit = {
+				is_part_of_hre = yes
+				has_global_flag = great_peasants_war_flag
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = no_radicalized_peasantry_trigger_tt
+					any_owned_province = {
+						NOT = {
+							has_radicalized_peasantry_province = yes
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = incite_peasants_on_cooldown_tt
+					AND = {
+						NOT = {
+							has_country_modifier = incited_peasantry
+						}
+						NOT = {
+							has_country_modifier = incited_peasantry_great_peasants_war
+						}
+					}
+				}
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = incite_peasants_on_cooldown_tt
+				NOT = {
+					has_country_modifier = incited_peasantry
+				}
+				NOT = {
+					has_country_modifier = incited_peasantry_great_peasants_war
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = incite_peasants
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = incite_peasants_desc
+		custom_tooltip = AB_EMPTY
+		if = {
+			limit = {
+				is_part_of_hre = yes
+				has_global_flag = great_peasants_war_flag
+			}
+			custom_tooltip = incite_peasants_desc_gpw_modifier_applied
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = incite_peasants_desc_radicalized_peasantry_gpw
+		}
+		else = {
+			custom_tooltip = incite_peasants_desc_regular_modifier_applied
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = incite_peasants_desc_radicalized_peasantry_regular
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = incite_peasants_desc_continued_tt
+		if = {
+			limit = {
+				has_radicalized_peasantry_country = yes
+			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = incite_peasants_desc_overthrow_explained_has_rad_pes
+		}
+		else = {
+			custom_tooltip = tooltip_line_divider
+			custom_tooltip = incite_peasants_desc_overthrow_explained_not_has_rad_pes
+		}
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					total_incited_peasants = 1
+				}
+				calculate_spy_action_cost_values = yes
+				set_variable = {
+					which = spy_network_deduction_var
+					which = incite_peasants_cost_var
+				}
+				multiply_variable = {
+					which = spy_network_deduction_var
+					value = -1
+				}
+				variable_change_spy_network_in = {
+					who = ROOT
+					var = spy_network_deduction_var
+				}
+			}
+			add_opinion = {
+				who = FROM
+				modifier = incited_peasants_opinion
+			}
+			set_country_flag = has_radicalized_peasantry
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+				add_country_modifier = {
+					name = incited_peasantry_great_peasants_war
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = incited_peasantry
+					duration = 3650
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_radicalized_peasantry_province = yes
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_neighbor_province = {
+								owner = {
+									is_country_that_spreads_radicalized_peasants = yes
+								}
+							}
+						}
+					}
+					refresh_radicalized_peasantry_in_province = yes
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					has_global_flag = great_peasants_war_flag
+				}
+				get_number_of_provinces_without_radicalized_peasantry = {
+					var_name = num_provinces_without_radicalized_peasantry
+				}
+				divide_variable = {
+					which = num_provinces_without_radicalized_peasantry
+					value = 2
+				}
+				variable_limit_min = {
+					var = num_provinces_without_radicalized_peasantry
+					min = 1
+				}
+				for_variable_amount = {
+					variable = num_provinces_without_radicalized_peasantry
+					effect = "add_radicalized_peasantry_to_random_province_effect = yes"
+				}
+			}
+			else = {
+				add_radicalized_peasantry_to_random_province_effect = yes
+			}
+			add_rebel_progress = {
+				rebel_type = anti_tax_rebels
+				value = 50
+			}
+			country_event = {
+				id = moldavia_diplomatic_actions_events.1
 			}
 		}
 	}

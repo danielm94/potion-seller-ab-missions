@@ -1,0 +1,5 @@
+sound = {
+	name = incite_peasants
+	file = "old/revolt.wav"
+	volume = 1
+}

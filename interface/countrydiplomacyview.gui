@@ -1475,6 +1475,13 @@ guiTypes = {
 			shortcut = "CTRL+shift+c"
 		}
 		guiButtonType = {
+			name = "incite_peasants"
+			position = { x = 549 y = 377 }
+			quadTextureSprite ="GFX_incite_peasants"
+			scripted = yes
+			shortcut = "shift+z"
+		}
+		guiButtonType = {
 			name = "integrate_commune"
 			position = { x = 549 y = 630 }
 			quadTextureSprite ="GFX_integrate_commune"
