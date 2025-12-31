@@ -6,7 +6,17 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_peasant_call_to_arms"
-		texturefile = "gfx/interface/buttons/peasant_call_to_arms/peasant_call_to_arms.dds"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/peasant_call_to_arms.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_integrate_commune"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/integrate_commune.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cancel_integrate_commune"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_integrate_commune.dds"
 		loadtype = "INGAME"
 	}
 }
