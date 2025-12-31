@@ -8444,7 +8444,7 @@ ab_mop_4 = {
 	}
 	mop_strong_razesi = {
 		icon = GFX_mop_strong_razesi
-		position = 19
+		position = 18
 		required_missions = {
 			mop_razesi
 		}
@@ -8530,7 +8530,7 @@ mop_anatolia_series_locked = {
 	}
 	mop_anatolia_series_locked_1 = {
 		icon = mission_locked_mission
-		position = 20
+		position = 19
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_anatolia_series_locked_1_desc
@@ -8546,7 +8546,7 @@ mop_anatolia_series_locked = {
 		required_missions = {
 			mop_anatolia_series_locked_1
 		}
-		position = 21
+		position = 20
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_anatolia_series_locked_1_desc
@@ -8569,7 +8569,7 @@ mop_anatolia_west = {
 	}
 	mop_dismantle_the_stratocracy_west = {
 		icon = mission_nicaea
-		position = 20
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				area = hudavendigar_area
@@ -8657,7 +8657,7 @@ mop_anatolia_west = {
 	}
 	mop_east_anatolia_west = {
 		icon = anatolian_frontier
-		position = 21
+		position = 20
 		required_missions = {
 			mop_dismantle_the_stratocracy_west
 		}
@@ -8774,7 +8774,7 @@ mop_anatolia_east = {
 	}
 	mop_east_anatolia_east = {
 		icon = anatolian_frontier
-		position = 20
+		position = 19
 		provinces_to_highlight = {
 			OR = {
 				area = karaman_area
@@ -8878,7 +8878,7 @@ mop_anatolia_east = {
 	}
 	mop_dismantle_the_stratocracy_east = {
 		icon = mission_nicaea
-		position = 21
+		position = 20
 		required_missions = {
 			mop_east_anatolia_east
 		}
@@ -8987,7 +8987,7 @@ mop_middle_east_series_locked_4 = {
 	}
 	mop_middle_east_series_locked_4_1 = {
 		icon = mission_locked_mission
-		position = 22
+		position = 21
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_middle_east_series_locked_4_1_desc
@@ -9004,7 +9004,7 @@ mop_middle_east_series_locked_4 = {
 			mop_middle_east_series_locked_4_1
 			mop_middle_east_series_locked_5_1
 		}
-		position = 23
+		position = 22
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_middle_east_series_locked_5_1_desc
@@ -9027,7 +9027,7 @@ mop_middle_east_series_nw_4 = {
 	}
 	mop_iraq_nw = {
 		icon = mission_cradle_of_civilization
-		position = 22
+		position = 21
 		provinces_to_highlight = {
 			OR = {
 				area = al_jazira_area
@@ -9115,7 +9115,7 @@ mop_middle_east_series_nw_4 = {
 	}
 	mop_arabia_nw = {
 		icon = mission_into_arabia
-		position = 23
+		position = 22
 		required_missions = {
 			mop_holy_land_nw
 			mop_iraq_nw
@@ -9199,7 +9199,7 @@ mop_middle_east_series_sw_4 = {
 	}
 	mop_arabia_sw = {
 		icon = mission_into_arabia
-		position = 22
+		position = 21
 		provinces_to_highlight = {
 			region = arabia_region
 			NOT = {
@@ -9272,7 +9272,7 @@ mop_middle_east_series_sw_4 = {
 			mop_arabia_sw
 			mop_holy_land_sw
 		}
-		position = 23
+		position = 22
 		provinces_to_highlight = {
 			OR = {
 				area = al_jazira_area
@@ -9370,7 +9370,7 @@ mop_middle_east_series_ne_4 = {
 	}
 	mop_iraq_ne = {
 		icon = mission_cradle_of_civilization
-		position = 22
+		position = 21
 		provinces_to_highlight = {
 			OR = {
 				area = al_jazira_area
@@ -9458,7 +9458,7 @@ mop_middle_east_series_ne_4 = {
 	}
 	mop_arabia_ne = {
 		icon = mission_into_arabia
-		position = 23
+		position = 22
 		required_missions = {
 			mop_iraq_ne
 		}
@@ -9546,7 +9546,7 @@ mop_persia_series_locked = {
 	}
 	mop_persia_locked_4_1 = {
 		icon = mission_locked_mission
-		position = 24
+		position = 23
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_persia_locked_4_1_desc
@@ -9559,7 +9559,7 @@ mop_persia_series_locked = {
 	}
 	mop_persia_locked_4_2 = {
 		icon = mission_locked_mission
-		position = 25
+		position = 24
 		required_missions = {
 			mop_persia_locked_4_1
 		}
@@ -9585,7 +9585,7 @@ mop_persia_series_west = {
 	}
 	mop_persia_west = {
 		icon = per_reborn_in_fire
-		position = 24
+		position = 23
 		provinces_to_highlight = {
 			region = persia_region
 			NOT = {
@@ -9644,7 +9644,7 @@ mop_persia_series_west = {
 	}
 	mop_khorasan_west = {
 		icon = mission_pertribes
-		position = 25
+		position = 24
 		required_missions = {
 			mop_persia_west
 		}
@@ -9729,7 +9729,7 @@ mop_persia_series_east = {
 	}
 	mop_khorasan_east = {
 		icon = mission_pertribes
-		position = 24
+		position = 23
 		provinces_to_highlight = {
 			region = khorasan_region
 			NOT = {
@@ -9801,7 +9801,7 @@ mop_persia_series_east = {
 	}
 	mop_persia_east = {
 		icon = per_reborn_in_fire
-		position = 25
+		position = 24
 		required_missions = {
 			mop_khorasan_east
 		}
@@ -9881,7 +9881,7 @@ mop_north_africa_series_locked_4 = {
 	}
 	mop_north_africa_locked_4_1 = {
 		icon = mission_locked_mission
-		position = 25
+		position = 24
 		required_missions = {
 			mop_north_africa_series_locked_5_2
 		}
@@ -9907,7 +9907,7 @@ mop_north_africa_middle = {
 	}
 	mop_egypt_middle = {
 		icon = gfx_wal_conquer_egypt
-		position = 26
+		position = 25
 		required_missions = {
 			mop_tunisia_middle
 		}
@@ -9981,7 +9981,7 @@ mop_britain_series_locked_4 = {
 	}
 	mop_britain_series_conquest_locked_1 = {
 		icon = mission_locked_mission
-		position = 27
+		position = 26
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_britain_series_conquest_locked_1_desc
@@ -9994,7 +9994,7 @@ mop_britain_series_locked_4 = {
 	}
 	mop_britain_series_conquest_locked_2 = {
 		icon = mission_locked_mission
-		position = 28
+		position = 27
 		required_missions = {
 			mop_britain_series_conquest_locked_1
 		}
@@ -10010,7 +10010,7 @@ mop_britain_series_locked_4 = {
 	}
 	mop_britain_series_conquest_locked_3 = {
 		icon = mission_locked_mission
-		position = 29
+		position = 28
 		required_missions = {
 			mop_britain_series_conquest_locked_2
 		}
@@ -10026,7 +10026,7 @@ mop_britain_series_locked_4 = {
 	}
 	mop_britain_series_conquest_locked_4 = {
 		icon = mission_locked_mission
-		position = 30
+		position = 29
 		required_missions = {
 			mop_britain_series_conquest_locked_3
 		}
@@ -10052,7 +10052,7 @@ mop_britain_north_series_unlocked_4 = {
 	}
 	mop_scotland_north_series = {
 		icon = mission_rb_conquer_scotland
-		position = 26
+		position = 25
 		provinces_to_highlight = {
 			OR = {
 				area = lowlands_area
@@ -10134,7 +10134,7 @@ mop_britain_north_series_unlocked_4 = {
 	}
 	mop_england_north_series = {
 		icon = mission_behead
-		position = 27
+		position = 26
 		required_missions = {
 			mop_scotland_north_series
 		}
@@ -10258,7 +10258,7 @@ mop_britain_north_series_unlocked_4 = {
 	}
 	mop_ireland_north_series = {
 		icon = mission_rb_rule_britannia_irish_version
-		position = 28
+		position = 27
 		required_missions = {
 			mop_england_north_series
 		}
@@ -10343,7 +10343,7 @@ mop_britain_north_series_unlocked_4 = {
 	}
 	mop_unite_britain_north_series = {
 		icon = mission_thrones
-		position = 29
+		position = 28
 		required_missions = {
 			mop_ireland_north_series
 		}
@@ -10431,7 +10431,7 @@ mop_britain_south_series_unlocked_4 = {
 	}
 	mop_england_south_series = {
 		icon = mission_behead
-		position = 26
+		position = 25
 		provinces_to_highlight = {
 			OR = {
 				area = scottish_marches_area
@@ -10552,7 +10552,7 @@ mop_britain_south_series_unlocked_4 = {
 	}
 	mop_scotland_south_series = {
 		icon = mission_rb_conquer_scotland
-		position = 27
+		position = 26
 		required_missions = {
 			mop_england_south_series
 		}
@@ -10637,7 +10637,7 @@ mop_britain_south_series_unlocked_4 = {
 	}
 	mop_ireland_south_series = {
 		icon = mission_rb_rule_britannia_irish_version
-		position = 28
+		position = 27
 		required_missions = {
 			mop_scotland_south_series
 		}
@@ -10722,7 +10722,7 @@ mop_britain_south_series_unlocked_4 = {
 	}
 	mop_unite_britain_south_series = {
 		icon = mission_thrones
-		position = 29
+		position = 28
 		required_missions = {
 			mop_ireland_south_series
 		}
@@ -11717,7 +11717,7 @@ ab_mop_5 = {
 	}
 	mop_overthrow_2 = {
 		icon = mission_thirty_years_war
-		position = 20
+		position = 19
 		required_missions = {
 			mop_overthrow
 			mop_strong_razesi
@@ -11758,7 +11758,7 @@ ab_mop_5 = {
 	}
 	mop_overthrow_3 = {
 		icon = GFX_mop_overthrow_3
-		position = 21
+		position = 20
 		required_missions = {
 			mop_overthrow_2
 		}
@@ -11819,7 +11819,7 @@ mop_middle_east_series_locked_5 = {
 	}
 	mop_middle_east_series_locked_5_1 = {
 		icon = mission_locked_mission
-		position = 22
+		position = 21
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_middle_east_series_locked_5_1_desc
@@ -11836,7 +11836,7 @@ mop_middle_east_series_locked_5 = {
 			mop_middle_east_series_locked_4_1
 			mop_middle_east_series_locked_5_1
 		}
-		position = 23
+		position = 22
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_middle_east_series_locked_5_1_desc
@@ -11859,7 +11859,7 @@ mop_middle_east_series_nw_5 = {
 	}
 	mop_holy_land_nw = {
 		icon = convert_the_holy_lands
-		position = 22
+		position = 21
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
@@ -11974,7 +11974,7 @@ mop_middle_east_series_ne_5 = {
 	}
 	mop_holy_land_ne = {
 		icon = convert_the_holy_lands
-		position = 23
+		position = 22
 		required_missions = {
 			mop_iraq_ne
 		}
@@ -12091,7 +12091,7 @@ mop_middle_east_series_sw_5 = {
 	}
 	mop_holy_land_sw = {
 		icon = convert_the_holy_lands
-		position = 22
+		position = 21
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
@@ -12213,7 +12213,7 @@ mop_north_africa_series_locked_5 = {
 	}
 	mop_north_africa_series_locked_5_1 = {
 		icon = mission_locked_mission
-		position = 24
+		position = 23
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_north_africa_series_locked_5_1_desc
@@ -12229,7 +12229,7 @@ mop_north_africa_series_locked_5 = {
 		required_missions = {
 			mop_north_africa_series_locked_5_1
 		}
-		position = 25
+		position = 24
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_north_africa_series_locked_5_1_desc
@@ -12245,7 +12245,7 @@ mop_north_africa_series_locked_5 = {
 		required_missions = {
 			mop_north_africa_series_locked_5_2
 		}
-		position = 26
+		position = 25
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_north_africa_series_locked_5_1_desc
@@ -12268,7 +12268,7 @@ mop_north_africa_series_west_5 = {
 	}
 	mop_maghreb_west = {
 		icon = mission_moroccan_ports
-		position = 24
+		position = 23
 		provinces_to_highlight = {
 			OR = {
 				area = hautes_plaines_area
@@ -12413,7 +12413,7 @@ mop_north_africa_series_west_5 = {
 	}
 	mop_tunisia_west = {
 		icon = mission_conquer_tunis
-		position = 25
+		position = 24
 		required_missions = {
 			mop_maghreb_west
 		}
@@ -12525,7 +12525,7 @@ mop_north_africa_series_west_5 = {
 	}
 	mop_egypt_west = {
 		icon = gfx_wal_conquer_egypt
-		position = 26
+		position = 25
 		required_missions = {
 			mop_tunisia_west
 		}
@@ -12594,7 +12594,7 @@ mop_north_africa_series_middle_5 = {
 	}
 	mop_tunisia_middle = {
 		icon = mission_conquer_tunis
-		position = 25
+		position = 24
 		provinces_to_highlight = {
 			OR = {
 				area = tunisia_area
@@ -12703,7 +12703,7 @@ mop_north_africa_series_middle_5 = {
 	}
 	mop_maghreb_middle = {
 		icon = mission_moroccan_ports
-		position = 26
+		position = 25
 		required_missions = {
 			mop_tunisia_middle
 		}
@@ -12861,7 +12861,7 @@ mop_north_africa_series_east_5 = {
 	}
 	mop_egypt_east = {
 		icon = gfx_wal_conquer_egypt
-		position = 24
+		position = 23
 		provinces_to_highlight = {
 			region = egypt_region
 			NOT = {
@@ -12917,7 +12917,7 @@ mop_north_africa_series_east_5 = {
 	}
 	mop_tunisia_east = {
 		icon = mission_conquer_tunis
-		position = 25
+		position = 24
 		required_missions = {
 			mop_egypt_east
 		}
@@ -13029,7 +13029,7 @@ mop_north_africa_series_east_5 = {
 	}
 	mop_maghreb_east = {
 		icon = mission_moroccan_ports
-		position = 26
+		position = 25
 		required_missions = {
 			mop_tunisia_east
 		}
@@ -13192,7 +13192,7 @@ mop_iberia_locked_series = {
 	}
 	mop_iberia_locked_series_1_1 = {
 		icon = mission_locked_mission
-		position = 27
+		position = 26
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_iberia_locked_series_2_1_desc
@@ -13205,7 +13205,7 @@ mop_iberia_locked_series = {
 	}
 	mop_iberia_locked_series_1_2 = {
 		icon = mission_locked_mission
-		position = 28
+		position = 27
 		required_missions = {
 			mop_iberia_locked_series_1_1
 		}
@@ -13221,7 +13221,7 @@ mop_iberia_locked_series = {
 	}
 	mop_iberia_locked_series_1_3 = {
 		icon = mission_locked_mission
-		position = 29
+		position = 28
 		required_missions = {
 			mop_iberia_locked_series_1_2
 		}
@@ -13247,7 +13247,7 @@ mop_iberia_north_series = {
 	}
 	mop_north_iberia_north_series = {
 		icon = spa_new_capital
-		position = 27
+		position = 26
 		provinces_to_highlight = {
 			OR = {
 				area = beieras_area
@@ -13393,7 +13393,7 @@ mop_iberia_north_series = {
 	}
 	mop_south_iberia_north_series = {
 		icon = mission_reclaim_andalucia
-		position = 28
+		position = 27
 		required_missions = {
 			mop_north_iberia_north_series
 		}
@@ -13515,7 +13515,7 @@ mop_iberia_north_series = {
 	}
 	mop_iberia_liberated_north_series = {
 		icon = hispaniae
-		position = 29
+		position = 28
 		required_missions = {
 			mop_south_iberia_north_series
 		}
@@ -13573,7 +13573,7 @@ mop_iberia_south_series = {
 	}
 	mop_south_iberia_south_series = {
 		icon = mission_reclaim_andalucia
-		position = 27
+		position = 26
 		provinces_to_highlight = {
 			OR = {
 				area = alentejo_area
@@ -13720,7 +13720,7 @@ mop_iberia_south_series = {
 	}
 	mop_north_iberia_south_series = {
 		icon = spa_new_capital
-		position = 28
+		position = 27
 		required_missions = {
 			mop_south_iberia_south_series
 		}
@@ -13841,7 +13841,7 @@ mop_iberia_south_series = {
 	}
 	mop_iberia_liberated_south_series = {
 		icon = hispaniae
-		position = 29
+		position = 28
 		required_missions = {
 			mop_north_iberia_south_series
 		}
