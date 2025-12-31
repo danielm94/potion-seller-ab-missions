@@ -1,7 +1,13 @@
 cb_cossack_conquest = {
 	valid_for_subject = yes
 	prerequisites_self = {
-		has_country_flag = cossack_conquest_cb_enabled
+		OR = {
+			has_country_flag = cossack_conquest_cb_enabled
+			any_subject_country = {
+				is_subject_of_type = cossack_protectorate
+				has_country_flag = cossack_conquest_cb_enabled
+			}
+		}
 	}
 	prerequisites = {
 		NOT = {

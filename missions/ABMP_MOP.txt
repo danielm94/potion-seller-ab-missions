@@ -5385,6 +5385,8 @@ ab_mop_3 = {
 		effect = {
 			ZAZ = {
 				change_tag = HTM
+			}
+			HTM = {
 				swap_free_idea_group = yes
 				add_prestige = 25
 				add_liberty_desire = -20
