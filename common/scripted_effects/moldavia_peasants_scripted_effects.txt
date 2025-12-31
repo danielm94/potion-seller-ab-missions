@@ -1112,6 +1112,7 @@ unlock_mop_scandinavia_north_effect = {
 		}
 	}
 }
+
 unlock_mop_scandinavia_south_effect = {
 	if = {
 		limit = {
@@ -1133,6 +1134,7 @@ unlock_mop_scandinavia_south_effect = {
 		}
 	}
 }
+
 unlock_mop_scandinavia_west_effect = {
 	if = {
 		limit = {
@@ -1151,6 +1153,28 @@ unlock_mop_scandinavia_west_effect = {
 		custom_tooltip = unlocked_mop_scandinavia_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+establish_commune_effect = {
+	$province$ = {
+		custom_tooltip = establish_commune_effect_tt
+		hidden_effect = {
+			add_core = root
+			remove_core = owner
+			cede_province = root
+		}
+		[[center_of_trade]
+		center_of_trade = $center_of_trade$
+		]
+		[[custom_effect]
+		$custom_effect$
+		]
+		add_province_modifier = {
+			name = $modifier$
+			duration = -1
 		}
 	}
 }

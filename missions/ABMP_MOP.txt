@@ -1861,14 +1861,9 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			137 = {
-				add_core = root
-				remove_core = owner
-				cede_province = root
-				add_province_modifier = {
-					name = mop_commune_of_dubrovnik
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 137
+				modifier = mop_commune_of_dubrovnik
 			}
 			custom_tooltip = unlock_ILR_commune_diplomatic_actions_tt
 			set_country_flag = unlock_ILR_commune_diplomatic_actions
@@ -2001,14 +1996,9 @@ mop_south_italy_south_series = {
 			custom_tooltip = integrated_commune_sardinian_bonus_tt
 			set_country_flag = integrated_commune_sardinian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			126 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_malta_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 126
+				modifier = mop_malta_commune
 			}
 			custom_tooltip = we_will_liberate_sicilian_slaves_tt
 			custom_tooltip = AB_EMPTY
@@ -2276,14 +2266,9 @@ mop_south_italy_north_series = {
 			custom_tooltip = integrated_commune_sardinian_bonus_tt
 			set_country_flag = integrated_commune_sardinian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			126 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_malta_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 126
+				modifier = mop_malta_commune
 			}
 			custom_tooltip = we_will_liberate_sicilian_slaves_tt
 			custom_tooltip = AB_EMPTY
@@ -3182,14 +3167,9 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			441 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_commune_of_khiva
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 441
+				modifier = mop_commune_of_khiva
 			}
 			1756 = {
 				custom_tooltip = change_bessarabia_to_silk_tt
@@ -3275,23 +3255,13 @@ ab_mop_2 = {
 			custom_tooltip = integrated_commune_chinese_bonus_tt
 			set_country_flag = integrated_commune_chinese_bonus
 			custom_tooltip = AB_EMPTY
-			1816 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_beijing_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 1816
+				modifier = mop_beijing_commune
 			}
-			700 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_xian_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 700
+				modifier = mop_xian_commune
 			}
 			custom_tooltip = mop_discounted_rally_the_communes_tt
 			set_country_flag = mop_discounted_rally_the_communes
@@ -3342,14 +3312,9 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			679 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_chengdu_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 679
+				modifier = mop_chengdu_commune
 			}
 			custom_tooltip = commune_subject_rice_bonus_tt
 			set_country_flag = commune_subject_rice_bonus_flag
@@ -3416,14 +3381,9 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			565 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_thimpu_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 565
+				modifier = mop_thimpu_commune
 			}
 			country_event = {
 				id = moldavia_peasant_events.6
@@ -3703,14 +3663,9 @@ mop_north_italy_nw = {
 			custom_tooltip = integrated_commune_ligurian_bonus_tt
 			set_country_flag = integrated_commune_ligurian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			101 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_genoa_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 101
+				modifier = mop_genoa_commune
 			}
 			define_advisor = {
 				type = trader
@@ -4041,14 +3996,9 @@ mop_north_italy_ne = {
 			custom_tooltip = integrated_commune_ligurian_bonus_tt
 			set_country_flag = integrated_commune_ligurian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			101 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_genoa_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 101
+				modifier = mop_genoa_commune
 			}
 			define_advisor = {
 				type = trader
@@ -4268,14 +4218,9 @@ mop_north_italy_south = {
 			custom_tooltip = integrated_commune_ligurian_bonus_tt
 			set_country_flag = integrated_commune_ligurian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			101 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_genoa_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 101
+				modifier = mop_genoa_commune
 			}
 			define_advisor = {
 				type = trader
@@ -4485,18 +4430,10 @@ mop_rome_unlocked_series_2 = {
 			custom_tooltip = integrated_commune_umbrian_bonus_tt
 			set_country_flag = integrated_commune_umbrian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			118 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_roman_commune
-					duration = -1
-				}
-				add_province_modifier = {
-					name = mop_rebuild_rome
-					duration = 3650
-				}
+			establish_commune_effect = {
+				province = 118
+				modifier = mop_roman_commune
+				custom_effect = "add_province_modifier = { name = mop_rebuild_rome duration = 3650 }"
 			}
 			add_republican_tradition = 10
 			add_prestige_or_monarch_power = {
@@ -4641,14 +4578,9 @@ mop_low_countries_series_unlocked = {
 			custom_tooltip = integrated_commune_flemish_bonus_tt
 			set_country_flag = integrated_commune_flemish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			97 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_amsterdam_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 97
+				modifier = mop_amsterdam_commune
 			}
 			set_country_flag = ven_scaling_planner
 			custom_tooltip = VEN_SCALING_PLANNER
@@ -4779,14 +4711,9 @@ mop_rhine_series_unlocked = {
 			custom_tooltip = integrated_commune_hannoverian_bonus_tt
 			set_country_flag = integrated_commune_hannoverian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			1876 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_frankfurt_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 1876
+				modifier = mop_frankfurt_commune
 			}
 			custom_tooltip = theologian_no_religion_penalty_tt
 			set_country_flag = theologian_no_religion_penalty
@@ -4926,14 +4853,9 @@ mop_swabia_franconia_series_unlocked = {
 			custom_tooltip = integrated_commune_swabian_bonus_tt
 			set_country_flag = integrated_commune_swabian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			67 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_nurnberg_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 67
+				modifier = mop_nurnberg_commune
 			}
 			custom_tooltip = buffed_razesi_education_grants_tt
 			set_country_flag = buffed_razesi_education_grants
@@ -5550,14 +5472,9 @@ ab_mop_3 = {
 			custom_tooltip = integrated_commune_tartar_bonus_tt
 			set_country_flag = integrated_commune_tartar_bonus_flag
 			custom_tooltip = AB_EMPTY
-			1082 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_kazan_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 1082
+				modifier = mop_kazan_commune
 			}
 			change_peasant_zeal = {
 				value = 10
@@ -5720,23 +5637,13 @@ ab_mop_3 = {
 			}
 		}
 		effect = {
-			684 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_hangzhou_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 684
+				modifier = mop_hangzhou_commune
 			}
-			667 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_canton_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 667
+				modifier = mop_canton_commune
 			}
 			custom_tooltip = mop_center_of_trade_upgrade_bonus_tt
 			set_country_flag = mop_center_of_trade_upgrade_bonus
@@ -5855,10 +5762,11 @@ ab_mop_3 = {
 			}
 		}
 		effect = {
+			establish_commune_effect = {
+				province = 151
+				modifier = mop_stamboli_commune
+			}
 			151 = {
-				remove_core = owner
-				add_core = ROOT
-				cede_province = ROOT
 				if = {
 					limit = {
 						NOT = {
@@ -5872,11 +5780,8 @@ ab_mop_3 = {
 				}
 				change_province_name = "Stamboli"
 				rename_capital = "Stamboli"
-				add_province_modifier = {
-					name = mop_stamboli_commune
-					duration = -1
-				}
 			}
+			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = patriarch
 				skill = 1
@@ -6063,14 +5968,9 @@ mop_caucasia_series = {
 			}
 		}
 		effect = {
-			421 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_satrapeia_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 421
+				modifier = mop_satrapeia_commune
 			}
 			define_advisor = {
 				type = fortification_expert
@@ -6269,15 +6169,10 @@ mop_france_northern_series_3 = {
 			custom_tooltip = integrated_commune_wallonian_bonus_tt
 			set_country_flag = integrated_commune_wallonian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			183 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 183
+				modifier = mop_paris_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_paris_commune
-					duration = -1
-				}
 			}
 			add_country_modifier = {
 				name = mop_peasants_in_paris
@@ -6371,14 +6266,9 @@ mop_france_northern_series_3 = {
 			custom_tooltip = integrated_commune_occitain_bonus_tt
 			set_country_flag = integrated_commune_occitain_bonus_flag
 			custom_tooltip = AB_EMPTY
-			174 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bordeaux_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 174
+				modifier = mop_bordeaux_commune
 			}
 			add_country_modifier = {
 				name = mop_march_to_hispania
@@ -6540,14 +6430,9 @@ mop_france_southern_series_3 = {
 			custom_tooltip = integrated_commune_occitain_bonus_tt
 			set_country_flag = integrated_commune_occitain_bonus_flag
 			custom_tooltip = AB_EMPTY
-			174 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bordeaux_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 174
+				modifier = mop_bordeaux_commune
 			}
 			add_country_modifier = {
 				name = mop_march_to_paris
@@ -6680,15 +6565,10 @@ mop_france_southern_series_3 = {
 			custom_tooltip = integrated_commune_wallonian_bonus_tt
 			set_country_flag = integrated_commune_wallonian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			183 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 183
+				modifier = mop_paris_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_paris_commune
-					duration = -1
-				}
 			}
 			add_country_modifier = {
 				name = mop_peasants_in_paris
@@ -7248,14 +7128,9 @@ mop_saxons_series_unlocked = {
 			custom_tooltip = integrated_commune_lower_saxon_bonus_tt
 			set_country_flag = integrated_commune_lower_saxon_bonus_flag
 			custom_tooltip = AB_EMPTY
-			44 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_hamburg_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 44
+				modifier = mop_hamburg_commune
 			}
 			define_advisor = {
 				type = trader
@@ -8079,14 +7954,9 @@ ab_mop_4 = {
 			custom_tooltip = integrated_commune_polish_bonus_tt
 			set_country_flag = integrated_commune_polish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			262 = {
-				add_core = root
-				remove_core = owner
-				cede_province = root
-				add_province_modifier = {
-					name = mop_krakow_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 262
+				modifier = mop_krakow_commune
 			}
 			define_advisor = {
 				type = dragoon
@@ -8149,23 +8019,13 @@ ab_mop_4 = {
 			custom_tooltip = integrated_commune_baltic_bonus_tt
 			set_country_flag = integrated_commune_baltic_bonus
 			custom_tooltip = AB_EMPTY
-			43 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_gdansc_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 43
+				modifier = mop_gdansc_commune
 			}
-			38 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_riga_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 38
+				modifier = mop_riga_commune
 			}
 			change_peasant_zeal = {
 				value = 15
@@ -8216,14 +8076,9 @@ ab_mop_4 = {
 			custom_tooltip = integrated_commune_wendish_bonus_tt
 			set_country_flag = integrated_commune_wendish_bonus
 			custom_tooltip = AB_EMPTY
-			50 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_berlin_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 50
+				modifier = mop_berlin_commune
 			}
 			change_peasant_zeal = {
 				value = 15
@@ -8293,14 +8148,9 @@ ab_mop_4 = {
 			custom_tooltip = integrated_commune_mongolian_bonus_tt
 			set_country_flag = integrated_commune_mongolian_bonus
 			custom_tooltip = AB_EMPTY
-			2190 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_qaraqorum_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 2190
+				modifier = mop_qaraqorum_commune
 			}
 			change_peasant_zeal = {
 				value = 10
@@ -8363,14 +8213,9 @@ ab_mop_4 = {
 			}
 		}
 		effect = {
-			2106 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_vladivostoc_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 2106
+				modifier = mop_vladivostoc_commune
 			}
 			add_country_modifier = {
 				name = mop_venture_into_pacific
@@ -8421,14 +8266,9 @@ ab_mop_4 = {
 			custom_tooltip = AB_EMPTY
 			custom_tooltip = integrated_commune_japanese_bonus_tt
 			set_country_flag = integrated_commune_japanese_bonus_flag
-			1020 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_chioto_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 1020
+				modifier = mop_chioto_commune
 			}
 			custom_tooltip = mop_discounted_cultivate_the_land_tt
 			set_country_flag = mop_discounted_cultivate_the_land
@@ -8667,21 +8507,11 @@ mop_anatolia_west = {
 			}
 		}
 		effect = {
-			316 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_chalcedon_commune
-					duration = -1
-				}
-				add_unit_construction = {
-					type = galley
-					amount = 5
-					speed = 0.5
-					cost = 0
-				}
+			establish_commune_effect = {
+				province = 316
+				modifier = mop_chalcedon_commune
 				center_of_trade = 1
+				custom_effect = "add_unit_construction = { type = galley amount = 5 speed = 0.5 cost = 0 }"
 			}
 			custom_tooltip = AB_EMPTY
 			set_country_flag = bosporus_toll_construction_enabled
@@ -8765,14 +8595,9 @@ mop_anatolia_west = {
 			}
 		}
 		effect = {
-			330 = {
-				add_core = root
-				remove_core = owner
-				cede_province = root
-				add_province_modifier = {
-					name = mop_trapezunt_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 330
+				modifier = mop_trapezunt_commune
 			}
 			custom_tooltip = unlock_RUM_commune_diplomatic_actions_tt
 			set_country_flag = unlock_RUM_commune_diplomatic_actions
@@ -8879,14 +8704,9 @@ mop_anatolia_east = {
 			}
 		}
 		effect = {
-			330 = {
-				add_core = root
-				remove_core = owner
-				cede_province = root
-				add_province_modifier = {
-					name = mop_trapezunt_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 330
+				modifier = mop_trapezunt_commune
 			}
 			custom_tooltip = unlock_RUM_commune_diplomatic_actions_tt
 			set_country_flag = unlock_RUM_commune_diplomatic_actions
@@ -8979,21 +8799,11 @@ mop_anatolia_east = {
 			}
 		}
 		effect = {
-			316 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_chalcedon_commune
-					duration = -1
-				}
-				add_unit_construction = {
-					type = galley
-					amount = 5
-					speed = 0.5
-					cost = 0
-				}
+			establish_commune_effect = {
+				province = 316
+				modifier = mop_chalcedon_commune
 				center_of_trade = 1
+				custom_effect = "add_unit_construction = { type = galley amount = 5 speed = 0.5 cost = 0 }"
 			}
 			custom_tooltip = AB_EMPTY
 			set_country_flag = bosporus_toll_construction_enabled
@@ -9120,14 +8930,9 @@ mop_middle_east_series_nw_4 = {
 			custom_tooltip = integrated_commune_assyrian_bonus_tt
 			set_country_flag = integrated_commune_assyrian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			410 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bagdad_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 410
+				modifier = mop_bagdad_commune
 			}
 			custom_tooltip = can_use_bagdad_library_tt
 			set_country_flag = can_use_bagdad_library
@@ -9205,14 +9010,9 @@ mop_middle_east_series_nw_4 = {
 			custom_tooltip = integrated_commune_mahri_culture_bonus_tt
 			set_country_flag = integrated_commune_mahri_culture_bonus_flag
 			custom_tooltip = AB_EMPTY
-			387 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_moca_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 387
+				modifier = mop_moca_commune
 			}
 			custom_tooltip = desert_dev_20_percent_extra_dev_tt
 			set_country_flag = desert_dev_20_percent_extra_dev
@@ -9285,14 +9085,9 @@ mop_middle_east_series_sw_4 = {
 			custom_tooltip = integrated_commune_mahri_culture_bonus_tt
 			set_country_flag = integrated_commune_mahri_culture_bonus_flag
 			custom_tooltip = AB_EMPTY
-			387 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_moca_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 387
+				modifier = mop_moca_commune
 			}
 			custom_tooltip = desert_dev_20_percent_extra_dev_tt
 			set_country_flag = desert_dev_20_percent_extra_dev
@@ -9365,14 +9160,9 @@ mop_middle_east_series_sw_4 = {
 			custom_tooltip = integrated_commune_assyrian_bonus_tt
 			set_country_flag = integrated_commune_assyrian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			410 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bagdad_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 410
+				modifier = mop_bagdad_commune
 			}
 			custom_tooltip = can_use_bagdad_library_tt
 			set_country_flag = can_use_bagdad_library
@@ -9463,14 +9253,9 @@ mop_middle_east_series_ne_4 = {
 			custom_tooltip = integrated_commune_assyrian_bonus_tt
 			set_country_flag = integrated_commune_assyrian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			410 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bagdad_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 410
+				modifier = mop_bagdad_commune
 			}
 			custom_tooltip = can_use_bagdad_library_tt
 			set_country_flag = can_use_bagdad_library
@@ -9547,14 +9332,9 @@ mop_middle_east_series_ne_4 = {
 			custom_tooltip = integrated_commune_mahri_culture_bonus_tt
 			set_country_flag = integrated_commune_mahri_culture_bonus_flag
 			custom_tooltip = AB_EMPTY
-			387 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_moca_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 387
+				modifier = mop_moca_commune
 			}
 			custom_tooltip = desert_dev_20_percent_extra_dev_tt
 			set_country_flag = desert_dev_20_percent_extra_dev
@@ -9659,14 +9439,9 @@ mop_persia_series_west = {
 			custom_tooltip = integrated_commune_iranian_bonus_tt
 			set_country_flag = integrated_commune_iranian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			431 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_portul_abas_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 431
+				modifier = mop_portul_abas_commune
 			}
 			custom_tooltip = mountain_dev_20_percent_extra_dev_tt
 			set_country_flag = mountain_dev_20_percent_extra_dev
@@ -9731,14 +9506,9 @@ mop_persia_series_west = {
 				target = kashmir_area
 			}
 			custom_tooltip = tooltip_line_divider
-			451 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_kabul_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 451
+				modifier = mop_kabul_commune
 			}
 			add_country_modifier = {
 				name = wallachia_dacian_india_company
@@ -9813,14 +9583,9 @@ mop_persia_series_east = {
 				target = kashmir_area
 			}
 			custom_tooltip = tooltip_line_divider
-			451 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_kabul_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 451
+				modifier = mop_kabul_commune
 			}
 			add_country_modifier = {
 				name = wallachia_dacian_india_company
@@ -9878,14 +9643,9 @@ mop_persia_series_east = {
 			custom_tooltip = integrated_commune_iranian_bonus_tt
 			set_country_flag = integrated_commune_iranian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			431 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_portul_abas_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 431
+				modifier = mop_portul_abas_commune
 			}
 			custom_tooltip = mountain_dev_20_percent_extra_dev_tt
 			set_country_flag = mountain_dev_20_percent_extra_dev
@@ -9981,14 +9741,9 @@ mop_north_africa_middle = {
 			custom_tooltip = integrated_commune_al_misr_arabic_bonus_tt
 			set_country_flag = integrated_commune_al_misr_arabic_bonus_flag
 			custom_tooltip = AB_EMPTY
-			358 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_alexandria_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 358
+				modifier = mop_alexandria_commune
 			}
 			custom_tooltip = unlock_egyptian_grain_export_tt
 			set_country_flag = unlock_egyptian_grain_export
@@ -10148,14 +9903,9 @@ mop_britain_north_series_unlocked_4 = {
 			custom_tooltip = integrated_commune_manx_bonus_tt
 			set_country_flag = integrated_commune_manx_bonus_flag
 			custom_tooltip = AB_EMPTY
-			248 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_lothian_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 248
+				modifier = mop_lothian_commune
 			}
 			custom_tooltip = enable_highland_charge_tt
 			tooltip = {
@@ -10273,15 +10023,10 @@ mop_britain_north_series_unlocked_4 = {
 			custom_tooltip = integrated_commune_cornish_bonus_tt
 			set_country_flag = integrated_commune_cornish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			236 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 236
+				modifier = mop_londra_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_londra_commune
-					duration = -1
-				}
 			}
 			add_country_modifier = {
 				name = wallachia_integrating_the_english
@@ -10356,14 +10101,9 @@ mop_britain_north_series_unlocked_4 = {
 			custom_tooltip = integrated_commune_irish_bonus_tt
 			set_country_flag = integrated_commune_irish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			373 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_pale_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 373
+				modifier = mop_pale_commune
 			}
 			add_country_modifier = {
 				name = mop_irish_defiance
@@ -10567,15 +10307,10 @@ mop_britain_south_series_unlocked_4 = {
 			custom_tooltip = integrated_commune_cornish_bonus_tt
 			set_country_flag = integrated_commune_cornish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			236 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 236
+				modifier = mop_londra_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_londra_commune
-					duration = -1
-				}
 			}
 			add_country_modifier = {
 				name = wallachia_integrating_the_english
@@ -10652,14 +10387,9 @@ mop_britain_south_series_unlocked_4 = {
 			custom_tooltip = integrated_commune_manx_bonus_tt
 			set_country_flag = integrated_commune_manx_bonus_flag
 			custom_tooltip = AB_EMPTY
-			248 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_lothian_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 248
+				modifier = mop_lothian_commune
 			}
 			custom_tooltip = enable_highland_charge_tt
 			tooltip = {
@@ -10736,14 +10466,9 @@ mop_britain_south_series_unlocked_4 = {
 			custom_tooltip = integrated_commune_irish_bonus_tt
 			set_country_flag = integrated_commune_irish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			373 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_pale_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 373
+				modifier = mop_pale_commune
 			}
 			add_country_modifier = {
 				name = mop_irish_defiance
@@ -10943,24 +10668,14 @@ mop_scandinavia_north_series_4 = {
 			custom_tooltip = integrated_commune_norwegian_bonus_tt
 			set_country_flag = integrated_commune_norwegian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			23 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bergenhus_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 23
+				modifier = mop_bergenhus_commune
 			}
-			370 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 370
+				modifier = mop_reykjavik_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_reykjavik_commune
-					duration = -1
-				}
 			}
 			23 = {
 				add_unit_construction = {
@@ -11048,24 +10763,14 @@ mop_scandinavia_south_series_4 = {
 			custom_tooltip = integrated_commune_norwegian_bonus_tt
 			set_country_flag = integrated_commune_norwegian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			23 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bergenhus_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 23
+				modifier = mop_bergenhus_commune
 			}
-			370 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 370
+				modifier = mop_reykjavik_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_reykjavik_commune
-					duration = -1
-				}
 			}
 			23 = {
 				add_unit_construction = {
@@ -11347,14 +11052,9 @@ mop_austria_series_unlocked = {
 		effect = {
 			custom_tooltip = integrated_commune_austrian_bonus_tt
 			custom_tooltip = AB_EMPTY
-			134 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_viena_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 134
+				modifier = mop_viena_commune
 			}
 			custom_tooltip = hill_dev_20_percent_extra_dev_tt
 			set_country_flag = hill_dev_20_percent_extra_dev
@@ -11725,14 +11425,9 @@ ab_mop_5 = {
 			}
 		}
 		effect = {
-			295 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_moscow_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 295
+				modifier = mop_moscow_commune
 			}
 			define_advisor = {
 				type = statesman
@@ -11833,12 +11528,9 @@ ab_mop_5 = {
 				hidden_effect = {
 					rename_capital = "Arhanghel"
 				}
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_arhanghel_commune
-					duration = -1
+				establish_commune_effect = {
+					province = 1955
+					modifier = mop_arhanghel_commune
 				}
 			}
 			change_peasant_zeal = {
@@ -11892,15 +11584,10 @@ ab_mop_5 = {
 			custom_tooltip = integrated_commune_korean_bonus_tt
 			set_country_flag = integrated_commune_korean_bonus_flag
 			custom_tooltip = AB_EMPTY
-			1845 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 1845
+				modifier = mop_pyeongyang_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_pyeongyang_commune
-					duration = -1
-				}
 			}
 			custom_tooltip = mop_discounted_continue_the_liberation_tt
 			set_country_flag = mop_discounted_continue_the_liberation
@@ -12148,23 +11835,13 @@ mop_middle_east_series_nw_5 = {
 			custom_tooltip = integrated_commune_bedouin_arabic_bonus_tt
 			set_country_flag = integrated_commune_bedouin_arabic_bonus_flag
 			custom_tooltip = AB_EMPTY
-			2313 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_antiohia_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 2313
+				modifier = mop_antiohia_commune
 			}
-			379 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_ierusalim_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 379
+				modifier = mop_ierusalim_commune
 			}
 			define_advisor = {
 				type = inquisitor
@@ -12266,23 +11943,13 @@ mop_middle_east_series_ne_5 = {
 			custom_tooltip = integrated_commune_bedouin_arabic_bonus_tt
 			set_country_flag = integrated_commune_bedouin_arabic_bonus_flag
 			custom_tooltip = AB_EMPTY
-			2313 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_antiohia_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 2313
+				modifier = mop_antiohia_commune
 			}
-			379 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_ierusalim_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 379
+				modifier = mop_ierusalim_commune
 			}
 			define_advisor = {
 				type = inquisitor
@@ -12380,23 +12047,13 @@ mop_middle_east_series_sw_5 = {
 			custom_tooltip = integrated_commune_bedouin_arabic_bonus_tt
 			set_country_flag = integrated_commune_bedouin_arabic_bonus_flag
 			custom_tooltip = AB_EMPTY
-			2313 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_antiohia_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 2313
+				modifier = mop_antiohia_commune
 			}
-			379 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_ierusalim_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 379
+				modifier = mop_ierusalim_commune
 			}
 			define_advisor = {
 				type = inquisitor
@@ -12588,14 +12245,9 @@ mop_north_africa_series_west_5 = {
 			custom_tooltip = integrated_commune_algerian_bonus_tt
 			set_country_flag = integrated_commune_algerian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			4568 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_demnat_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 4568
+				modifier = mop_demnat_commune
 			}
 			add_country_modifier = {
 				name = wallachia_into_the_unknown
@@ -12719,14 +12371,9 @@ mop_north_africa_series_west_5 = {
 			custom_tooltip = integrated_commune_berber_bonus_tt
 			set_country_flag = integrated_commune_berber_bonus_flag
 			custom_tooltip = AB_EMPTY
-			341 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_tunis_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 341
+				modifier = mop_tunis_commune
 			}
 			add_country_modifier = {
 				name = wallachia_pax_navalis
@@ -12784,14 +12431,9 @@ mop_north_africa_series_west_5 = {
 			custom_tooltip = integrated_commune_al_misr_arabic_bonus_tt
 			set_country_flag = integrated_commune_al_misr_arabic_bonus_flag
 			custom_tooltip = AB_EMPTY
-			358 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_alexandria_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 358
+				modifier = mop_alexandria_commune
 			}
 			custom_tooltip = unlock_egyptian_grain_export_tt
 			set_country_flag = unlock_egyptian_grain_export
@@ -12897,14 +12539,9 @@ mop_north_africa_series_middle_5 = {
 			custom_tooltip = integrated_commune_berber_bonus_tt
 			set_country_flag = integrated_commune_berber_bonus_flag
 			custom_tooltip = AB_EMPTY
-			341 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_tunis_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 341
+				modifier = mop_tunis_commune
 			}
 			add_country_modifier = {
 				name = wallachia_pax_navalis
@@ -13026,14 +12663,9 @@ mop_north_africa_series_middle_5 = {
 			custom_tooltip = integrated_commune_algerian_bonus_tt
 			set_country_flag = integrated_commune_algerian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			4568 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_demnat_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 4568
+				modifier = mop_demnat_commune
 			}
 			add_country_modifier = {
 				name = wallachia_into_the_unknown
@@ -13117,14 +12749,9 @@ mop_north_africa_series_east_5 = {
 			custom_tooltip = integrated_commune_al_misr_arabic_bonus_tt
 			set_country_flag = integrated_commune_al_misr_arabic_bonus_flag
 			custom_tooltip = AB_EMPTY
-			358 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_alexandria_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 358
+				modifier = mop_alexandria_commune
 			}
 			custom_tooltip = unlock_egyptian_grain_export_tt
 			set_country_flag = unlock_egyptian_grain_export
@@ -13223,14 +12850,9 @@ mop_north_africa_series_east_5 = {
 			custom_tooltip = integrated_commune_berber_bonus_tt
 			set_country_flag = integrated_commune_berber_bonus_flag
 			custom_tooltip = AB_EMPTY
-			341 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_tunis_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 341
+				modifier = mop_tunis_commune
 			}
 			add_country_modifier = {
 				name = wallachia_pax_navalis
@@ -13352,14 +12974,9 @@ mop_north_africa_series_east_5 = {
 			custom_tooltip = integrated_commune_algerian_bonus_tt
 			set_country_flag = integrated_commune_algerian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			4568 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_demnat_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 4568
+				modifier = mop_demnat_commune
 			}
 			add_country_modifier = {
 				name = wallachia_into_the_unknown
@@ -13564,14 +13181,9 @@ mop_iberia_north_series = {
 			custom_tooltip = integrated_commune_basque_bonus_tt
 			set_country_flag = integrated_commune_basque_bonus_flag
 			custom_tooltip = AB_EMPTY
-			213 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_barcelona_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 213
+				modifier = mop_barcelona_commune
 			}
 			add_country_modifier = {
 				name = mop_northern_tercios
@@ -13708,14 +13320,9 @@ mop_iberia_north_series = {
 			custom_tooltip = integrated_commune_andalucian_bonus_tt
 			set_country_flag = integrated_commune_andalucian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			223 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_granada_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 223
+				modifier = mop_granada_commune
 			}
 			custom_tooltip = leaguists_colonialism_plan_enabled_tt
 			set_country_flag = leaguists_colonialism_plan_enabled
@@ -13885,14 +13492,9 @@ mop_iberia_south_series = {
 			custom_tooltip = integrated_commune_andalucian_bonus_tt
 			set_country_flag = integrated_commune_andalucian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			223 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_granada_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 223
+				modifier = mop_granada_commune
 			}
 			custom_tooltip = leaguists_colonialism_plan_enabled_tt
 			set_country_flag = leaguists_colonialism_plan_enabled
@@ -14040,14 +13642,9 @@ mop_iberia_south_series = {
 			custom_tooltip = integrated_commune_basque_bonus_tt
 			set_country_flag = integrated_commune_basque_bonus_flag
 			custom_tooltip = AB_EMPTY
-			213 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_barcelona_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 213
+				modifier = mop_barcelona_commune
 			}
 			add_country_modifier = {
 				name = mop_northern_tercios
@@ -14320,14 +13917,9 @@ mop_scandinavia_north_series_5 = {
 			custom_tooltip = integrated_commune_swedish_bonus_tt
 			set_country_flag = integrated_commune_swedish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			25 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_gotland_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 25
+				modifier = mop_gotland_commune
 			}
 			define_advisor = {
 				type = commandant
@@ -14394,15 +13986,10 @@ mop_scandinavia_north_series_5 = {
 			custom_tooltip = integrated_commune_danish_bonus_tt
 			set_country_flag = integrated_commune_danish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			12 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 12
+				modifier = mop_copenhaga_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_copenhaga_commune
-					duration = -1
-				}
 			}
 			add_navy_tradition = 10
 			add_mercantilism = 3
@@ -14466,15 +14053,10 @@ mop_scandinavia_south_series_5 = {
 			custom_tooltip = integrated_commune_danish_bonus_tt
 			set_country_flag = integrated_commune_danish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			12 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 12
+				modifier = mop_copenhaga_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_copenhaga_commune
-					duration = -1
-				}
 			}
 			add_navy_tradition = 10
 			add_mercantilism = 3
@@ -14555,14 +14137,9 @@ mop_scandinavia_south_series_5 = {
 			custom_tooltip = integrated_commune_swedish_bonus_tt
 			set_country_flag = integrated_commune_swedish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			25 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_gotland_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 25
+				modifier = mop_gotland_commune
 			}
 			define_advisor = {
 				type = commandant
@@ -14719,24 +14296,14 @@ mop_scandinavia_west_series_5 = {
 			custom_tooltip = integrated_commune_norwegian_bonus_tt
 			set_country_flag = integrated_commune_norwegian_bonus_flag
 			custom_tooltip = AB_EMPTY
-			23 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_bergenhus_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 23
+				modifier = mop_bergenhus_commune
 			}
-			370 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 370
+				modifier = mop_reykjavik_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_reykjavik_commune
-					duration = -1
-				}
 			}
 			23 = {
 				add_unit_construction = {
@@ -14821,14 +14388,9 @@ mop_scandinavia_west_series_5 = {
 			custom_tooltip = integrated_commune_swedish_bonus_tt
 			set_country_flag = integrated_commune_swedish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			25 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
-				add_province_modifier = {
-					name = mop_gotland_commune
-					duration = -1
-				}
+			establish_commune_effect = {
+				province = 25
+				modifier = mop_gotland_commune
 			}
 			define_advisor = {
 				type = commandant
@@ -14894,15 +14456,10 @@ mop_scandinavia_west_series_5 = {
 			custom_tooltip = integrated_commune_danish_bonus_tt
 			set_country_flag = integrated_commune_danish_bonus_flag
 			custom_tooltip = AB_EMPTY
-			12 = {
-				remove_core = owner
-				add_core = root
-				cede_province = root
+			establish_commune_effect = {
+				province = 12
+				modifier = mop_copenhaga_commune
 				center_of_trade = 1
-				add_province_modifier = {
-					name = mop_copenhaga_commune
-					duration = -1
-				}
 			}
 			add_navy_tradition = 10
 			add_mercantilism = 3

@@ -26,3 +26,4 @@
  unlocked_mop_south_italy_tt: "§GUnlocks§! the §YS. Italy§! series of missions."
  unlocked_mop_north_italy_tt: "§GUnlocks§! the §YN. Italy§! series of missions."
  unlocked_mop_scandinavia_tt: "§GUnlocks§! the §YNordic§! series of missions."
+ establish_commune_effect_tt: "We will establish a commune in §Y[This.GetName]§!.\n§gYou can §Gupgrade§! the commune in the §Yprovince window§!.§!"
