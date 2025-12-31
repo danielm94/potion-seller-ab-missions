@@ -35,6 +35,11 @@ spriteTypes = {
 		loadtype = "INGAME"
 	}
 	spriteType = {
+		name = "GFX_cancel_integrate_commune"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_integrate_commune.dds"
+		loadtype = "INGAME"
+	}
+	spriteType = {
 		name = "GFX_cancel_invest_adm"
 		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_invest_adm.dds"
 		loadtype = "INGAME"
@@ -50,13 +55,8 @@ spriteTypes = {
 		loadtype = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_cancel_invest_republican_tradition"
-		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_invest_republican_tradition.dds"
-		loadtype = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_cancel_integrate_commune"
-		texturefile = "gfx/interface/buttons/commune_diplo_actions/cancel_integrate_commune.dds"
+		name = "GFX_stage_coup"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/stage_coup.dds"
 		loadtype = "INGAME"
 	}
 }

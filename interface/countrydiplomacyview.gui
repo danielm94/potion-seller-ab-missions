@@ -1476,66 +1476,73 @@ guiTypes = {
 		}
 		guiButtonType = {
 			name = "integrate_commune"
-			position = { x = 549 y = 670 }
+			position = { x = 549 y = 630 }
 			quadTextureSprite ="GFX_integrate_commune"
 			scripted = yes
 			shortcut = "shift+t"
 		}
 		guiButtonType = {
 			name = "cancel_integrate_commune"
-			position = { x = 549 y = 670 }
+			position = { x = 549 y = 630 }
 			quadTextureSprite ="GFX_cancel_integrate_commune"
 			scripted = yes
 			shortcut = "shift+t"
 		}
 		guiButtonType = {
 			name = "invest_adm"
-			position = { x = 549 y = 710 }
+			position = { x = 549 y = 670 }
 			quadTextureSprite ="GFX_invest_adm"
 			scripted = yes
 			shortcut = "shift+q"
 		}
 		guiButtonType = {
 			name = "cancel_invest_adm"
-			position = { x = 549 y = 710 }
+			position = { x = 549 y = 670 }
 			quadTextureSprite ="GFX_cancel_invest_adm"
 			scripted = yes
 			shortcut = "shift+q"
 		}
 		guiButtonType = {
 			name = "invest_dip"
-			position = { x = 549 y = 750 }
+			position = { x = 549 y = 710 }
 			quadTextureSprite ="GFX_invest_dip"
 			scripted = yes
 			shortcut = "shift+w"
 		}
 		guiButtonType = {
 			name = "cancel_invest_dip"
-			position = { x = 549 y = 750 }
+			position = { x = 549 y = 710 }
 			quadTextureSprite ="GFX_cancel_invest_dip"
 			scripted = yes
 			shortcut = "shift+w"
 		}
 		guiButtonType = {
 			name = "invest_mil"
-			position = { x = 549 y = 790 }
+			position = { x = 549 y = 750 }
 			quadTextureSprite ="GFX_invest_mil"
 			scripted = yes
 			shortcut = "shift+e"
 		}
 		guiButtonType = {
 			name = "cancel_invest_mil"
-			position = { x = 549 y = 790 }
+			position = { x = 549 y = 750 }
 			quadTextureSprite ="GFX_cancel_invest_mil"
 			scripted = yes
 			shortcut = "shift+e"
 		}
 		guiButtonType = {
 			name = "invest_republican_tradition"
-			position = { x = 549 y = 830 }
+			position = { x = 549 y = 790 }
 			quadTextureSprite ="GFX_invest_republican_tradition"
 			scripted = yes
 			shortcut = "shift+r"
+		}
+		guiButtonType = {
+			name = "stage_coup"
+			position = { x = 549 y = 830 }
+			quadTextureSprite ="GFX_stage_coup"
+			scripted = yes
+			shortcut = "shift+y"
 		}
 		
 		windowType = {
