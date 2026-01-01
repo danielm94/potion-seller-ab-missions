@@ -4957,6 +4957,119 @@ ab_mop_3 = {
 			}
 		}
 	}
+	mop_razesi = {
+		icon = GFX_mop_razesi
+		position = 6
+		required_missions = {
+			mop_win_civil_war
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_n_razesi_agendas = {
+					n = 2
+				}
+				OR = {
+					estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 60
+					}
+					estate_influence = {
+						estate = estate_razesi
+						influence = 75
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = develop_razesi_loyalty_tt
+			set_country_flag = develop_razesi_loyalty
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 5
+			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 10
+			}
+		}
+	}
+	mop_strong_razesi = {
+		icon = GFX_mop_strong_razesi
+		position = 7
+		required_missions = {
+			mop_razesi
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				has_completed_n_razesi_agendas = {
+					n = 5
+				}
+				OR = {
+					estate_loyalty = {
+						estate = estate_razesi
+						loyalty = 70
+					}
+					estate_influence = {
+						estate = estate_razesi
+						influence = 90
+					}
+				}
+				num_of_estate_privileges = {
+					estate = estate_razesi
+					value = 5
+				}
+				calc_true_if = {
+					amount = 5
+					custom_trigger_tooltip = {
+						tooltip = has_farm_estate_tt
+						all_owned_province = {
+							has_building = farm_estate
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = razesi_farm_estate_bonus_tt
+			set_country_flag = razesi_farm_estate_bonus
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = buffed_grain_monopoly_tt
+			set_country_flag = buffed_grain_monopoly
+			tooltip = {
+				add_province_modifier = {
+					name = mop_grain_monopoly_province
+					duration = 4380
+				}
+			}
+			custom_tooltip = buffed_livestock_monopoly_tt
+			set_country_flag = buffed_livestock_monopoly
+			tooltip = {
+				add_province_modifier = {
+					name = mop_livestock_monopoly_province
+					duration = 4380
+				}
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 20
+			}
+		}
+	}
 	mop_secure_crimea = {
 		icon = mission_sca_lit_conquer_crimea
 		position = 8
@@ -8067,116 +8180,6 @@ ab_mop_4 = {
 			add_faction_influence = {
 				faction = abolitionists_faction
 				influence = 20
-			}
-		}
-	}
-	mop_razesi = {
-		icon = GFX_mop_razesi
-		position = 17
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				has_completed_n_razesi_agendas = {
-					n = 2
-				}
-				OR = {
-					estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 60
-					}
-					estate_influence = {
-						estate = estate_razesi
-						influence = 75
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = develop_razesi_loyalty_tt
-			set_country_flag = develop_razesi_loyalty
-			custom_tooltip = AB_EMPTY
-			change_peasant_zeal = {
-				value = 5
-			}
-			add_estate_loyalty = {
-				estate = estate_razesi
-				loyalty = 10
-			}
-		}
-	}
-	mop_strong_razesi = {
-		icon = GFX_mop_strong_razesi
-		position = 18
-		required_missions = {
-			mop_razesi
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				has_completed_n_razesi_agendas = {
-					n = 5
-				}
-				OR = {
-					estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 70
-					}
-					estate_influence = {
-						estate = estate_razesi
-						influence = 90
-					}
-				}
-				num_of_estate_privileges = {
-					estate = estate_razesi
-					value = 5
-				}
-				calc_true_if = {
-					amount = 5
-					custom_trigger_tooltip = {
-						tooltip = has_farm_estate_tt
-						all_owned_province = {
-							has_building = farm_estate
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = razesi_farm_estate_bonus_tt
-			set_country_flag = razesi_farm_estate_bonus
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = buffed_grain_monopoly_tt
-			set_country_flag = buffed_grain_monopoly
-			tooltip = {
-				add_province_modifier = {
-					name = mop_grain_monopoly_province
-					duration = 4380
-				}
-			}
-			custom_tooltip = buffed_livestock_monopoly_tt
-			set_country_flag = buffed_livestock_monopoly
-			tooltip = {
-				add_province_modifier = {
-					name = mop_livestock_monopoly_province
-					duration = 4380
-				}
-			}
-			change_peasant_zeal = {
-				value = 10
-			}
-			add_estate_loyalty = {
-				estate = estate_razesi
-				loyalty = 20
 			}
 		}
 	}
@@ -11419,7 +11422,6 @@ ab_mop_5 = {
 		position = 19
 		required_missions = {
 			mop_overthrow
-			mop_strong_razesi
 		}
 		trigger = {
 			if = {
