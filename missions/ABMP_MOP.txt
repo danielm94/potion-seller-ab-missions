@@ -1643,6 +1643,45 @@ ab_mop_1 = {
 				name = mop_soothe_relations_post_bulgarian_liberation
 				duration = 3650
 			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = if_dobruja_is_owned_by_a_commune_subject_tt
+				first_limit = "4706 = {
+									owner = {
+										is_commune_subject = yes
+										is_subject_of = root
+									}
+								}"
+				first_effect = "custom_tooltip = transfer_dobruja_effect_tt
+								set_country_flag = danubian_toll_construction_enabled
+								custom_tooltip =  danubian_toll_construction_enabled_tt
+								hidden_effect = {
+									4706 = {
+										add_core = root
+										remove_core = owner
+										cede_province = root
+										add_permanent_claim = root
+										negate_commune_coring_penalty = yes
+									}
+								}"
+				second_custom_tooltip = if_dobruja_isnt_owned_by_a_commune_subject_tt
+				second_limit = "NOT = {
+									4706 = {
+										owner = {
+											is_commune_subject = yes
+											is_subject_of = root
+										}
+									}
+								}"
+				second_effect = "custom_tooltip = transfer_dobruja_later_effect_tt
+								set_country_flag = danubian_toll_construction_enabled_in_future
+								custom_tooltip = danubian_toll_construction_enabled_in_future_tt
+								hidden_effect = {
+									4706 = {
+										negate_commune_coring_penalty = yes
+										add_permanent_claim = root
+									}
+								}"
+			}			
 			if = {
 				limit = {
 					overlord_of = BUL
@@ -1650,6 +1689,7 @@ ab_mop_1 = {
 						is_commune_subject = yes
 					}
 				}
+				custom_tooltip = AB_EMPTY
 				custom_tooltip = mop_liberate_the_bulgars_BUL_core_on_all_bulgarian_provinces_tt
 				hidden_effect = {
 					balkan_region = {

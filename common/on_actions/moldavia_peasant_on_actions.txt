@@ -985,3 +985,18 @@ on_startup = {
 		set_country_flag = initialized_support_rebels_ui
 	}
 }
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			province_id = 4706
+			owner = {
+				has_country_flag = danubian_toll_construction_enabled_in_future
+			}
+		}
+		owner = {
+			clr_country_flag = danubian_toll_construction_enabled_in_future
+			set_country_flag = danubian_toll_construction_enabled
+		}
+	}
+}
