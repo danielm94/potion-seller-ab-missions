@@ -36,24 +36,17 @@ on_province_owner_change = {
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = mop_no_coring_penalty_in_perma_claim_provinces
-			}
-			is_permanent_claim = owner
-		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						has_reform = moldavian_commune_reform
-						has_reform = dacian_commune_reform
-					}
+				OR = {
+					has_reform = moldavian_commune_reform
+					has_reform = dacian_commune_reform
 				}
 			}
-			add_province_modifier = {
-				name = negate_moldavian_commune_reform_ccr
-				duration = -1
-				hidden = yes
-			}
+			has_province_flag = negate_commune_core_cost
+		}
+		add_province_modifier = {
+			name = negate_moldavian_commune_reform_ccr
+			duration = -1
+			hidden = yes
 		}
 	}
 }

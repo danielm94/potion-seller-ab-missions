@@ -1179,3 +1179,27 @@ establish_commune_effect = {
 		}
 	}
 }
+
+#SCOPE = PROVINCE
+negate_commune_coring_penalty = {
+	set_province_flag = negate_commune_core_cost
+}
+
+#SCOPE = PROVINCE
+commune_transfer_province_or_mark_province_for_transfer = {
+	negate_commune_coring_penalty = yes
+	add_permanent_claim = root
+	if = {
+		limit = {
+			owner = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+			}
+		}
+		add_core = root
+		remove_core = owner
+		cede_province = root
+	}
+}
