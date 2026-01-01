@@ -2492,7 +2492,6 @@ ab_mop_2 = {
 		icon = gfx_wal_unite_the_vlachs
 		position = 7
 		required_missions = {
-			mop_liberate_dobruja
 			mop_liberate_transylvania
 			mop_wallachia
 		}
@@ -4956,105 +4955,6 @@ ab_mop_3 = {
 				value = 25
 				scaled_with_gain_modifier = yes
 			}
-		}
-	}
-	mop_liberate_dobruja = {
-		icon = push_on_to_bulgaria
-		position = 6
-		required_missions = {
-			mop_win_civil_war
-		}
-		provinces_to_highlight = {
-			province_id = 4706
-			NOT = {
-				country_or_commune_subject_or_subject_of_commune_subject_holds = {
-					who = root
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else = {
-				4706 = {
-					country_or_commune_subject_or_subject_of_commune_subject_holds = {
-						who = root
-					}
-				}
-			}
-		}
-		effect = {
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
-				first_limit = "4706 = {
-									country_or_non_sovereign_subject_holds = root
-								}"
-				first_effect = "4706 = {
-									remove_core = BUL
-									add_nationalism = -30
-									add_unrest = -20
-								}
-								add_adm_power = 50
-								add_army_tradition_or_mil_power = {
-									amount = 10
-								}
-								custom_tooltip = mop_dobruja_negate_ccr_penalties_tt"
-				second_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
-				second_limit = "4706 = {
-									owner = {
-										is_commune_subject = yes
-										is_subject_of = root
-									}
-								}"
-				second_effect = "4706 = {
-									owner = {
-										add_liberty_desire = -10
-									}
-								}
-								add_dip_power = 25
-								custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt
-								"
-			}
-			custom_tooltip = AB_EMPTY
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
-				first_limit = "is_bogdan_razesul_ruling = yes"
-				first_effect = "
-					change_peasant_zeal = {
-						value = 10
-					}
-					add_faction_influence = {
-						faction = abolitionists_faction
-						influence = 10
-					}
-					add_estate_loyalty = {
-						estate = estate_razesi
-						loyalty = 5
-					}"
-				second_custom_tooltip = if_bogdan_razesul_isnt_ruling_tt
-				second_limit = "is_bogdan_razesul_ruling = no"
-				second_effect = "
-					change_peasant_zeal = {
-						value = 5
-					}
-					add_faction_influence = {
-						faction = abolitionists_faction
-						influence = 5
-					}"
-			}
-			custom_tooltip = AB_EMPTY
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_bulgaria_is_our_rival_tt
-				first_limit = "is_rival = BUL"
-				first_effect = "add_splendor = 100"
-			}
-			custom_tooltip = AB_EMPTY
-			custom_tooltip = danubian_toll_construction_enabled_tt
-			set_country_flag = danubian_toll_construction_enabled
 		}
 	}
 	mop_secure_crimea = {

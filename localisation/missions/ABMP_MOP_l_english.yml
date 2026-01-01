@@ -38,8 +38,6 @@
  if_the_butcher_has_already_purged_the_ten_houses_tt: "If we conquered §YWallachia§! directly and the §RButcher of Tirgoviste§! has already purged the Ten Houses of Wallachia:"
  if_the_butcher_hasnt_already_purged_the_ten_houses_tt: "If we conquered §YWallachia§! directly and the §RButcher of Tirgoviste§! hasn't already purged the Ten Houses of Wallachia:"
  if_bulgaria_is_our_rival_tt: "If @BUL [BUL.GetName] is our rival, we will gain:"
- mop_liberate_dobruja_title: "Liberate Dobruja"
- mop_liberate_dobruja_desc: "For nearly a millennium, the Bulgar yoke has weighed upon our people. Their recent war against the Romans has left them overextended, their armies drained. An opportunity to settle old scores and secure our future now presents itself. We must strike across the Danube and liberate our kin in Dobruja."
  mop_liberate_transylvania_title: "Liberate Transylvania"
  mop_liberate_transylvania_desc: "For centuries, the Vlachs have been the subject of heathens, but this ends now. We must liberate our kin in Transylvania from the oppressive yoke of the Magyar invaders before they regain their strength and seek to conquer [Root.GetName] once more."
  mop_vlach_emancipation_title: "Emancipation of the Vlachs"
