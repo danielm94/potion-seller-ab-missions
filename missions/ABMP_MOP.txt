@@ -7715,6 +7715,9 @@ ab_mop_4 = {
 				faction = leaguists_faction
 				influence = 5
 			}
+			custom_tooltip = AB_EMPTY
+			set_country_flag = enable_cossack_transfer_diplomatic_actions
+			custom_tooltip  = enable_cossack_transfer_diplomatic_actions_tt
 		}
 	}
 	mop_western_ukraine = {

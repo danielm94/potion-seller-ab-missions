@@ -376,3 +376,8 @@
  integrate_into_persian_communes_title: "@PER Transfer to Eran"
  integrate_into_persian_communes_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YIranian§! culture provinces to @[AB_Persia_target.GetTag] §Y[AB_Persia_target.GetName]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are of §YIranian§! culture, they will be §Rfully annexed§! by @[AB_Persia_target.GetTag] §Y[AB_Persia_target.GetName]§!."
  integrate_into_persian_communes_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all owned §YIranian§! culture provinces to @[AB_Persia_target.GetTag] §Y[AB_Persia_target.GetName]§!"
+ transfer_to_cossacks: "@ZAZ Transfer to Cossacks"
+ transfer_to_cossacks_title: "@ZAZ Transfer to Cossacks"
+ transfer_to_cossacks_desc: "\n@[From.GetTag] §Y[From.GetName]§! will transfer all owned provinces in the §YPontic Steppe§! region, §YRuthenia§! region, §YAlania§! area, and §YCumania§! area to [get_cossack_subject_tag] §Y[get_cossack_subject_name]§!.\n\nNote: If all of @[From.GetTag] §Y[From.GetName]§!'s provinces are located within these territories, they will be §Rfully annexed§! by [get_cossack_subject_tag] §Y[get_cossack_subject_name]§!."
+ transfer_to_cossacks_tooltip: "@[From.GetTag] §Y[From.GetName]§! will transfer all of its provinces in the specified regions to [get_cossack_subject_tag] §Y[get_cossack_subject_name]§!."
+ is_our_integrated_commune_tt: "@[From.GetTag] §Y[From.GetName]§! is our £integrated_commune£ §YIntegrated Commune§!."

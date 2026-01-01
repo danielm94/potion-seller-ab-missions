@@ -6,3 +6,7 @@
  PRZ_tag: "@PRZ"
  PRC_tag: "@PRC"
  PMN_tag: "@PMN"
+ ZAZ_tag: "@ZAZ"
+ HTM_tag: "@HTM"
+ ZAZ_name: "[ZAZ.GetName]"
+ HTM_name: "[HTM.GetName]"

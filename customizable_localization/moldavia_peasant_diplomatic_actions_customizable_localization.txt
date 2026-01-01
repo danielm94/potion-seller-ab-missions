@@ -863,7 +863,6 @@ defined_text = {
 	}
 }
 
-
 defined_text = {
 	name = designate_model_commune_cooldown_text
 	random = no
@@ -1099,6 +1098,40 @@ defined_text = {
 		localisation_key = PER_tag
 		trigger = {
 			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = get_cossack_subject_tag
+	random = no
+	text = {
+		localisation_key = ZAZ_tag
+		trigger = {
+			overlord_of = ZAZ
+		}
+	}
+	text = {
+		localisation_key = HTM_tag
+		trigger = {
+			overlord_of = HTM
+		}
+	}
+}
+
+defined_text = {
+	name = get_cossack_subject_name
+	random = no
+	text = {
+		localisation_key = ZAZ_name
+		trigger = {
+			overlord_of = ZAZ
+		}
+	}
+	text = {
+		localisation_key = HTM_name
+		trigger = {
+			overlord_of = HTM
 		}
 	}
 }

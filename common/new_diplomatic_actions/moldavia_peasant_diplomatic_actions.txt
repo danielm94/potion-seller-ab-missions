@@ -627,7 +627,6 @@ revoke_model_commune = {
 	}
 }
 
-
 establish_illyrian_commune = {
 	category = league
 	require_acceptance = no
@@ -4457,6 +4456,95 @@ integrate_into_persian_communes = {
 							cede_province = PREV
 						}
 					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+transfer_to_cossacks = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		has_country_flag = enable_cossack_transfer_diplomatic_actions
+		OR = {
+			overlord_of = ZAZ
+			overlord_of = HTM
+		}
+		FROM = {
+			NOT = {
+				tag = ARM
+			}
+			any_owned_province = {
+				OR = {
+					region = ruthenia_region
+					region = crimea_region
+					area = circassia_area
+					area = dagestan_area
+				}
+			}
+			is_commune_subject = yes
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = is_our_integrated_commune_tt
+			FROM = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = integrated_commune
+				}
+			}
+		}
+		are_we_and_target_at_peace = {
+			target = FROM
+		}
+		FROM = {
+			does_subject_have_0_liberty_desire = yes
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 200
+		}
+		FROM = {
+			trust = {
+				who = PREV
+				value = 50
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = ruthenia_region
+						region = crimea_region
+						area = circassia_area
+						area = dagestan_area
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							overlord_of = ZAZ
+						}
+					}
+					add_core = ZAZ
+					cede_province = ZAZ
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							overlord_of = HTM
+						}
+					}
+					add_core = HTM
+					cede_province = HTM
 				}
 			}
 		}
