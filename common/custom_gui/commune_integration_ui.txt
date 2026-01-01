@@ -585,7 +585,7 @@ custom_button = {
 			}
 		}
 		FROM = {
-			is_within_range_of_the_peasants_revolution = yes
+			is_within_range_of_the_peasants_revolution_diplo_gui = yes
 		}
 		if = {
 			limit = {
@@ -876,6 +876,92 @@ custom_button = {
 						apply_calc = yes
 					}
 				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = subject_to_commune
+	tooltip = convert_subject_to_commune
+	potential = {
+		FROM = {
+			has_government_mechanic = peasant_zealotry
+		}
+		is_subject_of = FROM
+		is_commune_subject = no
+		is_commune_subject_being_integrated = no
+	}
+	trigger = {
+		if = {
+			limit = {
+				OR = {
+					has_reform = cossacks_reform
+					has_reform = hetmanate
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = communism_and_cossacks_no_tt
+				always = no
+			}
+		}
+		else = {
+			FROM = {
+				num_of_diplomats = 2
+			}
+			does_subject_have_0_liberty_desire = yes
+			are_there_no_truces_with_target_diplomacy_gui = {
+				target = FROM
+			}
+			has_opinion = {
+				who = FROM
+				value = 190
+			}
+			trust = {
+				who = FROM
+				value = 60
+			}
+			is_colonial_nation = no
+			FROM = {
+				if = {
+					limit = {
+						ROOT = {
+							NOT = {
+								is_subject_of_type = consulate_subject
+							}
+						}
+					}
+					is_within_range_of_the_peasants_revolution_diplo_gui = yes
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				play_sound = gain_prestige
+			}
+		}
+		custom_tooltip = tooltip_line_divider
+		custom_tooltip = convert_subject_to_commune_desc
+		hidden_effect = {
+			FROM = {
+				enable_commune_integration_overlord = yes
+				push_commune_subject_investing_mana_modifier = yes
+			}
+			initialize_commune_integration_progress = yes
+			calculate_commune_integration_cost = yes
+			initialize_integration_progress_percentage_variable = yes
+			enable_commune_integration_subject = yes
+			set_country_flag = investing_dip_in_commune
+			calculate_monthly_commune_integration_progress = yes
+			ROOT = {
+				FROM = {
+					calculate_overlord_dip_investment_integration_progress_gain = yes
+				}
+			}
+			FROM = {
+				map_all_integrating_commune_subjects_to_slots = yes
 			}
 		}
 	}

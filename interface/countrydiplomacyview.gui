@@ -1496,6 +1496,13 @@ guiTypes = {
 			shortcut = "shift+t"
 		}
 		guiButtonType = {
+			name = "subject_to_commune"
+			position = { x = 549 y = 630 }
+			quadTextureSprite ="GFX_subject_to_commune"
+			scripted = yes
+			shortcut = "shift+t"
+		}
+		guiButtonType = {
 			name = "cancel_integrate_commune"
 			position = { x = 549 y = 630 }
 			quadTextureSprite ="GFX_cancel_integrate_commune"

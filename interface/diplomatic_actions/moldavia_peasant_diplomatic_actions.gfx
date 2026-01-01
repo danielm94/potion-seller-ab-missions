@@ -69,4 +69,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/buttons/commune_diplo_actions/great_peasant_uprising.dds"
 		loadtype = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_subject_to_commune"
+		texturefile = "gfx/interface/buttons/commune_diplo_actions/subject_to_commune.dds"
+		loadtype = "INGAME"
+	}
 }

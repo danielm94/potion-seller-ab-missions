@@ -75,9 +75,9 @@ is_country_that_spreads_radicalized_peasants = {
 }
 
 #SCOPE = COUNTRY
-is_within_range_of_the_peasants_revolution = {
+is_within_range_of_the_peasants_revolution_diplo_gui = {
 	custom_trigger_tooltip = {
-		tooltip = is_within_range_of_the_peasants_revolution_tt
+		tooltip = is_within_range_of_the_peasants_revolution_diplo_gui_tt
 		OR = {
 			NOT = {
 				border_distance = {
@@ -93,6 +93,30 @@ is_within_range_of_the_peasants_revolution = {
 							who = ROOT
 							distance = 50
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+is_within_range_of_the_peasants_revolution = {
+	custom_trigger_tooltip = {
+		tooltip = is_within_range_of_the_peasants_revolution_tt
+		OR = {
+			NOT = {
+				border_distance = {
+					who = FROM
+					distance = 50
+				}
+			}
+			any_subject_country = {
+				is_country_that_spreads_radicalized_peasants = yes
+				NOT = {
+					border_distance = {
+						who = FROM
+						distance = 50
 					}
 				}
 			}

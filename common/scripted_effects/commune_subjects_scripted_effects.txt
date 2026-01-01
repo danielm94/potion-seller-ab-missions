@@ -344,7 +344,10 @@ change_commune_integration_progress_as_percentage_of_cost = {
 calculate_monthly_commune_integration_progress = {
 	if = {
 		limit = {
-			is_commune_subject = yes
+			is_subject = yes
+			overlord = {
+				has_government_mechanic = peasant_zealotry
+			}
 		}
 		set_variable = {
 			which = peasant_zeal_amount
@@ -454,9 +457,17 @@ calculate_monthly_subject_to_commune_integration_progress = {
 			which = commune_integration_progress_change
 			which = subject_to_commune_monthly_change
 		}
+		set_variable = {
+			which = commune_dip_investment_monthly_cost
+			which = commune_integration_progress_change
+		}
 		PREV = {
 			set_variable = {
 				which = commune_integration_progress_change
+				which = PREV
+			}
+			set_variable = {
+				which = commune_dip_investment_monthly_cost
 				which = PREV
 			}
 		}
