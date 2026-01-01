@@ -1243,26 +1243,17 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
-				first_limit = "wallachia_area = {
-									type = all
-									owner = {
-										is_commune_subject = yes
-										is_subject_of = root
-									}
-								}"
-				first_effect = "custom_tooltip = we_will_annex_all_provinces_when_integrating_commune_tt
-								add_dip_power = 50"
-				second_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
-				second_limit = "wallachia_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}"
-				second_effect = "custom_tooltip = mop_wallachia_negate_ccr_penalties_tt
-								 add_adm_power = 50"
+			custom_tooltip = mop_liberate_wallachia_transfer_tt
+			hidden_effect = {
+				wallachia_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
 			}
 			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_the_end_of_the_boierimea
+				duration = -1
+			}
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
 				first_limit = "is_bogdan_razesul_ruling = yes"
@@ -1292,11 +1283,6 @@ ab_mop_1 = {
 						estate = estate_razesi
 						loyalty = 5
 					}"
-			}
-			custom_tooltip = AB_EMPTY
-			add_country_modifier = {
-				name = mop_the_end_of_the_boierimea
-				duration = -1
 			}
 		}
 	}
@@ -2462,6 +2448,14 @@ ab_mop_2 = {
 				}
 			}
 			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 15
+			}
+			custom_tooltip = AB_EMPTY
+			add_accepted_culture_or_dip_power = {
+				culture = transylvanian
+			}
+			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_bogdan_razesul_is_ruling_tt
 				first_limit = "is_bogdan_razesul_ruling = yes"
@@ -2491,14 +2485,6 @@ ab_mop_2 = {
 						estate = estate_razesi
 						loyalty = 5
 					}"
-			}
-			custom_tooltip = AB_EMPTY
-			add_army_tradition_or_mil_power = {
-				amount = 15
-			}
-			custom_tooltip = AB_EMPTY
-			add_accepted_culture_or_dip_power = {
-				culture = transylvanian
 			}
 		}
 	}
