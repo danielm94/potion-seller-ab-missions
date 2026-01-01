@@ -342,3 +342,42 @@ country_event = {
 		name = moldavia_diplomatic_actions_events.6.dont_integrate
 	}
 }
+
+country_event = {
+	id = moldavia_diplomatic_actions_events.7
+	title = moldavia_diplomatic_actions_events.7.t
+	desc = moldavia_diplomatic_actions_events.7.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = nevermind
+		highlight = yes
+	}
+	option = {
+		name = moldavia_diplomatic_actions_events.7.yes_im_sure
+		custom_tooltip = cannot_be_undone
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_subject_country = {
+							is_commune_subject_being_integrated = yes
+						}
+					}
+				}
+				disable_commune_integration_overlord = yes
+			}
+			FROM = {
+				disable_commune_integration_subject = yes
+				initialize_commune_integration_progress = yes
+				initialize_integration_progress_percentage_variable = yes
+				clear_commune_integration_flags = yes
+			}
+			pop_commune_subject_investing_mana_modifier = yes
+			FROM = {
+				calculate_monthly_commune_integration_progress = yes
+			}
+			map_all_integrating_commune_subjects_to_slots = yes
+		}
+	}
+}

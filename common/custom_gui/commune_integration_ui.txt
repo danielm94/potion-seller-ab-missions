@@ -96,37 +96,12 @@ custom_button = {
 	trigger = {
 	}
 	effect = {
-		hidden_effect = {
-			FROM = {
-				play_sound = back_click
+		FROM = {
+			country_event = {
+				id = moldavia_diplomatic_actions_events.7
 			}
 		}
-		custom_tooltip = cancel_commune_integration_desc
-		hidden_effect = {
-			FROM = {
-				if = {
-					limit = {
-						NOT = {
-							any_subject_country = {
-								is_commune_subject_being_integrated = yes
-							}
-						}
-					}
-					disable_commune_integration_overlord = yes
-				}
-			}
-			disable_commune_integration_subject = yes
-			initialize_commune_integration_progress = yes
-			initialize_integration_progress_percentage_variable = yes
-			clear_commune_integration_flags = yes
-			FROM = {
-				pop_commune_subject_investing_mana_modifier = yes
-			}
-			calculate_monthly_commune_integration_progress = yes
-			FROM = {
-				map_all_integrating_commune_subjects_to_slots = yes
-			}
-		}
+		
 	}
 }
 

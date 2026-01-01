@@ -13,3 +13,6 @@
  moldavia_diplomatic_actions_events.2.a: "It is a glorious day for the [From.Culture.GetName] people, and all free men!"
  gain_all_perma_claim_provinces_tt: "Every province owned by @[From.GetTag] §Y[From.GetName]§! that we have a permanent claim on will be transferred to us."
  integration_slowed_down_by_war_tt: "§gIntegrating @[From.GetTag] §Y[From.GetName]§! will be §R50% slower§! while we are §Yat war.§!§!"
+ moldavia_diplomatic_actions_events.7.t: "Are You Sure?"
+ moldavia_diplomatic_actions_events.7.d: "We will stop integrating @[From.GetTag] §Y[From.GetName]§!.\n\nYou will not be refunded any investments you have made towards integrating @[From.GetTag] §Y[From.GetName]§!.\n\nThis decision cannot be undone!"
+ moldavia_diplomatic_actions_events.7.yes_im_sure: "§RCancel the annexation of @[From.GetTag] §Y[From.GetName]§!"
