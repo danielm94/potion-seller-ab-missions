@@ -10,90 +10,506 @@ defined_text = {
 		}
 	}
 	text = {
+		localisation_key = rebel_uprising_progress_none_possible
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = track_any_rebels
+				}
+			}
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					NOT = {
+						any_owned_province = {
+							likely_rebels = anti_tax_rebels
+						}
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					NOT = {
+						any_owned_province = {
+							likely_rebels = noble_rebels
+						}
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					NOT = {
+						any_owned_province = {
+							likely_rebels = particularist_rebels
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
 		localisation_key = progress_100
 		trigger = {
-			rebel_progress_at_least = {
-				value = 100
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 100
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 100
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 100
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 100
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_90
 		trigger = {
-			rebel_progress_at_least = {
-				value = 90
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 90
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 90
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 90
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 90
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_80
 		trigger = {
-			rebel_progress_at_least = {
-				value = 80
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 80
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 80
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 80
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 80
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_70
 		trigger = {
-			rebel_progress_at_least = {
-				value = 70
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 70
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 70
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 70
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 70
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_60
 		trigger = {
-			rebel_progress_at_least = {
-				value = 60
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 60
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 60
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 60
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 60
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_50
 		trigger = {
-			rebel_progress_at_least = {
-				value = 50
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 50
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 50
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 50
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 50
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_40
 		trigger = {
-			rebel_progress_at_least = {
-				value = 40
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 40
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 40
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 40
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 40
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_30
 		trigger = {
-			rebel_progress_at_least = {
-				value = 30
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 30
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 30
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 30
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 30
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_20
 		trigger = {
-			rebel_progress_at_least = {
-				value = 20
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 20
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 20
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 20
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 20
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_10
 		trigger = {
-			rebel_progress_at_least = {
-				value = 10
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 10
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 10
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 10
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 10
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
 	text = {
 		localisation_key = progress_0
 		trigger = {
-			rebel_progress_at_least = {
-				value = 0
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_any_rebels
+					}
+					rebel_progress_at_least = {
+						value = 0
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					rebel_progress_at_least = {
+						value = 0
+						rebel_type = anti_tax_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					rebel_progress_at_least = {
+						value = 0
+						rebel_type = noble_rebels
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					rebel_progress_at_least = {
+						value = 0
+						rebel_type = particularist_rebels
+					}
+				}
 			}
 		}
 	}
@@ -107,6 +523,48 @@ defined_text = {
 		trigger = {
 			FROM = {
 				has_spawned_supported_rebels = PREV
+			}
+		}
+	}
+	text = {
+		localisation_key = no_active_rebels_of_type_tooltip
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = track_any_rebels
+				}
+			}
+			OR = {
+				AND = {
+					FROM = {
+						has_country_flag = track_anti_tax_rebels
+					}
+					NOT = {
+						any_owned_province = {
+							likely_rebels = anti_tax_rebels
+						}
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_noble_rebels
+					}
+					NOT = {
+						any_owned_province = {
+							likely_rebels = noble_rebels
+						}
+					}
+				}
+				AND = {
+					FROM = {
+						has_country_flag = track_particularist_rebels
+					}
+					NOT = {
+						any_owned_province = {
+							likely_rebels = particularist_rebels
+						}
+					}
+				}
 			}
 		}
 	}
@@ -140,6 +598,80 @@ defined_text = {
 				FROM = {
 					has_government_attribute = can_install_peasant_governments
 				}
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = get_rebel_track_type
+	random = no
+	text = {
+		localisation_key = track_any_rebels_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_any_rebels
+			}
+		}
+	}
+	text = {
+		localisation_key = track_anti_tax_rebels_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_anti_tax_rebels
+			}
+		}
+	}
+	text = {
+		localisation_key = track_noble_rebels_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_noble_rebels
+			}
+		}
+	}
+	text = {
+		localisation_key = track_particularist_rebels_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_particularist_rebels
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = get_rebel_track_type_upper
+	random = no
+	text = {
+		localisation_key = track_any_rebels_upper_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_any_rebels
+			}
+		}
+	}
+	text = {
+		localisation_key = track_anti_tax_rebels_upper_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_anti_tax_rebels
+			}
+		}
+	}
+	text = {
+		localisation_key = track_noble_rebels_upper_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_noble_rebels
+			}
+		}
+	}
+	text = {
+		localisation_key = track_particularist_rebels_upper_loc
+		trigger = {
+			FROM = {
+				has_country_flag = track_particularist_rebels
 			}
 		}
 	}

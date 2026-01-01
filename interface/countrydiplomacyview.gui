@@ -826,8 +826,8 @@ guiTypes = {
 			scripted = yes
 		}
 
-		iconType = {
-			name ="support_rebels_bg"
+		guiButtonType = {
+			name ="support_rebels_config_button"
 			spriteType = "GFX_relation_bg"
 			position = { x= 309 y = 221 }
 			scripted = yes

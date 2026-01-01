@@ -1,0 +1,8 @@
+﻿l_english:
+ support_rebels_config_events.0.any: "Track Any Rebel Type"
+ support_rebels_config_events.0.anti_tax: "Peasants"
+ track_any_rebels_tt: "The progress shown will represent the highest uprising progress of §Yany rebel faction§!."
+ support_rebels_config_events.0.noble_rebels: "Nobles"
+ support_rebels_config_events.0.particularist_rebels: "Particularists"
+ support_rebels_config_events.0.t: "Configure Tracking"
+ support_rebels_config_events.0.d: "Here you can select what type of rebel faction's progress gets displayed. The §Ghighlighted§! option indicates the setting selected."

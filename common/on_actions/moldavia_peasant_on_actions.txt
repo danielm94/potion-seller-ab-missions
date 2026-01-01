@@ -973,10 +973,22 @@ on_five_year_pulse_2 = {
 		100 = razesi_events.3
 		100 = razesi_events.4
 		100 = razesi_events.5
-		400 = razesi_events.6 #Disloyal
-		400 = razesi_events.7 #Influential
-		100 = razesi_events.8 #Loyal
+		400 = razesi_events.6		#Disloyal
+		400 = razesi_events.7		#Influential
+		100 = razesi_events.8		#Loyal
 		100 = razesi_events.9
 		100 = razesi_events.10
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = initialized_support_rebels_ui
+			}
+		}
+		set_country_flag = track_any_rebels
+		set_country_flag = initialized_support_rebels_ui
 	}
 }

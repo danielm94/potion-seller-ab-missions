@@ -1,0 +1,6 @@
+clear_track_rebels_flags = {
+	clr_country_flag = track_any_rebels
+	clr_country_flag = track_anti_tax_rebels
+	clr_country_flag = track_noble_rebels
+	clr_country_flag = track_particularist_rebels
+}

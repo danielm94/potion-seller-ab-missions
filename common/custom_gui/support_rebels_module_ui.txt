@@ -1,5 +1,6 @@
-custom_icon = {
-	name = support_rebels_bg
+custom_button = {
+	name = support_rebels_config_button
+	tooltip = support_rebels_config_button_tt
 	potential = {
 		OR = {
 			AND = {
@@ -13,7 +14,28 @@ custom_icon = {
 			}
 		}
 	}
+	trigger = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = in_support_rebels_config_events.0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = not_in_support_rebels_config_events.0_tt
+				always = no
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			country_event = {
+				id = support_rebels_config_events.0
+			}
+		}
+	}
 }
+
 custom_icon = {
 	name = support_rebels_icon
 	potential = {

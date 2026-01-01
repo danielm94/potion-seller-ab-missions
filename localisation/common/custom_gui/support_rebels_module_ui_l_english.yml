@@ -1,3 +1,5 @@
 ﻿l_english:
  support_rebels_progress: "[rebel_uprising_progress]"
  support_rebels_progress_tt: "[rebel_uprising_progress_tooltip]"
+ not_in_support_rebels_config_events.0_tt: "§RYou are currently configuring which rebel faction to track.§!"
+ support_rebels_config_button_tt: "Configure Tracked Rebel Faction"

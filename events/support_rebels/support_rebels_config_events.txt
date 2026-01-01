@@ -1,0 +1,276 @@
+namespace = support_rebels_config_events
+country_event = {
+	id = support_rebels_config_events.0
+	title = support_rebels_config_events.0.t
+	desc = support_rebels_config_events.0.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = in_support_rebels_config_events.0
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_support_rebels_config_events.0
+			}
+			country_event = {
+				id = support_rebels_config_events.1
+			}
+		}
+	}
+	option = {
+		name = FE_EXIT
+		highlight = yes
+		clr_country_flag = in_support_rebels_config_events.0
+	}
+	option = {
+		name = support_rebels_config_events.0.any
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_any_rebels
+				}
+			}
+		}
+		custom_tooltip = track_any_rebels_tt
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_any_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.any
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_any_rebels
+			}
+		}
+		highlight = yes
+		custom_tooltip = track_any_rebels_tt
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_any_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.anti_tax
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_anti_tax_rebels
+				}
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_anti_tax_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.anti_tax
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_anti_tax_rebels
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_anti_tax_rebels
+		}
+	}
+	#######
+	option = {
+		name = support_rebels_config_events.0.noble_rebels
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_noble_rebels
+				}
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_noble_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.noble_rebels
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_noble_rebels
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_noble_rebels
+		}
+	}
+	#######
+	option = {
+		name = support_rebels_config_events.0.particularist_rebels
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_particularist_rebels
+				}
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_particularist_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.particularist_rebels
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_particularist_rebels
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_particularist_rebels
+		}
+	}
+}
+
+country_event = {
+	id = support_rebels_config_events.1
+	title = support_rebels_config_events.0.t
+	desc = support_rebels_config_events.0.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = in_support_rebels_config_events.0
+	}
+	after = {
+		if = {
+			limit = {
+				has_country_flag = in_support_rebels_config_events.0
+			}
+			country_event = {
+				id = support_rebels_config_events.0
+			}
+		}
+	}
+	option = {
+		name = FE_EXIT
+		highlight = yes
+		clr_country_flag = in_support_rebels_config_events.0
+	}
+	option = {
+		name = support_rebels_config_events.0.any
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_any_rebels
+				}
+			}
+		}
+		custom_tooltip = track_any_rebels_tt
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_any_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.any
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_any_rebels
+			}
+		}
+		highlight = yes
+		custom_tooltip = track_any_rebels_tt
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_any_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.anti_tax
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_anti_tax_rebels
+				}
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_anti_tax_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.anti_tax
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_anti_tax_rebels
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_anti_tax_rebels
+		}
+	}
+	#######
+	option = {
+		name = support_rebels_config_events.0.noble_rebels
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_noble_rebels
+				}
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_noble_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.noble_rebels
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_noble_rebels
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_noble_rebels
+		}
+	}
+	#######
+	option = {
+		name = support_rebels_config_events.0.particularist_rebels
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = track_particularist_rebels
+				}
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_particularist_rebels
+		}
+	}
+	option = {
+		name = support_rebels_config_events.0.particularist_rebels
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = track_particularist_rebels
+			}
+		}
+		hidden_effect = {
+			clear_track_rebels_flags = yes
+			set_country_flag = track_particularist_rebels
+		}
+	}
+}
