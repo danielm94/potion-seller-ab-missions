@@ -472,12 +472,12 @@ enforce_peace_commune = {
 		has_government_power = {
 			mechanic_type = peasant_zealotry
 			power_type = peasant_zeal
-			value = 10
+			value = 5
 		}
 	}
 	on_accept = {
 		change_peasant_zeal = {
-			value = -10
+			value = -5
 			scaled_with_gain_modifier = no
 		}
 		FROM = {
@@ -500,6 +500,133 @@ enforce_peace_commune = {
 		always = no
 	}
 }
+
+designate_model_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_subject_of_type = allied_commune
+			NOT = {
+				has_country_flag = model_commune
+			}
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = set_model_commune
+					}
+					had_country_flag = {
+						flag = set_model_commune
+						days = 3650
+					}
+				}
+			}
+			has_government_power = {
+				mechanic_type = peasant_zealotry
+				power_type = peasant_zeal
+				value = 10
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = has_designated_model_commune_recently_tt
+				always = no
+			}
+		}
+	}
+	on_accept = {
+		change_peasant_zeal = {
+			value = -10
+			scaled_with_gain_modifier = no
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_country_flag = model_commune
+				}
+			}
+			random_country = {
+				limit = {
+					has_country_flag = model_commune
+				}
+				clr_country_flag = model_commune
+				remove_opinion = {
+					who = root
+					modifier = designated_us_as_model_comune
+				}
+			}
+		}
+		set_country_flag = set_model_commune
+		add_country_modifier = {
+			name = designated_model_commune
+			duration = -1
+		}
+		reverse_add_opinion = {
+			who = from
+			modifier = designated_us_as_model_comune
+		}
+		from = {
+			set_country_flag = model_commune
+			save_global_event_target_as = model_commune_country
+			add_liberty_desire = -10
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+revoke_model_commune = {
+	category = league
+	require_acceptance = no
+	is_visible = {
+		has_government_mechanic = peasant_zealotry
+		FROM = {
+			is_subject_of_type = allied_commune
+			has_country_flag = model_commune
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = cannot_revoke_for_another_ten_years_tt
+			OR = {
+				NOT = {
+					has_country_flag = set_model_commune
+				}
+				had_country_flag = {
+					flag = set_model_commune
+					days = 3650
+				}
+			}
+		}
+	}
+	on_accept = {
+		clr_country_flag = set_model_commune
+		remove_country_modifier = designated_model_commune
+		if = {
+			limit = {
+				has_saved_global_event_target = model_commune_country
+			}
+			clear_global_event_target = model_commune_country
+		}
+		reverse_remove_opinion = {
+			who = from
+			modifier = designated_us_as_model_comune
+		}
+		FROM = {
+			clr_country_flag = model_commune
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
 
 establish_illyrian_commune = {
 	category = league
@@ -4332,132 +4459,6 @@ integrate_into_persian_communes = {
 					}
 				}
 			}
-		}
-	}
-	ai_will_do = {
-		always = no
-	}
-}
-
-designate_model_commune = {
-	category = league
-	require_acceptance = no
-	is_visible = {
-		has_government_mechanic = peasant_zealotry
-		FROM = {
-			is_subject_of_type = allied_commune
-			NOT = {
-				has_country_flag = model_commune
-			}
-		}
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				OR = {
-					NOT = {
-						has_country_flag = set_model_commune
-					}
-					had_country_flag = {
-						flag = set_model_commune
-						days = 3650
-					}
-				}
-			}
-			has_government_power = {
-				mechanic_type = peasant_zealotry
-				power_type = peasant_zeal
-				value = 10
-			}
-		}
-		else = {
-			custom_trigger_tooltip = {
-				tooltip = has_designated_model_commune_recently_tt
-				always = no
-			}
-		}
-	}
-	on_accept = {
-		change_peasant_zeal = {
-			value = -10
-			scaled_with_gain_modifier = no
-		}
-		if = {
-			limit = {
-				any_country = {
-					has_country_flag = model_commune
-				}
-			}
-			random_country = {
-				limit = {
-					has_country_flag = model_commune
-				}
-				clr_country_flag = model_commune
-				remove_opinion = {
-					who = root
-					modifier = designated_us_as_model_comune
-				}
-			}
-		}
-		set_country_flag = set_model_commune
-		add_country_modifier = {
-			name = designated_model_commune
-			duration = -1
-		}
-		reverse_add_opinion = {
-			who = from
-			modifier = designated_us_as_model_comune
-		}
-		from = {
-			set_country_flag = model_commune
-			save_global_event_target_as = model_commune_country
-			add_liberty_desire = -10
-		}
-	}
-	ai_will_do = {
-		always = no
-	}
-}
-
-revoke_model_commune = {
-	category = league
-	require_acceptance = no
-	is_visible = {
-		has_government_mechanic = peasant_zealotry
-		FROM = {
-			is_subject_of_type = allied_commune
-			has_country_flag = model_commune
-		}
-	}
-	is_allowed = {
-		custom_trigger_tooltip = {
-			tooltip = cannot_revoke_for_another_ten_years_tt
-			OR = {
-				NOT = {
-					has_country_flag = set_model_commune
-				}
-				had_country_flag = {
-					flag = set_model_commune
-					days = 3650
-				}
-			}
-		}
-	}
-	on_accept = {
-		clr_country_flag = set_model_commune
-		remove_country_modifier = designated_model_commune
-		if = {
-			limit = {
-				has_saved_global_event_target = model_commune_country
-			}
-			clear_global_event_target = model_commune_country
-		}
-		reverse_remove_opinion = {
-			who = from
-			modifier = designated_us_as_model_comune
-		}
-		FROM = {
-			clr_country_flag = model_commune
 		}
 	}
 	ai_will_do = {
