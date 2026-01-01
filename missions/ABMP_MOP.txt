@@ -2502,7 +2502,6 @@ ab_mop_2 = {
 				area = southern_transylvania_area
 				area = moldavia_area
 				area = bessarabia_area
-				province_id = 4706
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2516,6 +2515,7 @@ ab_mop_2 = {
 				always = yes
 			}
 			else = {
+				is_at_war = no
 				wallachia_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
@@ -2534,9 +2534,6 @@ ab_mop_2 = {
 				}
 				bessarabia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				4706 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
