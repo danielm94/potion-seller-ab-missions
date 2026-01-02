@@ -1681,7 +1681,7 @@ ab_mop_1 = {
 										add_permanent_claim = root
 									}
 								}"
-			}			
+			}
 			if = {
 				limit = {
 					overlord_of = BUL
@@ -2722,64 +2722,29 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			add_permanent_claim_for_commune_player = {
-				target = transdanubia_area
-			}
-			add_permanent_claim_for_commune_player = {
-				target = slovakia_area
-			}
-			add_permanent_claim_for_commune_player = {
-				target = moravia_area
-			}
-			custom_tooltip = tooltip_line_divider
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
-				first_limit = "alfold_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}
-								centralhungary_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}
-								eastslovakia_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}"
-				first_effect = "define_advisor = {
-									type = inquisitor
-									skill = 2
-									cost_multiplier = 0.5
-									religion = ROOT
-									culture = ROOT
-								}
-								custom_tooltip = wal_transylvania_romanianization_tooltip
-								custom_tooltip = wal_hungary_romanianization_tooltip
-								set_country_flag = wal_romanianization_of_hungary"
-				second_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
-				second_limit = "alfold_area = {
-									type = all
-									country_or_commune_subject_or_subject_of_commune_subject_holds = {
-										who = root
-									}
-								}
-								centralhungary_area = {
-									type = all
-									country_or_commune_subject_or_subject_of_commune_subject_holds = {
-										who = root
-									}
-								}
-								eastslovakia_area = {
-									type = all
-									country_or_commune_subject_or_subject_of_commune_subject_holds = {
-										who = root
-									}
-								}"
-				second_effect = "mop_hungary_install_peasant_government_reward_effect = yes"
-			}
+			custom_tooltip = mop_crush_the_magyars_transfer_tt
 			hidden_effect = {
-				set_country_flag = wal_romanianization_of_hungary
+				alfold_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
+				centralhungary_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
+				eastslovakia_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
 			}
+			custom_tooltip = AB_EMPTY
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				cost_multiplier = 0.5
+				religion = ROOT
+				culture = ROOT
+			}
+			custom_tooltip = wal_transylvania_romanianization_tooltip
+			custom_tooltip = wal_hungary_romanianization_tooltip
+			set_country_flag = wal_romanianization_of_hungary
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
 				first_custom_tooltip = if_the_magyars_do_not_exist_tt
