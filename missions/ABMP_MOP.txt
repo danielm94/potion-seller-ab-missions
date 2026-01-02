@@ -7814,7 +7814,7 @@ ab_mop_4 = {
 	}
 	mop_japan = {
 		icon = jap_five_regent_houses
-		position = 16
+		position = 17
 		required_missions = {
 			mop_manchuria
 		}
@@ -7884,7 +7884,7 @@ mop_anatolia_series_locked = {
 	}
 	mop_anatolia_series_locked_1 = {
 		icon = mission_locked_mission
-		position = 19
+		position = 18
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = mop_anatolia_series_locked_1_desc
@@ -7923,7 +7923,7 @@ mop_anatolia_west = {
 	}
 	mop_dismantle_the_stratocracy_west = {
 		icon = mission_nicaea
-		position = 19
+		position = 18
 		provinces_to_highlight = {
 			OR = {
 				area = hudavendigar_area
@@ -8113,7 +8113,7 @@ mop_anatolia_east = {
 	}
 	mop_east_anatolia_east = {
 		icon = anatolian_frontier
-		position = 19
+		position = 18
 		provinces_to_highlight = {
 			OR = {
 				area = karaman_area
