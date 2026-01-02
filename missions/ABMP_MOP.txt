@@ -1750,17 +1750,24 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			custom_tooltip = will_be_able_to_integrate_bulgarians_again_immediately_tt
+			if = {
+				limit = {
+					has_country_modifier = annexers_legacy
+				}
+				custom_tooltip = eu_annexed_yes
+			}
+			else = {
+				custom_tooltip = eu_annexed_no
+			}
 			hidden_effect = {
-				every_subject_country = {
+				if = {
 					limit = {
-						any_owned_province = {
-							culture = bulgarian
-							region = balkan_region
-						}
-						has_country_flag = commune_integrated_recently
+						has_country_modifier = annexers_legacy
 					}
-					clr_country_flag = commune_integrated_recently
+					remove_country_modifier = annexers_legacy
+				}
+				else = {
+					add_dip_power = 50
 				}
 			}
 			add_dip_power = 100
