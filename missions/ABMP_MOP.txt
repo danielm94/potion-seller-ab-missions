@@ -2518,50 +2518,21 @@ ab_mop_2 = {
 			}
 		}
 		effect = {
-			complex_dynamic_effect = {
-				first_custom_tooltip = if_we_complete_this_mission_by_conquering_them_tt
-				first_limit = "transdanubia_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}
-								slovakia_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}
-								moravia_area = {
-									type = all
-									country_or_non_sovereign_subject_holds = root
-								}"
-				first_effect = "custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
-								set_country_flag = panonic_spread_extra
-								add_adm_power = 100"
-				second_custom_tooltip = if_we_complete_this_mission_by_installing_peasant_government_tt
-				second_limit = "transdanubia_area = {
-									type = all
-									owner = {
-										is_commune_subject = yes
-										is_subject_of = root
-									}
-								}
-								slovakia_area = {
-									type = all
-									owner = {
-										is_commune_subject = yes
-										is_subject_of = root
-									}
-								}
-								moravia_area = {
-									type = all
-									owner = {
-										is_commune_subject = yes
-										is_subject_of = root
-									}
-								}"
-				second_effect = "mop_seal_the_carpathians_install_peasant_government_reward_effect = yes"
-			}
+			custom_tooltip = mop_seal_the_carpathians_transfer_tt
 			hidden_effect = {
-				set_country_flag = panonic_spread_extra
+				transdanubia_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
+				slovakia_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
+				moravia_area = {
+					commune_transfer_province_or_mark_province_for_transfer = yes
+				}
 			}
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = panonic_culture_spread_to_slovakia_and_panonia_tooltip
+			set_country_flag = panonic_spread_extra
 			custom_tooltip = AB_EMPTY
 			define_advisor = {
 				type = planner
@@ -2579,6 +2550,7 @@ ab_mop_2 = {
 			}
 			unlock_mop_austria_effect = yes
 			unlock_mop_bohemia_effect = yes
+			custom_tooltip = mop_scroll_down_mt_tt
 		}
 	}
 	mop_carpathia_cultural_hegemon = {
