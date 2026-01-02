@@ -7428,6 +7428,7 @@ ab_mop_4 = {
 			change_peasant_zeal = {
 				value = 10
 			}
+			unlock_mop_russia_south_effect = yes
 		}
 	}
 	mop_east_ukraine = {
@@ -7559,6 +7560,7 @@ ab_mop_4 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			unlock_mop_russia_south_effect = yes
 		}
 	}
 	mop_baltic = {
@@ -7616,6 +7618,7 @@ ab_mop_4 = {
 				faction = abolitionists_faction
 				influence = 15
 			}
+			unlock_mop_russia_south_effect = yes
 		}
 	}
 	mop_free_the_wends = {
@@ -10340,6 +10343,8 @@ mop_scandinavia_west_series_4 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			unlock_mop_russia_north_effect = yes
+			custom_tooltip = mop_scroll_up_mt_tt
 		}
 	}
 }
@@ -11345,6 +11350,602 @@ mop_russia_south = {
 		position = 15
 		required_missions = {
 			mop_novgorod_south
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = russia_region
+				area = podlasie_area
+				area = pripyat_area
+				area = minsk_area
+				area = white_ruthenia_area
+				area = smolensk_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = cossack_protectorate
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_russia_trigger_tt
+					russia_region = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = ROOT
+							}
+							owner = {
+								is_subject_of_type_with_overlord = {
+									who = ROOT
+									type = cossack_protectorate
+								}
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = mop_liberate_white_rus_south_trigger_tt
+					podlasie_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					pripyat_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					minsk_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					white_ruthenia_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					smolensk_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = unlock_UKR_commune_diplomatic_actions_tt
+			set_country_flag = unlock_UKR_commune_diplomatic_actions
+			custom_tooltip = AB_EMPTY
+			add_country_modifier = {
+				name = mop_sloboda
+				duration = -1
+			}
+			custom_tooltip = every_east_slavic_commune_subject_ld_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						culture_group = east_slavic
+						NOT = {
+							has_estate = estate_nobles
+						}
+					}
+					add_liberty_desire = -20
+				}
+			}
+			change_peasant_zeal = {
+				value = 20
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 20
+			}
+		}
+	}
+}
+
+mop_russia_north = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_russia_north
+	}
+	mop_novgorod_north = {
+		icon = mission_conquer_novgorod
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				area = pskov_area
+				area = novgorod_area
+				area = yaroslavl_area
+				area = karelia_area
+				area = north_karelia
+				area = beloozero_area
+				area = vologda_area
+				area = arkhangelsk_area
+				area = pomor_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type = cossack_protectorate
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_novgorod_south_trigger_tt
+					pskov_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					novgorod_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					yaroslavl_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					karelia_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					north_karelia = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					beloozero_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					vologda_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					arkhangelsk_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					pomor_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_novgorodian_bonus_tt
+			set_country_flag = integrated_commune_novgorodian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_pomorian_bonus_tt
+			set_country_flag = integrated_commune_pomorian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			1955 = {
+				change_province_name = "Arhanghel"
+				hidden_effect = {
+					rename_capital = "Arhanghel"
+				}
+				establish_commune_effect = {
+					province = 1955
+					modifier = mop_arhanghel_commune
+				}
+			}
+			custom_tooltip = YEARS_OF_TRADE_INCOME_1
+			add_years_of_trade_income = {
+				years = 1
+			}
+			add_mercantilism = 2
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+			unlock_mop_scandinavia_north_effect = yes
+			custom_tooltip = mop_scroll_down_mt_tt
+		}
+	}
+	mop_destroy_the_princes_north = {
+		icon = mission_defeat_muscovy
+		position = 12
+		required_missions = {
+			mop_novgorod_north
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tver_area
+				area = moscow_area
+				area = oka_area
+				area = ryazan_area
+				area = tambov_area
+				area = suzdal_area
+				area = vladimir_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type = cossack_protectorate
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_destroy_the_princes_south_trigger_tt
+					tver_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					moscow_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					oka_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					ryazan_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					tambov_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					suzdal_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					vladimir_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_muscovite_bonus_tt
+			set_country_flag = integrated_commune_muscovite_bonus
+			custom_tooltip = AB_EMPTY
+			establish_commune_effect = {
+				province = 295
+				modifier = mop_moscow_commune
+			}
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.25
+				religion = orthodox
+				culture = russian
+				location = 295
+				name = "Vladimir Ulyan"
+			}
+			custom_tooltip = AB_EMPTY
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_razesi
+				loyalty = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_liberate_white_rus_north = {
+		icon = mission_sovereign_principality
+		position = 13
+		required_missions = {
+			mop_destroy_the_princes_north
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = podlasie_area
+				area = pripyat_area
+				area = minsk_area
+				area = white_ruthenia_area
+				area = smolensk_area
+			}
+			NOT = {
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = root
+				}
+			}
+			NOT = {
+				owner = {
+					is_subject_of_type = cossack_protectorate
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_debug_mode_enabled = yes
+				}
+				always = yes
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mop_liberate_white_rus_south_trigger_tt
+					podlasie_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					pripyat_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					minsk_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					white_ruthenia_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+					smolensk_area = {
+						type = all
+						OR = {
+							country_or_commune_subject_or_subject_of_commune_subject_holds = {
+								who = root
+							}
+							owner = {
+								is_subject_of_type = cossack_protectorate
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = integrated_commune_byelorussian_bonus_tt
+			set_country_flag = integrated_commune_byelorussian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			custom_tooltip = integrated_commune_ryazanian_bonus_tt
+			set_country_flag = integrated_commune_ryazanian_bonus_flag
+			custom_tooltip = AB_EMPTY
+			capital_scope = {
+				add_unit_construction = {
+					type = artillery
+					cost = 0
+					speed = 0.5
+					amount = 5
+				}
+			}
+			custom_tooltip = AB_EMPTY
+			add_army_tradition_or_mil_power = {
+				amount = 10
+			}
+			change_peasant_zeal = {
+				value = 10
+			}
+			add_faction_influence = {
+				faction = abolitionists_faction
+				influence = 10
+			}
+		}
+	}
+	mop_russia_north = {
+		icon = GFX_mop_russia
+		position = 15
+		required_missions = {
+			mop_liberate_white_rus_north
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -13798,6 +14399,8 @@ mop_scandinavia_north_series_5 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			unlock_mop_russia_north_effect = yes
+			custom_tooltip = mop_scroll_up_mt_tt
 		}
 	}
 	mop_sweden_north = {
@@ -14177,6 +14780,8 @@ mop_scandinavia_south_series_5 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			unlock_mop_russia_north_effect = yes
+			custom_tooltip = mop_scroll_up_mt_tt
 		}
 	}
 }
