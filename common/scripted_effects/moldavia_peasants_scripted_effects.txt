@@ -1197,6 +1197,56 @@ unlock_mop_russia_north_effect = {
 	}
 }
 
+unlock_mop_free_the_lechites_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_free_the_lechites
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_free_the_lechites
+		custom_tooltip = unlocked_mop_free_the_lechites_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+# Unlocks Baltic Branch
+unlock_mop_baltic_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_baltic
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_baltic
+		custom_tooltip = unlocked_mop_baltic_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+# Unlocks Wendia Branch
+unlock_mop_free_the_wends_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_free_the_wends
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_free_the_wends
+		custom_tooltip = unlocked_mop_free_the_wends_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
 #SCOPE = COUNTRY
 establish_commune_effect = {
 	$province$ = {

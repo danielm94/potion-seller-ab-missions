@@ -2465,6 +2465,7 @@ ab_mop_2 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			unlock_mop_free_the_lechites_effect = yes
 		}
 	}
 	mop_seal_the_carpathians = {
@@ -7429,6 +7430,7 @@ ab_mop_4 = {
 				value = 10
 			}
 			unlock_mop_russia_south_effect = yes
+			unlock_mop_free_the_lechites_effect = yes
 		}
 	}
 	mop_east_ukraine = {
@@ -7497,12 +7499,44 @@ ab_mop_4 = {
 			}
 		}
 	}
+}
+
+mop_free_the_lechites_locked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_free_the_lechites
+		}
+	}
+	mop_free_the_lechites_locked_1 = {
+		icon = mission_locked_mission
+		position = 11
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_free_the_lechites_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_free_the_lechites_locked_1_desc
+		}
+	}
+}
+
+mop_free_the_lechites_unlocked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_free_the_lechites
+	}
 	mop_free_the_lechites = {
 		icon = mission_pol_moldavia
 		position = 11
-		required_missions = {
-			mop_east_ukraine
-		}
 		provinces_to_highlight = {
 			region = poland_region
 			NOT = {
@@ -7560,15 +7594,51 @@ ab_mop_4 = {
 				faction = abolitionists_faction
 				influence = 10
 			}
+			unlock_mop_bohemia_effect = yes
+			custom_tooltip = mop_scroll_down_mt_tt
 			unlock_mop_russia_south_effect = yes
+			unlock_mop_free_the_wends_effect = yes
+			unlock_mop_baltic_effect = yes
 		}
+	}
+}
+
+mop_baltic_locked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_baltic
+		}
+	}
+	mop_baltic_locked_1 = {
+		icon = mission_locked_mission
+		position = 11
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_baltic_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_baltic_locked_1_desc
+		}
+	}
+}
+
+mop_baltic_unlocked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_baltic
 	}
 	mop_baltic = {
 		icon = mission_conquer_baltic_region
 		position = 12
-		required_missions = {
-			mop_free_the_lechites
-		}
 		provinces_to_highlight = {
 			region = baltic_region
 			NOT = {
@@ -7619,14 +7689,48 @@ ab_mop_4 = {
 				influence = 15
 			}
 			unlock_mop_russia_south_effect = yes
+			unlock_mop_free_the_lechites_effect = yes
+			unlock_mop_free_the_wends_effect = yes
 		}
+	}
+}
+
+mop_free_the_wends_locked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		NOT = {
+			has_country_flag = unlocked_mop_free_the_wends
+		}
+	}
+	mop_free_the_wends_locked_1 = {
+		icon = mission_locked_mission
+		position = 13
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mop_free_the_wends_locked_1_desc
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = mop_free_the_wends_locked_1_desc
+		}
+	}
+}
+
+mop_free_the_wends_unlocked = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+		has_country_flag = unlocked_mop_free_the_wends
 	}
 	mop_free_the_wends = {
 		icon = mission_wendia
 		position = 13
-		required_missions = {
-			mop_baltic
-		}
 		provinces_to_highlight = {
 			region = wendia_region
 			NOT = {
@@ -7674,7 +7778,10 @@ ab_mop_4 = {
 			}
 			unlock_mop_scandinavia_south_effect = yes
 			unlock_mop_saxons_effect = yes
+			unlock_mop_bohemia_effect = yes
 			custom_tooltip = mop_scroll_down_mt_tt
+			unlock_mop_free_the_lechites_effect = yes
+			unlock_mop_baltic_effect = yes
 		}
 	}
 }
@@ -10444,6 +10551,8 @@ mop_bohemia_series_unlocked = {
 			unlock_mop_bavaria_effect = yes
 			unlock_mop_swabia_franconia_effect = yes
 			unlock_mop_saxons_effect = yes
+			unlock_mop_free_the_wends_effect = yes
+			unlock_mop_free_the_lechites_effect = yes
 		}
 	}
 }
