@@ -94,3 +94,6 @@
  mil_integration_29_loc_tt: "\n@[mil_integration_29.GetTag] §Y[mil_integration_29.GetName]§! (§O[mil_integration_29.commune_integration_progress.GetValue]§! / §G[mil_integration_29.commune_integration_cost.GetValue]§!): £mil£ §R[mil_integration_29.commune_mil_investment_monthly_cost.GetValue]§! §gper month§!"
  mil_integration_30_loc_tt: "\n@[mil_integration_30.GetTag] §Y[mil_integration_30.GetName]§! (§O[mil_integration_30.commune_integration_progress.GetValue]§! / §G[mil_integration_30.commune_integration_cost.GetValue]§!): £mil£ §R[mil_integration_30.commune_mil_investment_monthly_cost.GetValue]§! §gper month§!"
  at_war_integration_penalty_explained_tt: "\n§gIntegration is §R50% slower§! because we are §Yat war§!§!."
+ adm_integration_monthly_cost_tt: "£adm£ §R[This.commune_adm_investment_monthly_cost.GetValue]§!"
+ dip_integration_monthly_cost_tt: "£dip£ §R[This.commune_dip_investment_monthly_cost.GetValue]§!"
+ mil_integration_monthly_cost_tt: "£mil£ §R[This.commune_mil_investment_monthly_cost.GetValue]§!"

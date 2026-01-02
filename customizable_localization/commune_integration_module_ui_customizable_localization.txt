@@ -1,5 +1,4 @@
 #ADM
-
 defined_text = {
 	name = adm_integration_1_loc
 	random = no
@@ -571,7 +570,6 @@ defined_text = {
 }
 
 #DIP
-
 defined_text = {
 	name = dip_integration_1_loc
 	random = no
@@ -1143,7 +1141,6 @@ defined_text = {
 }
 
 #MIL
-
 defined_text = {
 	name = mil_integration_1_loc
 	random = no
@@ -1717,16 +1714,43 @@ defined_text = {
 defined_text = {
 	name = at_war_integration_penalty_explained
 	random = no
-	text = { 
+	text = {
 		localisation_key = AB_EMPTY
 		trigger = {
-			is_at_war = no
+			FROM = {
+				is_at_war = no
+			}
 		}
 	}
 	text = {
 		localisation_key = at_war_integration_penalty_explained_tt
 		trigger = {
-			is_at_war = yes
+			FROM = {
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = get_commune_monthly_mana_cost
+	random = no
+	text = {
+		localisation_key = adm_integration_monthly_cost_tt
+		trigger = {
+			is_investing_adm_power_in_commune = yes
+		}
+	}
+	text = {
+		localisation_key = dip_integration_monthly_cost_tt
+		trigger = {
+			is_investing_dip_power_in_commune = yes
+		}
+	}
+	text = {
+		localisation_key = mil_integration_monthly_cost_tt
+		trigger = {
+			is_investing_mil_power_in_commune = yes
 		}
 	}
 }
