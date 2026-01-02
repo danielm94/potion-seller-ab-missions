@@ -1190,6 +1190,7 @@ unlock_mop_russia_north_effect = {
 		custom_tooltip = AB_EMPTY
 		set_country_flag = unlocked_mop_russia_north
 		custom_tooltip = unlocked_mop_russia_tt
+		custom_tooltip = mop_scroll_up_mt_tt
 		hidden_effect = {
 			swap_non_generic_missions = yes
 		}
