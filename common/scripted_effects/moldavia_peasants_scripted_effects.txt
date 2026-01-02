@@ -1158,6 +1158,44 @@ unlock_mop_scandinavia_west_effect = {
 	}
 }
 
+unlock_mop_russia_south_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_russia_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_russia_north
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_russia_south
+		custom_tooltip = unlocked_mop_russia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+unlock_mop_russia_north_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = unlocked_mop_russia_south
+			}
+			NOT = {
+				has_country_flag = unlocked_mop_russia_north
+			}
+		}
+		custom_tooltip = AB_EMPTY
+		set_country_flag = unlocked_mop_russia_north
+		custom_tooltip = unlocked_mop_russia_tt
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
 #SCOPE = COUNTRY
 establish_commune_effect = {
 	$province$ = {

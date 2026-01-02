@@ -287,7 +287,7 @@ integrated_commune_tartar_bonus = {
 	shock_damage = 0.05
 }
 
-integrated_commune_east_slavic_bonus = {
+integrated_commune_muscovite_bonus = {
 	infantry_cost = -0.1
 }
 
@@ -643,4 +643,20 @@ integrated_commune_tunisian_bonus = {
 
 integrated_commune_sicilian_bonus = {
 	may_perform_slave_raid = yes
+}
+
+integrated_commune_byelorussian_bonus = {
+	state_maintenance_modifier = -0.1
+}
+
+integrated_commune_ryazanian_bonus = {
+	artillery_barrage_cost = -0.075
+}
+
+integrated_commune_novgorodian_bonus = {
+	merchants = 1
+}
+
+integrated_commune_pomorian_bonus = {
+	trade_range_modifier = 0.20
 }

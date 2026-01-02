@@ -210,12 +210,12 @@ integrated_commune = {
 		}
 	}
 	modifier_overlord = {
-		modifier = integrated_commune_east_slavic_bonus
+		modifier = integrated_commune_muscovite_bonus
 		trigger = {
 			overlord = {
-				has_country_flag = integrated_commune_east_slavic_bonus
+				has_country_flag = integrated_commune_muscovite_bonus
 			}
-			culture_group = east_slavic
+			culture = russian
 			total_development = 400
 		}
 	}
@@ -1091,6 +1091,46 @@ integrated_commune = {
 			}
 			culture = sicilian
 			total_development = 300
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_byelorussian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_byelorussian_bonus_flag
+			}
+			culture = byelorussian
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_ryazanian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_ryazanian_bonus_flag
+			}
+			culture = ryazanian
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_novgorodian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_novgorodian_bonus_flag
+			}
+			culture = novgorodian
+			total_development = 400
+		}
+	}
+	modifier_overlord = {
+		modifier = integrated_commune_pomorian_bonus
+		trigger = {
+			overlord = {
+				has_country_flag = integrated_commune_pomorian_bonus_flag
+			}
+			culture = pomorian
+			total_development = 400
 		}
 	}
 }

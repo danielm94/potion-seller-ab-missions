@@ -1386,3 +1386,8 @@ mop_trapezunt_commune = {
 	drill_gain_modifier = 0.05
 	picture = "commune_province_modifier_icon"
 }
+
+mop_sloboda = {
+	global_trade_goods_size_modifier = 0.2
+	republican_tradition = 0.1
+}
