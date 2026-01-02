@@ -13769,7 +13769,9 @@ mop_iberia_north_series = {
 				area = asturias_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -14230,7 +14232,9 @@ mop_iberia_south_series = {
 				area = asturias_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_commune_subject_or_subject_of_commune_subject_holds = {
+					who = ROOT
+				}
 			}
 		}
 		trigger = {
