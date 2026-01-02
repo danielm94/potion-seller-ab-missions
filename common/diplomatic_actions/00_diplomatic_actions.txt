@@ -380,32 +380,6 @@ support_rebels = {
 				id = moldavia_diplomatic_actions_events.3
 				days = 1825
 			}
-			if = {
-				limit = {
-					ROOT = {
-						OR = {
-							NOT = {
-								mission_completed = mop_arm_the_bulgar_peasants
-							}
-							NOT = {
-								mission_completed = mop_war_for_the_bulgars
-							}
-							NOT = {
-								mission_completed = mop_liberate_the_bulgars
-							}
-							NOT = {
-								mission_completed = mop_bulgars_are_free
-							}
-						}
-					}
-					any_owned_province = {
-						culture = bulgarian
-						region = balkan_region
-					}
-					has_radicalized_peasantry_country = yes
-				}
-				save_global_event_target_as = mop_peasant_subject_tutorial_mission_target
-			}
 		}
 	}
 }

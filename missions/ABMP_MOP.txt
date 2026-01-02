@@ -1350,7 +1350,11 @@ ab_mop_1 = {
 				influence = 10
 			}
 			custom_tooltip = AB_EMPTY
-			event_target:mop_peasant_subject_tutorial_mission_target = {
+			every_subject_country = {
+				limit = {
+					is_commune_subject = yes
+					culture = bulgarian
+				}
 				add_liberty_desire = -20
 			}
 			add_country_modifier = {
