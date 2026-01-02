@@ -3924,8 +3924,8 @@ mop_rome_locked_series_2 = {
 		required_missions = {
 			mop_south_italy_locked_series_2
 			mop_north_italy_locked_series_3
-			mop_south_italy_north
 			mop_south_italy_south
+			mop_sicily_north
 			mop_central_italy_ne
 			mop_central_italy_nw
 		}
