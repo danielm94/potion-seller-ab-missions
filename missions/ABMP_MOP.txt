@@ -1286,8 +1286,8 @@ ab_mop_1 = {
 			}
 		}
 	}
-	mop_arm_the_bulgar_peasants = {
-		icon = push_on_to_bulgaria
+	mop_liberate_the_bulgars = {
+		icon = dom_ara_remensa_war
 		position = 8
 		required_missions = {
 			mop_vlach_emancipation
@@ -1311,262 +1311,7 @@ ab_mop_1 = {
 				}
 				always = yes
 			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							NOT = {
-								country_or_commune_subject_or_subject_of_commune_subject_holds = {
-									who = ROOT
-								}
-							}
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
-					always = yes
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_no_tutorial_mission_target_tt
-					always = no
-				}
-			}
 			else = {
-				event_target:mop_peasant_subject_tutorial_mission_target = {
-					custom_trigger_tooltip = {
-						tooltip = is_supporting_peasant_rebels_against_target_tt
-						is_supporting_rebels_against_target = {
-							target = event_target:mop_peasant_subject_tutorial_mission_target
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-				add_mil_power = 50
-			}
-			else = {
-				if = {
-					limit = {
-						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
-					}
-					custom_tooltip = mop_robbed_target_tt
-					add_treasury = 100
-				}
-				custom_tooltip = AB_EMPTY
-				add_country_modifier = {
-					name = mop_supporting_rebels_bul
-					duration = 1095
-				}
-				custom_tooltip = get_ready_to_invade_with_peasants_tt
-			}
-		}
-	}
-	mop_war_for_the_bulgars = {
-		icon = gfx_wal_drive_out_the_bulgars
-		position = 11
-		required_missions = {
-			mop_arm_the_bulgar_peasants
-		}
-		provinces_to_highlight = {
-			owner = {
-				NOT = {
-					tag = ROOT
-				}
-				any_owned_province = {
-					culture = bulgarian
-					region = balkan_region
-				}
-			}
-			is_capital_of = owner
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_no_tutorial_mission_target_tt
-					always = no
-				}
-			}
-			else = {
-				event_target:mop_peasant_subject_tutorial_mission_target = {
-					is_in_war = {
-						attacker_leader = ROOT
-						defender_leader = event_target:mop_peasant_subject_tutorial_mission_target
-						casus_belli = cb_great_peasant_uprising
-					}
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-				add_adm_power = 50
-			}
-			else = {
-				custom_tooltip = some_of_the_bulgars_join_our_ranks_tt
-				add_yearly_manpower = 0.5
-				custom_tooltip = AB_EMPTY
-				change_peasant_zeal = {
-					value = 5
-				}
-			}
-		}
-	}
-	mop_liberate_the_bulgars = {
-		icon = dom_ara_remensa_war
-		position = 14
-		required_missions = {
-			mop_war_for_the_bulgars
-		}
-		provinces_to_highlight = {
-			owner = {
-				NOT = {
-					tag = ROOT
-				}
-				any_owned_province = {
-					culture = bulgarian
-					region = balkan_region
-				}
-			}
-			is_capital_of = owner
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_debug_mode_enabled = yes
-				}
-				always = yes
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
-					NOT = {
-						any_province = {
-							culture = bulgarian
-							region = balkan_region
-							owner = {
-								is_commune_subject = no
-								NOT = {
-									tag = ROOT
-								}
-							}
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_saved_global_event_target = mop_peasant_subject_tutorial_mission_target
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = mop_no_tutorial_mission_target_tt
-					always = no
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = mop_liberate_the_bulgars_subject_trigger_tt
-					event_target:mop_peasant_subject_tutorial_mission_target = {
-						is_commune_subject = yes
-						is_subject_of = ROOT
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = mop_control_all_bulgarian_balkan_provinces_tt
 					NOT = {
@@ -1585,37 +1330,6 @@ ab_mop_1 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					owns_all_provinces = {
-						culture = bulgarian
-						region = balkan_region
-					}
-				}
-				if = {
-					limit = {
-						exists = BUL
-						overlord_of = BUL
-					}
-					add_adm_power = 50
-					add_dip_power = 50
-					add_mil_power = 50
-				}
-				else = {
-					release = BUL
-					BUL = {
-						hidden_effect = {
-							change_religion = ROOT
-							change_government = republic
-							add_government_reform = peasants_republic
-						}
-					}
-					create_subject = {
-						subject_type = integrated_commune
-						who = BUL
-					}
-				}
-			}
 			custom_tooltip = bulgarian_integrated_commune_bonus_tt
 			set_country_flag = bulgarian_integrated_commune_bonus
 			custom_tooltip = AB_EMPTY
@@ -1682,28 +1396,10 @@ ab_mop_1 = {
 									}
 								}"
 			}
-			if = {
-				limit = {
-					overlord_of = BUL
-					BUL = {
-						is_commune_subject = yes
-					}
-				}
-				custom_tooltip = AB_EMPTY
-				custom_tooltip = mop_liberate_the_bulgars_BUL_core_on_all_bulgarian_provinces_tt
-				hidden_effect = {
-					balkan_region = {
-						limit = {
-							culture = bulgarian
-						}
-						add_core = BUL
-					}
-				}
-			}
 		}
 	}
 	mop_integrate_the_bulgars = {
-		icon = mission_jawal_silver_mine
+		icon = GFX_mop_bulgars_are_free
 		position = 17
 		required_missions = {
 			mop_liberate_the_bulgars
