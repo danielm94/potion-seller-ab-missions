@@ -7677,6 +7677,15 @@ ab_mop_4 = {
 			custom_tooltip = mop_scroll_down_mt_tt
 		}
 	}
+}
+
+ab_mop_4_continued = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		have_access_to_peasant_moldavia_missions = yes
+	}
 	mop_mongolia = {
 		icon = mission_unify_mongolia
 		position = 14
@@ -10344,7 +10353,6 @@ mop_scandinavia_west_series_4 = {
 				influence = 10
 			}
 			unlock_mop_russia_north_effect = yes
-			
 		}
 	}
 }
@@ -14400,7 +14408,6 @@ mop_scandinavia_north_series_5 = {
 				influence = 10
 			}
 			unlock_mop_russia_north_effect = yes
-			
 		}
 	}
 	mop_sweden_north = {
@@ -14781,7 +14788,6 @@ mop_scandinavia_south_series_5 = {
 				influence = 10
 			}
 			unlock_mop_russia_north_effect = yes
-			
 		}
 	}
 }
