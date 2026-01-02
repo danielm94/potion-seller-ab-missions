@@ -858,3 +858,5 @@
  mop_baltic_locked_1_desc: "You can unlock this by completed a mission related to a neighboring area."
  mop_free_the_wends_locked_1_title: "§g@WEE Wendia: Locked§!"
  mop_free_the_wends_locked_1_desc: "You can unlock this by completed a mission related to a neighboring area."
+ if_we_own_constantinople_tt: "If we own §Y[151.GetName]§!:"
+ if_we_own_optimatoi_tt: "If we own §Y[316.GetName]§!:"
