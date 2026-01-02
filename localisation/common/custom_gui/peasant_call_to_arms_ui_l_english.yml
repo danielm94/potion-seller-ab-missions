@@ -12,3 +12,4 @@
  peasant_call_to_arms_closest_to_target_strategy_tt: "We will prioritize mobilizing the nearest £allied_commune£§YCommune Subjects§! first."
  call_all_communes_type_tt: "§OMobilization Protocols§!"
  peasant_zeal_budget_tt: "Mobilization will continue until we exhaust our Peasant Zeal or exceed the authorized budget of §Y[From.peasant_call_to_arms_zeal_budget.GetValue]§!."
+ any_subject_doesnt_have_truce_trigger_tt: "We have at least §Y1§! £allied_commune£§YCommune Subject§! that §Ydoesn't have a truce§! with @[Root.GetTag] §Y[Root.GetName]§! or §Yany of their war allies§!."

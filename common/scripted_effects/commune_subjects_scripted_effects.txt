@@ -4653,24 +4653,44 @@ calculate_peasant_zeal_call_to_arms_cost = {
 		}
 		save_event_target_as = this_subject
 		overlord = {
+			save_event_target_as = commune_overlord
 			every_war_enemy_country = {
 				limit = {
-					if = {
-						limit = {
-							has_saved_event_target = this_subject
-						}
-						NOT = {
-							war_with = event_target:this_subject
-						}
+					NOT = {
+						war_with = event_target:this_subject
 					}
 					OR = {
-						is_in_war = {
-							attacker_leader = this
-							defender_leader = prev
+						AND = {
+							is_in_war = {
+								attacker_leader = event_target:commune_overlord
+								defender_leader = THIS
+							}
+							NOT = {
+								any_country = {
+									is_in_war = {
+										attacker_leader = event_target:commune_overlord
+										defender_leader = PREV
+										defenders = THIS
+									}
+									truce_with = event_target:this_subject
+								}
+							}
 						}
-						is_in_war = {
-							attacker_leader = prev
-							defender_leader = this
+						AND = {
+							is_in_war = {
+								attacker_leader = THIS
+								defender_leader = event_target:commune_overlord
+							}
+							NOT = {
+								any_country = {
+									is_in_war = {
+										attacker_leader = PREV
+										defender_leader = event_target:commune_overlord
+										attackers = THIS
+									}
+									truce_with = event_target:this_subject
+								}
+							}
 						}
 					}
 				}

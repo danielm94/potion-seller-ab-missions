@@ -24,6 +24,40 @@ custom_button = {
 						NOT = {
 							is_subject_of = root
 						}
+						OR = {
+							AND = {
+								is_in_war = {
+									attacker_leader = FROM
+									defender_leader = THIS
+								}
+								NOT = {
+									any_country = {
+										is_in_war = {
+											attacker_leader = FROM
+											defender_leader = PREV
+											defenders = THIS
+										}
+										truce_with = ROOT
+									}
+								}
+							}
+							AND = {
+								is_in_war = {
+									attacker_leader = THIS
+									defender_leader = FROM
+								}
+								NOT = {
+									any_country = {
+										is_in_war = {
+											attacker_leader = PREV
+											defender_leader = FROM
+											attackers = THIS
+										}
+										truce_with = ROOT
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -52,6 +86,40 @@ custom_button = {
 						}
 						NOT = {
 							is_subject_of = root
+						}
+						OR = {
+							AND = {
+								is_in_war = {
+									attacker_leader = FROM
+									defender_leader = THIS
+								}
+								NOT = {
+									any_country = {
+										is_in_war = {
+											attacker_leader = FROM
+											defender_leader = PREV
+											defenders = THIS
+										}
+										truce_with = ROOT
+									}
+								}
+							}
+							AND = {
+								is_in_war = {
+									attacker_leader = THIS
+									defender_leader = FROM
+								}
+								NOT = {
+									any_country = {
+										is_in_war = {
+											attacker_leader = PREV
+											defender_leader = FROM
+											attackers = THIS
+										}
+										truce_with = ROOT
+									}
+								}
+							}
 						}
 					}
 				}
@@ -95,9 +163,17 @@ custom_button = {
 	name = peasant_call_to_arms_enemy
 	tooltip = peasant_call_to_arms_enemy_tt
 	potential = {
-		war_with = FROM
+		OR = {
+			is_in_war = {
+				attacker_leader = root
+				defender_leader = from
+			}
+			is_in_war = {
+				attacker_leader = from
+				defender_leader = root
+			}
+		}
 		FROM = {
-			is_at_war = yes
 			has_government_mechanic = peasant_zealotry
 		}
 	}
@@ -144,6 +220,26 @@ custom_button = {
 				custom_trigger_tooltip = {
 					tooltip = cost_to_call_less_than_budget_tt
 					has_peasant_zeal_cost_less_or_equal_to_budget = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = any_subject_doesnt_have_truce_trigger_tt
+					NOT = {
+						any_country = {
+							truce_with = PREV
+							OR = {
+								is_in_war = {
+									attacker_leader = root
+									defender_leader = from
+									attackers = this
+								}
+								is_in_war = {
+									attacker_leader = from
+									defender_leader = root
+									defenders = this
+								}
+							}
+						}
+					}
 				}
 			}
 		}

@@ -976,3 +976,32 @@ on_province_owner_change = {
 		}
 	}
 }
+
+on_war_ended = {
+	if = {
+		limit = {
+			has_government_mechanic = peasant_zealotry
+		}
+		every_subject_country = {
+			limit = {
+				is_commune_subject = yes
+			}
+			calculate_peasant_zeal_call_to_arms_cost = yes
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_government_mechanic = peasant_zealotry
+			}
+		}
+		FROM = {
+			every_subject_country = {
+				limit = {
+					is_commune_subject = yes
+				}
+				calculate_peasant_zeal_call_to_arms_cost = yes
+			}
+		}
+	}
+}
