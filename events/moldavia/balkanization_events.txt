@@ -9,22 +9,27 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = in_balkanization_event
-			event_target:new_peasant_subject = {
-				set_variable = {
-					which = opinion_loss_from_balkanization
-					which = temp_releasable_countries
+			if = {
+				limit = {
+					has_saved_global_event_target = new_peasant_subject
 				}
-				multiply_variable = {
-					which = opinion_loss_from_balkanization
-					value = -20
-				}
-				set_variable = {
-					which = liberty_desire_gain_from_balkanization
-					which = temp_releasable_countries
-				}
-				multiply_variable = {
-					which = liberty_desire_gain_from_balkanization
-					value = 5
+				event_target:new_peasant_subject = {
+					set_variable = {
+						which = opinion_loss_from_balkanization
+						which = temp_releasable_countries
+					}
+					multiply_variable = {
+						which = opinion_loss_from_balkanization
+						value = -20
+					}
+					set_variable = {
+						which = liberty_desire_gain_from_balkanization
+						which = temp_releasable_countries
+					}
+					multiply_variable = {
+						which = liberty_desire_gain_from_balkanization
+						value = 5
+					}
 				}
 			}
 		}
@@ -33,14 +38,22 @@ country_event = {
 		name = balkanization_events.0.balkanize
 		trigger = {
 			hidden_trigger = {
-				event_target:new_peasant_subject = {
-					check_variable = {
-						temp_releasable_countries = 1
+				if = {
+					limit = {
+						has_saved_global_event_target = new_peasant_subject
+					}
+					event_target:new_peasant_subject = {
+						check_variable = {
+							temp_releasable_countries = 1
+						}
 					}
 				}
 			}
 		}
 		highlight = yes
+		hidden_effect = {
+			set_country_flag = balkanized
+		}
 		custom_tooltip = balkanize_overlap_disclaimer_tt
 		custom_tooltip = AB_EMPTY
 		release_balkanized_communes_for_target = {
@@ -59,10 +72,15 @@ country_event = {
 		name = balkanization_events.0.set_all
 		hidden_effect = {
 			set_selected_balkanization_flags = yes
-			event_target:new_peasant_subject = {
-				set_variable = {
-					which = temp_releasable_countries
-					which = releasable_countries
+			if = {
+				limit = {
+					has_saved_global_event_target = new_peasant_subject
+				}
+				event_target:new_peasant_subject = {
+					set_variable = {
+						which = temp_releasable_countries
+						which = releasable_countries
+					}
 				}
 			}
 		}
@@ -70,10 +88,15 @@ country_event = {
 	option = {
 		name = balkanization_events.0.clear_all
 		hidden_effect = {
-			event_target:new_peasant_subject = {
-				clear_identified_releasable_flags = yes
-				set_variable = {
-					temp_releasable_countries = 0
+			if = {
+				limit = {
+					has_saved_global_event_target = new_peasant_subject
+				}
+				event_target:new_peasant_subject = {
+					clear_identified_releasable_flags = yes
+					set_variable = {
+						temp_releasable_countries = 0
+					}
 				}
 			}
 		}

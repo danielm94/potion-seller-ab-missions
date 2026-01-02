@@ -1393,10 +1393,20 @@ mop_great_trapezunt_commune = {
 	province_trade_power_value = 15
 	local_development_cost = -0.1
 	drill_gain_modifier = 0.1
-	picture = "commune_province_modifier_icon"
+		picture = "upgraded_commune"
 }
 
 mop_sloboda = {
 	global_trade_goods_size_modifier = 0.2
 	republican_tradition = 0.1
+}
+
+mop_egalitarian_regime = {
+	tolerance_of_heathens_capacity = 3
+	tolerance_heathen = 3
+	republican_tradition = 0.3
+}
+
+mop_iberian_league = {
+	diplomatic_upkeep = 1
 }

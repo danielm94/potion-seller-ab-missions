@@ -700,8 +700,15 @@ country_event = {
 	desc = moldavia_peasant_events.13.d
 	picture = muslimgfx_OVEREXTENSION_eventPicture
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			POR = {
+				override_country_name = POR_lusitania
+			}
+		}
+	}
 	option = {
-		name = moldavia_peasant_events.13.a
+		name = moldavia_peasant_events.13.expel
 		andalusia_balkanization_galicia_effect = yes
 		andalusia_balkanization_leon_effect = yes
 		andalusia_balkanization_asturias_effect = yes
@@ -714,7 +721,24 @@ country_event = {
 		andalusia_balkanization_valencia_effect = yes
 		custom_tooltip = AB_EMPTY
 		custom_tooltip = reconquista_convert_religion_converts_culture_tt
+		add_country_modifier = {
+			name = mop_iberian_league
+			duration = -1
+		}
+		custom_tooltip = christians_happy_punished_adu_tt
 		hidden_effect = {
+			every_country = {
+				limit = {
+					religion_group = christian
+					capital_scope = {
+						continent = europe
+					}
+				}
+				add_opinion = {
+					who = root
+					modifier = christians_happy_punished_adu
+				}
+			}
 			every_subject_country = {
 				limit = {
 					capital_scope = {
@@ -755,11 +779,94 @@ country_event = {
 					value = -100
 				}
 			}
-			add_liberty_desire = 50
+			add_liberty_desire = 100
+		}
+		custom_tooltip = AB_EMPTY
+		custom_tooltip = will_be_able_to_balkanize_adu_further_tt
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_or_was_tag = {
+						tag = ADU
+					}
+				}
+				save_global_event_target_as = new_peasant_subject
+			}
+			identify_releasable_countries_for_target = {
+				target = event_target:new_peasant_subject
+			}
+			if = {
+				limit = {
+					event_target:new_peasant_subject = {
+						can_be_balkanized = yes
+					}
+				}
+				event_target:new_peasant_subject = {
+					set_variable = {
+						which = temp_releasable_countries
+						which = releasable_countries
+					}
+				}
+				country_event = {
+					id = balkanization_events.0
+				}
+			}
+			else = {
+				clear_releasable_countries_event_targets = yes
+				clear_identified_releasable_flags = yes
+			}
+			calculate_total_development_of_commune_subjects = yes
+			if = {
+				limit = {
+					has_saved_global_event_target = andalusian_subject
+				}
+				clear_global_event_target = andalusian_subject
+			}
+		}
+	}
+	option = {
+		name = moldavia_peasant_events.13.tolerant
+		add_country_modifier = {
+			name = mop_egalitarian_regime
+			duration = -1
+		}
+		event_target:andalusian_subject = {
+			add_liberty_desire = -25
+			add_trust = {
+				who = overlord
+				value = 10
+			}
+			add_opinion = {
+				who = overlord
+				modifier = adu_respected_territory
+			}
+		}
+		custom_tooltip = lose_relations_with_christians_in_europe_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion_group = christian
+					capital_scope = {
+						continent = europe
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = christians_pissed_spared_adu
+				}
+			}
 		}
 	}
 	after = {
-		clear_global_event_target = andalusian_subject
+		hidden_effect = {
+			set_country_flag = concluded_adu_balkanization_event
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = andalusian_subject
+			}
+			clear_global_event_target = andalusian_subject
+		}
 	}
 }
 

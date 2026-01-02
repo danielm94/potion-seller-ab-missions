@@ -1058,6 +1058,9 @@ release_balkanized_commune_country = {
 		add_government_reform = peasants_republic
 	}
 	hidden_effect = {
+		$target$ = {
+			set_country_flag = reevaluate_if_released_commune_exists
+		}
 		if = {
 			limit = {
 				$target$ = {
@@ -4574,7 +4577,54 @@ balkanization_event_after_effect = {
 		clr_country_flag = in_balkanization_event
 		clear_releasable_countries_event_targets = yes
 		clear_identified_releasable_flags = yes
-		clear_global_event_target = new_peasant_subject
+		every_country = {
+			limit = {
+				has_country_flag = reevaluate_if_released_commune_exists
+				NOT = {
+					is_subject_of = ROOT
+				}
+			}
+			clr_country_flag = reevaluate_if_released_commune_exists
+			if = {
+				limit = {
+					has_saved_global_event_target = new_peasant_subject
+				}
+				every_owned_province = {
+					limit = {
+						is_core = event_target:new_peasant_subject
+					}
+					remove_core = event_target:new_peasant_subject
+				}
+			}
+			ROOT = {
+				create_allied_commune = {
+					who = PREV
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = balkanized_released_us
+			}
+			add_liberty_desire = -10
+			if = {
+				limit = {
+					has_saved_global_event_target = new_peasant_subject
+				}
+				event_target:new_peasant_subject = {
+					add_opinion = {
+						who = ROOT
+						modifier = balkanized_our_nation
+					}
+					add_liberty_desire = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = new_peasant_subject
+			}
+			clear_global_event_target = new_peasant_subject
+		}
 	}
 }
 

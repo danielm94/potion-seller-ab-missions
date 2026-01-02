@@ -51,3 +51,9 @@ elected_our_men = {
 designated_us_as_model_comune = {
 	opinion = 50
 }
+
+adu_respected_territory = {
+	opinion = 75
+	max = 75
+	yearly_decay = 2
+}

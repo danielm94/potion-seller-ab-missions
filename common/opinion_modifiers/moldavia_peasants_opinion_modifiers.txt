@@ -24,3 +24,15 @@ sent_grain_shipments = {
 	max = 100
 	yearly_decay = 2
 }
+
+christians_pissed_spared_adu = {
+	opinion = -35
+	min = -35
+	yearly_decay = 2
+}
+
+christians_happy_punished_adu = {
+	opinion = 35
+	max = 35
+	yearly_decay = 2
+}

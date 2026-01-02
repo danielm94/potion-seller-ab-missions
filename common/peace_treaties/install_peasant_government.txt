@@ -196,6 +196,14 @@ po_install_peasant_government = {
 				change_tag = EGY
 				swap_free_idea_group = yes
 			}
+			if = {
+				limit = {
+					tag = FRC
+				}
+				change_tag = FRA
+				swap_free_idea_group = yes
+				swap_non_generic_missions = yes
+			}
 		}
 		if = {
 			limit = {
@@ -242,6 +250,9 @@ po_install_peasant_government = {
 		}
 		if = {
 			limit = {
+				NOT = {
+					has_country_flag = concluded_adu_balkanization_event
+				}
 				FROM = {
 					is_or_was_tag = {
 						tag = ADU
