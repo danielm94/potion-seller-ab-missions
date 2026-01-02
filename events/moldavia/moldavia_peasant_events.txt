@@ -721,6 +721,7 @@ country_event = {
 		andalusia_balkanization_valencia_effect = yes
 		custom_tooltip = AB_EMPTY
 		custom_tooltip = reconquista_convert_religion_converts_culture_tt
+		custom_tooltip = AB_EMPTY
 		add_country_modifier = {
 			name = mop_iberian_league
 			duration = -1
