@@ -8,12 +8,38 @@ commune_integration_issue = {
 	effect = {
 		custom_tooltip = 25_percent_integration_progress_gain_tt
 		hidden_effect = {
-			random_subject_country = {
+			every_subject_country = {
 				limit = {
 					is_commune_subject_being_integrated = yes
 				}
-				change_commune_integration_progress_as_percentage_of_cost = {
-					percentage = 0.25
+				if = {
+					limit = {
+						NOT = {
+							has_saved_global_event_target = largest_integration_cost
+						}
+					}
+					save_global_event_target_as = largest_integration_cost
+				}
+				else = {
+					if = {
+						limit = {
+							check_variable = {
+								which = commune_integration_cost
+								which = event_target:largest_integration_cost
+							}
+						}
+						save_global_event_target_as = largest_integration_cost
+					}
+				}
+				if = {
+					limit = {
+						has_saved_global_event_target = largest_integration_cost
+					}
+					event_target:largest_integration_cost = {
+						change_commune_integration_progress_as_percentage_of_cost = {
+							percentage = 0.25
+						}
+					}
 				}
 			}
 		}
@@ -25,14 +51,6 @@ commune_integration_issue = {
 	}
 	chance = {
 		factor = 5
-		modifier = {
-			factor = 0
-			NOT = {
-				any_subject_country = {
-					is_commune_subject_being_integrated = yes
-				}
-			}
-		}
 	}
 	ai_will_do = {
 		factor = 500

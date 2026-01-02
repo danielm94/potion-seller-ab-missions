@@ -1,5 +1,5 @@
 ﻿l_english:
- 25_percent_integration_progress_gain_tt: "We will gain §G+25%§! integration progress with the £allied_commune£§YCommune Subject§! we are trying to integrate."
+ 25_percent_integration_progress_gain_tt: "We will gain §G+25%§! integration progress with the highest integration cost £allied_commune£§YCommune Subject§! we are trying to integrate."
  commune_integration_issue: "The Acts of Union"
  unlock_issue_commune_integration_issue_tt: "Unlock the §YThe League Integration Act§! parliament issue."
  faction_fatigue_issue: "The Political Standards Act"
