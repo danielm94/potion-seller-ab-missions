@@ -978,4 +978,10 @@ spriteTypes = {
 		name = "GFX_obj_muslim_kaaba"
 		texturefile = "gfx/interface/ages/obj_muslim_kaaba.dds"
 	}
+
+	#PotionSeller
+	spriteType = {
+		name = "GFX_mop_dacian_agitators"
+		texturefile = "gfx/interface/ages/mop_dacian_agitators.dds"
+	}
 }

@@ -839,6 +839,25 @@ age_of_reformation = {
 				factor = 100
 			}
 		}
+		#PotionSeller
+		mop_dacian_agitators = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			allow = {
+				OR = {
+					tag = MOP
+					tag = TUC
+				}
+			}
+			modifier = {
+				rebel_support_efficiency = 3
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 	
 	}
 }
