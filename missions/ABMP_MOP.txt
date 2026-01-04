@@ -2785,6 +2785,7 @@ ab_mop_2 = {
 		}
 		provinces_to_highlight = {
 			region = north_china_region
+			is_empty = no
 			NOT = {
 				country_or_commune_subject_or_subject_of_commune_subject_holds = {
 					who = root
@@ -2812,7 +2813,7 @@ ab_mop_2 = {
 					north_china_region = {
 						type = all
 						OR = {
-							is_empty = no
+							is_empty = yes
 							country_or_commune_subject_or_subject_of_commune_subject_holds = {
 								who = root
 							}
