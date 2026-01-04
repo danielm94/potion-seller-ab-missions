@@ -1,0 +1,58 @@
+support_rebels = {
+	pre_effect = {
+		if = {
+			limit = {
+				has_country_flag = defenestration_tactics_enabled
+				NOT = {
+					has_country_modifier = mop_successful_defenestration
+				}
+			}
+			random = {
+				chance = 10
+				set_country_flag = defenestration_happened
+				country_event = {
+					id = moldavia_peasant_events.10
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = come_out_ye_black_and_tans
+				NOT = {
+					has_country_flag = defenestration_happened
+				}
+				NOT = {
+					has_country_modifier = mop_successful_bombing
+				}
+			}
+			random = {
+				chance = 10
+				country_event = {
+					id = moldavia_peasant_events.12
+				}
+			}
+		}
+		clr_country_flag = defenestration_happened
+		FROM = {
+			set_country_flag = support_rebels_against_@THIS
+			PREV = {
+				set_country_flag = support_rebels_against_@PREV
+			}
+			every_owned_province = {
+				limit = {
+					has_radicalized_peasantry_province = yes
+					NOT = {
+						has_province_modifier = recent_uprising
+					}
+				}
+				set_province_unrest_to_value_if_negative = {
+					value = 10
+				}
+			}
+			country_event = {
+				id = moldavia_diplomatic_actions_events.3
+				days = 1825
+			}
+		}
+	}
+}
