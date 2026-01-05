@@ -2454,12 +2454,23 @@ ab_mop_2 = {
 			set_country_flag = wal_romanianization_of_hungary
 			custom_tooltip = AB_EMPTY
 			complex_dynamic_effect = {
-				first_custom_tooltip = if_the_magyars_do_not_exist_tt
-				first_limit = "NOT = {
-									exists = MGY
+				first_custom_tooltip = if_the_magyars_are_our_subject_tt
+				first_limit = "MGY = {
+									is_subject_of = root
+									is_commune_subject = yes
 								}"
-				first_effect = "add_mil_power = 150"
-			}
+				first_effect = "custom_tooltip = all_mgy_subjects_become_our_communes_tt
+								hidden_effect = {
+									MGY = {
+										every_subject_country = {
+											root = {
+												create_allied_commune = {
+													who = PREV
+												}
+											}
+										}
+									}
+								}"}
 			custom_tooltip = AB_EMPTY
 			add_faction_influence = {
 				faction = abolitionists_faction

@@ -862,3 +862,5 @@
  if_we_own_optimatoi_tt: "If we own §Y[316.GetName]§!:"
  eoc_is_gone_tt: "The §YEmpire of China§! has been dismantled."
  if_we_have_dismantled_china_tt: "If we have dismantled the §YEmpire of China§!:"
+ if_the_magyars_are_our_subject_tt: "If the @MGY §Y[MGY.GetName]§! are our £allied_commune£§YCommune Subject§!:"
+ all_mgy_subjects_become_our_communes_tt: "All of the @MGY §Y[MGY.GetName]§!'s subjects will become our £allied_commune£§YAllied Commune§! subjects."
