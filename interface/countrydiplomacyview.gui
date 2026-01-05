@@ -28,51 +28,6 @@ guiTypes = {
 		moveable = 0
 		Orientation = "UPPER_LEFT"
 		upsound = tab_diplomacy
-
-		#PotionSeller
-		guiButtonType = {
-			name = "peasant_call_to_arms_enemy"
-			position = { x = 549 y = 229 }
-			quadTextureSprite ="GFX_peasant_call_to_arms"
-			scripted = yes
-			shortcut = "CTRL+c"
-		}
-		guiButtonType = {
-			name = "peasant_call_to_arms_ally"
-			position = { x = 549 y = 229 }
-			quadTextureSprite ="GFX_peasant_call_to_arms"
-			scripted = yes
-			shortcut = "CTRL+c"
-		}
-		guiButtonType = {
-			name = "peasant_call_to_arms_ally_config"
-			position = { x = 549 y = 229 }
-			quadTextureSprite ="GFX_autonomy_macro_empty_button"
-			scripted = yes
-			shortcut = "CTRL+shift+c"
-		}
-
-		guiButtonType = {
-			name = "incite_peasants"
-			position = { x = 549 y = 303 }
-			quadTextureSprite ="GFX_incite_peasants"
-			scripted = yes
-			shortcut = "shift+z"
-		}
-		guiButtonType = {
-			name = "great_peasant_uprising"
-			position = { x = 549 y = 343 }
-			quadTextureSprite ="GFX_great_peasant_uprising"
-			scripted = yes
-			shortcut = "shift+x"
-		}
-		guiButtonType = {
-			name = "stage_coup"
-			position = { x = 549 y = 263 }
-			quadTextureSprite ="GFX_stage_coup"
-			scripted = yes
-			shortcut = "shift+y"
-		}
 		guiButtonType = {
 			name = "integrate_commune"
 			position = { x = 549 y = 303 }
@@ -80,70 +35,6 @@ guiTypes = {
 			scripted = yes
 			shortcut = "shift+t"
 		}
-		guiButtonType = {
-			name = "subject_to_commune"
-			position = { x = 549 y = 303 }
-			quadTextureSprite ="GFX_subject_to_commune"
-			scripted = yes
-			shortcut = "shift+t"
-		}
-		guiButtonType = {
-			name = "cancel_integrate_commune"
-			position = { x = 549 y = 303 }
-			quadTextureSprite ="GFX_cancel_integrate_commune"
-			scripted = yes
-			shortcut = "shift+t"
-		}
-		guiButtonType = {
-			name = "invest_adm"
-			position = { x = 549 y = 343 }
-			quadTextureSprite ="GFX_invest_adm"
-			scripted = yes
-			shortcut = "shift+q"
-		}
-		guiButtonType = {
-			name = "cancel_invest_adm"
-			position = { x = 549 y = 343 }
-			quadTextureSprite ="GFX_cancel_invest_adm"
-			scripted = yes
-			shortcut = "shift+q"
-		}
-		guiButtonType = {
-			name = "invest_dip"
-			position = { x = 549 y = 383 }
-			quadTextureSprite ="GFX_invest_dip"
-			scripted = yes
-			shortcut = "shift+w"
-		}
-		guiButtonType = {
-			name = "cancel_invest_dip"
-			position = { x = 549 y = 383 }
-			quadTextureSprite ="GFX_cancel_invest_dip"
-			scripted = yes
-			shortcut = "shift+w"
-		}
-		guiButtonType = {
-			name = "invest_mil"
-			position = { x = 549 y = 423 }
-			quadTextureSprite ="GFX_invest_mil"
-			scripted = yes
-			shortcut = "shift+e"
-		}
-		guiButtonType = {
-			name = "cancel_invest_mil"
-			position = { x = 549 y = 423 }
-			quadTextureSprite ="GFX_cancel_invest_mil"
-			scripted = yes
-			shortcut = "shift+e"
-		}
-		guiButtonType = {
-			name = "invest_republican_tradition"
-			position = { x = 549 y = 463 }
-			quadTextureSprite ="GFX_invest_republican_tradition"
-			scripted = yes
-			shortcut = "shift+r"
-		}
-
 		iconType =
 		{
 			name ="domesticpanel_bg_top"
@@ -1568,6 +1459,120 @@ guiTypes = {
 			scripted = yes
 		}
 		
+		#PotionSeller
+		guiButtonType = {
+			name = "peasant_call_to_arms_enemy"
+			position = { x = 549 y = 303 }
+			quadTextureSprite ="GFX_peasant_call_to_arms"
+			scripted = yes
+			shortcut = "CTRL+c"
+		}
+		guiButtonType = {
+			name = "peasant_call_to_arms_ally"
+			position = { x = 549 y = 303 }
+			quadTextureSprite ="GFX_peasant_call_to_arms"
+			scripted = yes
+			shortcut = "CTRL+c"
+		}
+		guiButtonType = {
+			name = "peasant_call_to_arms_ally_config"
+			position = { x = 549 y = 303 }
+			quadTextureSprite ="GFX_autonomy_macro_empty_button"
+			scripted = yes
+			shortcut = "CTRL+shift+c"
+		}
+
+		guiButtonType = {
+			name = "incite_peasants"
+			position = { x = 549 y = 343 }
+			quadTextureSprite ="GFX_incite_peasants"
+			scripted = yes
+			shortcut = "shift+z"
+		}
+		guiButtonType = {
+			name = "great_peasant_uprising"
+			position = { x = 549 y = 383 }
+			quadTextureSprite ="GFX_great_peasant_uprising"
+			scripted = yes
+			shortcut = "shift+x"
+		}
+		guiButtonType = {
+			name = "subject_to_commune"
+			position = { x = 549 y = 303 }
+			quadTextureSprite ="GFX_subject_to_commune"
+			scripted = yes
+			shortcut = "shift+t"
+		}
+		guiButtonType = {
+			name = "integrate_commune"
+			position = { x = 549 y = 303 }
+			quadTextureSprite ="GFX_integrate_commune"
+			scripted = yes
+			shortcut = "shift+t"
+		}
+		guiButtonType = {
+			name = "cancel_integrate_commune"
+			position = { x = 549 y = 303 }
+			quadTextureSprite ="GFX_cancel_integrate_commune"
+			scripted = yes
+			shortcut = "shift+t"
+		}
+		guiButtonType = {
+			name = "invest_adm"
+			position = { x = 549 y = 343 }
+			quadTextureSprite ="GFX_invest_adm"
+			scripted = yes
+			shortcut = "shift+q"
+		}
+		guiButtonType = {
+			name = "cancel_invest_adm"
+			position = { x = 549 y = 343 }
+			quadTextureSprite ="GFX_cancel_invest_adm"
+			scripted = yes
+			shortcut = "shift+q"
+		}
+		guiButtonType = {
+			name = "invest_dip"
+			position = { x = 549 y = 383 }
+			quadTextureSprite ="GFX_invest_dip"
+			scripted = yes
+			shortcut = "shift+w"
+		}
+		guiButtonType = {
+			name = "cancel_invest_dip"
+			position = { x = 549 y = 383 }
+			quadTextureSprite ="GFX_cancel_invest_dip"
+			scripted = yes
+			shortcut = "shift+w"
+		}
+		guiButtonType = {
+			name = "invest_mil"
+			position = { x = 549 y = 423 }
+			quadTextureSprite ="GFX_invest_mil"
+			scripted = yes
+			shortcut = "shift+e"
+		}
+		guiButtonType = {
+			name = "cancel_invest_mil"
+			position = { x = 549 y = 423 }
+			quadTextureSprite ="GFX_cancel_invest_mil"
+			scripted = yes
+			shortcut = "shift+e"
+		}
+		guiButtonType = {
+			name = "invest_republican_tradition"
+			position = { x = 549 y = 463 }
+			quadTextureSprite ="GFX_invest_republican_tradition"
+			scripted = yes
+			shortcut = "shift+r"
+		}
+		guiButtonType = {
+			name = "stage_coup"
+			position = { x = 549 y = 503 }
+			quadTextureSprite ="GFX_stage_coup"
+			scripted = yes
+			shortcut = "shift+y"
+		}
 		windowType = {
 			name = "vassal_select_window"
 			backGround=""
