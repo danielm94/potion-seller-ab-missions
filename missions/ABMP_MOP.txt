@@ -5303,7 +5303,7 @@ ab_mop_3 = {
 				duration = -1
 			}
 			complex_dynamic_effect = {
-				first_custom_tooltip = ab_has_dismantled_china_tt
+				first_custom_tooltip = if_we_have_dismantled_china_tt
 				first_limit = "has_dismantled_the_empire_of_china = yes"
 				first_effect = "add_country_modifier = {
 									name = japan_destroyed_mandate
