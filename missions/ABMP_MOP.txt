@@ -5268,7 +5268,6 @@ ab_mop_3 = {
 				always = yes
 			}
 			else = {
-				has_dismantled_the_empire_of_china = yes
 				custom_trigger_tooltip = {
 					tooltip = mop_destroy_eoc_trigger_tt
 					china_superregion = {
@@ -5287,6 +5286,12 @@ ab_mop_3 = {
 						}
 					}
 				}
+				custom_trigger_tooltip = {
+					tooltip = eoc_is_gone_tt
+					all_countries_including_self = {
+						is_emperor_of_china = no
+					}
+				}
 			}
 		}
 		effect = {
@@ -5296,6 +5301,14 @@ ab_mop_3 = {
 			add_country_modifier = {
 				name = mop_dragon_slayer
 				duration = -1
+			}
+			complex_dynamic_effect = {
+				first_custom_tooltip = ab_has_dismantled_china_tt
+				first_limit = "has_dismantled_the_empire_of_china = yes"
+				first_effect = "add_country_modifier = {
+									name = japan_destroyed_mandate
+									duration = 18250
+								}"
 			}
 			change_peasant_zeal = {
 				value = 50
