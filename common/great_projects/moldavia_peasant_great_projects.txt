@@ -169,7 +169,7 @@ forbidden_city_peasant = {
 			yearly_absolutism = 0.5
 			republican_tradition = 0.3
 			prestige_decay = -0.02
-			monarch_power_tribute = 1
+			governing_capacity = 100
 		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
