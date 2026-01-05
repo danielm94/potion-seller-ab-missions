@@ -1005,3 +1005,15 @@ on_war_ended = {
 		}
 	}
 }
+
+on_new_age = {
+	if = {
+		limit = {
+			has_country_modifier = mop_federal_army
+			NOT = {
+				current_age = age_of_discovery
+			}
+		}
+		remove_country_modifier = mop_federal_army
+	}
+}

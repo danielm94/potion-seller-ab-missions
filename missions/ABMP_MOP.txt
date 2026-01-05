@@ -10787,6 +10787,7 @@ ab_mop_5 = {
 				always = yes
 			}
 			else = {
+				current_age = age_of_discovery
 				army_size = 20
 				army_professionalism = 0.1
 				OR = {
@@ -10805,7 +10806,7 @@ ab_mop_5 = {
 				name = mop_federal_army
 				age = age_of_discovery
 				else = "add_army_tradition = 10
-			add_army_professionalism = 0.05"
+						add_army_professionalism = 0.05"
 			}
 		}
 	}
