@@ -1462,21 +1462,21 @@ guiTypes = {
 		#PotionSeller
 		guiButtonType = {
 			name = "peasant_call_to_arms_enemy"
-			position = { x = 549 y = 303 }
+			position = { x = 549 y = 263 }
 			quadTextureSprite ="GFX_peasant_call_to_arms"
 			scripted = yes
 			shortcut = "CTRL+c"
 		}
 		guiButtonType = {
 			name = "peasant_call_to_arms_ally"
-			position = { x = 549 y = 303 }
+			position = { x = 549 y = 263 }
 			quadTextureSprite ="GFX_peasant_call_to_arms"
 			scripted = yes
 			shortcut = "CTRL+c"
 		}
 		guiButtonType = {
 			name = "peasant_call_to_arms_ally_config"
-			position = { x = 549 y = 303 }
+			position = { x = 549 y = 263 }
 			quadTextureSprite ="GFX_autonomy_macro_empty_button"
 			scripted = yes
 			shortcut = "CTRL+shift+c"
@@ -1484,14 +1484,14 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "incite_peasants"
-			position = { x = 549 y = 343 }
+			position = { x = 549 y = 303 }
 			quadTextureSprite ="GFX_incite_peasants"
 			scripted = yes
 			shortcut = "shift+z"
 		}
 		guiButtonType = {
 			name = "great_peasant_uprising"
-			position = { x = 549 y = 383 }
+			position = { x = 549 y = 343 }
 			quadTextureSprite ="GFX_great_peasant_uprising"
 			scripted = yes
 			shortcut = "shift+x"
