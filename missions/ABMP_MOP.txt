@@ -1110,17 +1110,6 @@ ab_mop_misc_5 = {
 				check_variable = {
 					issues_passed = 3
 				}
-				custom_trigger_tooltip = {
-					tooltip = equal_number_of_peasant_faction_candidates_elected_tt
-					is_variable_equal = {
-						which = total_exemplarist_candidates_elected
-						which = total_leaguist_candidates_elected
-					}
-					is_variable_equal = {
-						which = total_leaguist_candidates_elected
-						which = total_abolitionist_candidates_elected
-					}
-				}
 				is_variable_equal = {
 					which = faction_fatigue_min
 					value = 0
