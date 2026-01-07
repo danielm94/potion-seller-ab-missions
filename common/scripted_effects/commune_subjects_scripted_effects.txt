@@ -4783,6 +4783,7 @@ call_all_peasant_subjects_to_arms_effect = {
 				which = peasant_call_to_arms_zeal_budget
 			}
 			any_subject_country = {
+				is_commune_subject = yes
 				NOT = {
 					liberty_desire = 50
 				}
@@ -4792,7 +4793,6 @@ call_all_peasant_subjects_to_arms_effect = {
 				NOT = {
 					war_with = ROOT
 				}
-				is_commune_subject = yes
 				if = {
 					limit = {
 						PREV = {
@@ -4818,6 +4818,27 @@ call_all_peasant_subjects_to_arms_effect = {
 					}
 				}
 				has_peasant_zeal_cost_less_or_equal_to_budget = yes
+				NOT = {
+					any_country = {
+						OR = {
+							is_in_war = {
+								attacker_leader = ROOT
+								defenders = FROM
+								attackers = THIS
+							}
+							is_in_war = {
+								defender_leader = ROOT
+								attackers = FROM
+								defenders = THIS
+							}
+						}
+						OR = {
+							truce_with = PREV
+							war_with = PREV
+							is_subject_of = PREV
+						}
+					}
+				}
 			}
 		}
 		if = {
@@ -4872,6 +4893,27 @@ call_strongest_commune_subject_effect = {
 			}
 			NOT = {
 				truce_with = ROOT
+			}
+			NOT = {
+				any_country = {
+					OR = {
+						is_in_war = {
+							attacker_leader = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+						is_in_war = {
+							defender_leader = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+					}
+					OR = {
+						truce_with = PREV
+						war_with = PREV
+						is_subject_of = PREV
+					}
+				}
 			}
 		}
 		if = {
@@ -4995,6 +5037,27 @@ call_nearest_commune_subject_effect = {
 			}
 			NOT = {
 				truce_with = ROOT
+			}
+			NOT = {
+				any_country = {
+					OR = {
+						is_in_war = {
+							attacker_leader = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+						is_in_war = {
+							defender_leader = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+					}
+					OR = {
+						truce_with = PREV
+						war_with = PREV
+						is_subject_of = PREV
+					}
+				}
 			}
 		}
 		export_to_variable = {
