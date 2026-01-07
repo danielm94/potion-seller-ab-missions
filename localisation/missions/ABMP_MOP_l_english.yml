@@ -864,3 +864,7 @@
  if_we_have_dismantled_china_tt: "If we have dismantled the §YEmpire of China§!:"
  if_the_magyars_are_our_subject_tt: "If the @MGY §Y[MGY.GetName]§! are our £allied_commune£§YCommune Subject§!:"
  all_mgy_subjects_become_our_communes_tt: "All of the @MGY §Y[MGY.GetName]§!'s subjects will become our £allied_commune£§YAllied Commune§! subjects."
+ if_szekely_is_subject_of_our_commune_subject_tt: "If @SZK §Y[SZK.GetName]§! is a subject of one of our £allied_commune£§YCommune Subjects§!:"
+ release_tra_reward_tt: "We will establish the commune of @TRA §Y[TRA.GetName]§!."
+ transfer_to_tra_tt: "All provinces in the §YNorthern Transylvania§! and §YSouthern Transylvania§! areas will be transfered to @TRA §Y[TRA.GetName]§!."
+ mop_transylvania_romanianization_tooltip: "Provinces in §YSouthern Transylvania§! and §YNorthern Transylvania§! of the §YOrthodox§! faith that are owned by @TRA §Y[TRA.GetName]§! will slowly begin converting to §YTransylvanian§! culture."
