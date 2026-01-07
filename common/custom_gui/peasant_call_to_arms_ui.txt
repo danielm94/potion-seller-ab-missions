@@ -16,61 +16,69 @@ custom_button = {
 				FROM = {
 					any_war_enemy_country = {
 						NOT = {
-							truce_with = root
+							truce_with = ROOT
 						}
 						NOT = {
-							war_with = root
+							war_with = ROOT
 						}
 						NOT = {
-							is_subject_of = root
+							is_subject_of = ROOT
 						}
 						OR = {
-							AND = {
+							is_in_war = {
+								defender_leader = THIS
+								attackers = FROM
+							}
+							is_in_war = {
+								attacker_leader = THIS
+								defenders = FROM
+							}
+						}
+						NOT = {
+							any_known_country = {
 								is_in_war = {
-									attacker_leader = FROM
-									defender_leader = THIS
+									defender_leader = PREV
+									attackers = FROM
+									defenders = THIS
 								}
-								NOT = {
-									any_country = {
-										is_in_war = {
-											attacker_leader = FROM
-											defender_leader = PREV
-											defenders = THIS
-										}
-										truce_with = ROOT
-									}
+								OR = {
+									truce_with = ROOT
+									war_with = ROOT
+									is_subject_of = ROOT
 								}
 							}
-							AND = {
+						}
+						NOT = {
+							any_known_country = {
 								is_in_war = {
-									attacker_leader = THIS
-									defender_leader = FROM
+									attacker_leader = PREV
+									defenders = FROM
+									attackers = THIS
 								}
-								NOT = {
-									any_country = {
-										is_in_war = {
-											attacker_leader = PREV
-											defender_leader = FROM
-											attackers = THIS
-										}
-										truce_with = ROOT
-									}
+								OR = {
+									truce_with = ROOT
+									war_with = ROOT
+									is_subject_of = ROOT
 								}
 							}
 						}
 					}
 				}
 			}
-			NOT = {
-				liberty_desire = 50
-			}
 			can_call_this_commune_to_war = yes
+			custom_trigger_tooltip = {
+				tooltip = peasant_call_to_arms_trigger_tt
+				always = yes
+			}
 		}
 		else = {
 			custom_trigger_tooltip = {
-				tooltip = commune_cant_join_any_wars_tt
+				tooltip = peasant_call_to_arms_trigger_tt
 				always = no
 			}
+		}
+		NOT = {
+			liberty_desire = 50
 		}
 	}
 	effect = {
@@ -79,45 +87,49 @@ custom_button = {
 				FROM = {
 					any_war_enemy_country = {
 						NOT = {
-							truce_with = root
+							truce_with = ROOT
 						}
 						NOT = {
-							war_with = root
+							war_with = ROOT
 						}
 						NOT = {
-							is_subject_of = root
+							is_subject_of = ROOT
 						}
 						OR = {
-							AND = {
+							is_in_war = {
+								attacker_leader = FROM
+								defender_leader = THIS
+							}
+							is_in_war = {
+								attacker_leader = THIS
+								defender_leader = FROM
+							}
+						}
+						NOT = {
+							any_known_country = {
 								is_in_war = {
 									attacker_leader = FROM
-									defender_leader = THIS
+									defender_leader = PREV
+									defenders = THIS
 								}
-								NOT = {
-									any_country = {
-										is_in_war = {
-											attacker_leader = FROM
-											defender_leader = PREV
-											defenders = THIS
-										}
-										truce_with = ROOT
-									}
+								OR = {
+									truce_with = ROOT
+									war_with = ROOT
+									is_subject_of = ROOT
 								}
 							}
-							AND = {
+						}
+						NOT = {
+							any_known_country = {
 								is_in_war = {
-									attacker_leader = THIS
+									attacker_leader = PREV
 									defender_leader = FROM
+									attackers = THIS
 								}
-								NOT = {
-									any_country = {
-										is_in_war = {
-											attacker_leader = PREV
-											defender_leader = FROM
-											attackers = THIS
-										}
-										truce_with = ROOT
-									}
+								OR = {
+									truce_with = ROOT
+									war_with = ROOT
+									is_subject_of = ROOT
 								}
 							}
 						}
